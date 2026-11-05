@@ -1,0 +1,112 @@
+{
+  "kind": "spot",
+  "seed": 20261025,
+  "item": "I-scroll3",
+  "art": "item.art.calligraphy",
+  "atlas_art": "item.art.calligraphy",
+  "atlas_open": false,
+  "ink": 5,
+  "lens_px": 88,
+  "blink": true,
+  "minutes_per_step": 1,
+  "max_minutes": 30,
+  "tools": [
+    "eye",
+    "lens",
+    "atlas"
+  ],
+  "parts": [
+    {
+      "id": "material",
+      "rect": [
+        20,
+        5,
+        24,
+        9
+      ],
+      "tool": "eye"
+    },
+    {
+      "id": "authenticity",
+      "rect": [
+        20,
+        14,
+        24,
+        24
+      ],
+      "tool": "lens"
+    },
+    {
+      "id": "condition",
+      "rect": [
+        20,
+        38,
+        24,
+        14
+      ],
+      "tool": "eye"
+    },
+    {
+      "id": "provenance",
+      "rect": [
+        14,
+        52,
+        36,
+        8
+      ],
+      "tool": "eye"
+    }
+  ],
+  "legend": {
+    "wear": [
+      "watermark",
+      "scuff"
+    ],
+    "differs": [
+      "retrace",
+      "seal",
+      "patch"
+    ]
+  },
+  "marks": [
+    {
+      "part": "authenticity",
+      "kind": "differs",
+      "look": "retrace",
+      "at": [
+        26,
+        19,
+        7,
+        6
+      ],
+      "fine": 300,
+      "seed": 9917
+    },
+    {
+      "part": "condition",
+      "kind": "wear",
+      "look": "watermark",
+      "at": [
+        30,
+        42,
+        8,
+        7
+      ],
+      "fine": 650,
+      "seed": 5521
+    },
+    {
+      "part": "provenance",
+      "kind": "wear",
+      "look": "scuff",
+      "at": [
+        22,
+        55,
+        8,
+        4
+      ],
+      "fine": 100,
+      "seed": 3301
+    }
+  ]
+}

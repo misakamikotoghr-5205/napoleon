@@ -1,0 +1,75 @@
+{
+  "_meta": {
+    "owner": "K06",
+    "schema": 1,
+    "brief": "例子集：生活牌（§4.7.7）"
+  },
+  "cards": [
+    {
+      "id": "lf.any.coal_out",
+      "type": "life",
+      "era": [
+        "*"
+      ],
+      "weight": 8,
+      "tags": [
+        "home",
+        "fuel",
+        "omen_family"
+      ],
+      "season": [
+        3,
+        0
+      ],
+      "due_days": 3,
+      "waivable": true,
+      "must_resolve": false,
+      "choices": [
+        {
+          "id": "buy",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 12,
+              "payee": "coal_shop",
+              "reason": "k06.reason.coal",
+              "short": "ladder"
+            }
+          ],
+          "brief": "买煤"
+        },
+        {
+          "id": "endure",
+          "effects": [
+            {
+              "op": "attr",
+              "who": "ruhua",
+              "attr": "nerve",
+              "delta": -1,
+              "days": 3
+            }
+          ],
+          "brief": "挨冻"
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "attr",
+            "who": "ruhua",
+            "attr": "nerve",
+            "delta": -1,
+            "days": 3
+          }
+        ]
+      },
+      "art": "illus.lf.any.coal_out",
+      "brief": "煤用完了。买煤，或者挨冻（几天里胆量少一点）。拖到期限当挨冻处理；回家吃饭能免掉坏处。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-14"
+      }
+    }
+  ]
+}

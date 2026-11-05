@@ -1,0 +1,10 @@
+# C07 黄历与算命（docs/handoff_cards/C07_fortune.md）
+C07_strip|res://scripts/tests/cards/C07/test_strip.gd|120|
+C07_lot|res://scripts/tests/cards/C07/test_lot.gd|120|
+C07_cezi|res://scripts/tests/cards/C07/test_cezi.gd|120|
+C07_no_foretell|res://scripts/tests/cards/C07/test_no_foretell.gd|120|
+C07_guide|res://scripts/tests/cards/C07/test_guide.gd|180|
+C07_real_engine|res://scripts/tests/cards/C07/test_real_engine.gd|180|--name=C07_real_engine
+C07_real_k|res://scripts/tests/cards/C07/test_real_k.gd|180|
+C07_guide_k16|res://scripts/tests/cards/C07/test_guide.gd|180|--steps=k16 --name=C07_guide_k16
+C07_almanac_drawer|res://scripts/tests/cards/C07/test_almanac_drawer.gd|120|

@@ -1,0 +1,303 @@
+{
+  "_meta": {
+    "owner": "K18",
+    "schema": 1,
+    "brief": "1939 收徒。会成长的人脉，隐藏忠心，不在铺时看铺。台词由人写。数字起步，待调。依据 DESIGN §九.7。",
+    "_provenance": {
+      "by": "ai",
+      "task": "K18",
+      "date": "2026-10-15"
+    }
+  },
+  "persons": {
+    "tudi": {
+      "portrait": "portrait.ex_shopboy",
+      "dossier": true,
+      "brief": "1939 来求留下的学徒。立绘暂用邻铺伙计。称呼由 A 定。"
+    }
+  },
+  "cards": [
+    {
+      "id": "ct.tudi",
+      "type": "contact",
+      "person": "tudi",
+      "era": ["*"],
+      "weight": 0,
+      "attrs": {"eye": 1, "tongue": 1, "pull": 1, "nerve": 1},
+      "tags": ["apprentice"],
+      "passives": [],
+      "downsides": [],
+      "mods": [],
+      "leave_when": [],
+      "year_changes": [],
+      "art": "portrait.ex_shopboy",
+      "brief": "学徒人脉。四项本事从 1 起，每月长一点，上限看规则。忠心不写在这张牌上。",
+      "_provenance": {"by": "ai", "task": "K18", "date": "2026-10-15"}
+    },
+    {
+      "id": "dp.tudi",
+      "type": "dossier_page",
+      "person": "tudi",
+      "era": ["*"],
+      "weight": 0,
+      "fragments": ["df.tudi.1939.take", "df.tudi.1939.harsh"],
+      "effects": {
+        "on_complete": [{"op": "flag", "key": "apprentice_page_full", "value": true}]
+      },
+      "brief": "学徒一页。两块碎片不会同时得到，补齐只记旗标。",
+      "_provenance": {"by": "ai", "task": "K18", "date": "2026-10-15"}
+    },
+    {
+      "id": "df.tudi.1939.take",
+      "type": "dossier_fragment",
+      "person": "tudi",
+      "era": ["1939"],
+      "weight": 0,
+      "order": 1,
+      "kind": "said",
+      "brief": "把他留下看铺。",
+      "_provenance": {"by": "ai", "task": "K18", "date": "2026-10-15"}
+    },
+    {
+      "id": "df.tudi.1939.harsh",
+      "type": "dossier_fragment",
+      "person": "tudi",
+      "era": ["1939"],
+      "weight": 0,
+      "order": 2,
+      "kind": "heard",
+      "brief": "留下，但是规矩立得很紧。",
+      "_provenance": {"by": "ai", "task": "K18", "date": "2026-10-15"}
+    },
+    {
+      "id": "p.tudi.1939.ask",
+      "type": "person",
+      "person": "tudi",
+      "era": ["1939"],
+      "weight": 0,
+      "tags": ["apprentice", "omen_family"],
+      "story_node": "s1939.apprentice",
+      "intent": "ask",
+      "schedule": {"stage_day": 11, "order": 5, "once": true},
+      "choices": [
+        {
+          "id": "take",
+          "brief": "留下他，让他看柜台",
+          "effects": [
+            {"op": "story", "node": "s1939.apprentice", "outcome": "take"},
+            {"op": "contact_gain", "person": "tudi"},
+            {"op": "counter", "key": "apprentice_loyalty", "delta": 40},
+            {"op": "flag", "key": "apprentice_taken", "value": true},
+            {"op": "dossier", "frag": "df.tudi.1939.take"}
+          ]
+        },
+        {
+          "id": "take_harsh",
+          "brief": "留下，话却说得很硬",
+          "effects": [
+            {"op": "story", "node": "s1939.apprentice", "outcome": "harsh"},
+            {"op": "contact_gain", "person": "tudi"},
+            {"op": "counter", "key": "apprentice_loyalty", "delta": 20},
+            {"op": "flag", "key": "apprentice_taken", "value": true},
+            {"op": "flag", "key": "apprentice_harsh", "value": true},
+            {"op": "rep", "delta": -1},
+            {"op": "dossier", "frag": "df.tudi.1939.harsh"}
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "不收",
+          "effects": [
+            {"op": "story", "node": "s1939.apprentice", "outcome": "refuse"},
+            {"op": "flag", "key": "apprentice_refused", "value": true}
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {"op": "story", "node": "s1939.apprentice", "outcome": "ignored"},
+          {"op": "flag", "key": "apprentice_ignored", "value": true}
+        ]
+      },
+      "art": "portrait.ex_shopboy",
+      "brief": "1939 第 11 天，有人来求在铺里学徒。留下记走向 take，忠心从较高处起；话硬则走向 harsh，忠心较低。不收是 refuse。打烊不理是 ignored。只来这一次。数字起步，待调。",
+      "_provenance": {"by": "ai", "task": "K18", "date": "2026-10-15"}
+    },
+    {
+      "id": "ev.any.apprentice_audit",
+      "type": "event",
+      "era": ["*"],
+      "weight": 0,
+      "tags": ["apprentice", "omen_wealth"],
+      "schedule": {"when": {"flag": "apprentice_hold"}, "once": true, "order": 9},
+      "choices": [
+        {
+          "id": "forgive",
+          "brief": "账有出入也认了",
+          "effects": [
+            {"op": "if", "cond": {"counter_gte": ["apprentice_skim_pending", 1]}, "then": [{"op": "flag", "key": "apprentice_skim", "value": true}, {"op": "notice", "key": "k18.notice.books_short"}], "else": [{"op": "flag", "key": "apprentice_honest", "value": true}, {"op": "notice", "key": "k18.notice.books_match"}]},
+            {"op": "flag", "key": "apprentice_forgave", "value": true},
+            {"op": "counter", "key": "apprentice_loyalty", "delta": 15}
+          ]
+        },
+        {
+          "id": "scold",
+          "brief": "把账当面算清",
+          "effects": [
+            {"op": "if", "cond": {"counter_gte": ["apprentice_skim_pending", 1]}, "then": [{"op": "flag", "key": "apprentice_skim", "value": true}, {"op": "notice", "key": "k18.notice.books_short"}], "else": [{"op": "flag", "key": "apprentice_honest", "value": true}, {"op": "notice", "key": "k18.notice.books_match"}]},
+            {"op": "flag", "key": "apprentice_scolded", "value": true},
+            {"op": "counter", "key": "apprentice_loyalty", "delta": -15}
+          ]
+        },
+        {
+          "id": "dismiss",
+          "brief": "让他离开铺子",
+          "effects": [
+            {"op": "if", "cond": {"counter_gte": ["apprentice_skim_pending", 1]}, "then": [{"op": "flag", "key": "apprentice_skim", "value": true}, {"op": "notice", "key": "k18.notice.books_short"}], "else": [{"op": "flag", "key": "apprentice_honest", "value": true}, {"op": "notice", "key": "k18.notice.books_match"}]},
+            {"op": "contact_lose", "person": "tudi"},
+            {"op": "flag", "key": "apprentice_dismissed", "value": true}
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {"op": "if", "cond": {"counter_gte": ["apprentice_skim_pending", 1]}, "then": [{"op": "flag", "key": "apprentice_skim", "value": true}, {"op": "notice", "key": "k18.notice.books_short"}], "else": [{"op": "flag", "key": "apprentice_honest", "value": true}, {"op": "notice", "key": "k18.notice.books_match"}]},
+          {"op": "counter", "key": "apprentice_loyalty", "delta": -10},
+          {"op": "flag", "key": "apprentice_scolded", "value": true}
+        ]
+      },
+      "art": "portrait.ex_shopboy",
+      "brief": "回来翻账。短了就记一笔，对得上就记干净。认了、当面算、或让他走。不理也把账结掉，按当面算一档落下。克扣的数不进界面。",
+      "_provenance": {"by": "ai", "task": "K18", "date": "2026-10-15"}
+    },
+    {
+      "id": "ev.any.apprentice_steal",
+      "type": "event",
+      "era": ["*"],
+      "weight": 0,
+      "tags": ["apprentice", "omen_wealth"],
+      "schedule": {"when": {"flag": "apprentice_hold"}, "once": true, "order": 9},
+      "choices": [
+        {
+          "id": "catch",
+          "brief": "当场抓住",
+          "effects": [
+            {"op": "counter", "key": "apprentice_loyalty", "delta": -20},
+            {"op": "flag", "key": "apprentice_stole", "value": true}
+          ]
+        },
+        {
+          "id": "overlook",
+          "brief": "短的那截认了",
+          "effects": [
+            {"op": "money", "delta": -12, "reason": "k18.reason.skim"},
+            {"op": "counter", "key": "apprentice_loyalty", "delta": -10},
+            {"op": "flag", "key": "apprentice_stole", "value": true}
+          ]
+        },
+        {
+          "id": "dismiss",
+          "brief": "让他离开铺子",
+          "effects": [
+            {"op": "contact_lose", "person": "tudi"},
+            {"op": "flag", "key": "apprentice_stole", "value": true},
+            {"op": "flag", "key": "apprentice_dismissed", "value": true}
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {"op": "money", "delta": -12, "reason": "k18.reason.skim"},
+          {"op": "counter", "key": "apprentice_loyalty", "delta": -10},
+          {"op": "flag", "key": "apprentice_stole", "value": true}
+        ]
+      },
+      "art": "portrait.ex_shopboy",
+      "brief": "忠心低过偷的那一档时，月底排进来一次。当品短一截。抓住、认了，或让他走。不理按认了算，钱用差额扣，不够就不扣满，不挡下一天。",
+      "_provenance": {"by": "ai", "task": "K18", "date": "2026-10-15"}
+    },
+    {
+      "id": "ev.any.apprentice_tip",
+      "type": "event",
+      "era": ["*"],
+      "weight": 0,
+      "tags": ["apprentice", "omen_dispute"],
+      "schedule": {"when": {"flag": "apprentice_hold"}, "once": true, "order": 9},
+      "choices": [
+        {
+          "id": "cover",
+          "brief": "花钱把话按下去",
+          "effects": [
+            {"op": "money", "delta": -20, "reason": "k18.reason.tip_cover"},
+            {"op": "counter", "key": "apprentice_loyalty", "delta": 5},
+            {"op": "flag", "key": "apprentice_tip_covered", "value": true}
+          ]
+        },
+        {
+          "id": "let",
+          "brief": "由他说去",
+          "effects": [
+            {"op": "heat", "tier": 1},
+            {"op": "counter", "key": "apprentice_loyalty", "delta": -10},
+            {"op": "flag", "key": "apprentice_tip_let", "value": true}
+          ]
+        },
+        {
+          "id": "dismiss",
+          "brief": "让他离开铺子",
+          "effects": [
+            {"op": "contact_lose", "person": "tudi"},
+            {"op": "flag", "key": "apprentice_tip_dismissed", "value": true},
+            {"op": "flag", "key": "apprentice_dismissed", "value": true}
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {"op": "heat", "tier": 1},
+          {"op": "counter", "key": "apprentice_loyalty", "delta": -10},
+          {"op": "flag", "key": "apprentice_tip_let", "value": true}
+        ]
+      },
+      "art": "portrait.ex_shopboy",
+      "brief": "忠心再低一档时，月底排进来一次：他把铺里的事透给胡二。按下去要花钱；由他说则风声升一档，不局终。不理按由他说算。",
+      "_provenance": {"by": "ai", "task": "K18", "date": "2026-10-15"}
+    },
+    {
+      "id": "ev.any.apprentice_succeed",
+      "type": "event",
+      "era": ["*"],
+      "weight": 0,
+      "tags": ["apprentice", "omen_family"],
+      "story_node": "s1939.apprentice_hand",
+      "schedule": {"when": {"flag": "apprentice_hold"}, "once": true, "order": 9},
+      "choices": [
+        {
+          "id": "accept",
+          "brief": "让他接着看这铺",
+          "effects": [
+            {"op": "story", "node": "s1939.apprentice_hand", "outcome": "accept"},
+            {"op": "flag", "key": "apprentice_succeed", "value": true}
+          ]
+        },
+        {
+          "id": "later",
+          "brief": "先不交",
+          "effects": [
+            {"op": "story", "node": "s1939.apprentice_hand", "outcome": "later"},
+            {"op": "flag", "key": "apprentice_succeed_later", "value": true}
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {"op": "story", "node": "s1939.apprentice_hand", "outcome": "later"},
+          {"op": "flag", "key": "apprentice_succeed_later", "value": true}
+        ]
+      },
+      "art": "portrait.ex_shopboy",
+      "brief": "忠心够高而且跟了至少两个月，月底排进来一次，问要不要让他接班。答应或先不交。不理按先不交，不局终。",
+      "_provenance": {"by": "ai", "task": "K18", "date": "2026-10-15"}
+    }
+  ]
+}

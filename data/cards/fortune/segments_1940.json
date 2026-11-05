@@ -1,0 +1,278 @@
+{
+  "_meta": {
+    "owner": "K10",
+    "schema": 1,
+    "brief": "1940 本月运势扇区，以及该年大轮盘的翻身、平安、坠底各一段。"
+  },
+  "cards": [
+    {
+      "id": "ws.1940.month.caixing",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "arc": 3,
+      "valence": "good",
+      "month_mods": [
+        {
+          "pool": "person",
+          "tags_any": [
+            "buyer"
+          ],
+          "pct": 130
+        }
+      ],
+      "effects": [],
+      "art": "icon.ws.caixing",
+      "brief": "1940 春本月运势好段，财星高照一类。valence 为 good。month_mods 把带 buyer 的人物牌权重抬高。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1940.month.diqi",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "arc": 1,
+      "valence": "good",
+      "month_mods": [
+        {
+          "pool": "fate",
+          "valence": "good",
+          "pct": 115
+        }
+      ],
+      "effects": [],
+      "art": "icon.ws.diqi",
+      "brief": "1940 春本月运势另一段好段，弧较窄。valence 为 good。month_mods 把命运牌池 good 的权重抬高。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1940.month.xinzheng",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "arc": 7,
+      "valence": "bad",
+      "month_mods": [
+        {
+          "pool": "fate",
+          "valence": "bad",
+          "pct": 145
+        }
+      ],
+      "effects": [],
+      "art": "icon.ws.xinzheng",
+      "brief": "1940 春本月运势坏段，流年不利一类。valence 为 bad。month_mods 把命运牌池 bad 的权重抬高。机制注记：汪伪国民政府成立、新官上任之后官面更紧。不写成玩家句子，不写暴力细节。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1940.month.tanpai",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "arc": 6,
+      "valence": "neutral",
+      "month_mods": [
+        {
+          "pool": "event",
+          "tags_any": [
+            "omen_official"
+          ],
+          "pct": 130
+        }
+      ],
+      "effects": [],
+      "art": "icon.ws.tanpai",
+      "brief": "1940 春本月运势平常段。valence 为 neutral。month_mods 把事件牌池里带 omen_official 的权重抬高。机制注记：摊派换了名目，仍是汪伪政权的事。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1940.month.pingan",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "arc": 6,
+      "valence": "neutral",
+      "month_mods": [],
+      "effects": [],
+      "art": "icon.ws.pingan",
+      "brief": "1940 春本月运势平常段。valence 为 neutral。month_mods 为空。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1940.month.koushe",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "arc": 5,
+      "valence": "neutral",
+      "month_mods": [
+        {
+          "pool": "event",
+          "tags_any": [
+            "omen_dispute"
+          ],
+          "pct": 110
+        }
+      ],
+      "effects": [],
+      "art": "icon.ws.koushe",
+      "brief": "1940 春本月运势平常段。valence 为 neutral。month_mods 把事件牌池里带 omen_dispute 的权重略抬。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1940.month.yuanyang",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "arc": 4,
+      "valence": "neutral",
+      "month_mods": [
+        {
+          "pool": "news",
+          "tags_any": [
+            "omen_far"
+          ],
+          "pct": 110
+        }
+      ],
+      "effects": [],
+      "art": "icon.ws.yuanyang",
+      "brief": "1940 春本月运势平常段。valence 为 neutral。month_mods 把消息牌池里带 omen_far 的权重略抬。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1940.big.fanshen_quiet",
+      "type": "wheel_segment",
+      "wheel": "wh.big",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "arc": 2,
+      "valence": "good",
+      "conditions": {
+        "conscience_gte": -20
+      },
+      "effects": [
+        {
+          "op": "heat",
+          "delta": -8
+        },
+        {
+          "op": "add_card",
+          "card": "bf.1940.night_road",
+          "to": "hand"
+        }
+      ],
+      "art": "icon.ws.fanshen",
+      "brief": "1940 大轮盘翻身段。valence 为 good。本心低于阈值不上盘。效果：风声下降一点。V36：此段发大赌 bf.1940.night_road 到手上（#146）。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1940.big.pingan_hold",
+      "type": "wheel_segment",
+      "wheel": "wh.big",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "arc": 3,
+      "valence": "neutral",
+      "effects": [
+        {
+          "op": "rep",
+          "delta": 1
+        }
+      ],
+      "art": "icon.ws.pingan",
+      "brief": "1940 大轮盘平安段。valence 为 neutral。效果：口碑加一点。机制注记：新规矩下先站住，不发大赌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1940.big.zhuidi_office",
+      "type": "wheel_segment",
+      "wheel": "wh.big",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "arc": 3,
+      "valence": "bad",
+      "effects": [
+        {
+          "op": "heat",
+          "delta": 8
+        },
+        {
+          "op": "add_card",
+          "card": "bf.1940.yamen_crate",
+          "to": "hand"
+        }
+      ],
+      "art": "icon.ws.zhuidi",
+      "brief": "1940 大轮盘坠底段。valence 为 bad。效果：风声抬一截。机制注记：汪伪国民政府成立后新官摊派。不写暴力细节。 V36：此段另发大赌 bf.1940.yamen_crate 到手上（#146）。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

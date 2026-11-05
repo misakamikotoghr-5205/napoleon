@@ -1,0 +1,36 @@
+{
+  "_doc": "Full six-module first chain with private tutorial fixtures; see golden/firsts_d1_3.json for exact command and arguments.",
+  "days": {
+    "0": [
+      "month_open",
+      "month_wheel",
+      "incense"
+    ],
+    "1": [
+      "almanac",
+      "notice",
+      "deal",
+      "person",
+      "counter",
+      "mg.spot",
+      "ticket",
+      "dossier",
+      "shelf",
+      "buyer",
+      "night",
+      "settle"
+    ],
+    "2": [
+      "weather",
+      "choice",
+      "gold",
+      "keep"
+    ],
+    "3": [
+      "market_day",
+      "big_wheel",
+      "slots",
+      "coins"
+    ]
+  }
+}

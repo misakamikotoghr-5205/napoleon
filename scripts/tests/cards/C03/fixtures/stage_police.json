@@ -1,0 +1,48 @@
+{
+  "_meta": {
+    "owner": "C03",
+    "schema": 1,
+    "brief": "查良民证的演出块：两个巡警站在门口。不写进 data/cards，等 G01 的演出块校验合入。"
+  },
+  "card": {
+    "uid": "c0003",
+    "def": "ev.1938.police_check",
+    "type": "event",
+    "stage": {
+      "brief": "两个巡警站在门口，查良民证",
+      "walk": "patrol",
+      "cast": [
+        {
+          "who": "ex_patrol",
+          "at": "door_l",
+          "look": "stand",
+          "brief": "巡警甲站门口左边"
+        },
+        {
+          "who": "ex_patrol",
+          "at": "door_r",
+          "look": "stand",
+          "brief": "巡警乙站门口右边"
+        }
+      ],
+      "intro": [
+        {
+          "who": "ex_patrol",
+          "ref": "lines.greet",
+          "brief": "巡警拍门，叫开门查良民证"
+        },
+        {
+          "who": "",
+          "ref": "body",
+          "brief": "旁白：挨家挨户查证件"
+        }
+      ]
+    }
+  },
+  "view": {
+    "stage": {
+      "set": "counter",
+      "time": "day"
+    }
+  }
+}

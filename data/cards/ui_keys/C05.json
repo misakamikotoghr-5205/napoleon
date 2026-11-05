@@ -1,0 +1,95 @@
+{
+  "_meta": {
+    "owner": "C05",
+    "schema": 1,
+    "brief": "条子板和条子面板的界面键。玩家看见的字由 B 写到正文覆盖层。",
+    "_provenance": {
+      "by": "ai",
+      "task": "C05",
+      "date": "2026-10-13"
+    }
+  },
+  "keys": {
+    "c05.kind.money": {
+      "brief": "要钱"
+    },
+    "c05.kind.goods": {
+      "brief": "要货"
+    },
+    "c05.kind.people": {
+      "brief": "要人"
+    },
+    "c05.kind.info": {
+      "brief": "要消息"
+    },
+    "c05.tier.0": {
+      "brief": "小"
+    },
+    "c05.tier.1": {
+      "brief": "中"
+    },
+    "c05.tier.2": {
+      "brief": "大"
+    },
+    "c05.tier.3": {
+      "brief": "要命"
+    },
+    "c05.mode.pay": {
+      "brief": "交"
+    },
+    "c05.mode.haggle": {
+      "brief": "讲价"
+    },
+    "c05.mode.substitute": {
+      "brief": "顶替"
+    },
+    "c05.mode.fabricate": {
+      "brief": "编一个"
+    },
+    "c05.mode.send_person": {
+      "brief": "派人"
+    },
+    "c05.mode.inform": {
+      "brief": "交消息"
+    },
+    "c05.btn.submit": {
+      "brief": "交上去"
+    },
+    "c05.btn.delay": {
+      "brief": "拖一拖"
+    },
+    "c05.delay.note": {
+      "brief": "期限往后推、条子升一档"
+    },
+    "c05.inform.note": {
+      "brief": "交消息会伤到被说的那个人"
+    },
+    "c05.days": {
+      "brief": "条子还剩的天数，占位参数 n"
+    },
+    "c05.amount": {
+      "brief": "这张条子按现在选的办法要交的钱，占位参数 n（看得见的钱数）"
+    },
+    "c05.board.title": {
+      "brief": "条子板"
+    },
+    "c05.reply.delay": {
+      "brief": "拖一拖"
+    },
+    "c05.reply.submit": {
+      "brief": "交上去"
+    },
+    "c05.reply.later": {
+      "brief": "回头再说"
+    },
+    "c05.drawer.title": {
+      "brief": "条子"
+    },
+    "c05.drawer.note": {
+      "brief": "条子抽屉顶上的说明：条子从哪来、有期限、点一张拿出来办"
+    },
+    "c05.drawer.empty": {
+      "brief": "条子抽屉里一张条子都没有时的一句"
+    }
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "_meta": {
+    "owner": "C11",
+    "schema": 1,
+    "brief": "三件家当还在，一件押着，一件没了",
+    "_provenance": {
+      "by": "ai",
+      "task": "C11",
+      "date": "2026-10-13"
+    }
+  },
+  "guide_progress": {},
+  "view": {
+    "v": 1,
+    "phase": "day",
+    "mode": "shop",
+    "busy": false,
+    "date": {
+      "stage": 0,
+      "era": "1938",
+      "y": 1938,
+      "m": 3,
+      "d": 9,
+      "weekday": 2,
+      "stage_day": 9,
+      "stage_days": 30,
+      "abs_day": 9,
+      "minute": 480
+    },
+    "notice": {
+      "weather": "clear",
+      "market_day": false,
+      "news": [],
+      "almanac": {
+        "id": "alm.shoudang",
+        "yi": [],
+        "ji": [],
+        "done": []
+      },
+      "fortune": ""
+    },
+    "money": {
+      "amount": 12,
+      "currency": "fabi"
+    },
+    "rep_tier": 1,
+    "heat_tier": 0,
+    "hand": [],
+    "kept": [],
+    "contacts": [],
+    "pending": [],
+    "demands": [],
+    "tickets": [],
+    "estates": [
+      {
+        "id": "es.jewel_cabinet",
+        "status": "held",
+        "money": 80,
+        "interest_money": 4
+      },
+      {
+        "id": "es.storeroom",
+        "status": "mortgaged",
+        "money": 120,
+        "interest_money": 6
+      },
+      {
+        "id": "es.counter",
+        "status": "held",
+        "money": 150,
+        "interest_money": 7
+      },
+      {
+        "id": "es.old_house",
+        "status": "held",
+        "money": 260,
+        "interest_money": 10
+      },
+      {
+        "id": "es.shopfront",
+        "status": "lost",
+        "money": 400,
+        "interest_money": 16
+      }
+    ],
+    "goals": [],
+    "night_offers": [],
+    "lots": [],
+    "dossier_new": 0,
+    "shelf_count": 0,
+    "caps": {
+      "kept": 5,
+      "contacts": 3,
+      "shelf": 12
+    },
+    "open_panel": {
+      "kind": "",
+      "args": {}
+    },
+    "self": {
+      "uid": "c0001",
+      "def": "self.ruhua",
+      "attrs": {},
+      "used_today": false
+    }
+  },
+  "queries": {
+    "estates|{}": {
+      "estates": [
+        {
+          "id": "es.jewel_cabinet",
+          "status": "held",
+          "money": 80,
+          "interest_money": 4
+        },
+        {
+          "id": "es.storeroom",
+          "status": "mortgaged",
+          "money": 120,
+          "interest_money": 6
+        },
+        {
+          "id": "es.counter",
+          "status": "held",
+          "money": 150,
+          "interest_money": 7
+        },
+        {
+          "id": "es.old_house",
+          "status": "held",
+          "money": 260,
+          "interest_money": 10
+        },
+        {
+          "id": "es.shopfront",
+          "status": "lost",
+          "money": 400,
+          "interest_money": 16
+        }
+      ]
+    },
+    "firsts|{}": {
+      "firsts": {}
+    }
+  },
+  "responses": [
+    {
+      "cmd": "estate.mortgage",
+      "match": {
+        "estate": "es.counter"
+      },
+      "result": {
+        "ok": false,
+        "err": "estate_state",
+        "reason_key": "w0.mock.estate"
+      }
+    },
+    {
+      "cmd": "estate.mortgage",
+      "match": {
+        "estate": "es.jewel_cabinet"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "money": 80
+      }
+    },
+    {
+      "cmd": "estate.redeem",
+      "match": {
+        "estate": "es.storeroom"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "money": 120
+      }
+    },
+    {
+      "cmd": "estate.mortgage",
+      "match": {
+        "estate": "es.old_house"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "money": 260
+      }
+    }
+  ]
+}

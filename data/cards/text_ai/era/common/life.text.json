@@ -1,0 +1,138 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-1938"
+  },
+  "lf.any.coal_out": {
+    "title": "煤用完了",
+    "body": "灶下的煤烧完了，屋里冷冰冰的。",
+    "choices": {
+      "buy": "买煤",
+      "endure": "挨冻"
+    },
+    "outcomes": {
+      "ignored": "挨冻几天，人没精神，胆气也弱了。"
+    }
+  },
+  "lf.any.debt_due": {
+    "title": "欠债到期",
+    "body": "先前借的一笔钱到期了，债主上门来要。",
+    "choices": {
+      "pay": "还上",
+      "endure": "再拖一拖"
+    },
+    "outcomes": {
+      "ignored": "再拖下去，债主四处嚷嚷，风声紧了。"
+    }
+  },
+  "lf.any.funeral": {
+    "title": "街坊办丧事",
+    "body": "街坊家里办丧事，要去祭一份。",
+    "choices": {
+      "pay": "去祭",
+      "endure": "不去"
+    },
+    "outcomes": {
+      "ignored": "没去祭，街坊会说闲话，口碑会掉。"
+    }
+  },
+  "lf.any.lamp_oil": {
+    "title": "灯油快完了",
+    "body": "灯油快见底了，夜里看东西费眼。",
+    "choices": {
+      "pay": "买油",
+      "endure": "摸黑"
+    },
+    "outcomes": {
+      "ignored": "摸黑几天，眼神会差一些。"
+    }
+  },
+  "lf.any.mother_cough": {
+    "title": "母亲咳嗽",
+    "body": "母亲咳得厉害，药不能断。",
+    "choices": {
+      "pay": "去买药",
+      "endure": "再挨几天"
+    },
+    "outcomes": {
+      "ignored": "药断了，你这几天心里发慌，胆气也弱了。"
+    }
+  },
+  "lf.any.new_year": {
+    "title": "过年",
+    "body": "要过年了，灶上和人情都要备一份。",
+    "choices": {
+      "pay": "备年货",
+      "endure": "一切从简"
+    },
+    "outcomes": {
+      "ignored": "年过得太寒碜，街坊会说闲话，口碑会掉。"
+    }
+  },
+  "lf.any.rent": {
+    "title": "房租到期",
+    "body": "房租到期了，房东来催。",
+    "choices": {
+      "pay": "交租",
+      "endure": "先欠着"
+    },
+    "outcomes": {
+      "ignored": "房租欠着，街坊都知道了，口碑会掉。"
+    }
+  },
+  "lf.any.repair_house": {
+    "title": "屋子要修",
+    "body": "屋子漏了，门也坏了，得请人来修。",
+    "choices": {
+      "pay": "修一修",
+      "endure": "先凑合"
+    },
+    "outcomes": {
+      "ignored": "凑合着过，货架上会坏掉一件东西。"
+    }
+  },
+  "lf.any.rice_low": {
+    "title": "米缸见底",
+    "body": "米缸见底了，得去买米。",
+    "choices": {
+      "buy": "买米",
+      "endure": "先挨着"
+    },
+    "outcomes": {
+      "ignored": "饿着肚子，你这几天身子不适。"
+    }
+  },
+  "lf.any.school_fee": {
+    "title": "学堂催学费",
+    "body": "学堂来催学费了。",
+    "choices": {
+      "pay": "交学费",
+      "endure": "这学期不去"
+    },
+    "outcomes": {
+      "ignored": "学费没交，这学期上不成学，口碑会掉。"
+    }
+  },
+  "lf.any.see_doctor": {
+    "title": "家里有人病了",
+    "body": "家里有人病了，得请大夫来看看。",
+    "choices": {
+      "pay": "去看病",
+      "endure": "拖着"
+    },
+    "outcomes": {
+      "ignored": "拖着不看，你这几天跟着累倒，做不了事。"
+    }
+  },
+  "lf.any.wedding_gift": {
+    "title": "喜帖上门",
+    "body": "街坊送来喜帖，要随一份礼。",
+    "choices": {
+      "pay": "随礼",
+      "endure": "不去"
+    },
+    "outcomes": {
+      "ignored": "没去随礼，街坊会说闲话，口碑会掉。"
+    }
+  }
+}

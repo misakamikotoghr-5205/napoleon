@@ -1,0 +1,55 @@
+{
+  "_meta": {
+    "owner": "K09",
+    "schema": 1,
+    "brief": "演出里的群演"
+  },
+  "persons": {
+    "ex_patrol": {
+      "portrait": "portrait.ex_patrol",
+      "dossier": false,
+      "brief": "巡警，查良民证，在门口站一站。1938 年三月底警察所开门。名字由 A 定。"
+    },
+    "ex_soldier": {
+      "portrait": "portrait.ex_soldier",
+      "dossier": false,
+      "brief": "日方扶植的伪军，街上走过的一队。名字由 A 定。"
+    },
+    "ex_newsboy": {
+      "portrait": "portrait.ex_newsboy",
+      "dossier": false,
+      "brief": "报童，也替人跑腿带话。名字由 A 定。"
+    },
+    "ex_girl": {
+      "portrait": "portrait.ex_girl",
+      "dossier": false,
+      "brief": "对门的姑娘，从门口经过。名字由 A 定。"
+    },
+    "ex_shopboy": {
+      "portrait": "portrait.ex_shopboy",
+      "dossier": false,
+      "brief": "邻铺的伙计。名字由 A 定。"
+    },
+    "ex_oldman": {
+      "portrait": "portrait.ex_oldman",
+      "dossier": false,
+      "brief": "街上的老先生。名字由 A 定。"
+    },
+    "ex_porter": {
+      "portrait": "portrait.ex_porter",
+      "dossier": false,
+      "brief": "过路人，也在码头扛包。名字由 A 定。"
+    },
+    "ex_student": {
+      "portrait": "portrait.ex_student",
+      "dossier": false,
+      "brief": "镇上的学生。名字由 A 定。"
+    },
+    "ex_hu2_man": {
+      "portrait": "portrait.ex_hu2_man",
+      "dossier": false,
+      "brief": "胡二的人，只作剪影。胡二替伪维持会的保长跑腿。名字由 A 定。"
+    }
+  },
+  "cards": []
+}

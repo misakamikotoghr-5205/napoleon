@@ -1,0 +1,10 @@
+# C09 开月、月底、跳年、局终（docs/handoff_cards/C09_month-year.md）
+C09_month_open|res://scripts/tests/cards/C09/test_month_open.gd|120|
+C09_month_close|res://scripts/tests/cards/C09/test_month_close.gd|120|
+C09_year_jump|res://scripts/tests/cards/C09/test_year_jump.gd|120|
+C09_game_over|res://scripts/tests/cards/C09/test_game_over.gd|120|
+C09_guide|res://scripts/tests/cards/C09/test_guide.gd|180|
+C09_guide_k16|res://scripts/tests/cards/C09/test_guide.gd|180|--steps=k16 --name=C09_guide_k16
+C09_real_engine|res://scripts/tests/cards/C09/test_real_engine.gd|180|
+C09_real_data|res://scripts/tests/cards/C09/test_real_engine.gd|300|--data=real --name=C09_real_data
+C09_month_open_skip|res://scripts/tests/cards/C09/test_month_open_skip.gd|120|

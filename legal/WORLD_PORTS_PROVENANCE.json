@@ -1,0 +1,9 @@
+{
+  "base_source_archive_sha256": "75b9611858c31de533335c79a219e0ecf75d33530fdf4636472dd0cba52dd745",
+  "unchanged_model_sha256": "19863076c6cd35d662c1de499698cb8355ece4ae112633bcc152e68f046e48b2",
+  "new_code": "src/gamejev_world, tests/test_world_ports.py, examples/world_ports_demo.py, examples/build_worldpacks.py",
+  "new_docs": "DESIGN_v0.4.zh-CN.md, docs/WORLD_PORTS_CONTRACT.md",
+  "worldpacks": "Synthetic numerical fixtures; not historical evidence, release artwork or final narrative",
+  "license": "MIT; upstream notices retained",
+  "training": "None in this iteration"
+}

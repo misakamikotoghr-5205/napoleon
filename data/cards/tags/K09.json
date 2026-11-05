@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "owner": "K09",
+    "schema": 1,
+    "brief": "K09 通用牌用到的标签"
+  },
+  "tags": {
+    "favor": {
+      "brief": "人情，能放进标着人情的格子"
+    },
+    "official": {
+      "brief": "官面，保长、查验、摊派这一类格子"
+    },
+    "contraband": {
+      "brief": "来路不明，被查到会出事"
+    },
+    "papers": {
+      "brief": "证件"
+    },
+    "family": {
+      "brief": "家里的事，主线信物按这个匹配"
+    },
+    "token": {
+      "brief": "信物"
+    },
+    "hard": {
+      "brief": "硬货，金条这一类"
+    },
+    "wealth": {
+      "brief": "财物"
+    },
+    "leverage": {
+      "brief": "把柄，被查到会出事"
+    },
+    "pawn": {
+      "brief": "当票、当东西"
+    },
+    "gate": {
+      "brief": "城门盘查"
+    },
+    "street": {
+      "brief": "流落街头"
+    },
+    "letter": {
+      "brief": "书信、抄写"
+    },
+    "labor": {
+      "brief": "出力的零工"
+    },
+    "kin": {
+      "brief": "熟人"
+    },
+    "prison": {
+      "brief": "牢房"
+    },
+    "info": {
+      "brief": "消息"
+    },
+    "rumor": {
+      "brief": "闲话"
+    },
+    "medicine": {
+      "brief": "药材、医院"
+    },
+    "home": {
+      "brief": "家宅"
+    },
+    "search": {
+      "brief": "查铺"
+    },
+    "police": {
+      "brief": "警察、巡查"
+    },
+    "rice": {
+      "brief": "米粮"
+    },
+    "trade": {
+      "brief": "买卖"
+    }
+  }
+}

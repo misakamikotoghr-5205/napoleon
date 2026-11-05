@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "owner": "W0",
+    "schema": 1,
+    "brief": "例子集：演出使用的群演；不是人物牌，不进人脉或档案"
+  },
+  "persons": {
+    "ex_patrol": {
+      "portrait": "portrait.ex_patrol",
+      "dossier": false,
+      "brief": "群演：巡警"
+    },
+    "ex_shopboy": {
+      "portrait": "portrait.ex_shopboy",
+      "dossier": false,
+      "brief": "群演：邻铺伙计"
+    },
+    "ex_newsboy": {
+      "portrait": "portrait.ex_newsboy",
+      "dossier": false,
+      "brief": "群演：报童"
+    }
+  },
+  "cards": []
+}

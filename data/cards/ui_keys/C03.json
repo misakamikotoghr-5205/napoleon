@@ -1,0 +1,236 @@
+{
+  "_meta": {
+    "owner": "C03",
+    "schema": 1,
+    "brief": "C03 格子、掷铜钱、人脉满、留牌满的界面键",
+    "_provenance": {
+      "by": "ai",
+      "task": "C03",
+      "date": "2026-10-13"
+    }
+  },
+  "keys": {
+    "c03.coins.line": {
+      "brief": "铜钱一行：已有 {n} 枚，要 {m} 个正面"
+    },
+    "c03.coins.auto_pass": {
+      "brief": "这一格直接过，不用掷"
+    },
+    "c03.btn.roll": {
+      "brief": "掷铜钱按钮"
+    },
+    "c03.btn.continue": {
+      "brief": "看完结果后继续"
+    },
+    "c03.btn.read": {
+      "brief": "消息或当票：看过了"
+    },
+    "c03.btn.look": {
+      "brief": "带小游戏的牌：细看"
+    },
+    "c03.btn.keep": {
+      "brief": "能留的牌：留着"
+    },
+    "c03.btn.remove": {
+      "brief": "把格子里的一样东西拿出来"
+    },
+    "c03.btn.close": {
+      "brief": "关掉面板"
+    },
+    "c03.wants.official": {
+      "brief": "格子性质：官面"
+    },
+    "c03.wants.papers": {
+      "brief": "格子性质：证件"
+    },
+    "c03.wants.favor": {
+      "brief": "格子性质：人情"
+    },
+    "c03.wants.person": {
+      "brief": "格子性质：要人"
+    },
+    "c03.wants.goods": {
+      "brief": "格子性质：要货"
+    },
+    "c03.wants.news": {
+      "brief": "格子性质：要消息"
+    },
+    "c03.wants.money": {
+      "brief": "格子性质：要钱"
+    },
+    "c03.wants.hard": {
+      "brief": "格子性质：硬货"
+    },
+    "c03.err.slot_reject": {
+      "brief": "这样东西放不进这个格子"
+    },
+    "c03.err.slot_full": {
+      "brief": "这个格子已经满了"
+    },
+    "c03.err.slot_required": {
+      "brief": "必放的格子还空着"
+    },
+    "c03.err.person_busy": {
+      "brief": "这个人今天已经用过了"
+    },
+    "c03.err.bad_args": {
+      "brief": "这一步办不成"
+    },
+    "c03.err.unknown_uid": {
+      "brief": "找不到这张牌"
+    },
+    "c03.err.not_allowed": {
+      "brief": "现在不能这么办"
+    },
+    "c03.err.insufficient_money": {
+      "brief": "钱不够"
+    },
+    "c03.err.kept_full": {
+      "brief": "留着的牌已经满了"
+    },
+    "c03.err.not_keepable": {
+      "brief": "这张牌留不下"
+    },
+    "c03.err.not_implemented": {
+      "brief": "这一步还没接上"
+    },
+    "c03.err.unknown": {
+      "brief": "没办成"
+    },
+    "c03.contacts_full.title": {
+      "brief": "人脉满了，选一个让出来"
+    },
+    "c03.contacts_full.new": {
+      "brief": "新来的人"
+    },
+    "c03.kept_full.title": {
+      "brief": "留着的牌满了，选一张扔掉；关掉就是扔掉新来的那张"
+    },
+    "c03.kept_full.new": {
+      "brief": "新来的那张"
+    },
+    "c03.picker.self": {
+      "brief": "放你自己"
+    },
+    "c03.picker.contact": {
+      "brief": "放一个人脉"
+    },
+    "c03.picker.kept": {
+      "brief": "放一张留着的牌"
+    },
+    "c03.picker.item": {
+      "brief": "放一件货架上的东西"
+    },
+    "c03.picker.news": {
+      "brief": "放一张消息"
+    },
+    "c03.picker.money": {
+      "brief": "把选定的钱放进格子"
+    },
+    "c03.picker.plus": {
+      "brief": "钱加一档"
+    },
+    "c03.picker.minus": {
+      "brief": "钱减一档"
+    },
+    "c03.picker.used": {
+      "brief": "今天已经用过"
+    },
+    "c03.picker.away": {
+      "brief": "人不在"
+    },
+    "c03.picker.title": {
+      "brief": "往格子里放东西"
+    },
+    "c03.reply.later": {
+      "brief": "回头再说"
+    },
+    "c03.reply.roll": {
+      "brief": "掷铜钱，现在 {n} 枚，要 {m} 个正面"
+    },
+    "c03.reply.read": {
+      "brief": "看过了"
+    },
+    "c03.reply.keep": {
+      "brief": "留着"
+    },
+    "c03.reply.look": {
+      "brief": "细看"
+    },
+    "c03.sys.roll": {
+      "brief": "铜钱停了：正面 {heads} 个，要 {need} 个"
+    },
+    "c03.money.minus": {
+      "brief": "钱格的减号小按钮：少放一份钱，{n} 是一份的钱数"
+    },
+    "c03.money.plus": {
+      "brief": "钱格的加号小按钮：多放一份钱，{n} 是一份的钱数"
+    },
+    "c03.drawer.title": {
+      "brief": "人脉和留着的牌"
+    },
+    "c03.state.used": {
+      "brief": "今天用过了"
+    },
+    "c03.state.away": {
+      "brief": "不在，还要 {n} 天"
+    },
+    "c03.state.days": {
+      "brief": "还剩 {n} 天"
+    },
+    "c03.drawer.note": {
+      "brief": "人脉抽屉顶上的说明：现有 {n} 位人脉，最多 {cap} 位；怎么用（头像拖进格子，一点本事一枚铜钱）"
+    },
+    "c03.drawer.empty": {
+      "brief": "人脉没满时的一句：空位怎么来人"
+    },
+    "c03.drawer.kept": {
+      "brief": "人脉抽屉里“留着的牌”小节标题"
+    },
+    "c03.drawer.kept_count": {
+      "brief": "留着的牌小节标题后的小字：现有 {n} 张，最多 {cap} 张"
+    },
+    "c03.drawer.kept_none": {
+      "brief": "一张留着的牌都没有时的一句"
+    },
+    "c03.drawer.you": {
+      "brief": "人脉抽屉里“你自己”那一行名字后的小药丸"
+    },
+    "c03.attr.eye": {
+      "brief": "本事名：眼力（人脉抽屉每行、格子名里用；和英雄栏同一个说法）"
+    },
+    "c03.attr.tongue": {
+      "brief": "本事名：口才"
+    },
+    "c03.attr.pull": {
+      "brief": "本事名：人脉（门路）"
+    },
+    "c03.attr.nerve": {
+      "brief": "本事名：胆量"
+    },
+    "c03.slot.empty": {
+      "brief": "钱格空着时格子中间的小字"
+    },
+    "c03.slot.put": {
+      "brief": "空格子底下的小按钮：点了弹出选择器"
+    },
+    "c03.slot.required": {
+      "brief": "非放不可的格子，格子名旁的小红牌"
+    },
+    "c03.slot.kept_mark": {
+      "brief": "格子里放了留着的牌时，前面那枚红圆章上的字"
+    },
+    "c03.slot.money": {
+      "brief": "格子里放的钱：{n} 是钱数，{unit} 是币种字"
+    },
+    "c03.coins.none": {
+      "brief": "柜台铜钱一排：格子都空着、一枚铜钱也没有时的一句"
+    },
+    "c03.coins.auto_plus": {
+      "brief": "掷完的小牌子上：放进去的东西直接算的正面数，{n} 个"
+    },
+    "c03.picker.cancel": {
+      "brief": "选择器最后的“算了”：什么都不放，关掉选择器"
+    }
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "_doc": "远洋战役营地（scripts/cards/ui/hub/）的界面文字：营地主画面、事务面板、日终 / 开部 / 换部 / 终局面板。剧情正文、选项字不在这里，来自 ocean_view 覆盖层（CardText）。{占位符} 由代码填。由 Claude 撰写，主创可改；不用当铺的字眼（WORLD_MAP_DESIGN §12，scripts/tests/cards/OCEAN/test_content.gd 把关）。",
+  "text": {
+    "brand": "远洋",
+    "brand_mark": "鹰",
+    "date": "{y}年{m}月{d}日",
+    "scene_no": "第 {n}/{total} 场",
+    "roster_title": "伙伴",
+    "roster_hero": "主角 · 统帅",
+    "roster_level": "{n} 级",
+    "roster_hp": "{hp}/{max}",
+    "roster_empty": "还没有伙伴。",
+    "coins_title": "功能币",
+    "coin": {
+      "gold": "金币",
+      "supply": "军需券",
+      "medal": "勋章",
+      "intel": "情报币"
+    },
+    "coin_tip": {
+      "gold": "帝国金币：招募伙伴",
+      "supply": "军需券：补给与部队",
+      "medal": "荣誉勋章：晋升伙伴",
+      "intel": "情报币：出征前侦察敌情"
+    },
+    "gauge": {
+      "treasury": "军费",
+      "morale": "同盟威望",
+      "heat": "敌方警戒",
+      "vitality": "体力与士气",
+      "construction": "岛屿建设",
+      "exploration": "深海探索"
+    },
+    "gauge_tip": {
+      "treasury": "军费：归零即告罄",
+      "morale": "同盟威望（0–100）",
+      "heat": "敌方警戒：到 100 全面封锁",
+      "vitality": "体力与士气：归零航程结束",
+      "construction": "岛屿建设进度（0–100）",
+      "exploration": "深海探索进度（0–100）"
+    },
+    "story_kicker": "当前剧情",
+    "story_open": "开始剧情",
+    "story_resume": "回到剧情",
+    "story_appraise": "查验 {done}/{total}",
+    "story_battle": "等本场的仗了结",
+    "story_ready": "可以作出决定",
+    "story_none": "这一部的剧情已经走完。",
+    "battle_kicker": "本场战事",
+    "battle_lineup": "排兵出征",
+    "battle_active": "回到战场",
+    "battle_result": "查看战果",
+    "battle_done": "已了结",
+    "battle_free": "无仗",
+    "fate_kicker": "大命运 · 战败危机",
+    "fate_open": "面对抉择",
+    "fate_body": "仗打输了。先作出大命运的抉择，剧情才能往下走。",
+    "demand_kicker": "催逼",
+    "demand_days": "剩 {n} 天",
+    "camp_title": "营地事务",
+    "camp_ready": "{n} 项可办",
+    "camp_none": "暂无可办",
+    "kit_title": "行军箱",
+    "kit_empty": "行军箱是空的。",
+    "kit_prop": "道具",
+    "log_title": "航海日志",
+    "log_empty": "还没有记账。",
+    "btn_relics": "信物",
+    "btn_dossier": "档案",
+    "btn_rules": "手册",
+    "btn_settings": "设置",
+    "btn_menu": "菜单",
+    "tip_relics": "航程信物：收存的关键物证",
+    "tip_dossier": "人物档案",
+    "tip_rules": "军需官手册",
+    "tip_settings": "设置",
+    "tip_menu": "暂停菜单（Esc）",
+    "end_hint": "无一天时限压力：可随时在剧情内或营地使用卡牌、掷骰收集资源，准备就绪后进入战斗或下一幕",
+    "cards": {
+      "signage": {
+        "label": "营令",
+        "icon": "旗",
+        "kicker": "营地事务"
+      },
+      "town": {
+        "label": "市镇补给",
+        "icon": "镇",
+        "kicker": "营地事务"
+      },
+      "backdoor": {
+        "label": "密探联络",
+        "icon": "密",
+        "kicker": "营地事务"
+      },
+      "resources": {
+        "label": "工程与援助",
+        "icon": "工",
+        "kicker": "营地事务"
+      },
+      "march": {
+        "label": "掷骰行军收集",
+        "icon": "骰",
+        "kicker": "物资收集"
+      },
+      "calendar": {
+        "label": "军备操演与补给",
+        "icon": "操",
+        "kicker": "战前筹备"
+      },
+      "squad": {
+        "label": "伙伴名册",
+        "icon": "册",
+        "kicker": "营地事务"
+      },
+      "status": {
+        "label": "军需账簿与航海日志",
+        "icon": "账",
+        "kicker": "军需"
+      },
+      "big_fate": {
+        "label": "大命运",
+        "icon": "命",
+        "kicker": "战败危机"
+      },
+      "battle": {
+        "label": "战场",
+        "icon": "战",
+        "kicker": "本场战事"
+      },
+      "demand": {
+        "label": "催逼",
+        "icon": "催",
+        "kicker": "限期交付"
+      },
+      "item": {
+        "label": "行军箱",
+        "icon": "箱",
+        "kicker": "任务物件"
+      },
+      "prop": {
+        "label": "道具",
+        "icon": "具",
+        "kicker": "行军道具"
+      },
+      "companion": {
+        "label": "伙伴",
+        "icon": "伴",
+        "kicker": "伙伴"
+      },
+      "rules": {
+        "label": "手册",
+        "icon": "册",
+        "kicker": "军需官手册"
+      }
+    },
+    "sign": {
+      "white": "白旗 · 照常行军",
+      "red": "红旗 · 就地征发",
+      "black": "黑旗 · 闭营清点"
+    },
+    "sub": {
+      "signage": "营令：{sign}",
+      "town": "走访补给 · 公道或假币买卖",
+      "backdoor": "每场一次，联络密探",
+      "resources": "建设 · 探索 · 资助同盟",
+      "march": "第 {pos} 格 · {tile}",
+      "calendar": "第 {week} 周 · 距大战 {countdown} 格",
+      "squad": "金币 {gold} · 勋章 {medal}",
+      "status": "查账、看最近的记录"
+    },
+    "panel_prompt": "如何处置？",
+    "panel_later": "稍后再来",
+    "panel_back": "返回营地",
+    "panel_close": "收起",
+    "panel_done": "已办：{label}",
+    "panel_result": "结果",
+    "panel_none": "账面没有变动。",
+    "panel_gone": "这件事已经了结。",
+    "panel_error": "这一步没有办成（{err}）。",
+    "panel_no_choice": "眼下没有可办的事。",
+    "change": "{label} {delta}",
+    "change_sep": "，",
+    "items_in": "收入行军箱：{names}",
+    "items_out": "交出：{names}",
+    "list_sep": "、",
+    "reason": {
+      "locked": "条件不足或这一场已经办过",
+      "bad_phase": "现在不是行动时间"
+    },
+    "phase": {
+      "month_open_kicker": "启航",
+      "month_open_sub": "本部以 {currency} 结算",
+      "month_open_btn": "启航",
+      "settle_kicker": "夜 · 点名",
+      "settle_title": "第 {day} 日军需",
+      "settle_btn": "迎接次日",
+      "year_kicker": "战史翻页",
+      "year_title": "进入下一部",
+      "year_btn": "进入下一部",
+      "over_kicker": "航程终了",
+      "over_btn": "回到标题",
+      "over_note": "这本航海日志已经放上回忆录书架。",
+      "later": "稍后"
+    },
+    "troops_title": "部队",
+    "troops_empty": "营里还没有部队。",
+    "troop_strength": "{n}",
+    "sep": "  ·  ",
+    "sep_short": " · ",
+    "title_hint": "【新手教程】① 点击「开始剧情」阅读长篇剧本；② 在剧情推进中直接使用筹备卡牌或掷骰收集物资；③ 查验线索并做出选择；④ 遇到战役时阅读战斗前序指引后排兵出征（全程无一天时限压力）！",
+    "rules_body": "在营地中间的剧情卡上点「开始剧情」，读这一场的故事并选择查验方式；查验完回到剧情，可复查线索并作出决定。这一场有仗要打时，先在战事卡上点「排兵出征」，仗了结以后剧情才能往下走。\n\n右栏是营地事务：营令三色旗定下每天的行动方针，市镇补给和密探联络每场各有一次行动，工程、世界地图、营地日程、名册各管一摊。任务物件收在行军箱里；催逼的期限随等待和剧情推进而减少。今天的事办完了，点右下角的「扎营」推进一天。\n\n军费归零、警戒达到 100 或体力与士气归零将结束旅程。岛屿建设、深海探索和同盟选择会影响终局。所有实验与特殊药剂只作为虚构任务物件结算。",
+    "end_pending": {
+      "story": "剧情未定",
+      "battle": "本场的仗还没打",
+      "fate": "大命运待决",
+      "left": "还能办 {n} 件"
+    },
+    "pause": {
+      "kicker": "航程暂停",
+      "heading": "歇一口气",
+      "resume": "回到营地",
+      "settings": "设置",
+      "help": "军需官手册",
+      "title": "回到标题",
+      "quit": "离开游戏",
+      "confirm_yes": "确定",
+      "confirm_no": "再想想",
+      "icon": "憩"
+    },
+    "settings": {
+      "kicker": "设置",
+      "heading": "航程设置",
+      "icon": "设",
+      "close": "收起"
+    },
+    "relics": {
+      "kicker": "航程信物",
+      "icon": "信",
+      "empty": "还没有收存关键物证。在剧情里查验线索、作出决定后，拿到手的物证会记在这里。",
+      "since": "第 {d} 日收存",
+      "close": "收起",
+      "notes": "航海札记"
+    },
+    "dossier": {
+      "kicker": "人物档案",
+      "icon": "档",
+      "count": "共 {n} 人",
+      "close": "收起",
+      "empty": "还没有人物记录。"
+    },
+    "campaign_title": {
+      "tagline": "帝国军需官 · 司库的抉择",
+      "blurb": "从土伦的炮火到厄尔巴的海风。\n一本军需簿，三条命运之路。",
+      "new": "出征",
+      "continue": "接续战役",
+      "settings": "设置",
+      "quit": "离开",
+      "chapters": "篇章",
+      "hint": "【新手流程指引】① 先看长篇剧情 ➔ ② 剧情推进时使用卡牌 & 掷骰收集物资 ➔ ③ 查验线索与分支选择 ➔ ④ 战前排兵与 3D 战棋交锋。\n全程无一天时限压力，每次行动自动保存。",
+      "debug": "调试书 · {name}",
+      "drawer_title": "选择篇章",
+      "drawer_hint": "篇章从章首开始，使用这本书的标准携带。",
+      "drawer_debug": "调试书可选择已备齐的篇章；后续卷仍需等待开放。",
+      "chapter": "{brand} · {chapter}",
+      "first_chapter": "第一章",
+      "selected": "将出征：{name}",
+      "unavailable": "这本书的剧本或地图尚未备齐，暂不可出征。",
+      "locked": "完成这条分支的任一结局或卷终后解锁。",
+      "next_volume": "这一章属于后续卷，尚未开放。",
+      "branch_point": "分岔新局 · 厄尔巴 1815",
+      "branch_resume": "继续上次分岔存档",
+      "branch_locked": "到达厄尔巴分岔点后解锁；新局使用标准携带和新的种子。",
+      "branch_missing": "到达分岔点并保存后，可从这里接续。",
+      "branch_tip": "恢复上次分岔点存档及其携带。",
+      "close": "收起",
+      "continue_line": "{segment} · 第 {chapter} 章 · 第 {day} 日",
+      "collection": "{name} {n}/{total}",
+      "collection_pending": "{name} {n}/—",
+      "branch_name": {
+        "conquest": "鹰飞",
+        "ocean": "远洋",
+        "cristo": "伊夫堡",
+        "trunk": "主干"
+      },
+      "archive": "战役档案 · 第 {n} 本",
+      "archive_open": "战役档案 · 第 {n} 本进行中",
+      "shelf": "战役回忆录",
+      "name": "鹰旗军需官"
+    }
+  }
+}

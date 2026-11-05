@@ -1,0 +1,45 @@
+{
+  "_meta": {
+    "owner": "G05",
+    "schema": 1
+  },
+  "factors": [
+    {
+      "pool": "person",
+      "tags_any": [
+        "buyer"
+      ],
+      "rep_tier": [
+        2,
+        3,
+        4
+      ],
+      "pct": 120
+    },
+    {
+      "pool": "fate",
+      "valence": "bad",
+      "heat_tier": [
+        2,
+        3,
+        4
+      ],
+      "pct": 150
+    },
+    {
+      "pool": "person",
+      "tags_any": [
+        "buyer"
+      ],
+      "market_day": true,
+      "pct": 130
+    },
+    {
+      "pool": "person",
+      "weather": [
+        "rain"
+      ],
+      "pct": 80
+    }
+  ]
+}

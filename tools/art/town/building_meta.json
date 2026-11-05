@@ -1,0 +1,214 @@
+{
+  "pawnshop": {
+    "size": [
+      127,
+      107
+    ],
+    "door": [
+      31,
+      80,
+      16,
+      24
+    ],
+    "footprint": [
+      0,
+      42,
+      127,
+      65
+    ],
+    "roof_split_y": 42,
+    "variants": {
+      "night": "art/town/buildings/pawnshop_night.png"
+    }
+  },
+  "ricehall": {
+    "size": [
+      74,
+      79
+    ],
+    "door": [
+      29,
+      52,
+      16,
+      24
+    ],
+    "footprint": [
+      0,
+      32,
+      74,
+      47
+    ],
+    "roof_split_y": 32,
+    "variants": {
+      "night": "art/town/buildings/ricehall_night.png"
+    }
+  },
+  "pharmacy": {
+    "size": [
+      70,
+      93
+    ],
+    "door": [
+      27,
+      66,
+      16,
+      24
+    ],
+    "footprint": [
+      0,
+      28,
+      70,
+      65
+    ],
+    "roof_split_y": 28,
+    "variants": {
+      "night": "art/town/buildings/pharmacy_night.png"
+    }
+  },
+  "teahouse": {
+    "size": [
+      82,
+      93
+    ],
+    "door": [
+      33,
+      66,
+      16,
+      24
+    ],
+    "footprint": [
+      0,
+      28,
+      82,
+      65
+    ],
+    "roof_split_y": 28,
+    "variants": {
+      "night": "art/town/buildings/teahouse_night.png"
+    }
+  },
+  "post": {
+    "size": [
+      70,
+      93
+    ],
+    "door": [
+      27,
+      66,
+      16,
+      24
+    ],
+    "footprint": [
+      0,
+      28,
+      70,
+      65
+    ],
+    "roof_split_y": 28,
+    "variants": {
+      "night": "art/town/buildings/post_night.png"
+    }
+  },
+  "sunfu": {
+    "size": [
+      100,
+      80
+    ],
+    "door": [
+      42,
+      52,
+      16,
+      24
+    ],
+    "footprint": [
+      0,
+      30,
+      100,
+      50
+    ],
+    "roof_split_y": 30,
+    "variants": {}
+  },
+  "police": {
+    "size": [
+      74,
+      77
+    ],
+    "door": [
+      29,
+      50,
+      16,
+      24
+    ],
+    "footprint": [
+      0,
+      30,
+      74,
+      47
+    ],
+    "roof_split_y": 30,
+    "variants": {
+      "locked": "art/town/buildings/police_locked.png"
+    }
+  },
+  "baogong": {
+    "size": [
+      70,
+      90
+    ],
+    "door": [
+      27,
+      63,
+      16,
+      24
+    ],
+    "footprint": [
+      0,
+      28,
+      70,
+      62
+    ],
+    "roof_split_y": 28,
+    "variants": {}
+  },
+  "dock_shed": {
+    "size": [
+      64,
+      48
+    ],
+    "door": [
+      24,
+      24,
+      16,
+      24
+    ],
+    "footprint": [
+      0,
+      22,
+      64,
+      26
+    ],
+    "roof_split_y": 22,
+    "variants": {}
+  },
+  "market_stall": {
+    "size": [
+      56,
+      40
+    ],
+    "door": [
+      20,
+      16,
+      16,
+      24
+    ],
+    "footprint": [
+      0,
+      20,
+      56,
+      20
+    ],
+    "roof_split_y": 20,
+    "variants": {}
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "_meta": {
+    "owner": "W0",
+    "schema": 1,
+    "brief": "W0 桩界面用到的界面键；各面板主人换掉桩以后删掉不用的"
+  },
+  "keys": {
+    "w0.title.new": {
+      "brief": "标题：新局"
+    },
+    "w0.title.continue": {
+      "brief": "标题：继续"
+    },
+    "w0.title.settings": {
+      "brief": "标题：设置"
+    },
+    "w0.title.quit": {
+      "brief": "标题：退出"
+    },
+    "w0.btn.primary": {
+      "brief": "桩面板上的“办这件事”按钮（W0 占位）"
+    },
+    "w0.btn.close": {
+      "brief": "关掉面板"
+    },
+    "w0.btn.close_day": {
+      "brief": "打烊·下一天按钮"
+    },
+    "w0.mg.done": {
+      "brief": "示例小游戏：看完了"
+    },
+    "w0.top.money": {
+      "brief": "顶栏：钱（后面跟数目）"
+    },
+    "w0.top.day": {
+      "brief": "顶栏：第几天（后面跟数目）"
+    },
+    "w0.zone.kept": {
+      "brief": "左栏：留着的牌"
+    },
+    "w0.zone.contacts": {
+      "brief": "左栏：人脉"
+    },
+    "w0.zone.self": {
+      "brief": "左栏：你自己"
+    },
+    "w0.zone.tickets": {
+      "brief": "右栏：当票"
+    },
+    "w0.zone.shelf": {
+      "brief": "右栏：货架"
+    },
+    "w0.zone.dossier": {
+      "brief": "右栏：档案簿"
+    },
+    "w0.panel.counter": {
+      "brief": "面板标题（W0 占位面板）：counter"
+    },
+    "w0.panel.slots": {
+      "brief": "面板标题（W0 占位面板）：slots"
+    },
+    "w0.panel.demand": {
+      "brief": "面板标题（W0 占位面板）：demand"
+    },
+    "w0.panel.wheel": {
+      "brief": "面板标题（W0 占位面板）：wheel"
+    },
+    "w0.panel.fortune": {
+      "brief": "面板标题（W0 占位面板）：fortune"
+    },
+    "w0.panel.end_day": {
+      "brief": "面板标题（W0 占位面板）：end_day"
+    },
+    "w0.panel.night": {
+      "brief": "面板标题（W0 占位面板）：night"
+    },
+    "w0.panel.settle": {
+      "brief": "面板标题（W0 占位面板）：settle"
+    },
+    "w0.panel.month_open": {
+      "brief": "面板标题（W0 占位面板）：month_open"
+    },
+    "w0.panel.month_close": {
+      "brief": "面板标题（W0 占位面板）：month_close"
+    },
+    "w0.panel.year_jump": {
+      "brief": "面板标题（W0 占位面板）：year_jump"
+    },
+    "w0.panel.game_over": {
+      "brief": "面板标题（W0 占位面板）：game_over"
+    },
+    "w0.panel.dossier": {
+      "brief": "面板标题（W0 占位面板）：dossier"
+    },
+    "w0.panel.estates": {
+      "brief": "面板标题（W0 占位面板）：estates"
+    },
+    "w0.panel.short": {
+      "brief": "面板标题（W0 占位面板）：short"
+    },
+    "w0.panel.prison": {
+      "brief": "面板标题（W0 占位面板）：prison"
+    },
+    "w0.panel.read": {
+      "brief": "面板标题（W0 占位面板）：read"
+    },
+    "w0.panel.contacts_full": {
+      "brief": "面板标题（W0 占位面板）：contacts_full"
+    },
+    "w0.panel.kept_full": {
+      "brief": "面板标题（W0 占位面板）：kept_full"
+    },
+    "w0.panel.help": {
+      "brief": "面板标题（W0 占位面板）：help"
+    },
+    "w0.panel.pause": {
+      "brief": "面板标题（W0 占位面板）：pause"
+    },
+    "w0.panel.settings": {
+      "brief": "面板标题（W0 占位面板）：settings"
+    },
+    "w0.panel.minigame": {
+      "brief": "面板标题（W0 占位面板）：minigame"
+    },
+    "w0.mock.notice": {
+      "brief": "Mock 情景：早上告示的一行（占位）"
+    },
+    "w0.mock.estate": {
+      "brief": "Mock：押家当/赎家当的钱"
+    },
+    "w0.mock.fortune": {
+      "brief": "Mock：算命的钱"
+    },
+    "w0.mock.sold": {
+      "brief": "Mock：卖给来买的人"
+    },
+    "w0.mock.pawn_out": {
+      "brief": "Mock：当出去的钱"
+    },
+    "w0.mock.bought": {
+      "brief": "Mock：收货付的钱"
+    },
+    "w0.mock.slot_money": {
+      "brief": "Mock：放进格子交出去的钱"
+    },
+    "w0.mock.incense": {
+      "brief": "Mock：香火钱"
+    },
+    "w0.mock.payee": {
+      "brief": "Mock：钱不够时付给谁"
+    },
+    "w0.card.keep": {
+      "brief": "牌上的“留着”小按钮（W0 占位）"
+    },
+    "w0.street.redeem": {
+      "brief": "街头皮上的“赎回铺面”按钮（W0 占位）"
+    },
+    "w0.stage.enter": {
+      "brief": "演出旁白：人物来到柜台前；参数 {name} 是人物名字"
+    },
+    "w0.stage.at_door": {
+      "brief": "演出旁白：人物站在门口；参数 {name} 是人物名字"
+    },
+    "w0.stage.leave": {
+      "brief": "演出旁白：人物离开；参数 {name} 是人物名字"
+    },
+    "w0.dialog.skip": {
+      "brief": "对话框桩：跳过这一批剩余句子的按钮"
+    },
+    "w0.hand.play": {
+      "brief": "手牌桩：打出选中牌的按钮"
+    },
+    "w0.hand.sleep": {
+      "brief": "手牌桩：今晚不选夜牌，睡了"
+    },
+    "w0.hero.eye": {
+      "brief": "英雄头像桩：眼力属性；参数 {value} 是看得见的属性点数"
+    },
+    "w0.hero.tongue": {
+      "brief": "英雄头像桩：口才属性；参数 {value} 是看得见的属性点数"
+    },
+    "w0.hero.pull": {
+      "brief": "英雄头像桩：人脉属性；参数 {value} 是看得见的属性点数"
+    },
+    "w0.hero.nerve": {
+      "brief": "英雄头像桩：胆量属性；参数 {value} 是看得见的属性点数"
+    },
+    "w0.panel.contacts": {
+      "brief": "抽屉标题（W0 占位面板）：contacts"
+    },
+    "w0.panel.demands": {
+      "brief": "抽屉标题（W0 占位面板）：demands"
+    },
+    "w0.panel.shelf": {
+      "brief": "抽屉标题（W0 占位面板）：shelf"
+    },
+    "w0.panel.tickets": {
+      "brief": "抽屉标题（W0 占位面板）：tickets"
+    },
+    "w0.panel.almanac": {
+      "brief": "抽屉标题（W0 占位面板）：almanac"
+    }
+  }
+}

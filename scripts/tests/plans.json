@@ -1,0 +1,2027 @@
+{
+  "plans": {
+    "d1_fair_swap": {
+      "until": "day1_done",
+      "base": "fair",
+      "choices": [
+        "swap",
+        "returned"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [
+            "ask_origin"
+          ],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": [
+            "quinine.label",
+            "quinine.batch",
+            "quinine.seal",
+            "quinine.pill",
+            "mercuro.label",
+            "mercuro.batch",
+            "mercuro.liquid"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [
+            "obs_wrap",
+            "listen_accent"
+          ],
+          "offer": "ask"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        }
+      },
+      "expect": {
+        "xiaoding_rice": "fair",
+        "found_sunji": true,
+        "found_stolen_rice": true,
+        "rice_bag_swapped": true,
+        "fake_sulfa_in_stock": true,
+        "zhang_deal": true,
+        "zhang_told": null,
+        "wangshan": "sold",
+        "sold_fake_to_wangshan": null,
+        "found_fake_sulfa": null,
+        "wangshan_soldier_noted": true,
+        "li_paper": "returned",
+        "li_fund": "normal"
+      },
+      "expect_stats": {
+        "benxin": ">=50"
+      }
+    },
+    "d1_low_keep_iou_burned": {
+      "until": "day1_done",
+      "base": "fair",
+      "choices": [
+        "keep",
+        "burned"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [],
+          "offers": [
+            25
+          ]
+        },
+        "d1_zhang": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [],
+          "deal": "iou_quinine"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offers": [
+            16
+          ]
+        }
+      },
+      "expect": {
+        "xiaoding_rice": "low",
+        "found_sunji": true,
+        "rice_bag_swapped": false,
+        "found_fake_sulfa": true,
+        "zhang_told": false,
+        "zhang_deal": true,
+        "fake_sulfa_in_stock": null,
+        "wangshan": "sold",
+        "wangshan_iou": 60,
+        "li_paper": "burned",
+        "li_fund": "low"
+      },
+      "expect_stats": {
+        "benxin": "<50"
+      }
+    },
+    "d1_persuade_gift_reported_high": {
+      "until": "day1_done",
+      "base": "fair",
+      "choices": [
+        "reported"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "refuse_return"
+        },
+        "d1_zhang": {
+          "inspect": "all",
+          "extras": [
+            "tell_fake",
+            "ask_more"
+          ],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [],
+          "deal": "gift_quinine"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "fund"
+        }
+      },
+      "expect": {
+        "xiaoding_rice": "refused",
+        "found_sunji": true,
+        "zhang_told": true,
+        "zhang_morphine_hint": true,
+        "zhang_deal": true,
+        "fake_sulfa_in_stock": null,
+        "wangshan": "gift",
+        "told_wangshan_fake": null,
+        "li_paper": "reported",
+        "li_fund": "high"
+      },
+      "expect_stats": {
+        "benxin": ">=48",
+        "suspicion": "<=2"
+      }
+    },
+    "d1_loan_nostock_kept": {
+      "until": "day1_done",
+      "base": "fair",
+      "choices": [
+        "kept"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "loan_20"
+        },
+        "d1_zhang": {
+          "inspect": "none",
+          "extras": [],
+          "offer": "refuse"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        }
+      },
+      "expect": {
+        "xiaoding_rice": "refused",
+        "xiaoding_loan": 20,
+        "zhang_deal": false,
+        "zhang_told": null,
+        "wangshan": "nostock",
+        "li_paper": "kept",
+        "li_fund": "normal"
+      },
+      "expect_stats": {
+        "benxin": ">=54",
+        "suspicion": ">=2"
+      }
+    },
+    "d1_sell_fake_knowingly": {
+      "until": "day1_done",
+      "base": "fair",
+      "choices": [
+        "returned"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": "all",
+          "extras": [],
+          "keep_fake": true,
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [],
+          "keep_fake": true,
+          "offer": "ask",
+          "deselect": [
+            "mercuro"
+          ]
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        }
+      },
+      "expect": {
+        "fake_sulfa_in_stock": true,
+        "found_fake_sulfa": true,
+        "zhang_told": null,
+        "wangshan": "sold",
+        "sold_fake_to_wangshan": true,
+        "told_wangshan_fake": null,
+        "li_paper": "returned"
+      },
+      "expect_stats": {
+        "benxin": "<=48",
+        "suspicion": ">=1"
+      }
+    },
+    "d1_tell_wangshan_fake": {
+      "until": "day1_done",
+      "base": "fair",
+      "choices": [
+        "returned"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [],
+          "offers": [
+            40,
+            45,
+            50
+          ]
+        },
+        "d1_zhang": {
+          "inspect": "all",
+          "extras": [],
+          "keep_fake": true,
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [
+            "tell_fake"
+          ],
+          "offer": "ask"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        }
+      },
+      "expect": {
+        "xiaoding_rice": "fair",
+        "fake_sulfa_in_stock": true,
+        "found_fake_sulfa": true,
+        "zhang_told": null,
+        "wangshan": "sold",
+        "told_wangshan_fake": true,
+        "sold_fake_to_wangshan": null,
+        "li_paper": "returned"
+      }
+    },
+    "d1_gift_quiet_xiaoding": {
+      "until": "day1_done",
+      "base": "fair",
+      "choices": [],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": [
+            "rice_sunji.grain",
+            "rice_sunji.color",
+            "rice_sunji.broken"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": [
+            "quinine.label",
+            "quinine.batch",
+            "quinine.seal",
+            "quinine.pill",
+            "mercuro.label",
+            "mercuro.batch",
+            "mercuro.liquid"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [],
+          "deal": "gift_quinine"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        }
+      },
+      "expect": {
+        "xiaoding_rice": "fair",
+        "found_sunji": null,
+        "rice_bag_swapped": false,
+        "fake_sulfa_in_stock": true,
+        "zhang_deal": true,
+        "wangshan": "gift",
+        "li_fund": "normal"
+      },
+      "expect_stats": {
+        "suspicion": ">=1"
+      }
+    },
+    "d1_wangshan_refused": {
+      "until": "day1_done",
+      "base": "fair",
+      "choices": [
+        "swap",
+        "returned"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": [
+            "quinine.label",
+            "quinine.batch",
+            "quinine.seal",
+            "quinine.pill",
+            "mercuro.label",
+            "mercuro.batch",
+            "mercuro.liquid"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [],
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        }
+      },
+      "expect": {
+        "wangshan": "refused",
+        "zhang_deal": true,
+        "fake_sulfa_in_stock": true,
+        "sold_fake_to_wangshan": null,
+        "rice_bag_swapped": true,
+        "li_paper": "returned"
+      }
+    },
+    "d1_zhang_walkaway": {
+      "until": "day1_done",
+      "base": "fair",
+      "choices": [
+        "returned"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": "all",
+          "extras": [],
+          "offers": [
+            50
+          ]
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        }
+      },
+      "expect": {
+        "zhang_deal": false,
+        "wangshan": "nostock",
+        "li_paper": "returned"
+      },
+      "expect_stats": {
+        "benxin": ">=50"
+      }
+    },
+    "night1_burn_tabloid": {
+      "until": "night1_done",
+      "base": "fair",
+      "choices": [
+        "burned"
+      ],
+      "night1": [
+        "burn"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": "none",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [],
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        }
+      },
+      "expect": {
+        "li_paper": "burned",
+        "tabloid_burned": true,
+        "wangshan": "refused",
+        "zhang_deal": true
+      }
+    },
+    "d2_lin_fair160_zhouma_sell_swapped_zhao_refuse_sun_decline": {
+      "until": "day2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "swap",
+        "returned",
+        "A",
+        "say_sold",
+        "half_now"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [
+            "ask_origin"
+          ],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": [
+            "quinine.label",
+            "quinine.batch",
+            "quinine.seal",
+            "quinine.pill",
+            "mercuro.label",
+            "mercuro.batch",
+            "mercuro.liquid"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [
+            "obs_wrap",
+            "listen_accent"
+          ],
+          "offer": "ask"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d2_linsao": {
+          "inspect": "all",
+          "extras": [
+            "ask_husband"
+          ],
+          "offer": "suggest"
+        },
+        "d2_zhouma": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d2_zhao": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "refuse"
+        },
+        "d2_sunyoung": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "decline"
+        }
+      },
+      "expect": {
+        "rice_bag_swapped": true,
+        "fake_sulfa_in_stock": true,
+        "found_sunji": true,
+        "lin_pawn": "fair",
+        "zhao_pawn": "refused",
+        "sun_young": "declined",
+        "sun_rice_rumor": null,
+        "lin_ticket_old": null,
+        "farewell_choice": "A",
+        "brother_money": 0
+      }
+    },
+    "d2_lin_low115_old_zhouma_unswapped_zhao_lowball_b50_sun_bluff_ma_gift": {
+      "until": "day2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "B",
+        "50",
+        "say_sold",
+        "gift"
+      ],
+      "ticket": "old",
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": [
+            "rice_sunji.grain",
+            "rice_sunji.color",
+            "rice_sunji.broken"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": [
+            "quinine.label",
+            "quinine.batch",
+            "quinine.seal",
+            "quinine.pill",
+            "mercuro.label",
+            "mercuro.batch",
+            "mercuro.liquid"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [],
+          "deal": "gift_quinine"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d2_linsao": {
+          "inspect": "all",
+          "extras": [],
+          "offer": 115
+        },
+        "d2_zhouma": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d2_zhao": {
+          "inspect": "all",
+          "extras": [],
+          "offers": [
+            200
+          ]
+        },
+        "d2_sunyoung": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "bluff"
+        }
+      },
+      "expect": {
+        "rice_bag_swapped": false,
+        "xiaoding_rice": "fair",
+        "lin_pawn": "low",
+        "lin_ticket_old": true,
+        "sun_rice_rumor": true,
+        "zhao_pawn": "refused",
+        "zhao_son_unknown": true,
+        "sun_young": "bluffed",
+        "brother_money": 50
+      }
+    },
+    "d2_norice_lin_refuse_zhao300_b100_sun_expose_real_ma_haggle": {
+      "until": "day2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "reported",
+        "B",
+        "100",
+        "haggle"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "refuse_return"
+        },
+        "d1_zhang": {
+          "inspect": "all",
+          "extras": [
+            "tell_fake",
+            "ask_more"
+          ],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [],
+          "deal": "gift_quinine"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "fund"
+        },
+        "d2_linsao": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "refuse"
+        },
+        "d2_zhouma": {
+          "inspect": "none"
+        },
+        "d2_zhao": {
+          "inspect": "all",
+          "extras": [],
+          "offer": 300
+        },
+        "d2_sunyoung": {
+          "inspect": [
+            "deed_fake.owner",
+            "deed_fake.bounds"
+          ],
+          "extras": [
+            "compare_zhao",
+            "expose"
+          ]
+        },
+        "d2_sunyoung_real": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "cannot_afford"
+        }
+      },
+      "require_sessions": false,
+      "expect": {
+        "xiaoding_rice": "refused",
+        "li_paper": "reported",
+        "lin_pawn": "refused",
+        "zhao_pawn": 300,
+        "sun_young": "exposed",
+        "sun_real_pawn": false,
+        "brother_money": 100
+      }
+    },
+    "d2_lin_refuse_zhouma_sell_zhao_generous400_sun_decline_ma_handin": {
+      "until": "day2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "swap",
+        "returned",
+        "C",
+        "hand_in",
+        "know"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [
+            "ask_origin"
+          ],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": [
+            "quinine.label",
+            "quinine.batch",
+            "quinine.seal",
+            "quinine.pill",
+            "mercuro.label",
+            "mercuro.batch",
+            "mercuro.liquid"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [
+            "obs_wrap",
+            "listen_accent"
+          ],
+          "offer": "ask"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d2_linsao": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "refuse"
+        },
+        "d2_zhouma": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d2_zhao": {
+          "inspect": "all",
+          "extras": [],
+          "offer": 400
+        },
+        "d2_sunyoung": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "decline"
+        }
+      },
+      "expect": {
+        "rice_bag_swapped": true,
+        "fake_sulfa_in_stock": true,
+        "found_sunji": true,
+        "lin_pawn": "refused",
+        "zhao_pawn": "generous",
+        "sun_young": "declined",
+        "brother_money": 0
+      }
+    },
+    "d2_zhouma_gift_zhao300_b50_ma_sold_know": {
+      "until": "day2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "swap",
+        "returned",
+        "B",
+        "50",
+        "say_sold",
+        "know"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [
+            "ask_origin"
+          ],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": [
+            "quinine.label",
+            "quinine.batch",
+            "quinine.seal",
+            "quinine.pill",
+            "mercuro.label",
+            "mercuro.batch",
+            "mercuro.liquid"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [
+            "obs_wrap",
+            "listen_accent"
+          ],
+          "offer": "ask"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d2_linsao": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "refuse"
+        },
+        "d2_zhouma": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "gift"
+        },
+        "d2_zhao": {
+          "inspect": "all",
+          "extras": [],
+          "offer": 300
+        },
+        "d2_sunyoung": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "decline"
+        }
+      },
+      "expect": {
+        "rice_bag_swapped": true,
+        "fake_sulfa_in_stock": true,
+        "found_sunji": true,
+        "zhouma_news": true,
+        "lin_pawn": "refused",
+        "zhao_pawn": 300,
+        "brother_money": 50,
+        "sun_young": "declined"
+      }
+    },
+    "n2_ping_an_flag_nightsell_order_tidy": {
+      "until": "night2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "swap",
+        "returned",
+        "A",
+        "know",
+        "mercuro"
+      ],
+      "telegram": [
+        "平安"
+      ],
+      "night2": [
+        "flag",
+        "nightsell",
+        "order",
+        "tidy"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [
+            "ask_origin"
+          ],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": [
+            "quinine.label",
+            "quinine.batch",
+            "quinine.seal",
+            "quinine.pill",
+            "mercuro.label",
+            "mercuro.batch",
+            "mercuro.liquid"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [
+            "obs_wrap",
+            "listen_accent"
+          ],
+          "offer": "ask"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d2_sunyoung": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "decline"
+        }
+      },
+      "expect": {
+        "rice_bag_swapped": true,
+        "fake_sulfa_in_stock": true,
+        "found_sunji": true,
+        "chen_says_blue": true,
+        "door_flag_next": "blue"
+      },
+      "expect_stats": {
+        "chen_trust": ">=2"
+      }
+    },
+    "n2_ma_advice_tell_sun_nightsell": {
+      "until": "night2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "swap",
+        "returned",
+        "A",
+        "say_sold",
+        "know"
+      ],
+      "telegram": [
+        "维持会",
+        "钱"
+      ],
+      "night2": [
+        "tell_sun",
+        "nightsell",
+        "tidy",
+        "order"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [
+            "ask_origin"
+          ],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": [
+            "quinine.label",
+            "quinine.batch",
+            "quinine.seal",
+            "quinine.pill",
+            "mercuro.label",
+            "mercuro.batch",
+            "mercuro.liquid"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [
+            "obs_wrap",
+            "listen_accent"
+          ],
+          "offer": "ask"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d2_sunyoung": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "decline"
+        }
+      },
+      "expect": {
+        "rice_bag_swapped": true,
+        "fake_sulfa_in_stock": true,
+        "found_sunji": true,
+        "chen_ma_advice": true,
+        "sun_told_father": true,
+        "sun_young": "declined"
+      },
+      "expect_stats": {
+        "chen_trust": ">=2"
+      }
+    },
+    "n2_someone_knows_wangshan_order_flag_tidy": {
+      "until": "night2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "swap",
+        "returned",
+        "A",
+        "know"
+      ],
+      "telegram": [
+        "有人",
+        "药"
+      ],
+      "night2": [
+        "order",
+        "nightsell",
+        "flag",
+        "tidy"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [
+            "ask_origin"
+          ],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": [
+            "quinine.label",
+            "quinine.batch",
+            "quinine.seal",
+            "quinine.pill",
+            "mercuro.label",
+            "mercuro.batch",
+            "mercuro.liquid"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [
+            "obs_wrap",
+            "listen_accent"
+          ],
+          "offer": "ask"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        }
+      },
+      "expect": {
+        "rice_bag_swapped": true,
+        "fake_sulfa_in_stock": true,
+        "found_sunji": true,
+        "chen_knows_wangshan": true,
+        "chen_says_blue": null
+      }
+    },
+    "n2_skip_telegraph": {
+      "until": "night2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "swap",
+        "returned",
+        "A",
+        "know"
+      ],
+      "telegram": [
+        "skip"
+      ],
+      "night2": [
+        "ledger",
+        "tidy",
+        "flag",
+        "nightsell"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [
+            "ask_origin"
+          ],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": [
+            "quinine.label",
+            "quinine.batch",
+            "quinine.seal",
+            "quinine.pill",
+            "mercuro.label",
+            "mercuro.batch",
+            "mercuro.liquid"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [
+            "obs_wrap",
+            "listen_accent"
+          ],
+          "offer": "ask"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        }
+      },
+      "expect": {
+        "rice_bag_swapped": true,
+        "fake_sulfa_in_stock": true,
+        "found_sunji": true
+      },
+      "expect_stats": {
+        "chen_trust": "==-2"
+      }
+    },
+    "n2_need_medicine_no_stock": {
+      "until": "night2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "swap",
+        "returned",
+        "A",
+        "know"
+      ],
+      "telegram": [
+        "需要",
+        "药"
+      ],
+      "night2": [
+        "tidy",
+        "flag",
+        "nightsell"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [
+            "ask_origin"
+          ],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": [
+            "quinine.label",
+            "quinine.batch",
+            "quinine.seal",
+            "quinine.pill",
+            "mercuro.label",
+            "mercuro.batch",
+            "mercuro.liquid"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [
+            "obs_wrap",
+            "listen_accent"
+          ],
+          "offer": "ask"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        }
+      },
+      "expect": {
+        "rice_bag_swapped": true,
+        "fake_sulfa_in_stock": true,
+        "found_sunji": true,
+        "chen_med_supply": true
+      }
+    },
+    "ending_full_ticket196": {
+      "until": "ending",
+      "base": "fair",
+      "choices": [
+        "A",
+        "swap",
+        "returned",
+        "A",
+        "know"
+      ],
+      "telegram": [
+        "平安"
+      ],
+      "night2": [
+        "nightsell",
+        "order",
+        "flag",
+        "tidy",
+        "diary"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [
+            "ask_origin"
+          ],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": [
+            "quinine.label",
+            "quinine.batch",
+            "quinine.seal",
+            "quinine.pill",
+            "mercuro.label",
+            "mercuro.batch",
+            "mercuro.liquid"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [
+            "obs_wrap",
+            "listen_accent"
+          ],
+          "offer": "ask"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d2_sunyoung": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "decline"
+        }
+      },
+      "expect": {
+        "rice_bag_swapped": true,
+        "fake_sulfa_in_stock": true,
+        "found_sunji": true,
+        "ticket196": true,
+        "chen_says_blue": true
+      }
+    },
+    "d2_sun_scammed": {
+      "until": "day2_done",
+      "base": "fair",
+      "choices": [
+        "A"
+      ],
+      "sessions": {
+        "d2_sunyoung": {
+          "inspect": "none",
+          "offer": "ask"
+        }
+      },
+      "expect": {
+        "sun_young": "scammed"
+      }
+    },
+    "v02_xiaoding_loan_returns": {
+      "until": "night2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "kept"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "loan_20"
+        },
+        "d1_zhang": {
+          "inspect": "none",
+          "extras": [],
+          "offer": "refuse"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        }
+      },
+      "expect": {
+        "xiaoding_loan": 20,
+        "xiaoding_returned": true,
+        "xiaoding_repaid": 10,
+        "xiaoding_quinine": "noquinine",
+        "wangshan": "nostock",
+        "n2_visitor": "thanked",
+        "wangshan_iou": null,
+        "sold_fake_to_wangshan": null
+      }
+    },
+    "v02_xiaoding_fair_quinine": {
+      "until": "day2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "swap",
+        "returned",
+        "ignored"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [
+            "ask_origin"
+          ],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": [
+            "quinine.label",
+            "quinine.batch",
+            "quinine.seal",
+            "quinine.pill",
+            "mercuro.label",
+            "mercuro.batch",
+            "mercuro.liquid"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [],
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d2_xiaoding_return": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "credit"
+        }
+      },
+      "expect": {
+        "xiaoding_rice": "fair",
+        "rice_bag_swapped": true,
+        "xiaoding_returned": true,
+        "xiaoding_quinine": "credit",
+        "wangshan": "refused",
+        "wangshan_backdoor": "ignored"
+      }
+    },
+    "v02_xiaoding_fair_quinine_gift": {
+      "until": "day2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "swap",
+        "returned",
+        "ignored"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [
+            "ask_origin"
+          ],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": [
+            "quinine.label",
+            "quinine.batch",
+            "quinine.seal",
+            "quinine.pill",
+            "mercuro.label",
+            "mercuro.batch",
+            "mercuro.liquid"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [],
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d2_xiaoding_return": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "gift"
+        }
+      },
+      "expect": {
+        "xiaoding_rice": "fair",
+        "xiaoding_returned": true,
+        "xiaoding_quinine": "gift"
+      }
+    },
+    "v02_guanjia_returned_rice": {
+      "until": "day2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "keep",
+        "returned",
+        "ignored"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": "none",
+          "extras": [],
+          "offer": "refuse"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d2_zhouma": {
+          "inspect": "all",
+          "extras": [],
+          "deselect": [
+            "rice_sunji"
+          ],
+          "offer": "refuse"
+        },
+        "d2_guanjia": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "return_rice"
+        }
+      },
+      "expect": {
+        "rice_bag_swapped": false,
+        "guanjia_visit": "returned_rice",
+        "xiaoding_rice": "fair"
+      }
+    },
+    "v02_guanjia_denied": {
+      "until": "day2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "keep",
+        "returned",
+        "ignored"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": "none",
+          "extras": [],
+          "offer": "refuse"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d2_zhouma": {
+          "inspect": "all",
+          "extras": [],
+          "deselect": [
+            "rice_sunji"
+          ],
+          "offer": "refuse"
+        },
+        "d2_guanjia": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "deny"
+        }
+      },
+      "expect": {
+        "rice_bag_swapped": false,
+        "guanjia_visit": "denied",
+        "xiaoding_rice": "fair"
+      }
+    },
+    "v02_guanjia_bribed": {
+      "until": "day2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "keep",
+        "returned",
+        "ignored"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": "none",
+          "extras": [],
+          "offer": "refuse"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d2_zhouma": {
+          "inspect": "all",
+          "extras": [],
+          "deselect": [
+            "rice_sunji"
+          ],
+          "offer": "refuse"
+        },
+        "d2_guanjia": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "bribe"
+        }
+      },
+      "expect": {
+        "rice_bag_swapped": false,
+        "guanjia_visit": "bribed",
+        "xiaoding_rice": "fair"
+      }
+    },
+    "v02_guanjia_told_on_xiaoding": {
+      "until": "day2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "keep",
+        "returned",
+        "ignored",
+        "tell"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": "none",
+          "extras": [],
+          "offer": "refuse"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d2_zhouma": {
+          "inspect": "all",
+          "extras": [],
+          "deselect": [
+            "rice_jing_a",
+            "rice_xian_b",
+            "rice_nuo_c"
+          ],
+          "select": [
+            "rice_sunji"
+          ],
+          "offer": "ask"
+        }
+      },
+      "expect": {
+        "rice_bag_swapped": false,
+        "sun_rice_rumor": true,
+        "guanjia_visit": "told_on_xiaoding",
+        "xiaoding_rice": "fair"
+      }
+    },
+    "v02_wangshan_backdoor_sold": {
+      "until": "night1_done",
+      "base": "fair",
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [
+            "ask_origin"
+          ],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": [
+            "quinine.label",
+            "quinine.batch",
+            "quinine.seal",
+            "quinine.pill",
+            "mercuro.label",
+            "mercuro.batch",
+            "mercuro.liquid"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [],
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        }
+      },
+      "expect": {
+        "wangshan": "refused",
+        "zhang_deal": true,
+        "rice_bag_swapped": true,
+        "wangshan_backdoor": "sold"
+      },
+      "choices": [
+        "A",
+        "swap",
+        "returned",
+        "sold"
+      ]
+    },
+    "v02_wangshan_backdoor_gave": {
+      "until": "night1_done",
+      "base": "fair",
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [
+            "ask_origin"
+          ],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": [
+            "quinine.label",
+            "quinine.batch",
+            "quinine.seal",
+            "quinine.pill",
+            "mercuro.label",
+            "mercuro.batch",
+            "mercuro.liquid"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [],
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        }
+      },
+      "expect": {
+        "wangshan": "refused",
+        "zhang_deal": true,
+        "rice_bag_swapped": true,
+        "wangshan_backdoor": "gave"
+      },
+      "choices": [
+        "A",
+        "swap",
+        "returned",
+        "gave"
+      ]
+    },
+    "v02_wangshan_backdoor_turned_away": {
+      "until": "night1_done",
+      "base": "fair",
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [
+            "ask_origin"
+          ],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": [
+            "quinine.label",
+            "quinine.batch",
+            "quinine.seal",
+            "quinine.pill",
+            "mercuro.label",
+            "mercuro.batch",
+            "mercuro.liquid"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [],
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        }
+      },
+      "expect": {
+        "wangshan": "refused",
+        "zhang_deal": true,
+        "rice_bag_swapped": true,
+        "wangshan_backdoor": "turned_away"
+      },
+      "choices": [
+        "A",
+        "swap",
+        "returned",
+        "turned_away"
+      ]
+    },
+    "v02_wangshan_backdoor_ignored": {
+      "until": "night1_done",
+      "base": "fair",
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [
+            "ask_origin"
+          ],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": [
+            "quinine.label",
+            "quinine.batch",
+            "quinine.seal",
+            "quinine.pill",
+            "mercuro.label",
+            "mercuro.batch",
+            "mercuro.liquid"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [],
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        }
+      },
+      "expect": {
+        "wangshan": "refused",
+        "zhang_deal": true,
+        "rice_bag_swapped": true,
+        "wangshan_backdoor": "ignored"
+      },
+      "choices": [
+        "A",
+        "swap",
+        "returned",
+        "ignored"
+      ]
+    },
+    "v02_iou_repaid": {
+      "until": "night2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "returned"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "refuse_return"
+        },
+        "d1_zhang": {
+          "inspect": [
+            "quinine.label",
+            "quinine.batch",
+            "quinine.seal",
+            "quinine.pill",
+            "mercuro.label",
+            "mercuro.batch",
+            "mercuro.liquid"
+          ],
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [],
+          "deal": "iou_quinine"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        }
+      },
+      "expect": {
+        "wangshan_iou": 60,
+        "n2_visitor": "repaid",
+        "xiaoding_returned": null
+      }
+    },
+    "v02_fake_warned": {
+      "until": "night2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "returned"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": "all",
+          "extras": [],
+          "keep_fake": true,
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [],
+          "keep_fake": true,
+          "offer": "ask",
+          "deselect": [
+            "mercuro"
+          ]
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        }
+      },
+      "expect": {
+        "fake_sulfa_in_stock": true,
+        "sold_fake_to_wangshan": true,
+        "n2_visitor": "warned"
+      }
+    },
+    "v02_li_newspaper": {
+      "until": "day2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "reported"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "refuse_return"
+        },
+        "d1_zhang": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [],
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "fund"
+        }
+      },
+      "expect": {
+        "li_fund": "high",
+        "li_paper": "reported",
+        "li_noon": "newspaper"
+      }
+    },
+    "v02_li_kept_search": {
+      "until": "day2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "kept",
+        "keep"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "refuse_return"
+        },
+        "d1_zhang": {
+          "inspect": "none",
+          "extras": [],
+          "offer": "refuse"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        }
+      },
+      "expect": {
+        "li_paper": "kept",
+        "li_noon": "search_warning",
+        "li_fund": "normal"
+      }
+    },
+    "v02_zhang_note": {
+      "until": "day2_done",
+      "base": "fair",
+      "choices": [
+        "A",
+        "reported"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "refuse_return"
+        },
+        "d1_zhang": {
+          "inspect": "all",
+          "extras": [
+            "tell_fake",
+            "ask_more"
+          ],
+          "offer": "ask"
+        },
+        "d1_wangshan": {
+          "inspect": "none",
+          "extras": [],
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "fund"
+        }
+      },
+      "expect": {
+        "zhang_told": true,
+        "zhang_note": true
+      }
+    },
+    "v02_render_tour": {
+      "until": "ending",
+      "base": "fair",
+      "choices": [
+        "A",
+        "keep",
+        "ignored"
+      ],
+      "night1": [
+        "tidy",
+        "ledger"
+      ],
+      "night2": [
+        "tidy",
+        "ledger"
+      ],
+      "sessions": {
+        "d1_xiaoding": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d1_zhang": {
+          "inspect": "none",
+          "extras": [],
+          "offer": "refuse"
+        },
+        "d1_li": {
+          "inspect": "all",
+          "extras": [],
+          "offer": "ask"
+        },
+        "d2_zhouma": {
+          "inspect": "all",
+          "extras": [],
+          "select": [
+            "rice_sunji"
+          ],
+          "offers": [
+            200,
+            200,
+            200,
+            200,
+            200,
+            200
+          ]
+        },
+        "d2_guanjia": {
+          "inspect": "all",
+          "extras": [],
+          "deal": "return_rice"
+        }
+      },
+      "expect": {
+        "xiaoding_returned": true,
+        "wangshan_backdoor": "ignored",
+        "guanjia_visit": "returned_rice",
+        "ticket196": true
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+# K09 通用牌：留牌、人脉、家当、夜牌、街头、牢房、你自己（docs/handoff_cards/K09_data-common.md）
+K09_validate|res://scripts/cards/core/validate_main.gd|120|--only=data/cards/common/**,data/cards/tags/K09.json,data/cards/ui_keys/K09.json --name=K09_validate
+K09_data|res://scripts/tests/cards/K09/test_data.gd|120|
+K09_guide_support|res://scripts/tests/cards/K09/test_guide_support.gd|120|

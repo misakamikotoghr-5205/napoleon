@@ -1,0 +1,3006 @@
+{
+ "source": "coordinates compiled for the game (public geographic facts); canvas x,y per view",
+ "views": {
+  "europe": {
+   "projection": "mercator",
+   "lon_min": -12.0,
+   "lon_max": 56.0,
+   "lat_min": 24.007301,
+   "lat_max": 63.0,
+   "width": 2400,
+   "height": 2012,
+   "scale": 2022.203982815,
+   "y_top": 1.42678824664,
+   "x_formula": "scale * (radians(lon) - radians(lon_min))",
+   "y_formula": "scale * (y_top - ln(tan(pi/4 + radians(lat)/2)))",
+   "inverse": "lon = degrees(x/scale + radians(lon_min)); lat = degrees(2*atan(exp(y_top - y/scale)) - pi/2)",
+   "units": "canvas px, origin top-left, y down; integers",
+   "orientation": "rings clockwise on screen: sum(x_i*y_(i+1) - x_(i+1)*y_i) > 0",
+   "x_wraps": false,
+   "px_per_degree_lon": 35.2941,
+   "id": "europe"
+  },
+  "world": {
+   "projection": "miller",
+   "lon_min": -180.0,
+   "lon_max": 180.0,
+   "lat_min": -78.028883,
+   "lat_max": 82.0,
+   "width": 2400,
+   "height": 1402,
+   "scale": 381.971863421,
+   "y_top": 1.914394971094,
+   "x_formula": "scale * (radians(lon) - radians(lon_min))",
+   "y_formula": "scale * (y_top - 1.25*ln(tan(pi/4 + 0.4*radians(lat))))",
+   "inverse": "lon = degrees(x/scale + radians(lon_min)); lat = degrees(2.5*(atan(exp(0.8*(y_top - y/scale))) - pi/4))",
+   "units": "canvas px, origin top-left, y down; integers",
+   "orientation": "rings clockwise on screen: sum(x_i*y_(i+1) - x_(i+1)*y_i) > 0",
+   "x_wraps": true,
+   "x_wrap_note": "x + width is the same meridian; draw routes that cross the 180th meridian twice (at x and x +/- width)",
+   "px_per_degree_lon": 6.6667,
+   "id": "world"
+  },
+  "med": {
+   "projection": "mercator",
+   "lon_min": -6.0,
+   "lon_max": 30.0,
+   "lat_min": 33.997993,
+   "lat_max": 51.5,
+   "width": 2400,
+   "height": 1606,
+   "scale": 3819.718634205,
+   "y_top": 1.05206568677,
+   "x_formula": "scale * (radians(lon) - radians(lon_min))",
+   "y_formula": "scale * (y_top - ln(tan(pi/4 + radians(lat)/2)))",
+   "inverse": "lon = degrees(x/scale + radians(lon_min)); lat = degrees(2*atan(exp(y_top - y/scale)) - pi/2)",
+   "units": "canvas px, origin top-left, y down; integers",
+   "orientation": "rings clockwise on screen: sum(x_i*y_(i+1) - x_(i+1)*y_i) > 0",
+   "x_wraps": false,
+   "px_per_degree_lon": 66.6667,
+   "id": "med"
+  }
+ },
+ "places": [
+  {
+   "id": "marseille",
+   "name": "Marseille",
+   "label": "Marseille",
+   "name_zh": "马赛",
+   "lon": 5.3698,
+   "lat": 43.2965,
+   "branches": [
+    "trunk",
+    "cristo"
+   ],
+   "kind": "city",
+   "views": {
+    "europe": [
+     613,
+     1187
+    ],
+    "world": [
+     1236,
+     423
+    ],
+    "med": [
+     758,
+     810
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "toulon",
+   "name": "Toulon",
+   "label": "Toulon",
+   "name_zh": "土伦",
+   "lon": 5.928,
+   "lat": 43.1242,
+   "branches": [
+    "trunk",
+    "cristo"
+   ],
+   "kind": "city",
+   "views": {
+    "europe": [
+     633,
+     1195
+    ],
+    "world": [
+     1240,
+     425
+    ],
+    "med": [
+     795,
+     826
+    ]
+   },
+   "note": "Siege of Toulon 1793; bagne (Caderousse, Andrea)",
+   "fictional": false
+  },
+  {
+   "id": "paris",
+   "name": "Paris",
+   "label": "Paris",
+   "name_zh": "巴黎",
+   "lon": 2.3522,
+   "lat": 48.8566,
+   "branches": [
+    "trunk",
+    "conquest",
+    "cristo"
+   ],
+   "kind": "capital",
+   "views": {
+    "europe": [
+     507,
+     904
+    ],
+    "world": [
+     1216,
+     377
+    ],
+    "med": [
+     557,
+     275
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "nice",
+   "name": "Nice",
+   "label": "Nice",
+   "name_zh": "尼斯",
+   "lon": 7.262,
+   "lat": 43.7102,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "city",
+   "views": {
+    "europe": [
+     680,
+     1167
+    ],
+    "world": [
+     1248,
+     420
+    ],
+    "med": [
+     884,
+     772
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "ajaccio",
+   "name": "Ajaccio",
+   "label": "Ajaccio",
+   "name_zh": "阿雅克肖",
+   "lon": 8.7386,
+   "lat": 41.9192,
+   "branches": [
+    "trunk",
+    "cristo"
+   ],
+   "kind": "city",
+   "views": {
+    "europe": [
+     732,
+     1253
+    ],
+    "world": [
+     1258,
+     434
+    ],
+    "med": [
+     983,
+     935
+    ]
+   },
+   "note": "Corsica; Napoleon born 1769",
+   "fictional": false
+  },
+  {
+   "id": "montenotte",
+   "name": "Montenotte",
+   "label": "Montenotte",
+   "name_zh": "蒙特诺特",
+   "lon": 8.383,
+   "lat": 44.4,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     719,
+     1133
+    ],
+    "world": [
+     1256,
+     414
+    ],
+    "med": [
+     959,
+     708
+    ]
+   },
+   "date": "1796-04-12",
+   "fictional": false
+  },
+  {
+   "id": "lodi",
+   "name": "Lodi",
+   "label": "Lodi",
+   "name_zh": "洛迪",
+   "lon": 9.5035,
+   "lat": 45.3138,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     759,
+     1087
+    ],
+    "world": [
+     1263,
+     407
+    ],
+    "med": [
+     1034,
+     622
+    ]
+   },
+   "date": "1796-05-10",
+   "note": "bridge over the Adda",
+   "fictional": false
+  },
+  {
+   "id": "milan",
+   "name": "Milan",
+   "label": "Milan",
+   "name_zh": "米兰",
+   "lon": 9.19,
+   "lat": 45.4642,
+   "branches": [
+    "trunk",
+    "conquest"
+   ],
+   "kind": "city",
+   "views": {
+    "europe": [
+     748,
+     1080
+    ],
+    "world": [
+     1261,
+     405
+    ],
+    "med": [
+     1013,
+     608
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "mantua",
+   "name": "Mantua",
+   "label": "Mantua",
+   "name_zh": "曼托瓦",
+   "lon": 10.7914,
+   "lat": 45.1564,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "fortress",
+   "views": {
+    "europe": [
+     804,
+     1095
+    ],
+    "world": [
+     1272,
+     408
+    ],
+    "med": [
+     1119,
+     637
+    ]
+   },
+   "date": "1796-07..1797-02",
+   "fictional": false
+  },
+  {
+   "id": "arcole",
+   "name": "Arcole",
+   "label": "Arcole",
+   "name_zh": "阿尔科莱",
+   "lon": 11.2786,
+   "lat": 45.3567,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     822,
+     1085
+    ],
+    "world": [
+     1275,
+     406
+    ],
+    "med": [
+     1152,
+     618
+    ]
+   },
+   "date": "1796-11-15..17",
+   "fictional": false
+  },
+  {
+   "id": "rivoli",
+   "name": "Rivoli",
+   "label": "Rivoli",
+   "name_zh": "里沃利",
+   "lon": 10.8125,
+   "lat": 45.5714,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     805,
+     1074
+    ],
+    "world": [
+     1272,
+     405
+    ],
+    "med": [
+     1121,
+     598
+    ]
+   },
+   "date": "1797-01-14",
+   "fictional": false
+  },
+  {
+   "id": "la_favorita",
+   "name": "La Favorita",
+   "label": "La Favorita",
+   "name_zh": "拉法沃里塔",
+   "lon": 10.8,
+   "lat": 45.183,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     805,
+     1094
+    ],
+    "world": [
+     1272,
+     408
+    ],
+    "med": [
+     1120,
+     635
+    ]
+   },
+   "date": "1797-01-16",
+   "note": "Favorita palace north of Mantua",
+   "fictional": false
+  },
+  {
+   "id": "campo_formio",
+   "name": "Campo Formio",
+   "label": "Campo Formio",
+   "name_zh": "坎波福尔米奥",
+   "lon": 13.16,
+   "lat": 46.02,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "treaty",
+   "views": {
+    "europe": [
+     888,
+     1052
+    ],
+    "world": [
+     1288,
+     401
+    ],
+    "med": [
+     1277,
+     555
+    ]
+   },
+   "date": "1797-10-17",
+   "fictional": false
+  },
+  {
+   "id": "alexandria",
+   "name": "Alexandria",
+   "label": "Alexandria",
+   "name_zh": "亚历山大港",
+   "lon": 29.9187,
+   "lat": 31.2001,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "city",
+   "views": {
+    "europe": [
+     1479,
+     1725
+    ],
+    "world": [
+     1399,
+     516
+    ]
+   },
+   "date": "1798-07-02",
+   "fictional": false
+  },
+  {
+   "id": "cairo",
+   "name": "Cairo",
+   "label": "Cairo",
+   "name_zh": "开罗",
+   "lon": 31.2357,
+   "lat": 30.0444,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "city",
+   "views": {
+    "europe": [
+     1526,
+     1773
+    ],
+    "world": [
+     1408,
+     525
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "pyramids",
+   "name": "Pyramids (Giza)",
+   "label": "Pyramids",
+   "name_zh": "金字塔（吉萨）",
+   "lon": 31.1342,
+   "lat": 29.9792,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     1522,
+     1775
+    ],
+    "world": [
+     1408,
+     525
+    ]
+   },
+   "date": "1798-07-21",
+   "fictional": false
+  },
+  {
+   "id": "aboukir",
+   "name": "Aboukir",
+   "label": "Aboukir",
+   "name_zh": "阿布基尔",
+   "lon": 30.064,
+   "lat": 31.322,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     1485,
+     1720
+    ],
+    "world": [
+     1400,
+     515
+    ]
+   },
+   "date": "1798-08-01 (Nile) / 1799-07-25",
+   "fictional": false
+  },
+  {
+   "id": "jaffa",
+   "name": "Jaffa",
+   "label": "Jaffa",
+   "name_zh": "雅法",
+   "lon": 34.7522,
+   "lat": 32.0504,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     1650,
+     1690
+    ],
+    "world": [
+     1432,
+     510
+    ]
+   },
+   "date": "1799-03-07",
+   "fictional": false
+  },
+  {
+   "id": "acre",
+   "name": "Acre",
+   "label": "Acre",
+   "name_zh": "阿卡",
+   "lon": 35.069,
+   "lat": 32.923,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "siege",
+   "views": {
+    "europe": [
+     1661,
+     1653
+    ],
+    "world": [
+     1434,
+     504
+    ]
+   },
+   "date": "1799-03..05",
+   "fictional": false
+  },
+  {
+   "id": "mount_tabor",
+   "name": "Mount Tabor",
+   "label": "Mount Tabor",
+   "name_zh": "他泊山",
+   "lon": 35.3906,
+   "lat": 32.6869,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     1673,
+     1663
+    ],
+    "world": [
+     1436,
+     505
+    ]
+   },
+   "date": "1799-04-16",
+   "fictional": false
+  },
+  {
+   "id": "fort_bard",
+   "name": "Fort Bard",
+   "label": "Fort Bard",
+   "name_zh": "巴德堡",
+   "lon": 7.7448,
+   "lat": 45.6069,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "fortress",
+   "views": {
+    "europe": [
+     697,
+     1072
+    ],
+    "world": [
+     1252,
+     404
+    ],
+    "med": [
+     916,
+     594
+    ]
+   },
+   "date": "1800-05",
+   "fictional": false
+  },
+  {
+   "id": "montebello",
+   "name": "Montebello",
+   "label": "Montebello",
+   "name_zh": "蒙特贝洛",
+   "lon": 9.103,
+   "lat": 44.999,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     745,
+     1103
+    ],
+    "world": [
+     1261,
+     409
+    ],
+    "med": [
+     1007,
+     652
+    ]
+   },
+   "date": "1800-06-09",
+   "fictional": false
+  },
+  {
+   "id": "marengo",
+   "name": "Marengo",
+   "label": "Marengo",
+   "name_zh": "马伦戈",
+   "lon": 8.68,
+   "lat": 44.89,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     730,
+     1108
+    ],
+    "world": [
+     1258,
+     410
+    ],
+    "med": [
+     979,
+     662
+    ]
+   },
+   "date": "1800-06-14",
+   "fictional": false
+  },
+  {
+   "id": "boulogne",
+   "name": "Boulogne",
+   "label": "Boulogne",
+   "name_zh": "布洛涅",
+   "lon": 1.6147,
+   "lat": 50.7264,
+   "branches": [
+    "trunk",
+    "conquest"
+   ],
+   "kind": "camp",
+   "views": {
+    "europe": [
+     481,
+     801
+    ],
+    "world": [
+     1211,
+     361
+    ],
+    "med": [
+     508,
+     82
+    ]
+   },
+   "note": "Armée d'Angleterre camp 1803-05",
+   "fictional": false
+  },
+  {
+   "id": "trafalgar",
+   "name": "Cape Trafalgar",
+   "label": "Trafalgar",
+   "name_zh": "特拉法尔加角",
+   "lon": -6.035,
+   "lat": 36.183,
+   "branches": [
+    "trunk",
+    "conquest"
+   ],
+   "kind": "naval battle",
+   "views": {
+    "europe": [
+     211,
+     1514
+    ],
+    "world": [
+     1160,
+     479
+    ]
+   },
+   "date": "1805-10-21",
+   "fictional": false
+  },
+  {
+   "id": "ulm",
+   "name": "Ulm",
+   "label": "Ulm",
+   "name_zh": "乌尔姆",
+   "lon": 9.9876,
+   "lat": 48.4011,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     776,
+     928
+    ],
+    "world": [
+     1267,
+     381
+    ],
+    "med": [
+     1066,
+     321
+    ]
+   },
+   "date": "1805-10",
+   "fictional": false
+  },
+  {
+   "id": "hollabrunn",
+   "name": "Hollabrunn",
+   "label": "Hollabrunn",
+   "name_zh": "霍拉布伦",
+   "lon": 16.0794,
+   "lat": 48.5627,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     991,
+     919
+    ],
+    "world": [
+     1307,
+     379
+    ],
+    "med": [
+     1472,
+     305
+    ]
+   },
+   "date": "1805-11-16",
+   "fictional": false
+  },
+  {
+   "id": "vienna",
+   "name": "Vienna",
+   "label": "Vienna",
+   "name_zh": "维也纳",
+   "lon": 16.3738,
+   "lat": 48.2082,
+   "branches": [
+    "trunk",
+    "conquest"
+   ],
+   "kind": "capital",
+   "views": {
+    "europe": [
+     1001,
+     938
+    ],
+    "world": [
+     1309,
+     382
+    ],
+    "med": [
+     1492,
+     341
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "austerlitz",
+   "name": "Austerlitz",
+   "label": "Austerlitz",
+   "name_zh": "奥斯特利茨",
+   "lon": 16.762,
+   "lat": 49.128,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     1015,
+     889
+    ],
+    "world": [
+     1312,
+     375
+    ],
+    "med": [
+     1517,
+     248
+    ]
+   },
+   "date": "1805-12-02",
+   "note": "Pratzen heights",
+   "fictional": false
+  },
+  {
+   "id": "jena",
+   "name": "Jena",
+   "label": "Jena",
+   "name_zh": "耶拿",
+   "lon": 11.5892,
+   "lat": 50.9271,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     833,
+     790
+    ],
+    "world": [
+     1277,
+     359
+    ],
+    "med": [
+     1173,
+     61
+    ]
+   },
+   "date": "1806-10-14",
+   "fictional": false
+  },
+  {
+   "id": "auerstedt",
+   "name": "Auerstedt",
+   "label": "Auerstedt",
+   "name_zh": "奥尔施泰特",
+   "lon": 11.583,
+   "lat": 51.1,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     832,
+     780
+    ],
+    "world": [
+     1277,
+     357
+    ],
+    "med": [
+     1172,
+     43
+    ]
+   },
+   "date": "1806-10-14",
+   "fictional": false
+  },
+  {
+   "id": "berlin",
+   "name": "Berlin",
+   "label": "Berlin",
+   "name_zh": "柏林",
+   "lon": 13.405,
+   "lat": 52.52,
+   "branches": [
+    "trunk",
+    "conquest"
+   ],
+   "kind": "capital",
+   "views": {
+    "europe": [
+     897,
+     699
+    ],
+    "world": [
+     1289,
+     345
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "warsaw",
+   "name": "Warsaw",
+   "label": "Warsaw",
+   "name_zh": "华沙",
+   "lon": 21.0122,
+   "lat": 52.2297,
+   "branches": [
+    "trunk",
+    "conquest"
+   ],
+   "kind": "capital",
+   "views": {
+    "europe": [
+     1165,
+     716
+    ],
+    "world": [
+     1340,
+     347
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "eylau",
+   "name": "Eylau",
+   "label": "Eylau",
+   "name_zh": "埃劳",
+   "lon": 20.6403,
+   "lat": 54.3858,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     1152,
+     589
+    ],
+    "world": [
+     1338,
+     328
+    ]
+   },
+   "date": "1807-02-08",
+   "fictional": false
+  },
+  {
+   "id": "friedland",
+   "name": "Friedland",
+   "label": "Friedland",
+   "name_zh": "弗里德兰",
+   "lon": 21.0164,
+   "lat": 54.4428,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     1165,
+     585
+    ],
+    "world": [
+     1340,
+     327
+    ]
+   },
+   "date": "1807-06-14",
+   "fictional": false
+  },
+  {
+   "id": "tilsit",
+   "name": "Tilsit",
+   "label": "Tilsit",
+   "name_zh": "提尔西特",
+   "lon": 21.8864,
+   "lat": 55.0814,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "treaty",
+   "views": {
+    "europe": [
+     1196,
+     546
+    ],
+    "world": [
+     1346,
+     321
+    ]
+   },
+   "date": "1807-07-07",
+   "note": "raft on the Niemen",
+   "fictional": false
+  },
+  {
+   "id": "copenhagen",
+   "name": "Copenhagen",
+   "label": "Copenhagen",
+   "name_zh": "哥本哈根",
+   "lon": 12.5683,
+   "lat": 55.6761,
+   "branches": [
+    "trunk",
+    "conquest"
+   ],
+   "kind": "capital",
+   "views": {
+    "europe": [
+     867,
+     509
+    ],
+    "world": [
+     1284,
+     316
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "stockholm",
+   "name": "Stockholm",
+   "label": "Stockholm",
+   "name_zh": "斯德哥尔摩",
+   "lon": 18.0686,
+   "lat": 59.3293,
+   "branches": [
+    "conquest"
+   ],
+   "kind": "capital",
+   "views": {
+    "europe": [
+     1061,
+     269
+    ],
+    "world": [
+     1320,
+     281
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "st_petersburg",
+   "name": "St Petersburg",
+   "label": "St Petersburg",
+   "name_zh": "圣彼得堡",
+   "lon": 30.3351,
+   "lat": 59.9343,
+   "branches": [
+    "conquest"
+   ],
+   "kind": "capital",
+   "views": {
+    "europe": [
+     1494,
+     227
+    ],
+    "world": [
+     1402,
+     275
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "lisbon",
+   "name": "Lisbon",
+   "label": "Lisbon",
+   "name_zh": "里斯本",
+   "lon": -9.1393,
+   "lat": 38.7223,
+   "branches": [
+    "trunk",
+    "conquest"
+   ],
+   "kind": "capital",
+   "views": {
+    "europe": [
+     101,
+     1401
+    ],
+    "world": [
+     1139,
+     460
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "madrid",
+   "name": "Madrid",
+   "label": "Madrid",
+   "name_zh": "马德里",
+   "lon": -3.7038,
+   "lat": 40.4168,
+   "branches": [
+    "trunk",
+    "conquest"
+   ],
+   "kind": "capital",
+   "views": {
+    "europe": [
+     293,
+     1323
+    ],
+    "world": [
+     1175,
+     446
+    ],
+    "med": [
+     153,
+     1068
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "somosierra",
+   "name": "Somosierra",
+   "label": "Somosierra",
+   "name_zh": "索莫谢拉",
+   "lon": -3.581,
+   "lat": 41.133,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     297,
+     1290
+    ],
+    "world": [
+     1176,
+     441
+    ],
+    "med": [
+     161,
+     1005
+    ]
+   },
+   "date": "1808-11-30",
+   "fictional": false
+  },
+  {
+   "id": "saragossa",
+   "name": "Saragossa",
+   "label": "Saragossa",
+   "name_zh": "萨拉戈萨",
+   "lon": -0.8891,
+   "lat": 41.6488,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "siege",
+   "views": {
+    "europe": [
+     392,
+     1266
+    ],
+    "world": [
+     1194,
+     436
+    ],
+    "med": [
+     341,
+     959
+    ]
+   },
+   "date": "1808-1809",
+   "fictional": false
+  },
+  {
+   "id": "eckmuhl",
+   "name": "Eckmühl",
+   "label": "Eckmuhl",
+   "name_zh": "埃克米尔",
+   "lon": 12.183,
+   "lat": 48.833,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     854,
+     905
+    ],
+    "world": [
+     1281,
+     377
+    ],
+    "med": [
+     1212,
+     278
+    ]
+   },
+   "date": "1809-04-22",
+   "fictional": false
+  },
+  {
+   "id": "aspern_essling",
+   "name": "Aspern-Essling",
+   "label": "Aspern-Essling",
+   "name_zh": "阿斯佩恩-埃斯灵",
+   "lon": 16.505,
+   "lat": 48.218,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     1006,
+     938
+    ],
+    "world": [
+     1310,
+     382
+    ],
+    "med": [
+     1500,
+     340
+    ]
+   },
+   "date": "1809-05-21..22",
+   "fictional": false
+  },
+  {
+   "id": "wagram",
+   "name": "Wagram",
+   "label": "Wagram",
+   "name_zh": "瓦格拉姆",
+   "lon": 16.5644,
+   "lat": 48.2994,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     1008,
+     933
+    ],
+    "world": [
+     1310,
+     382
+    ],
+    "med": [
+     1504,
+     331
+    ]
+   },
+   "date": "1809-07-05..06",
+   "fictional": false
+  },
+  {
+   "id": "kovno",
+   "name": "Kovno (Niemen crossing)",
+   "label": "Kovno",
+   "name_zh": "考纳斯（涅曼河渡口）",
+   "lon": 23.9036,
+   "lat": 54.8985,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "crossing",
+   "views": {
+    "europe": [
+     1267,
+     557
+    ],
+    "world": [
+     1359,
+     323
+    ]
+   },
+   "date": "1812-06-24",
+   "fictional": false
+  },
+  {
+   "id": "vilna",
+   "name": "Vilna",
+   "label": "Vilna",
+   "name_zh": "维尔纳",
+   "lon": 25.2797,
+   "lat": 54.6872,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "city",
+   "views": {
+    "europe": [
+     1316,
+     570
+    ],
+    "world": [
+     1369,
+     325
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "smolensk",
+   "name": "Smolensk",
+   "label": "Smolensk",
+   "name_zh": "斯摩棱斯克",
+   "lon": 32.0401,
+   "lat": 54.7818,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     1554,
+     565
+    ],
+    "world": [
+     1414,
+     324
+    ]
+   },
+   "date": "1812-08-16..18",
+   "fictional": false
+  },
+  {
+   "id": "borodino",
+   "name": "Borodino",
+   "label": "Borodino",
+   "name_zh": "博罗季诺",
+   "lon": 35.824,
+   "lat": 55.523,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     1688,
+     519
+    ],
+    "world": [
+     1439,
+     317
+    ]
+   },
+   "date": "1812-09-07",
+   "fictional": false
+  },
+  {
+   "id": "moscow",
+   "name": "Moscow",
+   "label": "Moscow",
+   "name_zh": "莫斯科",
+   "lon": 37.6173,
+   "lat": 55.7558,
+   "branches": [
+    "trunk",
+    "conquest"
+   ],
+   "kind": "city",
+   "views": {
+    "europe": [
+     1751,
+     504
+    ],
+    "world": [
+     1451,
+     315
+    ]
+   },
+   "date": "1812-09-14",
+   "fictional": false
+  },
+  {
+   "id": "berezina",
+   "name": "Studianka (Berezina crossing)",
+   "label": "Berezina",
+   "name_zh": "斯图江卡（别列津纳河渡口）",
+   "lon": 28.35,
+   "lat": 54.333,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "crossing",
+   "views": {
+    "europe": [
+     1424,
+     592
+    ],
+    "world": [
+     1389,
+     328
+    ]
+   },
+   "date": "1812-11-26..29",
+   "fictional": false
+  },
+  {
+   "id": "lutzen",
+   "name": "Lützen",
+   "label": "Lutzen",
+   "name_zh": "吕岑",
+   "lon": 12.1415,
+   "lat": 51.2588,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     852,
+     771
+    ],
+    "world": [
+     1281,
+     356
+    ],
+    "med": [
+     1209,
+     26
+    ]
+   },
+   "date": "1813-05-02",
+   "fictional": false
+  },
+  {
+   "id": "dresden",
+   "name": "Dresden",
+   "label": "Dresden",
+   "name_zh": "德累斯顿",
+   "lon": 13.7373,
+   "lat": 51.0504,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     908,
+     783
+    ],
+    "world": [
+     1292,
+     358
+    ],
+    "med": [
+     1316,
+     48
+    ]
+   },
+   "date": "1813-08-26..27",
+   "fictional": false
+  },
+  {
+   "id": "leipzig",
+   "name": "Leipzig",
+   "label": "Leipzig",
+   "name_zh": "莱比锡",
+   "lon": 12.3731,
+   "lat": 51.3397,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     860,
+     767
+    ],
+    "world": [
+     1282,
+     355
+    ],
+    "med": [
+     1225,
+     17
+    ]
+   },
+   "date": "1813-10-16..19",
+   "fictional": false
+  },
+  {
+   "id": "montmirail",
+   "name": "Montmirail",
+   "label": "Montmirail",
+   "name_zh": "蒙米赖",
+   "lon": 3.5389,
+   "lat": 48.8708,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     548,
+     903
+    ],
+    "world": [
+     1224,
+     377
+    ],
+    "med": [
+     636,
+     274
+    ]
+   },
+   "date": "1814-02-11",
+   "fictional": false
+  },
+  {
+   "id": "fontainebleau",
+   "name": "Fontainebleau",
+   "label": "Fontainebleau",
+   "name_zh": "枫丹白露",
+   "lon": 2.7016,
+   "lat": 48.4047,
+   "branches": [
+    "trunk",
+    "cristo"
+   ],
+   "kind": "palace",
+   "views": {
+    "europe": [
+     519,
+     928
+    ],
+    "world": [
+     1218,
+     381
+    ],
+    "med": [
+     580,
+     321
+    ]
+   },
+   "date": "1814-04-06 abdication",
+   "fictional": false
+  },
+  {
+   "id": "portoferraio",
+   "name": "Portoferraio (Elba)",
+   "label": "Portoferraio",
+   "name_zh": "费拉约港（厄尔巴岛）",
+   "lon": 10.327,
+   "lat": 42.813,
+   "branches": [
+    "trunk",
+    "cristo"
+   ],
+   "kind": "island",
+   "views": {
+    "europe": [
+     788,
+     1210
+    ],
+    "world": [
+     1269,
+     427
+    ],
+    "med": [
+     1088,
+     854
+    ]
+   },
+   "date": "1814-05..1815-02-26",
+   "fictional": false
+  },
+  {
+   "id": "golfe_juan",
+   "name": "Golfe-Juan",
+   "label": "Golfe-Juan",
+   "name_zh": "儒安湾",
+   "lon": 7.074,
+   "lat": 43.568,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "landing",
+   "views": {
+    "europe": [
+     673,
+     1174
+    ],
+    "world": [
+     1247,
+     421
+    ],
+    "med": [
+     872,
+     785
+    ]
+   },
+   "date": "1815-03-01",
+   "fictional": false
+  },
+  {
+   "id": "laffrey",
+   "name": "Laffrey",
+   "label": "Laffrey",
+   "name_zh": "拉弗雷",
+   "lon": 5.767,
+   "lat": 45.006,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "event",
+   "views": {
+    "europe": [
+     627,
+     1103
+    ],
+    "world": [
+     1238,
+     409
+    ],
+    "med": [
+     784,
+     651
+    ]
+   },
+   "date": "1815-03-07",
+   "note": "Prairie de la Rencontre: \"Soldiers, here is your Emperor\"",
+   "fictional": false
+  },
+  {
+   "id": "grenoble",
+   "name": "Grenoble",
+   "label": "Grenoble",
+   "name_zh": "格勒诺布尔",
+   "lon": 5.7245,
+   "lat": 45.1885,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "city",
+   "views": {
+    "europe": [
+     626,
+     1094
+    ],
+    "world": [
+     1238,
+     408
+    ],
+    "med": [
+     782,
+     634
+    ]
+   },
+   "date": "1815-03-07",
+   "fictional": false
+  },
+  {
+   "id": "lyon",
+   "name": "Lyon",
+   "label": "Lyon",
+   "name_zh": "里昂",
+   "lon": 4.8357,
+   "lat": 45.764,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "city",
+   "views": {
+    "europe": [
+     594,
+     1065
+    ],
+    "world": [
+     1232,
+     403
+    ],
+    "med": [
+     722,
+     579
+    ]
+   },
+   "date": "1815-03-10",
+   "fictional": false
+  },
+  {
+   "id": "quatre_bras",
+   "name": "Quatre Bras",
+   "label": "Quatre Bras",
+   "name_zh": "四臂村",
+   "lon": 4.454,
+   "lat": 50.5714,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     581,
+     810
+    ],
+    "world": [
+     1230,
+     362
+    ],
+    "med": [
+     697,
+     98
+    ]
+   },
+   "date": "1815-06-16",
+   "fictional": false
+  },
+  {
+   "id": "ligny",
+   "name": "Ligny",
+   "label": "Ligny",
+   "name_zh": "林尼",
+   "lon": 4.578,
+   "lat": 50.512,
+   "branches": [
+    "trunk"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     585,
+     813
+    ],
+    "world": [
+     1231,
+     363
+    ],
+    "med": [
+     705,
+     105
+    ]
+   },
+   "date": "1815-06-16",
+   "fictional": false
+  },
+  {
+   "id": "waterloo",
+   "name": "Waterloo",
+   "label": "Waterloo",
+   "name_zh": "滑铁卢",
+   "lon": 4.4044,
+   "lat": 50.6787,
+   "branches": [
+    "trunk",
+    "conquest"
+   ],
+   "kind": "battle",
+   "views": {
+    "europe": [
+     579,
+     804
+    ],
+    "world": [
+     1229,
+     361
+    ],
+    "med": [
+     694,
+     87
+    ]
+   },
+   "date": "1815-06-18",
+   "note": "battlefield (Mont-Saint-Jean); branch point",
+   "fictional": false
+  },
+  {
+   "id": "brussels",
+   "name": "Brussels",
+   "label": "Brussels",
+   "name_zh": "布鲁塞尔",
+   "lon": 4.3517,
+   "lat": 50.8503,
+   "branches": [
+    "trunk",
+    "conquest"
+   ],
+   "kind": "city",
+   "views": {
+    "europe": [
+     577,
+     794
+    ],
+    "world": [
+     1229,
+     360
+    ],
+    "med": [
+     690,
+     69
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "antwerp",
+   "name": "Antwerp",
+   "label": "Antwerp",
+   "name_zh": "安特卫普",
+   "lon": 4.4025,
+   "lat": 51.2194,
+   "branches": [
+    "conquest"
+   ],
+   "kind": "port",
+   "views": {
+    "europe": [
+     579,
+     774
+    ],
+    "world": [
+     1229,
+     356
+    ],
+    "med": [
+     694,
+     30
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "amsterdam",
+   "name": "Amsterdam",
+   "label": "Amsterdam",
+   "name_zh": "阿姆斯特丹",
+   "lon": 4.9041,
+   "lat": 52.3676,
+   "branches": [
+    "conquest"
+   ],
+   "kind": "capital",
+   "views": {
+    "europe": [
+     597,
+     708
+    ],
+    "world": [
+     1233,
+     346
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "london",
+   "name": "London",
+   "label": "London",
+   "name_zh": "伦敦",
+   "lon": -0.1278,
+   "lat": 51.5074,
+   "branches": [
+    "conquest",
+    "ocean"
+   ],
+   "kind": "capital",
+   "views": {
+    "europe": [
+     419,
+     757
+    ],
+    "world": [
+     1199,
+     354
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "dover",
+   "name": "Dover",
+   "label": "Dover",
+   "name_zh": "多佛尔",
+   "lon": 1.3134,
+   "lat": 51.1279,
+   "branches": [
+    "conquest"
+   ],
+   "kind": "port",
+   "views": {
+    "europe": [
+     470,
+     779
+    ],
+    "world": [
+     1209,
+     357
+    ],
+    "med": [
+     488,
+     40
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "naples",
+   "name": "Naples",
+   "label": "Naples",
+   "name_zh": "那不勒斯",
+   "lon": 14.2681,
+   "lat": 40.8518,
+   "branches": [
+    "trunk",
+    "conquest",
+    "cristo"
+   ],
+   "kind": "capital",
+   "views": {
+    "europe": [
+     927,
+     1303
+    ],
+    "world": [
+     1295,
+     443
+    ],
+    "med": [
+     1351,
+     1030
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "constantinople",
+   "name": "Constantinople",
+   "label": "Constantinople",
+   "name_zh": "君士坦丁堡",
+   "lon": 28.9784,
+   "lat": 41.0082,
+   "branches": [
+    "conquest",
+    "cristo"
+   ],
+   "kind": "capital",
+   "views": {
+    "europe": [
+     1446,
+     1296
+    ],
+    "world": [
+     1393,
+     442
+    ],
+    "med": [
+     2332,
+     1016
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "rochefort",
+   "name": "Rochefort",
+   "label": "Rochefort",
+   "name_zh": "罗什福尔",
+   "lon": -0.959,
+   "lat": 45.942,
+   "branches": [
+    "trunk",
+    "ocean"
+   ],
+   "kind": "port",
+   "views": {
+    "europe": [
+     390,
+     1056
+    ],
+    "world": [
+     1194,
+     402
+    ],
+    "med": [
+     336,
+     562
+    ]
+   },
+   "date": "1815-07",
+   "fictional": false
+  },
+  {
+   "id": "ile_d_aix",
+   "name": "Île d'Aix",
+   "label": "Ile d'Aix",
+   "name_zh": "艾克斯岛",
+   "lon": -1.1747,
+   "lat": 46.0128,
+   "branches": [
+    "trunk",
+    "ocean"
+   ],
+   "kind": "island",
+   "views": {
+    "europe": [
+     382,
+     1052
+    ],
+    "world": [
+     1192,
+     401
+    ],
+    "med": [
+     322,
+     556
+    ]
+   },
+   "date": "1815-07-15",
+   "note": "Napoleon boards HMS Bellerophon off the island (Basque Roads)",
+   "fictional": false
+  },
+  {
+   "id": "plymouth",
+   "name": "Plymouth",
+   "label": "Plymouth",
+   "name_zh": "普利茅斯",
+   "lon": -4.1427,
+   "lat": 50.3755,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "port",
+   "views": {
+    "europe": [
+     277,
+     821
+    ],
+    "world": [
+     1172,
+     364
+    ],
+    "med": [
+     124,
+     119
+    ]
+   },
+   "date": "1815-07-26..08-04",
+   "note": "Bellerophon at anchor",
+   "fictional": false
+  },
+  {
+   "id": "st_helena",
+   "name": "St Helena",
+   "label": "St Helena",
+   "name_zh": "圣赫勒拿岛",
+   "lon": -5.708,
+   "lat": -15.965,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "island",
+   "views": {
+    "world": [
+     1162,
+     839
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "jamestown",
+   "name": "Jamestown (St Helena)",
+   "label": "Jamestown",
+   "name_zh": "詹姆斯敦（圣赫勒拿）",
+   "lon": -5.7181,
+   "lat": -15.9244,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "port",
+   "views": {
+    "world": [
+     1162,
+     838
+    ]
+   },
+   "date": "1815-10-15",
+   "fictional": false
+  },
+  {
+   "id": "longwood",
+   "name": "Longwood (St Helena)",
+   "label": "Longwood",
+   "name_zh": "朗伍德",
+   "lon": -5.6836,
+   "lat": -15.945,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "house",
+   "views": {
+    "world": [
+     1162,
+     838
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "ascension",
+   "name": "Ascension",
+   "label": "Ascension",
+   "name_zh": "阿森松岛",
+   "lon": -14.4132,
+   "lat": -7.9267,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "island",
+   "views": {
+    "world": [
+     1104,
+     784
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "cape_town",
+   "name": "Cape Town",
+   "label": "Cape Town",
+   "name_zh": "开普敦",
+   "lon": 18.4241,
+   "lat": -33.9249,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "port",
+   "views": {
+    "world": [
+     1323,
+     966
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "rio",
+   "name": "Rio de Janeiro",
+   "label": "Rio de Janeiro",
+   "name_zh": "里约热内卢",
+   "lon": -43.1729,
+   "lat": -22.9068,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "port",
+   "views": {
+    "world": [
+     912,
+     887
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "cape_horn",
+   "name": "Cape Horn",
+   "label": "Cape Horn",
+   "name_zh": "合恩角",
+   "lon": -67.2667,
+   "lat": -55.9833,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "cape",
+   "views": {
+    "world": [
+     752,
+     1150
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "juan_fernandez",
+   "name": "Juan Fernández (Robinson Crusoe I.)",
+   "label": "Juan Fernandez",
+   "name_zh": "胡安·费尔南德斯群岛",
+   "lon": -78.83,
+   "lat": -33.64,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "island",
+   "views": {
+    "world": [
+     674,
+     964
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "tahiti",
+   "name": "Tahiti (Papeete)",
+   "label": "Tahiti",
+   "name_zh": "塔希提",
+   "lon": -149.5696,
+   "lat": -17.535,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "island",
+   "views": {
+    "world": [
+     203,
+     849
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "new_elba",
+   "name": "New Elba",
+   "label": "New Elba (fict.)",
+   "name_zh": "新厄尔巴岛",
+   "lon": -118.5,
+   "lat": -39.5,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "island",
+   "views": {
+    "world": [
+     410,
+     1009
+    ]
+   },
+   "fictional": true,
+   "note": "invented; empty South Pacific in the westerlies, ~1500 km from Easter Island"
+  },
+  {
+   "id": "vigo_bay",
+   "name": "Vigo Bay (Rande)",
+   "label": "Vigo Bay",
+   "name_zh": "维哥湾",
+   "lon": -8.72,
+   "lat": 42.26,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "bay",
+   "views": {
+    "europe": [
+     116,
+     1237
+    ],
+    "world": [
+     1142,
+     432
+    ]
+   },
+   "note": "1702 treasure galleons (Verne II.8)",
+   "fictional": false
+  },
+  {
+   "id": "atlantis",
+   "name": "Atlantis",
+   "label": "Atlantis (fict.)",
+   "name_zh": "亚特兰蒂斯",
+   "lon": -20.0,
+   "lat": 35.0,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "ruin",
+   "views": {
+    "world": [
+     1067,
+     488
+    ]
+   },
+   "fictional": true,
+   "note": "Verne II.9; seabed SW of Portugal"
+  },
+  {
+   "id": "greenwich",
+   "name": "Thames / Greenwich",
+   "label": "Greenwich",
+   "name_zh": "泰晤士河·格林尼治",
+   "lon": -0.0077,
+   "lat": 51.4826,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "river",
+   "views": {
+    "europe": [
+     423,
+     759
+    ],
+    "world": [
+     1200,
+     354
+    ],
+    "med": [
+     399,
+     2
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "maelstrom",
+   "name": "Lofoten / Maelstrom (Moskstraumen)",
+   "label": "Maelstrom",
+   "name_zh": "罗弗敦·大漩涡",
+   "lon": 12.8,
+   "lat": 67.8,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "sea",
+   "views": {
+    "world": [
+     1285,
+     191
+    ]
+   },
+   "note": "Verne II.22",
+   "fictional": false
+  },
+  {
+   "id": "antarctic_ice",
+   "name": "Antarctic ice barrier (Larsen shelf)",
+   "label": "Antarctic ice",
+   "name_zh": "南极冰障",
+   "lon": -60.0,
+   "lat": -67.6,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "ice",
+   "views": {
+    "world": [
+     800,
+     1269
+    ]
+   },
+   "note": "Verne II.13-16 ice bank; the pole itself is off the map (lat -78 bottom edge)",
+   "fictional": false
+  },
+  {
+   "id": "torres_strait",
+   "name": "Torres Strait",
+   "label": "Torres Strait",
+   "name_zh": "托雷斯海峡",
+   "lon": 142.3,
+   "lat": -10.2,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "strait",
+   "views": {
+    "world": [
+     2149,
+     799
+    ]
+   },
+   "note": "Verne I.20-22 (Gueboroar)",
+   "fictional": false
+  },
+  {
+   "id": "suez",
+   "name": "Suez",
+   "label": "Suez",
+   "name_zh": "苏伊士",
+   "lon": 32.5498,
+   "lat": 29.9668,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "port",
+   "views": {
+    "europe": [
+     1572,
+     1776
+    ],
+    "world": [
+     1417,
+     525
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "arabian_tunnel",
+   "name": "Arabian Tunnel",
+   "label": "Arabian Tunnel (fict.)",
+   "name_zh": "阿拉伯隧道",
+   "lon": 32.45,
+   "lat": 30.5,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "tunnel",
+   "views": {
+    "europe": [
+     1569,
+     1754
+    ],
+    "world": [
+     1416,
+     521
+    ]
+   },
+   "fictional": true,
+   "note": "Verne II.4-5: under the isthmus, Gulf of Suez to Pelusium"
+  },
+  {
+   "id": "crete",
+   "name": "Crete",
+   "label": "Crete",
+   "name_zh": "克里特岛",
+   "lon": 24.9,
+   "lat": 35.25,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "island",
+   "views": {
+    "europe": [
+     1302,
+     1554
+    ],
+    "world": [
+     1366,
+     486
+    ],
+    "med": [
+     2060,
+     1505
+    ]
+   },
+   "note": "Verne II.6 (Nicolas of Cape Matapan)",
+   "fictional": false
+  },
+  {
+   "id": "ceylon",
+   "name": "Ceylon (Manaar pearl banks)",
+   "label": "Ceylon",
+   "name_zh": "锡兰（马纳尔珍珠场）",
+   "lon": 79.8,
+   "lat": 8.7,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "sea",
+   "views": {
+    "world": [
+     1732,
+     673
+    ]
+   },
+   "note": "Verne II.2-3",
+   "fictional": false
+  },
+  {
+   "id": "sea_of_japan",
+   "name": "Sea of Japan",
+   "label": "Sea of Japan",
+   "name_zh": "日本海",
+   "lon": 135.0,
+   "lat": 40.0,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "sea",
+   "views": {
+    "world": [
+     2100,
+     450
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "crespo_island",
+   "name": "Crespo Island",
+   "label": "Crespo I. (fict.)",
+   "name_zh": "克雷斯波岛",
+   "lon": -167.83,
+   "lat": 32.67,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "island",
+   "views": {
+    "world": [
+     81,
+     505
+    ]
+   },
+   "fictional": true,
+   "note": "Verne I.14 submarine forest"
+  },
+  {
+   "id": "vanikoro",
+   "name": "Vanikoro",
+   "label": "Vanikoro",
+   "name_zh": "瓦尼科罗岛",
+   "lon": 166.85,
+   "lat": -11.65,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "island",
+   "views": {
+    "world": [
+     2312,
+     809
+    ]
+   },
+   "note": "La Perouse wreck (Verne I.19)",
+   "fictional": false
+  },
+  {
+   "id": "sargasso",
+   "name": "Sargasso Sea",
+   "label": "Sargasso Sea",
+   "name_zh": "马尾藻海",
+   "lon": -55.0,
+   "lat": 29.0,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "sea",
+   "views": {
+    "world": [
+     833,
+     532
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "lincoln_island",
+   "name": "Lincoln Island",
+   "label": "Lincoln I. (fict.)",
+   "name_zh": "林肯岛",
+   "lon": -150.5,
+   "lat": -34.95,
+   "branches": [
+    "ocean"
+   ],
+   "kind": "island",
+   "views": {
+    "world": [
+     197,
+     974
+    ]
+   },
+   "fictional": true,
+   "note": "Verne, The Mysterious Island: 34°57'S 150°30'W"
+  },
+  {
+   "id": "marseille_old_port",
+   "name": "Marseille, Old Port",
+   "label": "Old Port",
+   "name_zh": "马赛旧港",
+   "lon": 5.37,
+   "lat": 43.295,
+   "branches": [
+    "cristo"
+   ],
+   "kind": "port",
+   "views": {
+    "europe": [
+     613,
+     1187
+    ],
+    "world": [
+     1236,
+     423
+    ],
+    "med": [
+     758,
+     810
+    ]
+   },
+   "date": "1815-02-24 Pharaon arrives",
+   "fictional": false
+  },
+  {
+   "id": "catalans",
+   "name": "Les Catalans (Marseille)",
+   "label": "Catalans",
+   "name_zh": "加泰罗尼亚人村",
+   "lon": 5.3532,
+   "lat": 43.2906,
+   "branches": [
+    "cristo"
+   ],
+   "kind": "quarter",
+   "views": {
+    "europe": [
+     612,
+     1187
+    ],
+    "world": [
+     1236,
+     423
+    ],
+    "med": [
+     757,
+     811
+    ]
+   },
+   "note": "Mercédès' village",
+   "fictional": false
+  },
+  {
+   "id": "chateau_d_if",
+   "name": "Château d'If",
+   "label": "Chateau d'If",
+   "name_zh": "伊夫堡",
+   "lon": 5.3254,
+   "lat": 43.2799,
+   "branches": [
+    "cristo"
+   ],
+   "kind": "prison",
+   "views": {
+    "europe": [
+     611,
+     1188
+    ],
+    "world": [
+     1236,
+     423
+    ],
+    "med": [
+     755,
+     812
+    ]
+   },
+   "date": "1815-03 .. 1829-02",
+   "fictional": false
+  },
+  {
+   "id": "montecristo",
+   "name": "Île de Montecristo",
+   "label": "Montecristo",
+   "name_zh": "基督山岛",
+   "lon": 10.31,
+   "lat": 42.3333,
+   "branches": [
+    "cristo"
+   ],
+   "kind": "island",
+   "views": {
+    "europe": [
+     787,
+     1233
+    ],
+    "world": [
+     1269,
+     431
+    ],
+    "med": [
+     1087,
+     898
+    ]
+   },
+   "note": "Spada treasure (Faria's half-letter)",
+   "fictional": false
+  },
+  {
+   "id": "livorno",
+   "name": "Livorno",
+   "label": "Livorno",
+   "name_zh": "里窝那",
+   "lon": 10.3106,
+   "lat": 43.5485,
+   "branches": [
+    "cristo"
+   ],
+   "kind": "port",
+   "views": {
+    "europe": [
+     787,
+     1174
+    ],
+    "world": [
+     1269,
+     421
+    ],
+    "med": [
+     1087,
+     787
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "genoa",
+   "name": "Genoa",
+   "label": "Genoa",
+   "name_zh": "热那亚",
+   "lon": 8.9463,
+   "lat": 44.4056,
+   "branches": [
+    "cristo"
+   ],
+   "kind": "port",
+   "views": {
+    "europe": [
+     739,
+     1132
+    ],
+    "world": [
+     1260,
+     414
+    ],
+    "med": [
+     996,
+     708
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "rome",
+   "name": "Rome",
+   "label": "Rome",
+   "name_zh": "罗马",
+   "lon": 12.4964,
+   "lat": 41.9028,
+   "branches": [
+    "cristo"
+   ],
+   "kind": "city",
+   "views": {
+    "europe": [
+     865,
+     1254
+    ],
+    "world": [
+     1283,
+     434
+    ],
+    "med": [
+     1233,
+     937
+    ]
+   },
+   "note": "Carnival, Luigi Vampa",
+   "fictional": false
+  },
+  {
+   "id": "champs_elysees",
+   "name": "Paris, 30 avenue des Champs-Élysées",
+   "label": "Champs-Elysees",
+   "name_zh": "香榭丽舍大街30号",
+   "lon": 2.3075,
+   "lat": 48.8698,
+   "branches": [
+    "cristo"
+   ],
+   "kind": "house",
+   "views": {
+    "europe": [
+     505,
+     903
+    ],
+    "world": [
+     1215,
+     377
+    ],
+    "med": [
+     554,
+     274
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "auteuil",
+   "name": "Auteuil (rue de la Fontaine)",
+   "label": "Auteuil",
+   "name_zh": "奥特伊",
+   "lon": 2.27,
+   "lat": 48.849,
+   "branches": [
+    "cristo"
+   ],
+   "kind": "house",
+   "views": {
+    "europe": [
+     504,
+     904
+    ],
+    "world": [
+     1215,
+     377
+    ],
+    "med": [
+     551,
+     276
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "janina",
+   "name": "Janina (Ioannina)",
+   "label": "Janina",
+   "name_zh": "约阿尼纳",
+   "lon": 20.8537,
+   "lat": 39.665,
+   "branches": [
+    "cristo"
+   ],
+   "kind": "city",
+   "views": {
+    "europe": [
+     1160,
+     1358
+    ],
+    "world": [
+     1339,
+     452
+    ],
+    "med": [
+     1790,
+     1134
+    ]
+   },
+   "note": "Ali Pasha, Haydée",
+   "fictional": false
+  },
+  {
+   "id": "smyrna",
+   "name": "Smyrna",
+   "label": "Smyrna",
+   "name_zh": "士麦那",
+   "lon": 27.1428,
+   "lat": 38.4237,
+   "branches": [
+    "cristo"
+   ],
+   "kind": "port",
+   "views": {
+    "europe": [
+     1382,
+     1414
+    ],
+    "world": [
+     1381,
+     462
+    ],
+    "med": [
+     2210,
+     1240
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "tunis",
+   "name": "Tunis",
+   "label": "Tunis",
+   "name_zh": "突尼斯",
+   "lon": 10.1815,
+   "lat": 36.8065,
+   "branches": [
+    "cristo"
+   ],
+   "kind": "city",
+   "views": {
+    "europe": [
+     783,
+     1486
+    ],
+    "world": [
+     1268,
+     474
+    ],
+    "med": [
+     1079,
+     1376
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "nimes",
+   "name": "Nîmes",
+   "label": "Nimes",
+   "name_zh": "尼姆",
+   "lon": 4.3601,
+   "lat": 43.8367,
+   "branches": [
+    "cristo"
+   ],
+   "kind": "city",
+   "views": {
+    "europe": [
+     577,
+     1160
+    ],
+    "world": [
+     1229,
+     419
+    ],
+    "med": [
+     691,
+     761
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "pont_du_gard",
+   "name": "Pont du Gard",
+   "label": "Pont du Gard",
+   "name_zh": "加尔桥",
+   "lon": 4.5354,
+   "lat": 43.9475,
+   "branches": [
+    "cristo"
+   ],
+   "kind": "landmark",
+   "views": {
+    "europe": [
+     584,
+     1155
+    ],
+    "world": [
+     1230,
+     418
+    ],
+    "med": [
+     702,
+     750
+    ]
+   },
+   "fictional": false
+  },
+  {
+   "id": "caderousse_inn",
+   "name": "Caderousse's inn (Auberge du Pont du Gard)",
+   "label": "Caderousse inn",
+   "name_zh": "卡德鲁斯客栈",
+   "lon": 4.58,
+   "lat": 43.78,
+   "branches": [
+    "cristo"
+   ],
+   "kind": "inn",
+   "views": {
+    "europe": [
+     585,
+     1163
+    ],
+    "world": [
+     1231,
+     419
+    ],
+    "med": [
+     705,
+     766
+    ]
+   },
+   "approx": true,
+   "note": "Dumas places it on the Beaucaire-Bellegarde road; position approximate",
+   "fictional": false
+  }
+ ]
+}

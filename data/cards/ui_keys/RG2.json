@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "owner": "RG2",
+    "schema": 1,
+    "brief": "肉鸽 v1 周末盘账与客源的告示和界面错误句（ROGUE_V1 §11）。正文由人写，基础层在 text_ai/ui/RG2.text.json。"
+  },
+  "keys": {
+    "rg2.notice.stocktake": {
+      "brief": "周末盘账，这周生意做够了（参数 deals：这周做成几笔，玩家看得见的计数）"
+    },
+    "rg2.notice.stocktake_few": {
+      "brief": "周末盘账，这周生意做得少，只翻出两样（参数 deals）"
+    },
+    "rg2.notice.passed": {
+      "brief": "盘账或货郎的担子，明说都不要"
+    },
+    "rg2.notice.sources_lapsed": {
+      "brief": "换到下一关时，上一关挑的客源散了"
+    },
+    "rg2.notice.peddler_empty": {
+      "brief": "货郎担子里没有合适的老东西可摆"
+    },
+    "rg2.reason.offer_closed": {
+      "brief": "这一份已经挑过或者过了时候（盘账叠层的错误句）"
+    },
+    "rg2.notice.lapsed": {
+      "brief": "昨晚盘账（或货郎的担子）没挑，第二天一早那份作废、东西收回去了"
+    }
+  }
+}

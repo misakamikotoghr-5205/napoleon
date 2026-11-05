@@ -1,0 +1,38 @@
+{
+  "kind": "spot",
+  "seed": 20261013,
+  "item": "I-scroll",
+  "art": "item.art.calligraphy",
+  "atlas_art": "item.art.calligraphy",
+  "atlas_open": true,
+  "ink": 4,
+  "minutes_per_step": 1,
+  "max_minutes": 30,
+  "tools": ["eye", "lens", "atlas"],
+  "parts": [
+    {
+      "id": "material",
+      "rect": [8, 8, 12, 12],
+      "tool": "eye"
+    },
+    {
+      "id": "condition",
+      "rect": [40, 40, 12, 12],
+      "tool": "eye"
+    }
+  ],
+  "marks": [
+    {
+      "part": "material",
+      "kind": "differs",
+      "fine": 250,
+      "seed": 17
+    },
+    {
+      "part": "condition",
+      "kind": "wear",
+      "fine": 100,
+      "seed": 19
+    }
+  ]
+}

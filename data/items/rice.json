@@ -1,0 +1,321 @@
+{
+  "items": {
+    "rice_sunji": {
+      "name": "粳米（一小袋，三十来斤）",
+      "cat": "rice",
+      "cat_cn": "米粮",
+      "market": 68,
+      "claimed": 0,
+      "fake": false,
+      "grade": "乙",
+      "origin": "stolen",
+      "contraband": false,
+      "est": [40, 90],
+      "suggest": 40,
+      "ask_w": 1.0,
+      "weight": "",
+      "tags": ["孙记"],
+      "sprite": "art/items/rice_sunji.png",
+      "ticket_condition": "",
+      "parts": [
+        {
+          "id": "grain",
+          "label": "捧一把看粒型",
+          "text": "短圆半透明，是本地粳米。",
+          "tool": "hand",
+          "rect": [4, 44, 56, 18],
+          "est": [45, 90]
+        },
+        {
+          "id": "color",
+          "label": "对光看颜色",
+          "text": "半透明，不发黄，是当年的新米。",
+          "tool": "hand",
+          "rect": [4, 44, 56, 18],
+          "est": [60, 90]
+        },
+        {
+          "id": "broken",
+          "label": "放大镜看碎米杂质",
+          "text": "碎米约三成，有少量稻壳。",
+          "tool": "magnifier",
+          "rect": [4, 44, 56, 18],
+          "est": [60, 72]
+        },
+        {
+          "id": "smell",
+          "label": "闻气味",
+          "text": "干爽，没有霉味。",
+          "tool": "nose",
+          "rect": [20, 2, 24, 12]
+        },
+        {
+          "id": "bag",
+          "label": "翻看米袋",
+          "text": "袋子是翻过来缝的，里面印着“孙记”。",
+          "tool": "hand",
+          "rect": [12, 14, 40, 26],
+          "flag": "found_sunji",
+          "event": "bag_sunji",
+          "tell": true
+        }
+      ],
+      "ref": "rice_jing"
+    },
+    "rice_jing_a": {
+      "name": "粳米甲（一小袋）",
+      "cat": "rice",
+      "cat_cn": "米粮",
+      "market": 90,
+      "claimed": 0,
+      "fake": false,
+      "grade": "甲",
+      "origin": "normal",
+      "contraband": false,
+      "est": [70, 110],
+      "suggest": 70,
+      "ask_w": 1.0,
+      "weight": "",
+      "tags": [],
+      "sprite": "art/items/rice_jing_a.png",
+      "ticket_condition": "",
+      "parts": [
+        {
+          "id": "grain",
+          "label": "捧一把看粒型",
+          "text": "短圆半透明，是本地粳米。",
+          "tool": "hand",
+          "rect": [4, 44, 56, 18],
+          "est": [80, 100]
+        },
+        {
+          "id": "color",
+          "label": "对光看颜色",
+          "text": "半透明，不发黄，是当年的新米。",
+          "tool": "hand",
+          "rect": [4, 44, 56, 18],
+          "est": [85, 95]
+        },
+        {
+          "id": "broken",
+          "label": "放大镜看碎米杂质",
+          "text": "碎米很少，几乎没有杂质。",
+          "tool": "magnifier",
+          "rect": [4, 44, 56, 18],
+          "est": [90, 90]
+        },
+        {
+          "id": "smell",
+          "label": "闻气味",
+          "text": "干爽，没有霉味。",
+          "tool": "nose",
+          "rect": [20, 2, 24, 12]
+        },
+        {
+          "id": "bag",
+          "label": "翻看米袋",
+          "text": "袋口缝得整齐，没有印记。",
+          "tool": "hand",
+          "rect": [12, 14, 40, 26]
+        }
+      ],
+      "ref": "rice_jing",
+      "flaws": [
+        {
+          "part": "bag",
+          "kind": "scuff",
+          "benign": true,
+          "note": "袋面上有几道擦痕"
+        }
+      ]
+    },
+    "rice_xian_b": {
+      "name": "籼米乙（一小袋）",
+      "cat": "rice",
+      "cat_cn": "米粮",
+      "market": 52,
+      "claimed": 0,
+      "fake": false,
+      "grade": "乙",
+      "origin": "normal",
+      "contraband": false,
+      "est": [40, 70],
+      "suggest": 40,
+      "ask_w": 1.0,
+      "weight": "",
+      "tags": [],
+      "sprite": "art/items/rice_xian_b.png",
+      "ticket_condition": "",
+      "parts": [
+        {
+          "id": "grain",
+          "label": "捧一把看粒型",
+          "text": "细长，米色发白，是外地运来的籼米。",
+          "tool": "hand",
+          "rect": [4, 44, 56, 18],
+          "est": [45, 70]
+        },
+        {
+          "id": "color",
+          "label": "对光看颜色",
+          "text": "米色发白，不太透亮，不发黄。",
+          "tool": "hand",
+          "rect": [4, 44, 56, 18],
+          "est": [50, 65]
+        },
+        {
+          "id": "broken",
+          "label": "放大镜看碎米杂质",
+          "text": "碎米稍多，有少量稻壳。",
+          "tool": "magnifier",
+          "rect": [4, 44, 56, 18],
+          "est": [52, 52]
+        },
+        {
+          "id": "smell",
+          "label": "闻气味",
+          "text": "干爽，没有霉味。",
+          "tool": "nose",
+          "rect": [20, 2, 24, 12]
+        },
+        {
+          "id": "bag",
+          "label": "翻看米袋",
+          "text": "袋口缝得整齐，没有印记。",
+          "tool": "hand",
+          "rect": [12, 14, 40, 26]
+        }
+      ],
+      "ref": "rice_xian"
+    },
+    "rice_nuo_c": {
+      "name": "糯米丙（一小袋）",
+      "cat": "rice",
+      "cat_cn": "米粮",
+      "market": 40,
+      "claimed": 0,
+      "fake": false,
+      "grade": "丙",
+      "origin": "normal",
+      "contraband": false,
+      "est": [30, 60],
+      "suggest": 30,
+      "ask_w": 1.0,
+      "weight": "",
+      "tags": [],
+      "sprite": "art/items/rice_nuo_c.png",
+      "ticket_condition": "",
+      "parts": [
+        {
+          "id": "grain",
+          "label": "捧一把看粒型",
+          "text": "乳白不透明，圆粒，是糯米。",
+          "tool": "hand",
+          "rect": [4, 44, 56, 18],
+          "est": [35, 60]
+        },
+        {
+          "id": "color",
+          "label": "对光看颜色",
+          "text": "发黄发暗，是放了一年以上的陈米。",
+          "tool": "hand",
+          "rect": [4, 44, 56, 18],
+          "est": [38, 46],
+          "tell": true
+        },
+        {
+          "id": "broken",
+          "label": "放大镜看碎米杂质",
+          "text": "米粒上还带着一层糠皮，没有精磨。",
+          "tool": "magnifier",
+          "rect": [4, 44, 56, 18],
+          "est": [40, 40]
+        },
+        {
+          "id": "smell",
+          "label": "闻气味",
+          "text": "有陈米的味道，没有霉味。",
+          "tool": "nose",
+          "rect": [20, 2, 24, 12]
+        },
+        {
+          "id": "bag",
+          "label": "翻看米袋",
+          "text": "袋口缝得整齐，没有印记。",
+          "tool": "hand",
+          "rect": [12, 14, 40, 26]
+        }
+      ],
+      "ref": "rice_nuo",
+      "flaws": [
+        {
+          "part": "color",
+          "kind": "yellow"
+        }
+      ]
+    },
+    "rice_mold_d": {
+      "name": "粳米丁（受潮发霉）",
+      "cat": "rice",
+      "cat_cn": "米粮",
+      "market": 13,
+      "claimed": 0,
+      "fake": false,
+      "grade": "丁",
+      "origin": "normal",
+      "contraband": false,
+      "est": [8, 30],
+      "suggest": 8,
+      "ask_w": 1.0,
+      "weight": "",
+      "tags": [],
+      "sprite": "art/items/rice_mold_d.png",
+      "ticket_condition": "",
+      "parts": [
+        {
+          "id": "grain",
+          "label": "捧一把看粒型",
+          "text": "短圆，可米粒上有灰绿色的斑。",
+          "tool": "hand",
+          "rect": [4, 44, 56, 18],
+          "est": [10, 30],
+          "tell": true
+        },
+        {
+          "id": "color",
+          "label": "对光看颜色",
+          "text": "发暗，有的米粒上有白点，像是生了虫。",
+          "tool": "hand",
+          "rect": [4, 44, 56, 18],
+          "est": [10, 20],
+          "tell": true
+        },
+        {
+          "id": "broken",
+          "label": "放大镜看碎米杂质",
+          "text": "掺着细沙，放大镜下能看见沙粒。",
+          "tool": "magnifier",
+          "rect": [4, 44, 56, 18],
+          "est": [13, 13],
+          "tell": true
+        },
+        {
+          "id": "smell",
+          "label": "闻气味",
+          "text": "一股霉味，潮气重。",
+          "tool": "nose",
+          "rect": [20, 2, 24, 12],
+          "tell": true
+        },
+        {
+          "id": "bag",
+          "label": "翻看米袋",
+          "text": "袋口缝得整齐，没有印记。",
+          "tool": "hand",
+          "rect": [12, 14, 40, 26]
+        }
+      ],
+      "ref": "rice_jing"
+    }
+  }
+}

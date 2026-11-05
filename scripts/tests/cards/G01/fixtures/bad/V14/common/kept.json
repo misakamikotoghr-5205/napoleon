@@ -1,0 +1,140 @@
+{
+  "_meta": {
+    "owner": "K09",
+    "schema": 1,
+    "brief": "例子集：留着的牌（§4.7.9）"
+  },
+  "cards": [
+    {
+      "id": "kp.ma_owes",
+      "type": "kept",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "favor",
+      "keepable": false,
+      "expires_days": 20,
+      "tags": [
+        "favor",
+        "official"
+      ],
+      "slot_bonus": [
+        {
+          "slot_tags_any": [
+            "official"
+          ],
+          "heads": 3
+        }
+      ],
+      "consumed_on_use": true,
+      "incense_units": 2,
+      "art": "illus.kp.ma_owes",
+      "brief": "马万利欠你一次：放进任何官面上的格子算 3 个正面；用了就没了；20 天后不灵了。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "id": "kp.mystery_box",
+      "type": "kept",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "hard",
+      "keepable": true,
+      "expires_days": 7,
+      "tags": [
+        "contraband"
+      ],
+      "slot_bonus": [],
+      "risk": [
+        {
+          "op": "arrest",
+          "reason": "k09.arrest.contraband"
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "money",
+            "delta": 100,
+            "reason": "k09.reason.box_returned"
+          }
+        ]
+      },
+      "art": "illus.kp.mystery_box",
+      "brief": "替陌生人保管的箱子。七天后他来取、再给一笔；这期间被查到（kept_risk 命中 contraband）就直接被抓。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "id": "kp.liangmin",
+      "type": "kept",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "paper",
+      "keepable": true,
+      "expires_days": 0,
+      "tags": [
+        "papers"
+      ],
+      "slot_bonus": [
+        {
+          "slot_tags_any": [
+            "papers"
+          ],
+          "auto_pass": true
+        }
+      ],
+      "consumed_on_use": false,
+      "art": "illus.kp.liangmin",
+      "brief": "良民证（伪维持会发的）：放进证件格子直接过，不消耗。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "id": "kp.brother_note",
+      "type": "kept",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "token",
+      "keepable": true,
+      "expires_days": 0,
+      "tags": [
+        "family",
+        "token"
+      ],
+      "slot_bonus": [
+        {
+          "slot_tags_any": [
+            "family"
+          ],
+          "coins": 1
+        }
+      ],
+      "consumed_on_use": false,
+      "incense_units": 1,
+      "art": "illus.kp.brother_note",
+      "brief": "（W0 例子，主线信物）哥哥的交代：听他说完后得到；放进家里相关的格子多一枚铜钱。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "_meta": {
+    "owner": "C08",
+    "schema": 1,
+    "brief": "后门收货带演出块 set=candle，打出后先换烛光再回话",
+    "_provenance": {
+      "by": "ai",
+      "task": "C08",
+      "date": "2026-10-14"
+    }
+  },
+  "queries": {},
+  "responses": [
+    {
+      "cmd": "night.choose",
+      "match": {
+        "choice": "look",
+        "def": "nt.backdoor"
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "settle"
+        }
+      ],
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    }
+  ],
+  "view": {
+    "busy": false,
+    "date": {
+      "abs_day": 1,
+      "d": 1,
+      "era": "1938",
+      "m": 3,
+      "minute": 900,
+      "stage": 0,
+      "stage_day": 1,
+      "stage_days": 30,
+      "weekday": 1,
+      "y": 1938
+    },
+    "hand": [],
+    "heat_tier": 0,
+    "mode": "shop",
+    "money": {
+      "amount": 118,
+      "currency": "fabi"
+    },
+    "night_offers": [
+      {
+        "art": "illus.nt.backdoor",
+        "choices": ["look"],
+        "def": "nt.backdoor",
+        "stage": {
+          "set": "candle"
+        }
+      }
+    ],
+    "phase": "night",
+    "rep_tier": 1,
+    "stage": {
+      "sealed": false,
+      "set": "counter",
+      "time": "night"
+    },
+    "v": 1
+  }
+}

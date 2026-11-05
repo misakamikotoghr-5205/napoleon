@@ -1,0 +1,178 @@
+{
+  "_meta": {
+    "owner": "C04",
+    "schema": 1,
+    "brief": "redeem after the pledge was sold: compensate or buy back",
+    "_provenance": {
+      "by": "ai",
+      "task": "C04",
+      "date": "2026-10-13"
+    }
+  },
+  "guide_progress": {},
+  "view": {
+    "phase": "day",
+    "mode": "shop",
+    "date": {
+      "abs_day": 1,
+      "stage": 0,
+      "stage_day": 1,
+      "y": 1938,
+      "m": 3,
+      "d": 2,
+      "weekday": 2
+    },
+    "money": {
+      "amount": 340,
+      "currency": "fabi"
+    },
+    "hand": [],
+    "tickets": [],
+    "notice": {
+      "weather": "clear",
+      "news": []
+    }
+  },
+  "queries": {
+    "counter|{\"uid\":\"c0009\"}": {
+      "uid": "c0009",
+      "person": "stranger_refugee",
+      "intent": "redeem",
+      "item": {
+        "item": "I001",
+        "template": "jewelry.hairpin",
+        "cat": "jewelry",
+        "art": "item.jewelry.hairpin",
+        "condition_word": 2,
+        "observations": [],
+        "on_shelf_since": -1
+      },
+      "asking": -1,
+      "tiers": {
+        "harsh": 104,
+        "fair": 84,
+        "kind": 68
+      },
+      "direction": "receive",
+      "round": 0,
+      "last_reply": "",
+      "last_price": 0,
+      "line_key": "p.any.redeem#lines.greet",
+      "can_appraise": false,
+      "stock": [],
+      "ticket": {
+        "no": 13,
+        "person": "linsao",
+        "item": "I001",
+        "principal": 80,
+        "days_left": 0,
+        "status": "sold",
+        "foreign": false
+      }
+    },
+    "card|{\"uid\":\"c0009\"}": {
+      "uid": "c0009",
+      "def": "p.any.redeem",
+      "type": "person",
+      "person": "stranger_refugee",
+      "intent": "redeem",
+      "art": "portrait.stranger_refugee",
+      "panel": "counter",
+      "choices": [],
+      "zone": "hand",
+      "status": "open"
+    },
+    "stock|{}": {
+      "items": []
+    },
+    "tickets|{}": {
+      "tickets": []
+    }
+  },
+  "responses": [
+    {
+      "cmd": "counter.redeem",
+      "match": {
+        "uid": "c0009",
+        "mode": "by_rule"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "reply": "accept"
+      },
+      "events": [
+        [
+          "card_left",
+          "c0009",
+          "resolved"
+        ]
+      ]
+    },
+    {
+      "cmd": "counter.redeem",
+      "match": {
+        "uid": "c0009",
+        "mode": "squeeze"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "reply": "accept"
+      },
+      "events": [
+        [
+          "card_left",
+          "c0009",
+          "resolved"
+        ]
+      ]
+    },
+    {
+      "cmd": "counter.redeem",
+      "match": {
+        "uid": "c0009",
+        "mode": "compensate"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "reply": "accept"
+      },
+      "events": [
+        [
+          "card_left",
+          "c0009",
+          "resolved"
+        ]
+      ]
+    },
+    {
+      "cmd": "counter.redeem",
+      "match": {
+        "uid": "c0009",
+        "mode": "buy_back"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "reply": "accept"
+      },
+      "events": [
+        [
+          "card_left",
+          "c0009",
+          "resolved"
+        ]
+      ]
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "ok": true,
+        "err": ""
+      },
+      "events": []
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "_meta": {
+    "owner": "K10",
+    "schema": 1,
+    "brief": "四个命运轮盘。扇区宽窄用整数 arc，香案只加宽 good 段；界面不显示百分比。"
+  },
+  "cards": [
+    {
+      "id": "wh.month",
+      "type": "wheel",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "month",
+      "incense": {
+        "accepts": [
+          "money",
+          "kept",
+          "contact"
+        ],
+        "money_per_unit": 5,
+        "contact_attr": "pull",
+        "unit_widen_pct": 15,
+        "max_units": 6
+      },
+      "cost": {},
+      "art": "wheel.month",
+      "brief": "本月运势。每关开头转一次。香案收香火钱、留着的牌、人脉（按 pull 算份）。每一份只把 valence 为 good 的段按整数宽度加宽，其余段宽度不变，再按整数权重摊成整圈。界面只画扇区大小，不写百分比、份数、好坏。代价为空。份数与加宽是待调起步值。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "wh.big",
+      "type": "wheel",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "big",
+      "incense": {
+        "accepts": [
+          "money",
+          "kept",
+          "contact"
+        ],
+        "money_per_unit": 5,
+        "contact_attr": "pull",
+        "unit_widen_pct": 15,
+        "max_units": 6
+      },
+      "cost": {},
+      "art": "wheel.big",
+      "brief": "大轮盘。快输时由 bf.wheel 打开。香案与本月运势同一套：香火钱、留着的牌、人脉，只加宽 good 段。代价为空。落到翻身、平安或坠底后执行段上的效果。加宽待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "wh.fair",
+      "type": "wheel",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "fair",
+      "incense": {
+        "accepts": [
+          "money"
+        ],
+        "money_per_unit": 5,
+        "unit_widen_pct": 10,
+        "max_units": 4
+      },
+      "cost": {
+        "money": 2
+      },
+      "art": "wheel.fair",
+      "brief": "庙会轮盘。代价是一笔钱，待调。香案只收香火钱，只加宽 good 段。界面不显示百分比。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "wh.gamble",
+      "type": "wheel",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "gamble",
+      "incense": {
+        "accepts": [
+          "money",
+          "kept"
+        ],
+        "money_per_unit": 10,
+        "unit_widen_pct": 10,
+        "max_units": 4
+      },
+      "cost": {
+        "stake": true
+      },
+      "art": "wheel.gamble",
+      "brief": "赌摊轮盘。代价是押一张留着的牌。香案收香火钱和留着的牌，只加宽 good 段。落到 bad 段时押的牌没了由引擎做，数据里不再扣一次。加宽待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

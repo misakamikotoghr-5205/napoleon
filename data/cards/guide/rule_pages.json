@@ -1,0 +1,547 @@
+{
+  "_meta": {
+    "owner": "K16",
+    "schema": 1,
+    "brief": "规矩页 26 页。只写讲清哪些规矩的要点，正文留给人类 A。算命一页先不署名，因为 suanming 还没登记。"
+  },
+  "cards": [
+    {
+      "id": "rule.day",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 10,
+      "unlock_first": [
+        "deal",
+        "notice",
+        "settle",
+        "must_resolve",
+        "market_day",
+        "weather"
+      ],
+      "teacher": "brother",
+      "brief": "一天怎么过：早上先看告示再发牌，白天把必须处理的牌办完，打烊，日结。打烊 · 下一天随时能按；没处理的按没理会结算；没有时间限制。集日和天气也写在这一页。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.night",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 20,
+      "unlock_first": [
+        "night"
+      ],
+      "teacher": "brother",
+      "brief": "夜里从几件事里选一件过夜，选完才进入日结。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.person",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 30,
+      "unlock_first": [
+        "person",
+        "choice"
+      ],
+      "teacher": "brother",
+      "brief": "人物牌要点开。来当、来卖、来买、来赎走柜台；带选项的牌要选一个做法。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.counter",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 40,
+      "unlock_first": [
+        "counter"
+      ],
+      "teacher": "brother",
+      "brief": "柜台：先看货，再按三档出价。来买的从货架上挑一件。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.appraise",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 50,
+      "unlock_first": [
+        "mg.spot",
+        "mg.coin_ring",
+        "mg.weigh",
+        "mg.fragments",
+        "mg.decode"
+      ],
+      "teacher": "brother",
+      "brief": "看货的几种做法：找不一样的地方、听银元、称分量、拼碎片、对密码。看出来的才算数（主创定）：你说的就是记下来的，看走了眼也照记；说中了真毛病客人多半认、价钱好商量，冤枉了人家客人不服、耐心少一截、价钱不肯再让；一个客人只说破一回。不在这里下结论，不写数。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.ticket",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 60,
+      "unlock_first": [
+        "ticket",
+        "redeem"
+      ],
+      "teacher": "brother",
+      "brief": "当票记在右边。期内可以赎；东西不在了要另算。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.shelf",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 70,
+      "unlock_first": [
+        "shelf",
+        "buyer"
+      ],
+      "teacher": "brother",
+      "brief": "买进来的东西上货架，等来买的人从货架上挑。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.gold",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 80,
+      "unlock_first": [
+        "gold",
+        "gold_leave",
+        "office"
+      ],
+      "teacher": "brother",
+      "brief": "金色牌当天必须处理。打烊时没理他他就走了。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.kept",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 90,
+      "unlock_first": [
+        "keep",
+        "kept_expire",
+        "kept_full",
+        "kept_risk",
+        "scare"
+      ],
+      "teacher": "brother",
+      "brief": "有的牌可以留着。留满了要腾位置，过期就没了，有的留着有风险。留着枪时，普通客人的回话里可以吓唬。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.slots",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 100,
+      "unlock_first": [
+        "slots",
+        "coins"
+      ],
+      "teacher": "obj.brother_ledger",
+      "brief": "带格子的牌：格子收人或钱。人或钱换成铜钱，正面够了才过。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.demand",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 110,
+      "unlock_first": [
+        "demand",
+        "demand_delay",
+        "demand_people_return",
+        "demand_inform",
+        "demand_fabricate",
+        "demand_fail",
+        "shop_closed"
+      ],
+      "teacher": "hu2",
+      "brief": "条子有期限。可以延期，可以交差或另想办法。到期没办成会升档。铺子也可能被封。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.fate",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 120,
+      "unlock_first": [
+        "fate"
+      ],
+      "teacher": "obj.brother_ledger",
+      "brief": "命运牌是已经发生的事，要处理。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.wheel",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 130,
+      "unlock_first": [
+        "month_wheel",
+        "incense",
+        "big_wheel",
+        "fair_wheel",
+        "gamble_wheel",
+        "wheel_stake"
+      ],
+      "teacher": "brother",
+      "brief": "轮盘：月初转本月运势，可以先在香案上放东西。庙会和赌摊要先看清代价。快撑不住时会出现大轮盘。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.almanac",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 140,
+      "unlock_first": [
+        "almanac"
+      ],
+      "teacher": "obj.almanac",
+      "brief": "黄历写今天宜做什么、忌做什么。做过的会划掉。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.fortune",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 150,
+      "unlock_first": [
+        "lot",
+        "cezi"
+      ],
+      "teacher": "",
+      "brief": "求签和测字要花钱。落款等算命先生的人物登记合入后再补，这一页先不署名。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.news",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 160,
+      "unlock_first": [
+        "news"
+      ],
+      "teacher": "zhouma",
+      "brief": "消息可以看，也可以留着，以后也许用得上。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.dossier",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 170,
+      "unlock_first": [
+        "dossier",
+        "dossier_gap",
+        "year_after"
+      ],
+      "teacher": "zhouma",
+      "brief": "档案簿收碎片。没听到的留缺口。有的事要等一年后才对得上。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.contact",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 180,
+      "unlock_first": [
+        "contact",
+        "contacts_full",
+        "person_state",
+        "apprentice",
+        "pet"
+      ],
+      "teacher": "zhouma",
+      "brief": "人脉留在左边。满了要松开一个。人受伤、被扣或走了，就不能照旧来往。收了徒弟也算人脉，本事会慢慢长；你不在铺里时他看铺。店里的猫有自己的小牌位：在就多看一眼，夜里看着米货，走了要去找。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.tiers",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 190,
+      "unlock_first": [
+        "tier_rep",
+        "tier_heat"
+      ],
+      "teacher": "zhouma",
+      "brief": "口碑和风声各分几档。换档之后街上的事会不一样。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.life",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 200,
+      "unlock_first": [
+        "life"
+      ],
+      "teacher": "obj.brother_ledger",
+      "brief": "生活牌有天数。期内要处理，回家吃饭可以免掉坏处。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.month",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 210,
+      "unlock_first": [
+        "month_open",
+        "month_close"
+      ],
+      "teacher": "brother",
+      "brief": "开月看本关目标。月底把这个月的账结清。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.year",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 220,
+      "unlock_first": [
+        "year_jump",
+        "currency"
+      ],
+      "teacher": "obj.brother_ledger",
+      "brief": "跳一年时处理满当。换一种钱时，顶上的钱跟着换。首发三关不换币。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.ladder",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 230,
+      "unlock_first": [
+        "money_short",
+        "mortgage",
+        "street"
+      ],
+      "teacher": "",
+      "brief": "钱不够时可以押家当。铺子没了就在街上过，再想办法赎回来。这一页不署名。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.prison",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 240,
+      "unlock_first": [
+        "prison"
+      ],
+      "teacher": "",
+      "brief": "牢房里打点、作保或掷铜钱。没处理就在牢里多待一晚，几晚没出来就结束。这一页不署名。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.retry",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 250,
+      "unlock_first": [
+        "game_over",
+        "retry",
+        "resume"
+      ],
+      "teacher": "",
+      "brief": "这一关结束可以重来。也可以从停下的地方接着。这一页不署名。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.branch",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 260,
+      "unlock_first": [
+        "branch_pick"
+      ],
+      "teacher": "",
+      "brief": "解放后当铺这一段结束，从列表里选一个新行当。新行当的规矩等选中后再教。这一页不署名。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

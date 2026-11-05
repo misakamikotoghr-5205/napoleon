@@ -1,0 +1,36 @@
+{
+  "settings": {
+    "gap_ms": 0,
+    "default_seconds": 30,
+    "max_new_per_day": 16,
+    "bubble_max_w": 280
+  },
+  "steps": [
+    {
+      "id": "gd.mg.fragments",
+      "trigger": {
+        "first": "mg.fragments"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.mg.fragments.board",
+      "anchor_fallback": "a.mg.fragments.main",
+      "done_when": ["ui:mg_tool"],
+      "priority": 80,
+      "max_shows": 2,
+      "seconds": 30
+    },
+    {
+      "id": "gd.mg.decode",
+      "trigger": {
+        "first": "mg.decode"
+      },
+      "teacher": "postman",
+      "anchor": "a.mg.decode.book",
+      "anchor_fallback": "a.mg.decode.main",
+      "done_when": ["ui:mg_tool"],
+      "priority": 70,
+      "max_shows": 2,
+      "seconds": 30
+    }
+  ]
+}

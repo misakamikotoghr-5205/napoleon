@@ -1,0 +1,126 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-25:rogue-v1"
+  },
+  "rg4.drawer.relics": {
+    "t": "博古格"
+  },
+  "rg4.depth.plain": {
+    "t": "寻常家什"
+  },
+  "rg4.depth.storied": {
+    "t": "有来历的"
+  },
+  "rg4.depth.treasure": {
+    "t": "镇店的"
+  },
+  "rg4.kind.source": {
+    "t": "客源"
+  },
+  "rg4.stock.title.week": {
+    "t": "第{n}周盘账"
+  },
+  "rg4.stock.title.peddler": {
+    "t": "货郎的担子"
+  },
+  "rg4.stock.peddler_sub": {
+    "t": "挑一样摆上博古格，另一样他挑走。"
+  },
+  "rg4.stock.deals": {
+    "t": "这周做成了 {deals} 笔生意。"
+  },
+  "rg4.stock.few": {
+    "t": "生意做得少，只翻出两样。"
+  },
+  "rg4.stock.take_relic": {
+    "t": "就要这件"
+  },
+  "rg4.stock.take_source": {
+    "t": "就请这拨人"
+  },
+  "rg4.stock.pass": {
+    "t": "都不要"
+  },
+  "rg4.stock.later": {
+    "t": "回头再说"
+  },
+  "rg4.stock.use": {
+    "t": "好处"
+  },
+  "rg4.stock.flaw": {
+    "t": "毛病"
+  },
+  "rg4.stock.source_until": {
+    "t": "管到这个月底"
+  },
+  "rg4.stock.full": {
+    "t": "博古格满了。要摆这件，得先让出一件——送回库房，这一局不会再翻出来。"
+  },
+  "rg4.stock.replace_ok": {
+    "t": "让出它，摆上新的"
+  },
+  "rg4.stock.replace_cancel": {
+    "t": "那就不要了"
+  },
+  "rg4.relics.count": {
+    "t": "摆了 {n} 件，一共 {cap} 格"
+  },
+  "rg4.relics.empty": {
+    "t": "格子还空着。周末盘账、货郎上门，会翻出老东西来。"
+  },
+  "rg4.relics.dormant": {
+    "t": "铺子不在手里，这些东西都收起来了，不顶用。"
+  },
+  "rg4.relics.sources": {
+    "t": "门口常来的"
+  },
+  "rg4.relics.sources_empty": {
+    "t": "还没有。周末盘账时可以挑。"
+  },
+  "rg4.relics.pending": {
+    "t": "还有一份没挑的"
+  },
+  "rg4.title.run_no": {
+    "t": "这是第{n}本账"
+  },
+  "rg4.title.seed": {
+    "t": "种子"
+  },
+  "rg4.title.reseed": {
+    "t": "换一个"
+  },
+  "rg4.title.opening": {
+    "t": "开头"
+  },
+  "rg4.title.shelf": {
+    "t": "旧账"
+  },
+  "rg4.title.book_no": {
+    "t": "第{n}本"
+  },
+  "rg4.stock.how": {
+    "t": "挑一样：客源管到这个月底，老物件摆上博古格。"
+  },
+  "rg4.title.run_open": {
+    "t": "第{open}本账还没合上；开张会合上它，另起第{n}本"
+  },
+  "rg4.title.confirm_new": {
+    "t": "第{open}本账还没合上。开张就把它合上、摆上书架，另起第{n}本；“接着做生意”就再也接不上它了。真的另起一本？"
+  },
+  "rg4.title.confirm_yes": {
+    "t": "合上它，另起一本"
+  },
+  "rg4.title.confirm_no": {
+    "t": "再想想"
+  },
+  "rg4.title.shelf_empty": {
+    "t": "合上的账本会一本本摆在这儿。"
+  },
+  "rg4.title.seed_tip": {
+    "t": "同一个种子、同样的挑法，就是同一本账。"
+  },
+  "rg4.relics.away": {
+    "t": "人不在柜台后头，博古格上的老物件就都不顶用。"
+  }
+}

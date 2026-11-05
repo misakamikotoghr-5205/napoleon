@@ -1,0 +1,146 @@
+{
+  "_meta": {
+    "owner": "C16",
+    "schema": 1,
+    "brief": "C16 界面键。正文由 B 写；这里只有 brief。",
+    "_provenance": {
+      "by": "ai",
+      "task": "C16",
+      "date": "2026-10-13"
+    }
+  },
+  "keys": {
+    "c16.title.name": {
+      "brief": "标题画面上的店名"
+    },
+    "c16.title.new": {
+      "brief": "标题画面：开始新的一局"
+    },
+    "c16.title.continue": {
+      "brief": "标题画面：从续玩点接着"
+    },
+    "c16.title.settings": {
+      "brief": "标题画面：打开设置"
+    },
+    "c16.title.quit": {
+      "brief": "标题画面：离开游戏"
+    },
+    "c16.title.new_failed": {
+      "brief": "标题画面：点了新局却开不了时显示的一句提示，说牌局数据或剧情插件的文字文件有错、新局没能开始，请把下面列出的文件名告诉做游戏的人；下面一行另附出错的文件名，不用写进这句"
+    },
+    "c16.pause.resume": {
+      "brief": "暂停：回到牌桌"
+    },
+    "c16.pause.save_note": {
+      "brief": "暂停：每天早上自动存档，没有手动存档"
+    },
+    "c16.pause.settings": {
+      "brief": "暂停：打开设置"
+    },
+    "c16.pause.help": {
+      "brief": "暂停：打开帮助"
+    },
+    "c16.pause.title": {
+      "brief": "暂停：回到标题"
+    },
+    "c16.pause.quit": {
+      "brief": "暂停：离开游戏"
+    },
+    "c16.settings.music": {
+      "brief": "设置：音乐音量"
+    },
+    "c16.settings.sfx": {
+      "brief": "设置：音效音量"
+    },
+    "c16.settings.text_speed": {
+      "brief": "设置：文字速度"
+    },
+    "c16.settings.guide_hints": {
+      "brief": "设置：新手提示开关"
+    },
+    "c16.settings.fast_anim": {
+      "brief": "设置：加快界面动画"
+    },
+    "c16.settings.on": {
+      "brief": "设置：开"
+    },
+    "c16.settings.off": {
+      "brief": "设置：关"
+    },
+    "c16.settings.close": {
+      "brief": "设置：关掉这一页"
+    },
+    "c16.title.tagline": {
+      "brief": "标题卡最上一行小字：年份、月份、镇名（字距拉开）"
+    },
+    "c16.title.blurb": {
+      "brief": "标题卡大字下面的两三行引子：这一局是怎么开始的"
+    },
+    "c16.title.hint": {
+      "brief": "标题卡按钮下面的两行说明：怎么请人进门、存档在哪里"
+    },
+    "c16.pause.heading": {
+      "brief": "暂停面板的标题（毛笔金字）"
+    },
+    "c16.pause.confirm_quit": {
+      "brief": "暂停里点了离开以后的确认话：没存的进度会丢"
+    },
+    "c16.pause.confirm_title": {
+      "brief": "暂停里点了回到标题以后的确认话：没存的进度会丢"
+    },
+    "c16.pause.confirm_yes": {
+      "brief": "确认离开 / 回到标题的按钮"
+    },
+    "c16.pause.confirm_no": {
+      "brief": "不离开、回到暂停菜单的按钮"
+    },
+    "c16.settings.speed.0": {
+      "brief": "设置：文字速度第一档（最慢）"
+    },
+    "c16.settings.speed.1": {
+      "brief": "设置：文字速度第二档"
+    },
+    "c16.settings.speed.2": {
+      "brief": "设置：文字速度第三档"
+    },
+    "c16.settings.speed.3": {
+      "brief": "设置：文字速度第四档（一下子全出来）"
+    },
+    "c16.guide.ok": {
+      "brief": "新手指引气泡右下的主按钮：读完了这一句，收起这条指引"
+    },
+    "c16.guide.ok_more": {
+      "brief": "新手指引气泡右下的主按钮，后面还有别的指引排着时用；{n} 是还排着几条"
+    },
+    "c16.guide.off": {
+      "brief": "新手指引气泡右下的小按钮：不要指引了，整个关掉（设置里能再打开）"
+    },
+    "c16.guide.off_flash": {
+      "brief": "点了关掉指引之后画面上方飘出的一句提示：指引已经关了，在设置里能重新打开，教过的规矩在规矩页能回看"
+    },
+    "c16.guide.who.brother": {
+      "brief": "新手指引气泡上说话人的名字：哥哥沈如松（第一关头两天教规矩的人）"
+    },
+    "c16.guide.who.zhouma": {
+      "brief": "新手指引气泡上说话人的名字：街坊周妈"
+    },
+    "c16.guide.who.hu2": {
+      "brief": "新手指引气泡上说话人的名字：保长手下跑腿的胡二"
+    },
+    "c16.guide.who.suanming": {
+      "brief": "新手指引气泡上说话人的名字：街上的算命先生"
+    },
+    "c16.guide.who.postman": {
+      "brief": "新手指引气泡上说话人的名字：邮差何启明"
+    },
+    "c16.guide.who.obj.brother_ledger": {
+      "brief": "新手指引批注纸上的落款：哥哥走后留下的账簿上他写的批注"
+    },
+    "c16.guide.who.obj.almanac": {
+      "brief": "新手指引批注纸上的落款：柜台边挂的黄历"
+    },
+    "c16.guide.who.obj.notice": {
+      "brief": "新手指引批注纸上的落款：门边贴的告示"
+    }
+  }
+}

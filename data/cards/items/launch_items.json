@@ -1,0 +1,428 @@
+{
+  "_meta": {
+    "owner": "K11",
+    "schema": 1,
+    "brief": "首发三关打算出的物品清单。格式见合同 §4.7.15（#44）。items[].template 是 cat.variant，eras 是关，weight 为 0 表示本首发不用（须在 brief 写理由）。本表没有 weight 0。",
+    "_provenance": {
+      "by": "ai",
+      "task": "K11",
+      "date": "2026-10-13"
+    }
+  },
+  "_doc": [
+    "引擎不读本文件：柜台上的物品由 G04 按模板抽，eras、weight 在游戏里不起作用。它是 K11 测试和 missing_text.py 用的清单（合同 §4.7.15，#44）。",
+    "现有 28 个变体全部列入，另加 silver silverware goldbar papers。"
+  ],
+  "items": [
+    {
+      "template": "art.calligraphy",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 5,
+      "brief": "首发三关可出。模板 art.calligraphy：字画。拼碎片（doc=scroll）并对图找不同。pieces、seal_offset_px、ink_mismatch 是物理规格区间，低端更齐，高端错开更大；规格里不写结论。不是当票，dangzi_marks=0，missing_piece=-1 表示不缺片。依据 DESIGN：字画走拼碎片。"
+    },
+    {
+      "template": "art.flowers",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 5,
+      "brief": "首发三关可出。模板 art.flowers：字画。拼碎片（doc=scroll）并对图找不同。pieces、seal_offset_px、ink_mismatch 是物理规格区间，低端更齐，高端错开更大；规格里不写结论。不是当票，dangzi_marks=0，missing_piece=-1 表示不缺片。依据 DESIGN：字画走拼碎片。"
+    },
+    {
+      "template": "art.landscape",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 5,
+      "brief": "首发三关可出。模板 art.landscape：字画。拼碎片（doc=scroll）并对图找不同。pieces、seal_offset_px、ink_mismatch 是物理规格区间，低端更齐，高端错开更大；规格里不写结论。不是当票，dangzi_marks=0，missing_piece=-1 表示不缺片。依据 DESIGN：字画走拼碎片。"
+    },
+    {
+      "template": "art.woodcut",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 5,
+      "brief": "首发三关可出。模板 art.woodcut：字画。拼碎片（doc=scroll）并对图找不同。pieces、seal_offset_px、ink_mismatch 是物理规格区间，低端更齐，高端错开更大；规格里不写结论。不是当票，dangzi_marks=0，missing_piece=-1 表示不缺片。依据 DESIGN：字画走拼碎片。"
+    },
+    {
+      "template": "clothing.coat",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 8,
+      "brief": "首发三关可出。模板 clothing.coat：衣物。只做找不同（空图时部位表键是 proc:coat）。衣物不称、不吹、不拼。第 1–3 天教学若抽到衣物，找不同可用。"
+    },
+    {
+      "template": "clothing.qipao",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 8,
+      "brief": "首发三关可出。模板 clothing.qipao：衣物。只做找不同（空图时部位表键是 proc:qipao）。衣物不称、不吹、不拼。第 1–3 天教学若抽到衣物，找不同可用。"
+    },
+    {
+      "template": "clothing.robe",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 8,
+      "brief": "首发三关可出。模板 clothing.robe：衣物。只做找不同（空图时部位表键是 proc:robe）。衣物不称、不吹、不拼。第 1–3 天教学若抽到衣物，找不同可用。"
+    },
+    {
+      "template": "clothing.scarf",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 8,
+      "brief": "首发三关可出。模板 clothing.scarf：衣物。只做找不同（空图时部位表键是 proc:scarf）。衣物不称、不吹、不拼。第 1–3 天教学若抽到衣物，找不同可用。"
+    },
+    {
+      "template": "documents.field",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 4,
+      "brief": "首发三关可出。模板 documents.field：地契一类文书。拼碎片（doc=scroll）并找不同。seal_offset_px、ink_mismatch 只给引擎抽物理量。不是当票，dangzi_marks=0。"
+    },
+    {
+      "template": "documents.house",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 4,
+      "brief": "首发三关可出。模板 documents.house：房契一类文书。拼碎片（doc=scroll）并找不同。seal_offset_px、ink_mismatch 只给引擎抽物理量。不是当票，dangzi_marks=0。"
+    },
+    {
+      "template": "documents.letter",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 4,
+      "brief": "首发三关可出。模板 documents.letter：书札。拼碎片（doc=letter）并找不同。seal_offset_px、ink_mismatch 只给引擎抽物理量。不是当票，dangzi_marks=0。"
+    },
+    {
+      "template": "documents.receipt",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 4,
+      "brief": "首发三关可出。模板 documents.receipt：当票。主线 tk.1938.de196 的 item_template 指向这一件。拼碎片（doc=pawn_ticket）并找不同。seal_offset_px、ink_mismatch 只给引擎抽物理量。dangzi_marks 是当字笔画处数的区间。"
+    },
+    {
+      "template": "goldbar.bar_one",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 2,
+      "brief": "首发三关可出。模板 goldbar.bar_one：约一两的金条。1 两=100 分，客人报称在 96–104 分。 掺铜或空心时偏轻，dev_bad_pct 百分之 3 到 8。金条用戥子，不吹、不找不同（新图没有部位表）。base_price 沿用旧模板的压缩刻度，不是 1938 年金银比价，等 G04 平衡。"
+    },
+    {
+      "template": "goldbar.bar_ten",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 2,
+      "brief": "首发三关可出。模板 goldbar.bar_ten：约十两的金条（江南私藏常见的一条规格）。客人报称在 980–1020 分。 掺铜或空心时偏轻，dev_bad_pct 百分之 2 到 6。金条用戥子，不吹、不找不同（新图没有部位表）。base_price 沿用旧模板的压缩刻度，不是 1938 年金银比价，等 G04 平衡。"
+    },
+    {
+      "template": "jewelry.bangle",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 6,
+      "brief": "首发三关可出。模板 jewelry.bangle：银饰，不是银元。戥子称（claimed_fen 90–150）并找不同。掺假偏轻百分之 3 到 8。银饰按重，不吹听。依据 DESIGN 附录。"
+    },
+    {
+      "template": "jewelry.hairpin",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 6,
+      "brief": "首发三关可出。模板 jewelry.hairpin：金饰。戥子称（claimed_fen 280–320，约 2.8–3.2 两）或找不同。掺假偏轻百分之 3 到 8，旧损百分之 0 到 2。金饰用戥子，不按银元吹。第 1 天教学找不同用这一件（W0 夹具已生成过它的部位）。依据 DESIGN 附录。"
+    },
+    {
+      "template": "jewelry.jade",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 6,
+      "brief": "首发三关可出。模板 jewelry.jade：玉件。只找不同。玉不按重量做鉴定，也不吹听。"
+    },
+    {
+      "template": "jewelry.ring",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 6,
+      "brief": "首发三关可出。模板 jewelry.ring：小件银饰。戥子称（claimed_fen 25–60）并找不同。不是银元，不吹听。"
+    },
+    {
+      "template": "medicine.aspirin",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 8,
+      "brief": "首发三关可出。模板 medicine.aspirin：药材或成药。戥子称（claimed_fen 80–140）并找不同。短称、掺淡时偏轻，dev_bad_pct 百分之 4 到 12。药材用戥子，不用杆秤。依据 DESIGN 附录。"
+    },
+    {
+      "template": "medicine.iodine",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 8,
+      "brief": "首发三关可出。模板 medicine.iodine：药材或成药。戥子称（claimed_fen 40–80）并找不同。短称、掺淡时偏轻，dev_bad_pct 百分之 4 到 12。药材用戥子，不用杆秤。依据 DESIGN 附录。"
+    },
+    {
+      "template": "medicine.quinine",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 8,
+      "brief": "首发三关可出。模板 medicine.quinine：药材或成药。戥子称（claimed_fen 120–200）并找不同。短称、掺淡时偏轻，dev_bad_pct 百分之 4 到 12。药材用戥子，不用杆秤。依据 DESIGN 附录。"
+    },
+    {
+      "template": "medicine.sulfa",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 8,
+      "brief": "首发三关可出。模板 medicine.sulfa：药材或成药。戥子称（claimed_fen 100–180）并找不同。短称、掺淡时偏轻，dev_bad_pct 百分之 4 到 14。药材用戥子，不用杆秤。依据 DESIGN 附录。"
+    },
+    {
+      "template": "papers.iou",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 4,
+      "brief": "首发三关可出。模板 papers.iou：借据。doc=letter。 当票与契据之外的零碎文书，放在新类别 papers，不并进已有的 documents。拼碎片。dangzi_marks=0，missing_piece=-1。没有 spot。1938 年铺面常见这类纸。"
+    },
+    {
+      "template": "papers.shop_slip",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 4,
+      "brief": "首发三关可出。模板 papers.shop_slip：商号条子。doc=letter。 当票与契据之外的零碎文书，放在新类别 papers，不并进已有的 documents。拼碎片。dangzi_marks=0，missing_piece=-1。没有 spot。1938 年铺面常见这类纸。"
+    },
+    {
+      "template": "papers.tax_slip",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 4,
+      "brief": "首发三关可出。模板 papers.tax_slip：税捐单据。doc=letter。 当票与契据之外的零碎文书，放在新类别 papers，不并进已有的 documents。拼碎片。dangzi_marks=0，missing_piece=-1。没有 spot。1938 年铺面常见这类纸。"
+    },
+    {
+      "template": "papers.waybill",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 4,
+      "brief": "首发三关可出。模板 papers.waybill：货单。doc=scroll。 当票与契据之外的零碎文书，放在新类别 papers，不并进已有的 documents。拼碎片。dangzi_marks=0，missing_piece=-1。没有 spot。1938 年铺面常见这类纸。"
+    },
+    {
+      "template": "rice.broken",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 12,
+      "brief": "首发三关可出。模板 rice.broken：米袋。杆秤称分量，并按袋图找不同。claimed_fen 4800–7200（分；1 斤=1600 分）。掺砂使袋偏重，dev_bad_pct 取负的百分数；陈化偏差用 dev_worn_pct。米走杆秤，不走戥子，也不当银元吹。依据 DESIGN 附录。"
+    },
+    {
+      "template": "rice.jing",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 12,
+      "brief": "首发三关可出。模板 rice.jing：米袋。杆秤称分量，并按袋图找不同。claimed_fen 4800–6400（分；1 斤=1600 分）。掺砂使袋偏重，dev_bad_pct 取负的百分数；陈化偏差用 dev_worn_pct。米走杆秤，不走戥子，也不当银元吹。依据 DESIGN 附录。"
+    },
+    {
+      "template": "rice.nuo",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 12,
+      "brief": "首发三关可出。模板 rice.nuo：米袋。杆秤称分量，并按袋图找不同。claimed_fen 4200–5800（分；1 斤=1600 分）。掺砂使袋偏重，dev_bad_pct 取负的百分数；陈化偏差用 dev_worn_pct。米走杆秤，不走戥子，也不当银元吹。依据 DESIGN 附录。"
+    },
+    {
+      "template": "rice.xian",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 12,
+      "brief": "首发三关可出。模板 rice.xian：米袋。杆秤称分量，并按袋图找不同。claimed_fen 4500–6200（分；1 斤=1600 分）。掺砂使袋偏重，dev_bad_pct 取负的百分数；陈化偏差用 dev_worn_pct。米走杆秤，不走戥子，也不当银元吹。依据 DESIGN 附录。"
+    },
+    {
+      "template": "silver.bits",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 5,
+      "brief": "首发三关可出。模板 silver.bits：碎银，不按枚。戥子称（claimed_fen 40–220）。掺假偏轻百分之 3 到 10。碎银用戥子，不吹听。没有 spot。依据 DESIGN 附录。"
+    },
+    {
+      "template": "silver.yuan_a",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 7,
+      "brief": "首发三关可出。模板 silver.yuan_a。银元甲种：1914 年后中央铸的人像币一类（版别名由 A 定）。按枚计价，不称。库平铸重约七钱二分，当铺仍按枚。吹边缘贴耳听余音：足银细长，掺铜则短、闷、音高偏低。1935-11 法币改革后依法不得流通，民间私藏。依据 DESIGN 附录。 ring_ms 单位是毫秒，buzz 无量纲，pitch_cents_bad 是音分。只有 coin_ring，没有 weigh，没有 spot（新类别没有部位布局）。"
+    },
+    {
+      "template": "silver.yuan_b",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 7,
+      "brief": "首发三关可出。模板 silver.yuan_b。银元乙种：1920 年代船图人像币一类（版别名由 A 定）。同样按枚吹听，不称。1935-11 之后民间私藏。依据 DESIGN 附录。 ring_ms 单位是毫秒，buzz 无量纲，pitch_cents_bad 是音分。只有 coin_ring，没有 weigh，没有 spot（新类别没有部位布局）。"
+    },
+    {
+      "template": "silver.yuan_c",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 7,
+      "brief": "首发三关可出。模板 silver.yuan_c。银元丙种：清末各省龙纹币一类（版别名由 A 定）。模具与成色更杂，余音规格比甲种更宽、下限更短。仍按枚吹听，不称。依据 DESIGN 附录。 ring_ms 单位是毫秒，buzz 无量纲，pitch_cents_bad 是音分。只有 coin_ring，没有 weigh，没有 spot（新类别没有部位布局）。"
+    },
+    {
+      "template": "silverware.box",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 4,
+      "brief": "首发三关可出。模板 silverware.box：银匣一类。按重用戥子，不吹听。 claimed_fen 360–640。没有 spot。依据 DESIGN 附录：金银用戥子。"
+    },
+    {
+      "template": "silverware.cup",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 4,
+      "brief": "首发三关可出。模板 silverware.cup：银杯一类。按重用戥子，不吹听（吹听只留给银元）。 claimed_fen 200–380。没有 spot。依据 DESIGN 附录：金银用戥子。"
+    },
+    {
+      "template": "silverware.spoon",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 4,
+      "brief": "首发三关可出。模板 silverware.spoon：银匙一类。按重用戥子，不吹听。 claimed_fen 30–70。没有 spot。依据 DESIGN 附录：金银用戥子。"
+    },
+    {
+      "template": "utensils.bowl",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 8,
+      "brief": "首发三关可出。模板 utensils.bowl：日用器。只找不同（空图时 proc:bowl）。不是金银，也不是药材，不上戥子。"
+    },
+    {
+      "template": "utensils.clock",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 8,
+      "brief": "首发三关可出。模板 utensils.clock：日用器。只找不同（空图时 proc:clock）。不是金银，也不是药材，不上戥子。"
+    },
+    {
+      "template": "utensils.tinpot",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 8,
+      "brief": "首发三关可出。模板 utensils.tinpot：日用器。只找不同（空图时 proc:tinpot）。不是金银，也不是药材，不上戥子。"
+    },
+    {
+      "template": "utensils.warmer",
+      "eras": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 8,
+      "brief": "首发三关可出。模板 utensils.warmer：日用器。只找不同（空图时 proc:warmer）。不是金银，也不是药材，不上戥子。"
+    }
+  ]
+}

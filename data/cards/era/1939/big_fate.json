@@ -1,0 +1,128 @@
+{
+  "_meta": {
+    "owner": "K04",
+    "schema": 1,
+    "brief": "1939 大赌 2 张。weight 0，只由 K10 的大轮盘扇区发。"
+  },
+  "cards": [
+    {
+      "id": "bf.1939.rice_hoard",
+      "type": "big_fate",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "tags": [
+        "rice",
+        "contraband",
+        "big",
+        "omen_wealth"
+      ],
+      "crisis": [
+        "cash_short"
+      ],
+      "valence": "mixed",
+      "choices": [
+        {
+          "id": "take",
+          "brief": "收下转手",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 220,
+              "reason": "k04.reason.hoard"
+            },
+            {
+              "op": "heat",
+              "delta": 12
+            },
+            {
+              "op": "flag",
+              "key": "k04_rice_hoard"
+            }
+          ]
+        },
+        {
+          "id": "decline",
+          "brief": "不收",
+          "effects": []
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.bf.1939.rice_hoard",
+      "brief": "大赌。只由大轮盘扇区发到手上，weight 0，不进随机库。适合危机 cash_short。1939 米紧：有人把一批米高价托你转手。①收下（进钱起步 220，风声涨一截，记下这批米）②不收。不引用留牌，避免发一张还不存在的牌；若以后要被盘查直接翻出，由 K09 补留牌再挂。给 K10：扇区效果 add_card 本 id。没理会当不收，人走了，没有别的后果。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "bf.1939.gate_passage",
+      "type": "big_fate",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "tags": [
+        "gate",
+        "big",
+        "road",
+        "omen_road"
+      ],
+      "crisis": [
+        "heat_max",
+        "arrested",
+        "street_long"
+      ],
+      "valence": "good",
+      "choices": [
+        {
+          "id": "go",
+          "brief": "出城躲两天",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 60,
+              "payee": "gate",
+              "reason": "k04.reason.passage",
+              "short": "ladder"
+            },
+            {
+              "op": "heat",
+              "delta": -30
+            },
+            {
+              "op": "shop_closed",
+              "days": 2
+            },
+            {
+              "op": "flag",
+              "key": "k04_passage_used"
+            }
+          ],
+          "almanac": [
+            "travel"
+          ]
+        },
+        {
+          "id": "stay",
+          "brief": "不走",
+          "effects": []
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.bf.1939.gate_passage",
+      "brief": "大赌。weight 0。适合危机 heat_max、arrested、street_long。1939 城门设岗：有人能把你送出城躲两天。①走（付钱起步 60，风声落下一段；若铺子还在则停业 2 天）②不走。给 K10 扇区引用。valence 记 good：这是压风声的出路，停业是代价。没理会当不走，没有别的后果。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

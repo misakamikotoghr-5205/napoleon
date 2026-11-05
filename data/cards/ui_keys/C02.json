@@ -1,0 +1,176 @@
+{
+  "_meta": {
+    "owner": "C02",
+    "schema": 1,
+    "brief": "C02 card face, hand fan and hero labels: band, ribbon, days, keep, preview buttons, attrs",
+    "_provenance": {
+      "by": "ai",
+      "task": "C02",
+      "date": "2026-10-13"
+    }
+  },
+  "keys": {
+    "c02.btn.keep": {
+      "brief": "牌上的留着按钮"
+    },
+    "c02.btn.play": {
+      "brief": "手牌扇预览旁的打出按钮"
+    },
+    "c02.btn.back": {
+      "brief": "手牌扇预览旁的放回手里按钮"
+    },
+    "c02.night.none": {
+      "brief": "夜里手牌扇最后一张：今晚不选，睡了"
+    },
+    "c02.hero.used": {
+      "brief": "英雄头像上今天用过了的戳"
+    },
+    "c02.hero.eye": {
+      "brief": "英雄头像：眼力"
+    },
+    "c02.hero.tongue": {
+      "brief": "英雄头像：口才"
+    },
+    "c02.hero.pull": {
+      "brief": "英雄头像：人脉"
+    },
+    "c02.hero.nerve": {
+      "brief": "英雄头像：胆量"
+    },
+    "c02.kept.badge": {
+      "brief": "留着的牌面上的留角标"
+    },
+    "c02.intent.pawn": {
+      "brief": "来意小字：来当"
+    },
+    "c02.intent.sell": {
+      "brief": "来意小字：来卖"
+    },
+    "c02.intent.buy": {
+      "brief": "来意小字：来买"
+    },
+    "c02.intent.redeem": {
+      "brief": "来意小字：来赎"
+    },
+    "c02.intent.help": {
+      "brief": "来意小字：求助"
+    },
+    "c02.intent.ask": {
+      "brief": "来意小字：打听"
+    },
+    "c02.intent.story": {
+      "brief": "来意小字：主线"
+    },
+    "c02.type.person": {
+      "brief": "牌种小字：人物"
+    },
+    "c02.type.self": {
+      "brief": "牌种小字：你自己"
+    },
+    "c02.type.contact": {
+      "brief": "牌种小字：人脉"
+    },
+    "c02.type.event": {
+      "brief": "牌种小字：事件"
+    },
+    "c02.type.fate": {
+      "brief": "牌种小字：命运"
+    },
+    "c02.type.big_fate": {
+      "brief": "牌种小字：大命运"
+    },
+    "c02.type.demand": {
+      "brief": "牌种小字：条子"
+    },
+    "c02.type.life": {
+      "brief": "牌种小字：生活"
+    },
+    "c02.type.news": {
+      "brief": "牌种小字：消息"
+    },
+    "c02.type.kept": {
+      "brief": "牌种小字：留着的牌"
+    },
+    "c02.type.estate": {
+      "brief": "牌种小字：家当"
+    },
+    "c02.type.night": {
+      "brief": "牌种小字：夜牌"
+    },
+    "c02.type.street": {
+      "brief": "牌种小字：街头"
+    },
+    "c02.type.prison": {
+      "brief": "牌种小字：牢房"
+    },
+    "c02.type.pawn_ticket": {
+      "brief": "牌种小字：当票"
+    },
+    "c02.days.badge": {
+      "brief": "牌角天数，参数 n 是天数"
+    },
+    "c02.band.gold": {
+      "brief": "牌种条：主线牌"
+    },
+    "c02.band.kept_kind": {
+      "brief": "牌种条：留着的牌，参数 kind 是原来的牌种"
+    },
+    "c02.ribbon.gold": {
+      "brief": "主线牌右上角斜挂的金绶带"
+    },
+    "c02.days.left": {
+      "brief": "牌上剩几天的药丸，参数 n 是天数"
+    },
+    "c02.days.tonight": {
+      "brief": "牌上剩几天的药丸：今晚到期"
+    },
+    "c02.days.away": {
+      "brief": "人脉牌上不在的药丸，参数 n 是天数"
+    },
+    "c02.sub.who_item": {
+      "brief": "人物牌副行：谁和柜上的物件，参数 who item"
+    },
+    "c02.sub.news_from": {
+      "brief": "消息牌副行：谁说的，参数 who"
+    },
+    "c02.sub.night": {
+      "brief": "夜牌副行"
+    },
+    "c02.btn.play.person": {
+      "brief": "预览旁的主按钮：人物牌"
+    },
+    "c02.btn.play.other": {
+      "brief": "预览旁的主按钮：事件等别的牌"
+    },
+    "c02.btn.play.night": {
+      "brief": "预览旁的主按钮：夜牌"
+    },
+    "c02.hand.empty_done": {
+      "brief": "白天手牌都处理完时扇区中间的一行"
+    },
+    "c02.drag.drop_here": {
+      "brief": "拖着手牌时场景中间的提示框"
+    },
+    "c02.attr.eye": {
+      "brief": "英雄和人脉的属性短名：眼力"
+    },
+    "c02.attr.tongue": {
+      "brief": "英雄和人脉的属性短名：口才"
+    },
+    "c02.attr.pull": {
+      "brief": "英雄和人脉的属性短名：人脉（门路）"
+    },
+    "c02.attr.nerve": {
+      "brief": "英雄和人脉的属性短名：胆量"
+    },
+    "c02.hero.attr_tip": {
+      "brief": "英雄和人脉牌片的悬停提示：四项属性全名，参数 eye tongue pull nerve"
+    },
+    "c02.contact.away": {
+      "brief": "人脉牌片上的红签：不在几天，参数 n"
+    },
+    "c02.contact.empty": {
+      "brief": "空着的人脉格"
+    }
+  }
+}

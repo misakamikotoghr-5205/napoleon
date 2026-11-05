@@ -1,0 +1,117 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "k06.reason.rice": {
+    "t": "买米"
+  },
+  "k06.reason.coal": {
+    "t": "买煤"
+  },
+  "k06.reason.doctor": {
+    "t": "看病"
+  },
+  "k06.reason.school": {
+    "t": "学费"
+  },
+  "k06.reason.wedding": {
+    "t": "喜事随礼"
+  },
+  "k06.reason.funeral": {
+    "t": "丧事"
+  },
+  "k06.reason.new_year": {
+    "t": "过年置备"
+  },
+  "k06.reason.rent": {
+    "t": "房租"
+  },
+  "k06.reason.repair": {
+    "t": "修屋"
+  },
+  "k06.reason.debt": {
+    "t": "还债"
+  },
+  "k06.reason.medicine": {
+    "t": "买药"
+  },
+  "k06.reason.lamp": {
+    "t": "灯油"
+  },
+  "k06.reason.census": {
+    "t": "户口纸墨"
+  },
+  "k06.reason.door_slip": {
+    "t": "门上贴纸"
+  },
+  "k06.reason.levy": {
+    "t": "新名目摊派"
+  },
+  "k06.reason.register": {
+    "t": "到衙门报备"
+  },
+  "k06.reason.gift": {
+    "t": "给新官送礼"
+  },
+  "k06.reason.signboard": {
+    "t": "换门脸"
+  },
+  "k06.reason.bribe": {
+    "t": "城门塞钱"
+  },
+  "k06.reason.papers": {
+    "t": "办证"
+  },
+  "k06.reason.rice_sell": {
+    "t": "米出手"
+  },
+  "k06.reason.rain_loss": {
+    "t": "春雨损货"
+  },
+  "k06.reason.hush": {
+    "t": "压下话头"
+  },
+  "k06.reason.buyer": {
+    "t": "旧主顾买卖"
+  },
+  "k06.reason.crate": {
+    "t": "那箱文书"
+  },
+  "k06.reason.night_road": {
+    "t": "卖夜路路条"
+  },
+  "k06.reason.curfew": {
+    "t": "留门的买卖"
+  },
+  "k06.notice.wang_regime": {
+    "t": "告示上说，汪伪国民政府在南京成立，伪维新政府并了进去。"
+  },
+  "k06.notice.new_official": {
+    "t": "镇上来了新的伪官。"
+  },
+  "k06.notice.levy_rename": {
+    "t": "摊派换了个名目，照样要交。"
+  },
+  "k06.notice.census_ok": {
+    "t": "户口清点过了。"
+  },
+  "k06.notice.census_fail": {
+    "t": "户口没清点成。"
+  },
+  "k06.notice.papers": {
+    "t": "证件办下来了。"
+  },
+  "k06.notice.signboard": {
+    "t": "门脸换过了。"
+  },
+  "k06.notice.search": {
+    "t": "有人来查了铺子。"
+  },
+  "k06.notice.rice": {
+    "t": "米行门口又贴了米价。"
+  },
+  "k06.notice.crate": {
+    "t": "那箱文书的事了结了。"
+  }
+}

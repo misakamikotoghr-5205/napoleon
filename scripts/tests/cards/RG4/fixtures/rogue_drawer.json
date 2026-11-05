@@ -1,0 +1,4648 @@
+{
+  "_meta": {
+    "_provenance": "ai_placeholder",
+    "brief": "肉鸽 v1：白天，博古格上 4 件（寻常两件、有来历一件、镇店一件），门口两拨客源，没有开着的报价",
+    "generated_by": "hand edit of scripts/cards/mock/fixtures/day_full.json (ROGUE_V1.md section 13)",
+    "owner": "RG4",
+    "schema": 1
+  },
+  "guide_progress": {},
+  "queries": {
+    "actions|{\"uid\":\"c0002\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "choose:listen",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "choose:argue",
+          "reason_key": ""
+        }
+      ]
+    },
+    "actions|{\"uid\":\"c0003\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        }
+      ]
+    },
+    "actions|{\"uid\":\"c0004\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "choose:move_goods",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "choose:call_police",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "choose:shut_door",
+          "reason_key": ""
+        }
+      ]
+    },
+    "actions|{\"uid\":\"c0005\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "refuse",
+          "reason_key": ""
+        }
+      ]
+    },
+    "actions|{\"uid\":\"c0006\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "refuse",
+          "reason_key": ""
+        }
+      ]
+    },
+    "actions|{\"uid\":\"c0007\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "refuse",
+          "reason_key": ""
+        }
+      ]
+    },
+    "actions|{\"uid\":\"c0008\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "choose:pass",
+          "reason_key": ""
+        }
+      ]
+    },
+    "actions|{\"uid\":\"c0009\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "choose:buy",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "choose:endure",
+          "reason_key": ""
+        }
+      ]
+    },
+    "actions|{\"uid\":\"c0010\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "keep",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "read",
+          "reason_key": ""
+        }
+      ]
+    },
+    "actions|{\"uid\":\"c0011\"}": {
+      "actions": []
+    },
+    "actions|{\"uid\":\"c0012\"}": {
+      "actions": []
+    },
+    "actions|{\"uid\":\"c0013\"}": {
+      "actions": []
+    },
+    "actions|{\"uid\":\"c0014\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        }
+      ]
+    },
+    "almanac|{}": {
+      "done": [],
+      "id": "alm.shoudang",
+      "ji": [
+        "travel"
+      ],
+      "yi": [
+        "pawn_in",
+        "meet"
+      ]
+    },
+    "card|{\"uid\":\"c0002\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "choose:listen",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "choose:argue",
+          "reason_key": ""
+        }
+      ],
+      "art": "portrait.brother",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "choices": [
+        {
+          "enabled": true,
+          "has_check": false,
+          "id": "listen",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "has_check": false,
+          "id": "argue",
+          "reason_key": ""
+        }
+      ],
+      "days_left": -1,
+      "def": "p.brother.1938.farewell",
+      "expires_in": -1,
+      "fortune": "",
+      "gold": true,
+      "intent": "story",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "slots",
+      "person": "brother",
+      "slots": [],
+      "source": "",
+      "stage": {
+        "after": {
+          "argue": [
+            {
+              "ref": "lines.me_argue",
+              "who": "me"
+            },
+            {
+              "ref": "lines.after_argue",
+              "who": "brother"
+            }
+          ],
+          "listen": [
+            {
+              "ref": "lines.after_listen",
+              "who": "brother"
+            },
+            {
+              "ref": "outcomes.listen",
+              "who": ""
+            }
+          ]
+        },
+        "cast": [
+          {
+            "at": "door",
+            "who": "brother"
+          }
+        ],
+        "fx": [
+          "predawn"
+        ],
+        "intro": [
+          {
+            "ref": "body",
+            "who": ""
+          },
+          {
+            "ref": "lines.greet",
+            "who": "brother"
+          },
+          {
+            "ref": "lines.charge",
+            "who": "brother"
+          }
+        ],
+        "props": [
+          {
+            "art": "prop.trunk",
+            "at": "door_side"
+          }
+        ]
+      },
+      "status": "open",
+      "type": "person",
+      "uid": "c0002",
+      "used_today": false,
+      "wheel": "",
+      "zone": "hand"
+    },
+    "card|{\"uid\":\"c0003\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        }
+      ],
+      "art": "illus.ev.1938.police_check",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "choices": [],
+      "days_left": -1,
+      "def": "ev.1938.police_check",
+      "expires_in": -1,
+      "fortune": "",
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "slots",
+      "person": "",
+      "slots": [
+        {
+          "accepts": [
+            "kept"
+          ],
+          "attr": "",
+          "coins": 0,
+          "id": "paper",
+          "max": 1,
+          "placed": [],
+          "required": false,
+          "wants": [
+            "papers"
+          ]
+        },
+        {
+          "accepts": [
+            "money"
+          ],
+          "attr": "",
+          "coins": 0,
+          "id": "cash",
+          "max": 1,
+          "placed": [],
+          "required": false,
+          "wants": [
+            "official"
+          ]
+        },
+        {
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "attr": "nerve",
+          "coins": 0,
+          "id": "man",
+          "max": 1,
+          "placed": [],
+          "required": false,
+          "wants": []
+        }
+      ],
+      "source": "",
+      "stage": {
+        "after": {
+          "fail": [
+            {
+              "ref": "lines.noted",
+              "who": "ex_patrol"
+            },
+            {
+              "ref": "outcomes.fail",
+              "who": ""
+            }
+          ],
+          "success": [
+            {
+              "ref": "lines.pass",
+              "who": "ex_patrol"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "at": "door_l",
+            "who": "ex_patrol"
+          },
+          {
+            "at": "door_r",
+            "who": "ex_patrol"
+          }
+        ],
+        "intro": [
+          {
+            "ref": "lines.greet",
+            "who": "ex_patrol"
+          },
+          {
+            "ref": "body",
+            "who": ""
+          }
+        ],
+        "walk": "patrol"
+      },
+      "status": "open",
+      "type": "event",
+      "uid": "c0003",
+      "used_today": false,
+      "wheel": "",
+      "zone": "hand"
+    },
+    "card|{\"uid\":\"c0004\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "choose:move_goods",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "choose:call_police",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "choose:shut_door",
+          "reason_key": ""
+        }
+      ],
+      "art": "illus.fa.any.fire_next_door",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "choices": [
+        {
+          "enabled": true,
+          "has_check": true,
+          "id": "move_goods",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "has_check": false,
+          "id": "call_police",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "has_check": false,
+          "id": "shut_door",
+          "reason_key": ""
+        }
+      ],
+      "days_left": -1,
+      "def": "fa.any.fire_next_door",
+      "expires_in": -1,
+      "fortune": "",
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "slots",
+      "person": "",
+      "slots": [],
+      "source": "",
+      "stage": {
+        "cast": [
+          {
+            "at": "door",
+            "who": "ex_shopboy"
+          }
+        ],
+        "fx": [
+          "fire",
+          "smoke"
+        ],
+        "intro": [
+          {
+            "ref": "lines.greet",
+            "who": "ex_shopboy"
+          },
+          {
+            "ref": "body",
+            "who": ""
+          }
+        ]
+      },
+      "status": "open",
+      "type": "fate",
+      "uid": "c0004",
+      "used_today": false,
+      "wheel": "",
+      "zone": "hand"
+    },
+    "card|{\"uid\":\"c0005\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "refuse",
+          "reason_key": ""
+        }
+      ],
+      "art": "portrait.linsao",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "choices": [],
+      "days_left": -1,
+      "def": "p.linsao.1938.pawn_hairpin",
+      "expires_in": -1,
+      "fortune": "",
+      "gold": false,
+      "intent": "pawn",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "counter",
+      "person": "linsao",
+      "slots": [],
+      "source": "",
+      "stage": {},
+      "status": "open",
+      "type": "person",
+      "uid": "c0005",
+      "used_today": false,
+      "wheel": "",
+      "zone": "hand"
+    },
+    "card|{\"uid\":\"c0006\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "refuse",
+          "reason_key": ""
+        }
+      ],
+      "art": "portrait.chen",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "choices": [],
+      "days_left": -1,
+      "def": "p.chen.1938.buy_scroll",
+      "expires_in": -1,
+      "fortune": "",
+      "gold": false,
+      "intent": "buy",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "counter",
+      "person": "chen",
+      "slots": [],
+      "source": "",
+      "stage": {},
+      "status": "open",
+      "type": "person",
+      "uid": "c0006",
+      "used_today": false,
+      "wheel": "",
+      "zone": "hand"
+    },
+    "card|{\"uid\":\"c0007\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "refuse",
+          "reason_key": ""
+        }
+      ],
+      "art": "portrait.stranger_peddler",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "choices": [],
+      "days_left": -1,
+      "def": "p.stranger_peddler.any.sell_bowl",
+      "expires_in": -1,
+      "fortune": "",
+      "gold": false,
+      "intent": "sell",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "counter",
+      "person": "stranger_peddler",
+      "slots": [],
+      "source": "",
+      "stage": {},
+      "status": "open",
+      "type": "person",
+      "uid": "c0007",
+      "used_today": false,
+      "wheel": "",
+      "zone": "hand"
+    },
+    "card|{\"uid\":\"c0008\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "choose:pass",
+          "reason_key": ""
+        }
+      ],
+      "art": "illus.ev.any.fortune_teller",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "choices": [
+        {
+          "enabled": true,
+          "has_check": false,
+          "id": "pass",
+          "reason_key": ""
+        }
+      ],
+      "days_left": -1,
+      "def": "ev.any.fortune_teller",
+      "expires_in": -1,
+      "fortune": "both",
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": false,
+      "must_resolve": false,
+      "observations": [],
+      "panel": "fortune",
+      "person": "",
+      "slots": [],
+      "source": "",
+      "stage": {},
+      "status": "open",
+      "type": "event",
+      "uid": "c0008",
+      "used_today": false,
+      "wheel": "",
+      "zone": "hand"
+    },
+    "card|{\"uid\":\"c0009\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "choose:buy",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "choose:endure",
+          "reason_key": ""
+        }
+      ],
+      "art": "illus.lf.any.coal_out",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "choices": [
+        {
+          "enabled": true,
+          "has_check": false,
+          "id": "buy",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "has_check": false,
+          "id": "endure",
+          "reason_key": ""
+        }
+      ],
+      "days_left": 3,
+      "def": "lf.any.coal_out",
+      "expires_in": -1,
+      "fortune": "",
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": false,
+      "must_resolve": false,
+      "observations": [],
+      "panel": "slots",
+      "person": "",
+      "slots": [],
+      "source": "",
+      "stage": {},
+      "status": "open",
+      "type": "life",
+      "uid": "c0009",
+      "used_today": false,
+      "wheel": "",
+      "zone": "hand"
+    },
+    "card|{\"uid\":\"c0010\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "keep",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "read",
+          "reason_key": ""
+        }
+      ],
+      "art": "illus.nw.rumor",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "choices": [],
+      "days_left": -1,
+      "def": "nw.1938.wangshan_dock",
+      "expires_in": 5,
+      "fortune": "",
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": true,
+      "must_resolve": false,
+      "observations": [],
+      "panel": "read",
+      "person": "",
+      "slots": [],
+      "source": "zhouma",
+      "stage": {},
+      "status": "open",
+      "type": "news",
+      "uid": "c0010",
+      "used_today": false,
+      "wheel": "",
+      "zone": "hand"
+    },
+    "card|{\"uid\":\"c0011\"}": {
+      "actions": [],
+      "art": "illus.kp.ma_owes",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "choices": [],
+      "days_left": -1,
+      "def": "kp.ma_owes",
+      "expires_in": 20,
+      "fortune": "",
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": true,
+      "must_resolve": false,
+      "observations": [],
+      "panel": "none",
+      "person": "",
+      "slots": [],
+      "source": "",
+      "stage": {},
+      "status": "open",
+      "type": "kept",
+      "uid": "c0011",
+      "used_today": false,
+      "wheel": "",
+      "zone": "kept"
+    },
+    "card|{\"uid\":\"c0012\"}": {
+      "actions": [],
+      "art": "illus.kp.liangmin",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "choices": [],
+      "days_left": -1,
+      "def": "kp.liangmin",
+      "expires_in": -1,
+      "fortune": "",
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": true,
+      "must_resolve": false,
+      "observations": [],
+      "panel": "none",
+      "person": "",
+      "slots": [],
+      "source": "",
+      "stage": {},
+      "status": "open",
+      "type": "kept",
+      "uid": "c0012",
+      "used_today": false,
+      "wheel": "",
+      "zone": "kept"
+    },
+    "card|{\"uid\":\"c0013\"}": {
+      "actions": [],
+      "art": "portrait.ma",
+      "asking": -1,
+      "attrs": {
+        "eye": 1,
+        "nerve": 1,
+        "pull": 3,
+        "tongue": 2
+      },
+      "away_days": 0,
+      "can_appraise": false,
+      "choices": [],
+      "days_left": -1,
+      "def": "ct.ma",
+      "expires_in": -1,
+      "fortune": "",
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": false,
+      "must_resolve": false,
+      "observations": [],
+      "panel": "none",
+      "person": "ma",
+      "slots": [],
+      "source": "",
+      "stage": {},
+      "status": "open",
+      "type": "contact",
+      "uid": "c0013",
+      "used_today": false,
+      "wheel": "",
+      "zone": "contacts"
+    },
+    "card|{\"uid\":\"c0014\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        }
+      ],
+      "amount": 60,
+      "art": "illus.dm.money",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "choices": [],
+      "days_left": -1,
+      "def": "dm.1938.money.t1",
+      "demand": {
+        "kind": "money",
+        "tier": 1
+      },
+      "expires_in": -1,
+      "fortune": "",
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": false,
+      "must_resolve": false,
+      "observations": [],
+      "panel": "demand",
+      "person": "",
+      "slots": [
+        {
+          "accepts": [
+            "money"
+          ],
+          "attr": "",
+          "coins": 0,
+          "id": "cash",
+          "max": 1,
+          "placed": [],
+          "required": false,
+          "wants": []
+        }
+      ],
+      "source": "",
+      "stage": {},
+      "status": "open",
+      "type": "demand",
+      "uid": "c0014",
+      "used_today": false,
+      "wheel": "",
+      "zone": "demands"
+    },
+    "day.end_preview|{}": {
+      "items": [
+        {
+          "args": {},
+          "consequence_key": "p.brother.1938.farewell#outcomes.ignored",
+          "def": "p.brother.1938.farewell",
+          "kind": "gold_leave",
+          "uid": "c0002"
+        },
+        {
+          "args": {},
+          "consequence_key": "ev.1938.police_check#outcomes.fail",
+          "def": "ev.1938.police_check",
+          "kind": "ignore",
+          "uid": "c0003"
+        },
+        {
+          "args": {},
+          "consequence_key": "g02.end.pass",
+          "def": "ev.any.fortune_teller",
+          "kind": "pass",
+          "uid": "c0008"
+        },
+        {
+          "args": {},
+          "consequence_key": "fa.any.fire_next_door#outcomes.ignored",
+          "def": "fa.any.fire_next_door",
+          "kind": "ignore",
+          "uid": "c0004"
+        },
+        {
+          "args": {},
+          "consequence_key": "g02.end.leave",
+          "def": "p.linsao.1938.pawn_hairpin",
+          "kind": "leave",
+          "uid": "c0005"
+        },
+        {
+          "args": {},
+          "consequence_key": "g02.end.leave",
+          "def": "p.chen.1938.buy_scroll",
+          "kind": "leave",
+          "uid": "c0006"
+        },
+        {
+          "args": {},
+          "consequence_key": "g02.end.leave",
+          "def": "p.stranger_peddler.any.sell_bowl",
+          "kind": "leave",
+          "uid": "c0007"
+        },
+        {
+          "args": {
+            "days": 2
+          },
+          "consequence_key": "g01.end.wait",
+          "def": "lf.any.coal_out",
+          "kind": "wait",
+          "uid": "c0009"
+        },
+        {
+          "args": {
+            "days": 5
+          },
+          "consequence_key": "g01.end.wait",
+          "def": "nw.1938.wangshan_dock",
+          "kind": "wait",
+          "uid": "c0010"
+        },
+        {
+          "args": {
+            "days": -1
+          },
+          "consequence_key": "g03.end.demand",
+          "def": "dm.1938.money.t1",
+          "kind": "wait",
+          "uid": "c0014"
+        }
+      ],
+      "needs_confirm": true,
+      "step": "end_day"
+    },
+    "dossier|{}": {
+      "pages": []
+    },
+    "estates|{}": {
+      "estates": [
+        {
+          "id": "es.jewel_cabinet",
+          "interest_money": 4,
+          "money": 80,
+          "status": "held"
+        },
+        {
+          "id": "es.storeroom",
+          "interest_money": 6,
+          "money": 120,
+          "status": "held"
+        },
+        {
+          "id": "es.counter",
+          "interest_money": 7,
+          "money": 150,
+          "status": "held"
+        },
+        {
+          "id": "es.old_house",
+          "interest_money": 10,
+          "money": 260,
+          "status": "held"
+        },
+        {
+          "id": "es.shopfront",
+          "interest_money": 16,
+          "money": 400,
+          "status": "held"
+        }
+      ]
+    },
+    "firsts|{}": {
+      "firsts": {
+        "almanac": 1,
+        "buyer": 1,
+        "cezi": 1,
+        "choice": 1,
+        "coins": 1,
+        "contact": 1,
+        "counter": 1,
+        "deal": 1,
+        "demand": 1,
+        "fate": 1,
+        "gold": 1,
+        "incense": 1,
+        "keep": 1,
+        "life": 1,
+        "lot": 1,
+        "mg.spot": 1,
+        "month_open": 1,
+        "month_wheel": 1,
+        "news": 1,
+        "night": 1,
+        "notice": 1,
+        "person": 1,
+        "settle": 1,
+        "shelf": 1,
+        "slots": 1,
+        "ticket": 1
+      }
+    },
+    "fortune|{\"uid\":\"c0008\"}": {
+      "can_cezi": true,
+      "can_lot": true,
+      "cezi": [
+        "cz.shui"
+      ],
+      "cost": 3,
+      "last": {}
+    },
+    "month_report|{}": {
+      "lines": []
+    },
+    "relics|{}": {
+      "cap": 6,
+      "count": 4,
+      "dormant": false,
+      "err": "",
+      "held": [
+        {
+          "art": "prop.relic.stub_box",
+          "depth": "plain",
+          "id": "rl.stub_box",
+          "since": 8
+        },
+        {
+          "art": "prop.relic.camphor_chest",
+          "depth": "storied",
+          "id": "rl.camphor_chest",
+          "since": 14
+        },
+        {
+          "art": "prop.relic.oilpaper_umbrella",
+          "depth": "plain",
+          "id": "rl.oilpaper_umbrella",
+          "since": 21
+        },
+        {
+          "art": "prop.relic.rosewood_abacus",
+          "depth": "treasure",
+          "id": "rl.rosewood_abacus",
+          "since": 42
+        }
+      ],
+      "ok": true
+    },
+    "settle_report|{}": {
+      "lines": []
+    },
+    "short|{}": {
+      "amount": 20,
+      "estates": [
+        {
+          "id": "es.jewel_cabinet",
+          "interest_money": 4,
+          "money": 80,
+          "status": "held"
+        },
+        {
+          "id": "es.storeroom",
+          "interest_money": 6,
+          "money": 120,
+          "status": "held"
+        },
+        {
+          "id": "es.counter",
+          "interest_money": 7,
+          "money": 150,
+          "status": "held"
+        },
+        {
+          "id": "es.old_house",
+          "interest_money": 10,
+          "money": 260,
+          "status": "held"
+        },
+        {
+          "id": "es.shopfront",
+          "interest_money": 16,
+          "money": 400,
+          "status": "held"
+        }
+      ],
+      "goods": [],
+      "options": [
+        "goods",
+        "estate",
+        "default"
+      ],
+      "payee": "w0.mock.payee",
+      "source": ""
+    },
+    "slots|{\"uid\":\"c0002\"}": {
+      "auto_heads": 0,
+      "auto_pass": false,
+      "coins": 0,
+      "need": 0,
+      "ready": true,
+      "slots": []
+    },
+    "slots|{\"uid\":\"c0003\"}": {
+      "auto_heads": 0,
+      "auto_pass": false,
+      "coins": 0,
+      "need": 2,
+      "ready": true,
+      "slots": [
+        {
+          "accepts": [
+            "kept"
+          ],
+          "attr": "",
+          "coins": 0,
+          "id": "paper",
+          "max": 1,
+          "placed": [],
+          "required": false,
+          "wants": [
+            "papers"
+          ]
+        },
+        {
+          "accepts": [
+            "money"
+          ],
+          "attr": "",
+          "coins": 0,
+          "id": "cash",
+          "max": 1,
+          "placed": [],
+          "required": false,
+          "wants": [
+            "official"
+          ]
+        },
+        {
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "attr": "nerve",
+          "coins": 0,
+          "id": "man",
+          "max": 1,
+          "placed": [],
+          "required": false,
+          "wants": []
+        }
+      ]
+    },
+    "slots|{\"uid\":\"c0004\"}": {
+      "auto_heads": 0,
+      "auto_pass": false,
+      "coins": 0,
+      "need": 0,
+      "ready": true,
+      "slots": []
+    },
+    "slots|{\"uid\":\"c0009\"}": {
+      "auto_heads": 0,
+      "auto_pass": false,
+      "coins": 0,
+      "need": 0,
+      "ready": true,
+      "slots": []
+    },
+    "slots|{\"uid\":\"c0010\"}": {
+      "auto_heads": 0,
+      "auto_pass": false,
+      "coins": 0,
+      "need": 0,
+      "ready": true,
+      "slots": []
+    },
+    "slots|{\"uid\":\"c0014\"}": {
+      "auto_heads": 0,
+      "auto_pass": false,
+      "coins": 0,
+      "need": 0,
+      "ready": true,
+      "slots": [
+        {
+          "accepts": [
+            "money"
+          ],
+          "attr": "",
+          "coins": 0,
+          "id": "cash",
+          "max": 1,
+          "placed": [],
+          "required": false,
+          "wants": []
+        }
+      ]
+    },
+    "stock|{}": {
+      "items": [
+        {
+          "art": "item.utensils.bowl",
+          "cat": "utensils",
+          "condition_word": 2,
+          "item": "I001",
+          "observations": [],
+          "on_shelf_since": 9,
+          "template": "utensils.bowl"
+        },
+        {
+          "art": "item.art.landscape",
+          "cat": "art",
+          "condition_word": 2,
+          "item": "I002",
+          "observations": [],
+          "on_shelf_since": 9,
+          "template": "art.landscape"
+        }
+      ]
+    },
+    "tickets|{}": {
+      "tickets": []
+    },
+    "wheel|{\"uid\":\"\",\"wheel\":\"wh.month\"}": {
+      "art": "wheel.month",
+      "cost": {
+        "money": 0,
+        "stake": false
+      },
+      "incense": {
+        "accepts": [
+          "money",
+          "kept",
+          "contact"
+        ],
+        "full": false,
+        "placed": []
+      },
+      "kind": "month",
+      "result": {
+        "segment": "",
+        "stop_deg": 0.0
+      },
+      "segments": [
+        {
+          "arc_deg": 108.0,
+          "art": "icon.ws.caixing",
+          "id": "ws.1938.month.caixing"
+        },
+        {
+          "arc_deg": 108.0,
+          "art": "icon.ws.liunian",
+          "id": "ws.1938.month.liunian"
+        },
+        {
+          "arc_deg": 144.0,
+          "art": "icon.ws.pingan",
+          "id": "ws.1938.month.pingan"
+        }
+      ],
+      "spun": false,
+      "staked": "",
+      "uid": "",
+      "wheel": "wh.month"
+    },
+    "year_report|{}": {
+      "lines": []
+    }
+  },
+  "responses": [
+    {
+      "cmd": "counter.open",
+      "events": [],
+      "match": {
+        "uid": "c0005"
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "hand",
+          "value": [
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:listen",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:argue",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.brother",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.brother.1938.farewell",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": true,
+              "intent": "story",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "slots",
+              "person": "brother",
+              "source": "",
+              "stage": {
+                "after": {
+                  "argue": [
+                    {
+                      "ref": "lines.me_argue",
+                      "who": "me"
+                    },
+                    {
+                      "ref": "lines.after_argue",
+                      "who": "brother"
+                    }
+                  ],
+                  "listen": [
+                    {
+                      "ref": "lines.after_listen",
+                      "who": "brother"
+                    },
+                    {
+                      "ref": "outcomes.listen",
+                      "who": ""
+                    }
+                  ]
+                },
+                "cast": [
+                  {
+                    "at": "door",
+                    "who": "brother"
+                  }
+                ],
+                "fx": [
+                  "predawn"
+                ],
+                "intro": [
+                  {
+                    "ref": "body",
+                    "who": ""
+                  },
+                  {
+                    "ref": "lines.greet",
+                    "who": "brother"
+                  },
+                  {
+                    "ref": "lines.charge",
+                    "who": "brother"
+                  }
+                ],
+                "props": [
+                  {
+                    "art": "prop.trunk",
+                    "at": "door_side"
+                  }
+                ]
+              },
+              "status": "open",
+              "type": "person",
+              "uid": "c0002",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.ev.1938.police_check",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "ev.1938.police_check",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "slots",
+              "person": "",
+              "source": "",
+              "stage": {
+                "after": {
+                  "fail": [
+                    {
+                      "ref": "lines.noted",
+                      "who": "ex_patrol"
+                    },
+                    {
+                      "ref": "outcomes.fail",
+                      "who": ""
+                    }
+                  ],
+                  "success": [
+                    {
+                      "ref": "lines.pass",
+                      "who": "ex_patrol"
+                    }
+                  ]
+                },
+                "cast": [
+                  {
+                    "at": "door_l",
+                    "who": "ex_patrol"
+                  },
+                  {
+                    "at": "door_r",
+                    "who": "ex_patrol"
+                  }
+                ],
+                "intro": [
+                  {
+                    "ref": "lines.greet",
+                    "who": "ex_patrol"
+                  },
+                  {
+                    "ref": "body",
+                    "who": ""
+                  }
+                ],
+                "walk": "patrol"
+              },
+              "status": "open",
+              "type": "event",
+              "uid": "c0003",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:pass",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.ev.any.fortune_teller",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "ev.any.fortune_teller",
+              "expires_in": -1,
+              "fortune": "both",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": false,
+              "must_resolve": false,
+              "observations": [],
+              "panel": "fortune",
+              "person": "",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "event",
+              "uid": "c0008",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:move_goods",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:call_police",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:shut_door",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.fa.any.fire_next_door",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "fa.any.fire_next_door",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "slots",
+              "person": "",
+              "source": "",
+              "stage": {
+                "cast": [
+                  {
+                    "at": "door",
+                    "who": "ex_shopboy"
+                  }
+                ],
+                "fx": [
+                  "fire",
+                  "smoke"
+                ],
+                "intro": [
+                  {
+                    "ref": "lines.greet",
+                    "who": "ex_shopboy"
+                  },
+                  {
+                    "ref": "body",
+                    "who": ""
+                  }
+                ]
+              },
+              "status": "open",
+              "type": "fate",
+              "uid": "c0004",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "refuse",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.linsao",
+              "asking": 294,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": true,
+              "days_left": -1,
+              "def": "p.linsao.1938.pawn_hairpin",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "pawn",
+              "item": {
+                "art": "item.jewelry.hairpin",
+                "cat": "jewelry",
+                "condition_word": 2,
+                "item": "I003",
+                "observations": [],
+                "on_shelf_since": -1,
+                "template": "jewelry.hairpin"
+              },
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "counter",
+              "person": "linsao",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "person",
+              "uid": "c0005",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "refuse",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.chen",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.chen.1938.buy_scroll",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "buy",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "counter",
+              "person": "chen",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "person",
+              "uid": "c0006",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "refuse",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.stranger_peddler",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.stranger_peddler.any.sell_bowl",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "sell",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "counter",
+              "person": "stranger_peddler",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "person",
+              "uid": "c0007",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:buy",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:endure",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.lf.any.coal_out",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": 3,
+              "def": "lf.any.coal_out",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": false,
+              "must_resolve": false,
+              "observations": [],
+              "panel": "slots",
+              "person": "",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "life",
+              "uid": "c0009",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "keep",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "read",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.nw.rumor",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "nw.1938.wangshan_dock",
+              "expires_in": 5,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": true,
+              "must_resolve": false,
+              "observations": [],
+              "panel": "read",
+              "person": "",
+              "source": "zhouma",
+              "stage": {},
+              "status": "open",
+              "type": "news",
+              "uid": "c0010",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            }
+          ]
+        }
+      ],
+      "result": {
+        "asking": 294,
+        "can_appraise": true,
+        "direction": "pay",
+        "err": "",
+        "intent": "pawn",
+        "item": {
+          "art": "item.jewelry.hairpin",
+          "cat": "jewelry",
+          "condition_word": 2,
+          "item": "I003",
+          "observations": [],
+          "on_shelf_since": -1,
+          "template": "jewelry.hairpin"
+        },
+        "last_price": 0,
+        "last_reply": "",
+        "line_key": "p.linsao.1938.pawn_hairpin#lines.greet",
+        "ok": true,
+        "person": "linsao",
+        "round": 0,
+        "stock": [
+          "I001",
+          "I002"
+        ],
+        "ticket": null,
+        "tiers": {
+          "fair": 220,
+          "harsh": 161,
+          "kind": 279
+        },
+        "uid": "c0005"
+      }
+    },
+    {
+      "cmd": "card.keep",
+      "events": [
+        [
+          "card_updated",
+          "c0010"
+        ]
+      ],
+      "match": {
+        "uid": "c0010"
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "hand",
+          "value": [
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:listen",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:argue",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.brother",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.brother.1938.farewell",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": true,
+              "intent": "story",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "slots",
+              "person": "brother",
+              "source": "",
+              "stage": {
+                "after": {
+                  "argue": [
+                    {
+                      "ref": "lines.me_argue",
+                      "who": "me"
+                    },
+                    {
+                      "ref": "lines.after_argue",
+                      "who": "brother"
+                    }
+                  ],
+                  "listen": [
+                    {
+                      "ref": "lines.after_listen",
+                      "who": "brother"
+                    },
+                    {
+                      "ref": "outcomes.listen",
+                      "who": ""
+                    }
+                  ]
+                },
+                "cast": [
+                  {
+                    "at": "door",
+                    "who": "brother"
+                  }
+                ],
+                "fx": [
+                  "predawn"
+                ],
+                "intro": [
+                  {
+                    "ref": "body",
+                    "who": ""
+                  },
+                  {
+                    "ref": "lines.greet",
+                    "who": "brother"
+                  },
+                  {
+                    "ref": "lines.charge",
+                    "who": "brother"
+                  }
+                ],
+                "props": [
+                  {
+                    "art": "prop.trunk",
+                    "at": "door_side"
+                  }
+                ]
+              },
+              "status": "open",
+              "type": "person",
+              "uid": "c0002",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.ev.1938.police_check",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "ev.1938.police_check",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "slots",
+              "person": "",
+              "source": "",
+              "stage": {
+                "after": {
+                  "fail": [
+                    {
+                      "ref": "lines.noted",
+                      "who": "ex_patrol"
+                    },
+                    {
+                      "ref": "outcomes.fail",
+                      "who": ""
+                    }
+                  ],
+                  "success": [
+                    {
+                      "ref": "lines.pass",
+                      "who": "ex_patrol"
+                    }
+                  ]
+                },
+                "cast": [
+                  {
+                    "at": "door_l",
+                    "who": "ex_patrol"
+                  },
+                  {
+                    "at": "door_r",
+                    "who": "ex_patrol"
+                  }
+                ],
+                "intro": [
+                  {
+                    "ref": "lines.greet",
+                    "who": "ex_patrol"
+                  },
+                  {
+                    "ref": "body",
+                    "who": ""
+                  }
+                ],
+                "walk": "patrol"
+              },
+              "status": "open",
+              "type": "event",
+              "uid": "c0003",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:pass",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.ev.any.fortune_teller",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "ev.any.fortune_teller",
+              "expires_in": -1,
+              "fortune": "both",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": false,
+              "must_resolve": false,
+              "observations": [],
+              "panel": "fortune",
+              "person": "",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "event",
+              "uid": "c0008",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:move_goods",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:call_police",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:shut_door",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.fa.any.fire_next_door",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "fa.any.fire_next_door",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "slots",
+              "person": "",
+              "source": "",
+              "stage": {
+                "cast": [
+                  {
+                    "at": "door",
+                    "who": "ex_shopboy"
+                  }
+                ],
+                "fx": [
+                  "fire",
+                  "smoke"
+                ],
+                "intro": [
+                  {
+                    "ref": "lines.greet",
+                    "who": "ex_shopboy"
+                  },
+                  {
+                    "ref": "body",
+                    "who": ""
+                  }
+                ]
+              },
+              "status": "open",
+              "type": "fate",
+              "uid": "c0004",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "refuse",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.linsao",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.linsao.1938.pawn_hairpin",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "pawn",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "counter",
+              "person": "linsao",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "person",
+              "uid": "c0005",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "refuse",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.chen",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.chen.1938.buy_scroll",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "buy",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "counter",
+              "person": "chen",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "person",
+              "uid": "c0006",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "refuse",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.stranger_peddler",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.stranger_peddler.any.sell_bowl",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "sell",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "counter",
+              "person": "stranger_peddler",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "person",
+              "uid": "c0007",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:buy",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:endure",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.lf.any.coal_out",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": 3,
+              "def": "lf.any.coal_out",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": false,
+              "must_resolve": false,
+              "observations": [],
+              "panel": "slots",
+              "person": "",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "life",
+              "uid": "c0009",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            }
+          ]
+        },
+        {
+          "op": "set",
+          "path": "kept",
+          "value": [
+            {
+              "actions": [],
+              "art": "illus.kp.ma_owes",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "kp.ma_owes",
+              "expires_in": 20,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": true,
+              "must_resolve": false,
+              "observations": [],
+              "panel": "none",
+              "person": "",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "kept",
+              "uid": "c0011",
+              "used_today": false,
+              "wheel": "",
+              "zone": "kept"
+            },
+            {
+              "actions": [],
+              "art": "illus.kp.liangmin",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "kp.liangmin",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": true,
+              "must_resolve": false,
+              "observations": [],
+              "panel": "none",
+              "person": "",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "kept",
+              "uid": "c0012",
+              "used_today": false,
+              "wheel": "",
+              "zone": "kept"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "read",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.nw.rumor",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "nw.1938.wangshan_dock",
+              "expires_in": 5,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": true,
+              "must_resolve": false,
+              "observations": [],
+              "panel": "read",
+              "person": "",
+              "source": "zhouma",
+              "stage": {},
+              "status": "open",
+              "type": "news",
+              "uid": "c0010",
+              "used_today": false,
+              "wheel": "",
+              "zone": "kept"
+            }
+          ]
+        }
+      ],
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "card.choose",
+      "events": [
+        [
+          "cards_dealt",
+          [
+            "c0015"
+          ]
+        ],
+        [
+          "dossier_changed",
+          "brother",
+          "df.brother.1938.farewell",
+          "added"
+        ],
+        [
+          "first_time",
+          "dossier",
+          {
+            "person": "brother"
+          }
+        ],
+        [
+          "card_left",
+          "c0002",
+          "resolved"
+        ]
+      ],
+      "match": {
+        "choice": "listen",
+        "uid": "c0002"
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "dossier_new",
+          "value": 1
+        },
+        {
+          "op": "set",
+          "path": "hand",
+          "value": [
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.ev.1938.police_check",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "ev.1938.police_check",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "slots",
+              "person": "",
+              "source": "",
+              "stage": {
+                "after": {
+                  "fail": [
+                    {
+                      "ref": "lines.noted",
+                      "who": "ex_patrol"
+                    },
+                    {
+                      "ref": "outcomes.fail",
+                      "who": ""
+                    }
+                  ],
+                  "success": [
+                    {
+                      "ref": "lines.pass",
+                      "who": "ex_patrol"
+                    }
+                  ]
+                },
+                "cast": [
+                  {
+                    "at": "door_l",
+                    "who": "ex_patrol"
+                  },
+                  {
+                    "at": "door_r",
+                    "who": "ex_patrol"
+                  }
+                ],
+                "intro": [
+                  {
+                    "ref": "lines.greet",
+                    "who": "ex_patrol"
+                  },
+                  {
+                    "ref": "body",
+                    "who": ""
+                  }
+                ],
+                "walk": "patrol"
+              },
+              "status": "open",
+              "type": "event",
+              "uid": "c0003",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:pass",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.ev.any.fortune_teller",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "ev.any.fortune_teller",
+              "expires_in": -1,
+              "fortune": "both",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": false,
+              "must_resolve": false,
+              "observations": [],
+              "panel": "fortune",
+              "person": "",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "event",
+              "uid": "c0008",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:move_goods",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:call_police",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:shut_door",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.fa.any.fire_next_door",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "fa.any.fire_next_door",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "slots",
+              "person": "",
+              "source": "",
+              "stage": {
+                "cast": [
+                  {
+                    "at": "door",
+                    "who": "ex_shopboy"
+                  }
+                ],
+                "fx": [
+                  "fire",
+                  "smoke"
+                ],
+                "intro": [
+                  {
+                    "ref": "lines.greet",
+                    "who": "ex_shopboy"
+                  },
+                  {
+                    "ref": "body",
+                    "who": ""
+                  }
+                ]
+              },
+              "status": "open",
+              "type": "fate",
+              "uid": "c0004",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "refuse",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.linsao",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.linsao.1938.pawn_hairpin",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "pawn",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "counter",
+              "person": "linsao",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "person",
+              "uid": "c0005",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "refuse",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.chen",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.chen.1938.buy_scroll",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "buy",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "counter",
+              "person": "chen",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "person",
+              "uid": "c0006",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "refuse",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.stranger_peddler",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.stranger_peddler.any.sell_bowl",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "sell",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "counter",
+              "person": "stranger_peddler",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "person",
+              "uid": "c0007",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:buy",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:endure",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.lf.any.coal_out",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": 3,
+              "def": "lf.any.coal_out",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": false,
+              "must_resolve": false,
+              "observations": [],
+              "panel": "slots",
+              "person": "",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "life",
+              "uid": "c0009",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "keep",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "read",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.nw.rumor",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "nw.1938.wangshan_dock",
+              "expires_in": 5,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": true,
+              "must_resolve": false,
+              "observations": [],
+              "panel": "read",
+              "person": "",
+              "source": "zhouma",
+              "stage": {},
+              "status": "open",
+              "type": "news",
+              "uid": "c0010",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            }
+          ]
+        },
+        {
+          "op": "set",
+          "path": "kept",
+          "value": [
+            {
+              "actions": [],
+              "art": "illus.kp.ma_owes",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "kp.ma_owes",
+              "expires_in": 20,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": true,
+              "must_resolve": false,
+              "observations": [],
+              "panel": "none",
+              "person": "",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "kept",
+              "uid": "c0011",
+              "used_today": false,
+              "wheel": "",
+              "zone": "kept"
+            },
+            {
+              "actions": [],
+              "art": "illus.kp.liangmin",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "kp.liangmin",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": true,
+              "must_resolve": false,
+              "observations": [],
+              "panel": "none",
+              "person": "",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "kept",
+              "uid": "c0012",
+              "used_today": false,
+              "wheel": "",
+              "zone": "kept"
+            },
+            {
+              "actions": [],
+              "art": "illus.kp.brother_note",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "kp.brother_note",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": true,
+              "must_resolve": false,
+              "observations": [],
+              "panel": "none",
+              "person": "",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "kept",
+              "uid": "c0015",
+              "used_today": false,
+              "wheel": "",
+              "zone": "kept"
+            }
+          ]
+        }
+      ],
+      "result": {
+        "err": "",
+        "needs_slots": false,
+        "ok": true
+      }
+    },
+    {
+      "cmd": "day.end",
+      "events": [
+        [
+          "first_time",
+          "gold_leave",
+          {
+            "uid": "c0002"
+          }
+        ],
+        [
+          "first_time",
+          "must_resolve",
+          {
+            "uid": "c0003"
+          }
+        ]
+      ],
+      "match": {
+        "confirm": false
+      },
+      "patch": [],
+      "result": {
+        "err": "must_resolve_pending",
+        "items": [
+          {
+            "args": {},
+            "consequence_key": "p.brother.1938.farewell#outcomes.ignored",
+            "def": "p.brother.1938.farewell",
+            "kind": "gold_leave",
+            "uid": "c0002"
+          },
+          {
+            "args": {},
+            "consequence_key": "ev.1938.police_check#outcomes.fail",
+            "def": "ev.1938.police_check",
+            "kind": "ignore",
+            "uid": "c0003"
+          },
+          {
+            "args": {},
+            "consequence_key": "g02.end.pass",
+            "def": "ev.any.fortune_teller",
+            "kind": "pass",
+            "uid": "c0008"
+          },
+          {
+            "args": {},
+            "consequence_key": "fa.any.fire_next_door#outcomes.ignored",
+            "def": "fa.any.fire_next_door",
+            "kind": "ignore",
+            "uid": "c0004"
+          },
+          {
+            "args": {},
+            "consequence_key": "g02.end.leave",
+            "def": "p.linsao.1938.pawn_hairpin",
+            "kind": "leave",
+            "uid": "c0005"
+          },
+          {
+            "args": {},
+            "consequence_key": "g02.end.leave",
+            "def": "p.chen.1938.buy_scroll",
+            "kind": "leave",
+            "uid": "c0006"
+          },
+          {
+            "args": {},
+            "consequence_key": "g02.end.leave",
+            "def": "p.stranger_peddler.any.sell_bowl",
+            "kind": "leave",
+            "uid": "c0007"
+          },
+          {
+            "args": {
+              "days": 2
+            },
+            "consequence_key": "g01.end.wait",
+            "def": "lf.any.coal_out",
+            "kind": "wait",
+            "uid": "c0009"
+          },
+          {
+            "args": {
+              "days": 5
+            },
+            "consequence_key": "g01.end.wait",
+            "def": "nw.1938.wangshan_dock",
+            "kind": "wait",
+            "uid": "c0010"
+          },
+          {
+            "args": {
+              "days": -1
+            },
+            "consequence_key": "g03.end.demand",
+            "def": "dm.1938.money.t1",
+            "kind": "wait",
+            "uid": "c0014"
+          }
+        ],
+        "needs_confirm": true,
+        "ok": false,
+        "step": "end_day"
+      }
+    },
+    {
+      "cmd": "day.end",
+      "events": [
+        [
+          "first_time",
+          "gold_leave",
+          {
+            "uid": "c0002"
+          }
+        ],
+        [
+          "first_time",
+          "must_resolve",
+          {
+            "uid": "c0003"
+          }
+        ],
+        [
+          "dossier_changed",
+          "brother",
+          "df.brother.1938.farewell",
+          "gap"
+        ],
+        [
+          "first_time",
+          "dossier_gap",
+          {
+            "person": "brother"
+          }
+        ],
+        [
+          "card_left",
+          "c0002",
+          "gold_left"
+        ],
+        [
+          "card_left",
+          "c0003",
+          "expired"
+        ],
+        [
+          "card_left",
+          "c0008",
+          "expired"
+        ],
+        [
+          "card_left",
+          "c0004",
+          "expired"
+        ],
+        [
+          "card_left",
+          "c0005",
+          "left"
+        ],
+        [
+          "card_left",
+          "c0006",
+          "left"
+        ],
+        [
+          "card_left",
+          "c0007",
+          "left"
+        ],
+        [
+          "phase_changed",
+          "day",
+          "night"
+        ]
+      ],
+      "match": {
+        "confirm": true
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "hand",
+          "value": [
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:buy",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:endure",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.lf.any.coal_out",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": 2,
+              "def": "lf.any.coal_out",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": false,
+              "must_resolve": false,
+              "observations": [],
+              "panel": "slots",
+              "person": "",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "life",
+              "uid": "c0009",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "keep",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "read",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.nw.rumor",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "nw.1938.wangshan_dock",
+              "expires_in": 5,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": true,
+              "must_resolve": false,
+              "observations": [],
+              "panel": "read",
+              "person": "",
+              "source": "zhouma",
+              "stage": {},
+              "status": "open",
+              "type": "news",
+              "uid": "c0010",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            }
+          ]
+        },
+        {
+          "op": "set",
+          "path": "night_offers",
+          "value": [
+            {
+              "art": "illus.nt.tidy",
+              "choices": [],
+              "def": "nt.tidy"
+            },
+            {
+              "art": "illus.nt.family_dinner",
+              "choices": [
+                "waive_life",
+                "family_word"
+              ],
+              "def": "nt.family_dinner"
+            },
+            {
+              "art": "illus.nt.early_sleep",
+              "choices": [],
+              "def": "nt.early_sleep"
+            }
+          ]
+        },
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "night"
+        },
+        {
+          "op": "set",
+          "path": "stage",
+          "value": {
+            "sealed": false,
+            "set": "counter",
+            "time": "night"
+          }
+        }
+      ],
+      "result": {
+        "err": "",
+        "items": [
+          {
+            "args": {},
+            "consequence_key": "p.brother.1938.farewell#outcomes.ignored",
+            "def": "p.brother.1938.farewell",
+            "kind": "gold_leave",
+            "uid": "c0002"
+          },
+          {
+            "args": {},
+            "consequence_key": "ev.1938.police_check#outcomes.fail",
+            "def": "ev.1938.police_check",
+            "kind": "ignore",
+            "uid": "c0003"
+          },
+          {
+            "args": {},
+            "consequence_key": "g02.end.pass",
+            "def": "ev.any.fortune_teller",
+            "kind": "pass",
+            "uid": "c0008"
+          },
+          {
+            "args": {},
+            "consequence_key": "fa.any.fire_next_door#outcomes.ignored",
+            "def": "fa.any.fire_next_door",
+            "kind": "ignore",
+            "uid": "c0004"
+          },
+          {
+            "args": {},
+            "consequence_key": "g02.end.leave",
+            "def": "p.linsao.1938.pawn_hairpin",
+            "kind": "leave",
+            "uid": "c0005"
+          },
+          {
+            "args": {},
+            "consequence_key": "g02.end.leave",
+            "def": "p.chen.1938.buy_scroll",
+            "kind": "leave",
+            "uid": "c0006"
+          },
+          {
+            "args": {},
+            "consequence_key": "g02.end.leave",
+            "def": "p.stranger_peddler.any.sell_bowl",
+            "kind": "leave",
+            "uid": "c0007"
+          },
+          {
+            "args": {
+              "days": 2
+            },
+            "consequence_key": "g01.end.wait",
+            "def": "lf.any.coal_out",
+            "kind": "wait",
+            "uid": "c0009"
+          },
+          {
+            "args": {
+              "days": 5
+            },
+            "consequence_key": "g01.end.wait",
+            "def": "nw.1938.wangshan_dock",
+            "kind": "wait",
+            "uid": "c0010"
+          },
+          {
+            "args": {
+              "days": -1
+            },
+            "consequence_key": "g03.end.demand",
+            "def": "dm.1938.money.t1",
+            "kind": "wait",
+            "uid": "c0014"
+          }
+        ],
+        "ok": true,
+        "step": "end_day"
+      }
+    },
+    {
+      "cmd": "card.read",
+      "events": [
+        [
+          "dossier_changed",
+          "wangshan",
+          "df.wangshan.1938.dock",
+          "added"
+        ],
+        [
+          "first_time",
+          "dossier",
+          {
+            "person": "wangshan"
+          }
+        ],
+        [
+          "card_left",
+          "c0010",
+          "resolved"
+        ]
+      ],
+      "match": {
+        "uid": "c0010"
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "dossier_new",
+          "value": 1
+        },
+        {
+          "op": "set",
+          "path": "hand",
+          "value": [
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:listen",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:argue",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.brother",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.brother.1938.farewell",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": true,
+              "intent": "story",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "slots",
+              "person": "brother",
+              "source": "",
+              "stage": {
+                "after": {
+                  "argue": [
+                    {
+                      "ref": "lines.me_argue",
+                      "who": "me"
+                    },
+                    {
+                      "ref": "lines.after_argue",
+                      "who": "brother"
+                    }
+                  ],
+                  "listen": [
+                    {
+                      "ref": "lines.after_listen",
+                      "who": "brother"
+                    },
+                    {
+                      "ref": "outcomes.listen",
+                      "who": ""
+                    }
+                  ]
+                },
+                "cast": [
+                  {
+                    "at": "door",
+                    "who": "brother"
+                  }
+                ],
+                "fx": [
+                  "predawn"
+                ],
+                "intro": [
+                  {
+                    "ref": "body",
+                    "who": ""
+                  },
+                  {
+                    "ref": "lines.greet",
+                    "who": "brother"
+                  },
+                  {
+                    "ref": "lines.charge",
+                    "who": "brother"
+                  }
+                ],
+                "props": [
+                  {
+                    "art": "prop.trunk",
+                    "at": "door_side"
+                  }
+                ]
+              },
+              "status": "open",
+              "type": "person",
+              "uid": "c0002",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.ev.1938.police_check",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "ev.1938.police_check",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "slots",
+              "person": "",
+              "source": "",
+              "stage": {
+                "after": {
+                  "fail": [
+                    {
+                      "ref": "lines.noted",
+                      "who": "ex_patrol"
+                    },
+                    {
+                      "ref": "outcomes.fail",
+                      "who": ""
+                    }
+                  ],
+                  "success": [
+                    {
+                      "ref": "lines.pass",
+                      "who": "ex_patrol"
+                    }
+                  ]
+                },
+                "cast": [
+                  {
+                    "at": "door_l",
+                    "who": "ex_patrol"
+                  },
+                  {
+                    "at": "door_r",
+                    "who": "ex_patrol"
+                  }
+                ],
+                "intro": [
+                  {
+                    "ref": "lines.greet",
+                    "who": "ex_patrol"
+                  },
+                  {
+                    "ref": "body",
+                    "who": ""
+                  }
+                ],
+                "walk": "patrol"
+              },
+              "status": "open",
+              "type": "event",
+              "uid": "c0003",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:pass",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.ev.any.fortune_teller",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "ev.any.fortune_teller",
+              "expires_in": -1,
+              "fortune": "both",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": false,
+              "must_resolve": false,
+              "observations": [],
+              "panel": "fortune",
+              "person": "",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "event",
+              "uid": "c0008",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:move_goods",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:call_police",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:shut_door",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.fa.any.fire_next_door",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "fa.any.fire_next_door",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "slots",
+              "person": "",
+              "source": "",
+              "stage": {
+                "cast": [
+                  {
+                    "at": "door",
+                    "who": "ex_shopboy"
+                  }
+                ],
+                "fx": [
+                  "fire",
+                  "smoke"
+                ],
+                "intro": [
+                  {
+                    "ref": "lines.greet",
+                    "who": "ex_shopboy"
+                  },
+                  {
+                    "ref": "body",
+                    "who": ""
+                  }
+                ]
+              },
+              "status": "open",
+              "type": "fate",
+              "uid": "c0004",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "refuse",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.linsao",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.linsao.1938.pawn_hairpin",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "pawn",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "counter",
+              "person": "linsao",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "person",
+              "uid": "c0005",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "refuse",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.chen",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.chen.1938.buy_scroll",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "buy",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "counter",
+              "person": "chen",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "person",
+              "uid": "c0006",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "refuse",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.stranger_peddler",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.stranger_peddler.any.sell_bowl",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "sell",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "counter",
+              "person": "stranger_peddler",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "person",
+              "uid": "c0007",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:buy",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "choose:endure",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.lf.any.coal_out",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": 3,
+              "def": "lf.any.coal_out",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": false,
+              "must_resolve": false,
+              "observations": [],
+              "panel": "slots",
+              "person": "",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "life",
+              "uid": "c0009",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            }
+          ]
+        }
+      ],
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    }
+  ],
+  "view": {
+    "busy": false,
+    "caps": {
+      "contacts": 3,
+      "kept": 5,
+      "shelf": 12
+    },
+    "contacts": [
+      {
+        "actions": [],
+        "art": "portrait.ma",
+        "asking": -1,
+        "attrs": {
+          "eye": 1,
+          "nerve": 1,
+          "pull": 3,
+          "tongue": 2
+        },
+        "away_days": 0,
+        "can_appraise": false,
+        "days_left": -1,
+        "def": "ct.ma",
+        "expires_in": -1,
+        "fortune": "",
+        "gold": false,
+        "intent": "",
+        "item": null,
+        "keepable": false,
+        "must_resolve": false,
+        "observations": [],
+        "panel": "none",
+        "person": "ma",
+        "source": "",
+        "stage": {},
+        "status": "open",
+        "type": "contact",
+        "uid": "c0013",
+        "used_today": false,
+        "wheel": "",
+        "zone": "contacts"
+      }
+    ],
+    "date": {
+      "abs_day": 9,
+      "d": 9,
+      "era": "1938",
+      "m": 3,
+      "minute": 480,
+      "stage": 0,
+      "stage_day": 9,
+      "stage_days": 30,
+      "weekday": 2,
+      "y": 1938
+    },
+    "demands": [
+      {
+        "actions": [
+          {
+            "enabled": true,
+            "id": "open",
+            "reason_key": ""
+          }
+        ],
+        "amount": 60,
+        "art": "illus.dm.money",
+        "asking": -1,
+        "attrs": {},
+        "away_days": 0,
+        "can_appraise": false,
+        "days_left": -1,
+        "def": "dm.1938.money.t1",
+        "demand": {
+          "kind": "money",
+          "tier": 1
+        },
+        "expires_in": -1,
+        "fortune": "",
+        "gold": false,
+        "intent": "",
+        "item": null,
+        "keepable": false,
+        "must_resolve": false,
+        "observations": [],
+        "panel": "demand",
+        "person": "",
+        "source": "",
+        "stage": {},
+        "status": "open",
+        "type": "demand",
+        "uid": "c0014",
+        "used_today": false,
+        "wheel": "",
+        "zone": "demands"
+      }
+    ],
+    "dossier_new": 0,
+    "estates": [
+      {
+        "id": "es.jewel_cabinet",
+        "interest_money": 4,
+        "money": 80,
+        "status": "held"
+      },
+      {
+        "id": "es.storeroom",
+        "interest_money": 6,
+        "money": 120,
+        "status": "held"
+      },
+      {
+        "id": "es.counter",
+        "interest_money": 7,
+        "money": 150,
+        "status": "held"
+      },
+      {
+        "id": "es.old_house",
+        "interest_money": 10,
+        "money": 260,
+        "status": "held"
+      },
+      {
+        "id": "es.shopfront",
+        "interest_money": 16,
+        "money": 400,
+        "status": "held"
+      }
+    ],
+    "goals": [
+      {
+        "id": "gl.1938.keep_shop",
+        "main": true,
+        "status": "open"
+      }
+    ],
+    "hand": [
+      {
+        "actions": [
+          {
+            "enabled": true,
+            "id": "open",
+            "reason_key": ""
+          },
+          {
+            "enabled": true,
+            "id": "choose:listen",
+            "reason_key": ""
+          },
+          {
+            "enabled": true,
+            "id": "choose:argue",
+            "reason_key": ""
+          }
+        ],
+        "art": "portrait.brother",
+        "asking": -1,
+        "attrs": {},
+        "away_days": 0,
+        "can_appraise": false,
+        "days_left": -1,
+        "def": "p.brother.1938.farewell",
+        "expires_in": -1,
+        "fortune": "",
+        "gold": true,
+        "intent": "story",
+        "item": null,
+        "keepable": false,
+        "must_resolve": true,
+        "observations": [],
+        "panel": "slots",
+        "person": "brother",
+        "source": "",
+        "stage": {
+          "after": {
+            "argue": [
+              {
+                "ref": "lines.me_argue",
+                "who": "me"
+              },
+              {
+                "ref": "lines.after_argue",
+                "who": "brother"
+              }
+            ],
+            "listen": [
+              {
+                "ref": "lines.after_listen",
+                "who": "brother"
+              },
+              {
+                "ref": "outcomes.listen",
+                "who": ""
+              }
+            ]
+          },
+          "cast": [
+            {
+              "at": "door",
+              "who": "brother"
+            }
+          ],
+          "fx": [
+            "predawn"
+          ],
+          "intro": [
+            {
+              "ref": "body",
+              "who": ""
+            },
+            {
+              "ref": "lines.greet",
+              "who": "brother"
+            },
+            {
+              "ref": "lines.charge",
+              "who": "brother"
+            }
+          ],
+          "props": [
+            {
+              "art": "prop.trunk",
+              "at": "door_side"
+            }
+          ]
+        },
+        "status": "open",
+        "type": "person",
+        "uid": "c0002",
+        "used_today": false,
+        "wheel": "",
+        "zone": "hand"
+      },
+      {
+        "actions": [
+          {
+            "enabled": true,
+            "id": "open",
+            "reason_key": ""
+          }
+        ],
+        "art": "illus.ev.1938.police_check",
+        "asking": -1,
+        "attrs": {},
+        "away_days": 0,
+        "can_appraise": false,
+        "days_left": -1,
+        "def": "ev.1938.police_check",
+        "expires_in": -1,
+        "fortune": "",
+        "gold": false,
+        "intent": "",
+        "item": null,
+        "keepable": false,
+        "must_resolve": true,
+        "observations": [],
+        "panel": "slots",
+        "person": "",
+        "source": "",
+        "stage": {
+          "after": {
+            "fail": [
+              {
+                "ref": "lines.noted",
+                "who": "ex_patrol"
+              },
+              {
+                "ref": "outcomes.fail",
+                "who": ""
+              }
+            ],
+            "success": [
+              {
+                "ref": "lines.pass",
+                "who": "ex_patrol"
+              }
+            ]
+          },
+          "cast": [
+            {
+              "at": "door_l",
+              "who": "ex_patrol"
+            },
+            {
+              "at": "door_r",
+              "who": "ex_patrol"
+            }
+          ],
+          "intro": [
+            {
+              "ref": "lines.greet",
+              "who": "ex_patrol"
+            },
+            {
+              "ref": "body",
+              "who": ""
+            }
+          ],
+          "walk": "patrol"
+        },
+        "status": "open",
+        "type": "event",
+        "uid": "c0003",
+        "used_today": false,
+        "wheel": "",
+        "zone": "hand"
+      },
+      {
+        "actions": [
+          {
+            "enabled": true,
+            "id": "open",
+            "reason_key": ""
+          },
+          {
+            "enabled": true,
+            "id": "choose:pass",
+            "reason_key": ""
+          }
+        ],
+        "art": "illus.ev.any.fortune_teller",
+        "asking": -1,
+        "attrs": {},
+        "away_days": 0,
+        "can_appraise": false,
+        "days_left": -1,
+        "def": "ev.any.fortune_teller",
+        "expires_in": -1,
+        "fortune": "both",
+        "gold": false,
+        "intent": "",
+        "item": null,
+        "keepable": false,
+        "must_resolve": false,
+        "observations": [],
+        "panel": "fortune",
+        "person": "",
+        "source": "",
+        "stage": {},
+        "status": "open",
+        "type": "event",
+        "uid": "c0008",
+        "used_today": false,
+        "wheel": "",
+        "zone": "hand"
+      },
+      {
+        "actions": [
+          {
+            "enabled": true,
+            "id": "open",
+            "reason_key": ""
+          },
+          {
+            "enabled": true,
+            "id": "choose:move_goods",
+            "reason_key": ""
+          },
+          {
+            "enabled": true,
+            "id": "choose:call_police",
+            "reason_key": ""
+          },
+          {
+            "enabled": true,
+            "id": "choose:shut_door",
+            "reason_key": ""
+          }
+        ],
+        "art": "illus.fa.any.fire_next_door",
+        "asking": -1,
+        "attrs": {},
+        "away_days": 0,
+        "can_appraise": false,
+        "days_left": -1,
+        "def": "fa.any.fire_next_door",
+        "expires_in": -1,
+        "fortune": "",
+        "gold": false,
+        "intent": "",
+        "item": null,
+        "keepable": false,
+        "must_resolve": true,
+        "observations": [],
+        "panel": "slots",
+        "person": "",
+        "source": "",
+        "stage": {
+          "cast": [
+            {
+              "at": "door",
+              "who": "ex_shopboy"
+            }
+          ],
+          "fx": [
+            "fire",
+            "smoke"
+          ],
+          "intro": [
+            {
+              "ref": "lines.greet",
+              "who": "ex_shopboy"
+            },
+            {
+              "ref": "body",
+              "who": ""
+            }
+          ]
+        },
+        "status": "open",
+        "type": "fate",
+        "uid": "c0004",
+        "used_today": false,
+        "wheel": "",
+        "zone": "hand"
+      },
+      {
+        "actions": [
+          {
+            "enabled": true,
+            "id": "open",
+            "reason_key": ""
+          },
+          {
+            "enabled": true,
+            "id": "refuse",
+            "reason_key": ""
+          }
+        ],
+        "art": "portrait.linsao",
+        "asking": -1,
+        "attrs": {},
+        "away_days": 0,
+        "can_appraise": false,
+        "days_left": -1,
+        "def": "p.linsao.1938.pawn_hairpin",
+        "expires_in": -1,
+        "fortune": "",
+        "gold": false,
+        "intent": "pawn",
+        "item": null,
+        "keepable": false,
+        "must_resolve": true,
+        "observations": [],
+        "panel": "counter",
+        "person": "linsao",
+        "source": "",
+        "stage": {},
+        "status": "open",
+        "type": "person",
+        "uid": "c0005",
+        "used_today": false,
+        "wheel": "",
+        "zone": "hand"
+      },
+      {
+        "actions": [
+          {
+            "enabled": true,
+            "id": "open",
+            "reason_key": ""
+          },
+          {
+            "enabled": true,
+            "id": "refuse",
+            "reason_key": ""
+          }
+        ],
+        "art": "portrait.chen",
+        "asking": -1,
+        "attrs": {},
+        "away_days": 0,
+        "can_appraise": false,
+        "days_left": -1,
+        "def": "p.chen.1938.buy_scroll",
+        "expires_in": -1,
+        "fortune": "",
+        "gold": false,
+        "intent": "buy",
+        "item": null,
+        "keepable": false,
+        "must_resolve": true,
+        "observations": [],
+        "panel": "counter",
+        "person": "chen",
+        "source": "",
+        "stage": {},
+        "status": "open",
+        "type": "person",
+        "uid": "c0006",
+        "used_today": false,
+        "wheel": "",
+        "zone": "hand"
+      },
+      {
+        "actions": [
+          {
+            "enabled": true,
+            "id": "open",
+            "reason_key": ""
+          },
+          {
+            "enabled": true,
+            "id": "refuse",
+            "reason_key": ""
+          }
+        ],
+        "art": "portrait.stranger_peddler",
+        "asking": -1,
+        "attrs": {},
+        "away_days": 0,
+        "can_appraise": false,
+        "days_left": -1,
+        "def": "p.stranger_peddler.any.sell_bowl",
+        "expires_in": -1,
+        "fortune": "",
+        "gold": false,
+        "intent": "sell",
+        "item": null,
+        "keepable": false,
+        "must_resolve": true,
+        "observations": [],
+        "panel": "counter",
+        "person": "stranger_peddler",
+        "source": "",
+        "stage": {},
+        "status": "open",
+        "type": "person",
+        "uid": "c0007",
+        "used_today": false,
+        "wheel": "",
+        "zone": "hand"
+      },
+      {
+        "actions": [
+          {
+            "enabled": true,
+            "id": "open",
+            "reason_key": ""
+          },
+          {
+            "enabled": true,
+            "id": "choose:buy",
+            "reason_key": ""
+          },
+          {
+            "enabled": true,
+            "id": "choose:endure",
+            "reason_key": ""
+          }
+        ],
+        "art": "illus.lf.any.coal_out",
+        "asking": -1,
+        "attrs": {},
+        "away_days": 0,
+        "can_appraise": false,
+        "days_left": 3,
+        "def": "lf.any.coal_out",
+        "expires_in": -1,
+        "fortune": "",
+        "gold": false,
+        "intent": "",
+        "item": null,
+        "keepable": false,
+        "must_resolve": false,
+        "observations": [],
+        "panel": "slots",
+        "person": "",
+        "source": "",
+        "stage": {},
+        "status": "open",
+        "type": "life",
+        "uid": "c0009",
+        "used_today": false,
+        "wheel": "",
+        "zone": "hand"
+      },
+      {
+        "actions": [
+          {
+            "enabled": true,
+            "id": "open",
+            "reason_key": ""
+          },
+          {
+            "enabled": true,
+            "id": "keep",
+            "reason_key": ""
+          },
+          {
+            "enabled": true,
+            "id": "read",
+            "reason_key": ""
+          }
+        ],
+        "art": "illus.nw.rumor",
+        "asking": -1,
+        "attrs": {},
+        "away_days": 0,
+        "can_appraise": false,
+        "days_left": -1,
+        "def": "nw.1938.wangshan_dock",
+        "expires_in": 5,
+        "fortune": "",
+        "gold": false,
+        "intent": "",
+        "item": null,
+        "keepable": true,
+        "must_resolve": false,
+        "observations": [],
+        "panel": "read",
+        "person": "",
+        "source": "zhouma",
+        "stage": {},
+        "status": "open",
+        "type": "news",
+        "uid": "c0010",
+        "used_today": false,
+        "wheel": "",
+        "zone": "hand"
+      }
+    ],
+    "heat_tier": 0,
+    "kept": [
+      {
+        "actions": [],
+        "art": "illus.kp.ma_owes",
+        "asking": -1,
+        "attrs": {},
+        "away_days": 0,
+        "can_appraise": false,
+        "days_left": -1,
+        "def": "kp.ma_owes",
+        "expires_in": 20,
+        "fortune": "",
+        "gold": false,
+        "intent": "",
+        "item": null,
+        "keepable": true,
+        "must_resolve": false,
+        "observations": [],
+        "panel": "none",
+        "person": "",
+        "source": "",
+        "stage": {},
+        "status": "open",
+        "type": "kept",
+        "uid": "c0011",
+        "used_today": false,
+        "wheel": "",
+        "zone": "kept"
+      },
+      {
+        "actions": [],
+        "art": "illus.kp.liangmin",
+        "asking": -1,
+        "attrs": {},
+        "away_days": 0,
+        "can_appraise": false,
+        "days_left": -1,
+        "def": "kp.liangmin",
+        "expires_in": -1,
+        "fortune": "",
+        "gold": false,
+        "intent": "",
+        "item": null,
+        "keepable": true,
+        "must_resolve": false,
+        "observations": [],
+        "panel": "none",
+        "person": "",
+        "source": "",
+        "stage": {},
+        "status": "open",
+        "type": "kept",
+        "uid": "c0012",
+        "used_today": false,
+        "wheel": "",
+        "zone": "kept"
+      }
+    ],
+    "lots": [],
+    "mode": "shop",
+    "money": {
+      "amount": 340,
+      "currency": "fabi"
+    },
+    "night_offers": [],
+    "notice": {
+      "almanac": {
+        "done": [],
+        "id": "alm.shoudang",
+        "ji": [
+          "travel"
+        ],
+        "yi": [
+          "pawn_in",
+          "meet"
+        ]
+      },
+      "fortune": "ws.1938.month.caixing",
+      "market_day": false,
+      "news": [
+        "w0.mock.notice"
+      ],
+      "weather": "clear"
+    },
+    "open_panel": {
+      "args": {},
+      "kind": ""
+    },
+    "pending": [],
+    "phase": "day",
+    "relics": {
+      "cap": 6,
+      "count": 4,
+      "dormant": false,
+      "held": [
+        {
+          "art": "prop.relic.stub_box",
+          "depth": "plain",
+          "id": "rl.stub_box",
+          "since": 8
+        },
+        {
+          "art": "prop.relic.camphor_chest",
+          "depth": "storied",
+          "id": "rl.camphor_chest",
+          "since": 14
+        },
+        {
+          "art": "prop.relic.oilpaper_umbrella",
+          "depth": "plain",
+          "id": "rl.oilpaper_umbrella",
+          "since": 21
+        },
+        {
+          "art": "prop.relic.rosewood_abacus",
+          "depth": "treasure",
+          "id": "rl.rosewood_abacus",
+          "since": 42
+        }
+      ]
+    },
+    "rep_tier": 1,
+    "self": {
+      "attrs": {
+        "eye": 2,
+        "nerve": 1,
+        "pull": 1,
+        "tongue": 1
+      },
+      "def": "self.ruhua",
+      "uid": "c0001",
+      "used_today": false
+    },
+    "shelf_count": 2,
+    "stage": {
+      "sealed": false,
+      "set": "counter",
+      "time": "day"
+    },
+    "stock": {
+      "open": "",
+      "sources": [
+        {
+          "art": "illus.ky.dockhands",
+          "id": "ky.dockhands"
+        },
+        {
+          "art": "illus.ky.old_customers",
+          "id": "ky.old_customers"
+        }
+      ],
+      "week_deals": 2
+    },
+    "tickets": [],
+    "v": 1
+  }
+}

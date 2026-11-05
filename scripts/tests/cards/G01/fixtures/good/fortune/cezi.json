@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "owner": "K10",
+    "schema": 1,
+    "brief": "例子集：测字（§4.7.18）"
+  },
+  "cards": [
+    {
+      "id": "cz.shui",
+      "type": "cezi",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "omen_water"
+      ],
+      "brief": "‘水’字：水边、船、码头。窗口里有 omen_water 征兆的牌就给‘有’的提示，没有给‘无’的提示。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-14"
+      }
+    }
+  ]
+}

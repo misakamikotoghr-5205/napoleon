@@ -1,0 +1,115 @@
+{
+  "_meta": {
+    "owner": "G05",
+    "date": "2026-10-13",
+    "kind": "offline-contract12-fortune-certificate",
+    "snapshot": "63b508a52bc9e4355af3f9d17750c59b41b03188",
+    "source_tree": "7c8e50c66d168057b1cdaa1eab7792bf99001692",
+    "shared_base": "598d1e1",
+    "contract_version": "1.2",
+    "runtime": "Godot4.7.1"
+  },
+  "scope": {
+    "assembled_modules": [
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06"
+    ],
+    "suite": "G05_lot_accuracy_a/b/c/d",
+    "data": "public data/cards/_examples at source snapshot, plus private ASCII G05 fixture completing lot grades, fortune access, and candidate cards",
+    "fixture": "scripts/tests/cards/G05/fixture.gd at source snapshot",
+    "oracle": "actual assembled CardComposer.compose / CardSchedule.due and G05 forecast/pin logic",
+    "window_abs_days": [
+      6,
+      7,
+      8
+    ],
+    "runtime_policy_telemetry": false,
+    "notes": [
+      "Independent minimal test contexts retain narrow pay/rep/extra_deal/conscience-condition doubles; lots use zero cost.",
+      "Each seed draws three lots, then uses the actual composer over three future days with alternating rain/clear weather; promises are deduplicated before counting.",
+      "This certifies only forecast/pin delivery exactness under the documented fixture; it does not certify formal K10 balance, full lifecycle on_expire behavior, contact usage, or wheel calibration.",
+      "Root identified the exact suite-start source as 63b508a at 10:54 UTC. A concurrent G06 report-metadata commit changed the assembled HEAD during the run without changing the fate/composer/data scope.",
+      "Earlier evidence.json, evidence_integrated.json and evidence_true_loop.json keep their original snapshot domains; none is relabeled as this source."
+    ]
+  },
+  "fortune": {
+    "seed_from": 0,
+    "seed_to_exclusive": 1000,
+    "lots_per_seed": 3,
+    "successful_lots": 3000,
+    "unique_pinned_promises": 5301,
+    "delivered_promises": 5301,
+    "accuracy_pct": 100,
+    "shards": [
+      {
+        "seed_from": 0,
+        "seed_to_exclusive": 250,
+        "lots": 750,
+        "promises": 1312,
+        "delivered": 1312
+      },
+      {
+        "seed_from": 250,
+        "seed_to_exclusive": 500,
+        "lots": 750,
+        "promises": 1314,
+        "delivered": 1314
+      },
+      {
+        "seed_from": 500,
+        "seed_to_exclusive": 750,
+        "lots": 750,
+        "promises": 1330,
+        "delivered": 1330
+      },
+      {
+        "seed_from": 750,
+        "seed_to_exclusive": 1000,
+        "lots": 750,
+        "promises": 1345,
+        "delivered": 1345
+      }
+    ]
+  },
+  "provenance": {
+    "source_objects": {
+      "scripts/cards/fate": "04fca685c57c709c027e8455148fe8fbdd038ad5",
+      "scripts/cards/core/card_composer.gd": "f7a1b8232c92b0bdc1b71a8832e2221157662f2c",
+      "scripts/cards/loop/schedule.gd": "185454e993c6c7a52fa0078541a86ac143aec12e",
+      "scripts/tests/cards/G05/fixture.gd": "d74b4963ccd009a219233dfd1f55878836fd61d8",
+      "scripts/tests/cards/G05/scenarios.gd": "b2a0d96c60bfbbc1fc00a9b1778d0d958165250c",
+      "data/cards/_examples": "b668bb0e240ba37bd8a6319ed98dacdad7bc6881"
+    },
+    "logs": [
+      {
+        "path": "/tmp/tmp.VIirMfO7UX/G05_lot_accuracy_a_.log",
+        "sha256": "3d4c6c514dee0d7a6d0fd302374589cc2b0dd406af5bf0ab5c5d23e2041f98ae",
+        "summary": "G05 ACCURACY seeds=0..249 lots=750 promised=1312 hit=1312 rate=100%",
+        "pass": "CARDS TEST PASS G05_lot_accuracy_a"
+      },
+      {
+        "path": "/tmp/tmp.VIirMfO7UX/G05_lot_accuracy_b_.log",
+        "sha256": "1f4528be4410d8e449355f2fe9cb0b4eded63555e5d531cf8935ea654653c78f",
+        "summary": "G05 ACCURACY seeds=250..499 lots=750 promised=1314 hit=1314 rate=100%",
+        "pass": "CARDS TEST PASS G05_lot_accuracy_b"
+      },
+      {
+        "path": "/tmp/tmp.VIirMfO7UX/G05_lot_accuracy_c_.log",
+        "sha256": "c0e208ad430a723c3590297510a1233e7fb818314cb9a9d6a85ee9aa898e2d89",
+        "summary": "G05 ACCURACY seeds=500..749 lots=750 promised=1330 hit=1330 rate=100%",
+        "pass": "CARDS TEST PASS G05_lot_accuracy_c"
+      },
+      {
+        "path": "/tmp/tmp.VIirMfO7UX/G05_lot_accuracy_d_.log",
+        "sha256": "cbce33deac51e1742543a2a6cdcd19fbac4fd29d583c001fc15340e3f2206e19",
+        "summary": "G05 ACCURACY seeds=750..999 lots=750 promised=1345 hit=1345 rate=100%",
+        "pass": "CARDS TEST PASS G05_lot_accuracy_d"
+      }
+    ],
+    "all_four_shards_passed_without_errors": true
+  }
+}

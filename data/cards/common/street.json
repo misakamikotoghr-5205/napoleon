@@ -1,0 +1,523 @@
+{
+  "_meta": {
+    "owner": "K09",
+    "schema": 1,
+    "brief": "流落街头时每天抽的牌。成功进账用 k09.reason.street_work"
+  },
+  "cards": [
+    {
+      "id": "st.beg",
+      "type": "street",
+      "era": [
+        "*"
+      ],
+      "weight": 12,
+      "tags": [
+        "street"
+      ],
+      "conditions": {
+        "mode": "street"
+      },
+      "slots": [
+        {
+          "id": "you",
+          "accepts": [
+            "self"
+          ],
+          "attr": "tongue"
+        }
+      ],
+      "check": {
+        "need": 1,
+        "on_success": [
+          {
+            "op": "money",
+            "delta": 4,
+            "reason": "k09.reason.street_work"
+          }
+        ],
+        "on_fail": []
+      },
+      "art": "illus.st.beg",
+      "brief": "流落街头时乞讨。把自己放进去掷口才，要 1 个正面，成了进账 4。待调。没理会当没过，不进账。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "st.odd_job",
+      "type": "street",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "street",
+        "labor"
+      ],
+      "conditions": {
+        "mode": "street"
+      },
+      "slots": [
+        {
+          "id": "you",
+          "accepts": [
+            "self"
+          ],
+          "attr": "nerve"
+        }
+      ],
+      "check": {
+        "need": 1,
+        "on_success": [
+          {
+            "op": "money",
+            "delta": 8,
+            "reason": "k09.reason.street_work"
+          }
+        ],
+        "on_fail": []
+      },
+      "art": "illus.st.odd_job",
+      "brief": "流落街头时打零工。掷胆量，要 1 个正面，成了进账 8。待调。没理会当没过，不进账。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "st.stall",
+      "type": "street",
+      "era": [
+        "*"
+      ],
+      "weight": 8,
+      "tags": [
+        "street",
+        "trade"
+      ],
+      "conditions": {
+        "mode": "street"
+      },
+      "slots": [
+        {
+          "id": "you",
+          "accepts": [
+            "self"
+          ],
+          "attr": "tongue"
+        }
+      ],
+      "check": {
+        "need": 2,
+        "on_success": [
+          {
+            "op": "money",
+            "delta": 14,
+            "reason": "k09.reason.street_work"
+          }
+        ],
+        "on_fail": []
+      },
+      "art": "illus.st.stall",
+      "brief": "流落街头时摆地摊。掷口才，要 2 个正面，成了进账 14。起步口才不够就做不成。待调。没理会当没过，不进账。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "st.write_letters",
+      "type": "street",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "street",
+        "letter"
+      ],
+      "conditions": {
+        "mode": "street"
+      },
+      "slots": [
+        {
+          "id": "you",
+          "accepts": [
+            "self"
+          ],
+          "attr": "tongue"
+        }
+      ],
+      "check": {
+        "need": 1,
+        "on_success": [
+          {
+            "op": "money",
+            "delta": 6,
+            "reason": "k09.reason.street_work"
+          }
+        ],
+        "on_fail": []
+      },
+      "art": "illus.st.write_letters",
+      "brief": "流落街头时替人写信。掷口才，要 1 个正面，成了进账 6。待调。没理会当没过，不进账。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "st.errand",
+      "type": "street",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "street",
+        "labor"
+      ],
+      "conditions": {
+        "mode": "street"
+      },
+      "slots": [
+        {
+          "id": "you",
+          "accepts": [
+            "self"
+          ],
+          "attr": "nerve"
+        }
+      ],
+      "check": {
+        "need": 1,
+        "on_success": [
+          {
+            "op": "money",
+            "delta": 7,
+            "reason": "k09.reason.street_work"
+          }
+        ],
+        "on_fail": []
+      },
+      "art": "illus.st.errand",
+      "brief": "流落街头时跑腿。掷胆量，要 1 个正面，成了进账 7。待调。没理会当没过，不进账。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "st.pawn_own",
+      "type": "street",
+      "era": [
+        "*"
+      ],
+      "weight": 6,
+      "tags": [
+        "street",
+        "pawn"
+      ],
+      "conditions": {
+        "mode": "street"
+      },
+      "slots": [
+        {
+          "id": "goods",
+          "accepts": [
+            "item"
+          ]
+        }
+      ],
+      "check": {
+        "need": 1,
+        "on_success": [
+          {
+            "op": "item_lose",
+            "match": {
+              "pick": "any"
+            },
+            "n": 1,
+            "reason": "k09.reason.street_pawn"
+          },
+          {
+            "op": "money",
+            "delta": 18,
+            "reason": "k09.reason.street_work"
+          }
+        ],
+        "on_fail": []
+      },
+      "art": "illus.st.pawn_own",
+      "brief": "流落街头时当掉随身一件东西。格子收物品，要 1 个正面；成了进账 18，并再扣一件随身物品。若放进格子已经把东西交出去，会扣两次，待 G04/G06 确认。待调。没理会当没过，不进账，随身的东西也不扣。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "st.gamble",
+      "type": "street",
+      "era": [
+        "*"
+      ],
+      "weight": 6,
+      "tags": [
+        "street"
+      ],
+      "conditions": {
+        "mode": "street"
+      },
+      "choices": [
+        {
+          "id": "go",
+          "effects": [
+            {
+              "op": "wheel_offer",
+              "wheel": "wh.gamble"
+            }
+          ],
+          "brief": "去赌摊转一把"
+        },
+        {
+          "id": "skip",
+          "effects": [],
+          "brief": "走开"
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.st.gamble",
+      "brief": "流落街头时去赌摊。street 没有 opens_wheel 字段。选项 go 用 wheel_offer 指向 wh.gamble，由引擎再发去转的那张行动牌。选项 skip 走开。轮盘归 K10。没有顶层 check，没理会等于没去，不进账也不输。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "st.ask_kin",
+      "type": "street",
+      "era": [
+        "*"
+      ],
+      "weight": 8,
+      "tags": [
+        "street",
+        "kin"
+      ],
+      "conditions": {
+        "mode": "street"
+      },
+      "slots": [
+        {
+          "id": "who",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "attr": "pull"
+        }
+      ],
+      "check": {
+        "need": 2,
+        "on_success": [
+          {
+            "op": "money",
+            "delta": 12,
+            "reason": "k09.reason.street_work"
+          }
+        ],
+        "on_fail": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "illus.st.ask_kin",
+      "brief": "流落街头时找熟人。自己或一个人脉放进去掷门路，要 2 个正面，成了进账 12。不成，口碑往下走一点（有的人躲你）。待调。没理会当没过，不进账，口碑也往下走一点。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "st.scavenge",
+      "type": "street",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "street"
+      ],
+      "conditions": {
+        "mode": "street"
+      },
+      "slots": [
+        {
+          "id": "you",
+          "accepts": [
+            "self"
+          ],
+          "attr": "eye"
+        }
+      ],
+      "check": {
+        "need": 1,
+        "on_success": [
+          {
+            "op": "money",
+            "delta": 5,
+            "reason": "k09.reason.street_work"
+          }
+        ],
+        "on_fail": []
+      },
+      "art": "illus.st.scavenge",
+      "brief": "流落街头时捡能换钱的东西。掷眼力，要 1 个正面，成了进账 5。待调。没理会当没过，不进账。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "st.watch",
+      "type": "street",
+      "era": [
+        "*"
+      ],
+      "weight": 8,
+      "tags": [
+        "street",
+        "labor"
+      ],
+      "conditions": {
+        "mode": "street"
+      },
+      "slots": [
+        {
+          "id": "you",
+          "accepts": [
+            "self"
+          ],
+          "attr": "nerve"
+        }
+      ],
+      "check": {
+        "need": 2,
+        "on_success": [
+          {
+            "op": "money",
+            "delta": 12,
+            "reason": "k09.reason.street_work"
+          }
+        ],
+        "on_fail": []
+      },
+      "art": "illus.st.watch",
+      "brief": "流落街头时替人守夜。掷胆量，要 2 个正面，成了进账 12。起步胆量不够就做不成。待调。没理会当没过，不进账。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "st.copy",
+      "type": "street",
+      "era": [
+        "*"
+      ],
+      "weight": 8,
+      "tags": [
+        "street",
+        "letter"
+      ],
+      "conditions": {
+        "mode": "street"
+      },
+      "slots": [
+        {
+          "id": "you",
+          "accepts": [
+            "self"
+          ],
+          "attr": "eye"
+        }
+      ],
+      "check": {
+        "need": 2,
+        "on_success": [
+          {
+            "op": "money",
+            "delta": 8,
+            "reason": "k09.reason.street_work"
+          }
+        ],
+        "on_fail": []
+      },
+      "art": "illus.st.copy",
+      "brief": "流落街头时抄写。掷眼力，要 2 个正面，成了进账 8。待调。没理会当没过，不进账。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "st.carry",
+      "type": "street",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "street",
+        "labor"
+      ],
+      "conditions": {
+        "mode": "street"
+      },
+      "slots": [
+        {
+          "id": "you",
+          "accepts": [
+            "self"
+          ],
+          "attr": "nerve"
+        }
+      ],
+      "check": {
+        "need": 1,
+        "on_success": [
+          {
+            "op": "money",
+            "delta": 9,
+            "reason": "k09.reason.street_work"
+          }
+        ],
+        "on_fail": []
+      },
+      "art": "illus.st.carry",
+      "brief": "流落街头时扛脚。掷胆量，要 1 个正面，成了进账 9。待调。没理会当没过，不进账。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

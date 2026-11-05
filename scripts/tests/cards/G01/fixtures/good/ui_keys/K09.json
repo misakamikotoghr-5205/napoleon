@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "owner": "K09",
+    "schema": 1
+  },
+  "keys": {
+    "k09.arrest.contraband": {
+      "brief": "带着违禁的东西被抓"
+    },
+    "k09.reason.box_returned": {
+      "brief": "箱子被取走，给的一笔钱"
+    },
+    "k09.reason.street_work": {
+      "brief": "街头做活挣的钱"
+    }
+  }
+}

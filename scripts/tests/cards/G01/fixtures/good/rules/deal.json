@@ -1,0 +1,53 @@
+{
+  "_meta": {
+    "owner": "G01",
+    "schema": 1
+  },
+  "_doc": [
+    "每日发牌：人物几张、事件、消息、夜牌三选一、街头三张；各区上限；手牌排序；教学脚本日（§4.6）。数字都是【待调】起步值。"
+  ],
+  "person": {
+    "min": 3,
+    "max": 4,
+    "market_bonus": 1,
+    "rain_penalty": 1,
+    "rep_tier_bonus": [
+      0,
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "event": {
+    "per_day": 1
+  },
+  "news": {
+    "num": 1,
+    "den": 2
+  },
+  "night_offer": 3,
+  "street_per_day": 3,
+  "caps": {
+    "kept": 5,
+    "contacts": 3,
+    "hand_soft": 10
+  },
+  "hand_order": [
+    "gold",
+    "prison",
+    "big_fate",
+    "event",
+    "fate",
+    "person",
+    "life",
+    "news"
+  ],
+  "scripted_days": {
+    "0": [
+      1,
+      2,
+      3
+    ]
+  }
+}

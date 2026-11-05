@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "owner": "G05",
+    "schema": 1
+  },
+  "climate": {
+    "id": "c_climate",
+    "mode": "exogenous",
+    "outcomes": [
+      {
+        "id": "clear",
+        "weight": 60,
+        "cooldown_days": 0,
+        "effects": []
+      },
+      {
+        "id": "rain",
+        "weight": 20,
+        "cooldown_days": 0,
+        "effects": []
+      },
+      {
+        "id": "fog",
+        "weight": 8,
+        "cooldown_days": 0,
+        "effects": []
+      },
+      {
+        "id": "wind",
+        "weight": 10,
+        "cooldown_days": 0,
+        "effects": []
+      },
+      {
+        "id": "snow",
+        "weight": 2,
+        "cooldown_days": 0,
+        "effects": []
+      }
+    ]
+  }
+}

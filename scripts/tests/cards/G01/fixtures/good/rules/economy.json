@@ -1,0 +1,44 @@
+{
+  "_meta": {
+    "owner": "G04",
+    "schema": 1
+  },
+  "_doc": [
+    "柜台、当票、赎当、鉴定清晰度门槛（§4.6）。tiers.pay 相对客人报价，receive 相对看得见的估价。"
+  ],
+  "start_money": 340,
+  "shelf_cap": 12,
+  "max_rounds": 5,
+  "tiers": {
+    "pay": {
+      "harsh": 55,
+      "fair": 75,
+      "kind": 95
+    },
+    "receive": {
+      "harsh": 130,
+      "fair": 105,
+      "kind": 85
+    }
+  },
+  "patience": {
+    "offer_min": 10,
+    "counter_min": 10
+  },
+  "ticket": {
+    "term_days": 15,
+    "grace_days": 3,
+    "rate_pct_month": 3,
+    "storage_permille_month": 5
+  },
+  "redeem": {
+    "squeeze_pct": 20,
+    "come_num": 2,
+    "come_den": 3,
+    "compensate_pct": 120
+  },
+  "appraise": {
+    "clear_permille": 700,
+    "partial_permille": 350
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "_meta": {
+    "owner": "C06",
+    "schema": 1,
+    "brief": "C06 指引测试步骤。只给 CardGuide.load_steps，不进牌库。",
+    "_provenance": {
+      "by": "ai",
+      "task": "C06",
+      "date": "2026-10-13"
+    }
+  },
+  "settings": {
+    "gap_ms": 0,
+    "default_seconds": 8,
+    "max_new_per_day": 16,
+    "bubble_max_w": 280
+  },
+  "steps": [
+    {
+      "id": "gd.m.wheel",
+      "teaches": ["month_wheel"],
+      "trigger": {"first": "month_wheel"},
+      "teacher": "brother",
+      "anchor": "a.wheel.face",
+      "anchor_fallback": "",
+      "done_when": ["timeout"],
+      "priority": 90,
+      "max_shows": 2,
+      "seconds": 1,
+      "brief": "哥哥指着盘面：这个月的运势，转一次才开张。"
+    },
+    {
+      "id": "gd.m.incense",
+      "teaches": ["incense"],
+      "trigger": {"first": "month_wheel", "after": ["gd.m.wheel"]},
+      "teacher": "brother",
+      "anchor": "a.wheel.incense",
+      "anchor_fallback": "",
+      "done_when": ["ui:slot_drop", "first:incense"],
+      "priority": 80,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "放香之前先看香案：香火钱、留着的牌、人脉都能放上去。"
+    },
+    {
+      "id": "gd.big_wheel",
+      "teaches": ["big_wheel"],
+      "trigger": {"first": "big_wheel"},
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.card@{uid}",
+      "anchor_fallback": "a.wheel.face",
+      "done_when": ["timeout"],
+      "priority": 70,
+      "max_shows": 2,
+      "seconds": 1,
+      "brief": "快输时手里这张大命运，点开就是大轮盘；面板开着就看盘面。"
+    },
+    {
+      "id": "gd.fair_wheel",
+      "teaches": ["fair_wheel"],
+      "trigger": {"first": "fair_wheel"},
+      "teacher": "obj.notice",
+      "anchor": "a.wheel.cost",
+      "anchor_fallback": "a.card@{uid}",
+      "done_when": ["timeout"],
+      "priority": 60,
+      "max_shows": 2,
+      "seconds": 1,
+      "brief": "庙会这场要花钱，代价写在这一块。"
+    },
+    {
+      "id": "gd.gamble_wheel",
+      "teaches": ["gamble_wheel", "wheel_stake"],
+      "trigger": {"first": "gamble_wheel"},
+      "teacher": "",
+      "anchor": "a.wheel.cost",
+      "anchor_fallback": "a.card@{uid}",
+      "done_when": ["timeout"],
+      "priority": 50,
+      "max_shows": 2,
+      "seconds": 1,
+      "brief": "赌摊要先押一张留着的牌，再转。"
+    }
+  ]
+}

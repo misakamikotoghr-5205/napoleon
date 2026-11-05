@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "owner": "W0",
+    "schema": 1,
+    "brief": "演出旁白键校验正例"
+  },
+  "keys": {
+    "w0.stage.enter": {"brief": "ENTER"},
+    "w0.stage.at_door": {"brief": "AT_DOOR"},
+    "w0.stage.leave": {"brief": "LEAVE"}
+  }
+}

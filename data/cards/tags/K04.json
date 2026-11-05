@@ -1,0 +1,96 @@
+{
+  "_meta": {
+    "owner": "K04",
+    "schema": 1,
+    "brief": "K04 引入的分类标签。征兆家族 omen_* 与 bad_omen 在 W0。"
+  },
+  "tags": {
+    "big": {
+      "brief": "K04 分类标签 big"
+    },
+    "contraband": {
+      "brief": "K04 分类标签 contraband"
+    },
+    "debt": {
+      "brief": "K04 分类标签 debt"
+    },
+    "disaster": {
+      "brief": "K04 分类标签 disaster"
+    },
+    "dispute": {
+      "brief": "K04 分类标签 dispute"
+    },
+    "family": {
+      "brief": "K04 分类标签 family"
+    },
+    "far": {
+      "brief": "K04 分类标签 far"
+    },
+    "fire": {
+      "brief": "K04 分类标签 fire"
+    },
+    "fuel": {
+      "brief": "K04 分类标签 fuel"
+    },
+    "gate": {
+      "brief": "K04 分类标签 gate"
+    },
+    "home": {
+      "brief": "K04 分类标签 home"
+    },
+    "illness": {
+      "brief": "K04 分类标签 illness"
+    },
+    "leverage": {
+      "brief": "K04 分类标签 leverage"
+    },
+    "levy": {
+      "brief": "K04 分类标签 levy"
+    },
+    "market": {
+      "brief": "K04 分类标签 market"
+    },
+    "official": {
+      "brief": "K04 分类标签 official"
+    },
+    "papers": {
+      "brief": "K04 分类标签 papers"
+    },
+    "police": {
+      "brief": "K04 分类标签 police"
+    },
+    "price": {
+      "brief": "K04 分类标签 price"
+    },
+    "rice": {
+      "brief": "K04 分类标签 rice"
+    },
+    "road": {
+      "brief": "K04 分类标签 road"
+    },
+    "rumor": {
+      "brief": "K04 分类标签 rumor"
+    },
+    "search": {
+      "brief": "K04 分类标签 search"
+    },
+    "snow": {
+      "brief": "K04 分类标签 snow"
+    },
+    "stranger": {
+      "brief": "K04 分类标签 stranger"
+    },
+    "water": {
+      "brief": "K04 分类标签 water"
+    },
+    "wealth": {
+      "brief": "K04 分类标签 wealth"
+    },
+    "winter": {
+      "brief": "K04 分类标签 winter"
+    },
+    "year_end": {
+      "brief": "K04 分类标签 year_end"
+    }
+  }
+}

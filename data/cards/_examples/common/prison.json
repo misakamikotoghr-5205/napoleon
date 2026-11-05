@@ -1,0 +1,77 @@
+{
+  "_meta": {
+    "owner": "W0",
+    "schema": 1,
+    "brief": "例子集：牢房（§4.7.14）"
+  },
+  "cards": [
+    {
+      "id": "pr.cell",
+      "type": "prison",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "tags": [
+        "prison"
+      ],
+      "slots": [
+        {
+          "id": "bribe",
+          "accepts": [
+            "money"
+          ],
+          "tags": [
+            "official"
+          ],
+          "money_per_coin": 20,
+          "max": 3
+        },
+        {
+          "id": "bail",
+          "accepts": [
+            "contact"
+          ],
+          "attr": "pull",
+          "tags": [
+            "official"
+          ]
+        },
+        {
+          "id": "favor",
+          "accepts": [
+            "kept"
+          ],
+          "tags": [
+            "official",
+            "papers",
+            "favor"
+          ],
+          "max": 2
+        }
+      ],
+      "check": {
+        "need": 3,
+        "on_success": [
+          {
+            "op": "heat",
+            "delta": -30
+          }
+        ],
+        "on_fail": [
+          {
+            "op": "game_over",
+            "reason": "prison"
+          }
+        ]
+      },
+      "art": "illus.pr.cell",
+      "brief": "被抓进牢房：放钱打点、人脉作保、留着的牌（人情、介绍信、金条），掷铜钱。成了出来（代价是放进去的东西）；不成，这一局结束，可从本月开头重来。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-14"
+      }
+    }
+  ]
+}

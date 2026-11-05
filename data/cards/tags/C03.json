@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "owner": "C03",
+    "schema": 1,
+    "brief": "C03 格子性质（界面上的 wants）用到的标签",
+    "_provenance": {
+      "by": "ai",
+      "task": "C03",
+      "date": "2026-10-13"
+    }
+  },
+  "tags": {
+    "official": {
+      "brief": "格子性质：官面"
+    },
+    "papers": {
+      "brief": "格子性质：证件"
+    },
+    "favor": {
+      "brief": "格子性质：人情"
+    },
+    "person": {
+      "brief": "格子性质：要人"
+    },
+    "goods": {
+      "brief": "格子性质：要货"
+    },
+    "money": {
+      "brief": "格子性质：要钱"
+    },
+    "hard": {
+      "brief": "格子性质：硬货"
+    }
+  }
+}

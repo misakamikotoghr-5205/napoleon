@@ -1,0 +1,4 @@
+# K02 1938 世界牌 + 通用事件与大赌（docs/handoff_cards/K02_data-1938-world.md）
+K02_validate|res://scripts/cards/core/validate_main.gd|120|--only=data/cards/era/1938/events.json,data/cards/era/1938/fate.json,data/cards/era/1938/big_fate.json,data/cards/era/1938/life.json,data/cards/era/1938/goals.json,data/cards/era/1938/stage.json,data/cards/era/common/events.json,data/cards/era/common/big_fate.json,data/cards/tags/K02.json,data/cards/ui_keys/K02.json --name=K02_validate
+K02_data|res://scripts/tests/cards/K02/test_data.gd|120|
+K02_guide_support|res://scripts/tests/cards/K02/test_guide_support.gd|120|

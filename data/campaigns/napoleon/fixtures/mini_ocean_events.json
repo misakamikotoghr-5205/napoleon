@@ -1,0 +1,162 @@
+{
+ "events": [
+  {
+   "id": "ev_mo_council1",
+   "pool": "fixed",
+   "council": true,
+   "title": "军议",
+   "location": "营帐",
+   "speaker": "hero",
+   "body": [
+    "三条方略。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "cp",
+     "label": "多带军令",
+     "boss_mod": {
+      "cp_bonus": 2
+     }
+    },
+    {
+     "id": "morale",
+     "label": "先挫敌锐气",
+     "boss_mod": {
+      "enemy_morale": -2
+     }
+    },
+    {
+     "id": "prep",
+     "label": "多一回合布阵",
+     "boss_mod": {
+      "prep_turn": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_mo_council2",
+   "pool": "fixed",
+   "council": true,
+   "title": "军议",
+   "location": "营帐",
+   "speaker": "hero",
+   "body": [
+    "三条方略。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "cp",
+     "label": "多带军令",
+     "boss_mod": {
+      "cp_bonus": 2
+     }
+    },
+    {
+     "id": "morale",
+     "label": "先挫敌锐气",
+     "boss_mod": {
+      "enemy_morale": -2
+     }
+    },
+    {
+     "id": "prep",
+     "label": "多一回合布阵",
+     "boss_mod": {
+      "prep_turn": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_mo_pool",
+   "pool": "ocean",
+   "weight": 2,
+   "once": true,
+   "title": "漂流瓶",
+   "location": "海边",
+   "speaker": "hero",
+   "body": [
+    "一只漂流瓶。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "open",
+     "label": "打开",
+     "rogue": {
+      "coins": {
+       "intel": 1
+      }
+     }
+    },
+    {
+     "id": "toss",
+     "label": "扔回去"
+    }
+   ]
+  },
+  {
+   "id": "ev_mo_bond",
+   "interlude": "bond",
+   "chapters": [
+    "mo_one"
+   ],
+   "title": "营火夜话",
+   "location": "甲板",
+   "speaker": "hero",
+   "body": [
+    "和两位伙伴聊到天亮。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "talk",
+     "label": "聊",
+     "rogue": {
+      "trust": {
+       "pick": 2,
+       "gain": 1
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_mo_audience",
+   "interlude": "audience",
+   "chapters": [
+    "mo_two"
+   ],
+   "title": "召见",
+   "location": "岛上",
+   "speaker": "hero",
+   "body": [
+    "皇帝问话。"
+   ],
+   "appraisals": [],
+   "questions": [
+    {
+     "id": "q1",
+     "q": "要不要回去",
+     "a": {
+      "id": "a",
+      "label": "要",
+      "effects": {
+       "morale": 2
+      }
+     },
+     "b": {
+      "id": "b",
+      "label": "不要",
+      "effects": {
+       "morale": -1
+      }
+     }
+    }
+   ]
+  }
+ ]
+}

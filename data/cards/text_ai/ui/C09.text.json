@@ -1,0 +1,54 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "c09.btn.begin": {
+    "t": "开张"
+  },
+  "c09.btn.next_month": {
+    "t": "到下个月"
+  },
+  "c09.btn.next_year": {
+    "t": "到下一年"
+  },
+  "c09.btn.retry": {
+    "t": "从本月开头重来"
+  },
+  "c09.btn.resume": {
+    "t": "读今早的存档"
+  },
+  "c09.btn.title": {
+    "t": "回到标题"
+  },
+  "c09.goals.title": {
+    "t": "这个月要办的事"
+  },
+  "c09.goals.main": {
+    "t": "主线"
+  },
+  "c09.goals.done": {
+    "t": "办成了"
+  },
+  "c09.goals.failed": {
+    "t": "没办成"
+  },
+  "c09.year.page": {
+    "t": "第 {i} 条，共 {n} 条"
+  },
+  "c09.close.title": {
+    "t": "这个月的账"
+  },
+  "c09.close.note": {
+    "t": "一个月一结：开销、利息、当票，还有这个月要办的事。"
+  },
+  "c09.over.title": {
+    "t": "这一局到这里"
+  },
+  "c09.year.title": {
+    "t": "一年过去了"
+  },
+  "c09.btn.year_more": {
+    "t": "接着看"
+  }
+}

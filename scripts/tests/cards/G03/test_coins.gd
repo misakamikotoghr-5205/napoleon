@@ -1,0 +1,26 @@
+extends SceneTree
+const T = preload("res://scripts/tests/cards/lib/card_t.gd")
+const S = preload("res://scripts/tests/cards/G03/test_support.gd")
+func _initialize() -> void:
+	var t := T.new(self, "G03_coins")
+	var e := S.engine()
+	var ctx := e.ctx
+	t.eq(CardCoins.toss(ctx, "test", 0, 12), CardCoins.toss(ctx, "test", 0, 12), "same key same faces")
+	t.ok(CardCoins.toss(ctx, "test", 0, 32) != CardCoins.toss(ctx, "test", 1, 32), "attempt changes draws")
+	ctx.run([{"op": "if", "cond": {}, "then": [{"op": "coin_check", "coins": 32, "need": 12, "then": []}, {"op": "coin_check", "coins": 32, "need": 12, "then": []}]}], "c0001/check")
+	var attempts: Dictionary = ctx.state.ns("rules")["attempts"]
+	t.ok(attempts.has("c0001/check/0/then/0") and attempts.has("c0001/check/0/then/1"), "nested source paths")
+	var tosses: Array = ctx.out.filter(func(row: Array) -> bool: return row[0] == &"coins_tossed")
+	t.ok(tosses[0][2] != tosses[1][2], "same card different source coin checks")
+	var uid := S.event(ctx)
+	CardSlots.place(ctx, uid, "cash", {"kind": "money", "amount": 200})
+	t.eq(CardSlots.preview(ctx, uid)["coins"], 12, "max coins cap")
+	var papers := CardPiles.spawn(ctx, "kp.liangmin", &"kept")
+	CardSlots.place(ctx, uid, "kept", {"kind": "kept", "uid": papers})
+	t.ok(CardSlots.preview(ctx, uid)["auto_pass"], "auto pass preview")
+	var before := attempts.duplicate(true)
+	var result := CardSlots.roll(ctx, uid)
+	t.eq(result["faces"], [], "auto pass never tosses")
+	t.eq(attempts, before, "auto pass no attempt increment")
+	t.eq(CardPiles.zone_of(ctx, papers), &"kept", "unconsumed papers")
+	t.finish()

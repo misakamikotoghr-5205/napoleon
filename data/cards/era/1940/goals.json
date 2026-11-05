@@ -1,0 +1,184 @@
+{
+  "_meta": {
+    "owner": "K06",
+    "schema": 1,
+    "brief": "1940 目标。主线在新规矩下站住脚，其余可选。"
+  },
+  "cards": [
+    {
+      "id": "gl.1940.stand_rules",
+      "type": "goal",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "tags": [
+        "goal"
+      ],
+      "main": true,
+      "done_when": {
+        "all": [
+          {
+            "estate_status": [
+              "es.shopfront",
+              "held"
+            ]
+          },
+          {
+            "flag": "stood_1940"
+          }
+        ]
+      },
+      "eval": "month_close",
+      "effects": {
+        "on_done": [],
+        "on_fail": []
+      },
+      "art": "illus.gl.1940.stand_rules",
+      "brief": "主线：在新规矩下站住脚。月底铺面还在自己手里，并且新官那张牌上选了报备或送礼。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gl.1940.census_clear",
+      "type": "goal",
+      "era": [
+        "1940"
+      ],
+      "weight": 8,
+      "tags": [
+        "goal"
+      ],
+      "main": false,
+      "done_when": {
+        "flag": "census_cleared"
+      },
+      "eval": "any_time",
+      "effects": {
+        "on_done": [],
+        "on_fail": []
+      },
+      "art": "illus.gl.1940.census_clear",
+      "brief": "可选：户口清点过了。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gl.1940.levy_done",
+      "type": "goal",
+      "era": [
+        "1940"
+      ],
+      "weight": 8,
+      "tags": [
+        "goal"
+      ],
+      "main": false,
+      "done_when": {
+        "flag": "levy_handled"
+      },
+      "eval": "any_time",
+      "effects": {
+        "on_done": [],
+        "on_fail": []
+      },
+      "art": "illus.gl.1940.levy_done",
+      "brief": "可选：新名目的摊派交过或讲成了。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gl.1940.heat_quiet",
+      "type": "goal",
+      "era": [
+        "1940"
+      ],
+      "weight": 6,
+      "tags": [
+        "goal"
+      ],
+      "main": false,
+      "done_when": {
+        "heat_tier_lte": 2
+      },
+      "eval": "month_close",
+      "effects": {
+        "on_done": [],
+        "on_fail": []
+      },
+      "art": "illus.gl.1940.heat_quiet",
+      "brief": "可选：月底风声停在中间或以下，不到上头两档。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gl.1940.ruhua_well",
+      "type": "goal",
+      "era": [
+        "1940"
+      ],
+      "weight": 5,
+      "tags": [
+        "goal"
+      ],
+      "main": false,
+      "done_when": {
+        "person_state": [
+          "ruhua",
+          "ok"
+        ]
+      },
+      "eval": "month_close",
+      "effects": {
+        "on_done": [],
+        "on_fail": []
+      },
+      "art": "illus.gl.1940.ruhua_well",
+      "brief": "可选：月底如花没有病着、也没有不在。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gl.1940.cash_left",
+      "type": "goal",
+      "era": [
+        "1940"
+      ],
+      "weight": 5,
+      "tags": [
+        "goal"
+      ],
+      "main": false,
+      "done_when": {
+        "money_gte": 80
+      },
+      "eval": "month_close",
+      "effects": {
+        "on_done": [],
+        "on_fail": []
+      },
+      "art": "illus.gl.1940.cash_left",
+      "brief": "可选：月底手里还留着一笔能周转的钱。数目待平衡那条线再定。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

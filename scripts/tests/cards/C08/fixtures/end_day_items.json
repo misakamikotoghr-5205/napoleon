@@ -1,0 +1,270 @@
+{
+  "_meta": {
+    "owner": "C08",
+    "schema": 1,
+    "brief": "打烊清单：离开、记仇、没理会、金色牌、放过去、明天接着算各一行",
+    "_provenance": {
+      "by": "ai",
+      "task": "C08",
+      "date": "2026-10-14"
+    }
+  },
+  "queries": {
+    "day.end_preview|{}": {
+      "items": [
+        {
+          "args": {},
+          "consequence_key": "g02.end.leave",
+          "def": "p.linsao.1938.pawn_hairpin",
+          "kind": "leave",
+          "uid": "c0101"
+        },
+        {
+          "args": {},
+          "consequence_key": "ev.1938.police_check#outcomes.ignored",
+          "def": "ev.1938.police_check",
+          "kind": "leave",
+          "uid": "c0103"
+        },
+        {
+          "args": {},
+          "consequence_key": "g02.end.ignore",
+          "def": "ev.1938.police_check",
+          "kind": "ignore",
+          "uid": "c0102"
+        },
+        {
+          "args": {},
+          "consequence_key": "p.brother.1938.farewell#outcomes.ignored",
+          "def": "p.brother.1938.farewell",
+          "kind": "gold_leave",
+          "uid": "c0201"
+        },
+        {
+          "args": {},
+          "consequence_key": "g02.end.pass",
+          "def": "nw.1938.wangshan_dock",
+          "kind": "pass",
+          "uid": "c0301"
+        },
+        {
+          "args": {
+            "days": 2
+          },
+          "consequence_key": "g01.end.wait",
+          "def": "lf.any.coal_out",
+          "kind": "wait",
+          "uid": "c0401"
+        }
+      ],
+      "needs_confirm": true,
+      "step": "end_day"
+    },
+    "card|{\"uid\":\"c0101\"}": {
+      "actions": [],
+      "art": "illus.p.linsao.1938.pawn_hairpin",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "days_left": -1,
+      "def": "p.linsao.1938.pawn_hairpin",
+      "expires_in": -1,
+      "gold": false,
+      "intent": "pawn",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "counter",
+      "person": "linsao",
+      "status": "open",
+      "type": "person",
+      "uid": "c0101",
+      "used_today": false,
+      "zone": "hand"
+    },
+    "card|{\"uid\":\"c0102\"}": {
+      "actions": [],
+      "art": "illus.ev.1938.police_check",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "days_left": -1,
+      "def": "ev.1938.police_check",
+      "expires_in": -1,
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "slots",
+      "person": "",
+      "status": "open",
+      "type": "event",
+      "uid": "c0102",
+      "used_today": false,
+      "zone": "hand"
+    },
+    "card|{\"uid\":\"c0103\"}": {
+      "actions": [],
+      "art": "illus.ev.1938.police_check",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "days_left": -1,
+      "def": "ev.1938.police_check",
+      "expires_in": -1,
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "slots",
+      "person": "",
+      "status": "open",
+      "type": "event",
+      "uid": "c0103",
+      "used_today": false,
+      "zone": "hand"
+    },
+    "card|{\"uid\":\"c0201\"}": {
+      "actions": [],
+      "art": "portrait.brother",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "days_left": -1,
+      "def": "p.brother.1938.farewell",
+      "expires_in": -1,
+      "gold": true,
+      "intent": "story",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "slots",
+      "person": "brother",
+      "status": "open",
+      "type": "person",
+      "uid": "c0201",
+      "used_today": false,
+      "zone": "hand"
+    },
+    "card|{\"uid\":\"c0301\"}": {
+      "actions": [],
+      "art": "illus.nw.1938.wangshan_dock",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "days_left": -1,
+      "def": "nw.1938.wangshan_dock",
+      "expires_in": -1,
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": false,
+      "must_resolve": false,
+      "observations": [],
+      "panel": "read",
+      "person": "",
+      "status": "open",
+      "type": "news",
+      "uid": "c0301",
+      "used_today": false,
+      "zone": "hand"
+    },
+    "card|{\"uid\":\"c0401\"}": {
+      "actions": [],
+      "art": "illus.lf.any.coal_out",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "days_left": 3,
+      "def": "lf.any.coal_out",
+      "expires_in": -1,
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": false,
+      "must_resolve": false,
+      "observations": [],
+      "panel": "none",
+      "person": "",
+      "status": "open",
+      "type": "life",
+      "uid": "c0401",
+      "used_today": false,
+      "zone": "hand"
+    }
+  },
+  "responses": [
+    {
+      "cmd": "day.end",
+      "events": [
+        ["card_left", "c0101", "left"],
+        ["card_left", "c0201", "gold_left"],
+        ["phase_changed", "day", "night"]
+      ],
+      "match": {
+        "confirm": true
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "night"
+        }
+      ],
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    }
+  ],
+  "view": {
+    "busy": false,
+    "date": {
+      "abs_day": 1,
+      "d": 1,
+      "era": "1938",
+      "m": 3,
+      "minute": 600,
+      "stage": 0,
+      "stage_day": 1,
+      "stage_days": 30,
+      "weekday": 1,
+      "y": 1938
+    },
+    "hand": [],
+    "heat_tier": 0,
+    "mode": "shop",
+    "money": {
+      "amount": 200,
+      "currency": "fabi"
+    },
+    "night_offers": [],
+    "phase": "day",
+    "rep_tier": 1,
+    "stage": {
+      "sealed": false,
+      "set": "counter",
+      "time": "day"
+    },
+    "v": 1
+  }
+}

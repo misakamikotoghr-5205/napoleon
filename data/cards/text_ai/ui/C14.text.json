@@ -1,0 +1,99 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-25:appraise-weigh"
+  },
+  "c14.title": {
+    "t": "称分量"
+  },
+  "c14.tool.dengzi": {
+    "t": "用戥子称"
+  },
+  "c14.tool.steelyard": {
+    "t": "用杆秤称"
+  },
+  "c14.claimed": {
+    "t": "他说有 {w}。"
+  },
+  "c14.btn.done": {
+    "t": "称好了"
+  },
+  "c14.tool.weight": {
+    "t": "砝码：放上或拿下"
+  },
+  "c14.tool.poise": {
+    "t": "拖秤砣，定盘针正了才算平"
+  },
+  "c14.btn.commit": {
+    "t": "压平了，看星"
+  },
+  "c14.btn.again": {
+    "t": "再称一回"
+  },
+  "c14.btn.poise_in": {
+    "t": "往里挪一格"
+  },
+  "c14.btn.poise_out": {
+    "t": "往外挪一格"
+  },
+  "c14.cap.zoom": {
+    "t": "星点放大"
+  },
+  "c14.star.qian": {
+    "t": "大星一颗是1钱"
+  },
+  "c14.star.liang": {
+    "t": "大星一颗是1两"
+  },
+  "c14.call.match": {
+    "t": "对得上"
+  },
+  "c14.call.light_small": {
+    "t": "轻一点点"
+  },
+  "c14.call.light_much": {
+    "t": "轻了不少"
+  },
+  "c14.call.heavy": {
+    "t": "反倒重了"
+  },
+  "c14.call.unsure": {
+    "t": "没压稳，说不好"
+  },
+  "c14.weight.face": {
+    "t": "{qian}钱{fen}分"
+  },
+  "c14.weight.face_fen": {
+    "t": "{fen}分"
+  },
+  "c14.weight.face_qian": {
+    "t": "{qian}钱"
+  },
+  "c14.weight.face_liang": {
+    "t": "{liang}两"
+  },
+  "c14.weight.face_lq": {
+    "t": "{liang}两{qian}钱"
+  },
+  "c14.weight.face_lf": {
+    "t": "{liang}两{fen}分"
+  },
+  "c14.weight.face_lqf": {
+    "t": "{liang}两{qian}钱{fen}分"
+  },
+  "c14.rule.match": {
+    "t": "和他说的上下差{w}以内，算对得上"
+  },
+  "c14.rule.small": {
+    "t": "比他说的轻{w}以内，算轻一点点；再轻，算轻了不少"
+  },
+  "c14.legend.dot": {
+    "t": "小点一颗是{w}"
+  },
+  "c14.legend.cord": {
+    "t": "星数看秤砣挂绳压在哪"
+  },
+  "c14.legend.sum": {
+    "t": "砝码加星数，就是分量"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "k18.reason.skim": {
+    "t": "补上短款"
+  },
+  "k18.reason.tip_cover": {
+    "t": "按下风声"
+  },
+  "k18.notice.watching": {
+    "t": "你不在，学徒留在铺里看柜台。"
+  },
+  "k18.notice.books_match": {
+    "t": "学徒的账和柜子对得上。"
+  },
+  "k18.notice.books_short": {
+    "t": "账对不上，短了一截。"
+  },
+  "k18.pet.home": {
+    "t": "店里的猫"
+  },
+  "k18.pet.lost": {
+    "t": "猫走丢了"
+  },
+  "k18.notice.kept": {
+    "t": "猫留下来了。"
+  },
+  "k18.notice.shoo": {
+    "t": "把猫赶走了。"
+  },
+  "k18.notice.missed": {
+    "t": "猫来过，没人留它。"
+  },
+  "k18.notice.found": {
+    "t": "猫找回来了。"
+  },
+  "k18.notice.still_lost": {
+    "t": "这回没找到猫。"
+  },
+  "k18.notice.left_out": {
+    "t": "先不去找猫。"
+  },
+  "k18.notice.ignored_find": {
+    "t": "找猫的事搁下了。"
+  },
+  "k18.reply.scare": {
+    "t": "亮出枪吓唬他"
+  }
+}

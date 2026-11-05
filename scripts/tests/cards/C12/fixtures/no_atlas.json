@@ -1,0 +1,32 @@
+{
+  "kind": "spot",
+  "seed": 77,
+  "item": "I-shut",
+  "art": "item.art.landscape",
+  "atlas_art": "item.art.landscape",
+  "atlas_open": false,
+  "ink": 3,
+  "minutes_per_step": 1,
+  "max_minutes": 30,
+  "tools": ["eye", "lens", "atlas"],
+  "parts": [
+    {
+      "id": "material",
+      "rect": [8, 8, 12, 12],
+      "tool": "eye"
+    },
+    {
+      "id": "condition",
+      "rect": [40, 36, 12, 12],
+      "tool": "eye"
+    }
+  ],
+  "marks": [
+    {
+      "part": "material",
+      "kind": "differs",
+      "fine": 200,
+      "seed": 7
+    }
+  ]
+}

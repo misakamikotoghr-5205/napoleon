@@ -1,0 +1,86 @@
+{
+  "_meta": {
+    "owner": "C09",
+    "schema": 1,
+    "brief": "局终：原因 prison 放在 open_panel.args。视图里没有局终原因。"
+  },
+  "guide_progress": {},
+  "queries": {
+    "firsts|{}": {
+      "firsts": {}
+    }
+  },
+  "responses": [
+    {
+      "cmd": "game.retry_stage",
+      "result": {
+        "ok": true,
+        "err": ""
+      }
+    },
+    {
+      "cmd": "game.load",
+      "match": {},
+      "result": {
+        "ok": true,
+        "err": ""
+      }
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "ok": true,
+        "err": ""
+      }
+    }
+  ],
+  "view": {
+    "v": 1,
+    "phase": "game_over",
+    "mode": "shop",
+    "busy": false,
+    "date": {
+      "stage": 0,
+      "era": "1938",
+      "y": 1938,
+      "m": 3,
+      "d": 12,
+      "weekday": 3,
+      "stage_day": 12,
+      "stage_days": 30,
+      "abs_day": 12,
+      "minute": 600
+    },
+    "notice": {
+      "weather": "clear",
+      "market_day": false,
+      "news": [],
+      "almanac": {
+        "id": "alm.shoudang",
+        "yi": [],
+        "ji": [],
+        "done": []
+      },
+      "fortune": ""
+    },
+    "money": {
+      "amount": 40,
+      "currency": "fabi"
+    },
+    "rep_tier": 1,
+    "heat_tier": 0,
+    "hand": [],
+    "kept": [],
+    "contacts": [],
+    "pending": [],
+    "demands": [],
+    "tickets": [],
+    "goals": [],
+    "open_panel": {
+      "kind": "game_over",
+      "args": {
+        "reason": "prison"
+      }
+    }
+  }
+}

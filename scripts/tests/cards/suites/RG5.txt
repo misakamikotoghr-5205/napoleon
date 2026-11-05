@@ -1,0 +1,7 @@
+# RG5 肉鸽 v1 旧账：引擎上下文（game.new {run}、legacy.harvest、legacy.old_ink、veteran、unscripted_day）、
+# 档案文件 CardProfile、外壳 keeper 与根场景接线、档案簿旧墨（docs/cards/rogue/ROGUE_V1.md §14 RG5）
+RG5_validate|res://scripts/cards/core/validate_main.gd|120|--only=data/cards/ui_keys/RG5.json,data/cards/text_ai/ui/RG5.text.json --name=RG5_validate
+RG5_engine|res://scripts/tests/cards/RG5/test_engine.gd|300|
+RG5_profile|res://scripts/tests/cards/RG5/test_profile.gd|120|
+RG5_root|res://scripts/tests/cards/RG5/test_root.gd|300|
+RG5_dossier|res://scripts/tests/cards/RG5/test_dossier.gd|120|

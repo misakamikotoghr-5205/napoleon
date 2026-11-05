@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "owner": "G04",
+    "schema": 1
+  },
+  "_doc": [
+    "Launch currency and integer conversion ratios."
+  ],
+  "currencies": {
+    "fabi": {
+      "unit": 1
+    }
+  },
+  "conversions": []
+}

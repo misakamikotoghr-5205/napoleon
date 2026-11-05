@@ -1,0 +1,65 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-1938"
+  },
+  "fa.1938.door_fine": {
+    "title": "门上的罚单",
+    "body": "伪维持会的人在铺门上贴了一张临时罚单。",
+    "choices": {
+      "pay": "交罚款",
+      "argue": "找人去说",
+      "shut": "关门硬顶"
+    },
+    "slots": {
+      "man": "会说话的人"
+    },
+    "outcomes": {
+      "success": "说通了，罚款免了。",
+      "fail": "没说通，罚款照交，风声更紧了。",
+      "ignored": "不理罚单，风声会紧，口碑也会掉。"
+    }
+  },
+  "fa.1938.kin_money": {
+    "title": "远亲寄钱",
+    "body": "远方的亲戚托人捎来一笔钱。",
+    "choices": {
+      "take": "收下",
+      "send_back": "退回去",
+      "ask_more": "再开口要些"
+    },
+    "slots": {
+      "man": "会说话的人"
+    },
+    "outcomes": {
+      "success": "亲戚又多寄了一些来。",
+      "fail": "话说得不妥，亲戚那边不高兴，街坊也知道了。"
+    }
+  },
+  "fa.1938.requisition": {
+    "title": "征用的风声",
+    "body": "听说有人要来征粮征船，铺里的东西怕是保不住。",
+    "choices": {
+      "hide": "藏起来",
+      "hand": "交出去",
+      "bribe": "花钱挡一挡"
+    },
+    "slots": {
+      "man": "胆大的人"
+    },
+    "outcomes": {
+      "success": "东西藏好了，没被找到。",
+      "fail": "没藏住，丢了一件货，风声也紧了。",
+      "ignored": "不理会，铺里的一袋米会被拿走，口碑也会掉。"
+    }
+  },
+  "fa.1938.rice_ease": {
+    "title": "米价松了",
+    "body": "这几天米不那么紧了，老主顾也托人带话，说有笔生意要介绍。",
+    "choices": {
+      "stock": "囤一点米",
+      "intro": "接下介绍",
+      "pass": "不动"
+    }
+  }
+}

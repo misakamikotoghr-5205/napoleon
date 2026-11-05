@@ -1,0 +1,57 @@
+{
+  "id": "d2_zhao",
+  "npc": "zhao",
+  "mode": "pawn",
+  "items": [{"def": "deed_zhao"}],
+  "ask": 300,
+  "floor": 300,
+  "suggest": 600,
+  "est": [1500, 2500],
+  "show_floor": false,
+  "hard_floor": true,
+  "fund_button": false,
+  "min_inspect": 0,
+  "split": false,
+  "hint": "",
+  "pre": [
+    {"op": "narr", "text": "一个黑瘦的汉子进来，在柜台前站了很久才开口。"}
+  ],
+  "intro": [
+    {"op": "say", "who": "zhao", "text": "我儿子……三天前在田里被保安队抓了壮丁。他们说，三百蚨就放人。"},
+    {"op": "say", "who": "zhao", "text": "我家就这一亩二分水田，是祖上传下来的。当三百。秋收了我就来赎。"}
+  ],
+  "on_inspect": {
+    "witness": [
+      {"op": "note", "kind": "线索", "text": "中人画押里有一个“沈……”——是如花的祖父。", "source": "seen"}
+    ]
+  },
+  "extras": [],
+  "deals": [
+    {"id": "refuse", "label": "拒收", "steps": [
+      {"op": "stat", "stat": "benxin", "delta": -2, "why": "拒收赵老三的红契"},
+      {"op": "set", "flag": "zhao_pawn", "value": "refused"},
+      {"op": "end", "result": "refused"}
+    ]}
+  ],
+  "on_accept": [
+    {"op": "if", "cond": "price() >= 300 and price() <= 399", "then": [
+      {"op": "set", "flag": "zhao_pawn", "value": 300}
+    ], "else": [
+      {"op": "if", "cond": "price() >= 400", "then": [
+        {"op": "stat", "stat": "benxin", "delta": 3, "why": "主动给赵老三足够的钱"},
+        {"op": "stat", "stat": "koubei", "delta": 3, "why": "主动给赵老三足够的钱"},
+        {"op": "set", "flag": "zhao_pawn", "value": "generous"}
+      ]}
+    ]}
+  ],
+  "on_leave": [
+    {"op": "stat", "stat": "benxin", "delta": -3, "why": "压价到底价以下，赵老三走了"},
+    {"op": "set", "flag": "zhao_pawn", "value": "refused"},
+    {"op": "set", "flag": "zhao_son_unknown", "value": true},
+    {"op": "narr", "text": "他把契纸叠好，揣回怀里，转身走了。"}
+  ],
+  "outro": [],
+  "post": [
+    {"op": "note", "kind": "线索", "text": "这块田的东边是孙家的地。如果赵老三到期赎不回，孙府会来找如花买这张契。", "source": "inferred"}
+  ]
+}

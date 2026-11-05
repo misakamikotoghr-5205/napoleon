@@ -1,0 +1,38 @@
+{
+  "kind": "coin_ring",
+  "seed": 1302,
+  "item": "it.silver.yuan_a",
+  "art": "item.silver.yuan_a",
+  "minutes_per_step": 1,
+  "max_minutes": 30,
+  "coins": [
+    {
+      "id": "a",
+      "ring_ms": 1020,
+      "pitch_cents": -5,
+      "buzz": 17
+    }
+  ],
+  "reference": {
+    "ring_ms": 1400,
+    "pitch_cents": 0,
+    "buzz": 7
+  },
+  "samples": [
+    {
+      "id": "good",
+      "ring_ms": 1400,
+      "pitch_cents": 0,
+      "buzz": 7
+    },
+    {
+      "id": "dull",
+      "ring_ms": 500,
+      "pitch_cents": -190,
+      "buzz": 65
+    }
+  ],
+  "tries": 5,
+  "ghosts": 1,
+  "clink": false
+}

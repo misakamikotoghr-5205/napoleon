@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-3940"
+  },
+  "lf.1940.census_chit": {
+    "title": "补户口纸",
+    "body": "清点户口，家里还要补一张纸。",
+    "choices": {
+      "pay": "补一张",
+      "endure": "空着"
+    },
+    "outcomes": {
+      "ignored": "那张纸一直没补，被人记了一笔，风声紧了。"
+    }
+  },
+  "lf.1940.door_paper": {
+    "title": "门上贴纸",
+    "body": "按新规矩，铺子门上要贴一张纸。",
+    "choices": {
+      "pay": "贴上",
+      "endure": "空着"
+    },
+    "outcomes": {
+      "ignored": "门上一直空着，有人记下了，风声紧了。"
+    }
+  },
+  "lf.1940.school_rename": {
+    "title": "学堂催学费",
+    "body": "学堂换了名目，春天的学费照样来催。",
+    "choices": {
+      "pay": "交学费",
+      "endure": "这春不去"
+    },
+    "outcomes": {
+      "ignored": "学费没交，这个春天学堂就不去了，街坊有些闲话。"
+    }
+  }
+}

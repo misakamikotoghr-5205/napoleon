@@ -1,0 +1,14 @@
+# name|script|timeout|args
+G03_ops|res://scripts/tests/cards/G03/test_ops.gd|240|
+G03_conds|res://scripts/tests/cards/G03/test_conds.gd|240|
+G03_slots|res://scripts/tests/cards/G03/test_slots.gd|240|
+G03_coins|res://scripts/tests/cards/G03/test_coins.gd|240|
+G03_choices|res://scripts/tests/cards/G03/test_choices.gd|240|
+G03_meters|res://scripts/tests/cards/G03/test_meters.gd|240|
+G03_kept_rules|res://scripts/tests/cards/G03/test_kept_rules.gd|240|
+G03_demands|res://scripts/tests/cards/G03/test_demands.gd|240|
+G03_dossier|res://scripts/tests/cards/G03/test_dossier.gd|240|
+G03_view|res://scripts/tests/cards/G03/test_view.gd|240|
+G03_determinism_save|res://scripts/tests/cards/G03/test_determinism_save.gd|240|
+G03_firsts|res://scripts/tests/cards/G03/test_firsts.gd|240|
+G03_end_day|res://scripts/tests/cards/G03/test_end_day.gd|120|

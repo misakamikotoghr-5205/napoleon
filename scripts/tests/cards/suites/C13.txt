@@ -1,0 +1,16 @@
+# C13 吹银元（docs/handoff_cards/C13_mg-coin-ring.md；改版 appraise/DESIGN.md §5：玩家自己听、自己说）
+C13_validate|res://scripts/cards/core/validate_main.gd|120|--only=data/cards/minigames/obs/coin_ring.json --name=C13_validate
+C13_determinism|res://scripts/tests/cards/C13/test_determinism.gd|120|
+C13_fidelity|res://scripts/tests/cards/C13/test_fidelity.gd|120|
+C13_judgment|res://scripts/tests/cards/C13/test_judgment.gd|180|
+C13_replay|res://scripts/tests/cards/C13/test_replay.gd|180|
+C13_no_reveal|res://scripts/tests/cards/C13/test_no_reveal.gd|120|
+C13_mouse|res://scripts/tests/cards/C13/test_mouse.gd|120|
+C13_compat|res://scripts/tests/cards/C13/test_compat.gd|180|
+C13_voice|res://scripts/tests/cards/C13/test_voice.gd|120|
+C13_audio_guard|res://scripts/tests/cards/C13/test_audio_guard.gd|120|
+C13_controls|res://scripts/tests/cards/C13/test_controls.gd|120|
+C13_guide|res://scripts/tests/cards/C13/test_guide.gd|120|
+C13_guide_k16|res://scripts/tests/cards/C13/test_guide.gd|180|--steps=k16 --name=C13_guide_k16
+C13_host_abort|res://scripts/tests/cards/C13/test_host_abort.gd|120|--game=coin_ring --name=C13_host_abort
+C13_evidence|res://scripts/tests/cards/C13/test_evidence.gd|300|

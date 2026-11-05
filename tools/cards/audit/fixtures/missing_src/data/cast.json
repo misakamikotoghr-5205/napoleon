@@ -1,0 +1,8 @@
+{
+  "npcs": {
+    "brother": {
+      "name": "THIS_BRIEF_MUST_NOT_LEAK_CAST",
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_CASTBRIEF"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "owner": "G04",
+    "schema": 1
+  },
+  "_doc": [
+    "Integer permille inputs adapted at runtime for read-only ItemGen."
+  ],
+  "items": {
+    "quality": [
+      {
+        "id": "a",
+        "weight": 20,
+        "mult_permille": 1300
+      },
+      {
+        "id": "b",
+        "weight": 60,
+        "mult_permille": 1000
+      },
+      {
+        "id": "c",
+        "weight": 20,
+        "mult_permille": 750
+      }
+    ],
+    "condition": [
+      450,
+      1000
+    ],
+    "fake_rate": 180,
+    "stolen_rate": 100,
+    "rare_rate": 25,
+    "rare_rate_max": 120,
+    "rare_gain_per_day": 1,
+    "rare_pity_gain": 3,
+    "rare_pity_after": 40,
+    "condition_floor": 400,
+    "rare_mult": 1800,
+    "fake_value_mult": 250,
+    "estimate": [
+      650,
+      1350
+    ],
+    "inspect_estimate": [
+      900,
+      1100
+    ],
+    "buy_suggest": 700
+  }
+}

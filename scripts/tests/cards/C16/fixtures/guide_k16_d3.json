@@ -1,0 +1,70 @@
+{
+  "_meta": {
+    "owner": "C16",
+    "schema": 1,
+    "brief": "K16 steps.json replay for day 3 slots and coins.",
+    "_provenance": {
+      "by": "ai",
+      "task": "C16",
+      "date": "2026-10-23"
+    }
+  },
+  "anchors": [
+    {
+      "id": "a.slots.first",
+      "x": 360,
+      "y": 408,
+      "w": 160,
+      "h": 120
+    },
+    {
+      "id": "a.card@c0011",
+      "x": 560,
+      "y": 540,
+      "w": 144,
+      "h": 180
+    },
+    {
+      "id": "a.slots.coins",
+      "x": 500,
+      "y": 532,
+      "w": 220,
+      "h": 48
+    }
+  ],
+  "ops": [
+    {
+      "op": "view",
+      "phase": "day",
+      "mode": "shop",
+      "stage": 0,
+      "stage_day": 3,
+      "abs_day": 3,
+      "hand": []
+    },
+    {
+      "op": "first",
+      "mech": "slots",
+      "uid": "c0011"
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "ui",
+      "name": "panel_opened",
+      "kind": "slots"
+    },
+    {
+      "op": "first",
+      "mech": "coins"
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "cmd",
+      "cmd": "slot.roll"
+    }
+  ]
+}

@@ -1,0 +1,3096 @@
+{
+  "_meta": {
+    "owner": "K03",
+    "schema": 1,
+    "brief": "1939 腊月人物牌：老面孔跨年、年关来意、新面孔。金色节点在 story.json。",
+    "_provenance": {
+      "by": "ai",
+      "task": "K03",
+      "date": "2026-10-13"
+    }
+  },
+  "persons": {
+    "nf1939a": {
+      "portrait": "portrait.nf1939a",
+      "dossier": true,
+      "brief": "1939 新面孔。提议称呼柴佬，A 定稿。城门外卖柴的人，年关进城当冬衣。要档案页。"
+    },
+    "nf1939b": {
+      "portrait": "portrait.nf1939b",
+      "dossier": true,
+      "brief": "1939 新面孔。提议称呼茧账，A 定稿。日商茧行的账房伙计，来打听茧农的当。要档案页。"
+    },
+    "nf1939c": {
+      "portrait": "portrait.nf1939c",
+      "dossier": true,
+      "brief": "1939 新面孔。提议称呼乡嫂，A 定稿。乡下进城过年的妇人，来当冬衣。要档案页。"
+    },
+    "nf1939d": {
+      "portrait": "portrait.nf1939d",
+      "dossier": true,
+      "brief": "1939 新面孔。提议称呼区抄，A 定稿。伪区公所新来的抄写。要档案页。"
+    }
+  },
+  "cards": [
+    {
+      "id": "p.chen.1939.pawn_clock",
+      "type": "person",
+      "person": "chen",
+      "era": [
+        "1939"
+      ],
+      "weight": 7,
+      "tags": [
+        "winter",
+        "merchant",
+        "omen_wealth"
+      ],
+      "intent": "pawn",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "chen",
+            "gone"
+          ]
+        }
+      },
+      "item": {
+        "template": "utensils.clock"
+      },
+      "asking": {
+        "pct": [
+          95,
+          130
+        ]
+      },
+      "floor": {
+        "pct": [
+          60,
+          85
+        ]
+      },
+      "patience_min": [
+        50,
+        110
+      ],
+      "impatience": "leave",
+      "term_days": 18,
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.chen.1939.clock"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.chen",
+      "brief": "父母的旧交，跳过一年后更见老。1939 腊月他把座钟拿来当，换一点年货。收下记档案；拒绝他就空手走。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.chen.1939.redeem",
+      "type": "person",
+      "person": "chen",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "tags": [
+        "year_end",
+        "omen_wealth"
+      ],
+      "intent": "redeem",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "chen",
+                "gone"
+              ]
+            }
+          },
+          {
+            "ticket_open": "chen"
+          }
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.chen.1939.redeem"
+          }
+        ]
+      },
+      "art": "portrait.chen",
+      "brief": "旧交来赎自己没到期的当。年关赎当的人多，这张只在他有未赎当票时进门。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.chen.1939.ask_letter",
+      "type": "person",
+      "person": "chen",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "family",
+        "post",
+        "omen_far"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "chen",
+                "gone"
+              ]
+            }
+          },
+          {
+            "day_gte": 17
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "tell",
+          "brief": "让他把送信的路讲完",
+          "effects": [
+            {
+              "op": "if",
+              "cond": {
+                "flag": "k03_letter_read"
+              },
+              "then": [
+                {
+                  "op": "dossier",
+                  "frag": "df.chen.1939.letter_route"
+                }
+              ],
+              "else": [
+                {
+                  "op": "dossier",
+                  "frag": "df.chen.1939.letter_unread"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "decline",
+          "brief": "不跟他谈这封信",
+          "effects": [
+            {
+              "op": "flag",
+              "key": "k03_chen_declined"
+            }
+          ]
+        }
+      ],
+      "art": "portrait.chen",
+      "brief": "家书节点之后，旧交来问远方的信走不走得通。讲了就按你有没有拆过信各记一块档案；不讲就作罢。他不代写正文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.xiaoding.1939.pawn_scarf_known",
+      "type": "person",
+      "person": "xiaoding",
+      "era": [
+        "1939"
+      ],
+      "weight": 7,
+      "tags": [
+        "poor",
+        "winter",
+        "clothing",
+        "omen_family"
+      ],
+      "intent": "pawn",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "xiaoding",
+                "gone"
+              ]
+            }
+          },
+          {
+            "has_contact": "xiaoding"
+          }
+        ]
+      },
+      "item": {
+        "template": "clothing.scarf"
+      },
+      "asking": {
+        "pct": [
+          90,
+          120
+        ]
+      },
+      "floor": {
+        "pct": [
+          60,
+          80
+        ]
+      },
+      "patience_min": [
+        70,
+        140
+      ],
+      "impatience": "leave",
+      "term_days": 12,
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.xiaoding.1939.scarf_known"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.xiaoding",
+      "brief": "孙家的年轻伙夫。若已是人脉，1939 腊月他来当一条围巾，给家里病人凑过年的米，开口比生人软。拒绝只是这回没换成。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.xiaoding.1939.pawn_scarf_cold",
+      "type": "person",
+      "person": "xiaoding",
+      "era": [
+        "1939"
+      ],
+      "weight": 8,
+      "tags": [
+        "poor",
+        "winter",
+        "clothing",
+        "omen_family"
+      ],
+      "intent": "pawn",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "xiaoding",
+                "gone"
+              ]
+            }
+          },
+          {
+            "not": {
+              "has_contact": "xiaoding"
+            }
+          }
+        ]
+      },
+      "item": {
+        "template": "clothing.scarf"
+      },
+      "asking": {
+        "pct": [
+          120,
+          160
+        ]
+      },
+      "floor": {
+        "pct": [
+          50,
+          75
+        ]
+      },
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "leave",
+      "term_days": 12,
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.xiaoding.1939.scarf_cold"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          },
+          {
+            "op": "person_state",
+            "person": "xiaoding",
+            "state": "away",
+            "days": 10
+          },
+          {
+            "op": "notice",
+            "key": "k03.notice.xiaoding_away"
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "conscience",
+            "delta": -1
+          },
+          {
+            "op": "person_state",
+            "person": "xiaoding",
+            "state": "away",
+            "days": 10
+          },
+          {
+            "op": "notice",
+            "key": "k03.notice.xiaoding_away"
+          }
+        ]
+      },
+      "art": "portrait.xiaoding",
+      "brief": "同一个伙夫，还不是人脉时的另一张。1939 腊月他更急，当围巾换米。拒绝或耗尽耐心后，他这一阵不再上门。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.xiaoding.1939.redeem",
+      "type": "person",
+      "person": "xiaoding",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "tags": [
+        "year_end",
+        "poor",
+        "omen_wealth"
+      ],
+      "intent": "redeem",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "xiaoding",
+                "gone"
+              ]
+            }
+          },
+          {
+            "ticket_open": "xiaoding"
+          }
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.xiaoding.1939.redeem"
+          }
+        ]
+      },
+      "art": "portrait.xiaoding",
+      "brief": "伙夫来赎自己的当。只在他有未赎当票时出现，凑年关的米。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhang.1939.sell_medicine",
+      "type": "person",
+      "person": "zhang",
+      "era": [
+        "1939"
+      ],
+      "weight": 7,
+      "tags": [
+        "nurse",
+        "medicine",
+        "omen_illness"
+      ],
+      "intent": "sell",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "zhang",
+            "gone"
+          ]
+        }
+      },
+      "item": {
+        "template": "medicine.aspirin"
+      },
+      "asking": {
+        "pct": [
+          130,
+          170
+        ]
+      },
+      "floor": {
+        "pct": [
+          90,
+          120
+        ]
+      },
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "leave",
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.zhang.1939.medicine"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.zhang",
+      "brief": "县城医院的护士。医院被征用之后，她把一盒西药卖给铺子，凑一笔离开县城的路费。1939 年药和米都紧，要价偏高。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhang.1939.pawn_coat",
+      "type": "person",
+      "person": "zhang",
+      "era": [
+        "1939"
+      ],
+      "weight": 7,
+      "tags": [
+        "poor",
+        "clothing",
+        "winter",
+        "nurse",
+        "omen_illness"
+      ],
+      "intent": "pawn",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "zhang",
+            "gone"
+          ]
+        }
+      },
+      "item": {
+        "template": "clothing.coat"
+      },
+      "asking": {
+        "pct": [
+          100,
+          140
+        ]
+      },
+      "floor": {
+        "pct": [
+          55,
+          80
+        ]
+      },
+      "patience_min": [
+        50,
+        100
+      ],
+      "impatience": "leave",
+      "term_days": 12,
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.zhang.1939.coat"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.zhang",
+      "brief": "同一位护士另来当一件冬衣。路费不够时才加这张，不是卖药那张的重复。当期偏短，年关当铺忙。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhang.1939.redeem",
+      "type": "person",
+      "person": "zhang",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "tags": [
+        "year_end",
+        "nurse",
+        "omen_wealth"
+      ],
+      "intent": "redeem",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "zhang",
+                "gone"
+              ]
+            }
+          },
+          {
+            "ticket_open": "zhang"
+          }
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.zhang.1939.redeem"
+          }
+        ]
+      },
+      "art": "portrait.zhang",
+      "brief": "护士来赎自己的当，好把冬衣或别的东西取回去过年。有未赎当票才来。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.wangshan.1939.pawn_ring",
+      "type": "person",
+      "person": "wangshan",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "dock",
+        "omen_water"
+      ],
+      "intent": "pawn",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "wangshan",
+                "gone"
+              ]
+            }
+          },
+          {
+            "story": [
+              "s1938.wangshan",
+              "helped"
+            ]
+          }
+        ]
+      },
+      "item": {
+        "template": "jewelry.ring"
+      },
+      "asking": {
+        "pct": [
+          90,
+          130
+        ]
+      },
+      "floor": {
+        "pct": [
+          55,
+          80
+        ]
+      },
+      "patience_min": [
+        40,
+        80
+      ],
+      "impatience": "leave",
+      "term_days": 18,
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.wangshan.1939.ring"
+          }
+        ]
+      },
+      "art": "portrait.wangshan",
+      "brief": "便衣青年。1938 若收留过他，1939 腊月他敢把一枚戒指留在柜上作押。未收留则不走这张。下落另有金色节点。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.wangshan.1939.ask_wary",
+      "type": "person",
+      "person": "wangshan",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "dock",
+        "omen_road"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "wangshan",
+                "gone"
+              ]
+            }
+          },
+          {
+            "any": [
+              {
+                "story": [
+                  "s1938.wangshan",
+                  "ignored"
+                ]
+              },
+              {
+                "all": [
+                  {
+                    "not": {
+                      "story": [
+                        "s1938.wangshan",
+                        "helped"
+                      ]
+                    }
+                  },
+                  {
+                    "not": {
+                      "story": [
+                        "s1938.wangshan",
+                        "ignored"
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "hear",
+          "brief": "听他问完",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.wangshan.1939.wary"
+            }
+          ]
+        },
+        {
+          "id": "shut",
+          "brief": "不跟他谈",
+          "effects": [
+            {
+              "op": "flag",
+              "key": "k03_wangshan_shut"
+            }
+          ]
+        }
+      ],
+      "art": "portrait.wangshan",
+      "brief": "1938 没理过他，或那场见面没有记下收留的走向时，他只来打听，不把东西押下。问完记一块档案；把他轰走则这回没有下文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.wangshan.1939.redeem",
+      "type": "person",
+      "person": "wangshan",
+      "era": [
+        "1939"
+      ],
+      "weight": 8,
+      "tags": [
+        "year_end",
+        "dock",
+        "omen_wealth"
+      ],
+      "intent": "redeem",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "wangshan",
+                "gone"
+              ]
+            }
+          },
+          {
+            "ticket_open": "wangshan"
+          }
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.wangshan.1939.redeem"
+          }
+        ]
+      },
+      "art": "portrait.wangshan",
+      "brief": "他有未赎的当才来赎。见过面才会当戒指，所以这张多半跟在那张后面。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.li.1939.pawn_robe",
+      "type": "person",
+      "person": "li",
+      "era": [
+        "1939"
+      ],
+      "weight": 7,
+      "tags": [
+        "student",
+        "clothing",
+        "poor",
+        "omen_official"
+      ],
+      "intent": "pawn",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "li",
+            "gone"
+          ]
+        }
+      },
+      "item": {
+        "template": "clothing.robe"
+      },
+      "asking": {
+        "pct": [
+          100,
+          140
+        ]
+      },
+      "floor": {
+        "pct": [
+          55,
+          80
+        ]
+      },
+      "patience_min": [
+        50,
+        110
+      ],
+      "impatience": "leave",
+      "term_days": 12,
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.li.1939.robe"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.li",
+      "brief": "县立中学的学生。1939 年伪县政府把学校盯得更紧，他来当一件学生袍过年。文稿的内容不写在这张上，只留档案碎片。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.li.1939.redeem",
+      "type": "person",
+      "person": "li",
+      "era": [
+        "1939"
+      ],
+      "weight": 9,
+      "tags": [
+        "year_end",
+        "student",
+        "omen_wealth"
+      ],
+      "intent": "redeem",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "li",
+                "gone"
+              ]
+            }
+          },
+          {
+            "ticket_open": "li"
+          }
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.li.1939.redeem"
+          }
+        ]
+      },
+      "art": "portrait.li",
+      "brief": "学生来赎袍子。有未赎当票才来。开年后他还要穿。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.linsao.1939.pawn_coat",
+      "type": "person",
+      "person": "linsao",
+      "era": [
+        "1939"
+      ],
+      "weight": 8,
+      "tags": [
+        "woman",
+        "poor",
+        "clothing",
+        "winter",
+        "child",
+        "omen_family"
+      ],
+      "intent": "pawn",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "linsao",
+                "gone"
+              ]
+            }
+          },
+          {
+            "any": [
+              {
+                "story": [
+                  "s1938.linsao_term",
+                  "ignored"
+                ]
+              },
+              {
+                "all": [
+                  {
+                    "not": {
+                      "story": [
+                        "s1938.linsao_term",
+                        "extended"
+                      ]
+                    }
+                  },
+                  {
+                    "not": {
+                      "story": [
+                        "s1938.linsao_term",
+                        "ignored"
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "not": {
+              "flag": "k03_year_end_pawn"
+            }
+          },
+          {
+            "day_gte": 9
+          }
+        ]
+      },
+      "item": {
+        "template": "clothing.coat"
+      },
+      "asking": {
+        "pct": [
+          110,
+          150
+        ]
+      },
+      "floor": {
+        "pct": [
+          50,
+          75
+        ]
+      },
+      "patience_min": [
+        60,
+        130
+      ],
+      "impatience": "leave",
+      "term_days": 12,
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.linsao.1939.winter_coat"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.linsao",
+      "brief": "船工的妻子。跳过一年，孩子已经会坐，家里更紧。1938 当期没人理，或没有宽限当期的走向时，年关金色牌若没做成，她改日再来当冬衣换米。宽限过当期的不走这张。数字起步，待调。史实：1939 腊月米、柴涨得最凶。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.linsao.1939.redeem",
+      "type": "person",
+      "person": "linsao",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "tags": [
+        "woman",
+        "year_end",
+        "child",
+        "omen_wealth"
+      ],
+      "intent": "redeem",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "linsao",
+                "gone"
+              ]
+            }
+          },
+          {
+            "ticket_open": "linsao"
+          }
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "if",
+            "cond": {
+              "story": [
+                "s1938.linsao_term",
+                "extended"
+              ]
+            },
+            "then": [
+              {
+                "op": "dossier",
+                "frag": "df.linsao.1939.after_hairpin"
+              }
+            ],
+            "else": [
+              {
+                "op": "dossier",
+                "frag": "df.linsao.1939.winter_redeem"
+              }
+            ]
+          },
+          {
+            "op": "dossier",
+            "frag": "df.linsao.1939.child"
+          },
+          {
+            "op": "rep",
+            "delta": 1
+          }
+        ]
+      },
+      "art": "portrait.linsao",
+      "brief": "她有未赎的当才来赎。1938 当期若宽限过，碎片记的是那支簪子一年后的下落；否则记的是这回取走的冬衣。年关赎当里她是常客。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhouma.1939.pawn_scarf",
+      "type": "person",
+      "person": "zhouma",
+      "era": [
+        "1939"
+      ],
+      "weight": 7,
+      "tags": [
+        "rumor",
+        "clothing",
+        "winter",
+        "omen_family"
+      ],
+      "intent": "pawn",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "zhouma",
+            "gone"
+          ]
+        }
+      },
+      "item": {
+        "template": "clothing.scarf"
+      },
+      "asking": {
+        "pct": [
+          95,
+          130
+        ]
+      },
+      "floor": {
+        "pct": [
+          55,
+          80
+        ]
+      },
+      "patience_min": [
+        50,
+        100
+      ],
+      "impatience": "leave",
+      "term_days": 12,
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.zhouma.1939.scarf"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.zhouma",
+      "brief": "桥头茶馆的厨娘，跳过一年仍是消息最杂的人。1939 腊月她自己也当一条围巾，换炭和米。口风在另一张打听牌上。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhouma.1939.redeem",
+      "type": "person",
+      "person": "zhouma",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "tags": [
+        "year_end",
+        "rumor",
+        "omen_wealth"
+      ],
+      "intent": "redeem",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "zhouma",
+                "gone"
+              ]
+            }
+          },
+          {
+            "ticket_open": "zhouma"
+          }
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.zhouma.1939.redeem"
+          }
+        ]
+      },
+      "art": "portrait.zhouma",
+      "brief": "厨娘来赎自己的当。有未赎当票才来，多半是要在除夕前把围巾取回去。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhouma.1939.ask_rumor",
+      "type": "person",
+      "person": "zhouma",
+      "era": [
+        "1939"
+      ],
+      "weight": 8,
+      "tags": [
+        "rumor",
+        "omen_stranger"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "zhouma",
+            "gone"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "listen",
+          "brief": "把口风听完",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.zhouma.1939.rumor"
+            },
+            {
+              "op": "if",
+              "cond": {
+                "not": {
+                  "has_contact": "zhouma"
+                }
+              },
+              "then": [
+                {
+                  "op": "contact_gain",
+                  "person": "zhouma"
+                }
+              ],
+              "else": [
+                {
+                  "op": "rep",
+                  "delta": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pass",
+          "brief": "不听",
+          "effects": [
+            {
+              "op": "flag",
+              "key": "k03_zhouma_passed"
+            }
+          ]
+        }
+      ],
+      "art": "portrait.zhouma",
+      "brief": "她来传口风：码头、米价、有没有人打听王山。听完记档案；若还不是人脉就结成。城门盘查和米行涨价的事件牌归 K04，这里只是她嘴里的一句传闻。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhao.1939.pawn_coat",
+      "type": "person",
+      "person": "zhao",
+      "era": [
+        "1939"
+      ],
+      "weight": 8,
+      "tags": [
+        "farmer",
+        "poor",
+        "clothing",
+        "winter",
+        "omen_family"
+      ],
+      "intent": "pawn",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "zhao",
+                "gone"
+              ]
+            }
+          },
+          {
+            "any": [
+              {
+                "story": [
+                  "s1938.zhao_borrow",
+                  "ignored"
+                ]
+              },
+              {
+                "all": [
+                  {
+                    "not": {
+                      "story": [
+                        "s1938.zhao_borrow",
+                        "lent"
+                      ]
+                    }
+                  },
+                  {
+                    "not": {
+                      "story": [
+                        "s1938.zhao_borrow",
+                        "ignored"
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "item": {
+        "template": "clothing.coat"
+      },
+      "asking": {
+        "pct": [
+          110,
+          150
+        ]
+      },
+      "floor": {
+        "pct": [
+          50,
+          75
+        ]
+      },
+      "patience_min": [
+        60,
+        120
+      ],
+      "impatience": "leave",
+      "term_days": 12,
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.zhao.1939.coat"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.zhao",
+      "brief": "佃户。1938 那三百若没借成，或没记下借成的走向，1939 腊月他当棉衣过年。家里仍欠着一笔赎人的钱，不写抓捕过程。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhao.1939.repay",
+      "type": "person",
+      "person": "zhao",
+      "era": [
+        "1939"
+      ],
+      "weight": 7,
+      "tags": [
+        "farmer",
+        "year_end",
+        "omen_wealth"
+      ],
+      "intent": "help",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "zhao",
+                "gone"
+              ]
+            }
+          },
+          {
+            "story": [
+              "s1938.zhao_borrow",
+              "lent"
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "take",
+          "brief": "收下这笔还款",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 40,
+              "reason": "k03.reason.repay"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.zhao.1939.repay"
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "id": "waive",
+          "brief": "这回免了",
+          "effects": [
+            {
+              "op": "flag",
+              "key": "k03_zhao_waived"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.zhao.1939.waived"
+            },
+            {
+              "op": "conscience",
+              "delta": 1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.zhao",
+      "brief": "1938 若把钱借给他，1939 腊月他来还一小笔。收下记档案；免了则记他欠着情。数目起步，待调。不是柜台议价。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhao.1939.redeem",
+      "type": "person",
+      "person": "zhao",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "tags": [
+        "farmer",
+        "year_end",
+        "omen_wealth"
+      ],
+      "intent": "redeem",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "zhao",
+                "gone"
+              ]
+            }
+          },
+          {
+            "ticket_open": "zhao"
+          }
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.zhao.1939.redeem"
+          }
+        ]
+      },
+      "art": "portrait.zhao",
+      "brief": "佃户来赎自己的当。有未赎当票才来。借成的那年他优先走还钱那张，这张仍留给柜上的票。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.sunyoung.1939.buy_scroll",
+      "type": "person",
+      "person": "sunyoung",
+      "era": [
+        "1939"
+      ],
+      "weight": 5,
+      "tags": [
+        "landlord",
+        "buyer",
+        "omen_wealth"
+      ],
+      "intent": "buy",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "sunyoung",
+            "gone"
+          ]
+        }
+      },
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "leave",
+      "want": {
+        "cats": [
+          "art"
+        ],
+        "budget_pct": [
+          100,
+          160
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.sunyoung.1939.scroll"
+          }
+        ]
+      },
+      "art": "portrait.sunyoung",
+      "brief": "孙家独子。茧和米都碰着日商，家业还在，1939 腊月他仍来买字画当年货。预算起步，待调。那块没说破的伏笔不在这张上写开。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.sunyoung.1939.pawn_qipao",
+      "type": "person",
+      "person": "sunyoung",
+      "era": [
+        "1939"
+      ],
+      "weight": 5,
+      "tags": [
+        "landlord",
+        "clothing",
+        "omen_family"
+      ],
+      "intent": "pawn",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "sunyoung",
+            "gone"
+          ]
+        }
+      },
+      "item": {
+        "template": "clothing.qipao"
+      },
+      "asking": {
+        "pct": [
+          80,
+          120
+        ]
+      },
+      "floor": {
+        "pct": [
+          50,
+          75
+        ]
+      },
+      "patience_min": [
+        30,
+        60
+      ],
+      "impatience": "leave",
+      "term_days": 18,
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.sunyoung.1939.qipao"
+          }
+        ]
+      },
+      "art": "portrait.sunyoung",
+      "brief": "他把一匹旗袍料拿来当，不想让府里看见。不是穷到当衣，是要先脱手。拒绝他就拿走。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.sunyoung.1939.redeem",
+      "type": "person",
+      "person": "sunyoung",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "landlord",
+        "year_end",
+        "omen_wealth"
+      ],
+      "intent": "redeem",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "sunyoung",
+                "gone"
+              ]
+            }
+          },
+          {
+            "ticket_open": "sunyoung"
+          }
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.sunyoung.1939.redeem"
+          }
+        ]
+      },
+      "art": "portrait.sunyoung",
+      "brief": "他有未赎的当才来赎，多半是要把那匹料子在被人问起之前取走。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.ma.1939.ask_soft",
+      "type": "person",
+      "person": "ma",
+      "era": [
+        "1939"
+      ],
+      "weight": 7,
+      "tags": [
+        "official",
+        "year_end",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "ma",
+                "gone"
+              ]
+            }
+          },
+          {
+            "story": [
+              "s1938.ma_levy",
+              "paid"
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "comply",
+          "brief": "应下这笔年关摊派",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 30,
+              "payee": "ma",
+              "reason": "k03.reason.levy",
+              "short": "ladder"
+            },
+            {
+              "op": "person_state",
+              "person": "ma",
+              "state": "changed"
+            },
+            {
+              "op": "notice",
+              "key": "k03.notice.ma_office"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.ma.1939.office_soft"
+            },
+            {
+              "op": "flag",
+              "key": "k03_ma_office"
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "不交",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "flag",
+              "key": "k03_ma_refused"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.ma.1939.refused_soft"
+            }
+          ]
+        }
+      ],
+      "art": "portrait.ma",
+      "brief": "原由伪维持会任命的保长。1938 摊派若交过，1939 年他改挂伪区公所后来谈年关，口风软。应下就交一笔并记成换了身份；拒绝则风声紧一紧。伪县政府、伪区公所已取代伪维持会。数目起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.ma.1939.ask_hard",
+      "type": "person",
+      "person": "ma",
+      "era": [
+        "1939"
+      ],
+      "weight": 8,
+      "tags": [
+        "official",
+        "year_end",
+        "omen_official",
+        "bad_omen"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "ma",
+                "gone"
+              ]
+            }
+          },
+          {
+            "any": [
+              {
+                "story": [
+                  "s1938.ma_levy",
+                  "ignored"
+                ]
+              },
+              {
+                "all": [
+                  {
+                    "not": {
+                      "story": [
+                        "s1938.ma_levy",
+                        "paid"
+                      ]
+                    }
+                  },
+                  {
+                    "not": {
+                      "story": [
+                        "s1938.ma_levy",
+                        "ignored"
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "not": {
+              "flag": "grudge_ma"
+            }
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "comply",
+          "brief": "应下这笔更硬的摊派",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 60,
+              "payee": "ma",
+              "reason": "k03.reason.levy",
+              "short": "ladder"
+            },
+            {
+              "op": "person_state",
+              "person": "ma",
+              "state": "changed"
+            },
+            {
+              "op": "notice",
+              "key": "k03.notice.ma_office"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.ma.1939.office_hard"
+            },
+            {
+              "op": "flag",
+              "key": "k03_ma_office"
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "不交",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "flag",
+              "key": "k03_ma_refused"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.ma.1939.refused_hard"
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "flag",
+            "key": "grudge_ma"
+          },
+          {
+            "op": "rep",
+            "delta": -1
+          },
+          {
+            "op": "counter",
+            "key": "snub_ma",
+            "delta": 1
+          }
+        ]
+      },
+      "art": "portrait.ma",
+      "brief": "同一位保长。1938 摊派没理，或没有记下交过的走向时，他以伪区公所的新身份来，口风硬，数目更高。应下同样记成换了身份。史实：1939 年伪县政府、伪区公所取代伪维持会。数目起步，待调。打烊没接他会记仇，风评差一截，并记下一次冷落，之后改走更硬的摊派。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.ma.1939.ask_grudge",
+      "type": "person",
+      "person": "ma",
+      "era": [
+        "1939"
+      ],
+      "weight": 8,
+      "tags": [
+        "official",
+        "year_end",
+        "omen_official",
+        "bad_omen"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "ma",
+                "gone"
+              ]
+            }
+          },
+          {
+            "counter_gte": [
+              "snub_ma",
+              1
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "comply",
+          "brief": "应下这笔记仇之后的摊派",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 90,
+              "payee": "ma",
+              "reason": "k03.reason.levy",
+              "short": "ladder"
+            },
+            {
+              "op": "person_state",
+              "person": "ma",
+              "state": "changed"
+            },
+            {
+              "op": "notice",
+              "key": "k03.notice.ma_office"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.ma.1939.grudge"
+            },
+            {
+              "op": "flag",
+              "key": "k03_ma_office"
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "仍不交",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 3
+            },
+            {
+              "op": "flag",
+              "key": "k03_ma_refused"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.ma.1939.grudge_refused"
+            }
+          ]
+        }
+      ],
+      "art": "portrait.ma",
+      "brief": "保长已经记过仇再来。上次打烊没接他的硬摊派，这回数目更高。应下仍记成换了身份；不交则风声更紧。伪区公所的人。数目起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.hu2.1939.pawn_coat",
+      "type": "person",
+      "person": "hu2",
+      "era": [
+        "1939"
+      ],
+      "weight": 7,
+      "tags": [
+        "official",
+        "poor",
+        "clothing",
+        "winter",
+        "omen_official"
+      ],
+      "intent": "pawn",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "hu2",
+            "gone"
+          ]
+        }
+      },
+      "item": {
+        "template": "clothing.coat"
+      },
+      "asking": {
+        "pct": [
+          100,
+          140
+        ]
+      },
+      "floor": {
+        "pct": [
+          55,
+          80
+        ]
+      },
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "raise",
+      "term_days": 12,
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.hu2.1939.coat"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.hu2",
+      "brief": "替保长跑腿的人。1939 年他跟着改挂到伪区公所，自己仍要抽一份，腊月把一件棉衣拿来当。身份怎么换记在保长那张上，这张只是他来当衣。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.hu2.1939.redeem",
+      "type": "person",
+      "person": "hu2",
+      "era": [
+        "1939"
+      ],
+      "weight": 8,
+      "tags": [
+        "official",
+        "year_end",
+        "omen_wealth"
+      ],
+      "intent": "redeem",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "hu2",
+                "gone"
+              ]
+            }
+          },
+          {
+            "ticket_open": "hu2"
+          }
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.hu2.1939.redeem"
+          }
+        ]
+      },
+      "art": "portrait.hu2",
+      "brief": "跑腿的来赎自己的当。有未赎当票才来。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.wu.1939.sell_rice",
+      "type": "person",
+      "person": "wu",
+      "era": [
+        "1939"
+      ],
+      "weight": 8,
+      "tags": [
+        "merchant",
+        "rice",
+        "omen_wealth"
+      ],
+      "intent": "sell",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "wu",
+                "gone"
+              ]
+            }
+          },
+          {
+            "not": {
+              "flag": "grudge_wu"
+            }
+          }
+        ]
+      },
+      "item": {
+        "template": "rice.jing"
+      },
+      "asking": {
+        "pct": [
+          150,
+          200
+        ]
+      },
+      "floor": {
+        "pct": [
+          110,
+          145
+        ]
+      },
+      "patience_min": [
+        30,
+        70
+      ],
+      "impatience": "raise",
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.wu.1939.rice_sold"
+          }
+        ],
+        "on_expire": [
+          {
+            "op": "flag",
+            "key": "grudge_wu"
+          },
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.wu",
+      "brief": "裕丰米行掌柜。日商控制米行之后，1939 年米价往上走，他来卖一小袋粳米，开口比寻常高。涨价事件是 K04 的节点，这张只是他进门卖米。数字起步，待调。打烊没接他会记仇，风评差一截，之后不再来说明收粮，改放更冷的话。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.wu.1939.buy_rice",
+      "type": "person",
+      "person": "wu",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "merchant",
+        "rice",
+        "buyer",
+        "omen_wealth"
+      ],
+      "intent": "buy",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "wu",
+            "gone"
+          ]
+        }
+      },
+      "patience_min": [
+        30,
+        70
+      ],
+      "impatience": "raise",
+      "want": {
+        "cats": [
+          "rice"
+        ],
+        "budget_pct": [
+          70,
+          120
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.wu.1939.rice_bought"
+          }
+        ]
+      },
+      "art": "portrait.wu",
+      "brief": "同一个掌柜反过来收货架上的米。日商卡着进货时，他来看铺子里还有没有散米。预算起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.wu.1939.ask_supply",
+      "type": "person",
+      "person": "wu",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "merchant",
+        "rice",
+        "omen_dispute"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "wu",
+                "gone"
+              ]
+            }
+          },
+          {
+            "not": {
+              "flag": "grudge_wu"
+            }
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "listen",
+          "brief": "听他讲收粮",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.wu.1939.supply"
+            },
+            {
+              "op": "add_card",
+              "card": "kp.leverage.wu",
+              "to": "kept"
+            }
+          ]
+        },
+        {
+          "id": "pass",
+          "brief": "不听",
+          "effects": [
+            {
+              "op": "flag",
+              "key": "k03_wu_passed"
+            }
+          ]
+        }
+      ],
+      "art": "portrait.wu",
+      "brief": "他来说明收粮为什么紧：日商控制米行，乡下的米船不准一次说完。听完记档案。不在这张上改物价，改价的事件归 K04。他若已因打烊没接记仇，不走这张，改放更冷的话。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.wu.1939.ask_cold",
+      "type": "person",
+      "person": "wu",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "merchant",
+        "rice",
+        "omen_dispute",
+        "bad_omen"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "wu",
+                "gone"
+              ]
+            }
+          },
+          {
+            "flag": "grudge_wu"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "listen",
+          "brief": "听他放的冷话",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.wu.1939.cold"
+            }
+          ]
+        },
+        {
+          "id": "pass",
+          "brief": "不听这句冷话",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "flag",
+              "key": "k03_wu_cold_passed"
+            }
+          ]
+        }
+      ],
+      "art": "portrait.wu",
+      "brief": "米行掌柜记仇之后不再说明收粮，只放话让铺子别跟他抢米。听了记档案；不听则风声紧一紧。不改物价，改价的事件归 K04。日商仍控制米行。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.sunlaoye.1939.buy_deed",
+      "type": "person",
+      "person": "sunlaoye",
+      "era": [
+        "1939"
+      ],
+      "weight": 4,
+      "tags": [
+        "landlord",
+        "buyer",
+        "omen_wealth"
+      ],
+      "intent": "buy",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "sunlaoye",
+                "gone"
+              ]
+            }
+          },
+          {
+            "not": {
+              "flag": "grudge_sunlaoye"
+            }
+          }
+        ]
+      },
+      "patience_min": [
+        80,
+        140
+      ],
+      "impatience": "leave",
+      "want": {
+        "cats": [
+          "documents"
+        ],
+        "budget_pct": [
+          60,
+          110
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.sunlaoye.1939.deed"
+          }
+        ],
+        "on_expire": [
+          {
+            "op": "flag",
+            "key": "grudge_sunlaoye"
+          },
+          {
+            "op": "rep",
+            "delta": -1
+          },
+          {
+            "op": "person_state",
+            "person": "sunlaoye",
+            "state": "away",
+            "days": 12
+          }
+        ]
+      },
+      "art": "portrait.sunlaoye",
+      "brief": "孙府当家平日不到柜台。1939 腊月日商收茧、地价在动，他难得自己来看文书。来买货架上的契据一类。预算起步，待调。打烊没接他会记仇并离开一阵，风评差一截，管家改来问为什么关门。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.sunlaoye.1939.ask_year",
+      "type": "person",
+      "person": "sunlaoye",
+      "era": [
+        "1939"
+      ],
+      "weight": 4,
+      "tags": [
+        "landlord",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "sunlaoye",
+                "gone"
+              ]
+            }
+          },
+          {
+            "not": {
+              "person_state": [
+                "sunlaoye",
+                "away"
+              ]
+            }
+          },
+          {
+            "not": {
+              "flag": "grudge_sunlaoye"
+            }
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "hear",
+          "brief": "回答他问的契",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.sunlaoye.1939.ask"
+            }
+          ]
+        },
+        {
+          "id": "dismiss",
+          "brief": "不谈柜上的契",
+          "effects": [
+            {
+              "op": "flag",
+              "key": "k03_sunlaoye_dismissed"
+            }
+          ]
+        }
+      ],
+      "art": "portrait.sunlaoye",
+      "brief": "同一次年关，他可能不买东西，只问铺子还押着谁的地契。讲了记档案；不讲他就走。人仍旧很少进门。他若已记仇离开，不走这张，改由管家来问。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.guanjia.1939.buy_bangle",
+      "type": "person",
+      "person": "guanjia",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "landlord",
+        "buyer",
+        "omen_wealth"
+      ],
+      "intent": "buy",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "guanjia",
+            "gone"
+          ]
+        }
+      },
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "raise",
+      "want": {
+        "cats": [
+          "jewelry"
+        ],
+        "budget_pct": [
+          90,
+          150
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.guanjia.1939.bangle"
+          }
+        ]
+      },
+      "art": "portrait.guanjia",
+      "brief": "孙府管家代当家出来办年货，来买一件首饰。他仍盯着铺子的进出。预算起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.guanjia.1939.ask_ledger",
+      "type": "person",
+      "person": "guanjia",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "landlord",
+        "omen_dispute"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "guanjia",
+                "gone"
+              ]
+            }
+          },
+          {
+            "not": {
+              "flag": "grudge_sunlaoye"
+            }
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "tell",
+          "brief": "告诉他谁来过",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.guanjia.1939.ledger"
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "id": "hush",
+          "brief": "不告诉",
+          "effects": [
+            {
+              "op": "flag",
+              "key": "k03_guanjia_hushed"
+            }
+          ]
+        }
+      ],
+      "art": "portrait.guanjia",
+      "brief": "管家来打听年关谁来过柜台，替府里记账。讲了记档案；不讲则这回没有下文。不写他盘问的原话。当家若已因打烊没接记仇，不走这张，改走问关门的那张。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.guanjia.1939.ask_snub",
+      "type": "person",
+      "person": "guanjia",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "landlord",
+        "omen_dispute",
+        "bad_omen"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "guanjia",
+                "gone"
+              ]
+            }
+          },
+          {
+            "flag": "grudge_sunlaoye"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "tell",
+          "brief": "说明为什么打烊没接",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.guanjia.1939.snub"
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "id": "hush",
+          "brief": "不解释关门",
+          "effects": [
+            {
+              "op": "flag",
+              "key": "k03_guanjia_snub_hushed"
+            }
+          ]
+        }
+      ],
+      "art": "portrait.guanjia",
+      "brief": "孙府当家打烊没被接过、记仇离开一阵之后，管家改来问为什么关门。讲了记档案并惹一点风声；不讲则这回没有下文。不写盘问的原话。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.postman.1939.ask_mail",
+      "type": "person",
+      "person": "postman",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "post",
+        "omen_far"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "postman",
+                "gone"
+              ]
+            }
+          },
+          {
+            "day_gte": 17
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "take_news",
+          "brief": "听他讲别的信",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.postman.1939.mail"
+            }
+          ]
+        },
+        {
+          "id": "later",
+          "brief": "改天再说",
+          "effects": [
+            {
+              "op": "flag",
+              "key": "k03_postman_later"
+            }
+          ]
+        }
+      ],
+      "art": "portrait.postman",
+      "brief": "邮电代办在家书那天之后，还来讲别的信和电报底。哥哥本人不出现。听完记档案。家书那张是金色节点，不和这张抢同一天。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.nf1939a.1939.pawn_coat",
+      "type": "person",
+      "person": "nf1939a",
+      "era": [
+        "1939"
+      ],
+      "weight": 7,
+      "tags": [
+        "new_face",
+        "poor",
+        "clothing",
+        "winter",
+        "omen_fire"
+      ],
+      "intent": "pawn",
+      "item": {
+        "template": "clothing.coat"
+      },
+      "asking": {
+        "pct": [
+          100,
+          150
+        ]
+      },
+      "floor": {
+        "pct": [
+          50,
+          75
+        ]
+      },
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "leave",
+      "term_days": 12,
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.nf1939a.1939.coat"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.nf1939a",
+      "brief": "新面孔。提议称呼柴佬，由 A 定稿。城门外卖柴，城门设岗之后进城耽误，1939 腊月米柴最贵，他来当一件旧棉袄。城门盘查的事件归 K04，这张只是被耽误的客人。没有自己的赎当牌，过路的赎当系统牌接手。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.nf1939b.1939.ask_cocoon",
+      "type": "person",
+      "person": "nf1939b",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "new_face",
+        "merchant",
+        "omen_stranger"
+      ],
+      "intent": "ask",
+      "choices": [
+        {
+          "id": "answer",
+          "brief": "告诉他柜上有没有茧农的当",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.nf1939b.1939.cocoon"
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "不告诉",
+          "effects": [
+            {
+              "op": "flag",
+              "key": "k03_cocoon_refused"
+            }
+          ]
+        }
+      ],
+      "art": "portrait.nf1939b",
+      "brief": "新面孔。提议称呼茧账，由 A 定稿。日商茧行里抄账的伙计，来打听谁还押着茧农的东西，不收货。史实：1939 年日商控制茧行。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.nf1939c.1939.pawn_scarf",
+      "type": "person",
+      "person": "nf1939c",
+      "era": [
+        "1939"
+      ],
+      "weight": 7,
+      "tags": [
+        "new_face",
+        "woman",
+        "poor",
+        "clothing",
+        "winter",
+        "omen_road"
+      ],
+      "intent": "pawn",
+      "item": {
+        "template": "clothing.scarf"
+      },
+      "asking": {
+        "pct": [
+          100,
+          140
+        ]
+      },
+      "floor": {
+        "pct": [
+          50,
+          75
+        ]
+      },
+      "patience_min": [
+        50,
+        110
+      ],
+      "impatience": "leave",
+      "term_days": 12,
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.nf1939c.1939.scarf"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.nf1939c",
+      "brief": "新面孔。提议称呼乡嫂，由 A 定稿。从乡下进城过年的妇人，当一条围巾换米。没有自己的赎当牌。史实：年关当铺最忙，乡下的人往镇上挤。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.nf1939d.1939.ask_office",
+      "type": "person",
+      "person": "nf1939d",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "new_face",
+        "official",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "not": {
+          "flag": "grudge_nf1939d"
+        }
+      },
+      "choices": [
+        {
+          "id": "show",
+          "brief": "让他看有没有未赎的当",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.nf1939d.1939.office"
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "不给看",
+          "effects": [
+            {
+              "op": "flag",
+              "key": "k03_office_refused"
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "flag",
+            "key": "grudge_nf1939d"
+          },
+          {
+            "op": "counter",
+            "key": "snub_nf1939d",
+            "delta": 1
+          }
+        ]
+      },
+      "art": "portrait.nf1939d",
+      "brief": "新面孔。提议称呼区抄，由 A 定稿。伪区公所新来的抄写，来打听铺子年关还有没有未赎的当。不发条子，条子归别的任务。史实：1939 年伪区公所已经取代伪维持会。打烊没接他会记仇，记下一次冷落，再来口风更硬。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.nf1939d.1939.ask_return",
+      "type": "person",
+      "person": "nf1939d",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "new_face",
+        "official",
+        "omen_official",
+        "bad_omen"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "counter_gte": [
+          "snub_nf1939d",
+          1
+        ]
+      },
+      "choices": [
+        {
+          "id": "show",
+          "brief": "还是让他看未赎的当",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.nf1939d.1939.return"
+            },
+            {
+              "op": "heat",
+              "delta": 2
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "仍不给看",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "flag",
+              "key": "k03_office_return_refused"
+            }
+          ]
+        }
+      ],
+      "art": "portrait.nf1939d",
+      "brief": "伪区公所的抄写记了一次冷落再来，口风更硬，仍打听未赎的当。不发条子。给看惹风声；不给看风声更紧。史实：1939 年伪区公所已经取代伪维持会。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

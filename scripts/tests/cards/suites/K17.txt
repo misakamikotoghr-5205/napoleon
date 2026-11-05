@@ -1,0 +1,5 @@
+# K17 官场开头：1940 金色牌“请你当保长”（合同 1.4，§九.7）
+K17_validate|res://scripts/cards/core/validate_main.gd|120|--only=data/cards/era/1940/officialdom.json,data/cards/tags/K17.json --name=K17_validate
+K17_baozhang|res://scripts/tests/cards/K17/test_baozhang.gd|120|
+K17_baozhang_real|res://scripts/tests/cards/K17/test_baozhang_real.gd|300|
+K17_baozhang_guide|res://scripts/tests/cards/K17/test_baozhang_guide.gd|300|

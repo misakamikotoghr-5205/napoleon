@@ -1,0 +1,13 @@
+{
+  "_meta": {
+    "owner": "C07",
+    "schema": 1,
+    "brief": "C07 adds no tags. Omen families stay in tags/W0.json.",
+    "_provenance": {
+      "by": "ai",
+      "task": "C07",
+      "date": "2026-10-13"
+    }
+  },
+  "tags": {}
+}

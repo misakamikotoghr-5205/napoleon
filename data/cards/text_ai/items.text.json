@@ -1,0 +1,415 @@
+{
+  "_meta": {
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-misc"
+  },
+  "item.art.calligraphy": {
+    "name": "行书条幅",
+    "desc": "一幅行书，纸边已略发黄。",
+    "material": "一幅行书，纸边已略发黄。",
+    "good_text": "字面清楚，装裱接缝整齐。",
+    "worn_text": "边纸破了一处，折痕压过墨迹。",
+    "real_text": "笔画粗细自然，落款与正文墨色相近。",
+    "fake_text": "落款比正文新，字边有描着旧字再填墨的痕迹。",
+    "ticket_condition": "纸本行书一幅"
+  },
+  "item.art.flowers": {
+    "name": "花鸟小册",
+    "desc": "布面小册，里头画了几页花鸟。",
+    "material": "布面小册，里头画了几页花鸟。",
+    "good_text": "页码连贯，纸边没有缺角。",
+    "worn_text": "几页沾了水，书脊开线。",
+    "real_text": "各页纸色相近，画与题字没有另贴的接缝。",
+    "fake_text": "题签号称旧本，里面几页却是新纸替换的。",
+    "ticket_condition": "花鸟画册一部"
+  },
+  "item.art.landscape": {
+    "name": "山水画轴",
+    "desc": "纸本山水，卷轴外裹蓝布。",
+    "material": "纸本山水，卷轴外裹蓝布。",
+    "good_text": "纸面平整，画心没有水斑。",
+    "worn_text": "边角有霉点，画心留了一道旧折。",
+    "real_text": "墨色浓淡有层次，印泥渗进旧纸纤维。",
+    "fake_text": "山石线条反复重描，印章颜色浮在纸面，落款像后来添的。",
+    "ticket_condition": "纸本山水一轴"
+  },
+  "item.art.woodcut": {
+    "name": "旧版画（一套）",
+    "desc": "一套黑白版画，用纸夹包着。",
+    "material": "一套黑白版画，用纸夹包着。",
+    "good_text": "印纹清楚，边缘齐整。",
+    "worn_text": "纸角卷起，几张墨色磨淡。",
+    "real_text": "木版压印边缘自然，纸背有浅压痕。",
+    "fake_text": "黑线边上排列着细小印点。",
+    "ticket_condition": "纸版画一套"
+  },
+  "item.clothing.coat": {
+    "name": "旧棉袄",
+    "desc": "蓝布外面，里面夹棉，摸着厚实。",
+    "material": "蓝布外面，里面夹棉，摸着厚实。",
+    "good_text": "棉絮分布匀，扣环没有断。",
+    "worn_text": "棉絮在肘部结团，下摆有磨洞。",
+    "real_text": "夹层棉絮洁白，缝口与旧线相同。",
+    "fake_text": "领口露着白棉，打开下摆却是发黑的旧絮。",
+    "ticket_condition": "布面夹棉袄"
+  },
+  "item.clothing.qipao": {
+    "name": "旗袍料（一匹）",
+    "desc": "浅色花纹的衣料，还没裁成衣裳。",
+    "material": "浅色花纹的衣料，还没裁成衣裳。",
+    "good_text": "边口齐整，折痕处没有破损。",
+    "worn_text": "料子边缘有毛丝，折痕处褪了色。",
+    "real_text": "花纹与底布一起织成，正反纹路能对上。",
+    "fake_text": "外层印得像织花，背面却没有相应纹路。",
+    "ticket_condition": "旗袍料一匹"
+  },
+  "item.clothing.robe": {
+    "name": "藏青长衫",
+    "desc": "布面平整，藏青色棉布，袖子很长。",
+    "material": "布面平整，藏青色棉布，袖子很长。",
+    "good_text": "领口与袖口磨得轻，接缝牢靠。",
+    "worn_text": "袖口起毛，领边有补针。",
+    "real_text": "内外都是棉布，没有暗换夹层。",
+    "fake_text": "外面像细棉布，内里却拼了粗布，缝线是新添的。",
+    "ticket_condition": "棉布长衫"
+  },
+  "item.clothing.scarf": {
+    "name": "灰羊毛围巾",
+    "desc": "围巾厚软，灰色绒线织成。",
+    "material": "围巾厚软，灰色绒线织成。",
+    "good_text": "绒面均匀，边缘收针整齐。",
+    "worn_text": "有小虫洞，边穗少了几根。",
+    "real_text": "细看绒线粗细相合，没有明显拼接。",
+    "fake_text": "外面贴了一层细绒，里面是粗棉线。",
+    "ticket_condition": "灰色围巾"
+  },
+  "item.documents.field": {
+    "name": "田契（附契尾）",
+    "desc": "旧纸田契，正文写着四至与亩数。",
+    "material": "旧纸田契，正文写着四至与亩数。",
+    "good_text": "契尾连着，边角有旧折但不缺字。",
+    "worn_text": "契尾破了一角，四至几字发淡。",
+    "real_text": "红印渗进纸里，画押与正文笔迹有别。尚不能只凭印章认定产权。",
+    "fake_text": "契尾印章断开，接纸处压着新印，四至处墨色较新。",
+    "ticket_condition": "田契一纸，附契尾"
+  },
+  "item.documents.house": {
+    "name": "旧房契",
+    "desc": "一纸房契，写着屋数与街名。",
+    "material": "一纸房契，写着屋数与街名。",
+    "good_text": "正文完整，见证人画押清楚。",
+    "worn_text": "纸边有虫孔，见证人名字磨淡。",
+    "real_text": "印章边缘与折痕相连，人名没有明显刮改。仍需到保公所查证。",
+    "fake_text": "房址处有刮毛，改写的字压在旧墨上，印章也重盖过。",
+    "ticket_condition": "房契一纸"
+  },
+  "item.documents.letter": {
+    "name": "旧家书（一束）",
+    "desc": "一束家书，信封上写着本地人名。",
+    "material": "一束家书，信封上写着本地人名。",
+    "good_text": "信页齐全，封口旧折自然。",
+    "worn_text": "有几页水斑，信封边角破损。",
+    "real_text": "信封与信纸墨色陈旧相近，人名能互相对照。",
+    "fake_text": "号称旧信，信纸却很新，邮戳边线像手描的。",
+    "ticket_condition": "旧家书一束"
+  },
+  "item.documents.receipt": {
+    "name": "商号货单（一叠）",
+    "desc": "几张货单，用绳子捆着，写了商号与货名。",
+    "material": "几张货单，用绳子捆着，写了商号与货名。",
+    "good_text": "纸张齐全，金额字迹能辨。",
+    "worn_text": "单边破损，几处金额沾水。",
+    "real_text": "收货章与日期先后相合，仍要向商号核实。",
+    "fake_text": "印章是描出来的，几张货单的日期前后不合。",
+    "ticket_condition": "商号货单一叠"
+  },
+  "item.goldbar.bar_one": {
+    "name": "小黄鱼（一两金条）",
+    "desc": "一根小金条，面上打着金号的字号戳记。",
+    "material": "一根小金条，面上打着金号的字号戳记。",
+    "good_text": "棱角分明，戳记清楚。",
+    "worn_text": "边角磨圆，戳记有些浅。",
+    "real_text": "戳记压得深，各面金色一致。",
+    "fake_text": "戳记边缘发虚，划痕处颜色发红。",
+    "ticket_condition": "金条一根"
+  },
+  "item.goldbar.bar_ten": {
+    "name": "大黄鱼（十两金条）",
+    "desc": "一根大金条，压着金号的字号戳记。",
+    "material": "一根大金条，压着金号的字号戳记。",
+    "good_text": "棱角分明，戳记清楚。",
+    "worn_text": "边角磨圆，面上有几道细划痕。",
+    "real_text": "戳记压得深，各面金色一致。",
+    "fake_text": "戳记边缘发虚，敲着声音发闷。",
+    "ticket_condition": "金条一根"
+  },
+  "item.jewelry.bangle": {
+    "name": "旧银镯",
+    "desc": "圆银镯，面上刻着细花。",
+    "material": "圆银镯，面上刻着细花。",
+    "good_text": "镯口周正，花纹磨损轻。",
+    "worn_text": "镯口略扁，花纹已磨平不少。",
+    "real_text": "内侧旧银色与外面一致，银铺款记压得清楚。",
+    "fake_text": "接缝处露着黄铜色，银色只在外皮。",
+    "ticket_condition": "银镯一只"
+  },
+  "item.jewelry.hairpin": {
+    "name": "细金簪",
+    "desc": "细长簪身，顶端有一朵小花。",
+    "material": "细长簪身，顶端有一朵小花。",
+    "good_text": "簪身直，花瓣没有折断。",
+    "worn_text": "簪尖弯了些，花瓣有一处修补。",
+    "real_text": "磨过的簪尖仍是同样金色，款记与旧工相合。",
+    "fake_text": "簪尖磨损处露白，和簪身的颜色不同。",
+    "ticket_condition": "金簪一支"
+  },
+  "item.jewelry.jade": {
+    "name": "白玉坠",
+    "desc": "白色玉坠，穿着一根旧绳。",
+    "material": "白色玉坠，穿着一根旧绳。",
+    "good_text": "孔口光滑，边缘没有磕口。",
+    "worn_text": "坠边有一道小磕痕，绳孔略磨。",
+    "real_text": "纹理深入玉体，孔内外光泽相近。",
+    "fake_text": "里面有圆形小气泡，孔口见一圈模线。",
+    "ticket_condition": "白色玉坠"
+  },
+  "item.jewelry.ring": {
+    "name": "银戒指",
+    "desc": "小银戒指，面上刻了简单花纹。",
+    "material": "小银戒指，面上刻了简单花纹。",
+    "good_text": "戒圈完整，接头平整。",
+    "worn_text": "戒圈有压痕，边缘磨薄。",
+    "real_text": "内圈的老款与银色相合。",
+    "fake_text": "内圈掉色，露出底下的灰色金属。",
+    "ticket_condition": "银戒指一只"
+  },
+  "item.medicine.aspirin": {
+    "name": "阿司匹林（一盒）",
+    "desc": "纸盒装药片，盒面印着厂名。",
+    "material": "纸盒装药片，盒面印着厂名。",
+    "good_text": "纸盒干燥，封边没有被拆开。",
+    "worn_text": "纸盒受潮发软，封边磨损。",
+    "real_text": "盒内外批印颜色相合，封边完整。没有尝药。",
+    "fake_text": "盒面印字与盒底不一，封边重复粘过。",
+    "ticket_condition": "阿司匹林纸盒"
+  },
+  "item.medicine.iodine": {
+    "name": "碘酒（一小瓶）",
+    "desc": "棕色小瓶，盖子紧，外贴碘酒标签。",
+    "material": "棕色小瓶，盖子紧，外贴碘酒标签。",
+    "good_text": "瓶口没有漏痕，标签保留完整。",
+    "worn_text": "瓶盖旁有漏痕，标签缺了一角。",
+    "real_text": "瓶签与封口纸印字一致。没有开封检查内容物。",
+    "fake_text": "封口胶是新涂的，标签下露着另一种药名。",
+    "ticket_condition": "碘酒小瓶"
+  },
+  "item.medicine.quinine": {
+    "name": "奎宁片（一小瓶）",
+    "desc": "玻璃药瓶，标签写着奎宁，瓶口还贴着封纸。",
+    "material": "玻璃药瓶，标签写着奎宁，瓶口还贴着封纸。",
+    "good_text": "瓶口干净，封纸完整，标签字迹清楚。",
+    "worn_text": "封纸受过潮，标签边缘卷起。",
+    "real_text": "瓶签厂名与封纸印字一致。仅看包装不能保证药效，不要开封试药。",
+    "fake_text": "封纸压着第二层旧标签，厂名字体与盒面不同。",
+    "ticket_condition": "奎宁药瓶，未开封"
+  },
+  "item.medicine.sulfa": {
+    "name": "磺胺药粉（一盒）",
+    "desc": "小铁盒装药粉，盖上贴着纸签。",
+    "material": "小铁盒装药粉，盖上贴着纸签。",
+    "good_text": "铁盒没有锈穿，纸签清楚。",
+    "worn_text": "盒边有锈点，纸签沾过水。",
+    "real_text": "厂名印字与纸签相合，封签完整。药粉未开封检验。",
+    "fake_text": "新标签底下露出旧印字。",
+    "ticket_condition": "磺胺药粉铁盒"
+  },
+  "item.papers.iou": {
+    "name": "借据",
+    "desc": "一张借据，写着借钱人、中人和日子，有画押。",
+    "material": "一张借据，写着借钱人、中人和日子，有画押。",
+    "good_text": "借据完整，画押清楚。",
+    "worn_text": "纸边有虫孔，画押淡了。",
+    "real_text": "画押与正文笔迹有别，墨色一样陈旧。",
+    "fake_text": "正文墨新，画押却像是照着描的。",
+    "ticket_condition": "借据一张"
+  },
+  "item.papers.shop_slip": {
+    "name": "商号条子",
+    "desc": "一张商号开的取货条子，盖着字号章。",
+    "material": "一张商号开的取货条子，盖着字号章。",
+    "good_text": "纸面平整，章印清楚。",
+    "worn_text": "纸边起毛，章印有些淡。",
+    "real_text": "章印的边与纸纹相合，字迹前后一致。",
+    "fake_text": "章印是描出来的，字号的笔画不连。",
+    "ticket_condition": "商号条子一张"
+  },
+  "item.papers.tax_slip": {
+    "name": "捐税收据",
+    "desc": "一张纳捐的收据，盖着公章。",
+    "material": "一张纳捐的收据，盖着公章。",
+    "good_text": "收据完整，日期清楚。",
+    "worn_text": "折痕处破了，日期有些模糊。",
+    "real_text": "公章压进纸里，前后号码相接。",
+    "fake_text": "公章颜色浮在纸面，前后号码对不上。",
+    "ticket_condition": "收据一张"
+  },
+  "item.papers.waybill": {
+    "name": "船行运单",
+    "desc": "一张船行运单，写着货名、件数和到埠的日子。",
+    "material": "一张船行运单，写着货名、件数和到埠的日子。",
+    "good_text": "运单完整，字迹清楚。",
+    "worn_text": "运单沾过水，件数一栏模糊。",
+    "real_text": "船行的印和日期先后相合。",
+    "fake_text": "船行的印歪着，日期一栏有改过的痕迹。",
+    "ticket_condition": "运单一张"
+  },
+  "item.rice.broken": {
+    "name": "碎米（一小袋）",
+    "desc": "米粒不完整，多是碾米时留下的碎粒。",
+    "material": "米粒不完整，多是碾米时留下的碎粒。",
+    "good_text": "碎粒干爽，少见稻壳与砂子。",
+    "worn_text": "杂质多些，需挑拣后使用。",
+    "real_text": "袋面与袋底的碎米相同。",
+    "fake_text": "袋底混了不少白色小石屑。",
+    "ticket_condition": "碎米，一小袋"
+  },
+  "item.rice.jing": {
+    "name": "本地粳米（一小袋）",
+    "desc": "米粒短圆，半透明，是本地粳米。",
+    "material": "米粒短圆，半透明，是本地粳米。",
+    "good_text": "米色清亮，干爽，没有灰绿斑点。",
+    "worn_text": "有陈米的黄点，碎米比新袋子多。",
+    "real_text": "粒型一致，米粒没有人为染白的痕迹。",
+    "fake_text": "有些米粒表面过白，刮开后颜色发黄。",
+    "ticket_condition": "粳米，一小袋"
+  },
+  "item.rice.nuo": {
+    "name": "糯米（一小袋）",
+    "desc": "米粒乳白不透明，是糯米的样子。",
+    "material": "米粒乳白不透明，是糯米的样子。",
+    "good_text": "袋底干净，米粒没有结块。",
+    "worn_text": "米粒略发黄，袋口积了陈灰。",
+    "real_text": "米粒断面与表面同色，挑开没有杂粒。",
+    "fake_text": "袋口是糯米，下面多是半透明的粳米。",
+    "ticket_condition": "糯米，一小袋"
+  },
+  "item.rice.xian": {
+    "name": "籼米（一小袋）",
+    "desc": "米粒细长，米色偏白，是外地来的籼米。",
+    "material": "米粒细长，米色偏白，是外地来的籼米。",
+    "good_text": "粒型完整，袋底没有水印。",
+    "worn_text": "碎粒不少，袋角有旧水印。",
+    "real_text": "米粒长短与籼米的形状相合。",
+    "fake_text": "白米里混了许多白色碎屑，形状与米粒不同。",
+    "ticket_condition": "籼米，一小袋"
+  },
+  "item.silver.bits": {
+    "name": "碎银（一包）",
+    "desc": "几块大小不一的碎银，用旧布包着。",
+    "material": "几块大小不一的碎银，用旧布包着。",
+    "good_text": "银色匀，断口干净。",
+    "worn_text": "表面发黑，边角磨圆了。",
+    "real_text": "断口里外颜色一样。",
+    "fake_text": "断口里头颜色发黄，和外皮不同。",
+    "ticket_condition": "碎银一包"
+  },
+  "item.silver.yuan_a": {
+    "name": "袁头银元（一枚）",
+    "desc": "一枚银元，正面是袁像，边齿细密。",
+    "material": "一枚银元，正面是袁像，边齿细密。",
+    "good_text": "币面字口清楚，边齿完整。",
+    "worn_text": "币面磨得发亮，字口浅了。",
+    "real_text": "币面图案的细线一根根分得开。",
+    "fake_text": "图案的细线糊成一片，边齿深浅不一。",
+    "ticket_condition": "银元一枚"
+  },
+  "item.silver.yuan_b": {
+    "name": "船洋银元（一枚）",
+    "desc": "一枚银元，背面铸着一条帆船。",
+    "material": "一枚银元，背面铸着一条帆船。",
+    "good_text": "帆船的桅杆看得清，边齿完整。",
+    "worn_text": "帆影磨平了，边上有细小磕痕。",
+    "real_text": "船帆的线条和币边的字对得上。",
+    "fake_text": "船帆的线条发虚，币边的字有一个歪了。",
+    "ticket_condition": "银元一枚"
+  },
+  "item.silver.yuan_c": {
+    "name": "龙洋银元（一枚）",
+    "desc": "一枚旧银元，背面铸着蟠龙。",
+    "material": "一枚旧银元，背面铸着蟠龙。",
+    "good_text": "龙鳞还看得出层次，边齿齐。",
+    "worn_text": "龙鳞磨平了，边上有剪口。",
+    "real_text": "龙鳞一片片分得开，字口深浅一致。",
+    "fake_text": "龙鳞糊成一团，边上的字深浅不一。",
+    "ticket_condition": "银元一枚"
+  },
+  "item.silverware.box": {
+    "name": "錾花银盒",
+    "desc": "一只小银盒，盒盖錾着花鸟。",
+    "material": "一只小银盒，盒盖錾着花鸟。",
+    "good_text": "盒盖开合顺，合页完好。",
+    "worn_text": "盒盖有凹痕，合页松了。",
+    "real_text": "盒底旧款与银色相合，接缝是旧焊口。",
+    "fake_text": "接缝处的焊锡是新的，颜色发灰。",
+    "ticket_condition": "银盒一只"
+  },
+  "item.silverware.cup": {
+    "name": "银酒杯",
+    "desc": "一只小银杯，杯身錾着缠枝花。",
+    "material": "一只小银杯，杯身錾着缠枝花。",
+    "good_text": "杯口圆正，花纹清楚。",
+    "worn_text": "杯口有压扁处，花纹磨浅了。",
+    "real_text": "杯底旧款压得清楚，里外银色一致。",
+    "fake_text": "杯底接缝处露出黄铜色。",
+    "ticket_condition": "银杯一只"
+  },
+  "item.silverware.spoon": {
+    "name": "银汤匙",
+    "desc": "一把银汤匙，柄上刻着细纹。",
+    "material": "一把银汤匙，柄上刻着细纹。",
+    "good_text": "匙面平整，柄没有弯。",
+    "worn_text": "柄弯过又扳直，匙口磨薄了。",
+    "real_text": "柄背旧款清楚，磨损处还是银色。",
+    "fake_text": "磨损处露出灰色的底子。",
+    "ticket_condition": "银匙一把"
+  },
+  "item.utensils.bowl": {
+    "name": "青花碗（一对）",
+    "desc": "白底青花碗，两只花纹相似。",
+    "material": "白底青花碗，两只花纹相似。",
+    "good_text": "碗口整齐，釉面没有大片脱落。",
+    "worn_text": "一只碗口有小缺，底足磨损。",
+    "real_text": "底足与釉色自然，画线不是贴上的花纸。",
+    "fake_text": "底款边缘可见新描笔线，旧色像是后来染的。",
+    "ticket_condition": "青花碗两只"
+  },
+  "item.utensils.clock": {
+    "name": "木壳座钟",
+    "desc": "方木壳座钟，钟面数字清楚。",
+    "material": "方木壳座钟，钟面数字清楚。",
+    "good_text": "摆锤转得匀，木壳没有裂口。",
+    "worn_text": "钟摆走得慢，木壳边角磨损。",
+    "real_text": "机芯编号与后盖款记相合，零件磨损相近。",
+    "fake_text": "后盖款记是名厂，机芯却是另一副粗做零件。",
+    "ticket_condition": "木壳座钟一架"
+  },
+  "item.utensils.tinpot": {
+    "name": "锡茶壶",
+    "desc": "灰白色茶壶，壶嘴短，带提梁。",
+    "material": "灰白色茶壶，壶嘴短，带提梁。",
+    "good_text": "壶口平整，壶盖合适。",
+    "worn_text": "壶身有凹痕，壶嘴修补过。",
+    "real_text": "底款清楚，内壁与外壁颜色相近。",
+    "fake_text": "底部接缝粗糙，锡色外皮下露出别的金属。",
+    "ticket_condition": "锡壶一把"
+  },
+  "item.utensils.warmer": {
+    "name": "铜手炉",
+    "desc": "铜制小手炉，炉盖透着花孔。",
+    "material": "铜制小手炉，炉盖透着花孔。",
+    "good_text": "炉盖合得严，提梁牢靠。",
+    "worn_text": "炉盖松动，提梁处磨得发亮。",
+    "real_text": "炉底与炉身铜色一致，接缝是旧焊口。",
+    "fake_text": "炉身刮痕处露出灰铁，铜色是涂上去的。",
+    "ticket_condition": "铜炉，带盖提梁"
+  }
+}

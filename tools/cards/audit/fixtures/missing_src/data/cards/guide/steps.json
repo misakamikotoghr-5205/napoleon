@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "owner": "K16",
+    "schema": 1
+  },
+  "cards": [
+    {
+      "id": "gd.d1.deal",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "teaches": [
+        "deal"
+      ],
+      "teacher": "brother",
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_GUIDE"
+    }
+  ]
+}

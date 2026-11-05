@@ -1,0 +1,738 @@
+{
+  "_meta": {
+    "owner": "K08",
+    "schema": 1,
+    "brief": "1938 消息牌。",
+    "_provenance": {
+      "by": "ai",
+      "task": "K08",
+      "date": "2026-10-13"
+    }
+  },
+  "cards": [
+    {
+      "id": "nw.1938.wangshan_dock",
+      "type": "news",
+      "era": [
+        "1938"
+      ],
+      "weight": 6,
+      "kind": "rumor",
+      "source": "zhouma",
+      "info_about": "wangshan",
+      "keepable": true,
+      "expires_days": 5,
+      "must_resolve": false,
+      "tags": [
+        "omen_water",
+        "info",
+        "dock"
+      ],
+      "effects": {
+        "on_read": [
+          {
+            "op": "dossier",
+            "frag": "df.wangshan.1938.dock"
+          }
+        ],
+        "on_inform": [
+          {
+            "op": "dossier_gap",
+            "frag": "df.wangshan.1938.trust"
+          },
+          {
+            "op": "person_state",
+            "person": "wangshan",
+            "state": "away",
+            "days": 7
+          },
+          {
+            "op": "conscience",
+            "delta": -2
+          },
+          {
+            "op": "notice",
+            "key": "k08.notice.informed"
+          }
+        ]
+      },
+      "art": "illus.nw.rumor",
+      "brief": "茶馆厨娘转述，有人在码头见过那个便衣青年。不写原话，不写成报纸标题。看了补：df.wangshan.1938.dock。交给要消息的条子则 df.wangshan.1938.trust 变成缺口。那个人会离开一阵。没看也没留就留在手上，从到手那天起按5天倒计时，到期传闻过期，不执行 on_read，错过 df.wangshan.1938.dock。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "nw.1938.rice_board",
+      "type": "news",
+      "era": [
+        "1938"
+      ],
+      "weight": 7,
+      "kind": "price",
+      "source": "wu",
+      "info_about": "wu",
+      "keepable": true,
+      "expires_days": 4,
+      "must_resolve": false,
+      "tags": [
+        "omen_wealth",
+        "info",
+        "market"
+      ],
+      "effects": {
+        "on_read": [
+          {
+            "op": "dossier",
+            "frag": "df.wu.1938.rice_quote"
+          }
+        ],
+        "on_inform": [
+          {
+            "op": "dossier_gap",
+            "frag": "df.wu.1938.quiet"
+          },
+          {
+            "op": "conscience",
+            "delta": -1
+          },
+          {
+            "op": "notice",
+            "key": "k08.notice.informed"
+          }
+        ]
+      },
+      "art": "illus.nw.price",
+      "brief": "米行掌柜透露的米的行市，只记有这么一听行情。不写原话，不写成报纸标题。看了补：df.wu.1938.rice_quote。交给要消息的条子则 df.wu.1938.quiet 变成缺口。没看也没留就留在手上，从到手那天起按4天倒计时，到期碎片过期，不执行 on_read，错过 df.wu.1938.rice_quote。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "nw.1938.reform_paper",
+      "type": "news",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "kind": "paper",
+      "source": "",
+      "info_about": "ma",
+      "keepable": true,
+      "expires_days": 6,
+      "must_resolve": false,
+      "tags": [
+        "omen_official",
+        "info",
+        "clip"
+      ],
+      "schedule": {
+        "stage_day": 28,
+        "order": 1
+      },
+      "effects": {
+        "on_read": [
+          {
+            "op": "dossier",
+            "frag": "df.ma.1938.clip"
+          }
+        ],
+        "on_inform": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "illus.nw.paper",
+      "brief": "剪报：1938年3月28日南京成立伪维新政府。与年表同日。按第28天日程发。不写原话，不写成报纸标题。看了补：df.ma.1938.clip。日程在本关第28天，不进随机牌库。没看也没留就留在手上，从到手那天起按6天倒计时，到期碎片过期，不执行 on_read，错过 df.ma.1938.clip。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "nw.1938.liangmin_talk",
+      "type": "news",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "kind": "lead",
+      "source": "ma",
+      "info_about": "ma",
+      "keepable": true,
+      "expires_days": 5,
+      "must_resolve": false,
+      "tags": [
+        "omen_official",
+        "info"
+      ],
+      "effects": {
+        "on_read": [
+          {
+            "op": "dossier",
+            "frag": "df.ma.1938.street"
+          }
+        ],
+        "on_inform": [
+          {
+            "op": "dossier_gap",
+            "frag": "df.ma.1938.quiet"
+          },
+          {
+            "op": "person_state",
+            "person": "ma",
+            "state": "away",
+            "days": 7
+          },
+          {
+            "op": "conscience",
+            "delta": -2
+          },
+          {
+            "op": "notice",
+            "key": "k08.notice.informed"
+          }
+        ]
+      },
+      "art": "illus.nw.lead",
+      "brief": "保长提起出入要查良民证，不写他的原话。不写原话，不写成报纸标题。看了补：df.ma.1938.street。交给要消息的条子则 df.ma.1938.quiet 变成缺口。那个人会离开一阵。没看也没留就留在手上，从到手那天起按5天倒计时，到期碎片过期，不执行 on_read，错过 df.ma.1938.street。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "nw.1938.teahouse_rumor",
+      "type": "news",
+      "era": [
+        "1938"
+      ],
+      "weight": 6,
+      "kind": "rumor",
+      "source": "zhouma",
+      "info_about": "zhouma",
+      "keepable": true,
+      "expires_days": 5,
+      "must_resolve": false,
+      "tags": [
+        "omen_family",
+        "info"
+      ],
+      "effects": {
+        "on_read": [
+          {
+            "op": "dossier",
+            "frag": "df.zhouma.1938.teahouse"
+          }
+        ],
+        "on_inform": [
+          {
+            "op": "dossier_gap",
+            "frag": "df.zhouma.1938.quiet"
+          },
+          {
+            "op": "person_state",
+            "person": "zhouma",
+            "state": "away",
+            "days": 7
+          },
+          {
+            "op": "conscience",
+            "delta": -2
+          },
+          {
+            "op": "notice",
+            "key": "k08.notice.informed"
+          }
+        ]
+      },
+      "art": "illus.nw.rumor",
+      "brief": "厨娘把灶边听来的闲话再说一遍，闲话内容由 A 写。不写原话，不写成报纸标题。看了补：df.zhouma.1938.teahouse。交给要消息的条子则 df.zhouma.1938.quiet 变成缺口。那个人会离开一阵。没看也没留就留在手上，从到手那天起按5天倒计时，到期传闻过期，不执行 on_read，错过 df.zhouma.1938.teahouse。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "nw.1938.de196_whisper",
+      "type": "news",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "kind": "lead",
+      "source": "chen",
+      "info_about": "brother",
+      "keepable": true,
+      "expires_days": 6,
+      "must_resolve": false,
+      "tags": [
+        "omen_far",
+        "info"
+      ],
+      "effects": {
+        "on_read": [
+          {
+            "op": "dossier",
+            "frag": "df.brother.1938.de196"
+          }
+        ],
+        "on_inform": [
+          {
+            "op": "dossier_gap",
+            "frag": "df.brother.1938.quiet"
+          },
+          {
+            "op": "conscience",
+            "delta": -2
+          },
+          {
+            "op": "notice",
+            "key": "k08.notice.informed"
+          }
+        ]
+      },
+      "art": "illus.nw.lead",
+      "brief": "旧识提醒你，德字第一九六号那张票上有一栏和别的票不同。不写原话，不写成报纸标题。看了补：df.brother.1938.de196。交给要消息的条子则 df.brother.1938.quiet 变成缺口。没看也没留就留在手上，从到手那天起按6天倒计时，到期碎片过期，不执行 on_read，错过 df.brother.1938.de196。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "nw.1938.zhao_land",
+      "type": "news",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "kind": "rumor",
+      "source": "zhouma",
+      "info_about": "zhao",
+      "keepable": true,
+      "expires_days": 5,
+      "must_resolve": false,
+      "tags": [
+        "omen_wealth",
+        "info"
+      ],
+      "effects": {
+        "on_read": [
+          {
+            "op": "dossier",
+            "frag": "df.zhao.1938.neighbors"
+          }
+        ],
+        "on_inform": [
+          {
+            "op": "dossier_gap",
+            "frag": "df.zhao.1938.quiet"
+          },
+          {
+            "op": "person_state",
+            "person": "zhao",
+            "state": "away",
+            "days": 7
+          },
+          {
+            "op": "conscience",
+            "delta": -2
+          },
+          {
+            "op": "notice",
+            "key": "k08.notice.informed"
+          }
+        ]
+      },
+      "art": "illus.nw.rumor",
+      "brief": "有人说佃户家里这一季紧。不写原话，不写成报纸标题。看了补：df.zhao.1938.neighbors。交给要消息的条子则 df.zhao.1938.quiet 变成缺口。那个人会离开一阵。没看也没留就留在手上，从到手那天起按5天倒计时，到期传闻过期，不执行 on_read，错过 df.zhao.1938.neighbors。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "nw.1938.chen_wire",
+      "type": "news",
+      "era": [
+        "1938"
+      ],
+      "weight": 4,
+      "kind": "lead",
+      "source": "xiaoding",
+      "info_about": "chen",
+      "keepable": true,
+      "expires_days": 6,
+      "must_resolve": false,
+      "tags": [
+        "omen_far",
+        "info"
+      ],
+      "effects": {
+        "on_read": [
+          {
+            "op": "dossier",
+            "frag": "df.chen.1938.wire"
+          }
+        ],
+        "on_inform": [
+          {
+            "op": "dossier_gap",
+            "frag": "df.chen.1938.quiet"
+          },
+          {
+            "op": "person_state",
+            "person": "chen",
+            "state": "away",
+            "days": 10
+          },
+          {
+            "op": "conscience",
+            "delta": -2
+          },
+          {
+            "op": "notice",
+            "key": "k08.notice.informed"
+          }
+        ]
+      },
+      "art": "illus.nw.lead",
+      "brief": "小伙计说济生堂的人认得电码。不写电台是谁的。不写原话，不写成报纸标题。看了补：df.chen.1938.wire。交给要消息的条子则 df.chen.1938.quiet 变成缺口。那个人会离开一阵。没看也没留就留在手上，从到手那天起按6天倒计时，到期碎片过期，不执行 on_read，错过 df.chen.1938.wire。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "nw.1938.linsao_boat",
+      "type": "news",
+      "era": [
+        "1938"
+      ],
+      "weight": 6,
+      "kind": "rumor",
+      "source": "zhouma",
+      "info_about": "linsao",
+      "keepable": true,
+      "expires_days": 5,
+      "must_resolve": false,
+      "tags": [
+        "omen_water",
+        "info"
+      ],
+      "effects": {
+        "on_read": [
+          {
+            "op": "dossier",
+            "frag": "df.linsao.1938.neighbors"
+          }
+        ],
+        "on_inform": [
+          {
+            "op": "dossier_gap",
+            "frag": "df.linsao.1938.quiet"
+          },
+          {
+            "op": "person_state",
+            "person": "linsao",
+            "state": "away",
+            "days": 7
+          },
+          {
+            "op": "conscience",
+            "delta": -2
+          },
+          {
+            "op": "notice",
+            "key": "k08.notice.informed"
+          }
+        ]
+      },
+      "art": "illus.nw.rumor",
+      "brief": "街坊提起船户那一家。不写原话，不写成报纸标题。看了补：df.linsao.1938.neighbors。交给要消息的条子则 df.linsao.1938.quiet 变成缺口。那个人会离开一阵。没看也没留就留在手上，从到手那天起按5天倒计时，到期传闻过期，不执行 on_read，错过 df.linsao.1938.neighbors。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "nw.1938.xiaoding_rice",
+      "type": "news",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "kind": "lead",
+      "source": "guanjia",
+      "info_about": "xiaoding",
+      "keepable": true,
+      "expires_days": 4,
+      "must_resolve": false,
+      "tags": [
+        "omen_wealth",
+        "info"
+      ],
+      "effects": {
+        "on_read": [
+          {
+            "op": "dossier",
+            "frag": "df.xiaoding.1938.kitchen"
+          }
+        ],
+        "on_inform": [
+          {
+            "op": "dossier_gap",
+            "frag": "df.xiaoding.1938.quiet"
+          },
+          {
+            "op": "person_state",
+            "person": "xiaoding",
+            "state": "away",
+            "days": 7
+          },
+          {
+            "op": "conscience",
+            "delta": -2
+          },
+          {
+            "op": "notice",
+            "key": "k08.notice.informed"
+          }
+        ]
+      },
+      "art": "illus.nw.lead",
+      "brief": "管家说灶上少了米，没有点破是谁拿的。不写原话，不写成报纸标题。看了补：df.xiaoding.1938.kitchen。交给要消息的条子则 df.xiaoding.1938.quiet 变成缺口。那个人会离开一阵。没看也没留就留在手上，从到手那天起按4天倒计时，到期碎片过期，不执行 on_read，错过 df.xiaoding.1938.kitchen。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "nw.1938.sun_deed",
+      "type": "news",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "kind": "rumor",
+      "source": "zhouma",
+      "info_about": "sunyoung",
+      "keepable": true,
+      "expires_days": 5,
+      "must_resolve": false,
+      "tags": [
+        "omen_dispute",
+        "info"
+      ],
+      "effects": {
+        "on_read": [
+          {
+            "op": "dossier",
+            "frag": "df.sunyoung.1938.street"
+          }
+        ],
+        "on_inform": [
+          {
+            "op": "dossier_gap",
+            "frag": "df.sunyoung.1938.quiet"
+          },
+          {
+            "op": "person_state",
+            "person": "sunyoung",
+            "state": "away",
+            "days": 7
+          },
+          {
+            "op": "conscience",
+            "delta": -2
+          },
+          {
+            "op": "notice",
+            "key": "k08.notice.informed"
+          }
+        ]
+      },
+      "art": "illus.nw.rumor",
+      "brief": "街坊说孙家少爷又在外头转一张契。不写原话，不写成报纸标题。看了补：df.sunyoung.1938.street。交给要消息的条子则 df.sunyoung.1938.quiet 变成缺口。那个人会离开一阵。没看也没留就留在手上，从到手那天起按5天倒计时，到期传闻过期，不执行 on_read，错过 df.sunyoung.1938.street。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "nw.1938.mail_delay",
+      "type": "news",
+      "era": [
+        "1938"
+      ],
+      "weight": 4,
+      "kind": "telegram",
+      "source": "postman",
+      "info_about": "postman",
+      "keepable": true,
+      "expires_days": 7,
+      "must_resolve": false,
+      "tags": [
+        "omen_far",
+        "info",
+        "wire"
+      ],
+      "effects": {
+        "on_read": [
+          {
+            "op": "dossier",
+            "frag": "df.postman.1938.window"
+          }
+        ],
+        "on_inform": [
+          {
+            "op": "dossier_gap",
+            "frag": "df.postman.1938.quiet"
+          },
+          {
+            "op": "person_state",
+            "person": "postman",
+            "state": "away",
+            "days": 7
+          },
+          {
+            "op": "conscience",
+            "delta": -2
+          },
+          {
+            "op": "notice",
+            "key": "k08.notice.informed"
+          }
+        ]
+      },
+      "art": "illus.nw.telegram",
+      "brief": "邮电代办说有一封信还压在柜台后头，这是普通电报口信，不用译。不写原话，不写成报纸标题。看了补：df.postman.1938.window。交给要消息的条子则 df.postman.1938.quiet 变成缺口。那个人会离开一阵。没看也没留就留在手上，从到手那天起按7天倒计时，到期碎片过期，不执行 on_read，错过 df.postman.1938.window。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "nw.1938.zhang_sulfa",
+      "type": "news",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "kind": "lead",
+      "source": "zhang",
+      "info_about": "zhang",
+      "keepable": true,
+      "expires_days": 5,
+      "must_resolve": false,
+      "tags": [
+        "omen_illness",
+        "info"
+      ],
+      "effects": {
+        "on_read": [
+          {
+            "op": "dossier",
+            "frag": "df.zhang.1938.hospital"
+          }
+        ],
+        "on_inform": [
+          {
+            "op": "dossier_gap",
+            "frag": "df.zhang.1938.quiet"
+          },
+          {
+            "op": "person_state",
+            "person": "zhang",
+            "state": "away",
+            "days": 7
+          },
+          {
+            "op": "conscience",
+            "delta": -2
+          },
+          {
+            "op": "notice",
+            "key": "k08.notice.informed"
+          }
+        ]
+      },
+      "art": "illus.nw.lead",
+      "brief": "护士说医院里药紧，不写药名清单。不写原话，不写成报纸标题。看了补：df.zhang.1938.hospital。交给要消息的条子则 df.zhang.1938.quiet 变成缺口。那个人会离开一阵。没看也没留就留在手上，从到手那天起按5天倒计时，到期碎片过期，不执行 on_read，错过 df.zhang.1938.hospital。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "nw.1938.hu_round",
+      "type": "news",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "kind": "rumor",
+      "source": "zhouma",
+      "info_about": "hu2",
+      "keepable": true,
+      "expires_days": 4,
+      "must_resolve": false,
+      "tags": [
+        "omen_road",
+        "info"
+      ],
+      "effects": {
+        "on_read": [
+          {
+            "op": "dossier",
+            "frag": "df.hu2.1938.route"
+          }
+        ],
+        "on_inform": [
+          {
+            "op": "dossier_gap",
+            "frag": "df.hu2.1938.quiet"
+          },
+          {
+            "op": "person_state",
+            "person": "hu2",
+            "state": "away",
+            "days": 7
+          },
+          {
+            "op": "conscience",
+            "delta": -2
+          },
+          {
+            "op": "notice",
+            "key": "k08.notice.informed"
+          }
+        ]
+      },
+      "art": "illus.nw.rumor",
+      "brief": "有人说保长的跑腿今天走哪几条巷。不写原话，不写成报纸标题。看了补：df.hu2.1938.route。交给要消息的条子则 df.hu2.1938.quiet 变成缺口。那个人会离开一阵。没看也没留就留在手上，从到手那天起按4天倒计时，到期传闻过期，不执行 on_read，错过 df.hu2.1938.route。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

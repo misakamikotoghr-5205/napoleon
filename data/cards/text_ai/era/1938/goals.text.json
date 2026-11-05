@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-1938"
+  },
+  "gl.1938.keep_shop": {
+    "title": "保住铺面",
+    "done": "月底铺面还在你手里，德厚当撑过了这个月。",
+    "failed": "铺面没能保住。"
+  },
+  "gl.1938.levy_clear": {
+    "title": "办完要钱的条子",
+    "done": "月底，要钱的条子都办完了。",
+    "failed": "月底还有要钱的条子没办完。"
+  },
+  "gl.1938.low_heat": {
+    "title": "别让风声太紧",
+    "done": "月底风声还算平静。",
+    "failed": "月底风声太紧了。"
+  },
+  "gl.1938.redeem_cabinet": {
+    "title": "保住首饰柜",
+    "done": "月底首饰柜还在你名下。",
+    "failed": "月底首饰柜不在你名下。"
+  },
+  "gl.1938.storeroom": {
+    "title": "保住库房",
+    "done": "月底库房还在你名下。",
+    "failed": "库房押丢了。"
+  },
+  "gl.1938.zhouma_page": {
+    "title": "补齐周妈那页",
+    "done": "周妈那一页档案补齐了。",
+    "failed": "周妈那一页档案还缺着。"
+  }
+}

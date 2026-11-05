@@ -1,0 +1,146 @@
+{
+  "_meta": {
+    "owner": "C08",
+    "schema": 1,
+    "brief": "第 1 天晚上：三张夜牌都是裸 id，回家吃饭也不带选项",
+    "_provenance": {
+      "by": "ai",
+      "task": "C08",
+      "date": "2026-10-13"
+    }
+  },
+  "queries": {},
+  "responses": [
+    {
+      "cmd": "night.choose",
+      "events": [
+        [
+          "phase_changed",
+          "night",
+          "settle"
+        ]
+      ],
+      "match": {
+        "def": "nt.tidy"
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "settle"
+        }
+      ],
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "night.choose",
+      "events": [
+        [
+          "phase_changed",
+          "night",
+          "settle"
+        ]
+      ],
+      "match": {
+        "def": "nt.family_dinner"
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "settle"
+        }
+      ],
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "night.choose",
+      "events": [
+        [
+          "phase_changed",
+          "night",
+          "settle"
+        ]
+      ],
+      "match": {
+        "def": "nt.early_sleep"
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "settle"
+        }
+      ],
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "night.choose",
+      "match": {
+        "def": ""
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "settle"
+        }
+      ],
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    }
+  ],
+  "view": {
+    "busy": false,
+    "date": {
+      "abs_day": 1,
+      "d": 1,
+      "era": "1938",
+      "m": 3,
+      "minute": 900,
+      "stage": 0,
+      "stage_day": 1,
+      "stage_days": 30,
+      "weekday": 1,
+      "y": 1938
+    },
+    "hand": [],
+    "heat_tier": 0,
+    "mode": "shop",
+    "money": {
+      "amount": 118,
+      "currency": "fabi"
+    },
+    "night_offers": [
+      "nt.tidy",
+      "nt.family_dinner",
+      "nt.early_sleep"
+    ],
+    "phase": "night",
+    "rep_tier": 1,
+    "stage": {
+      "sealed": false,
+      "set": "counter",
+      "time": "night"
+    },
+    "v": 1
+  }
+}

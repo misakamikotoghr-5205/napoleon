@@ -1,0 +1,503 @@
+{
+ "id": "mini_ocean_map",
+ "version": 1,
+ "segment": "ocean",
+ "views": {
+  "sea": {
+   "proj": "canvas",
+   "bg": "map_mini_sea"
+  }
+ },
+ "sheets": [
+  {
+   "chapter": "mo_one",
+   "view": "sea",
+   "start": "o_dock",
+   "days_max": 12,
+   "stamps_need": 1,
+   "muster": "o_muster",
+   "boss": "o_boss",
+   "interlude": "bond",
+   "nodes": [
+    {
+     "id": "o_dock",
+     "type": "story",
+     "label": "o_dock",
+     "xy": [
+      150,
+      400
+     ],
+     "scene": "mo_dock",
+     "fixed": true
+    },
+    {
+     "id": "o_shop",
+     "type": "shop",
+     "label": "o_shop",
+     "xy": [
+      400,
+      250
+     ],
+     "actions": [
+      "activity:merchant",
+      "recruit:troop",
+      "recruit:dantes",
+      "recruit:faria"
+     ]
+    },
+    {
+     "id": "o_post",
+     "type": "supply",
+     "label": "o_post",
+     "xy": [
+      400,
+      600
+     ],
+     "role": "post",
+     "pass": {
+      "stamp": 1
+     }
+    },
+    {
+     "id": "o_slot1",
+     "type": "slot",
+     "label": "o_slot1",
+     "xy": [
+      650,
+      150
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "mo_one",
+      "kinds": {
+       "event": 3,
+       "camp": 1
+      },
+      "level": 3
+     }
+    },
+    {
+     "id": "o_slot2",
+     "type": "slot",
+     "label": "o_slot2",
+     "xy": [
+      650,
+      650
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "mo_one",
+      "kinds": {
+       "event": 3,
+       "supply": 1
+      },
+      "level": 3
+     }
+    },
+    {
+     "id": "o_quiet",
+     "type": "story",
+     "label": "o_quiet",
+     "xy": [
+      800,
+      400
+     ],
+     "scene": "scene07",
+     "fixed": true
+    },
+    {
+     "id": "o_slot3",
+     "type": "slot",
+     "label": "o_slot3",
+     "xy": [
+      1000,
+      200
+     ],
+     "slot": {
+      "pool": "mo_one",
+      "kinds": {
+       "event": 1
+      },
+      "level": 3
+     }
+    },
+    {
+     "id": "o_slot4",
+     "type": "slot",
+     "label": "o_slot4",
+     "xy": [
+      1000,
+      650
+     ],
+     "slot": {
+      "pool": "mo_one",
+      "kinds": {
+       "event": 2,
+       "battle": 1
+      },
+      "level": 3
+     }
+    },
+    {
+     "id": "o_port",
+     "type": "supply",
+     "label": "o_port",
+     "xy": [
+      1150,
+      400
+     ],
+     "role": "port"
+    },
+    {
+     "id": "o_muster",
+     "type": "camp",
+     "label": "o_muster",
+     "xy": [
+      1350,
+      400
+     ],
+     "role": "muster"
+    },
+    {
+     "id": "o_council",
+     "type": "event",
+     "label": "o_council",
+     "xy": [
+      1550,
+      400
+     ],
+     "role": "council",
+     "event": "ev_mo_council1",
+     "phase": "campaign"
+    },
+    {
+     "id": "o_camp",
+     "type": "camp",
+     "label": "o_camp",
+     "xy": [
+      1700,
+      250
+     ],
+     "phase": "campaign"
+    },
+    {
+     "id": "o_boss",
+     "type": "boss",
+     "label": "o_boss",
+     "xy": [
+      1850,
+      400
+     ],
+     "scene": "mo_boss1",
+     "phase": "campaign",
+     "fixed": true
+    }
+   ],
+   "links": [
+    {
+     "a": "o_dock",
+     "b": "o_shop",
+     "legs": 1
+    },
+    {
+     "a": "o_dock",
+     "b": "o_post",
+     "legs": 1
+    },
+    {
+     "a": "o_shop",
+     "b": "o_slot1",
+     "legs": 2
+    },
+    {
+     "a": "o_post",
+     "b": "o_slot2",
+     "legs": 1
+    },
+    {
+     "a": "o_slot1",
+     "b": "o_quiet",
+     "legs": 2
+    },
+    {
+     "a": "o_slot2",
+     "b": "o_quiet",
+     "legs": 2
+    },
+    {
+     "a": "o_quiet",
+     "b": "o_slot3",
+     "legs": 1
+    },
+    {
+     "a": "o_quiet",
+     "b": "o_slot4",
+     "legs": 1
+    },
+    {
+     "a": "o_slot3",
+     "b": "o_port",
+     "legs": 1
+    },
+    {
+     "a": "o_slot4",
+     "b": "o_port",
+     "legs": 1
+    },
+    {
+     "a": "o_port",
+     "b": "o_muster",
+     "legs": 0,
+     "voyage_days": 2,
+     "label": "渡海"
+    },
+    {
+     "a": "o_muster",
+     "b": "o_council",
+     "legs": 1
+    },
+    {
+     "a": "o_council",
+     "b": "o_camp",
+     "legs": 1
+    },
+    {
+     "a": "o_camp",
+     "b": "o_boss",
+     "legs": 1
+    }
+   ]
+  },
+  {
+   "chapter": "mo_two",
+   "view": "sea",
+   "start": "p_isle",
+   "days_max": 10,
+   "stamps_need": 1,
+   "muster": "p_muster",
+   "boss": "p_boss",
+   "interlude": "audience",
+   "nodes": [
+    {
+     "id": "p_isle",
+     "type": "story",
+     "label": "p_isle",
+     "xy": [
+      150,
+      400
+     ],
+     "scene": "mo_isle",
+     "fixed": true
+    },
+    {
+     "id": "p_market",
+     "type": "supply",
+     "label": "p_market",
+     "xy": [
+      400,
+      250
+     ],
+     "demands": [
+      "o_mini_medicine"
+     ]
+    },
+    {
+     "id": "p_post",
+     "type": "supply",
+     "label": "p_post",
+     "xy": [
+      400,
+      600
+     ],
+     "role": "post",
+     "pass": {
+      "stamp": 1
+     }
+    },
+    {
+     "id": "p_slot1",
+     "type": "slot",
+     "label": "p_slot1",
+     "xy": [
+      650,
+      250
+     ],
+     "slot": {
+      "pool": "mo_two",
+      "kinds": {
+       "event": 3,
+       "camp": 1
+      },
+      "level": 7
+     }
+    },
+    {
+     "id": "p_slot2",
+     "type": "slot",
+     "label": "p_slot2",
+     "xy": [
+      650,
+      600
+     ],
+     "slot": {
+      "pool": "mo_two",
+      "kinds": {
+       "event": 3,
+       "battle": 1
+      },
+      "level": 7
+     }
+    },
+    {
+     "id": "p_slot3",
+     "type": "slot",
+     "label": "p_slot3",
+     "xy": [
+      900,
+      250
+     ],
+     "slot": {
+      "pool": "mo_two",
+      "kinds": {
+       "event": 1
+      },
+      "level": 7
+     }
+    },
+    {
+     "id": "p_slot4",
+     "type": "slot",
+     "label": "p_slot4",
+     "xy": [
+      900,
+      600
+     ],
+     "slot": {
+      "pool": "mo_two",
+      "kinds": {
+       "event": 1
+      },
+      "level": 7
+     }
+    },
+    {
+     "id": "p_muster",
+     "type": "camp",
+     "label": "p_muster",
+     "xy": [
+      1150,
+      400
+     ],
+     "role": "muster"
+    },
+    {
+     "id": "p_council",
+     "type": "event",
+     "label": "p_council",
+     "xy": [
+      1350,
+      400
+     ],
+     "role": "council",
+     "event": "ev_mo_council2",
+     "phase": "campaign"
+    },
+    {
+     "id": "p_camp",
+     "type": "camp",
+     "label": "p_camp",
+     "xy": [
+      1550,
+      400
+     ],
+     "phase": "campaign"
+    },
+    {
+     "id": "p_boss",
+     "type": "boss",
+     "label": "p_boss",
+     "xy": [
+      1750,
+      400
+     ],
+     "scene": "mo_boss2",
+     "phase": "campaign",
+     "fixed": true
+    },
+    {
+     "id": "p_end",
+     "type": "story",
+     "label": "p_end",
+     "xy": [
+      1750,
+      700
+     ],
+     "scene": "mo_end",
+     "phase": "campaign"
+    }
+   ],
+   "links": [
+    {
+     "a": "p_isle",
+     "b": "p_market",
+     "legs": 1
+    },
+    {
+     "a": "p_isle",
+     "b": "p_post",
+     "legs": 1
+    },
+    {
+     "a": "p_market",
+     "b": "p_slot1",
+     "legs": 1
+    },
+    {
+     "a": "p_post",
+     "b": "p_slot2",
+     "legs": 1
+    },
+    {
+     "a": "p_slot1",
+     "b": "p_slot3",
+     "legs": 1
+    },
+    {
+     "a": "p_slot2",
+     "b": "p_slot4",
+     "legs": 1
+    },
+    {
+     "a": "p_slot3",
+     "b": "p_muster",
+     "legs": 1
+    },
+    {
+     "a": "p_slot4",
+     "b": "p_muster",
+     "legs": 1
+    },
+    {
+     "a": "p_muster",
+     "b": "p_council",
+     "legs": 1
+    },
+    {
+     "a": "p_council",
+     "b": "p_camp",
+     "legs": 1
+    },
+    {
+     "a": "p_camp",
+     "b": "p_boss",
+     "legs": 1
+    },
+    {
+     "a": "p_boss",
+     "b": "p_end",
+     "legs": 1
+    }
+   ]
+  }
+ ]
+}

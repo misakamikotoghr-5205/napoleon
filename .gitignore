@@ -1,0 +1,48 @@
+# Godot editor / cache
+.godot/
+.import/
+export.cfg
+*.translation
+
+# Local exports (binaries — keep export_presets.cfg)
+export/
+*.exe
+*.pck
+*.zip
+*.apk
+*.aab
+*.dmg
+*.app/
+
+# Claude / agent coordination (local)
+claude_logs/
+.claude/
+HELP_REQUESTS.md
+HELP_RESPONSES.md
+CLAUDE.md
+CLAUDE.md.bak*
+v03_prompt.txt
+
+# Secrets / env
+.env
+.env.*
+*.pem
+*.key
+secrets/
+api_keys*
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# Python / tools scratch
+__pycache__/
+*.pyc
+.venv/
+
+# HD art review sheets (tools/hd_art/check_art.py --sheet)
+art/hd/_review/

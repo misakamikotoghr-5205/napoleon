@@ -1,0 +1,752 @@
+{
+  "_meta": {
+    "owner": "C16",
+    "schema": 1,
+    "brief": "C16 test steps for days 1-3. Not K16 data. say and bubble are not written here.",
+    "_provenance": {
+      "by": "ai",
+      "task": "C16",
+      "date": "2026-10-13"
+    }
+  },
+  "_test": {
+    "d1_3": [
+      "gd.m.open",
+      "gd.m.wheel",
+      "gd.m.incense",
+      "gd.d1.notice",
+      "gd.d1.deal",
+      "gd.d1.person",
+      "gd.d1.look",
+      "gd.d1.spot",
+      "gd.d1.tiers",
+      "gd.d1.ticket",
+      "gd.d1.shelf",
+      "gd.d1.buyer",
+      "gd.d1.close",
+      "gd.d1.night",
+      "gd.d1.settle",
+      "gd.d2.rules",
+      "gd.d2.gold",
+      "gd.choice",
+      "gd.d2.keep",
+      "gd.slots",
+      "gd.coins"
+    ]
+  },
+  "cards": [
+    {
+      "id": "gd.m.open",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "month_open"
+      ],
+      "trigger": {
+        "first": "month_open",
+        "phase": "month_open"
+      },
+      "teacher": "brother",
+      "anchor": "a.month.goals",
+      "anchor_fallback": "",
+      "done_when": [
+        "panel:wheel",
+        "timeout"
+      ],
+      "rule_page": "rule.month",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "Opening: brother points at this month's goals.",
+      "_provenance": {
+        "by": "ai",
+        "task": "C16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.m.wheel",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "month_wheel"
+      ],
+      "trigger": {
+        "first": "month_wheel",
+        "phase": "month_open"
+      },
+      "teacher": "brother",
+      "anchor": "a.wheel.face",
+      "anchor_fallback": "",
+      "done_when": [
+        "timeout"
+      ],
+      "rule_page": "rule.wheel",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 2,
+      "brief": "Opening: brother points at the month wheel face. Default conflict b.",
+      "_provenance": {
+        "by": "ai",
+        "task": "C16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.m.incense",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "incense"
+      ],
+      "trigger": {
+        "after": [
+          "gd.m.wheel"
+        ],
+        "panel": "wheel"
+      },
+      "teacher": "brother",
+      "anchor": "a.wheel.incense",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:wheel.offer",
+        "ui:slot_drop",
+        "first:incense",
+        "timeout"
+      ],
+      "rule_page": "rule.wheel",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "After the wheel step, before incense is placed. Default conflict b.",
+      "_provenance": {
+        "by": "ai",
+        "task": "C16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.d1.notice",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "notice"
+      ],
+      "trigger": {
+        "first": "notice",
+        "phase": [
+          "morning",
+          "day"
+        ]
+      },
+      "teacher": "brother",
+      "anchor": "a.scene.notice",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:day.begin",
+        "timeout"
+      ],
+      "rule_page": "rule.day",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "Day 1 morning: brother points at the notice.",
+      "_provenance": {
+        "by": "ai",
+        "task": "C16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.d1.deal",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "deal"
+      ],
+      "trigger": {
+        "first": "deal",
+        "phase": "day",
+        "mode": "shop"
+      },
+      "teacher": "brother",
+      "anchor": "a.hand",
+      "anchor_fallback": "",
+      "done_when": [
+        "ui:hand_selected",
+        "panel:counter",
+        "panel:slots",
+        "timeout"
+      ],
+      "rule_page": "rule.day",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "Day 1: brother points at the newly dealt hand.",
+      "_provenance": {
+        "by": "ai",
+        "task": "C16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.d1.person",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "person"
+      ],
+      "trigger": {
+        "first": "person",
+        "phase": "day",
+        "mode": "shop",
+        "after": [
+          "gd.d1.deal"
+        ]
+      },
+      "teacher": "brother",
+      "anchor": "a.card@{uid}",
+      "anchor_fallback": "a.hand",
+      "done_when": [
+        "panel:counter",
+        "cmd:counter.open",
+        "timeout"
+      ],
+      "rule_page": "rule.person",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "Day 1: brother points at the first guest card.",
+      "_provenance": {
+        "by": "ai",
+        "task": "C16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.d1.look",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "counter"
+      ],
+      "trigger": {
+        "first": "counter",
+        "panel": "counter"
+      },
+      "teacher": "brother",
+      "anchor": "a.counter.look",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:mg.request",
+        "timeout"
+      ],
+      "rule_page": "rule.counter",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "Day 1: brother points at looking over the pledge.",
+      "_provenance": {
+        "by": "ai",
+        "task": "C16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.d1.spot",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "mg.spot"
+      ],
+      "trigger": {
+        "first": "mg.spot"
+      },
+      "teacher": "brother",
+      "anchor": "a.mg.spot.atlas",
+      "anchor_fallback": "a.mg.spot.main",
+      "done_when": [
+        "cmd:mg.report",
+        "timeout"
+      ],
+      "rule_page": "rule.appraise",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "Day 1: brother points at the spot-the-difference atlas.",
+      "_provenance": {
+        "by": "ai",
+        "task": "C16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.d1.tiers",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "counter"
+      ],
+      "trigger": {
+        "first": "counter",
+        "panel": "counter",
+        "after": [
+          "gd.d1.spot"
+        ]
+      },
+      "teacher": "brother",
+      "anchor": "a.counter.tier.fair",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:counter.offer",
+        "timeout"
+      ],
+      "rule_page": "rule.counter",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "Day 1: brother points at the fair tier.",
+      "_provenance": {
+        "by": "ai",
+        "task": "C16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.d1.ticket",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "ticket"
+      ],
+      "trigger": {
+        "first": "ticket"
+      },
+      "teacher": "brother",
+      "anchor": "a.scene.ledger",
+      "anchor_fallback": "",
+      "done_when": [
+        "ui:panel_closed",
+        "timeout"
+      ],
+      "rule_page": "rule.ticket",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "Day 1: brother points at the ticket rack.",
+      "_provenance": {
+        "by": "ai",
+        "task": "C16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.d1.shelf",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "shelf"
+      ],
+      "trigger": {
+        "first": "shelf"
+      },
+      "teacher": "brother",
+      "anchor": "a.tab.shelf",
+      "anchor_fallback": "",
+      "done_when": [
+        "ui:hand_selected",
+        "timeout"
+      ],
+      "rule_page": "rule.shelf",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "Day 1: brother points at the shelf.",
+      "_provenance": {
+        "by": "ai",
+        "task": "C16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.d1.buyer",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "buyer"
+      ],
+      "trigger": {
+        "first": "buyer",
+        "panel": "counter"
+      },
+      "teacher": "brother",
+      "anchor": "a.counter.stock",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:counter.pick_stock",
+        "cmd:counter.offer",
+        "timeout"
+      ],
+      "rule_page": "rule.shelf",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "Day 1: brother points at stock for a buyer.",
+      "_provenance": {
+        "by": "ai",
+        "task": "C16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.d1.close",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [],
+      "trigger": {
+        "hand_clear": true,
+        "phase": "day",
+        "mode": "shop"
+      },
+      "teacher": "brother",
+      "anchor": "a.btn.close_day",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:day.end",
+        "timeout"
+      ],
+      "rule_page": "rule.day",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "Day 1: hand has no must-resolve card; brother points at closing.",
+      "_provenance": {
+        "by": "ai",
+        "task": "C16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.d1.night",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "night"
+      ],
+      "trigger": {
+        "first": "night",
+        "phase": "night"
+      },
+      "teacher": "brother",
+      "anchor": "a.night.offers",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:night.choose",
+        "timeout"
+      ],
+      "rule_page": "rule.night",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "Day 1 night: brother teaches night offers. Default conflict a.",
+      "_provenance": {
+        "by": "ai",
+        "task": "C16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.d1.settle",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "settle"
+      ],
+      "trigger": {
+        "first": "settle",
+        "phase": "settle"
+      },
+      "teacher": "brother",
+      "anchor": "a.settle.lines",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:settle.next",
+        "timeout"
+      ],
+      "rule_page": "rule.day",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "Day 1: brother points at the settle lines.",
+      "_provenance": {
+        "by": "ai",
+        "task": "C16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.d2.rules",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [],
+      "trigger": {
+        "phase": [
+          "morning",
+          "day"
+        ],
+        "stage_day_gte": 2
+      },
+      "teacher": "brother",
+      "anchor": "a.scene.notebook",
+      "anchor_fallback": "",
+      "done_when": [
+        "panel:dossier",
+        "panel:help",
+        "timeout"
+      ],
+      "rule_page": "rule.day",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "Day 2 morning: brother points at the dossier rules.",
+      "_provenance": {
+        "by": "ai",
+        "task": "C16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.d2.gold",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "gold"
+      ],
+      "trigger": {
+        "first": "gold",
+        "phase": "day"
+      },
+      "teacher": "brother",
+      "anchor": "a.card.gold@{uid}",
+      "anchor_fallback": "a.hand.gold",
+      "done_when": [
+        "ui:hand_selected",
+        "panel:slots",
+        "timeout"
+      ],
+      "rule_page": "rule.gold",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "Day 2: brother points at the gold card that cannot be kept.",
+      "_provenance": {
+        "by": "ai",
+        "task": "C16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.choice",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "choice"
+      ],
+      "trigger": {
+        "first": "choice",
+        "panel": "slots"
+      },
+      "teacher": "brother",
+      "anchor": "a.slots.choices",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:card.choose",
+        "timeout"
+      ],
+      "rule_page": "rule.person",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "Day 2: brother points at the choices.",
+      "_provenance": {
+        "by": "ai",
+        "task": "C16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.d2.keep",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "keep"
+      ],
+      "trigger": {
+        "first": "keep"
+      },
+      "teacher": "brother",
+      "anchor": "a.card.keep@{uid}",
+      "anchor_fallback": "a.hand.kept",
+      "done_when": [
+        "cmd:card.keep",
+        "timeout"
+      ],
+      "rule_page": "rule.kept",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "Day 2: brother points at keeping a card.",
+      "_provenance": {
+        "by": "ai",
+        "task": "C16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.slots",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "slots"
+      ],
+      "trigger": {
+        "first": "slots",
+        "phase": "day",
+        "stage_day_gte": 3
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.slots.first",
+      "anchor_fallback": "a.card@{uid}",
+      "done_when": [
+        "panel:slots",
+        "timeout"
+      ],
+      "rule_page": "rule.slots",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "Day 3: ledger note points at the first slot. Default conflict e.",
+      "_provenance": {
+        "by": "ai",
+        "task": "C16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.coins",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "coins"
+      ],
+      "trigger": {
+        "first": "coins",
+        "panel": "slots",
+        "after": [
+          "gd.slots"
+        ]
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.slots.coins",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:slot.roll",
+        "timeout"
+      ],
+      "rule_page": "rule.slots",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "Day 3: ledger note points at the coins. Default conflict e.",
+      "_provenance": {
+        "by": "ai",
+        "task": "C16",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

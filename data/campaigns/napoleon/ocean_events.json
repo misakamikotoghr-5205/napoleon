@@ -1,0 +1,1497 @@
+{
+  "events": [
+    {
+      "id": "ev_o_int_hundred_days",
+      "pool": "interlude:audience",
+      "weight": 0,
+      "once": true,
+      "requires": {},
+      "title": "百日·杜伊勒里宫的召见",
+      "location": "巴黎·杜伊勒里宫",
+      "speaker": "napoleon",
+      "date": "1815-03-21",
+      "body": [
+        "1815 年 3 月 20 日夜，皇帝回到杜伊勒里宫。国王前一天刚走，宫里的地毯上还绣着百合花。",
+        "你没有跟着大军去比利时。皇帝把你留在后方：管钱袋，管船，管那些不管结局如何都得有人管的事。",
+        "拿破仑：“维尔福，我问你几件事。回答要快，账要准。”"
+      ],
+      "questions": [
+        {
+          "id": "q_purse",
+          "q": "国库只够打一场战役。钱先给谁？",
+          "a": {
+            "label": "先给近卫军和炮兵",
+            "effects": {
+              "morale": 3
+            },
+            "rogue": {
+              "coins": {
+                "medal": 1
+              }
+            }
+          },
+          "b": {
+            "label": "先留一笔给海军和港口",
+            "effects": {},
+            "rogue": {
+              "coins": {
+                "supply": 2
+              }
+            },
+            "flags": [
+              "o_ports_funded"
+            ]
+          }
+        },
+        {
+          "id": "q_petition",
+          "q": "马赛来的一摞请愿书，最上面那份写着“法老号大副唐泰斯”。要不要看？",
+          "a": {
+            "label": "看，今晚就看完",
+            "effects": {
+              "heat": 2
+            },
+            "flags": [
+              "o_read_petitions"
+            ]
+          },
+          "b": {
+            "label": "交给警务部去办",
+            "effects": {
+              "morale": 1
+            }
+          }
+        },
+        {
+          "id": "q_after",
+          "q": "如果这一仗打输了，你去哪里？",
+          "a": {
+            "label": "陛下去哪里，我去哪里",
+            "effects": {
+              "morale": 4
+            },
+            "flags": [
+              "o_sworn_exile"
+            ]
+          },
+          "b": {
+            "label": "去罗什福尔，先把船找好",
+            "effects": {},
+            "rogue": {
+              "coins": {
+                "intel": 1
+              }
+            }
+          }
+        }
+      ],
+      "_note": "主干在厄尔巴 1815-02-25 分岔；远洋开局先放这张召见，交代百日王朝里主角在后方。q_petition 是唐泰斯获释的伏笔，下一张马尔梅松牌把它写实。",
+      "interlude": "audience",
+      "chapters": [
+        "prologue"
+      ]
+    },
+    {
+      "id": "ev_o_malmaison",
+      "pool": "fixed",
+      "weight": 0,
+      "once": true,
+      "requires": {},
+      "title": "马尔梅松的钱袋",
+      "location": "马尔梅松",
+      "speaker": "villefort",
+      "date": "1815-06-29",
+      "body": [
+        "6 月 18 日，滑铁卢。战报是三天后才到巴黎的，信使的马在宫门口倒下就没再起来。6 月 22 日，皇帝第二次退位。",
+        "6 月 29 日，马尔梅松。普鲁士骑兵离这里只有半天的路，布吕歇尔放话要把皇帝抓回去。银行家拉菲特坐在约瑟芬留下的客厅里，面前摊着收据。",
+        "拉菲特：“陛下的钱可以存在我这里，只带一张收据走。英国人搜得到金子，搜不到收据。”",
+        "你的公文包里还有一份旧文件：百日王朝那几个月，马赛送来的请愿书。莫雷尔船东求释放法老号的大副唐泰斯，旁边是王家检察官杰拉尔·德·维尔福的批注。那天夜里你在释放令上签了字，又在同一座监狱的名册上，添了一个关了四年的意大利神甫的名字。两个人同一天走出了伊夫堡。",
+        "维尔福：“陛下，马车在门口。往西走，去罗什福尔。”"
+      ],
+      "appraisals": [
+        {
+          "id": "laffitte_receipt",
+          "kind": "weigh",
+          "label": "过秤：点验存进拉菲特银行的金子",
+          "observation": "分量和收据上的数一枚不差。拉菲特是个规矩的银行家。"
+        },
+        {
+          "id": "gerard_note",
+          "kind": "decode",
+          "label": "破译杰拉尔的批注",
+          "observation": "他亲笔写着：“危险的波拿巴分子，宜永久羁押。”字迹和你家祖宅门楣上刻的姓一样工整。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "deposit_laffitte",
+          "label": "把钱存进拉菲特银行，只带收据和皇帝上路",
+          "effects": {
+            "morale": 3
+          },
+          "rogue": {
+            "coins": {
+              "gold": 1
+            }
+          },
+          "flags": [
+            "o_laffitte_receipt"
+          ]
+        },
+        {
+          "id": "carry_gold",
+          "label": "把金子缝进车厢夹板，随身带走",
+          "effects": {
+            "heat": 8
+          },
+          "rogue": {
+            "coins": {
+              "gold": 3
+            }
+          },
+          "flags": [
+            "o_gold_carried"
+          ]
+        },
+        {
+          "id": "keep_gerard_note",
+          "label": "把请愿书和杰拉尔的批注一起收进怀里",
+          "requires_clues": [
+            "gerard_note"
+          ],
+          "effects": {},
+          "rogue": {
+            "coins": {
+              "intel": 2
+            }
+          },
+          "flags": [
+            "o_gerard_note_kept"
+          ]
+        }
+      ],
+      "_note": "远洋段的起点节点（maps/world.json prologue.malmaison）。这张牌把远洋分支的前提写成定局：唐泰斯和法利亚在百日王朝里获释，所以 1819 年他已经是基督山伯爵。o_gerard_note_kept 在 ev_o_kinsman_letter 里用得上。"
+    },
+    {
+      "id": "ev_o_council_basque",
+      "pool": "fixed",
+      "weight": 0,
+      "once": true,
+      "requires": {},
+      "title": "巴斯克锚地的军议",
+      "location": "艾克斯岛外·巴斯克锚地",
+      "speaker": "napoleon",
+      "date": "1815-07-14",
+      "body": [
+        "7 月 14 日，艾克斯岛。英国战列舰贝勒罗丰号停在锚地口，舰长梅特兰的小艇来回了两趟。",
+        "两艘法国护卫舰萨勒号和美杜莎号就在身后，舰长不肯冒险出港；美国、丹麦的船都等不了太久。",
+        "拿破仑：“我去向英国人的法律要一个住处。维尔福，路上要是有人动手，你打算怎么守？”"
+      ],
+      "appraisals": [
+        {
+          "id": "maitland_terms",
+          "kind": "decode",
+          "label": "破译梅特兰舰长的回信",
+          "observation": "信里只答应“接上船”，没答应“去英国以后怎样”。上船以后的事，要靠自己守。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "guard_the_cabin",
+          "label": "让近卫军轮班守住艉舱",
+          "effects": {
+            "morale": 2
+          },
+          "boss_mod": {
+            "prep_turn": 1
+          },
+          "flags": [
+            "o_basque_guard"
+          ]
+        },
+        {
+          "id": "pay_the_boatmen",
+          "label": "花钱打点普利茅斯的船夫，看住来往小艇",
+          "effects": {
+            "treasury": -200
+          },
+          "boss_mod": {
+            "cp_bonus": 2
+          },
+          "flags": [
+            "o_basque_boatmen"
+          ]
+        },
+        {
+          "id": "besson_barrel",
+          "label": "按贝松的法子备好空酒桶和假舱单，乱中先藏人",
+          "requires_flags": [
+            "o_besson_plan"
+          ],
+          "effects": {},
+          "boss_mod": {
+            "enemy_morale": -4
+          },
+          "flags": [
+            "o_basque_barrel"
+          ]
+        }
+      ],
+      "_note": "ARCH R5 的军议：方略改的是序曲 Boss（贝勒罗丰号甲板）。第三项要先在随机事件 ev_o_besson_barrel 里帮过贝松。没有那个旗标时只有两项可选；选不了的那项照规矩灰掉并写原因。"
+    },
+    {
+      "id": "ev_o_council_billiard",
+      "pool": "fixed",
+      "weight": 0,
+      "once": true,
+      "requires": {},
+      "title": "朗伍德台球室的军议",
+      "location": "朗伍德·台球室",
+      "speaker": "montholon",
+      "date": "1821-05-03",
+      "body": [
+        "1821 年 5 月 3 日夜。台球桌上铺着岛的地图，桌角压着皇帝的旧帽子。",
+        "蒙托隆：“后天有风暴。总督府的巡逻队、死木平原的两个团、哈茨门的哨兵，都会往这里压。”",
+        "唐泰斯的人已经在海蚀洞。剩下的，是这两天里怎么把朗伍德守到最后一刻。"
+      ],
+      "appraisals": [
+        {
+          "id": "garrison_roster",
+          "kind": "spot",
+          "label": "察看驻军的换岗表",
+          "observation": "第 20 团和第 66 团换岗的时候，营门大路上有一刻钟没人。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "light_signals",
+          "label": "在花园土丘上备好灯号，让炮位先就位",
+          "effects": {},
+          "boss_mod": {
+            "cp_bonus": 2
+          },
+          "flags": [
+            "o_billiard_signals"
+          ]
+        },
+        {
+          "id": "spread_rumour",
+          "label": "放出“皇帝病危”的消息，让追兵松一口气",
+          "effects": {
+            "heat": -5
+          },
+          "boss_mod": {
+            "enemy_morale": -2
+          },
+          "flags": [
+            "o_billiard_rumour"
+          ]
+        },
+        {
+          "id": "false_semaphore",
+          "label": "用抄来的旗语本，假传一道“各部原地待命”",
+          "requires_flags": [
+            "o_semaphore_codes"
+          ],
+          "effects": {
+            "heat": 5
+          },
+          "boss_mod": {
+            "enemy_morale": -4,
+            "prep_turn": 1
+          },
+          "flags": [
+            "o_billiard_semaphore"
+          ]
+        }
+      ],
+      "_note": "圣赫勒拿的军议。第三项要先在随机事件 ev_o_semaphore_book 里抄到旗语本。"
+    },
+    {
+      "id": "ev_o_council_reef",
+      "pool": "fixed",
+      "weight": 0,
+      "once": true,
+      "requires": {},
+      "title": "东岸礁石上的军议",
+      "location": "新厄尔巴东岸",
+      "speaker": "baptiste",
+      "date": "1824-09-15",
+      "body": [
+        "1824 年 9 月 15 日正午。毒蛇号靠在骷髅礁外，跳板已经搭到礁上。",
+        "巴蒂斯特：“交割在日落。他们人多、炮多，咱们只有礁石。”",
+        "星期五用树枝在沙地上画出退潮后露出来的每一块岩头。"
+      ],
+      "appraisals": [
+        {
+          "id": "tide_table",
+          "kind": "decode",
+          "label": "破译星期五画的潮汐",
+          "observation": "第八个钟头涨潮，礁上靠海的两片沙滩会没进水里。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "dig_in_rocks",
+          "label": "把炮拖上骷髅岩，先占高处",
+          "effects": {
+            "vitality": -4
+          },
+          "boss_mod": {
+            "cp_bonus": 2
+          },
+          "flags": [
+            "o_reef_guns"
+          ]
+        },
+        {
+          "id": "cut_gangways",
+          "label": "派人潜过去锯松跳板",
+          "requires_clues": [
+            "tide_table"
+          ],
+          "effects": {},
+          "boss_mod": {
+            "enemy_morale": -3
+          },
+          "flags": [
+            "o_reef_saws"
+          ]
+        },
+        {
+          "id": "buy_time",
+          "label": "交割时多拖一个钟头，等潮水",
+          "effects": {
+            "heat": 5
+          },
+          "boss_mod": {
+            "prep_turn": 1
+          },
+          "flags": [
+            "o_reef_stall"
+          ]
+        }
+      ],
+      "_note": "新厄尔巴的军议。"
+    },
+    {
+      "id": "ev_o_council_bermuda",
+      "pool": "fixed",
+      "weight": 0,
+      "once": true,
+      "requires": {},
+      "title": "百慕大外海截到的密电",
+      "location": "百慕大外海·鹦鹉螺号",
+      "speaker": "nemo",
+      "date": "1835-10-20",
+      "body": [
+        "鹦鹉螺号贴着百慕大的海军船坞潜过去，截到一封给海峡舰队的电文。",
+        "尼摩：“他们知道我们要去伦敦。泰晤士河口会有炮艇、火箭艇，还有一艘新下水的明轮炮舰。”",
+        "唐泰斯：“那就让他们知道得再多一点，或者再少一点。”"
+      ],
+      "appraisals": [
+        {
+          "id": "admiralty_cipher",
+          "kind": "decode",
+          "label": "破译海军部的电文",
+          "observation": "舰队会在格林威治外面等一个雾天。雾天，他们的瞭望也看不远。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "surface_at_dawn",
+          "label": "趁雾在黎明浮起，先让炮手就位",
+          "effects": {},
+          "boss_mod": {
+            "cp_bonus": 2
+          },
+          "flags": [
+            "o_bermuda_dawn"
+          ]
+        },
+        {
+          "id": "false_course",
+          "label": "让闪电号放出假航线，引走一半炮艇",
+          "requires_clues": [
+            "admiralty_cipher"
+          ],
+          "effects": {
+            "heat": -10
+          },
+          "boss_mod": {
+            "enemy_morale": -3
+          },
+          "flags": [
+            "o_bermuda_decoy"
+          ]
+        },
+        {
+          "id": "seal_hatches",
+          "label": "加固五个舱口，准备硬扛",
+          "effects": {
+            "treasury": -300
+          },
+          "boss_mod": {
+            "prep_turn": 1
+          },
+          "flags": [
+            "o_bermuda_hatches"
+          ]
+        }
+      ],
+      "_note": "鹦鹉螺号一章的军议。"
+    },
+    {
+      "id": "ev_o_st_helena_view",
+      "pool": "fixed",
+      "weight": 0,
+      "once": true,
+      "requires": {},
+      "title": "远望圣赫勒拿",
+      "location": "南大西洋·圣赫勒拿岛外",
+      "speaker": "napoleon",
+      "body": [
+        "鹦鹉螺号在夜里浮出水面。北边海平线上，是一块黑色的火山岩。",
+        "拿破仑在平台上站了很久。詹姆斯敦的灯一盏一盏都看得见，朗伍德那边一片黑。",
+        "拿破仑：“维尔福，他们在那里给我立了一座坟。坟里埋的是谁？”"
+      ],
+      "appraisals": [],
+      "choices": [
+        {
+          "id": "salute_the_grave",
+          "label": "陪皇帝站到天亮",
+          "effects": {
+            "morale": 6,
+            "vitality": -4
+          },
+          "flags": [
+            "o_saw_st_helena"
+          ]
+        },
+        {
+          "id": "signal_old_friends",
+          "label": "用旧信号给岛上还在的老朋友打个招呼",
+          "effects": {
+            "heat": 6
+          },
+          "rogue": {
+            "coins": {
+              "intel": 2
+            }
+          },
+          "flags": [
+            "o_signalled_st_helena"
+          ]
+        },
+        {
+          "id": "dive_and_go",
+          "label": "下潜，全速赶路",
+          "effects": {},
+          "rogue": {
+            "props": [
+              "prop_forced_march"
+            ]
+          }
+        }
+      ],
+      "_note": "鹦鹉螺号一章南大西洋航线上的固定节点（从里约、特里斯坦或开普敦北上都要经过）。"
+    },
+    {
+      "id": "ev_o_pearl_bank",
+      "pool": "fixed",
+      "weight": 0,
+      "once": true,
+      "requires": {},
+      "title": "马纳尔湾的采珠人",
+      "location": "锡兰·马纳尔珍珠场",
+      "speaker": "nemo",
+      "body": [
+        "锡兰北面的马纳尔湾，水底是一片珍珠贝床。一个采珠人刚潜下去，一条鲨鱼就跟了过来。",
+        "尼摩拔出刀迎上去。鲨鱼翻着白肚皮漂走了，采珠人被拖上小船，还攥着一只贝。",
+        "尼摩打开自己腰上的口袋，倒出一捧珍珠放进采珠人手里。洞穴深处有一颗大珍珠，他养了不知多少年，从来不卖。",
+        "采珠人：“先生，这些……够我还清一辈子的债。”",
+        "尼摩：“这片海里人人都欠着债。有人欠鲨鱼，有人欠收珠子的老板，有人欠国王。”"
+      ],
+      "appraisals": [
+        {
+          "id": "pearl_weight",
+          "kind": "weigh",
+          "label": "过秤：那颗养了多年的大珍珠",
+          "observation": "它比你见过的任何一颗都重。挂在金库的账上，能顶半条船。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "give_to_diver",
+          "label": "再给采珠人一份，记在同盟的救济账上",
+          "effects": {
+            "treasury": -300,
+            "morale": 8
+          },
+          "flags": [
+            "o_pearl_given"
+          ]
+        },
+        {
+          "id": "take_the_pearl",
+          "label": "劝尼摩把大珍珠带走，充作储备",
+          "requires_clues": [
+            "pearl_weight"
+          ],
+          "effects": {
+            "treasury": 1200,
+            "morale": -6
+          },
+          "flags": [
+            "o_pearl_taken"
+          ]
+        },
+        {
+          "id": "chart_the_bank",
+          "label": "只测绘贝床，什么都不拿",
+          "effects": {
+            "exploration": 10
+          },
+          "flags": [
+            "o_pearl_charted"
+          ]
+        }
+      ],
+      "_note": "凡尔纳原著第二部第二、三章。印度洋航线上的固定节点。"
+    },
+    {
+      "id": "ev_o_int_northumberland",
+      "pool": "interlude:camp_night",
+      "weight": 0,
+      "once": true,
+      "requires": {},
+      "title": "诺森伯兰号上的十个星期",
+      "location": "大西洋·诺森伯兰号",
+      "speaker": "villefort",
+      "date": "1815-08-30",
+      "body": [
+        "8 月 7 日，皇帝从贝勒罗丰号换到诺森伯兰号。船往南开了十个星期，过了马德拉，过了赤道。",
+        "你把行军箱摆在下层甲板的炮门边，每天夜里点一次数。今晚风小，有一件事可以做。"
+      ],
+      "offer": 3,
+      "choices": [
+        {
+          "id": "nb_memoirs",
+          "label": "替皇帝抄一晚上回忆录",
+          "effects": {
+            "morale": 4
+          },
+          "rogue": {
+            "coins": {
+              "medal": 1
+            }
+          }
+        },
+        {
+          "id": "nb_purser",
+          "label": "陪诺森伯兰号的事务长喝酒，打听圣赫勒拿的物价",
+          "effects": {},
+          "rogue": {
+            "coins": {
+              "intel": 1,
+              "supply": 1
+            }
+          }
+        },
+        {
+          "id": "nb_drill",
+          "label": "带随行的人在甲板上练刀",
+          "effects": {
+            "vitality": -2
+          },
+          "rogue": {
+            "coins": {
+              "medal": 1
+            }
+          },
+          "flags": [
+            "o_nb_drill"
+          ]
+        },
+        {
+          "id": "nb_cards",
+          "label": "和英国军官打牌",
+          "effects": {
+            "heat": -4
+          },
+          "rogue": {
+            "coins": {
+              "gold": 1
+            }
+          }
+        },
+        {
+          "id": "nb_sleep",
+          "label": "什么都不做，好好睡一觉",
+          "effects": {
+            "vitality": 8
+          }
+        }
+      ],
+      "_note": "进入圣赫勒拿一章时放出（camp_night：5 项里按种子给 3 项）。史实：诺森伯兰号 1815-08-07 起航，10-15 到圣赫勒拿。",
+      "interlude": "camp_night",
+      "chapters": [
+        "st_helena"
+      ]
+    },
+    {
+      "id": "ev_o_int_lightning",
+      "pool": "interlude:bond",
+      "weight": 0,
+      "once": true,
+      "requires": {},
+      "title": "闪电号的后甲板",
+      "location": "南大西洋·闪电号",
+      "speaker": "dantes",
+      "date": "1821-05-20",
+      "body": [
+        "闪电号的黑帆鼓满了风，圣赫勒拿已经在身后看不见了。皇帝在舱里睡着，这是六年来第一次没有哨兵。",
+        "唐泰斯：“今晚不点灯，也不数钱。谁想说话，就过来坐。”"
+      ],
+      "choices": [
+        {
+          "id": "sit_down",
+          "label": "围坐下来",
+          "effects": {
+            "morale": 3
+          },
+          "rogue": {
+            "trust": {
+              "pick": 2,
+              "gain": 1
+            }
+          }
+        }
+      ],
+      "_note": "进入新厄尔巴一章时放出（bond：挑两名伙伴，信赖各 +1）。",
+      "interlude": "bond",
+      "chapters": [
+        "new_elba"
+      ]
+    },
+    {
+      "id": "ev_o_int_organ",
+      "pool": "interlude:minigame:ring",
+      "weight": 0,
+      "once": true,
+      "requires": {},
+      "title": "鹦鹉螺号的管风琴",
+      "location": "鹦鹉螺号·客厅",
+      "speaker": "nemo",
+      "date": "1829-11-01",
+      "body": [
+        "尼摩在客厅里弹管风琴。琴声顺着船壳传出去，海里有东西回应。",
+        "尼摩：“维尔福，你听得出哪一声是礁石、哪一声是鲸、哪一声是一条船吗？听准了，这一路少绕很多弯。”"
+      ],
+      "appraisals": [
+        {
+          "id": "organ_echo",
+          "kind": "ring",
+          "label": "听回声",
+          "observation": "三声回声里，最远的一声是空的：那里是一条没人走过的深水道。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "trust_the_ear",
+          "label": "按听出来的水道走",
+          "requires_clues": [
+            "organ_echo"
+          ],
+          "effects": {
+            "exploration": 10
+          },
+          "reveal": 3
+        },
+        {
+          "id": "trust_the_chart",
+          "label": "还是按海图走",
+          "effects": {
+            "vitality": 4
+          }
+        }
+      ],
+      "_note": "进入鹦鹉螺号一章时放出（minigame:ring，复用 v0.9 的听音小游戏）。",
+      "interlude": "minigame:ring",
+      "chapters": [
+        "nautilus"
+      ]
+    },
+    {
+      "id": "ev_o_besson_barrel",
+      "pool": "biscay_1815",
+      "weight": 3,
+      "once": true,
+      "requires": {},
+      "title": "贝松船长的空酒桶",
+      "location": "夏朗德河口",
+      "speaker": "besson",
+      "body": [
+        "一个晒得黝黑的船长拦住你的马车。他的船挂丹麦旗，停在河口，舱里装满了白兰地。",
+        "贝松：“空出一只桶，钻得进一个人。英国人上船检查，只会数桶，不会一只只撬开。”",
+        "他要的不多：一笔路费，和一句“陛下知道这件事”。"
+      ],
+      "appraisals": [
+        {
+          "id": "besson_manifest",
+          "kind": "spot",
+          "label": "察看贝松的舱单",
+          "observation": "舱单上的桶数比船能装的少两只：他早就算好了要空出来的那两只。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "fund_besson",
+          "label": "付他路费，把这个法子记下",
+          "effects": {},
+          "rogue": {
+            "coins": {
+              "gold": -1
+            }
+          },
+          "flags": [
+            "o_besson_plan"
+          ]
+        },
+        {
+          "id": "take_his_charts",
+          "label": "谢绝，但请他画出英国舰队的位置",
+          "requires_clues": [
+            "besson_manifest"
+          ],
+          "effects": {},
+          "rogue": {
+            "coins": {
+              "intel": 1
+            }
+          },
+          "reveal": 2
+        },
+        {
+          "id": "wave_him_off",
+          "label": "皇帝不会钻酒桶。请他走",
+          "effects": {
+            "morale": 1
+          }
+        }
+      ],
+      "_note": "史实：维克多·贝松船长 1815 年 7 月提出用丹麦商船把拿破仑藏在桶里运走。o_besson_plan 解锁巴斯克锚地军议的第三项。"
+    },
+    {
+      "id": "ev_o_joseph_messenger",
+      "pool": "biscay_1815",
+      "weight": 3,
+      "once": true,
+      "requires": {},
+      "title": "约瑟夫派来的信使",
+      "location": "去罗什福尔的驿道",
+      "speaker": "villefort",
+      "body": [
+        "一个骑手追上队伍，送来约瑟夫·波拿巴的信：他在鲁瓦扬雇了一条美国双桅船，船长不问乘客是谁。",
+        "信的最后一行是：“我们兄弟长得像。让我留下，让他走。”",
+        "维尔福：“这封信，陛下要看，英国人也会想看。”"
+      ],
+      "appraisals": [
+        {
+          "id": "joseph_seal",
+          "kind": "spot",
+          "label": "察看信封的火漆",
+          "observation": "火漆是真的，可封口被人揭开过又按回去：路上已经有别人读过这封信。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "send_money",
+          "label": "从军费里拨一笔给约瑟夫的船",
+          "effects": {
+            "treasury": -300,
+            "morale": 4
+          },
+          "flags": [
+            "o_joseph_helped"
+          ]
+        },
+        {
+          "id": "warn_of_spies",
+          "label": "告诉信使：信被拆过，换一条路回去",
+          "requires_clues": [
+            "joseph_seal"
+          ],
+          "effects": {
+            "heat": -8
+          },
+          "rogue": {
+            "coins": {
+              "intel": 1
+            }
+          },
+          "flags": [
+            "o_joseph_warned"
+          ]
+        },
+        {
+          "id": "keep_the_letter",
+          "label": "把信留下，不让皇帝分心",
+          "effects": {
+            "morale": -3
+          },
+          "rogue": {
+            "coins": {
+              "medal": 1
+            }
+          }
+        }
+      ],
+      "_note": "史实：约瑟夫 1815 年 7 月下旬从鲁瓦扬乘美国船去了美国，并且提出过替皇帝留下。"
+    },
+    {
+      "id": "ev_o_white_cockade",
+      "pool": "biscay_1815",
+      "weight": 2,
+      "once": true,
+      "requires": {},
+      "title": "换了白帽徽的小城",
+      "location": "驿道上的小城",
+      "speaker": "mayor",
+      "body": [
+        "城门口的三色旗昨天才降下来，今天挂上了百合花旗。镇长站在路中间，身后是十几个拿猎枪的人。",
+        "镇长：“国王的命令：皇帝的车可以过去，皇帝的箱子要留下。”",
+        "你的马车里有六只军需箱。"
+      ],
+      "appraisals": [],
+      "choices": [
+        {
+          "id": "pay_the_toll",
+          "label": "留下一只箱子，换整个车队过城",
+          "effects": {
+            "treasury": -250
+          },
+          "flags": [
+            "o_cockade_paid"
+          ]
+        },
+        {
+          "id": "night_detour",
+          "label": "退回去，夜里绕小路",
+          "effects": {
+            "vitality": -6,
+            "heat": 4
+          },
+          "days": 1
+        },
+        {
+          "id": "show_the_guard",
+          "label": "让近卫军把刺刀亮出来，从正门走",
+          "effects": {
+            "heat": 10,
+            "morale": 4
+          },
+          "rogue": {
+            "coins": {
+              "medal": 1
+            }
+          }
+        }
+      ],
+      "_note": "序曲一章不能开仗（L13 之前不能有更低等级的仗），所以这里的冲突用指标和天数结算。"
+    },
+    {
+      "id": "ev_o_betsy_basket",
+      "pool": "st_helena",
+      "weight": 3,
+      "once": true,
+      "requires": {},
+      "title": "贝琪的柳条篮",
+      "location": "圣赫勒拿·山路",
+      "speaker": "betsy",
+      "body": [
+        "荆棘园的贝琪·巴尔康姆骑着小马从山路上下来，篮子里是给朗伍德的番石榴。",
+        "贝琪：“将军要我带句话：书架第三层的那本书，书脊里夹着东西。可是总督的人每次都翻我的篮子。”",
+        "她才十几岁，翻她篮子的人不会想到篮底还有一层。"
+      ],
+      "appraisals": [
+        {
+          "id": "basket_bottom",
+          "kind": "weigh",
+          "label": "过秤：篮子比番石榴重多少",
+          "observation": "空篮子就比同样的篮子重二两：篮底是双层的，做得很好。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "use_the_basket",
+          "label": "托她把一封短信带上山",
+          "requires_clues": [
+            "basket_bottom"
+          ],
+          "effects": {
+            "heat": -6
+          },
+          "rogue": {
+            "coins": {
+              "intel": 2
+            }
+          },
+          "flags": [
+            "o_betsy_courier"
+          ]
+        },
+        {
+          "id": "keep_her_out",
+          "label": "她还是个孩子，不能让她冒这个险",
+          "effects": {
+            "morale": 3
+          }
+        },
+        {
+          "id": "sell_guavas",
+          "label": "买下番石榴，记在补给账上",
+          "effects": {
+            "treasury": -40,
+            "vitality": 4
+          }
+        }
+      ],
+      "_note": "贝琪·巴尔康姆是史实人物，她和皇帝的交往有她本人的回忆录（1844 年出版）为据；夹带信件是本作虚构。"
+    },
+    {
+      "id": "ev_o_semaphore_book",
+      "pool": "st_helena",
+      "weight": 3,
+      "once": true,
+      "requires": {},
+      "title": "信号站的旗语本",
+      "location": "圣赫勒拿·信号站",
+      "speaker": "signalman",
+      "body": [
+        "全岛的信号站用旗子互相报信：哪里有船、将军在不在家、谁出了朗伍德的门。",
+        "值夜的信号兵喝多了，旗语本摊在桌上。",
+        "信号兵：“你是那个补给栈的法国人？再给我一瓶，我什么都没看见。”"
+      ],
+      "appraisals": [
+        {
+          "id": "flag_codes",
+          "kind": "decode",
+          "label": "破译旗语本",
+          "observation": "一面蓝旗加两面白旗，意思是“将军在家，一切如常”。整本码表，一页纸就能抄完。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "copy_codes",
+          "label": "再给他一瓶，把码表抄下来",
+          "requires_clues": [
+            "flag_codes"
+          ],
+          "effects": {
+            "treasury": -60
+          },
+          "rogue": {
+            "coins": {
+              "intel": 1
+            }
+          },
+          "flags": [
+            "o_semaphore_codes"
+          ]
+        },
+        {
+          "id": "just_listen",
+          "label": "陪他喝完，听他发牢骚",
+          "effects": {
+            "heat": -4
+          },
+          "rogue": {
+            "coins": {
+              "intel": 1
+            }
+          }
+        },
+        {
+          "id": "leave",
+          "label": "不惹这个麻烦",
+          "effects": {}
+        }
+      ],
+      "_note": "史实：圣赫勒拿有一套旗语信号网，专门报告拿破仑的行踪。o_semaphore_codes 解锁朗伍德军议的第三项。"
+    },
+    {
+      "id": "ev_o_indiaman_purser",
+      "pool": "st_helena",
+      "weight": 2,
+      "once": true,
+      "requires": {},
+      "title": "东印度公司船的事务长",
+      "location": "詹姆斯敦锚地",
+      "speaker": "purser",
+      "body": [
+        "一条从孟加拉回来的东印度公司商船停在锚地补水，事务长划着小艇上了岸。",
+        "事务长：“账上少记几桶腌肉、几箱茶叶，没人会发现。价钱好商量，现钱。”",
+        "这些货要是被总督府查出来，就是走私；要是不查，朗伍德一冬天都不缺吃的。"
+      ],
+      "appraisals": [
+        {
+          "id": "purser_books",
+          "kind": "spot",
+          "label": "察看事务长的货单",
+          "observation": "货单上的封签是新换的，旧封签的胶印还在：这批货早就被他倒过一手。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "buy_clean",
+          "label": "只买账上有的那几桶，照价付钱",
+          "effects": {
+            "treasury": -150
+          },
+          "rogue": {
+            "coins": {
+              "supply": 3
+            }
+          }
+        },
+        {
+          "id": "buy_the_lot",
+          "label": "整批买下，不问来路",
+          "effects": {
+            "treasury": -150,
+            "heat": 8
+          },
+          "rogue": {
+            "coins": {
+              "supply": 5
+            }
+          }
+        },
+        {
+          "id": "tip_the_fort",
+          "label": "把他倒卖的事透给城堡",
+          "requires_clues": [
+            "purser_books"
+          ],
+          "effects": {
+            "heat": -12,
+            "morale": -2
+          },
+          "flags": [
+            "o_purser_reported"
+          ]
+        }
+      ],
+      "_note": "圣赫勒拿当年是东印度公司航线上的补给站（史实）。"
+    },
+    {
+      "id": "ev_o_nantucket_whalers",
+      "pool": "new_elba",
+      "weight": 3,
+      "once": true,
+      "requires": {},
+      "title": "楠塔基特的捕鲸船",
+      "location": "新厄尔巴·海湾",
+      "speaker": "coffin",
+      "body": [
+        "一条美国捕鲸船进湾补淡水。船长姓柯芬，楠塔基特人，三年没回家了。",
+        "柯芬：“我拿鲸油换你们的饼干和柠檬。别的我不问。到了瓦尔帕莱索，嘴巴也会闭着——只要价钱合适。”"
+      ],
+      "appraisals": [
+        {
+          "id": "whaler_log",
+          "kind": "decode",
+          "label": "破译捕鲸船的航海日志",
+          "observation": "日志里记着一条英国测绘舰上个月问过他们：附近有没有一座冒烟的岛。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "trade_oil",
+          "label": "用配给换鲸油，点亮整座岛的灯",
+          "effects": {
+            "treasury": -200,
+            "construction": 10
+          },
+          "rogue": {
+            "coins": {
+              "supply": 2
+            }
+          }
+        },
+        {
+          "id": "buy_silence",
+          "label": "多给一桶，买他到了瓦尔帕莱索也不说",
+          "requires_clues": [
+            "whaler_log"
+          ],
+          "effects": {
+            "treasury": -300,
+            "heat": -15
+          },
+          "flags": [
+            "o_whaler_silent"
+          ]
+        },
+        {
+          "id": "send_away",
+          "label": "只给淡水，请他马上走",
+          "effects": {
+            "heat": 4,
+            "morale": 2
+          }
+        }
+      ],
+      "_note": "1820 年代南太平洋到处是美国捕鲸船（史实）。"
+    },
+    {
+      "id": "ev_o_friday_canoe",
+      "pool": "new_elba",
+      "weight": 2,
+      "once": true,
+      "requires": {
+        "alive": [
+          "friday"
+        ]
+      },
+      "weight_by_trust": {
+        "companion": "friday",
+        "per_trust": 2
+      },
+      "title": "星期五的独木舟",
+      "location": "新厄尔巴·礁湖",
+      "speaker": "friday",
+      "body": [
+        "天还没亮，星期五把独木舟推下水，招手让你上来。",
+        "星期五：“礁湖的水，每天都不一样。你要是认得它，毒蛇号的人就永远找不到我们。”",
+        "他划得很慢，每过一处暗礁，就用桨尖在水面上点一下。"
+      ],
+      "appraisals": [
+        {
+          "id": "reef_marks",
+          "kind": "spot",
+          "label": "察看他用桨点过的地方",
+          "observation": "每一处都在两块露头的礁石连成的线上：记住礁石，就记住了水道。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "learn_the_water",
+          "label": "跟他学一整天",
+          "requires_clues": [
+            "reef_marks"
+          ],
+          "effects": {
+            "vitality": -4
+          },
+          "reveal": 3,
+          "flags": [
+            "o_learned_reef"
+          ]
+        },
+        {
+          "id": "teach_letters",
+          "label": "换你教他认海图上的字",
+          "effects": {
+            "morale": 4
+          },
+          "flags": [
+            "o_friday_letters"
+          ]
+        },
+        {
+          "id": "fish_together",
+          "label": "什么都不学，钓一船鱼回去",
+          "effects": {
+            "vitality": 8
+          },
+          "rogue": {
+            "coins": {
+              "supply": 1
+            }
+          }
+        }
+      ],
+      "_note": "伙伴个人线：星期五活着才出现，信赖越高越常出现。"
+    },
+    {
+      "id": "ev_o_sperm_whales",
+      "pool": "nautilus",
+      "weight": 3,
+      "once": true,
+      "requires": {},
+      "title": "抹香鲸群",
+      "location": "大洋深处",
+      "speaker": "nemo",
+      "body": [
+        "一群抹香鲸围住了几头须鲸，海面红了一大片。",
+        "尼摩：“抹香鲸是海里的强盗。鹦鹉螺号的冲角，就是为它们准备的。”",
+        "船员们已经站到了舷窗边。你知道，冲进去要费一船的力气，也会在海上留下一道谁都看得见的血痕。"
+      ],
+      "appraisals": [],
+      "choices": [
+        {
+          "id": "ram_them",
+          "label": "冲进去，救下须鲸",
+          "effects": {
+            "vitality": -8,
+            "morale": 6,
+            "heat": 6
+          },
+          "rogue": {
+            "coins": {
+              "medal": 1
+            }
+          }
+        },
+        {
+          "id": "stay_deep",
+          "label": "沉到深处，绕过去",
+          "effects": {
+            "exploration": 5
+          }
+        },
+        {
+          "id": "harvest_oil",
+          "label": "等它们散了，收集浮在海面的鲸油",
+          "effects": {
+            "treasury": 400,
+            "morale": -4
+          }
+        }
+      ],
+      "_note": "凡尔纳原著第二部第十二章。"
+    },
+    {
+      "id": "ev_o_coral_cemetery",
+      "pool": "nautilus",
+      "weight": 2,
+      "once": true,
+      "requires": {},
+      "title": "珊瑚墓地",
+      "location": "海底珊瑚林",
+      "speaker": "nemo",
+      "body": [
+        "一名船员在机舱里受了重伤，第二天早上没有醒过来。",
+        "尼摩带着全体船员，穿上潜水服，把他抬到海底一片珊瑚林里。珊瑚长得很快，几年就会把坟盖住。",
+        "尼摩：“这里，鲨鱼和人都找不到他。”"
+      ],
+      "appraisals": [],
+      "choices": [
+        {
+          "id": "carry_the_body",
+          "label": "和船员们一起抬棺",
+          "effects": {
+            "morale": 6,
+            "vitality": -4
+          },
+          "flags": [
+            "o_coral_bearer"
+          ]
+        },
+        {
+          "id": "write_the_name",
+          "label": "把他的名字记进同盟的总册",
+          "effects": {
+            "morale": 3
+          },
+          "rogue": {
+            "coins": {
+              "medal": 1
+            }
+          }
+        },
+        {
+          "id": "stay_aboard",
+          "label": "留在船上清点他的遗物",
+          "effects": {
+            "treasury": 100
+          }
+        }
+      ],
+      "_note": "凡尔纳原著第一部第二十四章。"
+    },
+    {
+      "id": "ev_o_uncharted_island",
+      "pool": "nautilus",
+      "weight": 2,
+      "once": true,
+      "requires": {},
+      "title": "海图上没有的岛",
+      "location": "南太平洋",
+      "speaker": "nemo",
+      "body": [
+        "声呐里多出一座岛：火山、花岗岩悬崖、一个能藏船的洞。哪一张海图上都没有。",
+        "尼摩：“将来有一天，鹦鹉螺号老了，我也许会回到这里。”"
+      ],
+      "appraisals": [
+        {
+          "id": "island_survey",
+          "kind": "ring",
+          "label": "听洞里的回声",
+          "observation": "洞很深，连着外海，退潮时也不会露底：一条船可以在里面停很多年。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "chart_it",
+          "label": "仔细测绘，记进只有同盟才看得到的海图",
+          "requires_clues": [
+            "island_survey"
+          ],
+          "effects": {
+            "exploration": 15
+          },
+          "flags": [
+            "o_island_charted"
+          ]
+        },
+        {
+          "id": "cache_supplies",
+          "label": "在洞里留一批补给",
+          "effects": {
+            "treasury": -200
+          },
+          "rogue": {
+            "coins": {
+              "supply": 3
+            }
+          }
+        },
+        {
+          "id": "sail_on",
+          "label": "记下坐标就走",
+          "effects": {
+            "exploration": 5
+          }
+        }
+      ],
+      "_note": "凡尔纳《神秘岛》里林肯岛的伏笔（尼摩最后死在那里）。o_island_charted 只是风味旗标，给“幽灵舰队”结局的尾声用。"
+    },
+    {
+      "id": "ev_o_message_bottle",
+      "pool": "ocean",
+      "weight": 2,
+      "once": true,
+      "requires": {},
+      "title": "漂流瓶",
+      "location": "海上",
+      "speaker": "villefort",
+      "body": [
+        "水手从海里捞上来一只封了蜡的瓶子。里面的纸泡过水，英文、法文、德文各写了一遍，每一种都只剩一半。",
+        "维尔福：“三种语言，各缺一半。拼起来，也许就是一整句。”"
+      ],
+      "appraisals": [
+        {
+          "id": "three_halves",
+          "kind": "decode",
+          "label": "破译三种语言拼出来的那句话",
+          "observation": "“……船沉了……三个人活着……南纬三十七度……”经度那一截没了。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "search",
+          "label": "顺着纬线找两天",
+          "requires_clues": [
+            "three_halves"
+          ],
+          "effects": {
+            "morale": 6
+          },
+          "days": 2,
+          "rogue": {
+            "troops": [
+              "line"
+            ]
+          },
+          "flags": [
+            "o_castaways_found"
+          ]
+        },
+        {
+          "id": "pass_it_on",
+          "label": "把瓶子交给下一个港口",
+          "effects": {
+            "heat": -4
+          }
+        },
+        {
+          "id": "keep_the_bottle",
+          "label": "收起来，当作好运",
+          "effects": {},
+          "rogue": {
+            "props": [
+              "prop_loaded_dice"
+            ]
+          }
+        }
+      ],
+      "_note": "借凡尔纳《格兰特船长的儿女》的开头（1868 年，公有领域）。找到的遇难水手编成一个营（rogue.troops）。"
+    },
+    {
+      "id": "ev_o_kinsman_letter",
+      "pool": "ocean",
+      "weight": 2,
+      "once": true,
+      "requires": {
+        "alive": [
+          "dantes"
+        ]
+      },
+      "title": "族人的消息",
+      "location": "唐泰斯的来信",
+      "speaker": "dantes",
+      "body": [
+        "唐泰斯从欧洲寄来一封信，夹在一批货单里。",
+        "唐泰斯：“你的族人杰拉尔·德·维尔福如今是巴黎的王家检察官。他在查一笔从马赛流到海上的钱，查到了‘海鸥号’这个名字。”",
+        "唐泰斯：“他还不知道是你。我也不知道，你想不想让他知道。”"
+      ],
+      "appraisals": [],
+      "choices": [
+        {
+          "id": "cut_the_trail",
+          "label": "让唐泰斯把马赛那条资金线断掉",
+          "effects": {
+            "heat": -10
+          },
+          "rogue": {
+            "coins": {
+              "gold": -1
+            }
+          },
+          "flags": [
+            "o_trail_cut"
+          ]
+        },
+        {
+          "id": "write_to_gerard",
+          "label": "以族人的身份给杰拉尔写一封信",
+          "requires_flags": [
+            "o_gerard_note_kept"
+          ],
+          "effects": {
+            "heat": -20,
+            "morale": -5
+          },
+          "flags": [
+            "o_wrote_gerard"
+          ]
+        },
+        {
+          "id": "let_him_look",
+          "label": "随他查。维尔福这个姓，他比我更怕弄脏",
+          "effects": {
+            "heat": 8,
+            "morale": 3
+          },
+          "flags": [
+            "o_dared_gerard"
+          ]
+        }
+      ],
+      "_note": "远洋分支里的杰拉尔线：你签字放走的人，正是他亲笔批注要永久羁押的人。第二项要在马尔梅松留下杰拉尔的批注。"
+    }
+  ]
+}

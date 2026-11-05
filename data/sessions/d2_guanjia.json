@@ -1,0 +1,304 @@
+{
+  "id": "d2_guanjia",
+  "npc": "guanjia",
+  "mode": "sell",
+  "stock": [
+    "rice_sunji"
+  ],
+  "buyer_prices": {
+    "rice_sunji": {
+      "offer": 20,
+      "max": 30
+    }
+  },
+  "pre": [
+    {
+      "op": "set",
+      "flag": "guanjia_visit",
+      "value": "none"
+    },
+    {
+      "op": "narr",
+      "text": "孙府的老管家撑着一把油纸伞进门，伞也不收，就那么滴着水站在柜台前。"
+    }
+  ],
+  "intro": [
+    {
+      "op": "say",
+      "who": "guanjia",
+      "text": "如花小掌柜，好久不见。老爷前两天还念叨，说德厚当的门面越来越亮堂了。"
+    },
+    {
+      "op": "if",
+      "cond": "stock_has('rice_sunji')",
+      "then": [
+        {
+          "op": "say",
+          "who": "guanjia",
+          "text": "我今天来，是为库房里那袋米。孙老爷的意思，买回去，二十蚨，两下都体面。"
+        }
+      ],
+      "else": [
+        {
+          "op": "say",
+          "who": "guanjia",
+          "text": "可我听说，那袋米已经出了您的门。出到谁手里了？"
+        },
+        {
+          "op": "choice",
+          "text": "这袋米的去向，您怎么答？",
+          "options": [
+            {
+              "id": "tell",
+              "label": "实话说是小丁卖的",
+              "steps": [
+                {
+                  "op": "stat",
+                  "stat": "favor:xiaoding",
+                  "delta": -10,
+                  "why": "把小丁供给孙府"
+                },
+                {
+                  "op": "stat",
+                  "stat": "faction:孙府",
+                  "delta": 3,
+                  "why": "向孙府供出小丁"
+                },
+                {
+                  "op": "set",
+                  "flag": "guanjia_visit",
+                  "value": "told_on_xiaoding"
+                },
+                {
+                  "op": "note",
+                  "kind": "势力",
+                  "text": "孙福来问米，如花把小丁供了出去。",
+                  "source": "seen"
+                },
+                {
+                  "op": "say",
+                  "who": "guanjia",
+                  "text": "好，好。老爷记着您这份实在。"
+                },
+                {
+                  "op": "end",
+                  "result": "told"
+                }
+              ]
+            },
+            {
+              "id": "deny",
+              "label": "说不知道",
+              "steps": [
+                {
+                  "op": "stat",
+                  "stat": "faction:孙府",
+                  "delta": -3,
+                  "why": "装作不知道孙家的米"
+                },
+                {
+                  "op": "stat",
+                  "stat": "suspicion",
+                  "delta": 1,
+                  "why": "孙府起了疑心"
+                },
+                {
+                  "op": "set",
+                  "flag": "guanjia_visit",
+                  "value": "denied"
+                },
+                {
+                  "op": "note",
+                  "kind": "势力",
+                  "text": "孙福来问米，如花说不知道。孙府起了疑心。",
+                  "source": "seen"
+                },
+                {
+                  "op": "say",
+                  "who": "guanjia",
+                  "text": "是么……那就怪了。账是账，老爷慢慢算。"
+                },
+                {
+                  "op": "end",
+                  "result": "denied"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "deals": [
+    {
+      "id": "return_rice",
+      "label": "原价退给孙府（不要钱）",
+      "when": "stock_has('rice_sunji')",
+      "steps": [
+        {
+          "op": "move_item",
+          "def": "rice_sunji",
+          "to": "npc:guanjia",
+          "note": "米原价退还孙府"
+        },
+        {
+          "op": "stat",
+          "stat": "faction:孙府",
+          "delta": 5,
+          "why": "把米退还孙府"
+        },
+        {
+          "op": "set",
+          "flag": "guanjia_visit",
+          "value": "returned_rice"
+        },
+        {
+          "op": "note",
+          "kind": "势力",
+          "text": "孙家的米原价退给了孙府管家，不要钱。",
+          "source": "seen"
+        },
+        {
+          "op": "say",
+          "who": "guanjia",
+          "text": "小掌柜识大体。老爷那边，我替您说话。"
+        }
+      ]
+    },
+    {
+      "id": "bribe",
+      "label": "塞给他十蚨，求他别声张",
+      "when": "stock_has('rice_sunji') and cash() >= 10",
+      "steps": [
+        {
+          "op": "money",
+          "from": "player",
+          "to": "guanjia",
+          "amount": 10,
+          "reason": "打点孙府管家，求他别声张"
+        },
+        {
+          "op": "if",
+          "cond": "var('money_ok') != false",
+          "then": [
+            {
+              "op": "stat",
+              "stat": "faction:孙府",
+              "delta": 1,
+              "why": "打点孙府管家"
+            },
+            {
+              "op": "set",
+              "flag": "guanjia_visit",
+              "value": "bribed"
+            },
+            {
+              "op": "note",
+              "kind": "势力",
+              "text": "如花塞给孙福十蚨，求他别声张。",
+              "source": "seen"
+            },
+            {
+              "op": "say",
+              "who": "guanjia",
+              "text": "哟，小掌柜这是做什么……罢了，我什么也没看见。"
+            }
+          ],
+          "else": [
+            {
+              "op": "set",
+              "flag": "guanjia_visit",
+              "value": "denied"
+            },
+            {
+              "op": "note",
+              "kind": "势力",
+              "text": "如花想打点孙福，手边的钱不够，没能成。",
+              "source": "seen"
+            },
+            {
+              "op": "say",
+              "who": "guanjia",
+              "text": "这点钱，我可不敢收。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deny",
+      "label": "咬定是自家的米",
+      "when": "stock_has('rice_sunji')",
+      "steps": [
+        {
+          "op": "stat",
+          "stat": "faction:孙府",
+          "delta": -5,
+          "why": "咬定是自家的米"
+        },
+        {
+          "op": "stat",
+          "stat": "koubei",
+          "delta": -1,
+          "why": "与孙府当面撕破脸，镇上都听见了"
+        },
+        {
+          "op": "set",
+          "flag": "guanjia_visit",
+          "value": "denied"
+        },
+        {
+          "op": "note",
+          "kind": "势力",
+          "text": "如花咬定米是自家的。孙福脸色一沉，撑起伞走了。",
+          "source": "seen"
+        },
+        {
+          "op": "say",
+          "who": "guanjia",
+          "text": "自家的米，自家的袋子？好，好。"
+        }
+      ]
+    }
+  ],
+  "on_accept": [
+    {
+      "op": "set",
+      "flag": "guanjia_visit",
+      "value": "paid"
+    },
+    {
+      "op": "stat",
+      "stat": "faction:孙府",
+      "delta": 2,
+      "why": "照孙府的价把米卖回去"
+    },
+    {
+      "op": "note",
+      "kind": "商品",
+      "text": "孙福照二十蚨的价，把孙家的米收回去了。",
+      "source": "seen"
+    }
+  ],
+  "on_leave": [
+    {
+      "op": "set",
+      "flag": "guanjia_visit",
+      "value": "left"
+    },
+    {
+      "op": "note",
+      "kind": "势力",
+      "text": "孙福没谈拢，客气地走了。孙府记下了这一笔。",
+      "source": "seen"
+    }
+  ],
+  "outro": [
+    {
+      "op": "say",
+      "who": "guanjia",
+      "text": "老爷说了，镇上每一笔进出，他都记着。"
+    }
+  ],
+  "post": []
+}

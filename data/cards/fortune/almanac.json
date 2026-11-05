@@ -1,0 +1,840 @@
+{
+  "_meta": {
+    "owner": "K10",
+    "schema": 1,
+    "brief": "黄历。春冬多几条，照做只奖不罚。宜忌用合同里的十二个动作。"
+  },
+  "cards": [
+    {
+      "id": "alm.chun_shoudang",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        0
+      ],
+      "yi": [
+        "pawn_in",
+        "meet"
+      ],
+      "ji": [
+        "travel"
+      ],
+      "reward": [
+        {
+          "op": "rep",
+          "delta": 1
+        }
+      ],
+      "brief": "春。宜收当、会友；忌出行。照做奖：口碑加一点。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.chun_shouhuo",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        0
+      ],
+      "yi": [
+        "buy_in"
+      ],
+      "ji": [
+        "lend"
+      ],
+      "reward": [
+        {
+          "op": "money",
+          "delta": 2,
+          "reason": "k10.reason.almanac"
+        }
+      ],
+      "brief": "春。宜收货；忌借贷。照做奖：进一点小钱。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.chun_chuhuo",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        0
+      ],
+      "yi": [
+        "sell_out"
+      ],
+      "ji": [
+        "travel"
+      ],
+      "reward": [
+        {
+          "op": "rep",
+          "delta": 1
+        }
+      ],
+      "brief": "春。宜出货；忌出行。照做奖：口碑加一点。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.chun_jiaoyi",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        0
+      ],
+      "yi": [
+        "trade",
+        "meet"
+      ],
+      "ji": [
+        "wed"
+      ],
+      "reward": [
+        {
+          "op": "money",
+          "delta": 1,
+          "reason": "k10.reason.almanac"
+        }
+      ],
+      "brief": "春。宜交易、会友；忌嫁娶。照做奖：进一点小钱。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.chun_shudang",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        0
+      ],
+      "yi": [
+        "redeem"
+      ],
+      "ji": [
+        "travel"
+      ],
+      "reward": [
+        {
+          "op": "heat",
+          "delta": -1
+        }
+      ],
+      "brief": "春。宜赎当；忌出行。照做奖：风声落一点。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.chun_guitai",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        0
+      ],
+      "yi": [
+        "pawn_in",
+        "sell_out"
+      ],
+      "ji": [
+        "lend"
+      ],
+      "reward": [
+        {
+          "op": "rep",
+          "delta": 1
+        }
+      ],
+      "brief": "春。宜收当、出货，覆盖柜台动作；忌借贷。照做奖：口碑加一点。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.chun_jisi",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        0
+      ],
+      "yi": [
+        "pray",
+        "rest"
+      ],
+      "ji": [
+        "travel"
+      ],
+      "reward": [
+        {
+          "op": "heat",
+          "delta": -1
+        }
+      ],
+      "brief": "春。宜祭祀、安床；忌出行。照做奖：风声落一点。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.chun_xiuzhao",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        0
+      ],
+      "yi": [
+        "repair"
+      ],
+      "ji": [
+        "wed"
+      ],
+      "reward": [
+        {
+          "op": "rep",
+          "delta": 1
+        }
+      ],
+      "brief": "春。宜修造；忌嫁娶。照做奖：口碑加一点。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.xia_anxiang",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        1
+      ],
+      "yi": [
+        "rest"
+      ],
+      "ji": [
+        "travel"
+      ],
+      "reward": [
+        {
+          "op": "heat",
+          "delta": -1
+        }
+      ],
+      "brief": "夏。宜安床；忌出行。照做奖：风声落一点。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.xia_huiyou",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        1
+      ],
+      "yi": [
+        "meet"
+      ],
+      "ji": [
+        "wed"
+      ],
+      "reward": [
+        {
+          "op": "rep",
+          "delta": 1
+        }
+      ],
+      "brief": "夏。宜会友；忌嫁娶。照做奖：口碑加一点。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.xia_jiaoyi",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        1
+      ],
+      "yi": [
+        "trade",
+        "buy_in"
+      ],
+      "ji": [
+        "lend"
+      ],
+      "reward": [
+        {
+          "op": "money",
+          "delta": 1,
+          "reason": "k10.reason.almanac"
+        }
+      ],
+      "brief": "夏。宜交易、收货；忌借贷。照做奖：进一点小钱。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.xia_shoudang",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        1
+      ],
+      "yi": [
+        "pawn_in"
+      ],
+      "ji": [
+        "travel"
+      ],
+      "reward": [
+        {
+          "op": "rep",
+          "delta": 1
+        }
+      ],
+      "brief": "夏。宜收当；忌出行。照做奖：口碑加一点。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.xia_jisi",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        1
+      ],
+      "yi": [
+        "pray"
+      ],
+      "ji": [
+        "repair"
+      ],
+      "reward": [
+        {
+          "op": "heat",
+          "delta": -1
+        }
+      ],
+      "brief": "夏。宜祭祀；忌修造。照做奖：风声落一点。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.xia_chuxing",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        1
+      ],
+      "yi": [
+        "travel"
+      ],
+      "ji": [
+        "wed"
+      ],
+      "reward": [
+        {
+          "op": "money",
+          "delta": 2,
+          "reason": "k10.reason.almanac"
+        }
+      ],
+      "brief": "夏。宜出行；忌嫁娶。照做奖：进一点小钱。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.qiu_chuhuo",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        2
+      ],
+      "yi": [
+        "sell_out",
+        "trade"
+      ],
+      "ji": [
+        "lend"
+      ],
+      "reward": [
+        {
+          "op": "money",
+          "delta": 2,
+          "reason": "k10.reason.almanac"
+        }
+      ],
+      "brief": "秋。宜出货、交易；忌借贷。照做奖：进一点小钱。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.qiu_xiuzhao",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        2
+      ],
+      "yi": [
+        "repair"
+      ],
+      "ji": [
+        "travel"
+      ],
+      "reward": [
+        {
+          "op": "rep",
+          "delta": 1
+        }
+      ],
+      "brief": "秋。宜修造；忌出行。照做奖：口碑加一点。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.qiu_huiyou",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        2
+      ],
+      "yi": [
+        "meet"
+      ],
+      "ji": [
+        "wed"
+      ],
+      "reward": [
+        {
+          "op": "rep",
+          "delta": 1
+        }
+      ],
+      "brief": "秋。宜会友；忌嫁娶。照做奖：口碑加一点。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.qiu_shudang",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        2
+      ],
+      "yi": [
+        "pawn_in",
+        "redeem"
+      ],
+      "ji": [
+        "travel"
+      ],
+      "reward": [
+        {
+          "op": "heat",
+          "delta": -1
+        }
+      ],
+      "brief": "秋。宜收当、赎当；忌出行。照做奖：风声落一点。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.qiu_anxiang",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        2
+      ],
+      "yi": [
+        "rest"
+      ],
+      "ji": [
+        "lend"
+      ],
+      "reward": [
+        {
+          "op": "heat",
+          "delta": -1
+        }
+      ],
+      "brief": "秋。宜安床；忌借贷。照做奖：风声落一点。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.qiu_jisi",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        2
+      ],
+      "yi": [
+        "pray"
+      ],
+      "ji": [
+        "travel"
+      ],
+      "reward": [
+        {
+          "op": "rep",
+          "delta": 1
+        }
+      ],
+      "brief": "秋。宜祭祀；忌出行。照做奖：口碑加一点。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.dong_shoudang",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        3
+      ],
+      "yi": [
+        "pawn_in",
+        "redeem"
+      ],
+      "ji": [
+        "travel"
+      ],
+      "reward": [
+        {
+          "op": "rep",
+          "delta": 1
+        }
+      ],
+      "brief": "冬，1939 腊月用得上。宜收当、赎当；忌出行。照做奖：口碑加一点。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.dong_jiaoyi",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        3
+      ],
+      "yi": [
+        "trade",
+        "sell_out"
+      ],
+      "ji": [
+        "lend"
+      ],
+      "reward": [
+        {
+          "op": "money",
+          "delta": 2,
+          "reason": "k10.reason.almanac"
+        }
+      ],
+      "brief": "冬。宜交易、出货；忌借贷。照做奖：进一点小钱。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.dong_shouhuo",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        3
+      ],
+      "yi": [
+        "buy_in"
+      ],
+      "ji": [
+        "travel"
+      ],
+      "reward": [
+        {
+          "op": "money",
+          "delta": 1,
+          "reason": "k10.reason.almanac"
+        }
+      ],
+      "brief": "冬。宜收货；忌出行。照做奖：进一点小钱。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.dong_huiyou",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        3
+      ],
+      "yi": [
+        "meet",
+        "rest"
+      ],
+      "ji": [
+        "wed"
+      ],
+      "reward": [
+        {
+          "op": "rep",
+          "delta": 1
+        }
+      ],
+      "brief": "冬。宜会友、安床；忌嫁娶。照做奖：口碑加一点。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.dong_jisi",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        3
+      ],
+      "yi": [
+        "pray"
+      ],
+      "ji": [
+        "travel"
+      ],
+      "reward": [
+        {
+          "op": "heat",
+          "delta": -1
+        }
+      ],
+      "brief": "冬。宜祭祀；忌出行。照做奖：风声落一点。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.dong_jiedai",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        3
+      ],
+      "yi": [
+        "lend"
+      ],
+      "ji": [
+        "wed"
+      ],
+      "reward": [
+        {
+          "op": "rep",
+          "delta": 1
+        }
+      ],
+      "brief": "冬。宜借贷；忌嫁娶。照做奖：口碑加一点。不做不罚。借贷写在宜里，照做才给奖，不写惩罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.dong_shudang",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        3
+      ],
+      "yi": [
+        "redeem",
+        "pawn_in"
+      ],
+      "ji": [
+        "travel"
+      ],
+      "reward": [
+        {
+          "op": "heat",
+          "delta": -1
+        }
+      ],
+      "brief": "冬。宜赎当、收当；忌出行。照做奖：风声落一点。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "alm.dong_chuhuo",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        3
+      ],
+      "yi": [
+        "sell_out",
+        "repair"
+      ],
+      "ji": [
+        "wed"
+      ],
+      "reward": [
+        {
+          "op": "rep",
+          "delta": 1
+        }
+      ],
+      "brief": "冬。宜出货、修造；忌嫁娶。照做奖：口碑加一点。不做不罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

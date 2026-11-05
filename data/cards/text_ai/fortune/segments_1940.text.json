@@ -1,0 +1,45 @@
+{
+  "_meta": {
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-misc"
+  },
+  "ws.1940.month.caixing": {
+    "title": "财星高照",
+    "body": "这个月来买东西的人多一些，也肯出价。"
+  },
+  "ws.1940.month.diqi": {
+    "title": "地气回春",
+    "body": "这个月好事来得多一点。"
+  },
+  "ws.1940.month.xinzheng": {
+    "title": "新规压人",
+    "body": "新规矩压下来，这个月坏事来得多一些。"
+  },
+  "ws.1940.month.tanpai": {
+    "title": "摊派换名",
+    "body": "摊派换了名目，官面上的事多。"
+  },
+  "ws.1940.month.pingan": {
+    "title": "平平",
+    "body": "不好不坏，凭本事过日子。"
+  },
+  "ws.1940.month.koushe": {
+    "title": "口舌是非",
+    "body": "这个月口舌纠纷多一些，说话留神。"
+  },
+  "ws.1940.month.yuanyang": {
+    "title": "远方有信",
+    "body": "这个月远方来的消息多一些。"
+  },
+  "ws.1940.big.fanshen_quiet": {
+    "title": "暗路可走",
+    "body": "风声松了些。有人递来一张出城的夜路路条。"
+  },
+  "ws.1940.big.pingan_hold": {
+    "title": "站稳脚跟",
+    "body": "新规矩下先站住了，街坊高看你一眼。"
+  },
+  "ws.1940.big.zhuidi_office": {
+    "title": "新官摊派",
+    "body": "新官的摊派压了上来，风声更紧了，还有人送来一口箱子。"
+  }
+}

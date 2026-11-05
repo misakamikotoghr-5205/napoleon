@@ -1,0 +1,84 @@
+{
+  "cards": [
+    {
+      "id": "ev.1938.wei_ok",
+      "type": "event",
+      "era": [
+        "1938"
+      ],
+      "brief": "伪维持会管事，伪维新政府成立。"
+    },
+    {
+      "id": "ev.1938.guomin_ok",
+      "type": "event",
+      "era": [
+        "1938"
+      ],
+      "brief": "重庆国民政府还在。"
+    },
+    {
+      "id": "ev.1940.wang",
+      "type": "event",
+      "era": [
+        "1940"
+      ],
+      "brief": "汪伪国民政府成立，伪维新政府并入。"
+    },
+    {
+      "id": "ev.1941.quan_ok",
+      "type": "event",
+      "era": [
+        "1941"
+      ],
+      "brief": "伪中储券开始发行。"
+    },
+    {
+      "id": "ev.1943.shang_ok",
+      "type": "event",
+      "era": [
+        "1943"
+      ],
+      "brief": "伪“商统会”统制收购。"
+    },
+    {
+      "id": "ev.1941.qing_ok",
+      "type": "event",
+      "era": [
+        "1941"
+      ],
+      "brief": "伪清乡委员会发证。"
+    },
+    {
+      "id": "ev.1939.qu_ok",
+      "type": "event",
+      "era": [
+        "1939"
+      ],
+      "brief": "伪区公所贴出告示。"
+    },
+    {
+      "id": "ev.1945.xian_ok",
+      "type": "event",
+      "era": [
+        "1945"
+      ],
+      "brief": "伪县政府的人还在。"
+    },
+    {
+      "id": "ev.1949.xian_ok",
+      "type": "event",
+      "era": [
+        "1949"
+      ],
+      "brief": "县政府贴出安民告示。"
+    },
+    {
+      "id": "ev.any.xian",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "brief": "县政府这个词在通年代牌里不单独判。"
+    }
+  ]
+}

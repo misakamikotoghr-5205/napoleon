@@ -1,0 +1,53 @@
+{
+  "_meta": {
+    "owner": "K01",
+    "schema": 1
+  },
+  "persons": {
+    "suanming": {
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_PERSON"
+    }
+  },
+  "cards": [
+    {
+      "id": "p.demo.1938",
+      "type": "person",
+      "person": "linsao",
+      "era": [
+        "1938"
+      ],
+      "intent": "pawn",
+      "choices": [
+        {
+          "id": "listen",
+          "brief": "THIS_BRIEF_MUST_NOT_LEAK_CHOICE"
+        }
+      ],
+      "slots": [
+        {
+          "id": "paper"
+        }
+      ],
+      "check": {
+        "need": 1
+      },
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_CARD"
+    },
+    {
+      "id": "p.done.1938",
+      "type": "news",
+      "era": [
+        "1938"
+      ],
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_DONE"
+    },
+    {
+      "id": "p.otherera",
+      "type": "news",
+      "era": [
+        "1956"
+      ],
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_ERA"
+    }
+  ]
+}

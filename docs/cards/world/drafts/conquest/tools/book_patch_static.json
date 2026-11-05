@@ -1,0 +1,76 @@
+{
+ "_doc": "草稿（标签 conquest）：给 data/campaigns/napoleon/book.json 的补丁，只含主干与鹰飞两段的内容字段（ARCH §8.4：book.json 的结构字段归 A，C 写文字和内容字段）。scene_battles 由 tools/build_maps.py 从同一张表写出。所有 level 都是全局等级 L（绝对值），不再加 level_offset：offset 只用于没写 level、按 2·幕−1 推算的旧场景（即远洋段）。",
+ "segments": {
+  "trunk": {"file": "res://data/campaigns/napoleon/trunk.json", "map": "res://data/campaigns/napoleon/maps/europe.json", "kind": "trunk", "brand": "鹰旗"},
+  "conquest": {"file": "res://data/campaigns/napoleon/conquest.json", "map": "res://data/campaigns/napoleon/maps/europe_late.json", "kind": "branch", "brand": "鹰飞"}
+ },
+ "branches": {
+  "conquest": {
+   "from": "trunk", "scene": "elba_1815", "level_offset": 12, "entry": "",
+   "requires": {"any": [{"stat": {"medal_earned": [">=", 10]}}, {"flags": ["t_guard_oath"]}], "hero_ok": true},
+   "reasons": {
+    "any": "皇帝没点你的名：忠诚不够（整局累计挣到勋章 ≥ 10，或在枫丹白露写下名字随驾厄尔巴）",
+    "hero_ok": "主角重伤未愈，上不了马"
+   },
+   "offer_text": {
+    "ok": "鹰飞 · 随皇帝北上：儒安湾、拉弗雷、巴黎，然后是比利时。",
+    "locked": "鹰飞（未开放）"
+   }
+  },
+  "cristo": {
+   "reasons": {"any": "你和马赛没有交集：没拿到法利亚的半封信，也没见过莫雷尔或法老号"}
+  },
+  "ocean": {
+   "reasons": {}
+  }
+ },
+ "shared_flags_add": ["t_dantes_letter", "t_storks_hostile", "t_vilna_reserve", "t_lithuania_taken", "t_saragossa_terms", "t_saragossa_storm", "t_marie_paid", "t_ponds_mercy", "t_return_mark"],
+ "shared_flags_note": "鹰飞读主干的这些旗标：t_guard_oath（门槛）、t_storks_hostile（第一章多一支对手承包商）、t_pharaon_known / t_dantes_letter（莫雷尔的请愿书）、faria_half_letter（伊夫堡 27 号）、t_vilna_reserve / t_lithuania_taken（第五章军议的回响）、t_saragossa_terms / t_saragossa_storm（第四章伊比利亚线的民心）、t_ponds_mercy（第三章维也纳）、t_marie_paid（玛丽的个人线）、t_return_mark（第三章美泉宫的画）。ARCH 原表已有 faria_half_letter、t_pharaon_known、t_guard_oath、t_mysore_envoy。",
+ "battle_pool": {
+  "trunk": {
+   "1-6": ["skirmish_terraces", "skirmish_mill_ford", "skirmish_hamlet", "skirmish_a", "skirmish_b", "skirmish_c"],
+   "7-12": ["skirmish_terraces", "skirmish_mill_ford", "skirmish_hamlet"]
+  },
+  "conquest": {
+   "12-23": ["skirmish_brabant_farm", "skirmish_sunken_lane"]
+  }
+ },
+ "battle_pool_wanted": {
+  "_doc": "随机槽想要但还没有的通用遭遇战（B 写；进池以前，上面 battle_pool 照常用）。理由：主干 7–12 级的随机仗现在只有奥军面孔，埃及、西班牙、俄罗斯的槽打出来是白衣步兵，不对味。",
+  "trunk": {"3-5": ["skirmish_desert_well"], "7-9": ["skirmish_sierra_village"], "8-10": ["skirmish_snow_village"]},
+  "conquest": {"14-23": ["skirmish_rhine_ferry", "skirmish_danube_mill"]}
+ },
+ "templates_needed": [
+  {"id": "acre", "level": 5, "seg": "trunk", "from": "ARCH §5", "terrain": "沙漠 + 墙 + 壕沟", "fallback": "major_a"},
+  {"id": "marengo", "level": 5, "seg": "trunk", "from": "ARCH §5", "terrain": "平原 + 葡萄园 + 小溪", "fallback": "major_a"},
+  {"id": "pyramids", "level": 4, "seg": "trunk", "from": "ARCH §5", "terrain": "沙地 + 沙丘 + 村庄，马穆鲁克冲方阵", "fallback": "elite_a"},
+  {"id": "ulm", "level": 6, "seg": "trunk", "from": "ARCH §5", "terrain": "泥地 + 城墙 + 多瑙河桥", "fallback": "elite_a"},
+  {"id": "austerlitz", "level": 7, "seg": "trunk", "from": "ARCH §5", "terrain": "高地 + 冰面（冰裂成河）", "fallback": "major_a"},
+  {"id": "eylau", "level": 7, "seg": "trunk", "from": "ARCH §5", "terrain": "雪地 + 墓地墙", "fallback": "major_a"},
+  {"id": "saragossa", "level": 9, "seg": "trunk", "from": "ARCH §5", "terrain": "街道 + 房屋 + 屋顶 + 修道院墙", "fallback": "major_a"},
+  {"id": "wagram", "level": 9, "seg": "trunk", "from": "ARCH §5", "terrain": "grand，浮桥 + 河 + 平原大炮群", "fallback": "major_a"},
+  {"id": "borodino", "level": 9, "seg": "trunk", "from": "ARCH §5", "terrain": "grand，多面堡（胸墙）+ 村庄", "fallback": "major_a"},
+  {"id": "berezina", "level": 10, "seg": "trunk", "from": "ARCH §5", "terrain": "雪 + 冰（冰裂成河）+ 两座浮桥", "fallback": "major_a"},
+  {"id": "leipzig", "level": 11, "seg": "trunk", "from": "ARCH §5", "terrain": "grand，村庄环 + 埃尔斯特河单桥", "fallback": "major_a"},
+  {"id": "elba_cove", "level": 12, "seg": "trunk", "from": "ARCH §5", "terrain": "码头 + 跳板 + 沙滩 + 海（私掠船、卡隆炮）", "fallback": "major_a"},
+  {"id": "fort_bard", "level": 4, "seg": "trunk", "from": "本稿新提", "terrain": "峡谷单路 + 堡墙 + 屋顶射手；骡道绕行", "fallback": "elite_a"},
+  {"id": "jena", "level": 6, "seg": "trunk", "from": "本稿新提", "terrain": "雾 + 兰德格拉芬山（高地）+ 村庄", "fallback": "elite_a"},
+  {"id": "somosierra", "level": 8, "seg": "trunk", "from": "本稿新提", "terrain": "山口之字路 + 四座炮台（波兰枪骑兵冲坡）", "fallback": "elite_a"},
+  {"id": "aspern", "level": 8, "seg": "trunk", "from": "本稿新提", "terrain": "两村 + 粮仓 + 背后浮桥（第 5 回合桥断）；拉纳的宿命之地", "fallback": "elite_a"},
+  {"id": "krasnoi", "level": 9, "seg": "trunk", "from": "本稿新提", "terrain": "雪 + 结冰小河 + 被围的后卫", "fallback": "elite_a"},
+  {"id": "dresden", "level": 10, "seg": "trunk", "from": "本稿新提", "terrain": "雨 + 城郊花园墙 + 易北河", "fallback": "elite_a"},
+  {"id": "hanau", "level": 10, "seg": "trunk", "from": "本稿新提", "terrain": "林间大道 + 金齐希河桥（巴伐利亚军挡路）", "fallback": "elite_a"},
+  {"id": "brussels", "level": 15, "seg": "conquest", "from": "ARCH §5", "terrain": "城门 + 街道 + 房屋 + 屋顶", "fallback": "major_a"},
+  {"id": "rhine_crossing", "level": 16, "seg": "conquest", "from": "ARCH §5", "terrain": "劳特河防线：胸墙 + 河 + 浅滩 + 渡船", "fallback": "major_a"},
+  {"id": "vienna_streets", "level": 18, "seg": "conquest", "from": "ARCH §5", "terrain": "grand，城墙缺口 + 街道 + 屋顶 + 火箭", "fallback": "major_a"},
+  {"id": "iberia_return", "level": 20, "seg": "conquest", "from": "ARCH §5", "terrain": "托雷斯韦德拉什：多层胸墙 + 墙 + 山路", "fallback": "major_a"},
+  {"id": "channel_landing", "level": 20, "seg": "conquest", "from": "本稿新提（第四章另一条线的 Boss）", "terrain": "海 + 浅水 + 沙滩 + 白崖（高地）+ 炮艇", "fallback": "major_a"},
+  {"id": "niemen", "level": 22, "seg": "conquest", "from": "ARCH §5", "terrain": "大河 + 三座浮桥 + 对岸高地（这次俄军守河）", "fallback": "major_a"},
+  {"id": "coalition_final", "level": 24, "seg": "conquest", "from": "ARCH §5", "terrain": "epic 12×7，村庄环 + 河 + 不规则虚空边", "fallback": "major_a"}
+ ],
+ "level_rule_note": "ARCH §3.1 的「分支第一场 ≥ 主干最后一场 + 1」和「同章 battle ≤ Boss − 2」在鹰飞第一章撞车（主干最后 L12，第一章 Boss L14，遭遇战只能 ≤ L12）。本稿的读法：分支第一章的 Boss ≥ 主干最后一个 Boss + 2，精英与锚点战 ≥ 主干最后一个 Boss + 1，遭遇战不低于主干最后一个 Boss。所以鹰飞第一章：沙勒罗瓦（锚点遭遇战）与随机遭遇战 L12，利尼 / 四臂村 L13，滑铁卢 L14。见 CONQUEST.md §5。",
+ "debug_carry": {
+  "conquest": {"from": "branch_point", "flags": ["t_guard_oath", "t_pharaon_known"], "companions": {"baptiste": 2, "corso": 2, "marie": 1, "gourgaud": 1, "drouot": 0}},
+  "conquest_stage": {"_doc": "game.new {segment:conquest, stage:n} 时每多一章补给：金币 +2、军需券 +2、勋章 +2、部队 +1 line（按章累加），伙伴等级 +1（上限 3）。", "per_stage": {"coins": {"gold": 2, "supply": 2, "medal": 2}, "troops": ["line"], "companion_level": 1}}
+ }
+}

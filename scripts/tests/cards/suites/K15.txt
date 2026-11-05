@@ -1,0 +1,4 @@
+# K15 来源审核工具（docs/handoff_cards/K15_audit-provenance.md）
+K15_audit_tools|res://scripts/tests/cards/K15/test_audit_tools.gd|600|
+K15_missing_text_real|res://scripts/tests/cards/K15/test_missing_text_real.gd|180|
+K15_ship_variants_real|res://scripts/tests/cards/K15/test_ship_variants_real.gd|300|

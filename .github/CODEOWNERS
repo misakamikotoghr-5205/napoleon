@@ -1,0 +1,8 @@
+# 人写的路径（docs/cards/CARDS_INTERFACES.md §11.5）：没有 A/B 的 review 合不进去。
+# TODO(Claude)：A、B 在 legal/human_authors.json 登记 GitHub 账号后，把下面的仓库主人换成他们的账号。
+/data/cards/text/            @misakamikotoghr-5205
+/art/cards/                  @misakamikotoghr-5205
+/audio/cards/                @misakamikotoghr-5205
+/data/cards/theme/palette.json @misakamikotoghr-5205
+/legal/                      @misakamikotoghr-5205
+/fonts/                      @misakamikotoghr-5205

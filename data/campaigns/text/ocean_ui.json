@@ -1,0 +1,301 @@
+{
+  "_doc": [
+    "Player-visible text of scripts/cards/campaign/ocean_view.gd (the ocean campaign's card-table adapter), moved here by A0 (WORLD_MAP_DESIGN 15.1, ARCH 6 item 6). Owner after A0: package C. C1 rewrote it without the pawnshop wording (WORLD_MAP_DESIGN 12.1; scripts/tests/cards/OCEAN/test_content.gd keeps it clean).",
+    "ui: CardText ui keys written as {t: text}. overlays: card overlays (title / body / choices by action id). Strings with {name} placeholders are filled by ocean_view._fmt (one pass; unknown placeholders such as {d} or {n} stay for CardText).",
+    "Keep every key; ocean_view reads each one by name. Changing a string changes the screen text and nothing else."
+  ],
+  "metric_names": {
+    "treasury": "军费",
+    "morale": "同盟威望",
+    "heat": "敌方警戒",
+    "vitality": "体力与士气",
+    "construction": "岛屿建设",
+    "exploration": "深海探索"
+  },
+  "sign_names": {
+    "white": "白旗 · 照常行军",
+    "red": "红旗 · 就地征发",
+    "black": "黑旗 · 闭营清点"
+  },
+  "protagonist_name": "埃德蒙·德·维尔福",
+  "currency_default": "军费",
+  "list_sep": "、",
+  "item": {
+    "body_default": "已收入行军箱的任务物件。",
+    "use": "已登记的航程信物；用途随剧情与查验线索推进。",
+    "supply_medicine": "药品补给",
+    "supply_body": "已登记的虚构任务物件，可供剧情或交付使用。"
+  },
+  "prop_choice": "打出道具 · {name}",
+  "companion_body": "{cls} · 羁绊【{bonds}】 · 战技：{skill}",
+  "companion_bond_sep": " / ",
+  "fallback_endings": {
+    "bittersweet": "余烬与航路\n\n同盟带着没能弥补的遗憾走到终局。厄尔巴怀表还在走，幸存者的承诺还在账上；你们还得为没兑现的约定继续远航。",
+    "bankruptcy": "军费告罄\n\n军费归零，补给和信用一样样断了。同盟只好封存账簿，这一段航程到此为止。",
+    "loss": "最后的灯火\n\n体力与士气耗尽，船队再也开不动了。幸存者带走行军箱和同盟没兑付的承诺，等下一次启航。",
+    "blockade": "封锁线合拢\n\n敌方警戒到了满值，搜索和封锁切断了秘密航路。同盟的这次航行被迫中止。"
+  },
+  "overlays": {
+    "ocean.signage": {
+      "title": "营令三色旗",
+      "body": "",
+      "choices": {
+        "action:sign:white": "升白旗 · 照常行军",
+        "action:sign:red": "升红旗 · 就地征发",
+        "action:sign:black": "升黑旗 · 闭营清点",
+        "action:wait": "清点今日军需，扎营等待明日"
+      }
+    },
+    "ocean.town": {
+      "title": "市镇补给 · Town",
+      "body": "",
+      "choices": {
+        "action:visit:town": "走访市镇，补充补给",
+        "action:trade:fair": "按公道价格买卖",
+        "action:trade:counterfeit": "用假币做黑市生意，损伤盟友信任"
+      }
+    },
+    "ocean.backdoor": {
+      "title": "密探联络 · Backdoor",
+      "body": "与密探核对消息。每场可联络一次；警戒上升，探索进展增加。",
+      "choices": {
+        "action:visit:backdoor": "会见密探"
+      }
+    },
+    "ocean.resources": {
+      "title": "工程与援助",
+      "body": "",
+      "choices": {
+        "action:build": "投入 200 军费，推进岛屿建设",
+        "action:explore": "投入 200 军费，推进深海探索",
+        "action:fund:yes": "拨出 1000 军费，资助同盟",
+        "action:fund:no": "拒绝本次资助，保留军费"
+      }
+    },
+    "ocean.march": {
+      "title": "世界地图 · 掷骰行军与奇遇",
+      "body": "",
+      "choices": {
+        "action:roll_dice": "掷骰行军 · 前进1～6格触发棋盘格事件",
+        "action:pick_route:salon_route": "选择分支路线：名流沙龙与外交线",
+        "action:pick_route:duel_route": "选择分支路线：决斗试炼与要塞线",
+        "action:pick_route:smuggle_route": "选择分支路线：暗礁走私与奇物线",
+        "action:activity:salon": "穿插小活动：名流沙龙夜谈",
+        "action:activity:duel": "穿插小活动：军官荣誉决斗",
+        "action:activity:gamble": "穿插小活动：水手轮盘赌局"
+      }
+    },
+    "ocean.calendar": {
+      "title": "营地日程 · 战役倒计时",
+      "body": "",
+      "choices": {
+        "action:schedule:recruit": "营地日程：招兵买马（金币+1，军需券+2）",
+        "action:schedule:train": "营地日程：战阵演练（勋章+1，伙伴属性提升）",
+        "action:schedule:bond_story": "营地日程：伙伴羁绊剧情（勋章+1，威望+8）",
+        "action:schedule:diplomacy": "营地日程：秘密外交（情报币+2，警戒-8）",
+        "action:schedule:festival": "营地日程：庆典休整（体力与士气+10，获小道具）",
+        "action:schedule:smuggle": "营地日程：远洋走私（金币+2，军费+300）"
+      }
+    },
+    "ocean.squad": {
+      "title": "伙伴名册 · 羁绊与晋升",
+      "body": "",
+      "choices": {
+        "action:recruit:friday": "招募星期五（荒岛/远洋 · 2金币）",
+        "action:recruit:nemo": "招募尼摩船长（远洋/博学 · 3金币）",
+        "action:recruit:morel": "招募莫雷尔船长（远洋/帝国 · 2金币）",
+        "action:recruit:marie": "招募玛丽·朗热（暗影/帝国 · 2金币）",
+        "action:recruit:corso": "招募科尔索（帝国/博学 · 2金币）",
+        "action:promote:dantes": "消耗1枚勋章 · 晋升唐泰斯",
+        "action:promote:gourgaud": "消耗1枚勋章 · 晋升古尔戈"
+      }
+    },
+    "ocean.big_fate": {
+      "title": "战败危机 · 大命运抉择",
+      "body": "",
+      "choices": {
+        "action:big_fate:sacrifice_rearguard": "断后死战 · 牺牲一名伙伴保全主力与军费",
+        "action:big_fate:ransom_supply": "割让军需 · 支付300军费赎买防线",
+        "action:big_fate:desperate_breakout": "强行浴血突围 · 承受负伤冲出重围"
+      }
+    },
+    "ocean.status": {
+      "title": "军需账簿与航海日志",
+      "body": ""
+    },
+    "ocean.rules": {
+      "title": "军需官手册",
+      "body": "打出金色剧情牌，阅读剧情并选择查验方式；查验完重新打开剧情牌，可复查线索并作出决定。\n\n营令三色旗定下每天的行动方针；市镇补给和密探联络每场各有一次行动。任务物件保存在留存牌与货架，催逼期限随等待和剧情推进而减少。\n\n军费归零、警戒达到 100 或体力与士气归零将结束旅程。岛屿建设、深海探索和同盟选择会影响终局。所有实验与特殊药剂只作为虚构任务物件结算。"
+    }
+  },
+  "ui": {
+    "c02.hero.eye": "同盟威望",
+    "c02.hero.tongue": "敌方警戒",
+    "c02.hero.pull": "体力与士气",
+    "c01.hud.date": "{y}年{m}月{d}日 · 第{day}/{days}场",
+    "c01.btn.close_day.begin_month": "启航 · 开始本部",
+    "c01.btn.close_day.begin_day": "拔营 · 今日行动",
+    "c01.btn.close_day.end_day": "扎营 · 等待明日",
+    "c01.btn.close_day.next_day": "迎接次日",
+    "c01.btn.close_day.year_next": "进入下一部",
+    "c09.btn.begin": "启航",
+    "c09.btn.next_year": "进入下一部",
+    "c03.reply.read": "已阅 · 收起",
+    "ocean.reason.locked": "需先查验或满足前置条件"
+  },
+  "tiers": {
+    "rep": [
+      "同盟离心",
+      "同盟存疑",
+      "同盟信任",
+      "同盟拥戴",
+      "同盟齐心"
+    ],
+    "heat": [
+      "风声平静",
+      "敌方留意",
+      "敌方搜查",
+      "敌方围捕",
+      "全面封锁"
+    ]
+  },
+  "common": {
+    "c16.title.name": "远洋",
+    "c16.title.new": "启航",
+    "c16.title.continue": "接续航程",
+    "c16.title.tagline": "一八一五年 · 从圣赫勒拿到鹦鹉螺号",
+    "c16.title.blurb": "帝国落幕之后，埃德蒙·德·维尔福带着帝国的军需账簿登上贝勒罗丰号。查验物证、维系同盟，以流亡皇帝的司库身份，把圣赫勒拿、新厄尔巴岛和深海航路连成一条线。",
+    "c16.title.hint": "选中金色剧情牌，再按“打出”，阅读剧情并查验线索。\n每次有效行动自动保存；“接续航程”恢复上次进度。",
+    "c16.pause.save_note": "每次有效行动自动保存；接续航程恢复上次进度。",
+    "c16.pause.confirm_title": "回到标题？已经结算的行动已自动记进航海日志。",
+    "c16.pause.confirm_quit": "离开游戏？已经结算的行动已自动记进航海日志。",
+    "c01.hud.brand": "远洋",
+    "rg5.opening.default": "贝勒罗丰号：从序曲启航",
+    "rg4.title.run_no": "这是第{n}次航程",
+    "rg4.title.shelf": "战役档案",
+    "rg4.title.run_open": "第{open}次航程未完；启航会另起第{n}次",
+    "rg4.title.confirm_new": "第{open}次航程还没结束。启航会合上这本航海日志，另起第{n}次；之后“接续航程”将恢复新航程。真的另起一次？",
+    "rg4.title.shelf_empty": "结束的航程会记进回忆录书架。",
+    "rg5.toast.closed": "航程已结束，这本航海日志已放上回忆录书架。",
+    "rg5.chronicle.other": "这次航程在第{d}日合上航海日志。",
+    "ocean.chronicle.abandoned": "第{d}日合上航海日志，另择航路。",
+    "ocean.chronicle.other": "这次航程在第{d}日合上航海日志。",
+    "rg4.drawer.relics": "航程信物",
+    "rg4.depth.treasure": "航程信物",
+    "rg4.relics.count": "已收存 {n} 件关键物证，完整航路共 {cap} 件",
+    "rg4.relics.empty": "尚未收存关键物证；查验剧情牌并作出决定后，可在这里复查。",
+    "rg4.relics.sources": "航海札记",
+    "rg4.relics.sources_empty": "线索与人物记录可在卷宗和军需账簿与航海日志中复查。",
+    "rg4.stock.use": "记录",
+    "c04.shelf.title": "行军箱"
+  },
+  "chronicle_ending": "第{d}日，航海日志记下了“{title}”。",
+  "chronicle_names": {
+    "bittersweet": "余烬与航路",
+    "bankruptcy": "军费告罄",
+    "loss": "最后的灯火",
+    "blockade": "封锁线合拢"
+  },
+  "dynamic": {
+    "ocean.resources.body": "{summary}\n\n建设仅在新厄尔巴岛开放；深海探索与资助决定仅在鹦鹉螺号开放。每场可建设或探索一次。",
+    "ocean.signage.body": "当前营令：{sign}\n\n红旗：就地征发军需，每日警戒 +15。白旗：照常行军，警戒不变。黑旗：闭营清点，每日支出 10 军费，警戒 −10。每次扎营推进一天；换一面营令旗本身不推进时间。",
+    "ocean.signage.sign_default": "白旗",
+    "ocean.town.body": "每场可走访市镇一次，花费 100 军费。在圣赫勒拿可获得药品任务物件；之后可补充补给、恢复体力与士气。\n\n每场另有一次买卖：公道买卖获得 200 军费并提升同盟威望；假币黑市生意获得 1500 军费，但会伤害信任并提高警戒。",
+    "ocean.march.body": "当前棋盘位置：第 {pos} 格【{tile}】（{desc}）。\n当前路线：【{route}】，已掷骰 {rolls} 次，帝国金币：{gold}。",
+    "ocean.calendar.body": "第 {week} 周营地日程：距离下一波大军团战役还有 {countdown} 格日程槽（本周已排 {scheduled}/{slots}）。安排招兵、演练、羁绊剧情、外交、节庆或走私以充实备战。",
+    "ocean.goal.title": "{chapter} · {scene}",
+    "ocean.goal.chapter_default": "远洋",
+    "ocean.goal.scene_default": "启航",
+    "ocean.notice": "{location}\n{title}。打出剧情牌开始；军需账簿与航海日志可随时查账。",
+    "ocean.report.chapter": "{chapter}\n本部结算单位：{currency}。上一部余额已记入航海日志。",
+    "c02.hero.nerve.nautilus": "深海探索",
+    "c02.hero.nerve.other": "岛屿建设",
+    "demand.goods": "交付药品任务物件",
+    "demand.money": "缴纳 {cost} 军费保证金",
+    "demand.body": "{title}\n剩余 {days} 天。{label}。",
+    "demand.success": "交付已入账，这项催逼已经完成。",
+    "demand.fail": "物资或军费不足，尚未完成交付。",
+    "demand.delay": "期限仍在推进，请尽快筹备。",
+    "squad.body": "帝国金币：{gold}，荣誉勋章：{medal}。\n已激活羁绊：{bonds}。\n阵亡名单（一条命无法复活）：{fallen}。",
+    "squad.bonds_none": "暂无",
+    "squad.fallen_none": "无"
+  },
+  "scene": {
+    "appraised": "\n\n【已查验 · {label}】\n{observation}"
+  },
+  "summary": "{chapter}\n军费：{treasury} {currency}\n同盟威望：{morale} / 100\n敌方警戒：{heat} / 100\n体力与士气：{vitality} / 100\n岛屿建设：{construction} / 100　深海探索：{exploration} / 100\n功能币：金币 {gold} · 军需券 {supply} · 勋章 {medal} · 情报币 {intel}",
+  "ledger": {
+    "balance": "\n{chapter}封存余额：{treasury} {currency}",
+    "row": "\n第 {day} 日 · {label}",
+    "head": "\n\n最近账目："
+  },
+  "record": {
+    "default": "账目已登记",
+    "start": "启航；期初军费 {treasury}",
+    "appraisal": "查验：{observation}",
+    "choice_default": "剧情决定",
+    "daily_sign": "{sign} · 日结",
+    "daily_sign_default": "行动日",
+    "visit_town": "市镇补给",
+    "visit_backdoor": "密探联络",
+    "trade_fair": "公道买卖：军费 +200，同盟威望 +4",
+    "trade_counterfeit": "假币黑市生意：军费 +1500，同盟威望 −20，警戒 +10",
+    "project": "{metric} +25；军费 −200",
+    "project_default": "工程",
+    "funding_yes": "已资助同盟：军费 −1000，威望 +15",
+    "funding_no": "保留军费，拒绝资助",
+    "demand_fulfilled_medicine": "药品已交付",
+    "demand_fulfilled_bond": "保证金已缴纳：军费 −1000",
+    "demand_expired_medicine": "药品催逼逾期",
+    "demand_expired_bond": "保证金催逼逾期",
+    "chapter_open": "转入新币制；期初军费 {treasury}，上一部账目封存",
+    "march_roll": "大富翁行军掷骰 {steps} 步，抵达 {tile}",
+    "pick_route": "选择分支路线：{route}",
+    "activity": "战役间穿插活动：{id}",
+    "schedule": "营地日程排程：{action}",
+    "recruit": "招募伙伴：{id}",
+    "promote": "晋升伙伴：{id}",
+    "use_prop": "使用大富翁小道具：{id}",
+    "battle_start": "打响战术网格战役",
+    "battle_scout": "使用情报币侦察敌军路线",
+    "battle_deploy": "网格部署：{id}",
+    "battle_skill": "发动伙伴战技：{id}",
+    "battle_step": "推进战术网格回合",
+    "battle_victory": "战术网格战役获胜",
+    "battle_defeat": "战线失守，触发大命运抉择",
+    "companion_fallen": "伙伴力战牺牲：{id}",
+    "big_fate": "大命运抉择：{choice}",
+    "ending": "航程结算",
+    "effect": "；{metric} {delta}"
+  },
+  "formal_summary": "{chapter}\n{treasury_name}：{treasury} {currency}\n{morale_name}：{morale} · {heat_name}：{heat} · {vitality_name}：{vitality}\n{construction_name}：{construction} · {exploration_name}：{exploration}\n金币 {gold} · 军需 {supply} · 勋章 {medal} · 情报 {intel}",
+  "companion_recruit": "招募 {name}（{gold} 金币）",
+  "companion_promote": "消耗 1 枚勋章 · 晋升 {name}",
+  "companion_v2": {
+    "duty_intro": "\n\n留守在营地安排，按整章生效：本章不能出战，也不计入上阵羁绊；下一章自动归队。同行并赢下战斗后，生还伙伴的配对信任增加，最高三级。",
+    "reserve": "安排{name}本章留守",
+    "recall": "{name}本章留守 · 下章归队",
+    "field": " · 随军",
+    "reserved": " · 本章留守（不能出战，下章归队）",
+    "left": " · 已离队",
+    "fallen": " · 已阵亡",
+    "keep": "\n{effect}",
+    "pair": "\n\n{name} · 信任 {tier}/3 · {status}\n{desc}",
+    "pair_active": "共同出战可生效",
+    "pair_inactive": "当前未激活",
+    "companion_duty": "安排{name}留守，本章不能出战。",
+    "companion_departed": "{name}已离开队伍。",
+    "reasons": {
+      "duty_committed": "已承诺本章留守，下一章自动归队。",
+      "no_reserve_duty": "这位伙伴没有留守任务。",
+      "wrong_node": "请先到营地或集结点安排留守。",
+      "already_used": "本章已经安排过这项任务。",
+      "missing_companion": "这位伙伴当前不在可用队伍中。",
+      "companion_on_duty": "本章留守，暂时不能出战。",
+      "companion_departed": "这位伙伴已离队，不能重新招募。",
+      "companion_too_young": "皮埃尔尚未到出战年龄，可随军留守。",
+      "companion_discord": "贵族院审判后，阿尔贝与海黛无法同时出战。"
+    },
+    "captured": " · 已被俘"
+  }
+}

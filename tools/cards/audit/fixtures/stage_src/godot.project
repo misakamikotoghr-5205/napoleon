@@ -1,0 +1,9 @@
+config_version=5
+
+[application]
+config/name="StageSrc"
+run/main_scene="res://scenes/Main.tscn"
+run/main_scene.ship="res://scenes/cards/CardGame.tscn"
+
+[autoload]
+CardBus="*res://scripts/ship/bus.gd"

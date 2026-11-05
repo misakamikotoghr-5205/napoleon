@@ -1,0 +1,207 @@
+{
+  "_meta": {
+    "owner": "C06",
+    "schema": 1,
+    "wheel": "wh.month",
+    "uid": "",
+    "required": true,
+    "brief": "本月运势：空香案的扇区，以及放十文香火后好段变宽的视图。",
+    "_provenance": {
+      "by": "ai",
+      "task": "C06",
+      "date": "2026-10-13"
+    }
+  },
+  "view": {
+    "v": 1,
+    "phase": "month_open",
+    "mode": "shop",
+    "busy": false,
+    "money": {
+      "amount": 340,
+      "currency": "fabi"
+    },
+    "hand": [],
+    "kept": [],
+    "contacts": [],
+    "date": {
+      "abs_day": 1,
+      "stage": 0,
+      "stage_day": 1,
+      "era": "1938"
+    },
+    "open_panel": {
+      "kind": "wheel",
+      "args": {
+        "wheel": "wh.month",
+        "uid": "",
+        "required": true
+      }
+    }
+  },
+  "queries": {
+    "wheel|{\"uid\":\"\",\"wheel\":\"wh.month\"}": {
+      "wheel": "wh.month",
+      "uid": "",
+      "kind": "month",
+      "art": "wheel.month",
+      "segments": [
+        {
+          "id": "ws.1938.month.caixing",
+          "arc_deg": 108.0,
+          "art": "icon.ws.caixing"
+        },
+        {
+          "id": "ws.1938.month.liunian",
+          "arc_deg": 108.0,
+          "art": "icon.ws.liunian"
+        },
+        {
+          "id": "ws.1938.month.pingan",
+          "arc_deg": 144.0,
+          "art": "icon.ws.pingan"
+        }
+      ],
+      "incense": {
+        "accepts": [
+          "money",
+          "kept",
+          "contact"
+        ],
+        "placed": [],
+        "full": false
+      },
+      "cost": {
+        "money": 0,
+        "stake": false
+      },
+      "staked": "",
+      "spun": false,
+      "result": {
+        "segment": "",
+        "stop_deg": 0.0
+      }
+    }
+  },
+  "widen_to": {
+    "wheel": "wh.month",
+    "uid": "",
+    "kind": "month",
+    "art": "wheel.month",
+    "segments": [
+      {
+        "id": "ws.1938.month.caixing",
+        "arc_deg": 128.80733944954127,
+        "art": "icon.ws.caixing"
+      },
+      {
+        "id": "ws.1938.month.liunian",
+        "arc_deg": 99.08256880733946,
+        "art": "icon.ws.liunian"
+      },
+      {
+        "id": "ws.1938.month.pingan",
+        "arc_deg": 132.11009174311928,
+        "art": "icon.ws.pingan"
+      }
+    ],
+    "incense": {
+      "accepts": [
+        "money",
+        "kept",
+        "contact"
+      ],
+      "placed": [
+        {
+          "kind": "money",
+          "amount": 10
+        }
+      ],
+      "full": false
+    },
+    "cost": {
+      "money": 0,
+      "stake": false
+    },
+    "staked": "",
+    "spun": false,
+    "result": {
+      "segment": "",
+      "stop_deg": 0.0
+    }
+  },
+  "responses": [
+    {
+      "cmd": "wheel.offer",
+      "match": {
+        "uid": "",
+        "wheel": "wh.month",
+        "source": {
+          "kind": "money",
+          "amount": 10
+        }
+      },
+      "result": {
+        "ok": true,
+        "err": ""
+      },
+      "events": [
+        [
+          "first_time",
+          "incense",
+          {}
+        ]
+      ]
+    },
+    {
+      "cmd": "wheel.withdraw",
+      "match": {
+        "uid": "",
+        "wheel": "wh.month",
+        "index": 0
+      },
+      "result": {
+        "ok": true,
+        "err": ""
+      },
+      "events": []
+    },
+    {
+      "cmd": "wheel.spin",
+      "match": {
+        "uid": "",
+        "wheel": "wh.month"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "segment": "ws.1938.month.caixing",
+        "stop_deg": 13.185
+      },
+      "events": [
+        [
+          "wheel_spun",
+          "wh.month",
+          "ws.1938.month.caixing",
+          13.185
+        ]
+      ]
+    },
+    {
+      "cmd": "month.begin",
+      "match": {},
+      "result": {
+        "ok": true,
+        "err": ""
+      },
+      "events": []
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "ok": true,
+        "err": ""
+      }
+    }
+  ]
+}

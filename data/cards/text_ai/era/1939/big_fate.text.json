@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-3940"
+  },
+  "bf.1939.gate_passage": {
+    "title": "出城躲两天",
+    "body": "有人能把你悄悄送出城，躲开这阵风头，只是铺子得关上两天。",
+    "choices": {
+      "go": "出城躲躲",
+      "stay": "不走"
+    }
+  },
+  "bf.1939.rice_hoard": {
+    "title": "一批来路米",
+    "body": "有人把一批米托你转手，出价很高，可这米的来路说不清。",
+    "choices": {
+      "take": "收下转手",
+      "decline": "不收"
+    }
+  }
+}

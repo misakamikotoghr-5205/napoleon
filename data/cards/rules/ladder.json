@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "owner": "G06",
+    "schema": 1
+  },
+  "_doc": [
+    "破产阶梯：抵押利息什么时候付、钱不够阶梯的顺序、赎回铺面按押值的百分比（§4.6）。"
+  ],
+  "mortgage": {
+    "interest_due": "month_close"
+  },
+  "short": {
+    "order": [
+      "goods",
+      "estate",
+      "street"
+    ]
+  },
+  "street": {
+    "redeem_shop_pct": 100
+  },
+  "prison": {
+    "max_days": 3
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "k04.notice.books_done": {
+    "t": "年关的账结清了。"
+  },
+  "k04.notice.books_fail": {
+    "t": "年关的账没结清。"
+  },
+  "k04.notice.cocoon": {
+    "t": "茧行来对过账了。"
+  },
+  "k04.notice.countryside": {
+    "t": "乡下捎来了消息。"
+  },
+  "k04.notice.debt_delay": {
+    "t": "年关的债没能缓下来。"
+  },
+  "k04.notice.debt_hide": {
+    "t": "这一天躲开了讨债的。"
+  },
+  "k04.notice.debt_paid": {
+    "t": "年关的债还上了。"
+  },
+  "k04.notice.gate_fail": {
+    "t": "城门盘查，没能过去。"
+  },
+  "k04.notice.gate_pass": {
+    "t": "城门盘查，放过去了。"
+  },
+  "k04.notice.levy": {
+    "t": "伪区公所又要去一笔。"
+  },
+  "k04.notice.patrol_fail": {
+    "t": "街上盘查，没能过去。"
+  },
+  "k04.notice.patrol_pass": {
+    "t": "街上盘查，放过去了。"
+  },
+  "k04.notice.snow": {
+    "t": "大雪封了城外的路。"
+  },
+  "k04.notice.wu_buy": {
+    "t": "照吴长发的新价买了米。"
+  },
+  "k04.notice.wu_fail": {
+    "t": "米价没讲下来。"
+  },
+  "k04.notice.wu_haggle": {
+    "t": "跟吴长发把米价讲下来了。"
+  },
+  "k04.notice.wu_refuse": {
+    "t": "这批米没买。"
+  },
+  "k04.reason.charcoal": {
+    "t": "买柴"
+  },
+  "k04.reason.charge": {
+    "t": "了结诬告"
+  },
+  "k04.reason.clothes": {
+    "t": "当衣贴补家用"
+  },
+  "k04.reason.countryside": {
+    "t": "打听乡下消息"
+  },
+  "k04.reason.damp": {
+    "t": "返潮损货"
+  },
+  "k04.reason.debt": {
+    "t": "年关还债"
+  },
+  "k04.reason.fine": {
+    "t": "罚款"
+  },
+  "k04.reason.fire": {
+    "t": "失火损失"
+  },
+  "k04.reason.gate": {
+    "t": "城门通融"
+  },
+  "k04.reason.hoard": {
+    "t": "转手卖米"
+  },
+  "k04.reason.kin": {
+    "t": "亲戚寄钱"
+  },
+  "k04.reason.levy": {
+    "t": "伪区公所摊派"
+  },
+  "k04.reason.medicine": {
+    "t": "抓药"
+  },
+  "k04.reason.night": {
+    "t": "夜里接济"
+  },
+  "k04.reason.passage": {
+    "t": "出城躲一躲"
+  },
+  "k04.reason.purse": {
+    "t": "钱袋"
+  },
+  "k04.reason.refugee": {
+    "t": "接济逃难的人"
+  },
+  "k04.reason.requisition": {
+    "t": "征用"
+  },
+  "k04.reason.rice": {
+    "t": "买米"
+  },
+  "k04.reason.seal": {
+    "t": "疏通查封"
+  },
+  "k04.reason.snow": {
+    "t": "雪天卖货"
+  },
+  "k04.reason.stranger": {
+    "t": "生人买卖"
+  },
+  "k04.reason.tab": {
+    "t": "年关杂账"
+  },
+  "k04.reason.theft": {
+    "t": "失窃"
+  },
+  "k04.reason.year_goods": {
+    "t": "置办年货"
+  }
+}

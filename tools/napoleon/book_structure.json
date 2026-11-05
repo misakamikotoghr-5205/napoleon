@@ -1,0 +1,454 @@
+{
+ "_doc": [
+  "拿破仑线的书（WORLD_MAP_DESIGN §6.2）。A 写结构字段：segments 的 file/map/kind/events、branches 的 from/scene/level_offset/entry/requires、",
+  "carry、shared_flags、companions/events_common 路径、march_cards/march_deck、reward_pct_per_level、hero_hp_max、debug_carry 的形状。",
+  "C2 写内容：各段定义 trunk/conquest/cristo.json、地图 maps/*.json、事件、伙伴总表、brand/title/reasons/offer 的文字、scene_battles、",
+  "start_troops、battle_pool、debug_carry 的数值。段文件齐了以前这本书读不进来（definition_missing），默认书仍是 ocean_pawn（C3 再切）。",
+  "stage 是章在本段 chapters 里的下标（0 起）；debug_carry.<段>.stages 的键就是这个下标的字符串，每一档是完整的绝对值，叠在 from 上。"
+ ],
+ "id": "napoleon",
+ "version": 1,
+ "volume": 1,
+ "start": "trunk",
+ "title": {
+  "name": "鹰旗军需官",
+  "sub": "一七九三 · 土伦 → 一八一五 · 厄尔巴 → 三条路"
+ },
+ "segments": {
+  "trunk": {
+   "file": "res://data/campaigns/napoleon/trunk.json",
+   "map": "res://data/campaigns/napoleon/maps/europe.json",
+   "kind": "trunk",
+   "brand": "鹰旗",
+   "badge": "eagle",
+   "scene_battles": {
+    "toulon_mulgrave": {
+     "template": "toulon_night",
+     "level": 1
+    },
+    "italy_rivoli": {
+     "template": "rivoli_plateau",
+     "level": 3
+    }
+   }
+  },
+  "conquest": {
+   "file": "res://data/campaigns/napoleon/conquest.json",
+   "map": "res://data/campaigns/napoleon/maps/europe_late.json",
+   "kind": "branch",
+   "brand": "鹰飞",
+   "badge": "eagle_flight",
+   "scene_battles": {
+    "k_charleroi": {
+     "template": "charleroi_bridge",
+     "level": 12
+    },
+    "k_waterloo": {
+     "template": "waterloo",
+     "level": 14,
+     "mods_when": [
+      {
+       "when": {
+        "flags": [
+         "k_blucher_down"
+        ]
+       },
+       "mods": {
+        "drop_waves": [
+         12
+        ]
+       }
+      },
+      {
+       "when": {
+        "flags": [
+         "k_grouchy_close"
+        ]
+       },
+       "mods": {
+        "prep_turn": 1
+       }
+      },
+      {
+       "when": {
+        "flags": [
+         "k_crossroads_held"
+        ]
+       },
+       "mods": {
+        "terrain": [
+         {
+          "cell": "B2",
+          "terrain": "high"
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  },
+  "ocean": {
+   "file": "res://data/campaigns/ocean_pawn.json",
+   "map": "res://data/campaigns/napoleon/maps/world.json",
+   "kind": "branch",
+   "brand": "远洋",
+   "badge": "nautilus",
+   "events": "res://data/campaigns/napoleon/ocean_events.json",
+   "gauges": {
+    "treasury": "军费",
+    "morale": "同盟威望",
+    "heat": "敌方警戒",
+    "vitality": "体力与士气",
+    "construction": "岛屿建设",
+    "exploration": "深海探索"
+   },
+   "scene_battles": {
+    "prologue": {
+     "template": "bellerophon_deck",
+     "level": 13
+    },
+    "scene01": {
+     "template": ""
+    }
+   },
+   "demand_nodes": {
+    "medicine": [
+     "st_helena:hutts_gate"
+    ],
+    "bond": [
+     "st_helena:plantation"
+    ]
+   }
+  },
+  "cristo": {
+   "file": "res://data/campaigns/napoleon/cristo.json",
+   "map": "res://data/campaigns/napoleon/maps/med.json",
+   "kind": "branch",
+   "brand": "伊夫堡",
+   "badge": "castle",
+   "scene_battles": {
+    "c_white_june": {
+     "template": "marseille_arrest",
+     "level": 14,
+     "order_flag": "m_morrel_kept"
+    }
+   }
+  }
+ },
+ "branches": {
+  "conquest": {
+   "from": "trunk",
+   "scene": "elba_1815",
+   "level_offset": 12,
+   "entry": "",
+   "requires": {
+    "any": [
+     {
+      "stat": {
+       "medal_earned": [
+        ">=",
+        10
+       ]
+      }
+     },
+     {
+      "flags": [
+       "t_guard_oath"
+      ]
+     }
+    ],
+    "hero_ok": true
+   },
+   "reasons": {
+    "any": "皇帝没点你的名：忠诚不够（整局累计挣到勋章 ≥ 10，或在枫丹白露写下名字随驾厄尔巴）",
+    "hero_ok": "主角重伤未愈，上不了马"
+   },
+   "offer": "随皇帝北上，亲赴前线"
+  },
+  "ocean": {
+   "from": "trunk",
+   "scene": "elba_1815",
+   "level_offset": 12,
+   "entry": "prologue",
+   "requires": {},
+   "offer": "以司库身份随驾，管钱袋与船"
+  },
+  "cristo": {
+   "from": "trunk",
+   "scene": "elba_1815",
+   "level_offset": 12,
+   "entry": "",
+   "requires": {
+    "any": [
+     {
+      "flags": [
+       "faria_half_letter"
+      ]
+     },
+     {
+      "flags": [
+       "t_pharaon_known"
+      ]
+     }
+    ]
+   },
+   "reasons": {
+    "any": "你和马赛没有交集：没拿到法利亚的半封信，也没见过莫雷尔或法老号"
+   },
+   "offer": "奉命携密信去马赛"
+  }
+ },
+ "carry": {
+  "metrics": {
+   "treasury": "chapter_start",
+   "morale": "keep",
+   "heat": "initial",
+   "vitality": [
+    "keep_min",
+    40
+   ],
+   "construction": "initial",
+   "exploration": "initial"
+  },
+  "treasury_bonus": [
+   1,
+   4
+  ],
+  "flags": "all",
+  "items": [
+   "elba_watch",
+   "faria_half",
+   "emperor_letter",
+   "guard_eagle_ribbon"
+  ],
+  "rogue": "all",
+  "coin_cap": 20
+ },
+ "shared_flags": [
+  "faria_half_letter",
+  "t_pharaon_known",
+  "t_guard_oath",
+  "t_mysore_envoy",
+  "t_dantes_letter",
+  "t_storks_hostile",
+  "t_vilna_reserve",
+  "t_lithuania_taken",
+  "t_saragossa_terms",
+  "t_saragossa_storm",
+  "t_marie_paid",
+  "t_ponds_mercy",
+  "t_return_mark",
+  "t_morrel_credit",
+  "t_went_home"
+ ],
+ "companions": "res://data/campaigns/napoleon/companions.json",
+ "events_common": "res://data/campaigns/napoleon/events_common.json",
+ "bond_set": "napoleon",
+ "start_rogue": {
+  "coins": {
+   "gold": 4,
+   "supply": 6,
+   "medal": 2,
+   "intel": 2
+  },
+  "props": [
+   "prop_loaded_dice",
+   "prop_field_ration",
+   "prop_smoke_bomb"
+  ],
+  "odd_seed_prop": "prop_spyglass",
+  "even_seed_prop": "prop_barricade",
+  "companions": []
+ },
+ "start_troops": {
+  "toulon": [
+   "line",
+   "line",
+   "jager"
+  ],
+  "italy": [
+   "line",
+   "line",
+   "jager",
+   "artillery"
+  ]
+ },
+ "march_cards": {
+  "march_2": {
+   "mp": 2
+  },
+  "march_3": {
+   "mp": 3
+  },
+  "forced_4": {
+   "mp": 4,
+   "effects": {
+    "vitality": -4
+   }
+  },
+  "scout_1": {
+   "mp": 1,
+   "reveal": 2
+  },
+  "wagon_1": {
+   "mp": 1,
+   "coins": {
+    "supply": 2
+   }
+  },
+  "night_2": {
+   "mp": 2,
+   "ignore_forced": true
+  },
+  "fair_wind": {
+   "mp": 0,
+   "voyage_minus": 1
+  },
+  "dive_3": {
+   "mp": 3,
+   "ignore_forced": true
+  }
+ },
+ "march_deck": [
+  "march_2",
+  "march_2",
+  "march_2",
+  "march_3",
+  "march_3",
+  "forced_4",
+  "scout_1",
+  "wagon_1",
+  "night_2"
+ ],
+ "march_deck_extra": {
+  "ocean": {
+   "prologue": [
+    "fair_wind"
+   ],
+   "nautilus": [
+    "dive_3",
+    "dive_3",
+    "fair_wind"
+   ]
+  }
+ },
+ "battle_pool": {
+  "trunk": {
+   "1-6": [
+    "skirmish_terraces",
+    "skirmish_mill_ford",
+    "skirmish_hamlet"
+   ],
+   "7-12": [
+    "skirmish_terraces",
+    "skirmish_mill_ford",
+    "skirmish_hamlet"
+   ]
+  },
+  "conquest": {
+   "12-23": [
+    "skirmish_brabant_farm",
+    "skirmish_sunken_lane"
+   ]
+  },
+  "ocean": {
+   "13-16": [
+    "signal_hill",
+    "beach_landing"
+   ],
+   "17-20": [
+    "beach_landing",
+    "reef_crossing"
+   ],
+   "21-24": [
+    "reef_crossing",
+    "nautilus_deck_raid"
+   ]
+  },
+  "cristo": {
+   "12-17": [
+    "alley_ambush",
+    "coast_road"
+   ],
+   "18-23": [
+    "alley_ambush",
+    "coast_road"
+   ]
+  }
+ },
+ "reward_pct_per_level": 4,
+ "hero_hp_max": 24,
+ "meta": {
+  "count_endings": {
+   "conquest": [
+    "k_return",
+    "k_pax",
+    "k_iron",
+    "k_dusk"
+   ],
+   "ocean": [
+    "alliance",
+    "ghost",
+    "dark",
+    "tragedy",
+    "bittersweet"
+   ],
+   "cristo": [
+    "m_wait_hope",
+    "m_full_ledger",
+    "m_name",
+    "m_count"
+   ]
+  }
+ },
+ "debug_carry": {
+  "branch_point": {
+   "coins": {
+    "gold": 6,
+    "supply": 8,
+    "medal": 10,
+    "intel": 3
+   },
+   "flags": [
+    "faria_half_letter",
+    "t_pharaon_known"
+   ],
+   "items": [
+    "elba_watch",
+    "faria_half"
+   ],
+   "companions": {
+    "baptiste": 2,
+    "corso": 2,
+    "marie": 1
+   },
+   "troops": [
+    "line",
+    "line",
+    "grenadier",
+    "jager",
+    "hussar",
+    "artillery"
+   ]
+  },
+  "conquest": {
+   "from": "branch_point",
+   "flags_add": [
+    "t_guard_oath"
+   ],
+   "stages": {}
+  },
+  "ocean": {
+   "from": "branch_point",
+   "stages": {}
+  },
+  "cristo": {
+   "from": "branch_point",
+   "flags_add": [
+    "m_letter_carried"
+   ],
+   "stages": {}
+  }
+ }
+}

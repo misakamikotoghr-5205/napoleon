@@ -1,0 +1,85 @@
+{
+  "_meta": {
+    "owner": "K09",
+    "schema": 1,
+    "brief": "牢房系统牌。被抓时由引擎发，不进随机牌库"
+  },
+  "cards": [
+    {
+      "id": "pr.cell",
+      "type": "prison",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "tags": [
+        "prison"
+      ],
+      "slots": [
+        {
+          "id": "bribe",
+          "accepts": [
+            "money"
+          ],
+          "tags": [
+            "official"
+          ],
+          "money_per_coin": 20,
+          "max": 3
+        },
+        {
+          "id": "bail",
+          "accepts": [
+            "contact"
+          ],
+          "attr": "pull",
+          "tags": [
+            "official"
+          ]
+        },
+        {
+          "id": "favor",
+          "accepts": [
+            "kept"
+          ],
+          "tags": [
+            "official",
+            "papers",
+            "favor"
+          ],
+          "max": 2
+        }
+      ],
+      "check": {
+        "need": 3,
+        "on_success": [
+          {
+            "op": "heat",
+            "delta": -30
+          }
+        ],
+        "on_fail": [
+          {
+            "op": "game_over",
+            "reason": "prison"
+          }
+        ]
+      },
+      "effects": {
+        "on_expire": [
+          {
+            "op": "shop_closed",
+            "days": 1
+          }
+        ]
+      },
+      "art": "illus.pr.cell",
+      "brief": "被抓进牢房。格子放钱打点、人脉作保（按门路）、留着的牌（人情、介绍信、金条这一类，格子 tag 含 official、papers、favor）。要 3 个正面。成了出来，风声往下掉，放进去的东西算交出去。不成，这一局结束，可以从本月开头重来。证件若直接过，强弱待调。没处理就在牢里多待一晚：第二天铺子关门、不发人物牌。schema 没有过夜字段，effects.on_expire 用已有的 shop_closed 一天表示再过一夜，格子和检定不变。连续 ladder.json 的 prison.max_days 晚没出来，按打点失败走 check.on_fail。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

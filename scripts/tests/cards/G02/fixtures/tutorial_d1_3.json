@@ -1,0 +1,209 @@
+{
+  "_meta": {
+    "owner": "G02",
+    "schema": 1
+  },
+  "cards": [
+    {
+      "id": "p.g02.d1.pawn",
+      "type": "person",
+      "person": "linsao",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "woman",
+        "boat",
+        "poor",
+        "omen_water"
+      ],
+      "intent": "pawn",
+      "item": {
+        "template": "jewelry.hairpin"
+      },
+      "asking": {
+        "pct": [
+          60,
+          60
+        ]
+      },
+      "floor": {
+        "pct": [
+          50,
+          50
+        ]
+      },
+      "patience_min": [
+        60,
+        120
+      ],
+      "impatience": "leave",
+      "term_days": 15,
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.linsao.1938.hairpin"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.linsao",
+      "brief": "Day-one pawn tutorial fixture.",
+      "_provenance": {
+        "by": "ai",
+        "task": "G02",
+        "date": "2026-10-13"
+      },
+      "schedule": {
+        "stage_day": 1,
+        "order": 1
+      },
+      "minigame": "spot"
+    },
+    {
+      "id": "p.g02.d1.sell",
+      "type": "person",
+      "person": "linsao",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "woman",
+        "boat",
+        "poor",
+        "omen_water"
+      ],
+      "intent": "sell",
+      "item": {
+        "template": "jewelry.hairpin"
+      },
+      "asking": {
+        "pct": [
+          60,
+          60
+        ]
+      },
+      "floor": {
+        "pct": [
+          50,
+          50
+        ]
+      },
+      "patience_min": [
+        60,
+        120
+      ],
+      "impatience": "leave",
+      "term_days": 15,
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.linsao.1938.hairpin"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.linsao",
+      "brief": "Day-one sale tutorial fixture.",
+      "_provenance": {
+        "by": "ai",
+        "task": "G02",
+        "date": "2026-10-13"
+      },
+      "schedule": {
+        "stage_day": 1,
+        "order": 2
+      },
+      "minigame": "spot"
+    },
+    {
+      "id": "p.g02.d1.buy",
+      "type": "person",
+      "person": "chen",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "buyer",
+        "art",
+        "omen_stranger"
+      ],
+      "intent": "buy",
+      "want": {
+        "cats": [
+          "jewelry"
+        ],
+        "budget_pct": [
+          150,
+          150
+        ]
+      },
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "leave",
+      "art": "portrait.chen",
+      "brief": "Day-one buyer tutorial fixture.",
+      "_provenance": {
+        "by": "ai",
+        "task": "G02",
+        "date": "2026-10-13"
+      },
+      "schedule": {
+        "stage_day": 1,
+        "order": 3
+      }
+    },
+    {
+      "id": "ev.g02.d3.slots",
+      "type": "event",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "schedule": {
+        "stage_day": 3,
+        "order": 1
+      },
+      "tags": [
+        "omen_official"
+      ],
+      "slots": [
+        {
+          "id": "self",
+          "accepts": [
+            "self"
+          ],
+          "attr": "eye"
+        }
+      ],
+      "check": {
+        "need": 0,
+        "on_success": [],
+        "on_fail": []
+      },
+      "brief": "Day-three slot tutorial fixture.",
+      "_provenance": {
+        "by": "ai",
+        "task": "G02",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

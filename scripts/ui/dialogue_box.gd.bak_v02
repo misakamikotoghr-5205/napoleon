@@ -1,0 +1,260 @@
+# 对白框（屏幕下方）：名字牌 + 逐字显示的台词；选项按钮；行动按钮；点击 / 空格继续。
+# 对白不用人声配音，用不同音高的“嘀嘀”声区分人物（设计稿“音效”）。
+extends PanelContainer
+
+signal advanced
+signal option_picked(id)
+signal action_picked(kind, id)
+
+const CLICK_GUARD_MS := 180
+
+var name_lbl: Label
+var text_lbl: RichTextLabel
+var hint_lbl: Label
+var skip_btn: Button
+signal skipped
+var options_box: VBoxContainer
+var actions_box: VBoxContainer
+var full_text: String = ""
+var full_plain_len: int = 0
+var shown_chars: float = 0.0
+var cps: float = 45.0
+var waiting_click: bool = false
+var typing: bool = false
+var instant: bool = false
+var beeper = null
+var pitch: float = 1.0
+var _last_beep_char: int = 0
+var _line_done_ms: int = 0
+var _guard_armed: bool = false
+
+func _ready() -> void:
+	add_theme_stylebox_override("panel", UiStyle.box(Color("#1f1712"), Color("#5a3f2a"), 4, 2, 16))
+	var v := UiStyle.vbox(4)
+	add_child(v)
+	var top := UiStyle.hbox(10)
+	v.add_child(top)
+	name_lbl = UiStyle.label("", 20, UiStyle.LAMP, false)
+	name_lbl.add_theme_font_override("font", UiStyle.title_font())
+	name_lbl.add_theme_font_size_override("font_size", 24)
+	name_lbl.add_theme_color_override("font_outline_color", Color("#0d0a08"))
+	name_lbl.add_theme_constant_override("outline_size", 4)
+	top.add_child(name_lbl)
+	hint_lbl = UiStyle.label("", 14, UiStyle.MIST, false)
+	hint_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	hint_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	top.add_child(hint_lbl)
+	# v0.2：显式的“跳过”按钮——任何时候都能把这一句补全并往下走（防卡死）
+	skip_btn = UiStyle.button("跳过 ▶", 14, "wood")
+	skip_btn.tooltip_text = "补全这一句并继续（也可按空格 / 回车 / Esc）"
+	skip_btn.pressed.connect(skip)
+	skip_btn.visible = false
+	top.add_child(skip_btn)
+	text_lbl = RichTextLabel.new()
+	text_lbl.bbcode_enabled = true
+	text_lbl.fit_content = false
+	text_lbl.scroll_active = false
+	text_lbl.custom_minimum_size = Vector2(0, 80)
+	text_lbl.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	text_lbl.add_theme_font_size_override("normal_font_size", 21)
+	text_lbl.add_theme_color_override("default_color", UiStyle.PAPER)
+	text_lbl.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	v.add_child(text_lbl)
+	options_box = UiStyle.vbox(4)
+	v.add_child(options_box)
+	actions_box = UiStyle.vbox(4)
+	v.add_child(actions_box)
+	mouse_filter = Control.MOUSE_FILTER_STOP
+
+func show_line(who_name: String, text: String, color: Color, is_narr: bool, click_to_continue: bool, voice: float = 1.0) -> void:
+	clear_options()
+	text_lbl.custom_minimum_size = Vector2(0, 80)
+	name_lbl.text = who_name
+	name_lbl.add_theme_color_override("font_color", _readable(color))
+	if is_narr:
+		full_text = "[i][color=#c8ccc8]" + _esc(text) + "[/color][/i]"
+	else:
+		full_text = _esc(text)
+	full_plain_len = _plain_length(full_text)
+	text_lbl.text = full_text
+	_last_beep_char = 0
+	pitch = voice
+	waiting_click = click_to_continue
+	_click_hint = "▼ 点击继续" if click_to_continue else ""
+	skip_btn.visible = click_to_continue
+	hint_lbl.text = ("（点一下先显示整句）" if typing and click_to_continue else _click_hint)
+	if instant or full_plain_len == 0:
+		shown_chars = float(full_plain_len)
+		typing = false
+		text_lbl.visible_characters = -1
+		_guard_armed = false
+	else:
+		shown_chars = 0.0
+		typing = true
+		text_lbl.visible_characters = 0
+		_guard_armed = false
+
+func set_hint(t: String) -> void:
+	hint_lbl.text = t
+
+func show_options(prompt_name: String, text: String, opts: Array) -> void:
+	skip_btn.visible = false
+	name_lbl.text = prompt_name
+	name_lbl.add_theme_color_override("font_color", _readable(UiStyle.LAMP))
+	full_text = _esc(text)
+	full_plain_len = _plain_length(full_text)
+	text_lbl.text = full_text
+	text_lbl.visible_characters = -1
+	shown_chars = float(full_plain_len)
+	typing = false
+	_guard_armed = false
+	waiting_click = false
+	hint_lbl.text = "请点击选项（或按数字键 1–%d）" % mini(opts.size(), 9)
+	clear_options()
+	# 选项多时把台词区压扁（无空白行），保证都在框里
+	text_lbl.custom_minimum_size = Vector2(0, 28 if opts.size() > 0 else 80)
+	var per_row := 2 if opts.size() == 4 else 3
+	var fsize := 18 if opts.size() <= 3 else 16
+	var row: HBoxContainer = null
+	for i in range(opts.size()):
+		if i % per_row == 0:
+			row = UiStyle.hbox(8)
+			options_box.add_child(row)
+		var b := UiStyle.button("%d. %s" % [i + 1, str(opts[i]["label"])] if i < 9 else str(opts[i]["label"]), fsize, "paper", true)
+		b.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		var id: String = str(opts[i]["id"])
+		b.pressed.connect(func(): emit_signal("option_picked", id))
+		b.set_meta("opt_id", id)
+		row.add_child(b)
+
+func clear_options() -> void:
+	for c in options_box.get_children():
+		options_box.remove_child(c)
+		c.queue_free()
+
+func option_button(id: String) -> Button:
+	for row in options_box.get_children():
+		for b in row.get_children():
+			if b.get_meta("opt_id", "") == id:
+				return b
+	return null
+
+# actions = [{"kind": "extra"|"deal", "id": String, "label": String}]；最多每行 3 个，位于框内台词下方。
+func show_actions(actions: Array) -> void:
+	clear_actions()
+	# 动作多时：每行 4 个、字小一号，台词区压扁，保证都在框里（R2：选项被裁）
+	var per_row := 3 if actions.size() <= 3 else 4
+	if actions.size() > 3:
+		text_lbl.custom_minimum_size = Vector2(0, 30)
+	var row: HBoxContainer = null
+	for i in range(actions.size()):
+		var a: Dictionary = actions[i]
+		if i % per_row == 0:
+			row = UiStyle.hbox(8)
+			actions_box.add_child(row)
+		var kind := str(a.get("kind", "extra"))
+		var id := str(a.get("id", ""))
+		var b := UiStyle.button(str(a.get("label", id)), 15 if actions.size() <= 3 else 14, "wood" if kind == "deal" else "paper", false)
+		b.clip_text = true
+		b.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		b.set_meta("act_kind", kind)
+		b.set_meta("act_id", id)
+		b.pressed.connect(func(): emit_signal("action_picked", kind, id))
+		row.add_child(b)
+
+func clear_actions() -> void:
+	for c in actions_box.get_children():
+		actions_box.remove_child(c)
+		c.queue_free()
+
+func action_button(kind: String, id: String) -> Button:
+	for row in actions_box.get_children():
+		for b in row.get_children():
+			if b.get_meta("act_kind", "") == kind and b.get_meta("act_id", "") == id:
+				return b
+	return null
+
+func _esc(s: String) -> String:
+	return s.replace("[", "[lb]")
+
+# 名字颜色提亮到相对亮度 >= 0.6（0.2126r + 0.7152g + 0.0722b）
+func _readable(c: Color) -> Color:
+	var out := c
+	var guard := 0
+	while 0.2126 * out.r + 0.7152 * out.g + 0.0722 * out.b < 0.6 and guard < 100:
+		out = out.lerp(Color.WHITE, 0.08)
+		guard += 1
+	return out
+
+# 去掉 bbcode 标签后的可见字符数（[lb] 转义代表一个“[”字符）
+func _plain_length(bb: String) -> int:
+	var protected := bb.replace("[lb]", "\u0001")
+	var rx := RegEx.new()
+	rx.compile("\\[[^\\]]*\\]")
+	var plain := rx.sub(protected, "", true)
+	plain = plain.replace("\u0001", "[")
+	return plain.length()
+
+var _click_hint: String = ""
+
+func _process(delta: float) -> void:
+	if not typing:
+		if _click_hint != "" and hint_lbl.text == "（点一下先显示整句）":
+			hint_lbl.text = _click_hint
+		return
+	if _click_hint != "":
+		hint_lbl.text = "（点一下先显示整句）"
+	shown_chars += delta * cps
+	if shown_chars >= float(full_plain_len):
+		_finish_now(true)
+		return
+	var n := int(shown_chars)
+	text_lbl.visible_characters = n
+	if beeper != null and n - _last_beep_char >= 3:
+		_last_beep_char = n
+		beeper.beep(pitch)
+
+# arm_guard：由玩家行为（自然打完）完成时为 true，之后的点击受 180 ms 防抖约束；
+# 程序化调用 finish_typing() 不设防抖，便于自动试玩 / 截图立即推进。
+func _finish_now(arm_guard: bool) -> void:
+	shown_chars = float(full_plain_len)
+	text_lbl.visible_characters = -1
+	if typing:
+		typing = false
+		_line_done_ms = Time.get_ticks_msec()
+		_guard_armed = arm_guard
+
+func is_typing() -> bool:
+	return typing
+
+func finish_typing() -> void:
+	_finish_now(false)
+
+func _gui_input(ev: InputEvent) -> void:
+	if ev is InputEventMouseButton and ev.pressed and ev.button_index == MOUSE_BUTTON_LEFT:
+		click()
+		accept_event()
+
+# 点击规则：打字中 → 立即补全本句（不推进）；已补全且 waiting_click → 距离补全 >= 180 ms 才推进。
+# instant 模式（自动试玩）无防抖，立即推进。
+# 跳过：不受连点防抖限制，直接补全并继续
+func skip() -> void:
+	if not waiting_click:
+		return
+	finish_typing()
+	waiting_click = false
+	skip_btn.visible = false
+	emit_signal("advanced")
+
+func click() -> void:
+	if typing:
+		finish_typing()
+		_guard_armed = true
+		_line_done_ms = Time.get_ticks_msec()
+		return
+	if not waiting_click:
+		return
+	if not instant and _guard_armed and Time.get_ticks_msec() - _line_done_ms < CLICK_GUARD_MS:
+		return
+	waiting_click = false
+	emit_signal("advanced")

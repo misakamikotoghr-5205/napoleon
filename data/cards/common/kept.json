@@ -1,0 +1,515 @@
+{
+  "_meta": {
+    "owner": "K09",
+    "schema": 1,
+    "brief": "跨年代留着的牌：人情、证件、硬货、把柄、空白当票、信物"
+  },
+  "cards": [
+    {
+      "id": "kp.ma_owes",
+      "type": "kept",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "favor",
+      "keepable": true,
+      "expires_days": 20,
+      "tags": [
+        "favor",
+        "official"
+      ],
+      "slot_bonus": [
+        {
+          "slot_tags_any": [
+            "official"
+          ],
+          "heads": 3
+        }
+      ],
+      "consumed_on_use": true,
+      "incense_units": 2,
+      "art": "illus.kp.ma_owes",
+      "brief": "马万利欠你一次。放进 tag 为 official 的格子算 3 个正面，用了就没，20 天后不灵。香案算 2 份。待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "kp.liangmin",
+      "type": "kept",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "paper",
+      "keepable": true,
+      "expires_days": 0,
+      "tags": [
+        "papers"
+      ],
+      "slot_bonus": [
+        {
+          "slot_tags_any": [
+            "papers"
+          ],
+          "auto_pass": true
+        }
+      ],
+      "consumed_on_use": false,
+      "incense_units": 1,
+      "art": "illus.kp.liangmin",
+      "brief": "良民证，伪维持会发的证件。放进 tag 为 papers 的格子直接过，不消耗、不过期。史实：1938 年 3 月沦陷区出入要查这种证件。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "kp.sunfu_letter",
+      "type": "kept",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "paper",
+      "keepable": true,
+      "expires_days": 0,
+      "tags": [
+        "papers",
+        "official"
+      ],
+      "slot_bonus": [
+        {
+          "slot_tags_any": [
+            "official"
+          ],
+          "heads": 3
+        }
+      ],
+      "consumed_on_use": true,
+      "incense_units": 1,
+      "art": "illus.kp.sunfu_letter",
+      "brief": "孙府介绍信。放进 tag 为 official 的格子算 3 个正面，用一次就消耗，不过期。不写成直接过，和良民证分开。1940 年孙府站队那条主线如果格子带 official，会吃到这张。待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "kp.gold_bar",
+      "type": "kept",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "hard",
+      "keepable": true,
+      "expires_days": 0,
+      "tags": [
+        "hard",
+        "wealth"
+      ],
+      "slot_bonus": [
+        {
+          "slot_tags_any": [
+            "official"
+          ],
+          "heads": 2
+        }
+      ],
+      "consumed_on_use": true,
+      "incense_units": 2,
+      "art": "illus.kp.gold_bar",
+      "brief": "一根金条，硬货。放进 tag 为 official 的格子算 2 个正面，用掉就没，不过期。香案算 2 份。牢房打点能用。跨年都能留。待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "kp.blank_ticket",
+      "type": "kept",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "blank_ticket",
+      "keepable": true,
+      "expires_days": 0,
+      "tags": [
+        "pawn",
+        "papers"
+      ],
+      "slot_bonus": [
+        {
+          "slot_tags_any": [
+            "pawn"
+          ],
+          "coins": 2
+        }
+      ],
+      "consumed_on_use": true,
+      "incense_units": 1,
+      "art": "illus.kp.blank_ticket",
+      "brief": "空白当票。放进 tag 为 pawn 的格子多 2 枚铜钱，用一次就消耗，不过期。史实：当票用防伪当字书写，空白票只顶手续，不能当真当票。待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "kp.brother_note",
+      "type": "kept",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "token",
+      "keepable": true,
+      "expires_days": 0,
+      "tags": [
+        "family",
+        "token"
+      ],
+      "slot_bonus": [
+        {
+          "slot_tags_any": [
+            "family"
+          ],
+          "coins": 1
+        }
+      ],
+      "consumed_on_use": false,
+      "incense_units": 1,
+      "art": "illus.kp.brother_note",
+      "brief": "哥哥的交代，主线信物。第 2 天哥哥告别听完交代后发到留牌区。放进 tag 为 family 的格子多 1 枚铜钱，不消耗、不过期。之后吃这个加成的是主线里带 family 的格子，例如 1939 年哥哥来信那条线。不做账簿批注那张留牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "kp.mystery_box",
+      "type": "kept",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "hard",
+      "keepable": true,
+      "expires_days": 7,
+      "tags": [
+        "contraband"
+      ],
+      "slot_bonus": [],
+      "consumed_on_use": false,
+      "incense_units": 1,
+      "art": "illus.kp.mystery_box",
+      "brief": "替陌生人保管的箱子。七天后对方来取，再进一笔（100，待调）。这期间被查到（kept_risk 命中 contraband）就直接被抓。大命运收下后才发到留牌区，本文件不发。",
+      "risk": [
+        {
+          "op": "arrest",
+          "reason": "k09.arrest.contraband"
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "money",
+            "delta": 100,
+            "reason": "k09.reason.box_returned"
+          }
+        ]
+      },
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "kp.leverage.xiaoding",
+      "type": "kept",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "leverage",
+      "keepable": true,
+      "expires_days": 0,
+      "tags": [
+        "leverage"
+      ],
+      "slot_bonus": [
+        {
+          "slot_tags_any": [
+            "favor"
+          ],
+          "heads": 2
+        }
+      ],
+      "consumed_on_use": true,
+      "incense_units": 1,
+      "art": "illus.kp.leverage.xiaoding",
+      "brief": "小丁的把柄：孙家库房的米短过，你知道这件事。放进 tag 为 favor 的格子算 2 个正面，用一次就消耗，不过期。被查到（kept_risk 命中 leverage）就进牢房。",
+      "risk": [
+        {
+          "op": "arrest",
+          "reason": "k09.arrest.leverage"
+        }
+      ],
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "kp.leverage.li",
+      "type": "kept",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "leverage",
+      "keepable": true,
+      "expires_days": 0,
+      "tags": [
+        "leverage"
+      ],
+      "slot_bonus": [
+        {
+          "slot_tags_any": [
+            "favor"
+          ],
+          "heads": 2
+        }
+      ],
+      "consumed_on_use": true,
+      "incense_units": 1,
+      "art": "illus.kp.leverage.li",
+      "brief": "李敬之的把柄：他私下写过稿，你捏着这件事，这里不写稿子内容。放进 tag 为 favor 的格子算 2 个正面，用一次就消耗。被查到就进牢房。",
+      "risk": [
+        {
+          "op": "arrest",
+          "reason": "k09.arrest.leverage"
+        }
+      ],
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "kp.leverage.zhang",
+      "type": "kept",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "leverage",
+      "keepable": true,
+      "expires_days": 0,
+      "tags": [
+        "leverage"
+      ],
+      "slot_bonus": [
+        {
+          "slot_tags_any": [
+            "favor"
+          ],
+          "heads": 2
+        }
+      ],
+      "consumed_on_use": true,
+      "incense_units": 1,
+      "art": "illus.kp.leverage.zhang",
+      "brief": "张慧娟的把柄：药品的来路和医院被征用有关。放进 tag 为 favor 的格子算 2 个正面，用一次就消耗。被查到就进牢房。",
+      "risk": [
+        {
+          "op": "arrest",
+          "reason": "k09.arrest.leverage"
+        }
+      ],
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "kp.leverage.wu",
+      "type": "kept",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "leverage",
+      "keepable": true,
+      "expires_days": 0,
+      "tags": [
+        "leverage"
+      ],
+      "slot_bonus": [
+        {
+          "slot_tags_any": [
+            "favor"
+          ],
+          "heads": 2
+        }
+      ],
+      "consumed_on_use": true,
+      "incense_units": 1,
+      "art": "illus.kp.leverage.wu",
+      "brief": "吴长发的把柄：米船的期和城里收粮有关，他不肯一次说完。放进 tag 为 favor 的格子算 2 个正面，用一次就消耗。被查到就进牢房。",
+      "risk": [
+        {
+          "op": "arrest",
+          "reason": "k09.arrest.leverage"
+        }
+      ],
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "kp.silver_keepsake",
+      "type": "kept",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "token",
+      "keepable": true,
+      "expires_days": 0,
+      "tags": [
+        "family",
+        "token"
+      ],
+      "slot_bonus": [
+        {
+          "slot_tags_any": [
+            "family"
+          ],
+          "coins": 1
+        }
+      ],
+      "consumed_on_use": false,
+      "incense_units": 1,
+      "art": "illus.kp.silver_keepsake",
+      "brief": "家里留下的一件银饰信物。放进 tag 为 family 的格子多 1 枚铜钱，不消耗、不过期。和哥哥的交代不是同一张。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "kp.zhao_favor",
+      "type": "kept",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "favor",
+      "keepable": true,
+      "expires_days": 15,
+      "tags": [
+        "favor"
+      ],
+      "slot_bonus": [
+        {
+          "slot_tags_any": [
+            "favor"
+          ],
+          "heads": 2
+        }
+      ],
+      "consumed_on_use": true,
+      "incense_units": 1,
+      "art": "illus.kp.zhao_favor",
+      "brief": "赵老三欠的一次人情，1938 年他来借钱之后。放进 tag 为 favor 的格子算 2 个正面，用了就没，15 天后不灵。待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "kp.hu_owes",
+      "type": "kept",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "favor",
+      "keepable": true,
+      "expires_days": 12,
+      "tags": [
+        "favor",
+        "official"
+      ],
+      "slot_bonus": [
+        {
+          "slot_tags_any": [
+            "official"
+          ],
+          "heads": 2
+        }
+      ],
+      "consumed_on_use": true,
+      "incense_units": 1,
+      "art": "illus.kp.hu_owes",
+      "brief": "胡二欠的一次人情。他是伪维持会保长的跑腿。放进 tag 为 official 的格子算 2 个正面，用了就没，12 天后不灵。待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "kp.gate_pass",
+      "type": "kept",
+      "era": [
+        "1939",
+        "1940"
+      ],
+      "weight": 0,
+      "kind": "paper",
+      "keepable": true,
+      "expires_days": 10,
+      "tags": [
+        "papers",
+        "gate"
+      ],
+      "slot_bonus": [
+        {
+          "slot_tags_any": [
+            "gate"
+          ],
+          "heads": 2
+        }
+      ],
+      "consumed_on_use": false,
+      "incense_units": 1,
+      "art": "illus.kp.gate_pass",
+      "brief": "1939 年城门路条。放进 tag 为 gate 的格子算 2 个正面，不消耗，10 天后作废。史实：1939 腊月城门设岗盘查。谁发这张由那年的城门事件写，本文件不发。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

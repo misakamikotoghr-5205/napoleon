@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-3940"
+  },
+  "df.ma.1940.baozhang_ask": {
+    "body": "开春，马保长上门，说他要往伪区公所去了，想让你接下保长。"
+  },
+  "df.ma.1940.baozhang_take": {
+    "body": "保甲名册上，保长一栏写上了德厚当的字号。"
+  },
+  "df.ma.1940.baozhang_nominal": {
+    "body": "街坊说，德厚当挂了保长的名，有事却总替大家挡着。"
+  },
+  "df.ma.1940.baozhang_buy_off": {
+    "body": "你打点了一笔，保长的差事落到了别人头上。"
+  },
+  "df.ma.1940.baozhang_refuse": {
+    "body": "你当面回绝了保长，马万利临走时说，他记下了。"
+  },
+  "p.ma.1940.baozhang": {
+    "title": "接保长",
+    "body": "马保长要往伪区公所升了，保甲要重编，他上门要你接下他留下的保长。",
+    "lines": {
+      "greet": "沈姑娘，这保长的位子，往后就交给你了。"
+    },
+    "choices": {
+      "take": "接下保长",
+      "nominal": "挂名护街坊",
+      "buy_off": "打点推掉",
+      "refuse": "当面回绝"
+    },
+    "outcomes": {
+      "ignored": "没人应声，保长的差事落到了别人头上，风声也紧了些。这一页留下了空白。"
+    }
+  }
+}

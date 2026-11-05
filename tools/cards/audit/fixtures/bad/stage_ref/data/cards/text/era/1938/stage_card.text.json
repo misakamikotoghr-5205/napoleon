@@ -1,0 +1,10 @@
+{
+  "_meta": {
+    "owner": "A",
+    "schema": 1
+  },
+  "ev.stage.miss": {
+    "body": "Written",
+    "_provenance": "human:A:2026-01-15"
+  }
+}

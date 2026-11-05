@@ -1,0 +1,53 @@
+{
+  "_meta": {
+    "owner": "G03",
+    "schema": 1
+  },
+  "_doc": [
+    "口碑、风声、本心、属性（§4.6）。点数永不上界面，只显示五档文字。"
+  ],
+  "rep": {
+    "min": 0,
+    "max": 100,
+    "start": 10,
+    "tiers": [
+      0,
+      20,
+      40,
+      60,
+      80
+    ],
+    "patience_pct_by_tier": [
+      100,
+      105,
+      110,
+      115,
+      120
+    ]
+  },
+  "heat": {
+    "min": 0,
+    "max": 100,
+    "start": 0,
+    "tiers": [
+      0,
+      20,
+      40,
+      60,
+      80
+    ],
+    "arrest_at": 100,
+    "decay_per_day": 1
+  },
+  "conscience": {
+    "min": -100,
+    "max": 100,
+    "start": 0,
+    "low": -20,
+    "very_low": -50
+  },
+  "attr": {
+    "min": 0,
+    "max": 6
+  }
+}

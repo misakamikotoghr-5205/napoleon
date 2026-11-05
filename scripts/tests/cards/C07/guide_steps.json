@@ -1,0 +1,60 @@
+{
+  "_meta": {
+    "owner": "C07",
+    "schema": 1,
+    "brief": "Guide steps used only by C07 tests. Not the shipped steps.json.",
+    "_provenance": {
+      "by": "ai",
+      "task": "C07",
+      "date": "2026-10-13"
+    }
+  },
+  "settings": {
+    "gap_ms": 0,
+    "default_seconds": 8,
+    "max_new_per_day": 16,
+    "bubble_max_w": 360
+  },
+  "steps": [
+    {
+      "id": "gd.almanac",
+      "trigger": {
+        "first": "almanac",
+        "phase": "day",
+        "stage_day_gte": 4
+      },
+      "anchor": "a.almanac",
+      "anchor_fallback": "",
+      "done_when": ["timeout"],
+      "priority": 80,
+      "max_shows": 2,
+      "seconds": 4
+    },
+    {
+      "id": "gd.lot",
+      "trigger": {
+        "first": "lot",
+        "phase": "day"
+      },
+      "anchor": "a.fortune.lot",
+      "anchor_fallback": "a.card@{uid}",
+      "done_when": ["cmd:fortune.lot"],
+      "priority": 70,
+      "max_shows": 2,
+      "seconds": 16
+    },
+    {
+      "id": "gd.cezi",
+      "trigger": {
+        "first": "cezi",
+        "phase": "day"
+      },
+      "anchor": "a.fortune.cezi",
+      "anchor_fallback": "a.card@{uid}",
+      "done_when": ["cmd:fortune.cezi"],
+      "priority": 60,
+      "max_shows": 2,
+      "seconds": 16
+    }
+  ]
+}

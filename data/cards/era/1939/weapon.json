@@ -1,0 +1,110 @@
+{
+  "_meta": {
+    "owner": "K18",
+    "schema": 1,
+    "brief": "1939 年有人拿短枪来当。藏起来，不当成公开当票。1940 起才有吓唬。动手以后再说。"
+  },
+  "persons": {
+    "nf_pistol": {
+      "portrait": "portrait.stranger_peddler",
+      "dossier": false,
+      "brief": "1939 年生人。提议称呼暂不定，A 定稿。把一支短枪拿来，不是铺子上的常客。不要档案页。"
+    }
+  },
+  "cards": [
+    {
+      "id": "p.nf_pistol.1939.pawn_gun",
+      "type": "person",
+      "person": "nf_pistol",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "tags": [
+        "omen_stranger",
+        "weapon"
+      ],
+      "intent": "story",
+      "schedule": {
+        "stage_day": 12,
+        "order": 4,
+        "once": true
+      },
+      "choices": [
+        {
+          "id": "hide",
+          "effects": [
+            {
+              "op": "add_card",
+              "card": "kp.pistol",
+              "to": "kept"
+            },
+            {
+              "op": "flag",
+              "key": "weapon_held",
+              "value": true
+            }
+          ],
+          "brief": "收下藏进留着的牌。不当成可以赎的当票，所以来意用 story，不走开柜台那套当票。"
+        },
+        {
+          "id": "refuse",
+          "effects": [],
+          "brief": "不收。人走了，铺子里没有这支枪。"
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "flag",
+            "key": "weapon_pawn_ignored",
+            "value": true
+          }
+        ]
+      },
+      "art": "portrait.stranger_peddler",
+      "brief": "1939 年腊月第 12 天，一个生人把短枪拿来当。weight 0，只走日程，不进随机库。藏起来得到 kp.pistol；不收或没理会都没有枪。不当成公开当票，避免写出一张能赎的票。1940 年（stage 从 2 起）留着这张枪时，普通客人的回话里才多吓唬。动手不在这张牌上。史实只借沦陷后民间私藏枪械的背景，不写具体部队番号。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K18",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "id": "kp.pistol",
+      "type": "kept",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "hard",
+      "keepable": true,
+      "expires_days": 0,
+      "tags": [
+        "weapon",
+        "contraband"
+      ],
+      "slot_bonus": [],
+      "consumed_on_use": false,
+      "incense_units": 1,
+      "art": "illus.kp.mystery_box",
+      "risk": [
+        {
+          "op": "heat",
+          "delta": 2
+        },
+        {
+          "op": "flag",
+          "key": "weapon_found",
+          "value": true
+        }
+      ],
+      "brief": "藏起来的短枪。不过期，用进格子也不消耗。被查到（kept_risk 命中 contraband 或 weapon）只加风声、记下 weapon_found，不直接抓人。美术暂用已有的箱子插图，正式图以后再换。由 p.nf_pistol.1939.pawn_gun 的 hide 发到留着的牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K18",
+        "date": "2026-10-15"
+      }
+    }
+  ]
+}

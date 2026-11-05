@@ -1,0 +1,202 @@
+{
+  "id": "d2_sunyoung",
+  "npc": "sunyoung",
+  "mode": "pawn",
+  "items": [
+    {
+      "def": "deed_fake"
+    }
+  ],
+  "ask": 3000,
+  "floor": 1000,
+  "suggest": 0,
+  "est": [
+    500,
+    3000
+  ],
+  "show_floor": false,
+  "hard_floor": false,
+  "fund_button": false,
+  "min_inspect": 0,
+  "split": false,
+  "hint": "",
+  "pre": [
+    {
+      "op": "narr",
+      "text": "一个穿西装、围长围巾的年轻人进来，把金怀表打开又合上。"
+    }
+  ],
+  "intro": [
+    {
+      "op": "say",
+      "who": "sunyoung",
+      "text": "沈家的丫头？你哥呢？……算了，你也行。"
+    },
+    {
+      "op": "say",
+      "who": "sunyoung",
+      "text": "这是我家三十亩田的地契。我爸让我拿来周转一下，当三千。你们这种小铺子，平时可接不到这种生意。"
+    }
+  ],
+  "on_inspect": {},
+  "extras": [
+    {
+      "id": "expose",
+      "label": "当面拆穿",
+      "when": "tells('deed_fake') >= 2",
+      "once": true,
+      "steps": [
+        {
+          "op": "say",
+          "who": "sunyoung",
+          "text": "……一个当铺丫头，是我小瞧你了。"
+        },
+        {
+          "op": "stat",
+          "stat": "benxin",
+          "delta": 1,
+          "why": "当面拆穿伪契"
+        },
+        {
+          "op": "set",
+          "flag": "sun_young",
+          "value": "exposed"
+        },
+        {
+          "op": "rumor",
+          "key": "sun_exposed",
+          "origin": "sunyoung"
+        },
+        {
+          "op": "call",
+          "fn": "sun_real_deed"
+        },
+        {
+          "op": "end",
+          "result": "exposed"
+        }
+      ]
+    },
+    {
+      "id": "compare_zhao",
+      "label": "对照赵老三的契",
+      "when": "is('saw_zhao_bounds') and not inspected('deed_fake','bounds')",
+      "once": true,
+      "steps": [
+        {
+          "op": "narr",
+          "text": "（你想起赵老三那张契：西至青溪河——青溪河在孙家田的西边。）"
+        },
+        {
+          "op": "set",
+          "flag": "sun_bounds_contradiction",
+          "value": true
+        }
+      ]
+    }
+  ],
+  "deals": [
+    {
+      "id": "decline",
+      "label": "委婉推辞：“铺子本钱不够”",
+      "steps": [
+        {
+          "op": "say",
+          "who": "you",
+          "text": "铺子本钱不够。"
+        },
+        {
+          "op": "narr",
+          "text": "孙少爷把金怀表合上，没再说什么。"
+        },
+        {
+          "op": "set",
+          "flag": "sun_young",
+          "value": "declined"
+        },
+        {
+          "op": "end",
+          "result": "declined"
+        }
+      ]
+    },
+    {
+      "id": "bluff",
+      "label": "假装答应，让他叫父亲来签字",
+      "steps": [
+        {
+          "op": "say",
+          "who": "you",
+          "text": "好，你回去叫你爸来签字，我们再谈。"
+        },
+        {
+          "op": "say",
+          "who": "sunyoung",
+          "text": "……耍我？沈家丫头，你给我等着！"
+        },
+        {
+          "op": "narr",
+          "text": "孙少爷变了脸色，摔门而去。"
+        },
+        {
+          "op": "set",
+          "flag": "sun_young",
+          "value": "bluffed"
+        },
+        {
+          "op": "end",
+          "result": "bluffed"
+        }
+      ]
+    }
+  ],
+  "on_accept": [
+    {
+      "op": "set",
+      "flag": "sun_young",
+      "value": "scammed"
+    },
+    {
+      "op": "stat",
+      "stat": "benxin",
+      "delta": 0,
+      "why": "收下伪契，本心不变"
+    },
+    {
+      "op": "if",
+      "cond": "tells('deed_fake') >= 1",
+      "then": [
+        {
+          "op": "note",
+          "kind": "线索",
+          "text": "这张契……多半是假的，钱怕是回不来了。",
+          "source": "inferred"
+        }
+      ]
+    },
+    {
+      "op": "note",
+      "kind": "消息",
+      "text": "隐患：伪契已入当，市价为 0，赎不回也卖不掉，本金收不回来。",
+      "source": "seen"
+    }
+  ],
+  "on_leave": [
+    {
+      "op": "if",
+      "cond": "flag('sun_young') == null",
+      "then": [
+        {
+          "op": "set",
+          "flag": "sun_young",
+          "value": "declined"
+        }
+      ]
+    }
+  ],
+  "outro": [],
+  "post": [],
+  "accept_all_cash": true,
+  "min_cash": 100,
+  "accept_all_cash_line": "（他把怀表合上）……就这些？行吧，算我帮你们小铺子开个张。"
+}

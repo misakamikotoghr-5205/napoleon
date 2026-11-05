@@ -1,0 +1,4 @@
+{
+  "_meta": {"owner": "K17", "schema": 1, "brief": "K17 官场线用到的标签（合同 1.4）。", "_provenance": {"by": "ai", "task": "K17", "date": "2026-10-15"}},
+  "tags": {"office": {"brief": "官场线的牌：发到手上时第一次记 first office"}}
+}

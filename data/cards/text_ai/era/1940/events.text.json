@@ -1,0 +1,136 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-3940"
+  },
+  "ev.1940.curfew": {
+    "title": "提前净街",
+    "body": "这几天夜里提前净街，天一擦黑，街上就不让走人。",
+    "choices": {
+      "obey": "提前打烊",
+      "stay": "留门做一笔"
+    },
+    "outcomes": {
+      "ignored": "铺门留到了天黑，多做了一笔生意，也惹了眼，风声紧了。"
+    }
+  },
+  "ev.1940.gate_tight": {
+    "title": "城门加岗",
+    "body": "城门又加了岗，出城办事要过好几道盘问。",
+    "choices": {
+      "bribe": "塞一笔",
+      "talk": "口头应付",
+      "stay": "今天不出门"
+    },
+    "slots": {
+      "talker": "会说话的人"
+    },
+    "outcomes": {
+      "success": "话说圆了，守门的摆摆手放了行。",
+      "fail": "话没说圆，被扣下问了半天，风声紧了。",
+      "ignored": "今天没出门，该办的事耽搁了，有人说铺子办事不牢靠。"
+    }
+  },
+  "ev.1940.household_count": {
+    "title": "清点户口",
+    "body": "有人挨家挨户清点户口，查到了铺子里。",
+    "slots": {
+      "paper": "证件",
+      "cash": "打点的钱",
+      "man": "胆大的人"
+    },
+    "outcomes": {
+      "success": "户口清点完了，没出岔子，街坊也说铺子规矩。",
+      "fail": "户口上对不上，来人记了一笔，风声紧了。"
+    }
+  },
+  "ev.1940.levy_rename": {
+    "title": "摊派换名目",
+    "body": "摊派换了个新名目，钱还是那笔钱，照样得交。",
+    "choices": {
+      "pay": "按新名目交",
+      "haggle": "去讲价",
+      "refuse": "不交"
+    },
+    "slots": {
+      "talker": "会说话的人"
+    },
+    "outcomes": {
+      "success": "价讲下来了，这笔摊派算是办过了。",
+      "fail": "价没讲下来，反倒惹了人，风声紧了。",
+      "ignored": "摊派没交，铺子被查封两天，风声也紧了。"
+    }
+  },
+  "ev.1940.new_official": {
+    "title": "新官到任",
+    "body": "县里来了新官，各家铺子都在掂量，要不要去露个面。",
+    "choices": {
+      "register": "去衙门报备",
+      "gift": "备一份礼",
+      "avoid": "躲开"
+    },
+    "outcomes": {
+      "ignored": "新官那边没去露面，往后的条子只怕更难办，风声也紧了。"
+    }
+  },
+  "ev.1940.papers_swap": {
+    "title": "换新证件",
+    "body": "新规矩下来了，旧的证件要换成新的。",
+    "choices": {
+      "show": "拿出旧证件",
+      "buy": "花钱办一张",
+      "ignore": "先不办"
+    },
+    "outcomes": {
+      "ignored": "证件一直没换，被人盯上了，风声紧了。"
+    }
+  },
+  "ev.1940.rice_notice": {
+    "title": "米行贴告示",
+    "body": "米行贴出告示，米价又要涨了。",
+    "choices": {
+      "buy": "先囤一点",
+      "accept": "按告示走",
+      "raise": "再抬一截"
+    },
+    "outcomes": {
+      "ignored": "米价跟着又抬了一截，这几天柜上的米也卖得格外贵。"
+    }
+  },
+  "ev.1940.shop_search": {
+    "title": "上门查铺",
+    "body": "新规矩下来了，巡警上门查铺子。",
+    "slots": {
+      "paper": "证件",
+      "cash": "打点的钱",
+      "man": "胆大的人"
+    },
+    "outcomes": {
+      "success": "巡警翻了一圈，没查出什么，走了。",
+      "fail": "巡警翻得仔细，记了一笔，风声紧了。"
+    }
+  },
+  "ev.1940.signboard": {
+    "title": "换门匾",
+    "body": "衙门换了匾，有人来问，铺子的门脸要不要也跟着换。",
+    "choices": {
+      "change": "换一块",
+      "keep": "先留着"
+    },
+    "outcomes": {
+      "ignored": "门匾没动，有人记下了这家铺子，风声紧了些。"
+    }
+  },
+  "ev.1940.wang_regime": {
+    "title": "南京的告示",
+    "body": "镇上贴出告示：汪伪国民政府今天在南京成立，伪维新政府并了进去。",
+    "choices": {
+      "read": "看完告示",
+      "open_shop": "照常开门",
+      "shut": "关门一天"
+    },
+    "outcomes": {
+      "ignored": "告示没去理会，铺子关了一天门。"
+    }
+  }
+}

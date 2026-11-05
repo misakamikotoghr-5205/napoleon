@@ -1,0 +1,364 @@
+{
+  "_meta": {
+    "owner": "K05",
+    "schema": 1,
+    "brief": "1940 年三月由人物出面的主线节点：孙府表态、档案串起来、首发结尾钩子。汪伪国民政府成立和新官上任若是事件牌，归 K06。"
+  },
+  "cards": [
+    {
+      "id": "p.sunlaoye.1940.stance",
+      "type": "person",
+      "person": "sunlaoye",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "tags": [
+        "sunfu",
+        "story",
+        "official",
+        "omen_official",
+        "omen_family"
+      ],
+      "gold": true,
+      "story_node": "s1940.sunfu_stance",
+      "intent": "story",
+      "schedule": {
+        "stage_day": 16,
+        "order": 1,
+        "once": true
+      },
+      "choices": [
+        {
+          "id": "with_sun",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1940.sunfu_stance",
+              "outcome": "with_sun"
+            },
+            {
+              "op": "flag",
+              "key": "k05_sunfu_with",
+              "value": true
+            },
+            {
+              "op": "rep",
+              "delta": 3
+            },
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "conscience",
+              "delta": -2
+            },
+            {
+              "op": "demand_tier",
+              "delta": -1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.sunlaoye.1940.stance_with"
+            },
+            {
+              "op": "notice",
+              "key": "k05.notice.sunfu_with"
+            }
+          ],
+          "brief": "跟孙府站在一起"
+        },
+        {
+          "id": "apart",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1940.sunfu_stance",
+              "outcome": "apart"
+            },
+            {
+              "op": "flag",
+              "key": "k05_sunfu_apart",
+              "value": true
+            },
+            {
+              "op": "rep",
+              "delta": -2
+            },
+            {
+              "op": "heat",
+              "delta": -1
+            },
+            {
+              "op": "conscience",
+              "delta": 2
+            },
+            {
+              "op": "demand_tier",
+              "delta": 1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.sunlaoye.1940.stance_apart"
+            },
+            {
+              "op": "notice",
+              "key": "k05.notice.sunfu_apart"
+            }
+          ],
+          "brief": "不站"
+        },
+        {
+          "id": "hedge",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1940.sunfu_stance",
+              "outcome": "hedge"
+            },
+            {
+              "op": "flag",
+              "key": "k05_sunfu_hedge",
+              "value": true
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.sunlaoye.1940.stance_hedge"
+            },
+            {
+              "op": "notice",
+              "key": "k05.notice.sunfu_hedge"
+            }
+          ],
+          "brief": "含糊过去"
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "story",
+            "node": "s1940.sunfu_stance",
+            "outcome": "ignored"
+          },
+          {
+            "op": "dossier_gap",
+            "frag": "df.sunlaoye.1940.stance_with"
+          },
+          {
+            "op": "flag",
+            "key": "k05_sunfu_ignored",
+            "value": true
+          }
+        ]
+      },
+      "art": "portrait.sunlaoye",
+      "brief": "金色节点 s1940.sunfu_stance。孙府当家孙德昌本关第 16 天来要你表态，站哪一边。跟他们站：走向 with_sun，旗标 k05_sunfu_with，口碑加 3，风声加 2，下一张条子降 1 档，补碎片 df.sunlaoye.1940.stance_with，告示 k05.notice.sunfu_with。不站：走向 apart，旗标 k05_sunfu_apart，口碑降 2，风声降 1，下一张条子升 1 档，补碎片 df.sunlaoye.1940.stance_apart。含糊：走向 hedge，旗标 k05_sunfu_hedge，风声加 1，补碎片 df.sunlaoye.1940.stance_hedge。打烊没理：走向 ignored，碎片 df.sunlaoye.1940.stance_with 变成缺口，旗标 k05_sunfu_ignored。史实：1940 年 3 月 30 日汪伪国民政府在南京成立，伪维新政府并入；这张排在成立日之前，让孙府先要站队。不结束这一局。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.chen.1940.dossier_link",
+      "type": "person",
+      "person": "chen",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "tags": [
+        "story",
+        "dossier",
+        "omen_far",
+        "omen_family"
+      ],
+      "gold": true,
+      "story_node": "s1940.dossier_link",
+      "intent": "story",
+      "schedule": {
+        "stage_day": 24,
+        "order": 1,
+        "once": true
+      },
+      "choices": [
+        {
+          "id": "link_all",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1940.dossier_link",
+              "outcome": "linked"
+            },
+            {
+              "op": "flag",
+              "key": "k05_dossier_linked",
+              "value": true
+            },
+            {
+              "op": "dossier",
+              "frag": "df.chen.1940.link"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.brother.1940.link_from_chen"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.wangshan.1940.link_from_chen"
+            },
+            {
+              "op": "notice",
+              "key": "k05.notice.dossier_linked"
+            }
+          ],
+          "brief": "把关键碎片串起来"
+        },
+        {
+          "id": "one_page",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1940.dossier_link",
+              "outcome": "partial"
+            },
+            {
+              "op": "flag",
+              "key": "k05_dossier_partial",
+              "value": true
+            },
+            {
+              "op": "dossier",
+              "frag": "df.chen.1940.link_one"
+            }
+          ],
+          "brief": "只订住一块"
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "story",
+            "node": "s1940.dossier_link",
+            "outcome": "ignored"
+          },
+          {
+            "op": "dossier_gap",
+            "frag": "df.chen.1940.link"
+          },
+          {
+            "op": "flag",
+            "key": "k05_dossier_ignored",
+            "value": true
+          }
+        ]
+      },
+      "art": "portrait.chen",
+      "brief": "金色节点 s1940.dossier_link。本关第 24 天，陈文庭把能对上的碎片摊开：哥哥的信、王山的行踪、半张旧当票上的字。不是结局。串起来：走向 linked，旗标 k05_dossier_linked，补 df.chen.1940.link、df.brother.1940.link_from_chen、df.wangshan.1940.link_from_chen，告示 k05.notice.dossier_linked。只订一块：走向 partial，旗标 k05_dossier_partial，只补 df.chen.1940.link_one。没理：走向 ignored，df.chen.1940.link 变成缺口。碎片正文归 K08。1940 年 3 月，新规矩还没把旧账涂掉。不结束这一局。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.postman.1940.hook",
+      "type": "person",
+      "person": "postman",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "tags": [
+        "story",
+        "letter",
+        "omen_far",
+        "omen_road"
+      ],
+      "gold": true,
+      "story_node": "s1940.hook",
+      "intent": "story",
+      "schedule": {
+        "stage_day": 30,
+        "order": 8,
+        "once": true
+      },
+      "choices": [
+        {
+          "id": "follow",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1940.hook",
+              "outcome": "follow"
+            },
+            {
+              "op": "flag",
+              "key": "k05_hook_follow",
+              "value": true
+            },
+            {
+              "op": "dossier",
+              "frag": "df.postman.1940.hook_letter"
+            }
+          ],
+          "brief": "顺着这封信往下看"
+        },
+        {
+          "id": "seal",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1940.hook",
+              "outcome": "seal"
+            },
+            {
+              "op": "flag",
+              "key": "k05_hook_seal",
+              "value": true
+            },
+            {
+              "op": "dossier",
+              "frag": "df.postman.1940.hook_sealed"
+            }
+          ],
+          "brief": "把信收起来"
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "story",
+            "node": "s1940.hook",
+            "outcome": "ignored"
+          },
+          {
+            "op": "dossier_gap",
+            "frag": "df.postman.1940.hook_letter"
+          },
+          {
+            "op": "flag",
+            "key": "k05_hook_ignored",
+            "value": true
+          }
+        ]
+      },
+      "art": "portrait.postman",
+      "brief": "金色节点 s1940.hook，首发结尾的钩子。本关第 30 天（1940 年 3 月 30 日，汪伪国民政府在南京成立的当天）由邮电代办把一封没写完的信送到柜台。信指向后面，不是这一局的收束：线是哥哥的下一封下落，外加王山和德字旧当票都还没收口；1941 年才会碰到的伪中储券和清乡这张不写进效果，只在说明里留方向。顺着看：走向 follow，旗标 k05_hook_follow，补碎片 df.postman.1940.hook_letter。收起来：走向 seal，旗标 k05_hook_seal，补碎片 df.postman.1940.hook_sealed。没理：走向 ignored，旗标 k05_hook_ignored，碎片 df.postman.1940.hook_letter 变成缺口。三个走向都只记故事、碎片和旗标，没有告示，也不结束这一局。收尾归 G02，读 story.s1940.hook 和旗标 k05_hook_follow、k05_hook_seal、k05_hook_ignored。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

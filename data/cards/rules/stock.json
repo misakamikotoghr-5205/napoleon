@@ -1,0 +1,18 @@
+{
+  "_meta": {"owner": "RG3", "schema": 1, "brief": "周末盘账与客源（肉鸽 v1）：哪几天盘账、生意做够几笔给几样、哪几格出什么、钳子。"},
+  "_doc": [
+    "week_days: stage days whose settle runs the stocktake; week = day / 7 - 1.",
+    "offers_full if this week's deals >= deals_needed, else offers_few.",
+    "slot_kinds: kind wanted for each slot; an empty pool falls back to the other kind.",
+    "source_only_weeks: '<stage>:<week>' keys that offer sources only (1938 week 0: the peddler on day 8 introduces relics).",
+    "clamp: product over active sources per pool / sum per deal type."
+  ],
+  "enabled": true,
+  "week_days": [7, 14, 21, 28],
+  "deals_needed": 2,
+  "offers_full": 3,
+  "offers_few": 2,
+  "slot_kinds": ["relic", "source", "relic"],
+  "source_only_weeks": ["0:0"],
+  "clamp": {"pool_min": 50, "pool_max": 250, "deal_count_min": 0, "deal_count_max": 1}
+}

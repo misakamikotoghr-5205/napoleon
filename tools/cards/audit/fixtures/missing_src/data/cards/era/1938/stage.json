@@ -1,0 +1,11 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1
+  },
+  "era": "1938",
+  "bg": "bg.stage.1938",
+  "intro_paras": 2,
+  "main_goal": "gl.keep",
+  "brief": "THIS_BRIEF_MUST_NOT_LEAK_STAGE"
+}

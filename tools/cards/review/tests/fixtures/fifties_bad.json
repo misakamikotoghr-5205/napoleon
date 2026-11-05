@@ -1,0 +1,35 @@
+{
+  "cards": [
+    {
+      "id": "ft.1951.bad",
+      "type": "fate",
+      "era": [
+        "1951"
+      ],
+      "brief": "收购站的通知，随机抽到就罚一笔钱。",
+      "weight": 4,
+      "valence": "bad"
+    },
+    {
+      "id": "ev.1952.meet",
+      "type": "event",
+      "era": [
+        "1952"
+      ],
+      "brief": "街上开斗争会。",
+      "weight": 0
+    },
+    {
+      "id": "ev.1953.omen",
+      "type": "event",
+      "era": [
+        "1953"
+      ],
+      "brief": "风声紧。",
+      "weight": 2,
+      "tags": [
+        "bad_omen"
+      ]
+    }
+  ]
+}

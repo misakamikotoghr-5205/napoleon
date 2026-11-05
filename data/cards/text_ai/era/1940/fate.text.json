@@ -1,0 +1,64 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-3940"
+  },
+  "fa.1940.old_buyer": {
+    "title": "旧主顾上门",
+    "body": "开春了，一位旧主顾上门来买东西。",
+    "choices": {
+      "fair": "按老规矩",
+      "hard": "咬住价钱",
+      "wave": "打发走"
+    },
+    "outcomes": {
+      "ignored": "旧主顾没人招呼，走了，街上说这铺子待客不如从前。"
+    }
+  },
+  "fa.1940.rice_spike": {
+    "title": "米价猛涨",
+    "body": "开春米价猛地一跳，街上都在抢米。",
+    "choices": {
+      "buy_now": "立刻买",
+      "wait": "再看看",
+      "sell": "把米出手"
+    },
+    "outcomes": {
+      "ignored": "这事没顾上：手头有米，就照新价卖掉一袋；一粒也没有，街上便有了闲话。"
+    }
+  },
+  "fa.1940.spring_rain": {
+    "title": "春雨连绵",
+    "body": "春雨一连下了好几天，库房里的货开始返潮。",
+    "choices": {
+      "repair": "花钱修",
+      "move": "抢着搬",
+      "ignore": "先不管"
+    },
+    "slots": {
+      "man": "胆大的人"
+    },
+    "outcomes": {
+      "success": "货都搬到了干处，街坊夸你手脚快。",
+      "fail": "搬的时候摔了一跤，人伤了，货也泡坏了一件。",
+      "ignored": "没人去管，泡坏了一件货。"
+    }
+  },
+  "fa.1940.whisper": {
+    "title": "有人告了一状",
+    "body": "听说有人在新官面前提了你一嘴，话不太好听。",
+    "choices": {
+      "hush": "花钱压下",
+      "face": "由它去",
+      "explain": "自己去解释"
+    },
+    "slots": {
+      "talker": "会说话的人"
+    },
+    "outcomes": {
+      "success": "话说清楚了，这事就这么过去，风声松了些。",
+      "fail": "越解释越说不清，风声更紧了。",
+      "ignored": "没人去管，闲话越传越真，风声紧了。"
+    }
+  }
+}

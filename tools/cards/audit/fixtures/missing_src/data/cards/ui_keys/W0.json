@@ -1,0 +1,11 @@
+{
+  "_meta": {
+    "owner": "W0",
+    "schema": 1
+  },
+  "keys": {
+    "w0.title.new": {
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_UI"
+    }
+  }
+}

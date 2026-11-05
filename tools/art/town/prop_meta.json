@@ -1,0 +1,19 @@
+{
+  "shelf": {"anchor": [0, 16], "footprint": [0, 0, 208, 16]},
+  "counter": {"anchor": [0, 42], "footprint": [0, 4, 64, 40]},
+  "counter_mid": {"anchor": [0, 42], "footprint": [0, 4, 64, 40]},
+  "counter_lamp": {"anchor": [0, 42], "footprint": [0, 4, 64, 40]},
+  "counter_gate": {"anchor": [0, 42], "footprint": [16, 4, 32, 40]},
+  "stairs": {"anchor": [0, 44], "footprint": [0, 2, 16, 44]},
+  "bed": {"anchor": [0, 26], "footprint": [0, 0, 32, 28]},
+  "storeroom_door": {"anchor": [0, 16], "footprint": [0, 0, 32, 16]},
+  "calendar": {"anchor": [0, 30], "footprint": [0, 28, 16, 4]},
+  "back_door": {"anchor": [0, 30], "footprint": [0, 0, 16, 32]},
+  "pawn_bench": {"anchor": [0, 12], "footprint": [0, 4, 48, 10]},
+  "clothes_rack": {"anchor": [0, 38], "footprint": [2, 28, 28, 12]},
+  "plant": {"anchor": [0, 24], "footprint": [1, 18, 12, 8]},
+  "broom": {"anchor": [0, 20], "footprint": [0, 16, 8, 6]},
+  "trunk": {"anchor": [0, 12], "footprint": [0, 4, 16, 10]},
+  "telegraph": {"anchor": [8, 14]},
+  "lamp": {"anchor": [6, 20]}
+}

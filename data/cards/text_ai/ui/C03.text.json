@@ -1,0 +1,228 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "c03.coins.line": {
+    "t": "铜钱 {n} 枚 · 要 {m} 个正面"
+  },
+  "c03.coins.auto_pass": {
+    "t": "不用掷，直接过"
+  },
+  "c03.btn.roll": {
+    "t": "掷铜钱"
+  },
+  "c03.btn.continue": {
+    "t": "接着来"
+  },
+  "c03.btn.read": {
+    "t": "看过了"
+  },
+  "c03.btn.look": {
+    "t": "细看"
+  },
+  "c03.btn.keep": {
+    "t": "留着"
+  },
+  "c03.btn.remove": {
+    "t": "拿出来"
+  },
+  "c03.btn.close": {
+    "t": "关上"
+  },
+  "c03.wants.official": {
+    "t": "官面"
+  },
+  "c03.wants.papers": {
+    "t": "证件"
+  },
+  "c03.wants.favor": {
+    "t": "人情"
+  },
+  "c03.wants.person": {
+    "t": "要人"
+  },
+  "c03.wants.goods": {
+    "t": "要货"
+  },
+  "c03.wants.news": {
+    "t": "要消息"
+  },
+  "c03.wants.money": {
+    "t": "要钱"
+  },
+  "c03.wants.hard": {
+    "t": "硬货"
+  },
+  "c03.err.slot_reject": {
+    "t": "这样东西放不进这一格。"
+  },
+  "c03.err.slot_full": {
+    "t": "这一格已经满了。"
+  },
+  "c03.err.slot_required": {
+    "t": "还有一格非放不可，先把它放上。"
+  },
+  "c03.err.person_busy": {
+    "t": "这个人今天已经出过力了。"
+  },
+  "c03.err.bad_args": {
+    "t": "这一步办不成。"
+  },
+  "c03.err.unknown_uid": {
+    "t": "找不到这张牌了。"
+  },
+  "c03.err.not_allowed": {
+    "t": "现在不能这么办。"
+  },
+  "c03.err.insufficient_money": {
+    "t": "钱不够。"
+  },
+  "c03.err.kept_full": {
+    "t": "留着的牌已经满了。"
+  },
+  "c03.err.not_keepable": {
+    "t": "这张牌留不下来。"
+  },
+  "c03.err.not_implemented": {
+    "t": "这一步还办不了。"
+  },
+  "c03.err.unknown": {
+    "t": "没办成。"
+  },
+  "c03.contacts_full.title": {
+    "t": "人脉满了，请一位让出位子"
+  },
+  "c03.contacts_full.new": {
+    "t": "新来的人"
+  },
+  "c03.kept_full.title": {
+    "t": "留着的牌满了，挑一张扔掉；关上就扔掉新来的这张"
+  },
+  "c03.kept_full.new": {
+    "t": "新来的这张"
+  },
+  "c03.picker.self": {
+    "t": "你自己"
+  },
+  "c03.picker.contact": {
+    "t": "请个人脉"
+  },
+  "c03.picker.kept": {
+    "t": "放留着的牌"
+  },
+  "c03.picker.item": {
+    "t": "拿货架上的东西"
+  },
+  "c03.picker.news": {
+    "t": "拿一条消息"
+  },
+  "c03.picker.money": {
+    "t": "放这些钱"
+  },
+  "c03.picker.plus": {
+    "t": "多放些"
+  },
+  "c03.picker.minus": {
+    "t": "少放些"
+  },
+  "c03.picker.used": {
+    "t": "今天用过了"
+  },
+  "c03.picker.away": {
+    "t": "人不在"
+  },
+  "c03.picker.title": {
+    "t": "往格子里放东西"
+  },
+  "c03.reply.later": {
+    "t": "先放着，回头再说"
+  },
+  "c03.reply.roll": {
+    "t": "掷铜钱 · {n} 枚 · 要 {m} 个正面"
+  },
+  "c03.reply.read": {
+    "t": "看过了"
+  },
+  "c03.reply.keep": {
+    "t": "先留着"
+  },
+  "c03.reply.look": {
+    "t": "细看"
+  },
+  "c03.sys.roll": {
+    "t": "铜钱停了：{heads} 个正面，要 {need} 个。"
+  },
+  "c03.money.minus": {
+    "t": "−{n}"
+  },
+  "c03.money.plus": {
+    "t": "+{n}"
+  },
+  "c03.drawer.title": {
+    "t": "人脉和留着的牌"
+  },
+  "c03.state.used": {
+    "t": "今天用过了"
+  },
+  "c03.state.away": {
+    "t": "不在，还要 {n} 天"
+  },
+  "c03.state.days": {
+    "t": "还剩 {n} 天"
+  },
+  "c03.drawer.note": {
+    "t": "人脉 {n}/{cap}。要过格子时，把头像拖进柜台上的格子，一点本事算一枚铜钱。"
+  },
+  "c03.drawer.empty": {
+    "t": "空位：常来往、帮过忙的人，日后会成为你的人脉。"
+  },
+  "c03.drawer.kept": {
+    "t": "留着的牌"
+  },
+  "c03.drawer.kept_count": {
+    "t": "{n}/{cap}"
+  },
+  "c03.drawer.kept_none": {
+    "t": "还没有留着的牌。"
+  },
+  "c03.drawer.you": {
+    "t": "你"
+  },
+  "c03.attr.eye": {
+    "t": "眼力"
+  },
+  "c03.attr.tongue": {
+    "t": "口才"
+  },
+  "c03.attr.pull": {
+    "t": "人脉"
+  },
+  "c03.attr.nerve": {
+    "t": "胆量"
+  },
+  "c03.slot.empty": {
+    "t": "空着"
+  },
+  "c03.slot.put": {
+    "t": "放东西…"
+  },
+  "c03.slot.required": {
+    "t": "必放"
+  },
+  "c03.slot.kept_mark": {
+    "t": "留"
+  },
+  "c03.slot.money": {
+    "t": "{n} {unit}"
+  },
+  "c03.coins.none": {
+    "t": "格子空着，没有铜钱"
+  },
+  "c03.coins.auto_plus": {
+    "t": "+{n}"
+  },
+  "c03.picker.cancel": {
+    "t": "算了"
+  }
+}

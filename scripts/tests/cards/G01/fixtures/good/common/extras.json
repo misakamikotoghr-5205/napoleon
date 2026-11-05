@@ -1,0 +1,14 @@
+{
+  "_meta": {
+    "owner": "K09",
+    "schema": 1,
+    "brief": "演出群演名字校验正例"
+  },
+  "persons": {
+    "ex_patrol": {
+      "dossier": false,
+      "brief": "REGISTERED_EXTRA"
+    }
+  },
+  "cards": []
+}

@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "owner": "K05",
+    "schema": 1,
+    "brief": "K05 的原因键和告示键。只有键和说明，正文由人写。",
+    "_provenance": {
+      "by": "ai",
+      "task": "K05",
+      "date": "2026-10-13"
+    }
+  },
+  "keys": {
+    "k05.reason.sun_borrow": {
+      "brief": "借给孙府独子周转的钱。正文由人写。"
+    },
+    "k05.reason.wu_rice": {
+      "brief": "向米行提前进米花的钱。正文由人写。"
+    },
+    "k05.reason.zhao_lend": {
+      "brief": "再借给佃户的一小笔钱。正文由人写。"
+    },
+    "k05.notice.sunfu_with": {
+      "brief": "孙府表态：跟他们站在一起。本局不结束。正文由人写。"
+    },
+    "k05.notice.sunfu_apart": {
+      "brief": "孙府表态：不站。正文由人写。"
+    },
+    "k05.notice.sunfu_hedge": {
+      "brief": "孙府表态：含糊过去。正文由人写。"
+    },
+    "k05.notice.ma_changed": {
+      "brief": "保长改挂新官的名目。正文由人写。"
+    },
+    "k05.notice.ma_kept": {
+      "brief": "仍用旧名目称呼保长。正文由人写。"
+    },
+    "k05.notice.hu2_changed": {
+      "brief": "跑腿改替新官办事。正文由人写。"
+    },
+    "k05.notice.dossier_linked": {
+      "brief": "关键碎片被串起来。正文由人写。"
+    },
+    "k05.notice.registered": {
+      "brief": "当铺被写进新名册。正文由人写。"
+    }
+  }
+}

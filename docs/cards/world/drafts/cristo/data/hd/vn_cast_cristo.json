@@ -1,0 +1,433 @@
+{
+ "version": 1,
+ "_doc": "给 vn_cast.json 的演出表草稿（伊夫堡段）：chars 是新增人物的叫法和立绘 id；scenes / events 是背景与主讲人；variant 是同一立绘的年代变体（1815 / prisoner）。",
+ "chars": {
+  "villefort": {
+   "aliases": [
+    "埃德蒙·德·维尔福",
+    "维尔福"
+   ],
+   "art": "villefort"
+  },
+  "gerard": {
+   "aliases": [
+    "杰拉尔·德·维尔福",
+    "杰拉尔"
+   ],
+   "art": "gerard"
+  },
+  "noirtier": {
+   "aliases": [
+    "努瓦蒂埃"
+   ],
+   "art": "noirtier"
+  },
+  "dantes": {
+   "aliases": [
+    "埃德蒙·唐泰斯",
+    "唐泰斯",
+    "伯爵",
+    "基督山伯爵"
+   ],
+   "art": "dantes"
+  },
+  "mercedes": {
+   "aliases": [
+    "梅尔塞苔丝"
+   ],
+   "art": "mercedes"
+  },
+  "fernand": {
+   "aliases": [
+    "费尔南",
+    "莫尔塞夫伯爵"
+   ],
+   "art": "fernand"
+  },
+  "danglars": {
+   "aliases": [
+    "唐格拉尔"
+   ],
+   "art": "danglars"
+  },
+  "caderousse": {
+   "aliases": [
+    "卡德鲁斯"
+   ],
+   "art": "caderousse"
+  },
+  "louis_dantes": {
+   "aliases": [
+    "老唐泰斯"
+   ],
+   "art": "louis_dantes"
+  },
+  "morrel": {
+   "aliases": [
+    "莫雷尔先生",
+    "莫雷尔"
+   ],
+   "art": "morel"
+  },
+  "faria": {
+   "aliases": [
+    "法利亚神甫",
+    "法利亚"
+   ],
+   "art": "faria"
+  },
+  "governor": {
+   "aliases": [
+    "典狱长"
+   ],
+   "art": "governor"
+  },
+  "commissaire": {
+   "aliases": [
+    "警长"
+   ],
+   "art": "commissaire"
+  },
+  "renee": {
+   "aliases": [
+    "勒内"
+   ],
+   "art": "renee"
+  },
+  "jacopo": {
+   "aliases": [
+    "雅科波"
+   ],
+   "art": "jacopo"
+  },
+  "bertuccio": {
+   "aliases": [
+    "贝尔图乔"
+   ],
+   "art": "bertuccio"
+  },
+  "ali_pasha": {
+   "aliases": [
+    "阿里总督",
+    "阿里·特佩莱纳"
+   ],
+   "art": "ali_pasha"
+  },
+  "haydee": {
+   "aliases": [
+    "海黛"
+   ],
+   "art": "haydee"
+  },
+  "ali": {
+   "aliases": [
+    "阿里"
+   ],
+   "art": "ali"
+  },
+  "vampa": {
+   "aliases": [
+    "万帕",
+    "路易吉·万帕"
+   ],
+   "art": "vampa"
+  },
+  "albert": {
+   "aliases": [
+    "阿尔贝"
+   ],
+   "art": "albert"
+  },
+  "maximilien": {
+   "aliases": [
+    "马克西米利安"
+   ],
+   "art": "maximilien"
+  },
+  "valentine": {
+   "aliases": [
+    "瓦朗蒂娜"
+   ],
+   "art": "valentine"
+  },
+  "heloise": {
+   "aliases": [
+    "埃洛伊丝"
+   ],
+   "art": "heloise"
+  },
+  "benedetto": {
+   "aliases": [
+    "贝内代托",
+    "安德烈亚"
+   ],
+   "art": "benedetto"
+  },
+  "peppino": {
+   "aliases": [
+    "佩皮诺"
+   ],
+   "art": "placeholder_only"
+  },
+  "renaud": {
+   "aliases": [
+    "庭长"
+   ],
+   "art": "placeholder_only"
+  }
+ },
+ "scenes": {
+  "c_landfall": {
+   "bg": "marseille_quay_1815",
+   "speaker": "morrel",
+   "variant": {
+    "dantes": "1815",
+    "morrel": "1815",
+    "villefort": "1815"
+   }
+  },
+  "c_reserve": {
+   "bg": "la_reserve_arbour",
+   "speaker": "dantes",
+   "variant": {
+    "dantes": "1815",
+    "villefort": "1815"
+   }
+  },
+  "c_gerard": {
+   "bg": "gerard_study",
+   "speaker": "gerard",
+   "variant": {
+    "villefort": "1815"
+   }
+  },
+  "c_petition": {
+   "bg": "morrel_counting_room",
+   "speaker": "morrel",
+   "variant": {
+    "morrel": "1815",
+    "villefort": "1815"
+   }
+  },
+  "c_white_june": {
+   "bg": "old_port_white_june",
+   "speaker": "morrel",
+   "variant": {
+    "morrel": "1815",
+    "villefort": "1815"
+   }
+  },
+  "c_if_contract": {
+   "bg": "if_governor_office",
+   "speaker": "governor",
+   "variant": {}
+  },
+  "c_bread_34": {
+   "bg": "if_dungeon_kitchen",
+   "speaker": "dantes",
+   "variant": {
+    "dantes": "prisoner"
+   }
+  },
+  "c_faria_27": {
+   "bg": "if_cell_27",
+   "speaker": "faria",
+   "variant": {
+    "faria": "prisoner"
+   }
+  },
+  "c_morgiou": {
+   "bg": "morgiou_cove_night",
+   "speaker": "jacopo",
+   "variant": {}
+  },
+  "c_faria_dies": {
+   "bg": "if_cell_27",
+   "speaker": "dantes",
+   "variant": {
+    "dantes": "prisoner",
+    "faria": "prisoner"
+   },
+   "bg_variant": "night"
+  },
+  "c_if_night": {
+   "bg": "if_sea_gate_night",
+   "speaker": "dantes",
+   "variant": {
+    "dantes": "prisoner"
+   }
+  },
+  "c_tiboulen": {
+   "bg": "tiboulen_dawn",
+   "speaker": "jacopo",
+   "variant": {
+    "dantes": "prisoner"
+   }
+  },
+  "c_livorno": {
+   "bg": "livorno_barber",
+   "speaker": "dantes",
+   "variant": {}
+  },
+  "c_montecristo": {
+   "bg": "montecristo_treasure",
+   "speaker": "dantes",
+   "variant": {}
+  },
+  "c_caderousse": {
+   "bg": "pont_du_gard_inn",
+   "speaker": "caderousse",
+   "variant": {}
+  },
+  "c_morrel_rescue": {
+   "bg": "morrel_house_1829",
+   "speaker": "morrel",
+   "variant": {}
+  },
+  "c_carnival": {
+   "bg": "rome_carnival",
+   "speaker": "albert",
+   "variant": {}
+  },
+  "c_san_sebastiano": {
+   "bg": "san_sebastiano_catacomb",
+   "speaker": "vampa",
+   "variant": {}
+  },
+  "c_champs_elysees": {
+   "bg": "champs_elysees_salon",
+   "speaker": "dantes",
+   "variant": {}
+  },
+  "c_auteuil": {
+   "bg": "auteuil_garden_night",
+   "speaker": "bertuccio",
+   "variant": {}
+  },
+  "c_peers": {
+   "bg": "chamber_of_peers",
+   "speaker": "haydee",
+   "variant": {}
+  },
+  "c_danglars": {
+   "bg": "danglars_bank",
+   "speaker": "danglars",
+   "variant": {}
+  },
+  "c_trial": {
+   "bg": "palais_justice_assize",
+   "speaker": "gerard",
+   "variant": {}
+  }
+ },
+ "events": {
+  "ev_c1_council": {
+   "bg": "saint_laurent_sacristy",
+   "speaker": "morrel"
+  },
+  "ev_c2_council": {
+   "bg": "cassis_backroom",
+   "speaker": "jacopo"
+  },
+  "ev_janina_1822": {
+   "bg": "janina_lake_island",
+   "speaker": "ali_pasha"
+  },
+  "ev_mercedes_window": {
+   "bg": "catalans_village",
+   "speaker": "mercedes"
+  },
+  "ev_old_dantes": {
+   "bg": "meilhan_attic",
+   "speaker": "louis_dantes"
+  },
+  "ev_danglars_cargo": {
+   "bg": "camp_tent",
+   "speaker": "danglars"
+  },
+  "ev_caderousse_wine": {
+   "bg": "camp_tent",
+   "speaker": "caderousse"
+  },
+  "ev_renee_plea": {
+   "bg": "camp_tent",
+   "speaker": "renee"
+  },
+  "ev_inspector": {
+   "bg": "camp_tent",
+   "speaker": "governor"
+  },
+  "ev_bertuccio_name": {
+   "bg": "cassis_backroom",
+   "speaker": "bertuccio"
+  },
+  "ev_old_dantes_end": {
+   "bg": "meilhan_attic",
+   "speaker": "caderousse"
+  },
+  "ev_accoules": {
+   "bg": "accoules_church",
+   "speaker": "mercedes"
+  },
+  "ev_customs_cutter": {
+   "bg": "camp_tent",
+   "speaker": "jacopo"
+  },
+  "ev_widow_pension": {
+   "bg": "camp_tent",
+   "speaker": "villefort"
+  },
+  "ev_tail": {
+   "bg": "camp_tent",
+   "speaker": "villefort"
+  },
+  "ev_genoa_banker": {
+   "bg": "camp_tent",
+   "speaker": "villefort"
+  },
+  "ev_haydee_constantinople": {
+   "bg": "constantinople_market",
+   "speaker": "haydee"
+  },
+  "ev_telegraph": {
+   "bg": "telegraph_tower",
+   "speaker": "dantes"
+  },
+  "ev_noirtier_eyes": {
+   "bg": "noirtier_room",
+   "speaker": "noirtier"
+  },
+  "ev_c3_council": {
+   "bg": "camp_tent",
+   "speaker": "jacopo"
+  },
+  "ev_c4_council": {
+   "bg": "camp_tent",
+   "speaker": "vampa"
+  },
+  "ev_c5_council": {
+   "bg": "camp_tent",
+   "speaker": "dantes"
+  },
+  "ev_i_marseille": {
+   "bg": "camp_tent",
+   "speaker": "morrel"
+  },
+  "ev_i_if_years": {
+   "bg": "camp_tent",
+   "speaker": "faria"
+  },
+  "ev_i_montecristo": {
+   "bg": "camp_tent",
+   "speaker": "dantes"
+  },
+  "ev_i_mediterranean": {
+   "bg": "camp_tent",
+   "speaker": "dantes"
+  },
+  "ev_i_paris": {
+   "bg": "camp_tent",
+   "speaker": "danglars"
+  }
+ }
+}

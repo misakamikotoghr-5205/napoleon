@@ -1,0 +1,129 @@
+{
+  "_meta": {"owner": "RG3", "schema": 1, "brief": "老物件 12 件（肉鸽 v1）：寻常 5、有来历 5、镇店 2。效果只用现有修正项和效果 op。"},
+  "cards": [
+    {"id": "rl.cat_bowl", "type": "relic", "era": ["*"], "weight": 10, "depth": "plain",
+     "conditions": {"any": [{"flag": "pet_home"}, {"flag": "pet_lost"}]},
+     "mods": [
+       {"mod": "appraise_pct", "pct": 110, "when": {"all": [{"flag": "pet_home"}, {"not": {"flag": "pet_lost"}}]}},
+       {"mod": "patience_pct", "pct": 90, "flaw": true, "when": {"flag": "pet_lost"}}
+     ],
+     "art": "prop.relic.cat_bowl",
+     "brief": "豁口的青花猫碗。留过猫以后才会摆出来。猫在店里：所有品类鉴定观察清楚一点（appraise 110）。猫走丢了：客人耐心少一点（patience 90，毛病）。",
+     "_provenance": {"by": "ai", "task": "RG3", "date": "2026-10-25"}},
+
+    {"id": "rl.stub_box", "type": "relic", "era": ["*"], "weight": 10, "depth": "plain",
+     "mods": [
+       {"mod": "kept_cap", "delta": 1},
+       {"mod": "shelf_cap", "delta": -1, "flaw": true}
+     ],
+     "art": "prop.relic.stub_box",
+     "brief": "当票存根匣：多留一张牌（kept_cap +1）；匣子占地方，货架少一格（shelf_cap -1，毛病）。",
+     "_provenance": {"by": "ai", "task": "RG3", "date": "2026-10-25"}},
+
+    {"id": "rl.blue_curtain", "type": "relic", "era": ["*"], "weight": 10, "depth": "plain",
+     "mods": [
+       {"mod": "patience_pct", "pct": 115},
+       {"mod": "pool_weight", "pool": "person", "intents": ["buy"], "pct": 92, "flaw": true}
+     ],
+     "art": "prop.relic.blue_curtain",
+     "brief": "蓝布棉门帘：客人进门暖和，肯多等（patience 115）；过路的买家少看见货（来买的人 pool 92，毛病）。",
+     "_provenance": {"by": "ai", "task": "RG3", "date": "2026-10-25"}},
+
+    {"id": "rl.oilpaper_umbrella", "type": "relic", "era": ["*"], "weight": 10, "depth": "plain",
+     "mods": [
+       {"mod": "deal_count", "type": "person", "delta": 1, "when": {"weather": "rain"}}
+     ],
+     "art": "prop.relic.oilpaper_umbrella",
+     "brief": "客人落下的油纸伞：下雨天多一位客人进门（deal_count person +1，抵掉 G05 的雨天少一位）。没有毛病。",
+     "_provenance": {"by": "ai", "task": "RG3", "date": "2026-10-25"}},
+
+    {"id": "rl.old_almanac", "type": "relic", "era": ["*"], "weight": 10, "depth": "plain",
+     "mods": [
+       {"mod": "price_pct", "direction": "pay", "pct": 94, "when": {"almanac_yi": "pawn_in"}},
+       {"mod": "price_pct", "direction": "receive", "pct": 106, "when": {"almanac_yi": "sell_out"}}
+     ],
+     "art": "prop.relic.old_almanac",
+     "brief": "祖父批过的老黄历：宜收当的日子三档价压低一点（pay 94），宜出货的日子卖价硬一点（receive 106）。没有毛病。",
+     "_provenance": {"by": "ai", "task": "RG3", "date": "2026-10-25"}},
+
+    {"id": "rl.chen_mortar", "type": "relic", "era": ["*"], "weight": 6, "depth": "storied",
+     "mods": [
+       {"mod": "appraise_pct", "cats": ["medicine"], "pct": 125},
+       {"mod": "price_pct", "direction": "pay", "cats": ["medicine"], "pct": 95},
+       {"mod": "appraise_pct", "cats": ["art"], "pct": 120, "when": {"has_contact": "chen"}},
+       {"mod": "pool_weight", "pool": "event", "tags_any": ["search"], "pct": 115, "flaw": true}
+     ],
+     "art": "prop.relic.chen_mortar",
+     "brief": "济生堂的铜药碾（陈家老先生抵在这儿没赎）：药材鉴定清楚得多（125）、收药材三档价低一点（pay 95）；陈文庭是人脉时书画也看得清（120）。毛病：查铺的事多一点（event search 115）。",
+     "_provenance": {"by": "ai", "task": "RG3", "date": "2026-10-25"}},
+
+    {"id": "rl.hu2_pipe", "type": "relic", "era": ["*"], "weight": 6, "depth": "storied",
+     "mods": [],
+     "passives": [
+       {"hook": "day_start", "effects": [
+         {"op": "if", "cond": {"all": [{"weekday": 0}, {"not": {"has_contact": "ma"}}]},
+          "then": [{"op": "demand_tier", "delta": -1}]}]}
+     ],
+     "downsides": [
+       {"hook": "day_start", "effects": [
+         {"op": "if", "cond": {"all": [{"weekday": 0}, {"not": {"has_contact": "ma"}}]},
+          "then": [{"op": "rep", "delta": -2}]}]}
+     ],
+     "art": "prop.relic.hu2_pipe",
+     "brief": "胡二落下的旱烟袋：每周一胡二来发条子前（day_start 25 早于 G03 发条子 30），这张条子降一档（demand_tier -1）；街坊看见你跟他走得近，口碑掉一点（rep -2，毛病）。马万利是人脉时两样都不灵（两个降档会把条子玩没）。",
+     "_provenance": {"by": "ai", "task": "RG3", "date": "2026-10-25"}},
+
+    {"id": "rl.camphor_chest", "type": "relic", "era": ["*"], "weight": 6, "depth": "storied",
+     "mods": [
+       {"mod": "kept_cap", "delta": 1, "when": {"estate_status": ["es.old_house", "held"]}},
+       {"mod": "shelf_cap", "delta": 2, "when": {"estate_status": ["es.old_house", "held"]}}
+     ],
+     "art": "prop.relic.camphor_chest",
+     "brief": "老宅的樟木箱：多留一张牌、货架多两格；老宅押出去或丢了就搬不出来，两样都不灵（这就是它的毛病）。",
+     "_provenance": {"by": "ai", "task": "RG3", "date": "2026-10-25"}},
+
+    {"id": "rl.master_steelyard", "type": "relic", "era": ["*"], "weight": 6, "depth": "storied",
+     "mods": [
+       {"mod": "appraise_pct", "cats": ["jewelry", "silver", "silverware", "goldbar", "medicine"], "pct": 120},
+       {"mod": "patience_pct", "pct": 92, "flaw": true}
+     ],
+     "art": "prop.relic.master_steelyard",
+     "brief": "师父的老戥子：金银首饰药材称得准，鉴定清楚一些（120）；太较真，客人嫌你磨蹭（patience 92，毛病）。",
+     "_provenance": {"by": "ai", "task": "RG3", "date": "2026-10-25"}},
+
+    {"id": "rl.sun_inkpad", "type": "relic", "era": ["*"], "weight": 6, "depth": "storied",
+     "mods": [
+       {"mod": "coins", "source_kind": "self", "slot_tags_any": ["official"], "delta": 1},
+       {"mod": "pool_weight", "pool": "event", "tags_any": ["official"], "pct": 115, "flaw": true}
+     ],
+     "art": "prop.relic.sun_inkpad",
+     "brief": "孙府的朱砂印泥盒：你本人站进官面上的格子多一枚铜钱（coins +1，铜钱数本来就看得见）；官面上的事找上门多一点（event official 115，毛病）。",
+     "_provenance": {"by": "ai", "task": "RG3", "date": "2026-10-25"}},
+
+    {"id": "rl.rosewood_abacus", "type": "relic", "era": ["*"], "weight": 5, "depth": "treasure",
+     "conditions": {"stage_gte": 1},
+     "mods": [
+       {"mod": "price_pct", "direction": "pay", "pct": 90},
+       {"mod": "price_pct", "direction": "receive", "pct": 110},
+       {"mod": "pool_weight", "pool": "person", "tags_any": ["poor"], "pct": 60, "flaw": true}
+     ],
+     "art": "prop.relic.rosewood_abacus",
+     "brief": "祖父的紫檀算盘（镇店的，第 2 关起才摆出来）：进出的账都往铺子偏（pay 90 / receive 110）；精明出了名，穷人家少来很多（person poor 60，毛病）。",
+     "_provenance": {"by": "ai", "task": "RG3", "date": "2026-10-25"}},
+
+    {"id": "rl.old_signboard", "type": "relic", "era": ["*"], "weight": 3, "depth": "treasure",
+     "conditions": {"stage_gte": 1},
+     "mods": [
+       {"mod": "price_pct", "direction": "receive", "pct": 115}
+     ],
+     "passives": [
+       {"hook": "settle", "effects": [{"op": "if", "cond": {"market_day": true}, "then": [{"op": "rep", "delta": 1}]}]}
+     ],
+     "downsides": [
+       {"hook": "settle", "effects": [{"op": "heat", "delta": 1}]}
+     ],
+     "art": "prop.relic.old_signboard",
+     "brief": "老匾“德厚”的木心（镇店的，第 2 关起）：来买的人肯多出（receive 115）；集市日口碑涨一点（rep +1）。毛病：太招眼，风声不会自己落下去（每晚 heat +1，正好抵掉每日回落 1）。",
+     "_provenance": {"by": "ai", "task": "RG3", "date": "2026-10-25"}}
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "owner": "G01",
+    "schema": 1,
+    "brief": "G01 打烊清单原因键",
+    "_provenance": {
+      "by": "ai",
+      "task": "G01",
+      "date": "2026-10-13"
+    }
+  },
+  "keys": {
+    "g01.end.discard": {
+      "brief": "留牌溢出未选时弃置新牌，不执行到期效果"
+    },
+    "g01.end.wait": {
+      "brief": "保留生活牌或可留手牌，days 为剩余天数，-1 为无期限"
+    }
+  }
+}

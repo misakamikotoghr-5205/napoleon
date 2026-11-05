@@ -1,0 +1,62 @@
+{
+  "_meta": {
+    "owner": "C09",
+    "schema": 1,
+    "brief": "C09 开月、月底、跳年、局终的界面键。玩家看见的句子由人写在正文覆盖层；这里只记机制。",
+    "_provenance": {
+      "by": "ai",
+      "task": "C09",
+      "date": "2026-10-13"
+    }
+  },
+  "keys": {
+    "c09.btn.begin": {
+      "brief": "开月过场看完本关目标后，开始这个月（接着由引擎打开本月运势轮盘）"
+    },
+    "c09.btn.next_month": {
+      "brief": "月底的账看完，进入下个月"
+    },
+    "c09.btn.next_year": {
+      "brief": "跳年的条目翻完，进入下一年"
+    },
+    "c09.btn.retry": {
+      "brief": "这一局结束了，从本关开头重来"
+    },
+    "c09.btn.resume": {
+      "brief": "这一局结束了，从续玩点接着玩"
+    },
+    "c09.btn.title": {
+      "brief": "这一局结束了，回标题"
+    },
+    "c09.goals.title": {
+      "brief": "本关目标"
+    },
+    "c09.goals.main": {
+      "brief": "主线目标（标出来）"
+    },
+    "c09.goals.done": {
+      "brief": "这个目标达成了"
+    },
+    "c09.goals.failed": {
+      "brief": "这个目标没达成"
+    },
+    "c09.year.page": {
+      "brief": "跳年翻页：第 {i} 条，共 {n} 条"
+    },
+    "c09.close.title": {
+      "brief": "月底结账面板（账簿纸）的大标题"
+    },
+    "c09.close.note": {
+      "brief": "月底结账标题下的一句说明：这一页算的是什么（开销、利息、当票、要办的事）"
+    },
+    "c09.over.title": {
+      "brief": "局终面板的大标题（不论输赢）"
+    },
+    "c09.year.title": {
+      "brief": "跳年面板的大标题"
+    },
+    "c09.btn.year_more": {
+      "brief": "跳年面板：还没翻到最后一条时，翻到下一条"
+    }
+  }
+}

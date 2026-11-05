@@ -1,0 +1,427 @@
+{
+  "_meta": {
+    "owner": "C05",
+    "schema": 1,
+    "brief": "要人条子。板上是 p_sub（顶替）；p_send 是派人的格子，放下人以后视图 away_days 为 7。",
+    "_provenance": {
+      "by": "ai",
+      "task": "C05",
+      "date": "2026-10-13"
+    }
+  },
+  "view": {
+    "v": 1,
+    "phase": "day",
+    "mode": "shop",
+    "busy": false,
+    "date": {
+      "stage": 0,
+      "era": "1938",
+      "y": 1938,
+      "m": 3,
+      "d": 7,
+      "weekday": 0,
+      "stage_day": 7,
+      "stage_days": 30,
+      "abs_day": 7,
+      "minute": 540
+    },
+    "notice": {
+      "weather": "clear",
+      "market_day": false,
+      "news": [],
+      "almanac": {
+        "id": "alm.shoudang",
+        "yi": [],
+        "ji": [],
+        "done": []
+      },
+      "fortune": ""
+    },
+    "money": {
+      "amount": 340,
+      "currency": "fabi"
+    },
+    "rep_tier": 1,
+    "heat_tier": 0,
+    "self": {
+      "uid": "s1",
+      "def": "self.ruhua",
+      "attrs": {
+        "eye": 2,
+        "tongue": 1,
+        "pull": 1,
+        "nerve": 1
+      },
+      "used_today": false,
+      "away_days": 0
+    },
+    "hand": [],
+    "kept": [
+      {
+        "status": "open",
+        "gold": false,
+        "must_resolve": false,
+        "keepable": true,
+        "expires_in": -1,
+        "asking": -1,
+        "person": "",
+        "intent": "",
+        "observations": [],
+        "attrs": {},
+        "used_today": false,
+        "away_days": 0,
+        "can_appraise": false,
+        "item": null,
+        "days_left": -1,
+        "actions": [],
+        "uid": "k1",
+        "type": "kept",
+        "zone": "kept",
+        "panel": "none",
+        "art": "illus.kp.ma_owes",
+        "def": "kp.ma_owes"
+      }
+    ],
+    "contacts": [
+      {
+        "status": "open",
+        "gold": false,
+        "must_resolve": false,
+        "keepable": false,
+        "expires_in": -1,
+        "asking": -1,
+        "person": "ma",
+        "intent": "",
+        "observations": [],
+        "attrs": {},
+        "used_today": false,
+        "away_days": 0,
+        "can_appraise": false,
+        "item": null,
+        "days_left": -1,
+        "actions": [],
+        "uid": "c1",
+        "type": "contact",
+        "zone": "contacts",
+        "panel": "none",
+        "art": "portrait.ma",
+        "def": "ct.ma"
+      }
+    ],
+    "pending": [],
+    "demands": [
+      {
+        "status": "open",
+        "gold": false,
+        "must_resolve": false,
+        "keepable": false,
+        "expires_in": -1,
+        "asking": -1,
+        "person": "",
+        "intent": "",
+        "observations": [],
+        "attrs": {},
+        "used_today": false,
+        "away_days": 0,
+        "can_appraise": false,
+        "item": null,
+        "days_left": 4,
+        "actions": [
+          {
+            "id": "open",
+            "enabled": true,
+            "reason_key": ""
+          }
+        ],
+        "uid": "p_sub",
+        "type": "demand",
+        "zone": "demands",
+        "panel": "demand",
+        "art": "illus.dm.people",
+        "def": "dm.1938.people.t2",
+        "demand": {
+          "kind": "people",
+          "tier": 2
+        }
+      }
+    ],
+    "caps": {
+      "kept": 5,
+      "contacts": 3,
+      "shelf": 12
+    },
+    "shelf_count": 1,
+    "tickets": [],
+    "estates": [],
+    "goals": [],
+    "night_offers": [],
+    "open_panel": {
+      "kind": "",
+      "args": {}
+    },
+    "lots": [],
+    "dossier_new": 0
+  },
+  "queries": {
+    "firsts|{}": {
+      "firsts": {}
+    },
+    "stock|{}": {
+      "items": [
+        {
+          "item": "I100",
+          "template": "rice.bag",
+          "cat": "rice",
+          "art": "item.rice.bag",
+          "condition_word": 2,
+          "observations": [],
+          "on_shelf_since": 1
+        }
+      ]
+    },
+    "card|{\"uid\":\"p_sub\"}": {
+      "status": "open",
+      "gold": false,
+      "must_resolve": false,
+      "keepable": false,
+      "expires_in": -1,
+      "asking": -1,
+      "person": "",
+      "intent": "",
+      "observations": [],
+      "attrs": {},
+      "used_today": false,
+      "away_days": 0,
+      "can_appraise": false,
+      "item": null,
+      "days_left": 4,
+      "actions": [
+        {
+          "id": "open",
+          "enabled": true,
+          "reason_key": ""
+        }
+      ],
+      "uid": "p_sub",
+      "type": "demand",
+      "zone": "demands",
+      "panel": "demand",
+      "art": "illus.dm.people",
+      "def": "dm.1938.people.t2",
+      "choices": [
+        {
+          "id": "substitute",
+          "enabled": true,
+          "reason_key": ""
+        },
+        {
+          "id": "send_person",
+          "enabled": true,
+          "reason_key": ""
+        }
+      ],
+      "slots": [],
+      "demand": {
+        "kind": "people",
+        "tier": 2
+      }
+    },
+    "slots|{\"uid\":\"p_sub\"}": {
+      "slots": [
+        {
+          "id": "sub",
+          "accepts": [
+            "money"
+          ],
+          "attr": "",
+          "wants": [],
+          "required": true,
+          "max": 1,
+          "placed": [],
+          "coins": 0,
+          "amount": 40
+        }
+      ],
+      "coins": 0,
+      "auto_heads": 0,
+      "need": 0,
+      "auto_pass": false,
+      "ready": false
+    },
+    "card|{\"uid\":\"p_send\"}": {
+      "status": "open",
+      "gold": false,
+      "must_resolve": false,
+      "keepable": false,
+      "expires_in": -1,
+      "asking": -1,
+      "person": "",
+      "intent": "",
+      "observations": [],
+      "attrs": {},
+      "used_today": false,
+      "away_days": 0,
+      "can_appraise": false,
+      "item": null,
+      "days_left": 4,
+      "actions": [
+        {
+          "id": "open",
+          "enabled": true,
+          "reason_key": ""
+        }
+      ],
+      "uid": "p_send",
+      "type": "demand",
+      "zone": "demands",
+      "panel": "demand",
+      "art": "illus.dm.people",
+      "def": "dm.1938.people.t2",
+      "choices": [
+        {
+          "id": "substitute",
+          "enabled": true,
+          "reason_key": ""
+        },
+        {
+          "id": "send_person",
+          "enabled": true,
+          "reason_key": ""
+        }
+      ],
+      "slots": [],
+      "demand": {
+        "kind": "people",
+        "tier": 2
+      }
+    },
+    "slots|{\"uid\":\"p_send\"}": {
+      "slots": [
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "attr": "",
+          "wants": [],
+          "required": true,
+          "max": 1,
+          "placed": [],
+          "coins": 0
+        }
+      ],
+      "coins": 0,
+      "auto_heads": 0,
+      "need": 1,
+      "auto_pass": false,
+      "ready": false
+    }
+  },
+  "responses": [
+    {
+      "cmd": "card.choose",
+      "match": {
+        "uid": "p_sub",
+        "choice": "substitute"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "needs_slots": true
+      }
+    },
+    {
+      "cmd": "card.choose",
+      "match": {
+        "uid": "p_sub",
+        "choice": "send_person"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "needs_slots": true
+      }
+    },
+    {
+      "cmd": "card.choose",
+      "match": {
+        "uid": "p_send",
+        "choice": "substitute"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "needs_slots": true
+      }
+    },
+    {
+      "cmd": "card.choose",
+      "match": {
+        "uid": "p_send",
+        "choice": "send_person"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "needs_slots": true
+      }
+    },
+    {
+      "cmd": "slot.place",
+      "match": {
+        "uid": "p_sub",
+        "slot": "sub"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "coins": 4
+      }
+    },
+    {
+      "cmd": "slot.place",
+      "match": {
+        "uid": "p_send",
+        "slot": "man"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "coins": 1
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "self.away_days",
+          "value": 7
+        }
+      ]
+    },
+    {
+      "cmd": "demand.submit",
+      "match": {
+        "uid": "p_sub"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "success": true
+      },
+      "events": []
+    },
+    {
+      "cmd": "demand.submit",
+      "match": {
+        "uid": "p_send"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "success": true
+      },
+      "events": []
+    }
+  ]
+}

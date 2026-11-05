@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "owner": "K01",
+    "schema": 1,
+    "brief": "例子集：主线当票（§4.7.16）；W0 给它加了 schedule 让它能发出来"
+  },
+  "cards": [
+    {
+      "id": "tk.1938.de196",
+      "type": "pawn_ticket",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "number": 196,
+      "holder": "",
+      "item_template": "documents.receipt",
+      "foreign": true,
+      "keepable": true,
+      "expires_days": 0,
+      "must_resolve": false,
+      "story_node": "s1938.ticket196",
+      "minigame": "fragments",
+      "schedule": {
+        "stage_day": 4,
+        "order": 2
+      },
+      "art": "illus.tk.de196",
+      "brief": "主线当票“德字第一九六号”：不是这间铺子开的（外来当票），只记录不动钱；撕成几片，拼回去能看出当字和印章。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-14"
+      }
+    }
+  ]
+}

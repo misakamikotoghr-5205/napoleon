@@ -1,0 +1,72 @@
+{
+  "_meta": {
+    "owner": "C08",
+    "schema": 1,
+    "brief": "C08 test steps for must, gold leave, night, and settle",
+    "_provenance": {
+      "by": "ai",
+      "task": "C08",
+      "date": "2026-10-13"
+    }
+  },
+  "settings": {
+    "bubble_max_w": 360,
+    "default_seconds": 16,
+    "gap_ms": 0,
+    "max_new_per_day": 16
+  },
+  "steps": [
+    {
+      "id": "gd.must",
+      "teaches": ["must_resolve"],
+      "trigger": {"first": "must_resolve", "panel": "end_day"},
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.endday.blocked",
+      "done_when": ["timeout"],
+      "rule_page": "rule.day",
+      "priority": 80,
+      "max_shows": 2,
+      "seconds": 8,
+      "brief": "First close blocked by cards that must be handled."
+    },
+    {
+      "id": "gd.gold_leave",
+      "teaches": ["gold_leave"],
+      "trigger": {"first": "gold_leave", "panel": "end_day"},
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.endday.gold_leave",
+      "done_when": ["cmd:day.end"],
+      "rule_page": "rule.gold",
+      "priority": 80,
+      "max_shows": 2,
+      "seconds": 16,
+      "brief": "First close when only a gold card is left."
+    },
+    {
+      "id": "gd.d1.night",
+      "teaches": ["night"],
+      "trigger": {"first": "night", "phase": "night", "panel": "night"},
+      "teacher": "brother",
+      "anchor": "a.night.offers",
+      "done_when": ["cmd:night.choose", "ui:hand_played"],
+      "rule_page": "rule.night",
+      "priority": 80,
+      "max_shows": 2,
+      "seconds": 16,
+      "brief": "First night: pick one of the three night cards."
+    },
+    {
+      "id": "gd.d1.settle",
+      "teaches": ["settle"],
+      "trigger": {"first": "settle", "phase": "settle", "panel": "settle"},
+      "teacher": "brother",
+      "anchor": "a.settle.lines",
+      "done_when": ["cmd:settle.next"],
+      "rule_page": "rule.day",
+      "priority": 80,
+      "max_shows": 2,
+      "seconds": 16,
+      "brief": "First daily settle."
+    }
+  ]
+}

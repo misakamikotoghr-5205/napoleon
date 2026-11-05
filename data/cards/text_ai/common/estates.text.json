@@ -1,0 +1,31 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-1938"
+  },
+  "es.counter": {
+    "title": "柜台",
+    "body": "铺子里那张老柜台，客人都在这里谈价。",
+    "mortgaged": "柜台押出去了，每天少来一位客人。"
+  },
+  "es.jewel_cabinet": {
+    "title": "首饰柜",
+    "body": "放金银首饰的柜子，收首饰全靠它。",
+    "mortgaged": "首饰柜押出去了，这些天收不了首饰。"
+  },
+  "es.old_house": {
+    "title": "老宅",
+    "body": "沈家的老宅子，一家人住在这里。",
+    "mortgaged": "老宅押出去了，一家人挤进铺子，家里的开销多了。"
+  },
+  "es.shopfront": {
+    "title": "铺面",
+    "body": "德厚当的门面，铺子的根本。",
+    "mortgaged": "铺面押出去了。月底赎不回来，就要流落街头。"
+  },
+  "es.storeroom": {
+    "title": "库房",
+    "body": "铺子后头的库房，货多了全靠它放。",
+    "mortgaged": "库房押出去了，货架少了几格。"
+  }
+}

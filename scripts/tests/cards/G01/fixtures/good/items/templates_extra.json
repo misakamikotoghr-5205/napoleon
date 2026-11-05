@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "owner": "K11",
+    "schema": 1,
+    "brief": "例子集：新增物品模板（格式同 data/town/item_templates.json，文字字段一律空串，正文在 items.text.json）"
+  },
+  "categories": {
+    "silver": {
+      "label": "",
+      "weight": 1,
+      "can_fake": true,
+      "material_label": "",
+      "condition_label": "",
+      "authenticity_label": "",
+      "provenance_label": "",
+      "normal_text": "",
+      "stolen_text": "",
+      "variants": [
+        {
+          "id": "yuan_a",
+          "name": "",
+          "weight": 1,
+          "base_price": 12,
+          "material": "",
+          "good_text": "",
+          "worn_text": "",
+          "fake_text": "",
+          "real_text": "",
+          "sprite": "art/items/coin.png",
+          "tags": []
+        }
+      ]
+    }
+  }
+}

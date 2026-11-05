@@ -1,0 +1,115 @@
+{
+  "_meta": {
+    "owner": "G02",
+    "schema": 1,
+    "_provenance": {
+      "by": "ai",
+      "task": "G02",
+      "date": "2026-10-13"
+    }
+  },
+  "keys": {
+    "g02.notice.clear": {
+      "brief": "当日天气或集市告示。"
+    },
+    "g02.notice.cloud": {
+      "brief": "当日天气或集市告示。"
+    },
+    "g02.notice.rain": {
+      "brief": "当日天气或集市告示。"
+    },
+    "g02.notice.snow": {
+      "brief": "当日天气或集市告示。"
+    },
+    "g02.notice.fog": {
+      "brief": "当日天气或集市告示。"
+    },
+    "g02.notice.market_day": {
+      "brief": "当日天气或集市告示。"
+    },
+    "g02.settle.money_in": {
+      "brief": "日结记录：钱的变化、可见档位变化或金色人物离开。"
+    },
+    "g02.settle.money_out": {
+      "brief": "日结记录：钱的变化、可见档位变化或金色人物离开。"
+    },
+    "g02.settle.rep_tier": {
+      "brief": "日结记录：钱的变化、可见档位变化或金色人物离开。"
+    },
+    "g02.settle.heat_tier": {
+      "brief": "日结记录：钱的变化、可见档位变化或金色人物离开。"
+    },
+    "g02.settle.gold_left": {
+      "brief": "日结记录：钱的变化、可见档位变化或金色人物离开。"
+    },
+    "g02.month.verdict.0": {
+      "brief": "按本关目标完成个数分档的月底评语。"
+    },
+    "g02.month.verdict.1": {
+      "brief": "按本关目标完成个数分档的月底评语。"
+    },
+    "g02.month.verdict.2": {
+      "brief": "按本关目标完成个数分档的月底评语。"
+    },
+    "g02.month.verdict.3": {
+      "brief": "按本关目标完成个数分档的月底评语。"
+    },
+    "g02.month.goal.open": {
+      "brief": "本关目标结算状态。"
+    },
+    "g02.month.goal.done": {
+      "brief": "本关目标结算状态。"
+    },
+    "g02.month.goal.failed": {
+      "brief": "本关目标结算状态。"
+    },
+    "g02.reason.gold_left": {
+      "brief": "打烊放弃该类未处理牌的后果。"
+    },
+    "g02.reason.person": {
+      "brief": "打烊放弃该类未处理牌的后果。"
+    },
+    "g02.reason.event": {
+      "brief": "打烊放弃该类未处理牌的后果。"
+    },
+    "g02.reason.fate": {
+      "brief": "打烊放弃该类未处理牌的后果。"
+    },
+    "g02.reason.big_fate": {
+      "brief": "打烊放弃该类未处理牌的后果。"
+    },
+    "g02.reason.prison": {
+      "brief": "打烊放弃该类未处理牌的后果。"
+    },
+    "g02.ending.ending": {
+      "brief": "首发结尾或跳年报告占位键。"
+    },
+    "g02.year.advance": {
+      "brief": "首发结尾或跳年报告占位键。"
+    },
+    "g02.year.contact": {
+      "brief": "首发结尾或跳年报告占位键。"
+    },
+    "g02.notice.wind": {
+      "brief": "当日大风天气告示。"
+    },
+    "g02.end.leave": {
+      "brief": "未处理人物离开；只按牌上写明的离开后果结算。"
+    },
+    "g02.end.ignore": {
+      "brief": "未处理必须了断的牌；没有数据后果。"
+    },
+    "g02.end.pass": {
+      "brief": "今天的机会过去了。"
+    },
+    "g02.end.skip_night": {
+      "brief": "今晚不选夜牌，直接日结。"
+    },
+    "g02.end.auto_spin": {
+      "brief": "按已经放的香案转本月运势，再进入早上。"
+    },
+    "g02.ending.prison": {
+      "brief": "局终画面正文：被抓进去没能出来（game_over reason prison）"
+    }
+  }
+}

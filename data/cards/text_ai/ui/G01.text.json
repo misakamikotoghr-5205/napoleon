@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "g01.end.discard": {
+    "t": "留着的牌满了，新来的这张就扔掉。"
+  },
+  "g01.end.wait": {
+    "t": "先留着，明天接着算。"
+  }
+}

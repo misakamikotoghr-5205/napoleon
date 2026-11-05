@@ -1,0 +1,105 @@
+{
+  "_meta": {
+    "owner": "W0",
+    "schema": 1,
+    "brief": "例子集用到的标签"
+  },
+  "tags": {
+    "woman": {
+      "brief": "例子集标签"
+    },
+    "boat": {
+      "brief": "例子集标签"
+    },
+    "poor": {
+      "brief": "例子集标签"
+    },
+    "family": {
+      "brief": "例子集标签"
+    },
+    "story": {
+      "brief": "例子集标签"
+    },
+    "official": {
+      "brief": "例子集标签"
+    },
+    "police": {
+      "brief": "例子集标签"
+    },
+    "search": {
+      "brief": "例子集标签"
+    },
+    "fortune": {
+      "brief": "例子集标签"
+    },
+    "fire": {
+      "brief": "例子集标签"
+    },
+    "disaster": {
+      "brief": "例子集标签"
+    },
+    "big": {
+      "brief": "例子集标签"
+    },
+    "contraband": {
+      "brief": "例子集标签"
+    },
+    "stranger": {
+      "brief": "例子集标签"
+    },
+    "levy": {
+      "brief": "例子集标签"
+    },
+    "home": {
+      "brief": "例子集标签"
+    },
+    "fuel": {
+      "brief": "例子集标签"
+    },
+    "info": {
+      "brief": "例子集标签"
+    },
+    "dock": {
+      "brief": "例子集标签"
+    },
+    "favor": {
+      "brief": "例子集标签"
+    },
+    "papers": {
+      "brief": "例子集标签"
+    },
+    "street": {
+      "brief": "例子集标签"
+    },
+    "letter": {
+      "brief": "例子集标签"
+    },
+    "prison": {
+      "brief": "例子集标签"
+    },
+    "buyer": {
+      "brief": "例子集标签"
+    },
+    "art": {
+      "brief": "例子集标签"
+    },
+    "peddler": {
+      "brief": "例子集标签"
+    },
+    "redeem": {
+      "brief": "例子集标签"
+    },
+    "water": {
+      "brief": "例子集标签"
+    },
+    "token": {
+      "brief": "例子集标签"
+    },
+    "informer": {
+      "brief": "例子集标签"
+    },
+    "leverage": {
+      "brief": "例子集标签"
+    }
+  }
+}

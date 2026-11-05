@@ -1,0 +1,478 @@
+{
+ "id": "mini_trunk_map",
+ "version": 1,
+ "segment": "trunk",
+ "views": {
+  "field": {
+   "proj": "canvas",
+   "bg": "map_mini"
+  }
+ },
+ "sheets": [
+  {
+   "chapter": "mt_one",
+   "view": "field",
+   "start": "a_arrive",
+   "days_max": 6,
+   "stamps_need": 1,
+   "muster": "a_muster",
+   "boss": "a_boss",
+   "interlude": "",
+   "tutorial": true,
+   "nodes": [
+    {
+     "id": "a_arrive",
+     "type": "story",
+     "label": "a_arrive",
+     "xy": [
+      200,
+      540
+     ],
+     "scene": "mt_arrive",
+     "fixed": true
+    },
+    {
+     "id": "a_post",
+     "type": "supply",
+     "label": "a_post",
+     "xy": [
+      500,
+      400
+     ],
+     "role": "post",
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     }
+    },
+    {
+     "id": "a_slot1",
+     "type": "slot",
+     "label": "a_slot1",
+     "xy": [
+      500,
+      700
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "mt_one",
+      "kinds": {
+       "event": 4,
+       "camp": 1
+      },
+      "level": 1
+     }
+    },
+    {
+     "id": "a_muster",
+     "type": "camp",
+     "label": "a_muster",
+     "xy": [
+      800,
+      540
+     ],
+     "role": "muster"
+    },
+    {
+     "id": "a_council",
+     "type": "event",
+     "label": "a_council",
+     "xy": [
+      1100,
+      540
+     ],
+     "role": "council",
+     "event": "ev_mt_council1",
+     "phase": "campaign"
+    },
+    {
+     "id": "a_camp",
+     "type": "camp",
+     "label": "a_camp",
+     "xy": [
+      1400,
+      540
+     ],
+     "phase": "campaign"
+    },
+    {
+     "id": "a_boss",
+     "type": "boss",
+     "label": "a_boss",
+     "xy": [
+      1700,
+      540
+     ],
+     "scene": "mt_battle1",
+     "phase": "campaign",
+     "fixed": true
+    }
+   ],
+   "links": [
+    {
+     "a": "a_arrive",
+     "b": "a_post",
+     "legs": 1
+    },
+    {
+     "a": "a_post",
+     "b": "a_slot1",
+     "legs": 1
+    },
+    {
+     "a": "a_slot1",
+     "b": "a_muster",
+     "legs": 1
+    },
+    {
+     "a": "a_post",
+     "b": "a_muster",
+     "legs": 2
+    },
+    {
+     "a": "a_muster",
+     "b": "a_council",
+     "legs": 1
+    },
+    {
+     "a": "a_council",
+     "b": "a_camp",
+     "legs": 1
+    },
+    {
+     "a": "a_camp",
+     "b": "a_boss",
+     "legs": 1
+    }
+   ]
+  },
+  {
+   "chapter": "mt_two",
+   "view": "field",
+   "start": "b_march",
+   "days_max": 8,
+   "stamps_need": 1,
+   "muster": "b_muster",
+   "boss": "b_boss",
+   "interlude": "audience",
+   "sets": [
+    {
+     "id": "b_set",
+     "nodes": [
+      "b_supply",
+      "b_shop"
+     ],
+     "bonus": {
+      "pass_supply": 1
+     }
+    }
+   ],
+   "rivals": [
+    {
+     "id": "b_raiders",
+     "label": "游骑",
+     "path": [
+      "b_slot4",
+      "b_elite",
+      "b_slot2",
+      "b_elite"
+     ],
+     "speed": 1,
+     "start": 0,
+     "meet": {
+      "battle": {
+       "template": "skirmish_c",
+       "level": 1
+      },
+      "toll": {
+       "gold": 1
+      },
+      "effects": {
+       "heat": 2
+      }
+     },
+     "burns_depots": true,
+     "boss_waves_minus": 1
+    }
+   ],
+   "nodes": [
+    {
+     "id": "b_march",
+     "type": "story",
+     "label": "b_march",
+     "xy": [
+      150,
+      300
+     ],
+     "scene": "mt_march",
+     "fixed": true
+    },
+    {
+     "id": "b_supply",
+     "type": "supply",
+     "label": "b_supply",
+     "xy": [
+      400,
+      200
+     ],
+     "role": "post",
+     "pass": {
+      "stamp": 1
+     }
+    },
+    {
+     "id": "b_shop",
+     "type": "shop",
+     "label": "b_shop",
+     "xy": [
+      400,
+      500
+     ],
+     "actions": [
+      "activity:merchant",
+      "recruit:troop",
+      "recruit:marie",
+      "build_depot"
+     ]
+    },
+    {
+     "id": "b_slot1",
+     "type": "slot",
+     "label": "b_slot1",
+     "xy": [
+      650,
+      150
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "mt_two",
+      "kinds": {
+       "event": 4,
+       "battle": 1
+      },
+      "level": 1
+     }
+    },
+    {
+     "id": "b_slot2",
+     "type": "slot",
+     "label": "b_slot2",
+     "xy": [
+      1150,
+      650
+     ],
+     "fog": "hidden",
+     "slot": {
+      "pool": "mt_two",
+      "kinds": {
+       "event": 3,
+       "camp": 1,
+       "supply": 1
+      },
+      "level": 1
+     }
+    },
+    {
+     "id": "b_slot3",
+     "type": "slot",
+     "label": "b_slot3",
+     "xy": [
+      900,
+      250
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "mt_two",
+      "kinds": {
+       "event": 2,
+       "shop": 1
+      },
+      "level": 1
+     }
+    },
+    {
+     "id": "b_slot4",
+     "type": "slot",
+     "label": "b_slot4",
+     "xy": [
+      650,
+      500
+     ],
+     "slot": {
+      "pool": "mt_two",
+      "kinds": {
+       "event": 1
+      },
+      "level": 1
+     }
+    },
+    {
+     "id": "b_elite",
+     "type": "elite",
+     "label": "b_elite",
+     "xy": [
+      900,
+      550
+     ],
+     "template": "arcole",
+     "level": 2,
+     "reward": {
+      "coins": {
+       "gold": 1
+      }
+     },
+     "weather": [
+      "clear",
+      "rain"
+     ]
+    },
+    {
+     "id": "b_teaser",
+     "type": "teaser",
+     "label": "b_teaser",
+     "xy": [
+      1150,
+      850
+     ],
+     "teaser": "第二卷开放"
+    },
+    {
+     "id": "b_muster",
+     "type": "camp",
+     "label": "b_muster",
+     "xy": [
+      1150,
+      350
+     ],
+     "role": "muster"
+    },
+    {
+     "id": "b_council",
+     "type": "event",
+     "label": "b_council",
+     "xy": [
+      1350,
+      350
+     ],
+     "role": "council",
+     "event": "ev_mt_council2",
+     "phase": "campaign"
+    },
+    {
+     "id": "b_camp",
+     "type": "camp",
+     "label": "b_camp",
+     "xy": [
+      1550,
+      350
+     ],
+     "phase": "campaign"
+    },
+    {
+     "id": "b_boss",
+     "type": "boss",
+     "label": "b_boss",
+     "xy": [
+      1750,
+      350
+     ],
+     "scene": "mt_boss2",
+     "phase": "campaign",
+     "fixed": true
+    },
+    {
+     "id": "b_fork",
+     "type": "branch",
+     "label": "b_fork",
+     "xy": [
+      1750,
+      650
+     ],
+     "scene": "mt_fork",
+     "phase": "campaign",
+     "fixed": true
+    }
+   ],
+   "links": [
+    {
+     "a": "b_march",
+     "b": "b_supply",
+     "legs": 1
+    },
+    {
+     "a": "b_march",
+     "b": "b_shop",
+     "legs": 1
+    },
+    {
+     "a": "b_supply",
+     "b": "b_slot1",
+     "legs": 1,
+     "supply": 1
+    },
+    {
+     "a": "b_slot1",
+     "b": "b_slot3",
+     "legs": 1
+    },
+    {
+     "a": "b_shop",
+     "b": "b_slot4",
+     "legs": 1
+    },
+    {
+     "a": "b_slot4",
+     "b": "b_elite",
+     "legs": 2
+    },
+    {
+     "a": "b_elite",
+     "b": "b_slot2",
+     "legs": 1
+    },
+    {
+     "a": "b_slot3",
+     "b": "b_muster",
+     "legs": 2
+    },
+    {
+     "a": "b_slot2",
+     "b": "b_muster",
+     "legs": 1
+    },
+    {
+     "a": "b_slot4",
+     "b": "b_slot3",
+     "legs": 2
+    },
+    {
+     "a": "b_slot2",
+     "b": "b_teaser",
+     "legs": 1
+    },
+    {
+     "a": "b_muster",
+     "b": "b_council",
+     "legs": 1
+    },
+    {
+     "a": "b_council",
+     "b": "b_camp",
+     "legs": 1
+    },
+    {
+     "a": "b_camp",
+     "b": "b_boss",
+     "legs": 1
+    },
+    {
+     "a": "b_boss",
+     "b": "b_fork",
+     "legs": 1
+    }
+   ]
+  }
+ ]
+}

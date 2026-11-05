@@ -1,0 +1,32 @@
+{
+  "settings": {
+    "gap_ms": 2000,
+    "fade_in_ms": 300,
+    "fade_out_ms": 700,
+    "fade_fast_ms": 250,
+    "default_seconds": 16,
+    "max_new_per_day": 16,
+    "bubble_max_w": 360
+  },
+  "steps": [
+    {
+      "id": "gd.d1.spot",
+      "type": "guide_step",
+      "era": ["*"],
+      "weight": 0,
+      "teaches": ["mg.spot"],
+      "trigger": {"first": "mg.spot"},
+      "teacher": "brother",
+      "anchor": "a.mg.spot.atlas",
+      "anchor_fallback": "a.mg.spot.main",
+      "done_when": ["ui:mg_tool", "timeout"],
+      "rule_page": "rule.appraise",
+      "priority": 70,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 16,
+      "brief": "第一次对着图鉴找不同：高亮图鉴，用一下工具就算这一步做完。",
+      "_provenance": {"by": "ai", "task": "C12", "date": "2026-10-13"}
+    }
+  ]
+}

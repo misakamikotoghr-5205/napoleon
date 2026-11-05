@@ -1,0 +1,7 @@
+# RG1 肉鸽 v1 老物件引擎模块（ROGUE_V1.md §14 RG1）。格式：名字|脚本|超时秒|参数
+RG1_validate|res://scripts/cards/core/validate_main.gd|120|--mode=strict --only=data/cards/ui_keys/RG1.json,data/cards/text_ai/ui/RG1.text.json --name=RG1_validate
+RG1_api|res://scripts/tests/cards/RG1/test_api.gd|300|
+RG1_mods|res://scripts/tests/cards/RG1/test_mods.gd|300|
+RG1_hooks|res://scripts/tests/cards/RG1/test_hooks.gd|600|
+RG1_data|res://scripts/tests/cards/RG1/test_data.gd|120|
+RG1_zero|res://scripts/tests/cards/RG1/test_zero.gd|300|

@@ -1,0 +1,145 @@
+{
+  "_meta": {
+    "owner": "C16",
+    "schema": 1,
+    "brief": "Day 2 guide events and anchor rects.",
+    "_provenance": {
+      "by": "ai",
+      "task": "C16",
+      "date": "2026-10-13"
+    }
+  },
+  "anchors": [
+    {
+      "id": "a.scene.notebook",
+      "x": 1060,
+      "y": 340,
+      "w": 180,
+      "h": 120
+    },
+    {
+      "id": "a.card.gold@c0009",
+      "x": 180,
+      "y": 400,
+      "w": 140,
+      "h": 180
+    },
+    {
+      "id": "a.hand.gold",
+      "x": 180,
+      "y": 360,
+      "w": 160,
+      "h": 36
+    },
+    {
+      "id": "a.slots.choices",
+      "x": 380,
+      "y": 240,
+      "w": 480,
+      "h": 72
+    },
+    {
+      "id": "a.card.keep@c0010",
+      "x": 24,
+      "y": 280,
+      "w": 150,
+      "h": 40
+    },
+    {
+      "id": "a.hand.kept",
+      "x": 16,
+      "y": 180,
+      "w": 160,
+      "h": 180
+    }
+  ],
+  "ops": [
+    {
+      "op": "view",
+      "phase": "morning",
+      "mode": "shop",
+      "stage": 0,
+      "stage_day": 2,
+      "abs_day": 2,
+      "hand": []
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "ui",
+      "name": "panel_opened",
+      "kind": "dossier"
+    },
+    {
+      "op": "ui",
+      "name": "panel_closed",
+      "kind": "dossier"
+    },
+    {
+      "op": "cmd",
+      "cmd": "day.begin"
+    },
+    {
+      "op": "view",
+      "phase": "day",
+      "mode": "shop",
+      "stage": 0,
+      "stage_day": 2,
+      "abs_day": 2,
+      "hand": [
+        {
+          "uid": "c0009",
+          "must_resolve": true,
+          "gold": true
+        }
+      ]
+    },
+    {
+      "op": "first",
+      "mech": "gold",
+      "uid": "c0009"
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "ui",
+      "name": "hand_selected",
+      "uid": "c0009"
+    },
+    {
+      "op": "ui",
+      "name": "panel_opened",
+      "kind": "slots"
+    },
+    {
+      "op": "first",
+      "mech": "choice"
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "cmd",
+      "cmd": "card.choose"
+    },
+    {
+      "op": "first",
+      "mech": "keep",
+      "uid": "c0010"
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "cmd",
+      "cmd": "card.keep"
+    },
+    {
+      "op": "ui",
+      "name": "panel_closed",
+      "kind": "slots"
+    }
+  ]
+}

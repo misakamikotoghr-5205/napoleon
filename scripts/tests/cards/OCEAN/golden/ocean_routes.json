@@ -1,0 +1,4496 @@
+{
+  "_doc": [
+    "Golden for the single-segment ocean book (WORLD_MAP_DESIGN 6.1 / 15.1). Recorded by scripts/tests/cards/OCEAN/test_golden.gd with DEHOUDANG_GOLDEN_WRITE=1.",
+    "Each route replays commands[i] on new_game(new_game) and must give hash_v1[i + 1]; hash_v1[0] is the state right after new_game.",
+    "hash_v1: drop segment/run/map/archive/definition_hash and rogue.tally, drop observation/battle from every ledger row, set v = 1, JSON.stringify(state, '', true).sha256_text().",
+    "hash_v1_textless: hash_v1 with every string value that has a non-ASCII character replaced by '*' (player-visible text still inside the state: demand titles, battle name/log/enemy and unit names, bond texts). A text-only change keeps it equal."
+  ],
+  "baseline": "e331990f (behaviour = 0bf260eb)",
+  "new_game": {
+    "seed": 1815,
+    "stage": 0
+  },
+  "routes": {
+    "alliance": {
+      "commands": [
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "watch_mark"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "watch_weight"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "watch_ring"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "faria_letter"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "secure_passage"
+          }
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "linen_marks"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "linen_register"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "linen_report"
+          }
+        ],
+        [
+          "campaign.visit",
+          {
+            "place": "town"
+          }
+        ],
+        [
+          "campaign.demand",
+          {
+            "action": "fulfill",
+            "id": "medicine"
+          }
+        ],
+        [
+          "campaign.demand",
+          {
+            "action": "fulfill",
+            "id": "bond"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "seal_evidence"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "sabre_mark"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "sabre_ring"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "sabre_trap"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "expose_sabre"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "pharmacy_ledger"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "morrel_credit"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "dantes_message"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "audit_accounts"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "faria_halves"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "vial_seal"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "vial_balance"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "prepare_escape"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "escape_signal"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "escape_roll"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "redeem_emperor"
+          }
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "water_quality"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "stores_condition"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "keel_hollow"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "establish_rations"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "bone_stamp"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "bone_chart"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "chest_weight"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "chest_ring"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "expose_viper"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "workshop_seal"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "mission_balance"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "rescue_schedule"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "prepare_operation"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "roberts_identity"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "reef_signal"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "capture_viper"
+          }
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "nemo_manifest"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "alliance_accounts"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "sea_chart"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "audit_alliance"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "vigo_ring"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "vigo_mark"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "vigo_decoy"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "expose_vigo"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "orichalcum_weight"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "orichalcum_seal"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "orichalcum_plan"
+          }
+        ],
+        [
+          "campaign.fund",
+          {
+            "support": true
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "cut_orichalcum"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "final_ledger"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "final_balance"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "close_ledger"
+          }
+        ]
+      ],
+      "ending": "alliance",
+      "err": "",
+      "hash_v1": [
+        "fb9a2d466e23242173e1eafe59ff0843cf7afb0fc08747d049ffe2cc6257fbfc",
+        "6fbd6e1c35d55d874b5f13b80c50c6a81089bb011ebddc6134686cc11bbc4e15",
+        "5834d20b7f511953f387594a61340dee06533368bc9116394b115be906d43be2",
+        "2610babe1c59afcce3208a783e8d97bcbd7466aa82d93ef0c87b5b544ab526b1",
+        "7bf59b517b8fca0c4ae31f1d66a3e5641a518a9a1f06639b226d1bdba806295e",
+        "f1751bcdcab3fbfd00dc727bcc09b922c267a7c4007fb774776af6da43b7ea1f",
+        "aa09214364a03a03c064fbf5b57e54400c5b50518990365546e63bebd0598d6e",
+        "5b7fb41ab07db65992814ebe59014cea3af5bf1e14f31240504f1ed3e5db297c",
+        "1dae469cb5ff5ba6f25887f1321f7be263c006d1df6952a9723a5f17833d3bad",
+        "c55b2c052b365ece04891a194dde1b27d943984eea02a52980efb8d52ee32311",
+        "47f9166cc920119bb859b64d992323a8a311ef5106cbcd1263bb7656eb52728d",
+        "91538b7d6a716cadf28973a6247a2bb9e361467026c003bba142c26342260b1c",
+        "3863b711078e6d3f59135c85800994eb112c1476550e5c1f03a5a4f5735564f1",
+        "a2f0f658e7c83f60faea2ebcfb2b073a622ef4d7b3d66c450673f6e1f9a6f6a7",
+        "608b1c3921bbbf7213649b7a77628c570149d7b785ffbbfb13676bb362d4461f",
+        "b6fd72fe759d74836fa3adb18ce338314bc56703c4395ee203c314905110618e",
+        "4a086810f767de87f0374bfd756b91efea0ce49fd14e98f5528572d325a64d3c",
+        "40ca151d83c8942dabec3c7ce9def901af38675369ff304a69e1789d818fa24d",
+        "23d17f2dabbde6fa8b36908c6cd66db32e67a01838a2e7593fb7333e190633f4",
+        "4762cf456c6797781f1bb7f108f8f21e5a73b400023dea71632db31b33ead5d1",
+        "377ef1a3ee1255d8a38d06bf0b8adb8b70fbd795d4a35de61d84c9db0e693886",
+        "d274ac91ded14252f919ed75a071561f89518b2b6f418533db1d32206820da45",
+        "8d056686325fa182eaf42a1aa8eca6bd9471d737da4e076955a083b50c9783ac",
+        "2e9ed582e1a86aa4830023631f663211e6bbbd24b63aee96cae39da255640448",
+        "2c248bc2eff1b73d56349cf9d20508003a31164519d1c1539c3d667c83b64abe",
+        "3132ca922ede1c8f711a5488d62724f52ab5b3e72a758722682264e5c48677dc",
+        "4b3614fd01b3baf59f85068c7eb907ebaa12c9fb0ae485e344b09484ab8e4e74",
+        "2bbf85970b0c272e617b0fba897c770d4c55e5f7426aede162a34a15b50689d0",
+        "0c11a16eb373684107bd7f762495e68b613e5ae10fd0efcf745dd94cc157e776",
+        "2f084762ee552d4c51766e377bb11fd7fbad20f2091c45b7fcc63e03bd982b5c",
+        "53c2465c8d2613ceaf6c107f09b3b4d9ff4ef1367c0b5d0fce54a68bd4ca897d",
+        "63ca8a34b5209c0051471a732f677514179698451f6b1213bf671bdbd389c4ae",
+        "e373d596b421b4baafff494f7db88e38b4c5808f4315f3b86064bdc1fb3b52f5",
+        "b89377455dd6eb851ad111334cb5812904d35a77b62c5c74e5d241a94ecf31b0",
+        "4a73bc181acb4c224e81f211b5969a5931918d1a1a60b7e64f2bbd49223f5d7a",
+        "150dde8072bd36333f982686c53b012f3bf0d784dd9d0da70b0c8c21ef5902d2",
+        "bea244a8840fb87b39550cbf3f327d2d4c828563643aaa19f1337b394e882d10",
+        "10ef022a91c124107bb1b12c82a57f170e9d309cfde0ba3e76054ecc75f362b7",
+        "8ad7d484be63f6fde17300500245608bfe0f585b1e1489b1e304c4022fd0d5f2",
+        "955f0b8575dd9bf35573cc56b8289b67d6454cbbfc6022fc9dfe86485c743219",
+        "52ab9f89df8d93e6965786bb8e97874deca480e46362db3ef26a67463570c363",
+        "a842eaaf3883d79c80ad4d6fe4a5c4f43cec609e14b94b560f497ef6783e12ac",
+        "389ab855b82455a7068ae86967cfbecd46eae7e74c26e486932ff740f3a5ad4d",
+        "c9c203e7b63fedf72c7f1b4a55e85c28e64df88379749e74bd703239d55f053d",
+        "769beecfa24fe5d979682c94426600f5bbf84a0ba7f8e8157243783010f2cd79",
+        "a18d8be0a6167b9f9061cf14b003f0af7efb1d63fe0d363f21e0b34b67229c84",
+        "b334fb4eea5f9ee58e45a8d5e380e7d0ab12bc307145d60215463023bd5eecf5",
+        "4dadb60a332d1e96b5139f9042ca25b7214f162bc7b9751f5ea74afb02e112e2",
+        "162e4e3100d6d6262bb5dbec1312b1a707d5980a526947444da18cf3585a77cf",
+        "f5017e6c6d14ac2133e30f6055695eb73a1190664085a93dfaecba71f7a52f43",
+        "478f05be52960b2c8ff203134280d5739d3596e1e04a86def085981b8281260e",
+        "c42f069a52aa9b75bc0c917cd586a59e57fa9013b6942276d2100bd3e2ee2039",
+        "9d5eaafacefcf975bc89de01771e195a0ede5e552ebdda93e2594823c2291584",
+        "321a3a14c131fee76fdd8947f75aa373e75bf5e7e898cae878916f98aceb64e3",
+        "d74e2bf5d0f9c3b4dc0996080a2ee35af8d0a426c9da17a865d02e3c95efd0f3",
+        "1f7c2fec37a8760595c991dab8cf3cd1472b261eaea68d260eb423d54e7c25c7",
+        "6f58bb7d92118b7ddd86546ccdb3edacb8232b1aee380c5ab5469ffd9e1d0e7e",
+        "e4283f8c1158b4a77f044502cfe76fb14b90136161e11f19f0d6dfe1f7533bcf",
+        "cdd1f0b908f14a287a7f366eec0afbf25581dd68f41bfb4447af14cc909df211",
+        "f2b32111a4346eb219ac0164f49ba14f827c70223d37985ce6dc7aedf95098a9",
+        "c19ebc35e40b550f34128970e19d2e6fd72f1f81365d86ccb8d1965f02b2fb72",
+        "c21f59b03e9a26c7b31cb5a28ecdbb1335599b98021eb9c15b97648d0c7a0ce4",
+        "26d9cf24302c0c15af622579c2fd42b28b9af7f15ba9e7a7764cfa1fb74c2882",
+        "6e627b09c3510472c9275ec3e583bb4473d9b5cf5069445d44715359e6547f39",
+        "ccf699f56dd8088981c6298a1308719939da2f2020c95d674c1ce50e1a20d463",
+        "89e248f3874a134db6df1049e737ab08950f7c4e17cbd61d30614748e49f01d3",
+        "fe24c6484600ef46f31d8da16fd3028a82f92f128c444532086c45097f26eff7",
+        "3c3b250fb6cb6e1fff580790a86c7a4a79375b082964f811c50ca237c8fad1c4",
+        "fc06512b921f6cf86e628479f09ee6ceba841add205bda3970f234bfa2dc1546",
+        "237723c0752532696a95c9424303ccd2e7285b815f968ac680f6807061b36353",
+        "5b4b9fdb81c24da5bf6a10f51181d06ac0601345ae19ea0129957c1d58c2c5e8",
+        "adeaf466ac9b0005a07f0351dca5df7b7fbf5262cee8f8ff2706f807d345aa84",
+        "3d3376fb5b805fa4833529fd52de70c47c0dd114a2e140b0008712076c4c41c8",
+        "039daf3ef649e23cf3af746b02df9ce6cc5a06938b2e35334fdf58ecab4195ff",
+        "a3e644706c009d4e451e8a13ca4439db453be93af3c81c3c879d6b96c5acb6e1",
+        "1795d391a25deba60d8ef67566cf04357fa1d50d40ff10749fd50448ad12ff01",
+        "4d0003f0e3bac80ff6fb1aaf5971150dfa1560ce4d57859d7777013233fabb31",
+        "fa456805dcff3230e35c7501f6bddbd39f8a76562bbcaf20a31a946500b5108b",
+        "6ae91d49e16fb83b875664a0074e24651c72c19f1a75a28c21cf5c0411bcc368",
+        "45eaaffe5455f1b73686dfccefde3be06e80d820e653ac5d198b1c90e27377ce",
+        "ad86839a177569c79c0f811f46700e5e9f6faf4462743cc93fc6e636d09dc7bf",
+        "3f932baf4e21bb4f1b884b8d1d0d040c376105cc833adf4cb8c96731f25f4763",
+        "17693516da2a1cd93105955115a62eb4d32309b84072ab87473701f28f200f22",
+        "30d03e6aac85fc50f04e78c6c7e0dacb18e026a1e5b8d5155bf2f258a8c7bc93",
+        "96417e4e9776a3a959bdb288eb8bb96ca6694760c3ba9de3a126c53ae8427f44",
+        "9dea23fa1a4be0768b734ad9fc7265a0f5d8be1984d9a77bd9c72afa48096a0e",
+        "6b4e923c11e1a68745894976b349e95319a4797c429965b8909d5b9e33c2f228",
+        "14ebffbe8604e427d44d911b3e9d35358450956bcffd24472d803e8e2076266f",
+        "b9d505af2947fb136b37f43e7f12819effa367d9f2240a431633bba3f353d5ff",
+        "d959f548b42b754d47dd7883f283854c3883a7c6629a360f973411892392fb89",
+        "899458a37322746b0b7537970c4b4f33ae112551c1c41e8f433f25f916922994",
+        "a51eb88fe5d4abdb09721d431440172fa8a87cedd16d672ae77303066f960c88",
+        "2ca96967468a37a18f13dab8f923c56e84bd8ddb22793d96828df657abfe55d7",
+        "64ad760f6fb03cf9df2e95902a76535fea39f6f17afb50d68509ba21ac4b06ad",
+        "df16e54d567ef378c223dc76070f82d5a1dc835f4f7c895dc67f737734915b14",
+        "970451c811aecca0aa13143eb1220154839582eced96c5f69183ddaf7ed759e6",
+        "1c5a3e62cbb902019c81118ddc237da8e91a1d1f07bc88e74e2a6189247e01b3",
+        "36bd3f73104fcbc282f2103ad3c7f721a662f8a76d84b805440244c79369353a",
+        "02de9768d42b3bf87a82695b4dc862cd4dbcae7454d336e7a9cf92f11a7040ea",
+        "75ac7c67615404c2c903dcab25c2e58308b16f004e90a031f1af76954446e3ce",
+        "7d2a44e9cca2f65cfd1a6fed4cb10795807316c4d0650a0dad617204789019fc",
+        "7dd430dfa17a5ed2817bffa339f279c4adf998cf2e4f77d0bf29eb93637e627d",
+        "02404fc4d2a643d61e8a44096453b284a29a72fc63a0823f20edb8ddc8703040",
+        "db82da9579d82b1c3c8eefd69070000dc50ccfacfbf12026bb5b4fa7de72f491",
+        "0ad499b4306bcc171e1abe035f005790cd0891227fec97999052ebbc68c3e444",
+        "7d635c4a46e96af3f6fea17ec0a086f534fb7cc970fbf1f02cdc8fa74eeefac7",
+        "70f3af5620ba2ce42ce0d30a2149db42e859e5816c29a85bcd7d8c59b3e6929e",
+        "095caa0e317bd4a33a767ba308bd25632db9a95035bc58bbac8260e13a172c27",
+        "920c2597475a379c37f2e706bc1304ec841a36f2c55de1a75aa6527a784c793f",
+        "83c9fec2997479ed3cc3e189775259544420813509af2980d8755cddf5e71dd1",
+        "a2f24a75d62b1b57cfcdc22e8339bb13ff9cf78b0b2bf8dcb88079d30b7c0cd8",
+        "26caf6421a0b985dde2ec784923435136175d96e6788a364fba16ae944f4798c",
+        "364b8df06da33c9f80f0ce8b51d5487db208ef1dd50172e4eaed5c0e9371fc42",
+        "87d20cf9384edfda2714f6ba1b9709695c9e449a282b05ac9cde9695cf9f7845",
+        "b3de84d5fadd4a4e3406bf6e4f9509af2b542cabb3ed9ca69dff8d210ca1a285",
+        "dc5a77fdf3bc1ab1fd69a74a26ddf701b38f8a0cfae1cc6e0d02ab184008b2e1",
+        "649bbd722ce444ba279f78161988bd92c1a0e4deb4c6aa2e17fb4c36b1219b77",
+        "6bd473285e0361090cfd9ed025c754259172f0385dc532435696ed8db59ed9d0",
+        "2adb374b54c53a19eb6dbac9e4fbcce5d183538fdd8e770681e7d514fbe751d5",
+        "642eabf997ac00c90a1ddd1ae4731d292231f39528bbe5e38ab97fdbd73ddbd9",
+        "72bfb5acb028548428fb0e36582b3ae27d6e142cefa2958fc847fb5cf69a055d",
+        "59645cd554150cbc97d5165968957ab2a845206f28b3e4c865264d4f75ece9f3",
+        "091f3d4229d37e78f23a022edcf09dbf54008b57c09dc09b0d7ae724d2f01b6f",
+        "920eff3a3bfa95eefb4ea498351302ea89b5de7c8fd44fbceab0c116e62cafc3",
+        "29546a77e80a25b42c4268f87f157c9b8817f944daa197f88527aca262d3ab0e",
+        "27fd38bb44511b0ed6f5018ebe236e284cd629fc6135ccdd1ccee5393d31d9ba",
+        "e22a8097ace0e96aa890a08a953b7b6123c745314099f9b08d2dd4a8e46f0426"
+      ],
+      "hash_v1_textless": [
+        "fb9a2d466e23242173e1eafe59ff0843cf7afb0fc08747d049ffe2cc6257fbfc",
+        "6fbd6e1c35d55d874b5f13b80c50c6a81089bb011ebddc6134686cc11bbc4e15",
+        "5834d20b7f511953f387594a61340dee06533368bc9116394b115be906d43be2",
+        "2610babe1c59afcce3208a783e8d97bcbd7466aa82d93ef0c87b5b544ab526b1",
+        "68732f1af8be1d1ae76853d74e5862a57584f87956df0b55ddff1d356299eca0",
+        "7043dcd59d0f6ef00bf8576fe825274c3084edecc972b89ceabc90d6188b8236",
+        "6b75b033d30f6eb8aea656a5d14b9d94480eb6b6d810e8c3615c7f32c7d24d34",
+        "79379fbabc46236d116ec4242f8d15f5fb7884ac95a64543e1b3cd1471edc9e5",
+        "4973a8dff4fbb0ef453cf6f23b66ed3aefdd7cdddedeced9181a9cd2d3df5585",
+        "118225a144ddca72abbff4d724b2dc6742cdd57c3a468af85c0303fa5a626f59",
+        "1151ebe5dbbe5215241e63ea4aad3830999531b2e3a26e7884415e52ad169d4e",
+        "c909d82507f328bacde2127b767ce902f813e6b06969309df82bc75575040fcc",
+        "9602fd431c1966c0c2def17eaa3ec02748d358bdf44aa805806ee4d00d2d953c",
+        "85cddfe1f8ccfd08ed434f7b7da625547f7d41f056baa2450ffc79bbcf15cfae",
+        "4e18599a5a8980ba2d31206312db97b91f142a1ed889cd9c2a96691eaeb2fb8f",
+        "2fc5b5221a6fc1795502cde5d80c32c0961fbe9568ae30fb2c737d5b4f7ac480",
+        "0c12352b7c556b68c4903dc491d8ef0e3bc7766bffd0cef3358d37ea20c9005a",
+        "bf34c469ba579f9fa9daab345361d0229ee9a286a36216bd910acc331f8eeea5",
+        "c633a667b69fec06c6ab5da883f8cab81e76f12cba96df43692da017c82e4af9",
+        "5b289a6e70a42a90ce0c6158df98250a35f86b93864ee83d6053fd357b56a73b",
+        "7f9f7907af194e82bd0ff7ff767a2d15bd8c87cae3933f1e5b2e02dbd4eea606",
+        "68cb92e05f81da0ccbea1fb7ef65cd5eff606734bc008edfc82aef656e422ddd",
+        "30c0e68f70f90eb1dcd86ab70d5baaed109ad2afe06b2e22bd1c6c0e58b0cd80",
+        "77b689c6df97a33c0b2fb306e610b4bfaf898df4aab29c666273e26f22d497d3",
+        "8877ba964a41c838987c6a73a0f433732b62dc70e9f9c060ac99bc9a9e64e6c5",
+        "2aca3c6977db62aa74d8b5c1422f8e490b81416ca18c3302f5a88b25059bb623",
+        "86b81c9a3e52e7e1065d9699dbac91ab3752ac81c816ada71afd0460b58e0a84",
+        "893b022074f03763f82ebf3389148633cedb0f2168259e7c082b1f0ace52baef",
+        "49698e6e48f0daa2e84d469009e0126e8fbc82110e0815b0c3642ef06ef5245c",
+        "441d96ab87d962231fbc4869db96cdc67055b2f65e589b5aa64ab9e0fa217733",
+        "c8850576c824737ffbba7eea1c0b844e4cae9cd9a3a77b1647d955b3b7f30979",
+        "c61acc6530713b27def29f1b173702891936bb5d3ba2fa7a03d779c672599986",
+        "d3261771c9d20d2947d60978d8db9a57db295aa8cd4d492b3007699a48572cf7",
+        "c192068c557fdb5770964ea86de2814baa73336563033b55229bc7a39e620efd",
+        "b38fcdef12158dc2277a4ca646f05ac59cfe1c3464486062e74d2cfd17f744d1",
+        "b07a1708e23c9892fbc4c87ea270965a9e1750af6c0db1e598699ea2d509029e",
+        "cc553286e86bdb56406d114c062d6668419488dd599bff8206bf355484c77f90",
+        "4c74c012fd2d3538f0ac6b08aff520a676576d9929bf8ef3d51e09140980735b",
+        "5b28637ef564a3828a82d9d928500f26a6314d7018d81ba1aab3f74ba23be8b1",
+        "9f7f8a5893fe4b482c67f6141f7d20a9eba8eeeb3fc4a232d9aa904d625db7ea",
+        "4cab44310c8f2e04fe6f3da986113331c7267b367a1090ed56c6fb5f65950733",
+        "c3d00d093fabf976a98663093fdc45f300afede73c848c473adea0b70eeaeabf",
+        "162f58502a5847260fe8f5ce11d73980030eca211566e9abefab28054eb4668e",
+        "419a77657e19b499559ea5f3a521f59c9b8d5503ea31d79ad28cd5fc72b7b28e",
+        "6b38d875d6f580ca046d1871084be37945a1ec12fa75c7af5faa07a57db0ef80",
+        "a4f98f3062c166cc3cf63e72f3e2b7182b57ab581ee469a27ca08f1fcf671773",
+        "ef2058c79f5a0d74a72273fd8a454d46ad2240360a429d55019af9553eeb7203",
+        "8e003656915776e6930190a90c61cc2e1f59b88f4276be92a36a998952b26684",
+        "06f0a6dcab9bb291e73234b83d1dad3149ce75903e1a01ed511ff6fb92cb95bc",
+        "0990a9cb5b4776eaa67118d82fdd50520f3e4b52f96a4e3d2615566dd082311a",
+        "a73878eb007b954e27b0bb4afab796d8225b4f01e184062480d325bbb0024f2c",
+        "dd992a6c16fc61ef275cf82be8a2b3eeed95463ca02d39789363800920081cc6",
+        "c12808df76a0d6fa9e98df12142ea64c69be4564bbba1f49e17af42553881cd2",
+        "3d747f7d2310a890dd1a155f1f02110188de4743a7f9de1d2cc756b72b466ff2",
+        "d7ab1ae01d994160829f0341dea08ac91a281dbad9a6e00c4b92369d3c532983",
+        "6ef243c7d4abfb585d88a6b416d0c00419c28c6079615780d8f6db6759bada08",
+        "6c45bc0ae654342798619a349827d5adbdd3113595c8c1f72195427e7eebd721",
+        "bf194c788b7b81ca8b5f6413e240207cdfc6a8a3373215db8fcfb6a3fd2006ee",
+        "d715ccd9629e51fe302715550e90dd56758aed07c4382dd806598eb776dfbdad",
+        "90531891eedcefa5291dd85b4562dc36f352bc5cc95bb0d7d64f4ea4d2714be7",
+        "5aabff2fdef77656d0217a6a603d840a0182b9f6fba08015500e02ee5f3edfa3",
+        "37a0bec1f81febc1b7671c4566f8c32fc6c026b6a208273b8fb25f570ad08a70",
+        "860e3fc9f1198af62505d70766f6d4ef818ff6df13a073c502ff78752eeee078",
+        "25082fdfa71b70053656b053df87f6bee03d47aad93df786993ea6e282429aea",
+        "859d9271fd80cd37225462aaa7ab099a94e6aa9ac69b4d2d7fca558e211d04f4",
+        "8a41f2ccc44fec346e72cc3cc11a93d4075bddc38230d9f2b3f1d2f333d73b35",
+        "3296af548242af73617f9964d34b35ff99e4b365f20f900d341b764e515ddb0c",
+        "fcc18524e1c31641c6844c059aa3f8740c369cff52069ff490de10bc6953a153",
+        "00327fb651895beb37573f3f07967447af38a354a4c682a7a6b61c6c93b9a47a",
+        "683691f76b291685ec963909a776f0de0dc206309b0e0b7aa99563283e7f40ee",
+        "c8e240f9435ba41aa3cde65a91aea29b4180611bf33672e9b3849338e4a8777b",
+        "ffcf5ae610315bb727a8d90ac206aadb81365124347b398d98196f13613aeb2a",
+        "7a231fdddf7545adb58a5d5bfe2a86fb662930c703403540fabb71f553b0be21",
+        "a0fb132a679dda9b51a531c308931e5931a46d5bc992a60c8ce3dfe7b3ae5779",
+        "f879117aa88760577d6103bfaeb2bfccb6bdadee61d4dd6db0bd53a4eb714612",
+        "97e2e68df508ae0becca258fe85b02d99ab6ee107bb4e30a0333c4b8a1434867",
+        "b8ffb90e5c271be446c2c15fdc801591f7f669120c376ad9423c946270a8d55f",
+        "36c419ca7696c6c2325078d07d6258497df9f05179126ac0b0dac229d820035d",
+        "ebfcec5001658f6ee2ca96efa9b2ee266e1b96b97757925827b4cad2de5853cd",
+        "d7cf07dde10a621bdaeb85aaf0711ef21ddd20aa25a1c82e5d5b1e5d39626a8f",
+        "48e4b7badea85f44d962f9fea4689f96cee84ea003e62bddac35feecd7f673fd",
+        "3d4cd5b4d337d43798c214af3bcff836086955d4a56e6ccf64ade3856d63388f",
+        "49ff9277b573da9e4865d3a32c2777a4ef43750640a0771d2151a9cbc64ff4b6",
+        "7c25ab899788fb5effe36800ce4cf9b092ac54a5f4addaa05ee5d5e176809606",
+        "5d820fe5682c9e107a5323799bd3b28a3b52310b09e4654ee12620e00b0656be",
+        "8795f9b077fa82e3aaee638edb00e66d74d5c30404e0c8e67088e6a719720108",
+        "7bbe2c704bdf479dd46ce30d5e93a69b7220fb7f913300317a23c0916a3b1d18",
+        "37e74975faad40ad5d126584127394bbd98967f47c0ee0a243d8b307b7e29f94",
+        "7e8d0dc3ac0c689548df0c57dff3dab0e12e7ddbb45d01583a1c3c151ca9b3f9",
+        "97772b481d21a2e88bb111588938d660c2d05456d1420ad779e076ca805f386a",
+        "2e303ddae24a235810d60eb51d2d228e51a23b6374e9f9e4eca64a6a94c879d8",
+        "490cef9afcc8c5fe254fa8445a46c2cb765c26560524d6d2a362efa17b15de00",
+        "2a3507820d0f11f95c5fd208bb8cebf1b76693bbe449b4db1cb73b60a382cbda",
+        "76fd56efdd72f6fd8f76d75cf82956a66aa7b55e0dbe5661a13ffc7145f283b1",
+        "74a19e90a65c2e259c45fae4e63bd0da52a1083d9db812cb36d7a3950c4bd229",
+        "a67cfbeb61c2c3263ac0aedab131076ef5cf32b41d417aa7faa6d7ff6f943475",
+        "e38597475f8caf2f73acda171c8e0212f6720327c3d0b9a51979e1b678d47dd5",
+        "be364d65f03450c222b0e0560e0a0fe84ccdf891aa4c708898eff8412cc65030",
+        "e6fa7387f48ef815c7998a72124ba8baae78da8e78cce9037173cc3f0c2b2e0d",
+        "952c952e0ac27f1d4e3f33ec44e549013127b3dd5048f16468767e1a28ce1be0",
+        "690656de05c3921a9795305224b8d38425aa456956225159231ace0ac7a32b72",
+        "5ff2602a3acf0745ce1c6cd5e3b8308f1119731a28591ab8d6a49a9ec38a041c",
+        "d9c90ea293c235dfcb2d7cee213965d0515d7d6b0f170938960a736cf407bde1",
+        "540c4b466e51f2aa2cc19ca0e14a9817c13a44b130d56c2ec6cba9f874103b2f",
+        "aaba892ba7992bd8947e7a1348df052a5b817cbb7f369c2f471e16bfc77221b4",
+        "c5add8f8885f4f5722910e40782144a4a4d10cdf2f39a77deb71fc80ee3aef55",
+        "4120e1a45c655eb67378a85f134798d42d7de9be7133c2067bb115721aac7a98",
+        "e6e0bb46f6631e1a47a6c30812b1d65393671160bdc9e0d8fa289c59010c7c9e",
+        "3c905e9378057f7db3af3e2b8f6f2fa096811ee50ee2806e9ea3b033ca93cafc",
+        "c66bb8c798d7201cd6da69048692227dc3a3a3a87bee3d4353dd010dd930955b",
+        "a98bcd9dee60153224307567f968082d0eaac9571edf6deee3b5c2f6be2b1f7f",
+        "df9d70ef12f405eaef59b2397c0163a558efe546218c3c642760489ef18eb208",
+        "8a1b46248f60d8805009940db048c13867a641f1bfd4e0636717ed5186ba04e9",
+        "24468af288c971dff6c2a65957f56ec98b6ca5370d97deb95087599bd354ae69",
+        "6d5dbd0eec5dba672fab44bf718555c08f610d55d283a0b0205a85f2a422fa27",
+        "a4c586201f4bcf4383eab05a39575433f432cdeed25eb3bb1dcd041745801887",
+        "ef6e5dc241264e15d32a9ec4100a3116e3e7e499aa03db373d42b40d5ba57615",
+        "55809c1a6f743b4b9ed923eb1077f90e7b13d9d67f49d4719605801132c9aaf1",
+        "23387a7d49c9d12d796c0d3d73d623c014f72a46d641a6c35ea04acaa5adcdf0",
+        "371a8255b3991cb1319c8cf2edfc9e6784552250b74e77a78c99cbdfeacb032b",
+        "29a38c9b710a3f04a53ef850854e021e338be63dfbdee4362a929172cccf5e6a",
+        "75357372ac5db8b234fb683299a8745c150370a6b63acb1ee7226972f4724a76",
+        "14d340571e232515266a7ecc85fdcc261021963ad2b25a299049b64b00c94a79",
+        "986e6f524827ad7af578efe8671d728c3d987b8a3c6f24dba93bd002957ecd3d",
+        "c2b545b84103a8a75b8af89f8f6bcfa64297d2ecc474d4484b97caa2bdfd674f",
+        "18d13c47056d227522cb746396d17d92fd81c0af302a5b44f6fa930ba3457a76",
+        "eb699cd5355ff34330c3b5747ca32629d54df687f6769369013edfb032582124"
+      ],
+      "ok": true
+    },
+    "bittersweet": {
+      "commands": [
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "buy_passage"
+          }
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.visit",
+          {
+            "place": "town"
+          }
+        ],
+        [
+          "campaign.demand",
+          {
+            "action": "fulfill",
+            "id": "medicine"
+          }
+        ],
+        [
+          "campaign.demand",
+          {
+            "action": "fulfill",
+            "id": "bond"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "aid_longwood"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "decline_sabre"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "buy_supplies"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "reserve_escape"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "emergency_escape"
+          }
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "ration_cautiously"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "secure_hostage"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "prepare_withdrawal"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "rescue_only"
+          }
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "accept_custody"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "quarantine_vigo"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "hold_orichalcum"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "close_without_review"
+          }
+        ]
+      ],
+      "ending": "bittersweet",
+      "err": "",
+      "hash_v1": [
+        "fb9a2d466e23242173e1eafe59ff0843cf7afb0fc08747d049ffe2cc6257fbfc",
+        "6fbd6e1c35d55d874b5f13b80c50c6a81089bb011ebddc6134686cc11bbc4e15",
+        "5834d20b7f511953f387594a61340dee06533368bc9116394b115be906d43be2",
+        "2610babe1c59afcce3208a783e8d97bcbd7466aa82d93ef0c87b5b544ab526b1",
+        "7bf59b517b8fca0c4ae31f1d66a3e5641a518a9a1f06639b226d1bdba806295e",
+        "f1751bcdcab3fbfd00dc727bcc09b922c267a7c4007fb774776af6da43b7ea1f",
+        "aa09214364a03a03c064fbf5b57e54400c5b50518990365546e63bebd0598d6e",
+        "05a99ac0ef4c879472e2c462de91b69e9fa526d74e51e9ce9b2dde8c63bba47e",
+        "54e6e25e9f72d6dd9a7d5ef0b2e8d2b4726b28d015e72e61ac47bc762bf1f9fe",
+        "d9564b74231f2b05c204dc9e68f882a32e25b1a5b0446469bf47174c93c02abf",
+        "964b34464fb8e8a45466e2795e69d1abde755793c19ee1cfe8232c18300421f0",
+        "a0ae129e6d396f2f7c833811d5efefadc27a84f4367bb7f16c39db006104a250",
+        "27a651edd4a1ab348e782f99f253e23f6e44999ebc3e33768aab5b7fc11e3d8f",
+        "805b2cb81d8123137e70356500b6ff6e1a9be7e97468e9ab9596e0117c6f9d9e",
+        "c794ad6d5c1c980296584f69c82c86fd1fff8c55a9143ef87219bf135eded5e7",
+        "70daeaaa4072ed2a85c25c058a4d84ec44c632fed12b6464c709860abf87919a",
+        "7d3874fe82e9ca65e8dd10f33dbb5717f254f7d0a060652e971e5ba95c45894a",
+        "0404fc6e64ff317d2429a4dfde97953b06cf26ff5b11e0cb02a2792e89b859d5",
+        "5ce25684ee196ad26eb07a28ea60af426e997f7f02c672c473f86c6c67ab82af",
+        "04a28f388a14b22ba4c6316bb4a0992096d5843c0e81f791ee328350a6f2acef",
+        "266e5c738ebdc963d3bf5847182142a34e88976e37b5d1b4eca1d1b60390f9ce",
+        "1284a71f147c83373ed8cae2328d19e8621463d565292d7953d37cf7729d49bb",
+        "81bb90ea3b07247d81748079a1c347ac4bb1a5b1475a989869cd2d68893642d7",
+        "9dfca02c54fad907180b364ab40265ae29a3b362ae2fd2114f04671c74d95a6a",
+        "abd3acfe13b9bd0f80f5c152db85240079fbf2b56b580433f2ea7d1bbcf55383",
+        "a8c6952fcdbe22231a9fdb49c8e097c8ac3b6007c4ea2a477389da13dde2be63",
+        "a7f3cf2628ac75999a958eaca7353c29dea44809a026f498a2836bda2225bcbd",
+        "d8e8038b927ca79dcd877355f0250542c19e35b6f079aa7ba65b0781f6c09af0",
+        "2026689ec43ffcbafde98c6a167a0793aef5101f86313f419ed1f5fb63d95afd",
+        "f32ed7b4831072828673a738ee23f7f8c6bffb2419d792d7330c170af37b0430",
+        "0d784c97e00fcbaf9d3a11e0418f3c4063da06d7b5797d1ada2766edf28c83d8",
+        "abedf2df12ff7998ff6d28f10d32a9e90406589b6e7c8ddf1ef47de9d9219606",
+        "288d16b63e4059a891d37ca7f89a01f1b9baaea3084081446b82b55c70d97a61",
+        "89576f85c5f50f938bbdd1baf94e29113ba4c89746c6b5322e6c42bd425f7e36",
+        "68d78836a2a1a42ce44f063cc2ef41b7c885b93c50da77933e5928cb2a1f31ba",
+        "bc1475bbf1c825f4acee8eba8ba5f3940db8de8a7dafccb3bf3120317c95b2f3",
+        "ad0a5f5283466047051e9fca421e082994d91c6388ab3b20c150cfe72a422a9c",
+        "690cc4c81f27d7f228b68c42254db11930a862ddaf8fd59b7472fe2507c502c4",
+        "22d52574c8b8e1173f94581943c9c52e85a8669c165b1feae49a9c6345afc750",
+        "4b5d5cd5183f983f7a33fc9c77c15e93db20c5d64f73972c92fc26c377c4c4cc",
+        "48c8a1bafd8415a7bf72ae7b64f07009283386807df967798542b23836062bf1",
+        "ca41f98f21311e887001e666368588f17b8a8729e60e6db9214228ce8e600020",
+        "374bf43af68692afcab88da6b44d251c647c6dcfda821f0a2442e589b5a36cb9",
+        "39ae7fc88c9b26297d8a2194d7345d3d4d171ed3329e06fd5cb2320c8039234a",
+        "63325274add8abde45ddd8bf3fde2006e1d4201cbf1953fe6d303cf36a708c56",
+        "8f059bf86e2eee308a5b3313a8f67156c3237386d4165c3597794efaac5fdba9",
+        "0922127ef590b732be5ae8fea1150701077583d116b2ed7a9bfddd4f1eb4270f",
+        "66b6f0c49b1a88db20685f18d5964c9c7ad36680e194af17ab4da7b5ba04db3c",
+        "873dfc9054bd868dfaf8b16419db58363c33774438c7030ded53534654836acc",
+        "b37e49755ddc0ba2f5130261555402a59dba1f0f56ee78e34129da89c9fd1242",
+        "98b401caec6c4fde95312b09755a1604f74b15d4e7302696b9a89840f7fedba6",
+        "b518aae46fad9597a534bc902ae20bfd1bda96f63e126b8a745c1ed2267f2738",
+        "38b78f54fd43d9a5de781f40a5a7d06175a574a12327116bb6d64840604a6e78",
+        "0935521216aa7e86cbbfe6e92c75d71cb0add2b1d3e0092ccee97fcff9453214",
+        "95b8c23ae2dc4ca5fc74b3d1f3706e0a8760f2dae676d83cdc8382edc3c90848",
+        "9a66bf4087ae892ef1a72b585460e12c17ec0e30d4c2a0ef070741ee657913a7",
+        "1054b58e0d6072c3d8dd05891c3a4873c6b27954ced6d50183d984374843623a",
+        "e8e786b14bd6181b2619cc3fbe620dd393cf2f21f35949b5a6b2afd2e2e66676",
+        "199ef2c0d6eb04c92770c4f1edb5c9a8d4c3e457264813501287a0d836e051cc",
+        "866b2795f2ffc43d10ba57c332dd64bad7c29e4fd924140921ca290153c278db",
+        "c9a9b94c910dfcf365e290b5e5285250d6134f2a26e0a526a5f1736dd814d71b",
+        "fb7047821ed9423e9e7ab3d0b4a1033dc47b79f0fc9d46ede7e0dd877d2b4c0e",
+        "680fff46cf998781574ac666aed553730e094db72795507570ae205be01b9ce2",
+        "5ec7c44109a38b465a13e3320f69fcd6d11db00146e70f983cbf8eacac005ca4",
+        "27932ade4bdb6140bf99331252648c90da6a4b805603aae92fd93294b0670d2b",
+        "76cdade76d9b269a5acbde9b996595d3abdee05aa0189d95b2433894a29bef59",
+        "7fb1798e1d070b241ae583ba5a4735da8d8f911b1d0cdc58cf0e86c1055f5e32",
+        "e01a6bff8c955508229152845caa1a44c77eb6b6938fa7ad65fb6156da50d64d",
+        "794f57a887989e269a00693c2048e6d501a97f547a5b1aa6f490fa95b7af5498",
+        "58becabffd99afee84116f47ed559c42d7b467f2f6743cf6a838e5f94127e012",
+        "3808842597e1a6862583d476cf5f0c33382535418f8c280a0611a837c97a6cb0",
+        "929399f722a77d54023bf05c997def690d958dea26b01fc457c9c030243908b0",
+        "e89ae100d732c61fd0940ad7f16c7fe3bcb2be130a2cb1602c06cbaed504eae4",
+        "5bd5f1b977e757bfd9882267b8f48d304c9c243ead05312ad458cc2a536d52ae",
+        "ea78edc7ba11af610d35c8b3def4a7c7617b0b90fe54b74a2eff42be777a40e6",
+        "aea78b33cef84eda53215d5eeb071155d80d666dcabd6ed5c401c18a7b97542e",
+        "037868f1615e60c33138727e2a1b129f249da35151e85ecc3881951ec4da9cb2",
+        "943b3341c3abcbb08bb8950eb457256b4b1c687fd0e6c16318bf9b6b7905f69e",
+        "cffd14436c4c8f473faf4f3c06e6633d0d2230109c0d9217a89a9f22560a7a4e",
+        "3988d807673c1b30f6ffb38e2b07aba5da0b792fd14cb3ebd70e0123e80ac54f",
+        "7aca446d2b5212de04fadff63660719f1ebe4ccd0d0e17b17d4545d81345bfcc",
+        "9e48058fb2d32f421ffd04537aab32d499ceb993bc728602d0785a1bceda1d2e",
+        "2b07dfe58bd39c2294565f3cbe015531862e1d0567ca46045ac03b9a921a491d",
+        "84d2d32999816861ccad4bc457617cfe9b82f413c8bd5e8cabf96a8a5de8f3cd",
+        "2264e9c228c512f3c87fdcbc1ec04e225865233584a7cd4ceade1faad6af03d3"
+      ],
+      "hash_v1_textless": [
+        "fb9a2d466e23242173e1eafe59ff0843cf7afb0fc08747d049ffe2cc6257fbfc",
+        "6fbd6e1c35d55d874b5f13b80c50c6a81089bb011ebddc6134686cc11bbc4e15",
+        "5834d20b7f511953f387594a61340dee06533368bc9116394b115be906d43be2",
+        "2610babe1c59afcce3208a783e8d97bcbd7466aa82d93ef0c87b5b544ab526b1",
+        "68732f1af8be1d1ae76853d74e5862a57584f87956df0b55ddff1d356299eca0",
+        "7043dcd59d0f6ef00bf8576fe825274c3084edecc972b89ceabc90d6188b8236",
+        "6b75b033d30f6eb8aea656a5d14b9d94480eb6b6d810e8c3615c7f32c7d24d34",
+        "2108c478bbd27c1713c6673b95edefbac8ac7d3a5816b705e07367054bf17bfb",
+        "51fcc9ea3ad32123e293807a7bd46b3cafb6cf17677027ab03705c5eca6d591d",
+        "3ae604f4cfc19ab049b21c6c30114d4d920cb886cda9bf2d5bfacaebc38a56f2",
+        "dcdcf0cdbb4f9051bdb91e5e2bc6fd3bed2a643d509bd735d48bf971a7f77a08",
+        "39166dbafcc49c4c593f37755bafb48cf9918bbad0d3845fc605df9cef881387",
+        "38257dce5191e0c8091cb83336f495b346ed47cc3591e8d68ee84c239b62db18",
+        "17fe1c4357166f5c1d485cb79df59d5b4df0e7d2955b2d9708a8532b80c421b0",
+        "83eec4e4ff974d5304e42964f09820ba487699a2c8e27ca0bf41316554e87e4b",
+        "261eec25404da0d3b779aac626dc77165536c4ee958965988b5c9b828d59848d",
+        "e4ca41b930236dcee675224da3a661d5695e75ddec21b5ddc1cc213aa6c12c60",
+        "f69826e554e64cf00de702386a56fdabeeb366fb05b0bd2e22c894268bfbfe31",
+        "409d1b017707bfc38c97a6668b02610898ba93c82f9ac99798664f9e9c87ab5b",
+        "e12a3330731661d3200ed554f41cfd024d2687326ddf0b31f742c7fafc5dfa7a",
+        "8a01246c91388be936f85f2e610b0b9a238883e273ac4d43ca77f9808f4fa223",
+        "ea7ef36d8230ca0a17ae283a597b4a2ed673ea33333db8d08946ba84c2c42a55",
+        "411a1141bb24b0a7bf52323f5be9cb3a90e903263c8ad038ecfb799604b0c396",
+        "1a10f98c9ffaa9c6a8556b8188a4485b4f6eec54f3f8944644d2f77986eb8109",
+        "024c5eb6f40c5340defc647323704dd59242458465a42ddfb8a5bcf28db5ea82",
+        "3b82f49547b9ff806f41b3fbb9b6f48dbbe7ab67a7d40a353669a48d193aadb6",
+        "e20a581a8f66e0a7475496d9b527e7c0312b52321eb8527b0a45073479352ad7",
+        "32fb8ae2dcccdd89dcc5c0bde78c77aa832d82b5fe14f730572f54d6ce65ade3",
+        "dee7d7112aae4fdca63559b2122dba5cb4a4a905fc55d85a75f2f6ff84aa9c58",
+        "f6bc76ca188648aab5bc81412bbe7d373d6ab2074385e288b17b5b829f529ce2",
+        "7d01ee96b0c4197a04eb03c8ff24bed6039dc690fde3b4d0f25ed5a46f726123",
+        "0b27bf4ae39635b9aae86974a8d073769b456b5bf53b927d28c9a03562cd9e01",
+        "488ff2b799a4a449a866ee9631247fadcb9af923d01276f8f16881f6259ba673",
+        "437792d85cc1acc57554df3a4b4d5a39c97c6a723957a36482ff357a1bec6099",
+        "7dd007bb8737005fa2d6740bb4dae98a492654e3fdd902eb18afb2900967f3ad",
+        "f238a4ddfd6eacb1ea0bf533f900c62e93d312e18333f8e87a8b93555f7c3b12",
+        "4f909052d604e89d8fb179718b394245eb542a77dc087b89edaa6158577fb450",
+        "4c8497cdbec4e1aa7d3fe8770eab7ba5a66c443525b635c2e9a39b20b77bd57b",
+        "4cf3944cf7b0f2e4d37c197430bcd61cdad3ea4d9db1fd3da0b52daaed18c663",
+        "6beecbb0a5f771c263a75abd2d29c2bbd406e2f803a842de3cbed6e11bb5903e",
+        "344310335aaa27c0cd6fe6b588fefebcab37afb621ce1042e5523ef5df1da1dd",
+        "71e68b088b0e467c0a34b8b11c98d6a0f895c7add17b333975287c4cba4c6a10",
+        "9e083ce4040345c56a6621db03390162d3e42477175a277d756e54e4ac28c56a",
+        "4ad63283838aa4d0096d0c69621e3248c6ad950b7939d4328dde4a350dae4698",
+        "a2a663912aca7ed5b36f7dfb0bfd50d10bfe1cf7a122441e7829d1aa5f9ecfbf",
+        "1af51a37da897d505683c17d8c33d4486583db7d55bc38c6e471cec454511e57",
+        "505d550fcaa936da5387cd880c9b7f71bbc9c39a050a145c65fd3fe3ac6e3c8f",
+        "e4ff4ac7aca39462f279a4e659b106669ab600c8de1c749b07fa0c3391caf1dd",
+        "339dcba097914a03bfe89bbdde62aadddbb245fa6075f9b63fcfbe6b03caf23f",
+        "aeabe23c02177f71c8154629c7f71cb6097fc85c15336a9bc9c9197d843e1503",
+        "2f154f2d8febc5ecc5168910ca1d2ae43278f9e70752f2696dd8e6cd4d7845aa",
+        "73fe8c90ebf7872a7f47b33aa2cc22e0ffc188ec6ce5ecbebd928cf860e7b0b5",
+        "a15e9718f95170b0fce68a75e89c0af6d235a0519a9695eae4669012d59e8b6a",
+        "9dfece96a491c5cd4dfb924c70dbcfb45c04c94689e6a0378d8b3fde048dbe1b",
+        "3b76a13147451afa3fdcd1859f2ba3538ef3cd14746b303e98909df7f8fe89d1",
+        "685aae2792e15b165b968c23ec3bb12524b734414911abd1e38470208e5004d9",
+        "08f0c098eb308daff9edb926c86fd85cfce8f685148126169d6354963bc00559",
+        "364065241575eb44ac21469e52c975f31e59640fa2db7b729726e589e449c53f",
+        "29bad774ff87182cb812ca3ffd157fced03166eec60d2e6a9a025d56ccc67e67",
+        "19db64161c8414f8ebf23d6173efdb71cf2c7440a50f8484c6ce3660f7b88bc3",
+        "2ae76fc82c36038e7d9f12a7a7a959eb80803ab0d49cdd1d4d48d73fd37f4ab2",
+        "1c45cc37a36c5b8a5a24937be2acfb080b03ae6aa4efd890947c55b9a00584a2",
+        "3f1b12db5917d7c7c2dbe6a820ab88a418d69abac90cd16318ba53d4fdc48749",
+        "e50d40ea8e053bb2f8af3a6e9d5a177a244809f84462f93ddb81f82fbc6fbb4e",
+        "0f2f376dc833624629095403ff590b839eaa46ed51542fa40d55cece3ac4f33a",
+        "1e911ba82c3c827d8be440e680b59dfc05841c61fd975b23c3fa90129a12c297",
+        "0276c7f9e343498ef4a4e074c71dce7db593da4ce6b63487b0f3dca28b889f70",
+        "28cbec70c78fe00fd85a4c7c210e8944f97dff09b538517a8c840781666e3b0b",
+        "8c067ea5b66a44a432d85cdc6f724e43bbedd78c8334a080e62cb95ebf7274ef",
+        "f2ddd7c995c3ace86a2b9e4fc8c1a3c5555391235163e6d734023b0e5d223544",
+        "17a7e79e642cc9e0a40ce2af2b7fd36b866a95f49c90b724815cd6dde7c4ec48",
+        "fcc3d532400ec52b50cb4d67d651700779d8655ef98cdb1cfaf3b2f462d2cf87",
+        "a8a7d51695f3c15f2f12523f9195df1e8ebff9306a3eaefc2e113ecf31fb0191",
+        "a1ce7b716a7c2fce9e5f0f34e2d836221aecebca84d6350c6c11894542219ff4",
+        "25b2c787b71258c7059c4c6b941ca2edf3cb75ac59e20dfaa854a80f56cf7255",
+        "99740e80a967ceb76c1f510bb485645cf76f437681770c24928f1a67e28a5a47",
+        "ac18f3bb9d70c15f2b98a5e6450be198bbace794c519aaad8a9b1ed1daeacdaa",
+        "9251a198213fb7b48b0710b47d7617a2a9f3d6ace10426359c74bbfa8d336881",
+        "413457b446d8934fd61429f5c3e583be9fdb6075480324725567e25c7931d425",
+        "c86413903fddc0328bd342da40ddc72b9746709ed67f60348683ad4180e00500",
+        "beb76a37c2ba2237b96edbeb458b72a7c4deaba8c6d608aadf6da1073f57c824",
+        "56544f91a5e19135c0b6ba8097d1d2ffd53baa3501688b817c392da802e572b1",
+        "08392f95dfcd4950b725eb29e6737c852a878c9298c4b6e90671e8b43ca4881b",
+        "1f37af5a94fc7b8c644b77b29ccf6163179ff1c18c658a44e2f9cd992f55d4d3",
+        "5a1732d1b1a96fa5ecfe96ca286261993118ca0e66f6b97462c36864b9be64b3"
+      ],
+      "ok": true
+    },
+    "dark": {
+      "commands": [
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "watch_mark"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "watch_weight"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "watch_ring"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "faria_letter"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "secure_passage"
+          }
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "linen_marks"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "linen_register"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "linen_report"
+          }
+        ],
+        [
+          "campaign.visit",
+          {
+            "place": "town"
+          }
+        ],
+        [
+          "campaign.demand",
+          {
+            "action": "fulfill",
+            "id": "medicine"
+          }
+        ],
+        [
+          "campaign.demand",
+          {
+            "action": "fulfill",
+            "id": "bond"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "seal_evidence"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "sabre_mark"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "sabre_ring"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "sabre_trap"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "expose_sabre"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "pharmacy_ledger"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "morrel_credit"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "dantes_message"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "audit_accounts"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "faria_halves"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "vial_seal"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "vial_balance"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "prepare_escape"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "escape_signal"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "escape_roll"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "redeem_emperor"
+          }
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "water_quality"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "stores_condition"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "keel_hollow"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "establish_rations"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "bone_stamp"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "bone_chart"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "chest_weight"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "chest_ring"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "expose_viper"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "workshop_seal"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "mission_balance"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "rescue_schedule"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "prepare_operation"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "roberts_identity"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "reef_signal"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "capture_viper"
+          }
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "nemo_manifest"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "alliance_accounts"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "sea_chart"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "theft_treasure"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "audit_alliance"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "vigo_ring"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "vigo_mark"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "vigo_decoy"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "counterfeit_trade"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "expose_vigo"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "orichalcum_weight"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "orichalcum_seal"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "orichalcum_plan"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "cut_orichalcum"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "final_ledger"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "final_balance"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "close_ledger"
+          }
+        ]
+      ],
+      "ending": "dark",
+      "err": "",
+      "hash_v1": [
+        "fb9a2d466e23242173e1eafe59ff0843cf7afb0fc08747d049ffe2cc6257fbfc",
+        "6fbd6e1c35d55d874b5f13b80c50c6a81089bb011ebddc6134686cc11bbc4e15",
+        "5834d20b7f511953f387594a61340dee06533368bc9116394b115be906d43be2",
+        "2610babe1c59afcce3208a783e8d97bcbd7466aa82d93ef0c87b5b544ab526b1",
+        "7bf59b517b8fca0c4ae31f1d66a3e5641a518a9a1f06639b226d1bdba806295e",
+        "f1751bcdcab3fbfd00dc727bcc09b922c267a7c4007fb774776af6da43b7ea1f",
+        "aa09214364a03a03c064fbf5b57e54400c5b50518990365546e63bebd0598d6e",
+        "5b7fb41ab07db65992814ebe59014cea3af5bf1e14f31240504f1ed3e5db297c",
+        "1dae469cb5ff5ba6f25887f1321f7be263c006d1df6952a9723a5f17833d3bad",
+        "c55b2c052b365ece04891a194dde1b27d943984eea02a52980efb8d52ee32311",
+        "47f9166cc920119bb859b64d992323a8a311ef5106cbcd1263bb7656eb52728d",
+        "91538b7d6a716cadf28973a6247a2bb9e361467026c003bba142c26342260b1c",
+        "3863b711078e6d3f59135c85800994eb112c1476550e5c1f03a5a4f5735564f1",
+        "a2f0f658e7c83f60faea2ebcfb2b073a622ef4d7b3d66c450673f6e1f9a6f6a7",
+        "608b1c3921bbbf7213649b7a77628c570149d7b785ffbbfb13676bb362d4461f",
+        "b6fd72fe759d74836fa3adb18ce338314bc56703c4395ee203c314905110618e",
+        "4a086810f767de87f0374bfd756b91efea0ce49fd14e98f5528572d325a64d3c",
+        "40ca151d83c8942dabec3c7ce9def901af38675369ff304a69e1789d818fa24d",
+        "23d17f2dabbde6fa8b36908c6cd66db32e67a01838a2e7593fb7333e190633f4",
+        "4762cf456c6797781f1bb7f108f8f21e5a73b400023dea71632db31b33ead5d1",
+        "377ef1a3ee1255d8a38d06bf0b8adb8b70fbd795d4a35de61d84c9db0e693886",
+        "d274ac91ded14252f919ed75a071561f89518b2b6f418533db1d32206820da45",
+        "8d056686325fa182eaf42a1aa8eca6bd9471d737da4e076955a083b50c9783ac",
+        "2e9ed582e1a86aa4830023631f663211e6bbbd24b63aee96cae39da255640448",
+        "2c248bc2eff1b73d56349cf9d20508003a31164519d1c1539c3d667c83b64abe",
+        "3132ca922ede1c8f711a5488d62724f52ab5b3e72a758722682264e5c48677dc",
+        "4b3614fd01b3baf59f85068c7eb907ebaa12c9fb0ae485e344b09484ab8e4e74",
+        "2bbf85970b0c272e617b0fba897c770d4c55e5f7426aede162a34a15b50689d0",
+        "0c11a16eb373684107bd7f762495e68b613e5ae10fd0efcf745dd94cc157e776",
+        "2f084762ee552d4c51766e377bb11fd7fbad20f2091c45b7fcc63e03bd982b5c",
+        "53c2465c8d2613ceaf6c107f09b3b4d9ff4ef1367c0b5d0fce54a68bd4ca897d",
+        "63ca8a34b5209c0051471a732f677514179698451f6b1213bf671bdbd389c4ae",
+        "e373d596b421b4baafff494f7db88e38b4c5808f4315f3b86064bdc1fb3b52f5",
+        "b89377455dd6eb851ad111334cb5812904d35a77b62c5c74e5d241a94ecf31b0",
+        "4a73bc181acb4c224e81f211b5969a5931918d1a1a60b7e64f2bbd49223f5d7a",
+        "150dde8072bd36333f982686c53b012f3bf0d784dd9d0da70b0c8c21ef5902d2",
+        "bea244a8840fb87b39550cbf3f327d2d4c828563643aaa19f1337b394e882d10",
+        "10ef022a91c124107bb1b12c82a57f170e9d309cfde0ba3e76054ecc75f362b7",
+        "8ad7d484be63f6fde17300500245608bfe0f585b1e1489b1e304c4022fd0d5f2",
+        "955f0b8575dd9bf35573cc56b8289b67d6454cbbfc6022fc9dfe86485c743219",
+        "52ab9f89df8d93e6965786bb8e97874deca480e46362db3ef26a67463570c363",
+        "a842eaaf3883d79c80ad4d6fe4a5c4f43cec609e14b94b560f497ef6783e12ac",
+        "389ab855b82455a7068ae86967cfbecd46eae7e74c26e486932ff740f3a5ad4d",
+        "c9c203e7b63fedf72c7f1b4a55e85c28e64df88379749e74bd703239d55f053d",
+        "769beecfa24fe5d979682c94426600f5bbf84a0ba7f8e8157243783010f2cd79",
+        "a18d8be0a6167b9f9061cf14b003f0af7efb1d63fe0d363f21e0b34b67229c84",
+        "b334fb4eea5f9ee58e45a8d5e380e7d0ab12bc307145d60215463023bd5eecf5",
+        "4dadb60a332d1e96b5139f9042ca25b7214f162bc7b9751f5ea74afb02e112e2",
+        "162e4e3100d6d6262bb5dbec1312b1a707d5980a526947444da18cf3585a77cf",
+        "f5017e6c6d14ac2133e30f6055695eb73a1190664085a93dfaecba71f7a52f43",
+        "478f05be52960b2c8ff203134280d5739d3596e1e04a86def085981b8281260e",
+        "c42f069a52aa9b75bc0c917cd586a59e57fa9013b6942276d2100bd3e2ee2039",
+        "9d5eaafacefcf975bc89de01771e195a0ede5e552ebdda93e2594823c2291584",
+        "321a3a14c131fee76fdd8947f75aa373e75bf5e7e898cae878916f98aceb64e3",
+        "d74e2bf5d0f9c3b4dc0996080a2ee35af8d0a426c9da17a865d02e3c95efd0f3",
+        "1f7c2fec37a8760595c991dab8cf3cd1472b261eaea68d260eb423d54e7c25c7",
+        "6f58bb7d92118b7ddd86546ccdb3edacb8232b1aee380c5ab5469ffd9e1d0e7e",
+        "e4283f8c1158b4a77f044502cfe76fb14b90136161e11f19f0d6dfe1f7533bcf",
+        "cdd1f0b908f14a287a7f366eec0afbf25581dd68f41bfb4447af14cc909df211",
+        "f2b32111a4346eb219ac0164f49ba14f827c70223d37985ce6dc7aedf95098a9",
+        "c19ebc35e40b550f34128970e19d2e6fd72f1f81365d86ccb8d1965f02b2fb72",
+        "c21f59b03e9a26c7b31cb5a28ecdbb1335599b98021eb9c15b97648d0c7a0ce4",
+        "26d9cf24302c0c15af622579c2fd42b28b9af7f15ba9e7a7764cfa1fb74c2882",
+        "6e627b09c3510472c9275ec3e583bb4473d9b5cf5069445d44715359e6547f39",
+        "ccf699f56dd8088981c6298a1308719939da2f2020c95d674c1ce50e1a20d463",
+        "89e248f3874a134db6df1049e737ab08950f7c4e17cbd61d30614748e49f01d3",
+        "fe24c6484600ef46f31d8da16fd3028a82f92f128c444532086c45097f26eff7",
+        "3c3b250fb6cb6e1fff580790a86c7a4a79375b082964f811c50ca237c8fad1c4",
+        "fc06512b921f6cf86e628479f09ee6ceba841add205bda3970f234bfa2dc1546",
+        "237723c0752532696a95c9424303ccd2e7285b815f968ac680f6807061b36353",
+        "5b4b9fdb81c24da5bf6a10f51181d06ac0601345ae19ea0129957c1d58c2c5e8",
+        "adeaf466ac9b0005a07f0351dca5df7b7fbf5262cee8f8ff2706f807d345aa84",
+        "3d3376fb5b805fa4833529fd52de70c47c0dd114a2e140b0008712076c4c41c8",
+        "039daf3ef649e23cf3af746b02df9ce6cc5a06938b2e35334fdf58ecab4195ff",
+        "a3e644706c009d4e451e8a13ca4439db453be93af3c81c3c879d6b96c5acb6e1",
+        "1795d391a25deba60d8ef67566cf04357fa1d50d40ff10749fd50448ad12ff01",
+        "4d0003f0e3bac80ff6fb1aaf5971150dfa1560ce4d57859d7777013233fabb31",
+        "fa456805dcff3230e35c7501f6bddbd39f8a76562bbcaf20a31a946500b5108b",
+        "6ae91d49e16fb83b875664a0074e24651c72c19f1a75a28c21cf5c0411bcc368",
+        "45eaaffe5455f1b73686dfccefde3be06e80d820e653ac5d198b1c90e27377ce",
+        "ad86839a177569c79c0f811f46700e5e9f6faf4462743cc93fc6e636d09dc7bf",
+        "3f932baf4e21bb4f1b884b8d1d0d040c376105cc833adf4cb8c96731f25f4763",
+        "17693516da2a1cd93105955115a62eb4d32309b84072ab87473701f28f200f22",
+        "30d03e6aac85fc50f04e78c6c7e0dacb18e026a1e5b8d5155bf2f258a8c7bc93",
+        "96417e4e9776a3a959bdb288eb8bb96ca6694760c3ba9de3a126c53ae8427f44",
+        "9dea23fa1a4be0768b734ad9fc7265a0f5d8be1984d9a77bd9c72afa48096a0e",
+        "6b4e923c11e1a68745894976b349e95319a4797c429965b8909d5b9e33c2f228",
+        "14ebffbe8604e427d44d911b3e9d35358450956bcffd24472d803e8e2076266f",
+        "b9d505af2947fb136b37f43e7f12819effa367d9f2240a431633bba3f353d5ff",
+        "d959f548b42b754d47dd7883f283854c3883a7c6629a360f973411892392fb89",
+        "899458a37322746b0b7537970c4b4f33ae112551c1c41e8f433f25f916922994",
+        "a51eb88fe5d4abdb09721d431440172fa8a87cedd16d672ae77303066f960c88",
+        "2ca96967468a37a18f13dab8f923c56e84bd8ddb22793d96828df657abfe55d7",
+        "64ad760f6fb03cf9df2e95902a76535fea39f6f17afb50d68509ba21ac4b06ad",
+        "df16e54d567ef378c223dc76070f82d5a1dc835f4f7c895dc67f737734915b14",
+        "970451c811aecca0aa13143eb1220154839582eced96c5f69183ddaf7ed759e6",
+        "1c5a3e62cbb902019c81118ddc237da8e91a1d1f07bc88e74e2a6189247e01b3",
+        "36bd3f73104fcbc282f2103ad3c7f721a662f8a76d84b805440244c79369353a",
+        "02de9768d42b3bf87a82695b4dc862cd4dbcae7454d336e7a9cf92f11a7040ea",
+        "75ac7c67615404c2c903dcab25c2e58308b16f004e90a031f1af76954446e3ce",
+        "7d2a44e9cca2f65cfd1a6fed4cb10795807316c4d0650a0dad617204789019fc",
+        "7dd430dfa17a5ed2817bffa339f279c4adf998cf2e4f77d0bf29eb93637e627d",
+        "1224c082426346ee9329c6695e571a8da80c962c60baa08ed50c99ee096ef1b5",
+        "0303f4089b06cb51f55044b75d1701f2b39f1d8c6810f733442acc31bf35c72d",
+        "d29e98a1b50e3e63777173f459f3d7ddd520dab302e11ac5fd6f08fc6a7dadc0",
+        "4a5a9bdf7bdb7986b9ce79dfe65df3ddee13f63b077c5ebfa3e5eed2613259bd",
+        "babee6393d8c0100cf7e011c47962a7e40a06370389c755fcbc996a0e0f4aa10",
+        "24ab0406d5543064d54d060737577f74e8522e6c45f86d6a340e794cdb2d26c1",
+        "516fbcf2e4f6877e4e91bd0f1d63e91c7a8c0631ee477c011c475602001f213b",
+        "fbb82b5c72646c39f5d2e418fa3d10e78cc1c6ccad8c3da19fd2e6d8f6a83e8c",
+        "e7d09fb8adb6b75287f0bbbb6adcaa20de0e509203f20f46a8335410843b8634",
+        "f477df465529c583e44e38d4d6bd1f99abe437bcc27655b667a62a0b71258f6f",
+        "0bc88b01618d67fb38bbad459525addb215685f8dbb3974776ba5dcbc662ac45",
+        "052c8b8502ef14461e3b9ec2a0ced3b54d74a7c21da212b3e4f8ade979cf35fa",
+        "6f7ebce87b278e0c895e2e5d3ab94952d98a5482eb94987b84293f9a2f6d488e",
+        "744ad3fa8add65cd10325925bbd499dd030dfba0dd88f8775c7158c3e6b38c5d",
+        "4035c99bf65ba0cbac38f3c6cc27b91e33ae08ab42db3cba580c402943f748c8",
+        "9502ded090de592f88ab81eb72f18a9221f0cfd8e7877ef7e7935bb793c8e74f",
+        "447fd0367bf67bf06be22b7230bfa0e7cb02cf198584616267a22d403706f59e",
+        "68e893ee276be21572448cc456cd555e90f87d78374affdd1a6d8882676c6387",
+        "5726799e545fbfc8d372aa86d6710cc2dce416b0862db90f19a087a7ce3d4b99",
+        "4c7fb17acc017746d73ea3f9835ddebd0016dbed6a87df5c9f8a636f11a3c7d7",
+        "754dcf5e2864e9da8ac2d11d720cc4b017c45a0cc90989cd76ba9634e9f1ea4d",
+        "3375292b73a82569ed177652ea00706064fab7f61d65ba1e70efbd50d206038e",
+        "cfebed62dd19985e6e1f587f75cbf1fb75a8b24d84985dbed195f35996b8e447",
+        "f5446dc16f19079ba268be5cc30e1d27d9cd9994e3b650e862df1b73bce26ee2",
+        "698d155edf0e215b7b778fb4decb7b07d9627f00f6e0b012795b5260421c29af",
+        "1d62180e96979e823857ae34438fb0083893ba56740b62551c1b14234ca6c81f"
+      ],
+      "hash_v1_textless": [
+        "fb9a2d466e23242173e1eafe59ff0843cf7afb0fc08747d049ffe2cc6257fbfc",
+        "6fbd6e1c35d55d874b5f13b80c50c6a81089bb011ebddc6134686cc11bbc4e15",
+        "5834d20b7f511953f387594a61340dee06533368bc9116394b115be906d43be2",
+        "2610babe1c59afcce3208a783e8d97bcbd7466aa82d93ef0c87b5b544ab526b1",
+        "68732f1af8be1d1ae76853d74e5862a57584f87956df0b55ddff1d356299eca0",
+        "7043dcd59d0f6ef00bf8576fe825274c3084edecc972b89ceabc90d6188b8236",
+        "6b75b033d30f6eb8aea656a5d14b9d94480eb6b6d810e8c3615c7f32c7d24d34",
+        "79379fbabc46236d116ec4242f8d15f5fb7884ac95a64543e1b3cd1471edc9e5",
+        "4973a8dff4fbb0ef453cf6f23b66ed3aefdd7cdddedeced9181a9cd2d3df5585",
+        "118225a144ddca72abbff4d724b2dc6742cdd57c3a468af85c0303fa5a626f59",
+        "1151ebe5dbbe5215241e63ea4aad3830999531b2e3a26e7884415e52ad169d4e",
+        "c909d82507f328bacde2127b767ce902f813e6b06969309df82bc75575040fcc",
+        "9602fd431c1966c0c2def17eaa3ec02748d358bdf44aa805806ee4d00d2d953c",
+        "85cddfe1f8ccfd08ed434f7b7da625547f7d41f056baa2450ffc79bbcf15cfae",
+        "4e18599a5a8980ba2d31206312db97b91f142a1ed889cd9c2a96691eaeb2fb8f",
+        "2fc5b5221a6fc1795502cde5d80c32c0961fbe9568ae30fb2c737d5b4f7ac480",
+        "0c12352b7c556b68c4903dc491d8ef0e3bc7766bffd0cef3358d37ea20c9005a",
+        "bf34c469ba579f9fa9daab345361d0229ee9a286a36216bd910acc331f8eeea5",
+        "c633a667b69fec06c6ab5da883f8cab81e76f12cba96df43692da017c82e4af9",
+        "5b289a6e70a42a90ce0c6158df98250a35f86b93864ee83d6053fd357b56a73b",
+        "7f9f7907af194e82bd0ff7ff767a2d15bd8c87cae3933f1e5b2e02dbd4eea606",
+        "68cb92e05f81da0ccbea1fb7ef65cd5eff606734bc008edfc82aef656e422ddd",
+        "30c0e68f70f90eb1dcd86ab70d5baaed109ad2afe06b2e22bd1c6c0e58b0cd80",
+        "77b689c6df97a33c0b2fb306e610b4bfaf898df4aab29c666273e26f22d497d3",
+        "8877ba964a41c838987c6a73a0f433732b62dc70e9f9c060ac99bc9a9e64e6c5",
+        "2aca3c6977db62aa74d8b5c1422f8e490b81416ca18c3302f5a88b25059bb623",
+        "86b81c9a3e52e7e1065d9699dbac91ab3752ac81c816ada71afd0460b58e0a84",
+        "893b022074f03763f82ebf3389148633cedb0f2168259e7c082b1f0ace52baef",
+        "49698e6e48f0daa2e84d469009e0126e8fbc82110e0815b0c3642ef06ef5245c",
+        "441d96ab87d962231fbc4869db96cdc67055b2f65e589b5aa64ab9e0fa217733",
+        "c8850576c824737ffbba7eea1c0b844e4cae9cd9a3a77b1647d955b3b7f30979",
+        "c61acc6530713b27def29f1b173702891936bb5d3ba2fa7a03d779c672599986",
+        "d3261771c9d20d2947d60978d8db9a57db295aa8cd4d492b3007699a48572cf7",
+        "c192068c557fdb5770964ea86de2814baa73336563033b55229bc7a39e620efd",
+        "b38fcdef12158dc2277a4ca646f05ac59cfe1c3464486062e74d2cfd17f744d1",
+        "b07a1708e23c9892fbc4c87ea270965a9e1750af6c0db1e598699ea2d509029e",
+        "cc553286e86bdb56406d114c062d6668419488dd599bff8206bf355484c77f90",
+        "4c74c012fd2d3538f0ac6b08aff520a676576d9929bf8ef3d51e09140980735b",
+        "5b28637ef564a3828a82d9d928500f26a6314d7018d81ba1aab3f74ba23be8b1",
+        "9f7f8a5893fe4b482c67f6141f7d20a9eba8eeeb3fc4a232d9aa904d625db7ea",
+        "4cab44310c8f2e04fe6f3da986113331c7267b367a1090ed56c6fb5f65950733",
+        "c3d00d093fabf976a98663093fdc45f300afede73c848c473adea0b70eeaeabf",
+        "162f58502a5847260fe8f5ce11d73980030eca211566e9abefab28054eb4668e",
+        "419a77657e19b499559ea5f3a521f59c9b8d5503ea31d79ad28cd5fc72b7b28e",
+        "6b38d875d6f580ca046d1871084be37945a1ec12fa75c7af5faa07a57db0ef80",
+        "a4f98f3062c166cc3cf63e72f3e2b7182b57ab581ee469a27ca08f1fcf671773",
+        "ef2058c79f5a0d74a72273fd8a454d46ad2240360a429d55019af9553eeb7203",
+        "8e003656915776e6930190a90c61cc2e1f59b88f4276be92a36a998952b26684",
+        "06f0a6dcab9bb291e73234b83d1dad3149ce75903e1a01ed511ff6fb92cb95bc",
+        "0990a9cb5b4776eaa67118d82fdd50520f3e4b52f96a4e3d2615566dd082311a",
+        "a73878eb007b954e27b0bb4afab796d8225b4f01e184062480d325bbb0024f2c",
+        "dd992a6c16fc61ef275cf82be8a2b3eeed95463ca02d39789363800920081cc6",
+        "c12808df76a0d6fa9e98df12142ea64c69be4564bbba1f49e17af42553881cd2",
+        "3d747f7d2310a890dd1a155f1f02110188de4743a7f9de1d2cc756b72b466ff2",
+        "d7ab1ae01d994160829f0341dea08ac91a281dbad9a6e00c4b92369d3c532983",
+        "6ef243c7d4abfb585d88a6b416d0c00419c28c6079615780d8f6db6759bada08",
+        "6c45bc0ae654342798619a349827d5adbdd3113595c8c1f72195427e7eebd721",
+        "bf194c788b7b81ca8b5f6413e240207cdfc6a8a3373215db8fcfb6a3fd2006ee",
+        "d715ccd9629e51fe302715550e90dd56758aed07c4382dd806598eb776dfbdad",
+        "90531891eedcefa5291dd85b4562dc36f352bc5cc95bb0d7d64f4ea4d2714be7",
+        "5aabff2fdef77656d0217a6a603d840a0182b9f6fba08015500e02ee5f3edfa3",
+        "37a0bec1f81febc1b7671c4566f8c32fc6c026b6a208273b8fb25f570ad08a70",
+        "860e3fc9f1198af62505d70766f6d4ef818ff6df13a073c502ff78752eeee078",
+        "25082fdfa71b70053656b053df87f6bee03d47aad93df786993ea6e282429aea",
+        "859d9271fd80cd37225462aaa7ab099a94e6aa9ac69b4d2d7fca558e211d04f4",
+        "8a41f2ccc44fec346e72cc3cc11a93d4075bddc38230d9f2b3f1d2f333d73b35",
+        "3296af548242af73617f9964d34b35ff99e4b365f20f900d341b764e515ddb0c",
+        "fcc18524e1c31641c6844c059aa3f8740c369cff52069ff490de10bc6953a153",
+        "00327fb651895beb37573f3f07967447af38a354a4c682a7a6b61c6c93b9a47a",
+        "683691f76b291685ec963909a776f0de0dc206309b0e0b7aa99563283e7f40ee",
+        "c8e240f9435ba41aa3cde65a91aea29b4180611bf33672e9b3849338e4a8777b",
+        "ffcf5ae610315bb727a8d90ac206aadb81365124347b398d98196f13613aeb2a",
+        "7a231fdddf7545adb58a5d5bfe2a86fb662930c703403540fabb71f553b0be21",
+        "a0fb132a679dda9b51a531c308931e5931a46d5bc992a60c8ce3dfe7b3ae5779",
+        "f879117aa88760577d6103bfaeb2bfccb6bdadee61d4dd6db0bd53a4eb714612",
+        "97e2e68df508ae0becca258fe85b02d99ab6ee107bb4e30a0333c4b8a1434867",
+        "b8ffb90e5c271be446c2c15fdc801591f7f669120c376ad9423c946270a8d55f",
+        "36c419ca7696c6c2325078d07d6258497df9f05179126ac0b0dac229d820035d",
+        "ebfcec5001658f6ee2ca96efa9b2ee266e1b96b97757925827b4cad2de5853cd",
+        "d7cf07dde10a621bdaeb85aaf0711ef21ddd20aa25a1c82e5d5b1e5d39626a8f",
+        "48e4b7badea85f44d962f9fea4689f96cee84ea003e62bddac35feecd7f673fd",
+        "3d4cd5b4d337d43798c214af3bcff836086955d4a56e6ccf64ade3856d63388f",
+        "49ff9277b573da9e4865d3a32c2777a4ef43750640a0771d2151a9cbc64ff4b6",
+        "7c25ab899788fb5effe36800ce4cf9b092ac54a5f4addaa05ee5d5e176809606",
+        "5d820fe5682c9e107a5323799bd3b28a3b52310b09e4654ee12620e00b0656be",
+        "8795f9b077fa82e3aaee638edb00e66d74d5c30404e0c8e67088e6a719720108",
+        "7bbe2c704bdf479dd46ce30d5e93a69b7220fb7f913300317a23c0916a3b1d18",
+        "37e74975faad40ad5d126584127394bbd98967f47c0ee0a243d8b307b7e29f94",
+        "7e8d0dc3ac0c689548df0c57dff3dab0e12e7ddbb45d01583a1c3c151ca9b3f9",
+        "97772b481d21a2e88bb111588938d660c2d05456d1420ad779e076ca805f386a",
+        "2e303ddae24a235810d60eb51d2d228e51a23b6374e9f9e4eca64a6a94c879d8",
+        "490cef9afcc8c5fe254fa8445a46c2cb765c26560524d6d2a362efa17b15de00",
+        "2a3507820d0f11f95c5fd208bb8cebf1b76693bbe449b4db1cb73b60a382cbda",
+        "76fd56efdd72f6fd8f76d75cf82956a66aa7b55e0dbe5661a13ffc7145f283b1",
+        "74a19e90a65c2e259c45fae4e63bd0da52a1083d9db812cb36d7a3950c4bd229",
+        "a67cfbeb61c2c3263ac0aedab131076ef5cf32b41d417aa7faa6d7ff6f943475",
+        "e38597475f8caf2f73acda171c8e0212f6720327c3d0b9a51979e1b678d47dd5",
+        "be364d65f03450c222b0e0560e0a0fe84ccdf891aa4c708898eff8412cc65030",
+        "e6fa7387f48ef815c7998a72124ba8baae78da8e78cce9037173cc3f0c2b2e0d",
+        "952c952e0ac27f1d4e3f33ec44e549013127b3dd5048f16468767e1a28ce1be0",
+        "690656de05c3921a9795305224b8d38425aa456956225159231ace0ac7a32b72",
+        "5ff2602a3acf0745ce1c6cd5e3b8308f1119731a28591ab8d6a49a9ec38a041c",
+        "49f41ec78020be479e22460fbd009e5716808c330643d597d7d7489a1e346796",
+        "674937864997c50994d08ca49897da40b7c389b53a1525a85d878c64b4b74d07",
+        "492329716611289da06fb8ea3ccc695bad01ede822b54418677fb4b8be929490",
+        "ffdc6f53bc96b205dc087029d3853990cb745163d7a4cd77901548c025a38224",
+        "64638a393dd1f33a02c3cf8f23f363f4d974beb878603c411bfa0957ab24ec78",
+        "facabaa0b0b61d440b1d1bdd06bca533e3a57b9aa7b721ef0920a09cb50fca89",
+        "8e34291626db83f47c5f5466ac695d23fc85cb0a5790480cdee10c5ef7c5bfd6",
+        "1335012554fc8bf2e1035e95187c0a5209f4b9f4dd16742f88f7c3498574a6c2",
+        "fb5c3130a949af34ad808b907a81e37e72d1e8c05cb368f61a855b100225934d",
+        "0697b6e2cf675356a1a9442018f29e5c1a72af78c51d26527c1d6a9d150d7080",
+        "a4c6ff5eabafa4f061aaf34703e80469078eb7614a6398d6f85dddb5880e048c",
+        "ecc92bfec102f6d8a66ff9be3a684ab6cb0125d9ba79c392ee80decc18a92316",
+        "48c876f86d5733a5da24684dc883f820248ce9b5b32f2684aa681bd026df0f96",
+        "ff9817a4c1a614c05eb6359d572e9d816df6429447c3b2779655ca19bc90dee4",
+        "85e6a1cbf6ddf2e34107020919b0db56eb9bbe64bcdae3b7b0c058bf45edd6d7",
+        "f09baa7902e204e0e12e0993502f0ff3114c200200e56bda0a4478e806c6f138",
+        "95609ff3c5da94ea9a4bc90d208f38d8dcc92ab6c54194fca67d1c5c75cf4457",
+        "9e8335386fa4fff1d5c241fb01bd857e4c4a7369b4c8680caa7ef96719ede980",
+        "a2da1b4d673ad10aae5d63fce3a67d4b5553004615510804e4806a04dc34324e",
+        "b1b9632fa3d449deff449b8d86bdf20e834644fa0284fdea67639819e961f921",
+        "8d31c66259bf69ccf7bdf5d25eb14b812790ab31c2a653a090d32be4088329d2",
+        "55b9379d46340b6b9256685c165dac159d3006f50ff5f302b34761dc8f0d1494",
+        "e6f8cf28ac2000e7ff02446f8423a080384b8d1db1f750a2a242f4273d3a2961",
+        "2212e12c1149731a23a7b3c726905327f3820e1a192ae81607f8697dd36eea57",
+        "9eac41150851021027336350aae24b12742b968c1d5612f6776eaaaa2d3509bb",
+        "bc81e54c9ea4263aaa3340ac0240a5a61bb3e33fb9eb0044328cba63fd583233"
+      ],
+      "ok": true
+    },
+    "ghost": {
+      "commands": [
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "watch_mark"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "watch_weight"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "watch_ring"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "faria_letter"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "secure_passage"
+          }
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "linen_marks"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "linen_register"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "linen_report"
+          }
+        ],
+        [
+          "campaign.visit",
+          {
+            "place": "town"
+          }
+        ],
+        [
+          "campaign.demand",
+          {
+            "action": "fulfill",
+            "id": "medicine"
+          }
+        ],
+        [
+          "campaign.demand",
+          {
+            "action": "fulfill",
+            "id": "bond"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "seal_evidence"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "sabre_mark"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "sabre_ring"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "sabre_trap"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "expose_sabre"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "pharmacy_ledger"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "morrel_credit"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "dantes_message"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "audit_accounts"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "faria_halves"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "vial_seal"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "vial_balance"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "prepare_escape"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "escape_signal"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "escape_roll"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "redeem_emperor"
+          }
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "water_quality"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "stores_condition"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "keel_hollow"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "establish_rations"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "bone_stamp"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "bone_chart"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "chest_weight"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "chest_ring"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "expose_viper"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "workshop_seal"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "mission_balance"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "rescue_schedule"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "prepare_operation"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "roberts_identity"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "reef_signal"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "capture_viper"
+          }
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "nemo_manifest"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "alliance_accounts"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "sea_chart"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "audit_alliance"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "vigo_ring"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "vigo_mark"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "vigo_decoy"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "expose_vigo"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "orichalcum_weight"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "orichalcum_seal"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "orichalcum_plan"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "choose_autonomy"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "cut_orichalcum"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "final_ledger"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "final_balance"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "close_ledger"
+          }
+        ]
+      ],
+      "ending": "ghost",
+      "err": "",
+      "hash_v1": [
+        "fb9a2d466e23242173e1eafe59ff0843cf7afb0fc08747d049ffe2cc6257fbfc",
+        "6fbd6e1c35d55d874b5f13b80c50c6a81089bb011ebddc6134686cc11bbc4e15",
+        "5834d20b7f511953f387594a61340dee06533368bc9116394b115be906d43be2",
+        "2610babe1c59afcce3208a783e8d97bcbd7466aa82d93ef0c87b5b544ab526b1",
+        "7bf59b517b8fca0c4ae31f1d66a3e5641a518a9a1f06639b226d1bdba806295e",
+        "f1751bcdcab3fbfd00dc727bcc09b922c267a7c4007fb774776af6da43b7ea1f",
+        "aa09214364a03a03c064fbf5b57e54400c5b50518990365546e63bebd0598d6e",
+        "5b7fb41ab07db65992814ebe59014cea3af5bf1e14f31240504f1ed3e5db297c",
+        "1dae469cb5ff5ba6f25887f1321f7be263c006d1df6952a9723a5f17833d3bad",
+        "c55b2c052b365ece04891a194dde1b27d943984eea02a52980efb8d52ee32311",
+        "47f9166cc920119bb859b64d992323a8a311ef5106cbcd1263bb7656eb52728d",
+        "91538b7d6a716cadf28973a6247a2bb9e361467026c003bba142c26342260b1c",
+        "3863b711078e6d3f59135c85800994eb112c1476550e5c1f03a5a4f5735564f1",
+        "a2f0f658e7c83f60faea2ebcfb2b073a622ef4d7b3d66c450673f6e1f9a6f6a7",
+        "608b1c3921bbbf7213649b7a77628c570149d7b785ffbbfb13676bb362d4461f",
+        "b6fd72fe759d74836fa3adb18ce338314bc56703c4395ee203c314905110618e",
+        "4a086810f767de87f0374bfd756b91efea0ce49fd14e98f5528572d325a64d3c",
+        "40ca151d83c8942dabec3c7ce9def901af38675369ff304a69e1789d818fa24d",
+        "23d17f2dabbde6fa8b36908c6cd66db32e67a01838a2e7593fb7333e190633f4",
+        "4762cf456c6797781f1bb7f108f8f21e5a73b400023dea71632db31b33ead5d1",
+        "377ef1a3ee1255d8a38d06bf0b8adb8b70fbd795d4a35de61d84c9db0e693886",
+        "d274ac91ded14252f919ed75a071561f89518b2b6f418533db1d32206820da45",
+        "8d056686325fa182eaf42a1aa8eca6bd9471d737da4e076955a083b50c9783ac",
+        "2e9ed582e1a86aa4830023631f663211e6bbbd24b63aee96cae39da255640448",
+        "2c248bc2eff1b73d56349cf9d20508003a31164519d1c1539c3d667c83b64abe",
+        "3132ca922ede1c8f711a5488d62724f52ab5b3e72a758722682264e5c48677dc",
+        "4b3614fd01b3baf59f85068c7eb907ebaa12c9fb0ae485e344b09484ab8e4e74",
+        "2bbf85970b0c272e617b0fba897c770d4c55e5f7426aede162a34a15b50689d0",
+        "0c11a16eb373684107bd7f762495e68b613e5ae10fd0efcf745dd94cc157e776",
+        "2f084762ee552d4c51766e377bb11fd7fbad20f2091c45b7fcc63e03bd982b5c",
+        "53c2465c8d2613ceaf6c107f09b3b4d9ff4ef1367c0b5d0fce54a68bd4ca897d",
+        "63ca8a34b5209c0051471a732f677514179698451f6b1213bf671bdbd389c4ae",
+        "e373d596b421b4baafff494f7db88e38b4c5808f4315f3b86064bdc1fb3b52f5",
+        "b89377455dd6eb851ad111334cb5812904d35a77b62c5c74e5d241a94ecf31b0",
+        "4a73bc181acb4c224e81f211b5969a5931918d1a1a60b7e64f2bbd49223f5d7a",
+        "150dde8072bd36333f982686c53b012f3bf0d784dd9d0da70b0c8c21ef5902d2",
+        "bea244a8840fb87b39550cbf3f327d2d4c828563643aaa19f1337b394e882d10",
+        "10ef022a91c124107bb1b12c82a57f170e9d309cfde0ba3e76054ecc75f362b7",
+        "8ad7d484be63f6fde17300500245608bfe0f585b1e1489b1e304c4022fd0d5f2",
+        "955f0b8575dd9bf35573cc56b8289b67d6454cbbfc6022fc9dfe86485c743219",
+        "52ab9f89df8d93e6965786bb8e97874deca480e46362db3ef26a67463570c363",
+        "a842eaaf3883d79c80ad4d6fe4a5c4f43cec609e14b94b560f497ef6783e12ac",
+        "389ab855b82455a7068ae86967cfbecd46eae7e74c26e486932ff740f3a5ad4d",
+        "c9c203e7b63fedf72c7f1b4a55e85c28e64df88379749e74bd703239d55f053d",
+        "769beecfa24fe5d979682c94426600f5bbf84a0ba7f8e8157243783010f2cd79",
+        "a18d8be0a6167b9f9061cf14b003f0af7efb1d63fe0d363f21e0b34b67229c84",
+        "b334fb4eea5f9ee58e45a8d5e380e7d0ab12bc307145d60215463023bd5eecf5",
+        "4dadb60a332d1e96b5139f9042ca25b7214f162bc7b9751f5ea74afb02e112e2",
+        "162e4e3100d6d6262bb5dbec1312b1a707d5980a526947444da18cf3585a77cf",
+        "f5017e6c6d14ac2133e30f6055695eb73a1190664085a93dfaecba71f7a52f43",
+        "478f05be52960b2c8ff203134280d5739d3596e1e04a86def085981b8281260e",
+        "c42f069a52aa9b75bc0c917cd586a59e57fa9013b6942276d2100bd3e2ee2039",
+        "9d5eaafacefcf975bc89de01771e195a0ede5e552ebdda93e2594823c2291584",
+        "321a3a14c131fee76fdd8947f75aa373e75bf5e7e898cae878916f98aceb64e3",
+        "d74e2bf5d0f9c3b4dc0996080a2ee35af8d0a426c9da17a865d02e3c95efd0f3",
+        "1f7c2fec37a8760595c991dab8cf3cd1472b261eaea68d260eb423d54e7c25c7",
+        "6f58bb7d92118b7ddd86546ccdb3edacb8232b1aee380c5ab5469ffd9e1d0e7e",
+        "e4283f8c1158b4a77f044502cfe76fb14b90136161e11f19f0d6dfe1f7533bcf",
+        "cdd1f0b908f14a287a7f366eec0afbf25581dd68f41bfb4447af14cc909df211",
+        "f2b32111a4346eb219ac0164f49ba14f827c70223d37985ce6dc7aedf95098a9",
+        "c19ebc35e40b550f34128970e19d2e6fd72f1f81365d86ccb8d1965f02b2fb72",
+        "c21f59b03e9a26c7b31cb5a28ecdbb1335599b98021eb9c15b97648d0c7a0ce4",
+        "26d9cf24302c0c15af622579c2fd42b28b9af7f15ba9e7a7764cfa1fb74c2882",
+        "6e627b09c3510472c9275ec3e583bb4473d9b5cf5069445d44715359e6547f39",
+        "ccf699f56dd8088981c6298a1308719939da2f2020c95d674c1ce50e1a20d463",
+        "89e248f3874a134db6df1049e737ab08950f7c4e17cbd61d30614748e49f01d3",
+        "fe24c6484600ef46f31d8da16fd3028a82f92f128c444532086c45097f26eff7",
+        "3c3b250fb6cb6e1fff580790a86c7a4a79375b082964f811c50ca237c8fad1c4",
+        "fc06512b921f6cf86e628479f09ee6ceba841add205bda3970f234bfa2dc1546",
+        "237723c0752532696a95c9424303ccd2e7285b815f968ac680f6807061b36353",
+        "5b4b9fdb81c24da5bf6a10f51181d06ac0601345ae19ea0129957c1d58c2c5e8",
+        "adeaf466ac9b0005a07f0351dca5df7b7fbf5262cee8f8ff2706f807d345aa84",
+        "3d3376fb5b805fa4833529fd52de70c47c0dd114a2e140b0008712076c4c41c8",
+        "039daf3ef649e23cf3af746b02df9ce6cc5a06938b2e35334fdf58ecab4195ff",
+        "a3e644706c009d4e451e8a13ca4439db453be93af3c81c3c879d6b96c5acb6e1",
+        "1795d391a25deba60d8ef67566cf04357fa1d50d40ff10749fd50448ad12ff01",
+        "4d0003f0e3bac80ff6fb1aaf5971150dfa1560ce4d57859d7777013233fabb31",
+        "fa456805dcff3230e35c7501f6bddbd39f8a76562bbcaf20a31a946500b5108b",
+        "6ae91d49e16fb83b875664a0074e24651c72c19f1a75a28c21cf5c0411bcc368",
+        "45eaaffe5455f1b73686dfccefde3be06e80d820e653ac5d198b1c90e27377ce",
+        "ad86839a177569c79c0f811f46700e5e9f6faf4462743cc93fc6e636d09dc7bf",
+        "3f932baf4e21bb4f1b884b8d1d0d040c376105cc833adf4cb8c96731f25f4763",
+        "17693516da2a1cd93105955115a62eb4d32309b84072ab87473701f28f200f22",
+        "30d03e6aac85fc50f04e78c6c7e0dacb18e026a1e5b8d5155bf2f258a8c7bc93",
+        "96417e4e9776a3a959bdb288eb8bb96ca6694760c3ba9de3a126c53ae8427f44",
+        "9dea23fa1a4be0768b734ad9fc7265a0f5d8be1984d9a77bd9c72afa48096a0e",
+        "6b4e923c11e1a68745894976b349e95319a4797c429965b8909d5b9e33c2f228",
+        "14ebffbe8604e427d44d911b3e9d35358450956bcffd24472d803e8e2076266f",
+        "b9d505af2947fb136b37f43e7f12819effa367d9f2240a431633bba3f353d5ff",
+        "d959f548b42b754d47dd7883f283854c3883a7c6629a360f973411892392fb89",
+        "899458a37322746b0b7537970c4b4f33ae112551c1c41e8f433f25f916922994",
+        "a51eb88fe5d4abdb09721d431440172fa8a87cedd16d672ae77303066f960c88",
+        "2ca96967468a37a18f13dab8f923c56e84bd8ddb22793d96828df657abfe55d7",
+        "64ad760f6fb03cf9df2e95902a76535fea39f6f17afb50d68509ba21ac4b06ad",
+        "df16e54d567ef378c223dc76070f82d5a1dc835f4f7c895dc67f737734915b14",
+        "970451c811aecca0aa13143eb1220154839582eced96c5f69183ddaf7ed759e6",
+        "1c5a3e62cbb902019c81118ddc237da8e91a1d1f07bc88e74e2a6189247e01b3",
+        "36bd3f73104fcbc282f2103ad3c7f721a662f8a76d84b805440244c79369353a",
+        "02de9768d42b3bf87a82695b4dc862cd4dbcae7454d336e7a9cf92f11a7040ea",
+        "75ac7c67615404c2c903dcab25c2e58308b16f004e90a031f1af76954446e3ce",
+        "7d2a44e9cca2f65cfd1a6fed4cb10795807316c4d0650a0dad617204789019fc",
+        "7dd430dfa17a5ed2817bffa339f279c4adf998cf2e4f77d0bf29eb93637e627d",
+        "02404fc4d2a643d61e8a44096453b284a29a72fc63a0823f20edb8ddc8703040",
+        "db82da9579d82b1c3c8eefd69070000dc50ccfacfbf12026bb5b4fa7de72f491",
+        "0ad499b4306bcc171e1abe035f005790cd0891227fec97999052ebbc68c3e444",
+        "7d635c4a46e96af3f6fea17ec0a086f534fb7cc970fbf1f02cdc8fa74eeefac7",
+        "70f3af5620ba2ce42ce0d30a2149db42e859e5816c29a85bcd7d8c59b3e6929e",
+        "095caa0e317bd4a33a767ba308bd25632db9a95035bc58bbac8260e13a172c27",
+        "920c2597475a379c37f2e706bc1304ec841a36f2c55de1a75aa6527a784c793f",
+        "83c9fec2997479ed3cc3e189775259544420813509af2980d8755cddf5e71dd1",
+        "a2f24a75d62b1b57cfcdc22e8339bb13ff9cf78b0b2bf8dcb88079d30b7c0cd8",
+        "26caf6421a0b985dde2ec784923435136175d96e6788a364fba16ae944f4798c",
+        "364b8df06da33c9f80f0ce8b51d5487db208ef1dd50172e4eaed5c0e9371fc42",
+        "87d20cf9384edfda2714f6ba1b9709695c9e449a282b05ac9cde9695cf9f7845",
+        "b3de84d5fadd4a4e3406bf6e4f9509af2b542cabb3ed9ca69dff8d210ca1a285",
+        "dc5a77fdf3bc1ab1fd69a74a26ddf701b38f8a0cfae1cc6e0d02ab184008b2e1",
+        "649bbd722ce444ba279f78161988bd92c1a0e4deb4c6aa2e17fb4c36b1219b77",
+        "6bd473285e0361090cfd9ed025c754259172f0385dc532435696ed8db59ed9d0",
+        "8b0b0b8ad10808a302a17e61fcb75809ba3d628c229de1aff5effd3764544efb",
+        "6c71b720be58d7a03d9089557e7b7fdffdf6574075023b33c21ea495155e82e5",
+        "42ab36d38ac6b0e8288b1b62beadb45bf1054f4cc046d53523fc57f6a83cd6cc",
+        "f80b3b785c0bd0c8e68b4ba41c4355acf49767bb9781d9f760252ee3c8c685c8",
+        "39a079e5a285135c4672b383540898609bae8f0b4c91447e68a7653d788a6814",
+        "bbdab50198e414292b84506eb8af232f050391bddfe5efb19a44b27fe93998be",
+        "690d073e7a5709d28f69d66b9e08ba977a5db76a1a37e28ad1aa113bf998ae7b",
+        "873c37d924b35152f48936498c0281fadddd9e059d1e162628ec4889e76b9c6d",
+        "a948dc43ae6e671caf61ce6f6d230ba843c317314ea2ebe31db45e90ee1a79cf"
+      ],
+      "hash_v1_textless": [
+        "fb9a2d466e23242173e1eafe59ff0843cf7afb0fc08747d049ffe2cc6257fbfc",
+        "6fbd6e1c35d55d874b5f13b80c50c6a81089bb011ebddc6134686cc11bbc4e15",
+        "5834d20b7f511953f387594a61340dee06533368bc9116394b115be906d43be2",
+        "2610babe1c59afcce3208a783e8d97bcbd7466aa82d93ef0c87b5b544ab526b1",
+        "68732f1af8be1d1ae76853d74e5862a57584f87956df0b55ddff1d356299eca0",
+        "7043dcd59d0f6ef00bf8576fe825274c3084edecc972b89ceabc90d6188b8236",
+        "6b75b033d30f6eb8aea656a5d14b9d94480eb6b6d810e8c3615c7f32c7d24d34",
+        "79379fbabc46236d116ec4242f8d15f5fb7884ac95a64543e1b3cd1471edc9e5",
+        "4973a8dff4fbb0ef453cf6f23b66ed3aefdd7cdddedeced9181a9cd2d3df5585",
+        "118225a144ddca72abbff4d724b2dc6742cdd57c3a468af85c0303fa5a626f59",
+        "1151ebe5dbbe5215241e63ea4aad3830999531b2e3a26e7884415e52ad169d4e",
+        "c909d82507f328bacde2127b767ce902f813e6b06969309df82bc75575040fcc",
+        "9602fd431c1966c0c2def17eaa3ec02748d358bdf44aa805806ee4d00d2d953c",
+        "85cddfe1f8ccfd08ed434f7b7da625547f7d41f056baa2450ffc79bbcf15cfae",
+        "4e18599a5a8980ba2d31206312db97b91f142a1ed889cd9c2a96691eaeb2fb8f",
+        "2fc5b5221a6fc1795502cde5d80c32c0961fbe9568ae30fb2c737d5b4f7ac480",
+        "0c12352b7c556b68c4903dc491d8ef0e3bc7766bffd0cef3358d37ea20c9005a",
+        "bf34c469ba579f9fa9daab345361d0229ee9a286a36216bd910acc331f8eeea5",
+        "c633a667b69fec06c6ab5da883f8cab81e76f12cba96df43692da017c82e4af9",
+        "5b289a6e70a42a90ce0c6158df98250a35f86b93864ee83d6053fd357b56a73b",
+        "7f9f7907af194e82bd0ff7ff767a2d15bd8c87cae3933f1e5b2e02dbd4eea606",
+        "68cb92e05f81da0ccbea1fb7ef65cd5eff606734bc008edfc82aef656e422ddd",
+        "30c0e68f70f90eb1dcd86ab70d5baaed109ad2afe06b2e22bd1c6c0e58b0cd80",
+        "77b689c6df97a33c0b2fb306e610b4bfaf898df4aab29c666273e26f22d497d3",
+        "8877ba964a41c838987c6a73a0f433732b62dc70e9f9c060ac99bc9a9e64e6c5",
+        "2aca3c6977db62aa74d8b5c1422f8e490b81416ca18c3302f5a88b25059bb623",
+        "86b81c9a3e52e7e1065d9699dbac91ab3752ac81c816ada71afd0460b58e0a84",
+        "893b022074f03763f82ebf3389148633cedb0f2168259e7c082b1f0ace52baef",
+        "49698e6e48f0daa2e84d469009e0126e8fbc82110e0815b0c3642ef06ef5245c",
+        "441d96ab87d962231fbc4869db96cdc67055b2f65e589b5aa64ab9e0fa217733",
+        "c8850576c824737ffbba7eea1c0b844e4cae9cd9a3a77b1647d955b3b7f30979",
+        "c61acc6530713b27def29f1b173702891936bb5d3ba2fa7a03d779c672599986",
+        "d3261771c9d20d2947d60978d8db9a57db295aa8cd4d492b3007699a48572cf7",
+        "c192068c557fdb5770964ea86de2814baa73336563033b55229bc7a39e620efd",
+        "b38fcdef12158dc2277a4ca646f05ac59cfe1c3464486062e74d2cfd17f744d1",
+        "b07a1708e23c9892fbc4c87ea270965a9e1750af6c0db1e598699ea2d509029e",
+        "cc553286e86bdb56406d114c062d6668419488dd599bff8206bf355484c77f90",
+        "4c74c012fd2d3538f0ac6b08aff520a676576d9929bf8ef3d51e09140980735b",
+        "5b28637ef564a3828a82d9d928500f26a6314d7018d81ba1aab3f74ba23be8b1",
+        "9f7f8a5893fe4b482c67f6141f7d20a9eba8eeeb3fc4a232d9aa904d625db7ea",
+        "4cab44310c8f2e04fe6f3da986113331c7267b367a1090ed56c6fb5f65950733",
+        "c3d00d093fabf976a98663093fdc45f300afede73c848c473adea0b70eeaeabf",
+        "162f58502a5847260fe8f5ce11d73980030eca211566e9abefab28054eb4668e",
+        "419a77657e19b499559ea5f3a521f59c9b8d5503ea31d79ad28cd5fc72b7b28e",
+        "6b38d875d6f580ca046d1871084be37945a1ec12fa75c7af5faa07a57db0ef80",
+        "a4f98f3062c166cc3cf63e72f3e2b7182b57ab581ee469a27ca08f1fcf671773",
+        "ef2058c79f5a0d74a72273fd8a454d46ad2240360a429d55019af9553eeb7203",
+        "8e003656915776e6930190a90c61cc2e1f59b88f4276be92a36a998952b26684",
+        "06f0a6dcab9bb291e73234b83d1dad3149ce75903e1a01ed511ff6fb92cb95bc",
+        "0990a9cb5b4776eaa67118d82fdd50520f3e4b52f96a4e3d2615566dd082311a",
+        "a73878eb007b954e27b0bb4afab796d8225b4f01e184062480d325bbb0024f2c",
+        "dd992a6c16fc61ef275cf82be8a2b3eeed95463ca02d39789363800920081cc6",
+        "c12808df76a0d6fa9e98df12142ea64c69be4564bbba1f49e17af42553881cd2",
+        "3d747f7d2310a890dd1a155f1f02110188de4743a7f9de1d2cc756b72b466ff2",
+        "d7ab1ae01d994160829f0341dea08ac91a281dbad9a6e00c4b92369d3c532983",
+        "6ef243c7d4abfb585d88a6b416d0c00419c28c6079615780d8f6db6759bada08",
+        "6c45bc0ae654342798619a349827d5adbdd3113595c8c1f72195427e7eebd721",
+        "bf194c788b7b81ca8b5f6413e240207cdfc6a8a3373215db8fcfb6a3fd2006ee",
+        "d715ccd9629e51fe302715550e90dd56758aed07c4382dd806598eb776dfbdad",
+        "90531891eedcefa5291dd85b4562dc36f352bc5cc95bb0d7d64f4ea4d2714be7",
+        "5aabff2fdef77656d0217a6a603d840a0182b9f6fba08015500e02ee5f3edfa3",
+        "37a0bec1f81febc1b7671c4566f8c32fc6c026b6a208273b8fb25f570ad08a70",
+        "860e3fc9f1198af62505d70766f6d4ef818ff6df13a073c502ff78752eeee078",
+        "25082fdfa71b70053656b053df87f6bee03d47aad93df786993ea6e282429aea",
+        "859d9271fd80cd37225462aaa7ab099a94e6aa9ac69b4d2d7fca558e211d04f4",
+        "8a41f2ccc44fec346e72cc3cc11a93d4075bddc38230d9f2b3f1d2f333d73b35",
+        "3296af548242af73617f9964d34b35ff99e4b365f20f900d341b764e515ddb0c",
+        "fcc18524e1c31641c6844c059aa3f8740c369cff52069ff490de10bc6953a153",
+        "00327fb651895beb37573f3f07967447af38a354a4c682a7a6b61c6c93b9a47a",
+        "683691f76b291685ec963909a776f0de0dc206309b0e0b7aa99563283e7f40ee",
+        "c8e240f9435ba41aa3cde65a91aea29b4180611bf33672e9b3849338e4a8777b",
+        "ffcf5ae610315bb727a8d90ac206aadb81365124347b398d98196f13613aeb2a",
+        "7a231fdddf7545adb58a5d5bfe2a86fb662930c703403540fabb71f553b0be21",
+        "a0fb132a679dda9b51a531c308931e5931a46d5bc992a60c8ce3dfe7b3ae5779",
+        "f879117aa88760577d6103bfaeb2bfccb6bdadee61d4dd6db0bd53a4eb714612",
+        "97e2e68df508ae0becca258fe85b02d99ab6ee107bb4e30a0333c4b8a1434867",
+        "b8ffb90e5c271be446c2c15fdc801591f7f669120c376ad9423c946270a8d55f",
+        "36c419ca7696c6c2325078d07d6258497df9f05179126ac0b0dac229d820035d",
+        "ebfcec5001658f6ee2ca96efa9b2ee266e1b96b97757925827b4cad2de5853cd",
+        "d7cf07dde10a621bdaeb85aaf0711ef21ddd20aa25a1c82e5d5b1e5d39626a8f",
+        "48e4b7badea85f44d962f9fea4689f96cee84ea003e62bddac35feecd7f673fd",
+        "3d4cd5b4d337d43798c214af3bcff836086955d4a56e6ccf64ade3856d63388f",
+        "49ff9277b573da9e4865d3a32c2777a4ef43750640a0771d2151a9cbc64ff4b6",
+        "7c25ab899788fb5effe36800ce4cf9b092ac54a5f4addaa05ee5d5e176809606",
+        "5d820fe5682c9e107a5323799bd3b28a3b52310b09e4654ee12620e00b0656be",
+        "8795f9b077fa82e3aaee638edb00e66d74d5c30404e0c8e67088e6a719720108",
+        "7bbe2c704bdf479dd46ce30d5e93a69b7220fb7f913300317a23c0916a3b1d18",
+        "37e74975faad40ad5d126584127394bbd98967f47c0ee0a243d8b307b7e29f94",
+        "7e8d0dc3ac0c689548df0c57dff3dab0e12e7ddbb45d01583a1c3c151ca9b3f9",
+        "97772b481d21a2e88bb111588938d660c2d05456d1420ad779e076ca805f386a",
+        "2e303ddae24a235810d60eb51d2d228e51a23b6374e9f9e4eca64a6a94c879d8",
+        "490cef9afcc8c5fe254fa8445a46c2cb765c26560524d6d2a362efa17b15de00",
+        "2a3507820d0f11f95c5fd208bb8cebf1b76693bbe449b4db1cb73b60a382cbda",
+        "76fd56efdd72f6fd8f76d75cf82956a66aa7b55e0dbe5661a13ffc7145f283b1",
+        "74a19e90a65c2e259c45fae4e63bd0da52a1083d9db812cb36d7a3950c4bd229",
+        "a67cfbeb61c2c3263ac0aedab131076ef5cf32b41d417aa7faa6d7ff6f943475",
+        "e38597475f8caf2f73acda171c8e0212f6720327c3d0b9a51979e1b678d47dd5",
+        "be364d65f03450c222b0e0560e0a0fe84ccdf891aa4c708898eff8412cc65030",
+        "e6fa7387f48ef815c7998a72124ba8baae78da8e78cce9037173cc3f0c2b2e0d",
+        "952c952e0ac27f1d4e3f33ec44e549013127b3dd5048f16468767e1a28ce1be0",
+        "690656de05c3921a9795305224b8d38425aa456956225159231ace0ac7a32b72",
+        "5ff2602a3acf0745ce1c6cd5e3b8308f1119731a28591ab8d6a49a9ec38a041c",
+        "d9c90ea293c235dfcb2d7cee213965d0515d7d6b0f170938960a736cf407bde1",
+        "540c4b466e51f2aa2cc19ca0e14a9817c13a44b130d56c2ec6cba9f874103b2f",
+        "aaba892ba7992bd8947e7a1348df052a5b817cbb7f369c2f471e16bfc77221b4",
+        "c5add8f8885f4f5722910e40782144a4a4d10cdf2f39a77deb71fc80ee3aef55",
+        "4120e1a45c655eb67378a85f134798d42d7de9be7133c2067bb115721aac7a98",
+        "e6e0bb46f6631e1a47a6c30812b1d65393671160bdc9e0d8fa289c59010c7c9e",
+        "3c905e9378057f7db3af3e2b8f6f2fa096811ee50ee2806e9ea3b033ca93cafc",
+        "c66bb8c798d7201cd6da69048692227dc3a3a3a87bee3d4353dd010dd930955b",
+        "a98bcd9dee60153224307567f968082d0eaac9571edf6deee3b5c2f6be2b1f7f",
+        "df9d70ef12f405eaef59b2397c0163a558efe546218c3c642760489ef18eb208",
+        "8a1b46248f60d8805009940db048c13867a641f1bfd4e0636717ed5186ba04e9",
+        "24468af288c971dff6c2a65957f56ec98b6ca5370d97deb95087599bd354ae69",
+        "6d5dbd0eec5dba672fab44bf718555c08f610d55d283a0b0205a85f2a422fa27",
+        "a4c586201f4bcf4383eab05a39575433f432cdeed25eb3bb1dcd041745801887",
+        "ef6e5dc241264e15d32a9ec4100a3116e3e7e499aa03db373d42b40d5ba57615",
+        "55809c1a6f743b4b9ed923eb1077f90e7b13d9d67f49d4719605801132c9aaf1",
+        "3e7fe1f28c11131609fbfe51af3e7960d23c7705607368f99cc2272c63b87215",
+        "5da8e6208aa77e2a5ac971722db78359bc9c2d3c265163973f09abf10e96d8ac",
+        "0ad0f657e2cf462c8d5a04ea4667d065c2c31aeca18d6a12c87ff492209be3c8",
+        "ec30057c2e9db3da459e8cb1a0c64e4d8b04a8d00b5fd304849d29845074492e",
+        "e4a81e8fcf99517211c4e99841db612b1a1340be4bb15092f66a6b63cd5dc03c",
+        "b27561d361035c86ab2687d100691597f3ec91bd58295743e0b386a4811adbf0",
+        "2460ce5ba77f47dab6019b80f3f727f6928e7027c1d1769e4a5f0a13547611ec",
+        "04fa43ba892c1669ac76308b0c835ddbc9a7d17f739e3213c6bbf41b4dfd9351",
+        "a3425b560ed8d17c2823700024a6f105e97eb82b270a4239f74dcd7d5b273f37"
+      ],
+      "ok": true
+    },
+    "tragedy": {
+      "commands": [
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "watch_mark"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "watch_weight"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "watch_ring"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "faria_letter"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "secure_passage"
+          }
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "linen_marks"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "linen_register"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "linen_report"
+          }
+        ],
+        [
+          "campaign.visit",
+          {
+            "place": "town"
+          }
+        ],
+        [
+          "campaign.demand",
+          {
+            "action": "fulfill",
+            "id": "medicine"
+          }
+        ],
+        [
+          "campaign.demand",
+          {
+            "action": "fulfill",
+            "id": "bond"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "seal_evidence"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "sabre_mark"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "sabre_ring"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "sabre_trap"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "expose_sabre"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "pharmacy_ledger"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "morrel_credit"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "dantes_message"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "audit_accounts"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "faria_halves"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "vial_seal"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "vial_balance"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "prepare_escape"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "escape_signal"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "escape_roll"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "redeem_emperor"
+          }
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "water_quality"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "stores_condition"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "keel_hollow"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "establish_rations"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "bone_stamp"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "bone_chart"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "chest_weight"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "chest_ring"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "expose_viper"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "workshop_seal"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "mission_balance"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "rescue_schedule"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "prepare_operation"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "roberts_identity"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "reef_signal"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "capture_viper"
+          }
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.wait",
+          {}
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "nemo_manifest"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "alliance_accounts"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "sea_chart"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "audit_alliance"
+          }
+        ],
+        [
+          "campaign.battle_prepare",
+          {}
+        ],
+        [
+          "campaign.battle_begin",
+          {
+            "companions": [],
+            "protagonist": false,
+            "troops": []
+          }
+        ],
+        [
+          "campaign.battle_cmd",
+          {
+            "args": {},
+            "cmd": "retreat"
+          }
+        ],
+        [
+          "campaign.battle_finish",
+          {}
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "vigo_ring"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "vigo_mark"
+          }
+        ],
+        [
+          "campaign.appraise",
+          {
+            "id": "vigo_decoy"
+          }
+        ],
+        [
+          "campaign.choose",
+          {
+            "choice": "accept_vigo_decoy"
+          }
+        ]
+      ],
+      "ending": "tragedy",
+      "err": "",
+      "hash_v1": [
+        "fb9a2d466e23242173e1eafe59ff0843cf7afb0fc08747d049ffe2cc6257fbfc",
+        "6fbd6e1c35d55d874b5f13b80c50c6a81089bb011ebddc6134686cc11bbc4e15",
+        "5834d20b7f511953f387594a61340dee06533368bc9116394b115be906d43be2",
+        "2610babe1c59afcce3208a783e8d97bcbd7466aa82d93ef0c87b5b544ab526b1",
+        "7bf59b517b8fca0c4ae31f1d66a3e5641a518a9a1f06639b226d1bdba806295e",
+        "f1751bcdcab3fbfd00dc727bcc09b922c267a7c4007fb774776af6da43b7ea1f",
+        "aa09214364a03a03c064fbf5b57e54400c5b50518990365546e63bebd0598d6e",
+        "5b7fb41ab07db65992814ebe59014cea3af5bf1e14f31240504f1ed3e5db297c",
+        "1dae469cb5ff5ba6f25887f1321f7be263c006d1df6952a9723a5f17833d3bad",
+        "c55b2c052b365ece04891a194dde1b27d943984eea02a52980efb8d52ee32311",
+        "47f9166cc920119bb859b64d992323a8a311ef5106cbcd1263bb7656eb52728d",
+        "91538b7d6a716cadf28973a6247a2bb9e361467026c003bba142c26342260b1c",
+        "3863b711078e6d3f59135c85800994eb112c1476550e5c1f03a5a4f5735564f1",
+        "a2f0f658e7c83f60faea2ebcfb2b073a622ef4d7b3d66c450673f6e1f9a6f6a7",
+        "608b1c3921bbbf7213649b7a77628c570149d7b785ffbbfb13676bb362d4461f",
+        "b6fd72fe759d74836fa3adb18ce338314bc56703c4395ee203c314905110618e",
+        "4a086810f767de87f0374bfd756b91efea0ce49fd14e98f5528572d325a64d3c",
+        "40ca151d83c8942dabec3c7ce9def901af38675369ff304a69e1789d818fa24d",
+        "23d17f2dabbde6fa8b36908c6cd66db32e67a01838a2e7593fb7333e190633f4",
+        "4762cf456c6797781f1bb7f108f8f21e5a73b400023dea71632db31b33ead5d1",
+        "377ef1a3ee1255d8a38d06bf0b8adb8b70fbd795d4a35de61d84c9db0e693886",
+        "d274ac91ded14252f919ed75a071561f89518b2b6f418533db1d32206820da45",
+        "8d056686325fa182eaf42a1aa8eca6bd9471d737da4e076955a083b50c9783ac",
+        "2e9ed582e1a86aa4830023631f663211e6bbbd24b63aee96cae39da255640448",
+        "2c248bc2eff1b73d56349cf9d20508003a31164519d1c1539c3d667c83b64abe",
+        "3132ca922ede1c8f711a5488d62724f52ab5b3e72a758722682264e5c48677dc",
+        "4b3614fd01b3baf59f85068c7eb907ebaa12c9fb0ae485e344b09484ab8e4e74",
+        "2bbf85970b0c272e617b0fba897c770d4c55e5f7426aede162a34a15b50689d0",
+        "0c11a16eb373684107bd7f762495e68b613e5ae10fd0efcf745dd94cc157e776",
+        "2f084762ee552d4c51766e377bb11fd7fbad20f2091c45b7fcc63e03bd982b5c",
+        "53c2465c8d2613ceaf6c107f09b3b4d9ff4ef1367c0b5d0fce54a68bd4ca897d",
+        "63ca8a34b5209c0051471a732f677514179698451f6b1213bf671bdbd389c4ae",
+        "e373d596b421b4baafff494f7db88e38b4c5808f4315f3b86064bdc1fb3b52f5",
+        "b89377455dd6eb851ad111334cb5812904d35a77b62c5c74e5d241a94ecf31b0",
+        "4a73bc181acb4c224e81f211b5969a5931918d1a1a60b7e64f2bbd49223f5d7a",
+        "150dde8072bd36333f982686c53b012f3bf0d784dd9d0da70b0c8c21ef5902d2",
+        "bea244a8840fb87b39550cbf3f327d2d4c828563643aaa19f1337b394e882d10",
+        "10ef022a91c124107bb1b12c82a57f170e9d309cfde0ba3e76054ecc75f362b7",
+        "8ad7d484be63f6fde17300500245608bfe0f585b1e1489b1e304c4022fd0d5f2",
+        "955f0b8575dd9bf35573cc56b8289b67d6454cbbfc6022fc9dfe86485c743219",
+        "52ab9f89df8d93e6965786bb8e97874deca480e46362db3ef26a67463570c363",
+        "a842eaaf3883d79c80ad4d6fe4a5c4f43cec609e14b94b560f497ef6783e12ac",
+        "389ab855b82455a7068ae86967cfbecd46eae7e74c26e486932ff740f3a5ad4d",
+        "c9c203e7b63fedf72c7f1b4a55e85c28e64df88379749e74bd703239d55f053d",
+        "769beecfa24fe5d979682c94426600f5bbf84a0ba7f8e8157243783010f2cd79",
+        "a18d8be0a6167b9f9061cf14b003f0af7efb1d63fe0d363f21e0b34b67229c84",
+        "b334fb4eea5f9ee58e45a8d5e380e7d0ab12bc307145d60215463023bd5eecf5",
+        "4dadb60a332d1e96b5139f9042ca25b7214f162bc7b9751f5ea74afb02e112e2",
+        "162e4e3100d6d6262bb5dbec1312b1a707d5980a526947444da18cf3585a77cf",
+        "f5017e6c6d14ac2133e30f6055695eb73a1190664085a93dfaecba71f7a52f43",
+        "478f05be52960b2c8ff203134280d5739d3596e1e04a86def085981b8281260e",
+        "c42f069a52aa9b75bc0c917cd586a59e57fa9013b6942276d2100bd3e2ee2039",
+        "9d5eaafacefcf975bc89de01771e195a0ede5e552ebdda93e2594823c2291584",
+        "321a3a14c131fee76fdd8947f75aa373e75bf5e7e898cae878916f98aceb64e3",
+        "d74e2bf5d0f9c3b4dc0996080a2ee35af8d0a426c9da17a865d02e3c95efd0f3",
+        "1f7c2fec37a8760595c991dab8cf3cd1472b261eaea68d260eb423d54e7c25c7",
+        "6f58bb7d92118b7ddd86546ccdb3edacb8232b1aee380c5ab5469ffd9e1d0e7e",
+        "e4283f8c1158b4a77f044502cfe76fb14b90136161e11f19f0d6dfe1f7533bcf",
+        "cdd1f0b908f14a287a7f366eec0afbf25581dd68f41bfb4447af14cc909df211",
+        "f2b32111a4346eb219ac0164f49ba14f827c70223d37985ce6dc7aedf95098a9",
+        "c19ebc35e40b550f34128970e19d2e6fd72f1f81365d86ccb8d1965f02b2fb72",
+        "c21f59b03e9a26c7b31cb5a28ecdbb1335599b98021eb9c15b97648d0c7a0ce4",
+        "26d9cf24302c0c15af622579c2fd42b28b9af7f15ba9e7a7764cfa1fb74c2882",
+        "6e627b09c3510472c9275ec3e583bb4473d9b5cf5069445d44715359e6547f39",
+        "ccf699f56dd8088981c6298a1308719939da2f2020c95d674c1ce50e1a20d463",
+        "89e248f3874a134db6df1049e737ab08950f7c4e17cbd61d30614748e49f01d3",
+        "fe24c6484600ef46f31d8da16fd3028a82f92f128c444532086c45097f26eff7",
+        "3c3b250fb6cb6e1fff580790a86c7a4a79375b082964f811c50ca237c8fad1c4",
+        "fc06512b921f6cf86e628479f09ee6ceba841add205bda3970f234bfa2dc1546",
+        "237723c0752532696a95c9424303ccd2e7285b815f968ac680f6807061b36353",
+        "5b4b9fdb81c24da5bf6a10f51181d06ac0601345ae19ea0129957c1d58c2c5e8",
+        "adeaf466ac9b0005a07f0351dca5df7b7fbf5262cee8f8ff2706f807d345aa84",
+        "3d3376fb5b805fa4833529fd52de70c47c0dd114a2e140b0008712076c4c41c8",
+        "039daf3ef649e23cf3af746b02df9ce6cc5a06938b2e35334fdf58ecab4195ff",
+        "a3e644706c009d4e451e8a13ca4439db453be93af3c81c3c879d6b96c5acb6e1",
+        "1795d391a25deba60d8ef67566cf04357fa1d50d40ff10749fd50448ad12ff01",
+        "4d0003f0e3bac80ff6fb1aaf5971150dfa1560ce4d57859d7777013233fabb31",
+        "fa456805dcff3230e35c7501f6bddbd39f8a76562bbcaf20a31a946500b5108b",
+        "6ae91d49e16fb83b875664a0074e24651c72c19f1a75a28c21cf5c0411bcc368",
+        "45eaaffe5455f1b73686dfccefde3be06e80d820e653ac5d198b1c90e27377ce",
+        "ad86839a177569c79c0f811f46700e5e9f6faf4462743cc93fc6e636d09dc7bf",
+        "3f932baf4e21bb4f1b884b8d1d0d040c376105cc833adf4cb8c96731f25f4763",
+        "17693516da2a1cd93105955115a62eb4d32309b84072ab87473701f28f200f22",
+        "30d03e6aac85fc50f04e78c6c7e0dacb18e026a1e5b8d5155bf2f258a8c7bc93",
+        "96417e4e9776a3a959bdb288eb8bb96ca6694760c3ba9de3a126c53ae8427f44",
+        "9dea23fa1a4be0768b734ad9fc7265a0f5d8be1984d9a77bd9c72afa48096a0e",
+        "6b4e923c11e1a68745894976b349e95319a4797c429965b8909d5b9e33c2f228",
+        "14ebffbe8604e427d44d911b3e9d35358450956bcffd24472d803e8e2076266f",
+        "b9d505af2947fb136b37f43e7f12819effa367d9f2240a431633bba3f353d5ff",
+        "d959f548b42b754d47dd7883f283854c3883a7c6629a360f973411892392fb89",
+        "899458a37322746b0b7537970c4b4f33ae112551c1c41e8f433f25f916922994",
+        "a51eb88fe5d4abdb09721d431440172fa8a87cedd16d672ae77303066f960c88",
+        "2ca96967468a37a18f13dab8f923c56e84bd8ddb22793d96828df657abfe55d7",
+        "64ad760f6fb03cf9df2e95902a76535fea39f6f17afb50d68509ba21ac4b06ad",
+        "df16e54d567ef378c223dc76070f82d5a1dc835f4f7c895dc67f737734915b14",
+        "970451c811aecca0aa13143eb1220154839582eced96c5f69183ddaf7ed759e6",
+        "1c5a3e62cbb902019c81118ddc237da8e91a1d1f07bc88e74e2a6189247e01b3",
+        "36bd3f73104fcbc282f2103ad3c7f721a662f8a76d84b805440244c79369353a",
+        "02de9768d42b3bf87a82695b4dc862cd4dbcae7454d336e7a9cf92f11a7040ea",
+        "75ac7c67615404c2c903dcab25c2e58308b16f004e90a031f1af76954446e3ce",
+        "7d2a44e9cca2f65cfd1a6fed4cb10795807316c4d0650a0dad617204789019fc",
+        "7dd430dfa17a5ed2817bffa339f279c4adf998cf2e4f77d0bf29eb93637e627d",
+        "02404fc4d2a643d61e8a44096453b284a29a72fc63a0823f20edb8ddc8703040",
+        "db82da9579d82b1c3c8eefd69070000dc50ccfacfbf12026bb5b4fa7de72f491",
+        "0ad499b4306bcc171e1abe035f005790cd0891227fec97999052ebbc68c3e444",
+        "7d635c4a46e96af3f6fea17ec0a086f534fb7cc970fbf1f02cdc8fa74eeefac7",
+        "70f3af5620ba2ce42ce0d30a2149db42e859e5816c29a85bcd7d8c59b3e6929e",
+        "095caa0e317bd4a33a767ba308bd25632db9a95035bc58bbac8260e13a172c27",
+        "920c2597475a379c37f2e706bc1304ec841a36f2c55de1a75aa6527a784c793f",
+        "83c9fec2997479ed3cc3e189775259544420813509af2980d8755cddf5e71dd1",
+        "91e0c2f1be80f3810886089fed2e251feeb6a2442ee03b5e700a4836c0eb9204"
+      ],
+      "hash_v1_textless": [
+        "fb9a2d466e23242173e1eafe59ff0843cf7afb0fc08747d049ffe2cc6257fbfc",
+        "6fbd6e1c35d55d874b5f13b80c50c6a81089bb011ebddc6134686cc11bbc4e15",
+        "5834d20b7f511953f387594a61340dee06533368bc9116394b115be906d43be2",
+        "2610babe1c59afcce3208a783e8d97bcbd7466aa82d93ef0c87b5b544ab526b1",
+        "68732f1af8be1d1ae76853d74e5862a57584f87956df0b55ddff1d356299eca0",
+        "7043dcd59d0f6ef00bf8576fe825274c3084edecc972b89ceabc90d6188b8236",
+        "6b75b033d30f6eb8aea656a5d14b9d94480eb6b6d810e8c3615c7f32c7d24d34",
+        "79379fbabc46236d116ec4242f8d15f5fb7884ac95a64543e1b3cd1471edc9e5",
+        "4973a8dff4fbb0ef453cf6f23b66ed3aefdd7cdddedeced9181a9cd2d3df5585",
+        "118225a144ddca72abbff4d724b2dc6742cdd57c3a468af85c0303fa5a626f59",
+        "1151ebe5dbbe5215241e63ea4aad3830999531b2e3a26e7884415e52ad169d4e",
+        "c909d82507f328bacde2127b767ce902f813e6b06969309df82bc75575040fcc",
+        "9602fd431c1966c0c2def17eaa3ec02748d358bdf44aa805806ee4d00d2d953c",
+        "85cddfe1f8ccfd08ed434f7b7da625547f7d41f056baa2450ffc79bbcf15cfae",
+        "4e18599a5a8980ba2d31206312db97b91f142a1ed889cd9c2a96691eaeb2fb8f",
+        "2fc5b5221a6fc1795502cde5d80c32c0961fbe9568ae30fb2c737d5b4f7ac480",
+        "0c12352b7c556b68c4903dc491d8ef0e3bc7766bffd0cef3358d37ea20c9005a",
+        "bf34c469ba579f9fa9daab345361d0229ee9a286a36216bd910acc331f8eeea5",
+        "c633a667b69fec06c6ab5da883f8cab81e76f12cba96df43692da017c82e4af9",
+        "5b289a6e70a42a90ce0c6158df98250a35f86b93864ee83d6053fd357b56a73b",
+        "7f9f7907af194e82bd0ff7ff767a2d15bd8c87cae3933f1e5b2e02dbd4eea606",
+        "68cb92e05f81da0ccbea1fb7ef65cd5eff606734bc008edfc82aef656e422ddd",
+        "30c0e68f70f90eb1dcd86ab70d5baaed109ad2afe06b2e22bd1c6c0e58b0cd80",
+        "77b689c6df97a33c0b2fb306e610b4bfaf898df4aab29c666273e26f22d497d3",
+        "8877ba964a41c838987c6a73a0f433732b62dc70e9f9c060ac99bc9a9e64e6c5",
+        "2aca3c6977db62aa74d8b5c1422f8e490b81416ca18c3302f5a88b25059bb623",
+        "86b81c9a3e52e7e1065d9699dbac91ab3752ac81c816ada71afd0460b58e0a84",
+        "893b022074f03763f82ebf3389148633cedb0f2168259e7c082b1f0ace52baef",
+        "49698e6e48f0daa2e84d469009e0126e8fbc82110e0815b0c3642ef06ef5245c",
+        "441d96ab87d962231fbc4869db96cdc67055b2f65e589b5aa64ab9e0fa217733",
+        "c8850576c824737ffbba7eea1c0b844e4cae9cd9a3a77b1647d955b3b7f30979",
+        "c61acc6530713b27def29f1b173702891936bb5d3ba2fa7a03d779c672599986",
+        "d3261771c9d20d2947d60978d8db9a57db295aa8cd4d492b3007699a48572cf7",
+        "c192068c557fdb5770964ea86de2814baa73336563033b55229bc7a39e620efd",
+        "b38fcdef12158dc2277a4ca646f05ac59cfe1c3464486062e74d2cfd17f744d1",
+        "b07a1708e23c9892fbc4c87ea270965a9e1750af6c0db1e598699ea2d509029e",
+        "cc553286e86bdb56406d114c062d6668419488dd599bff8206bf355484c77f90",
+        "4c74c012fd2d3538f0ac6b08aff520a676576d9929bf8ef3d51e09140980735b",
+        "5b28637ef564a3828a82d9d928500f26a6314d7018d81ba1aab3f74ba23be8b1",
+        "9f7f8a5893fe4b482c67f6141f7d20a9eba8eeeb3fc4a232d9aa904d625db7ea",
+        "4cab44310c8f2e04fe6f3da986113331c7267b367a1090ed56c6fb5f65950733",
+        "c3d00d093fabf976a98663093fdc45f300afede73c848c473adea0b70eeaeabf",
+        "162f58502a5847260fe8f5ce11d73980030eca211566e9abefab28054eb4668e",
+        "419a77657e19b499559ea5f3a521f59c9b8d5503ea31d79ad28cd5fc72b7b28e",
+        "6b38d875d6f580ca046d1871084be37945a1ec12fa75c7af5faa07a57db0ef80",
+        "a4f98f3062c166cc3cf63e72f3e2b7182b57ab581ee469a27ca08f1fcf671773",
+        "ef2058c79f5a0d74a72273fd8a454d46ad2240360a429d55019af9553eeb7203",
+        "8e003656915776e6930190a90c61cc2e1f59b88f4276be92a36a998952b26684",
+        "06f0a6dcab9bb291e73234b83d1dad3149ce75903e1a01ed511ff6fb92cb95bc",
+        "0990a9cb5b4776eaa67118d82fdd50520f3e4b52f96a4e3d2615566dd082311a",
+        "a73878eb007b954e27b0bb4afab796d8225b4f01e184062480d325bbb0024f2c",
+        "dd992a6c16fc61ef275cf82be8a2b3eeed95463ca02d39789363800920081cc6",
+        "c12808df76a0d6fa9e98df12142ea64c69be4564bbba1f49e17af42553881cd2",
+        "3d747f7d2310a890dd1a155f1f02110188de4743a7f9de1d2cc756b72b466ff2",
+        "d7ab1ae01d994160829f0341dea08ac91a281dbad9a6e00c4b92369d3c532983",
+        "6ef243c7d4abfb585d88a6b416d0c00419c28c6079615780d8f6db6759bada08",
+        "6c45bc0ae654342798619a349827d5adbdd3113595c8c1f72195427e7eebd721",
+        "bf194c788b7b81ca8b5f6413e240207cdfc6a8a3373215db8fcfb6a3fd2006ee",
+        "d715ccd9629e51fe302715550e90dd56758aed07c4382dd806598eb776dfbdad",
+        "90531891eedcefa5291dd85b4562dc36f352bc5cc95bb0d7d64f4ea4d2714be7",
+        "5aabff2fdef77656d0217a6a603d840a0182b9f6fba08015500e02ee5f3edfa3",
+        "37a0bec1f81febc1b7671c4566f8c32fc6c026b6a208273b8fb25f570ad08a70",
+        "860e3fc9f1198af62505d70766f6d4ef818ff6df13a073c502ff78752eeee078",
+        "25082fdfa71b70053656b053df87f6bee03d47aad93df786993ea6e282429aea",
+        "859d9271fd80cd37225462aaa7ab099a94e6aa9ac69b4d2d7fca558e211d04f4",
+        "8a41f2ccc44fec346e72cc3cc11a93d4075bddc38230d9f2b3f1d2f333d73b35",
+        "3296af548242af73617f9964d34b35ff99e4b365f20f900d341b764e515ddb0c",
+        "fcc18524e1c31641c6844c059aa3f8740c369cff52069ff490de10bc6953a153",
+        "00327fb651895beb37573f3f07967447af38a354a4c682a7a6b61c6c93b9a47a",
+        "683691f76b291685ec963909a776f0de0dc206309b0e0b7aa99563283e7f40ee",
+        "c8e240f9435ba41aa3cde65a91aea29b4180611bf33672e9b3849338e4a8777b",
+        "ffcf5ae610315bb727a8d90ac206aadb81365124347b398d98196f13613aeb2a",
+        "7a231fdddf7545adb58a5d5bfe2a86fb662930c703403540fabb71f553b0be21",
+        "a0fb132a679dda9b51a531c308931e5931a46d5bc992a60c8ce3dfe7b3ae5779",
+        "f879117aa88760577d6103bfaeb2bfccb6bdadee61d4dd6db0bd53a4eb714612",
+        "97e2e68df508ae0becca258fe85b02d99ab6ee107bb4e30a0333c4b8a1434867",
+        "b8ffb90e5c271be446c2c15fdc801591f7f669120c376ad9423c946270a8d55f",
+        "36c419ca7696c6c2325078d07d6258497df9f05179126ac0b0dac229d820035d",
+        "ebfcec5001658f6ee2ca96efa9b2ee266e1b96b97757925827b4cad2de5853cd",
+        "d7cf07dde10a621bdaeb85aaf0711ef21ddd20aa25a1c82e5d5b1e5d39626a8f",
+        "48e4b7badea85f44d962f9fea4689f96cee84ea003e62bddac35feecd7f673fd",
+        "3d4cd5b4d337d43798c214af3bcff836086955d4a56e6ccf64ade3856d63388f",
+        "49ff9277b573da9e4865d3a32c2777a4ef43750640a0771d2151a9cbc64ff4b6",
+        "7c25ab899788fb5effe36800ce4cf9b092ac54a5f4addaa05ee5d5e176809606",
+        "5d820fe5682c9e107a5323799bd3b28a3b52310b09e4654ee12620e00b0656be",
+        "8795f9b077fa82e3aaee638edb00e66d74d5c30404e0c8e67088e6a719720108",
+        "7bbe2c704bdf479dd46ce30d5e93a69b7220fb7f913300317a23c0916a3b1d18",
+        "37e74975faad40ad5d126584127394bbd98967f47c0ee0a243d8b307b7e29f94",
+        "7e8d0dc3ac0c689548df0c57dff3dab0e12e7ddbb45d01583a1c3c151ca9b3f9",
+        "97772b481d21a2e88bb111588938d660c2d05456d1420ad779e076ca805f386a",
+        "2e303ddae24a235810d60eb51d2d228e51a23b6374e9f9e4eca64a6a94c879d8",
+        "490cef9afcc8c5fe254fa8445a46c2cb765c26560524d6d2a362efa17b15de00",
+        "2a3507820d0f11f95c5fd208bb8cebf1b76693bbe449b4db1cb73b60a382cbda",
+        "76fd56efdd72f6fd8f76d75cf82956a66aa7b55e0dbe5661a13ffc7145f283b1",
+        "74a19e90a65c2e259c45fae4e63bd0da52a1083d9db812cb36d7a3950c4bd229",
+        "a67cfbeb61c2c3263ac0aedab131076ef5cf32b41d417aa7faa6d7ff6f943475",
+        "e38597475f8caf2f73acda171c8e0212f6720327c3d0b9a51979e1b678d47dd5",
+        "be364d65f03450c222b0e0560e0a0fe84ccdf891aa4c708898eff8412cc65030",
+        "e6fa7387f48ef815c7998a72124ba8baae78da8e78cce9037173cc3f0c2b2e0d",
+        "952c952e0ac27f1d4e3f33ec44e549013127b3dd5048f16468767e1a28ce1be0",
+        "690656de05c3921a9795305224b8d38425aa456956225159231ace0ac7a32b72",
+        "5ff2602a3acf0745ce1c6cd5e3b8308f1119731a28591ab8d6a49a9ec38a041c",
+        "d9c90ea293c235dfcb2d7cee213965d0515d7d6b0f170938960a736cf407bde1",
+        "540c4b466e51f2aa2cc19ca0e14a9817c13a44b130d56c2ec6cba9f874103b2f",
+        "aaba892ba7992bd8947e7a1348df052a5b817cbb7f369c2f471e16bfc77221b4",
+        "c5add8f8885f4f5722910e40782144a4a4d10cdf2f39a77deb71fc80ee3aef55",
+        "4120e1a45c655eb67378a85f134798d42d7de9be7133c2067bb115721aac7a98",
+        "e6e0bb46f6631e1a47a6c30812b1d65393671160bdc9e0d8fa289c59010c7c9e",
+        "3c905e9378057f7db3af3e2b8f6f2fa096811ee50ee2806e9ea3b033ca93cafc",
+        "c66bb8c798d7201cd6da69048692227dc3a3a3a87bee3d4353dd010dd930955b",
+        "1fc51da19fb11294ab5a39ceffae81b515c18aa19af2ab6b9bb82a51298824eb"
+      ],
+      "ok": true
+    }
+  }
+}

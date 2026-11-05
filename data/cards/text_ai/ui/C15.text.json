@@ -1,0 +1,87 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-25:appraise-c15"
+  },
+  "c15.fragments.title": {
+    "t": "拼碎片"
+  },
+  "c15.decode.title": {
+    "t": "对电码"
+  },
+  "c15.tool.rotate": {
+    "t": "转一转"
+  },
+  "c15.tool.lens": {
+    "t": "放大镜"
+  },
+  "c15.tool.backlight": {
+    "t": "对着光看"
+  },
+  "c15.seal.aligned": {
+    "t": "骑缝印对得上"
+  },
+  "c15.seal.offset": {
+    "t": "骑缝印错开了"
+  },
+  "c15.cap.tray": {
+    "t": "桌上的碎片"
+  },
+  "c15.btn.done_frag": {
+    "t": "拼好了，交回"
+  },
+  "c15.frag.rule.seam": {
+    "t": "缝上的笔画两半错开，或半截颜色发褐：点那道缝打个叉，再点取消。"
+  },
+  "c15.frag.rule.stain": {
+    "t": "水渍是缝两边一起变淡，笔画照样接得上，不算。"
+  },
+  "c15.frag.rule.seal": {
+    "t": "骑缝印：拿放大镜看两半的外框和井字线，在缝上差一点也是错开了。"
+  },
+  "c15.frag.rule.light": {
+    "t": "对着光看：纸纹到了缝上接不上的那块，不是这张纸。"
+  },
+  "c15.tool.lens.tip": {
+    "t": "放大两倍，看缝上的笔画和骑缝印"
+  },
+  "c15.tool.backlight.tip": {
+    "t": "看纸纹在缝上接不接得上"
+  },
+  "c15.book.title": {
+    "t": "电码本"
+  },
+  "c15.book.prev": {
+    "t": "上一页"
+  },
+  "c15.book.next": {
+    "t": "下一页"
+  },
+  "c15.book.page": {
+    "t": "第 {n} 页"
+  },
+  "c15.decode.crib": {
+    "t": "本号"
+  },
+  "c15.decode.key": {
+    "t": "码尺"
+  },
+  "c15.decode.minus": {
+    "t": "减了 {k} 是"
+  },
+  "c15.btn.done_decode": {
+    "t": "译好了"
+  },
+  "c15.decode.rule.find": {
+    "t": "每组四个数，在本子上翻到那一条，点它就抄到这组底下。"
+  },
+  "c15.decode.rule.blot": {
+    "t": "墨团压着的那一位底下叠着两个数：两种读法都查一查，挑整封读得通的。"
+  },
+  "c15.decode.rule.pairs": {
+    "t": "常洇混的数：{pairs}"
+  },
+  "c15.decode.rule.key": {
+    "t": "加了码的：第一组是本号加了码。对出加了几，拨码尺，铅笔行替你减。"
+  }
+}

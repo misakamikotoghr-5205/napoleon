@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-3940"
+  },
+  "kp.pistol": {
+    "title": "一支短枪",
+    "body": "藏在铺里的一支短枪。留着它要担风险，被人查到就是麻烦。",
+    "use": "可以放进格子，用了也不会少；被查出来要惹麻烦。"
+  },
+  "p.nf_pistol.1939.pawn_gun": {
+    "title": "生人送枪",
+    "body": "一个生人把一支短枪推到柜台上，想把它留在铺里。",
+    "lines": {
+      "greet": "掌柜的，这东西，放你这儿几天。"
+    },
+    "choices": {
+      "hide": "藏起来",
+      "refuse": "不收"
+    },
+    "outcomes": {
+      "ignored": "那人等不到回话，揣着东西走了。"
+    }
+  }
+}

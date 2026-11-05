@@ -1,0 +1,2221 @@
+# 待写正文
+
+发行年代：1938、1939、1940。
+还缺 2110 条。A（剧情、牌面、签、观察、人物、物品、指引、规矩、电码本）1394 条；B（界面、帮助、设置）716 条。
+按类型：almanac_day 28、big_fate 13、cezi 14、codebook 72、contact 12、demand 48、dossier_fragment 369、dossier_page 37、estate 5、event 51、fate 30、fortune_lot 35、goal 18、guide_step 70、item 82、kept 16、life 22、news 44、night 6、obs 111、pawn_ticket 1、person 163、person_name 49、prison 1、rule_page 26、self 1、stage 3、street 12、ui_key 719、wheel 4、wheel_segment 48。
+这份清单不带设计说明原文，只写要补哪些字段和机制要点。例子集不进发行包，不列在这里。
+
+## A · 剧情、牌面、签、观察、人物、物品、指引与规矩、电码本
+
+### almanac_day（28）
+
+- `alm.chun_chuhuo` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.chun_guitai` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.chun_jiaoyi` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.chun_jisi` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.chun_shoudang` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.chun_shouhuo` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.chun_shudang` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.chun_xiuzhao` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.dong_chuhuo` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.dong_huiyou` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.dong_jiaoyi` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.dong_jiedai` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.dong_jisi` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.dong_shoudang` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.dong_shouhuo` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.dong_shudang` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.qiu_anxiang` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.qiu_chuhuo` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.qiu_huiyou` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.qiu_jisi` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.qiu_shudang` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.qiu_xiuzhao` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.xia_anxiang` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.xia_chuxing` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.xia_huiyou` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.xia_jiaoyi` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.xia_jisi` · `data/cards/fortune/almanac.json` · 要写：title、body
+- `alm.xia_shoudang` · `data/cards/fortune/almanac.json` · 要写：title、body
+
+### big_fate（13）
+
+- `bf.1938.bail_shop` · `data/cards/era/1938/big_fate.json` · 要写：title、body、choices.pledge、choices.decline · 选项 pledge、decline
+- `bf.1938.night_cargo` · `data/cards/era/1938/big_fate.json` · 要写：title、body、choices.take、choices.decline · 选项 take、decline
+- `bf.1939.gate_passage` · `data/cards/era/1939/big_fate.json` · 要写：title、body、choices.go、choices.stay · 选项 go、stay
+- `bf.1939.rice_hoard` · `data/cards/era/1939/big_fate.json` · 要写：title、body、choices.take、choices.decline · 选项 take、decline
+- `bf.1940.night_road` · `data/cards/era/1940/big_fate.json` · 要写：title、body、choices.use、choices.sell、choices.stay · 选项 use、sell、stay
+- `bf.1940.yamen_crate` · `data/cards/era/1940/big_fate.json` · 要写：title、body、choices.hide、choices.pass_on、choices.decline · 选项 hide、pass_on、decline
+- `bf.any.house_offer` · `data/cards/era/common/big_fate.json` · 要写：title、body、choices.sell、choices.keep · 选项 sell、keep
+- `bf.any.mystery_box` · `data/cards/era/common/big_fate.json` · 要写：title、body、choices.take、choices.decline · 选项 take、decline
+- `bf.any.quiet_fee` · `data/cards/era/common/big_fate.json` · 要写：title、body、choices.pay、choices.decline · 选项 pay、decline
+- `bf.any.ship_ticket` · `data/cards/era/common/big_fate.json` · 要写：title、body、choices.go、choices.sell · 选项 go、sell
+- `bf.any.street_bed` · `data/cards/era/common/big_fate.json` · 要写：title、body、choices.accept、choices.decline · 选项 accept、decline
+- `bf.any.sun_guarantee` · `data/cards/era/common/big_fate.json` · 要写：title、body、choices.stand、choices.decline · 选项 stand、decline
+- `bf.wheel` · `data/cards/era/common/big_fate.json` · 要写：title、body
+
+### cezi（14）
+
+- `cz.bing` · `data/cards/fortune/cezi.json` · 要写：char、has、none
+- `cz.cai` · `data/cards/fortune/cezi.json` · 要写：char、has、none
+- `cz.chuan` · `data/cards/fortune/cezi.json` · 要写：char、has、none
+- `cz.guan` · `data/cards/fortune/cezi.json` · 要写：char、has、none
+- `cz.huo` · `data/cards/fortune/cezi.json` · 要写：char、has、none
+- `cz.jia` · `data/cards/fortune/cezi.json` · 要写：char、has、none
+- `cz.lu` · `data/cards/fortune/cezi.json` · 要写：char、has、none
+- `cz.men` · `data/cards/fortune/cezi.json` · 要写：char、has、none
+- `cz.sheng` · `data/cards/fortune/cezi.json` · 要写：char、has、none
+- `cz.shui` · `data/cards/fortune/cezi.json` · 要写：char、has、none
+- `cz.song` · `data/cards/fortune/cezi.json` · 要写：char、has、none
+- `cz.xin` · `data/cards/fortune/cezi.json` · 要写：char、has、none
+- `cz.yuan` · `data/cards/fortune/cezi.json` · 要写：char、has、none
+- `cz.zhi` · `data/cards/fortune/cezi.json` · 要写：char、has、none
+
+### codebook（72）
+
+- `cb.word.5101` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5102` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5103` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5104` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5105` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5106` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5107` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5108` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5109` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5110` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5111` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5112` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5113` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5114` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5115` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5116` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5117` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5118` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5119` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5120` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5121` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5122` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5123` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5124` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5125` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5126` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5127` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5128` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5129` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5130` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5131` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5132` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5133` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5134` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5135` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5136` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5137` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5138` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5139` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5140` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5141` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5142` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5143` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5144` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5145` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5146` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5147` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5148` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5149` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5150` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5151` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5152` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5153` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5154` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5155` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5156` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5157` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5158` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5159` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5160` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5161` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5162` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5163` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5164` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5165` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5166` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5167` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5168` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5169` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5170` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5171` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+- `cb.word.5172` · `data/cards/minigames/codebook.json` · 要写：word · 教 decode
+
+### contact（12）
+
+- `ct.chen` · `data/cards/common/contacts.json` · 要写：title、body · 人物 chen
+- `ct.guanjia` · `data/cards/common/contacts.json` · 要写：title、body · 人物 guanjia
+- `ct.li` · `data/cards/common/contacts.json` · 要写：title、body · 人物 li
+- `ct.linsao` · `data/cards/common/contacts.json` · 要写：title、body · 人物 linsao
+- `ct.ma` · `data/cards/common/contacts.json` · 要写：title、body · 人物 ma
+- `ct.postman` · `data/cards/common/contacts.json` · 要写：title、body · 人物 postman
+- `ct.tudi` · `data/cards/era/1939/apprentice.json` · 要写：title、body · 人物 tudi
+- `ct.wangshan` · `data/cards/common/contacts.json` · 要写：title、body · 人物 wangshan
+- `ct.wu` · `data/cards/common/contacts.json` · 要写：title、body · 人物 wu
+- `ct.xiaoding` · `data/cards/common/contacts.json` · 要写：title、body · 人物 xiaoding
+- `ct.zhang` · `data/cards/common/contacts.json` · 要写：title、body · 人物 zhang
+- `ct.zhouma` · `data/cards/common/contacts.json` · 要写：title、body · 人物 zhouma
+
+### demand（48）
+
+- `dm.1938.goods.t0` · `data/cards/demand/demands_1938.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.goods · 格子 goods
+- `dm.1938.goods.t1` · `data/cards/demand/demands_1938.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.goods · 格子 goods
+- `dm.1938.goods.t2` · `data/cards/demand/demands_1938.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.goods · 格子 goods
+- `dm.1938.goods.t3` · `data/cards/demand/demands_1938.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.goods · 格子 goods
+- `dm.1938.info.t0` · `data/cards/demand/demands_1938.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.news · 格子 news
+- `dm.1938.info.t1` · `data/cards/demand/demands_1938.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.news · 格子 news
+- `dm.1938.info.t2` · `data/cards/demand/demands_1938.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.news · 格子 news
+- `dm.1938.info.t3` · `data/cards/demand/demands_1938.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.news · 格子 news
+- `dm.1938.money.t0` · `data/cards/demand/demands_1938.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.cash · 格子 cash
+- `dm.1938.money.t1` · `data/cards/demand/demands_1938.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.cash · 格子 cash
+- `dm.1938.money.t2` · `data/cards/demand/demands_1938.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.cash · 格子 cash
+- `dm.1938.money.t3` · `data/cards/demand/demands_1938.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.cash · 格子 cash
+- `dm.1938.people.t0` · `data/cards/demand/demands_1938.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.man · 格子 man
+- `dm.1938.people.t1` · `data/cards/demand/demands_1938.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.man · 格子 man
+- `dm.1938.people.t2` · `data/cards/demand/demands_1938.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.man · 格子 man
+- `dm.1938.people.t3` · `data/cards/demand/demands_1938.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.man · 格子 man
+- `dm.1939.goods.t0` · `data/cards/demand/demands_1939.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.goods · 格子 goods
+- `dm.1939.goods.t1` · `data/cards/demand/demands_1939.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.goods · 格子 goods
+- `dm.1939.goods.t2` · `data/cards/demand/demands_1939.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.goods · 格子 goods
+- `dm.1939.goods.t3` · `data/cards/demand/demands_1939.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.goods · 格子 goods
+- `dm.1939.info.t0` · `data/cards/demand/demands_1939.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.news · 格子 news
+- `dm.1939.info.t1` · `data/cards/demand/demands_1939.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.news · 格子 news
+- `dm.1939.info.t2` · `data/cards/demand/demands_1939.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.news · 格子 news
+- `dm.1939.info.t3` · `data/cards/demand/demands_1939.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.news · 格子 news
+- `dm.1939.money.t0` · `data/cards/demand/demands_1939.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.cash · 格子 cash
+- `dm.1939.money.t1` · `data/cards/demand/demands_1939.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.cash · 格子 cash
+- `dm.1939.money.t2` · `data/cards/demand/demands_1939.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.cash · 格子 cash
+- `dm.1939.money.t3` · `data/cards/demand/demands_1939.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.cash · 格子 cash
+- `dm.1939.people.t0` · `data/cards/demand/demands_1939.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.man · 格子 man
+- `dm.1939.people.t1` · `data/cards/demand/demands_1939.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.man · 格子 man
+- `dm.1939.people.t2` · `data/cards/demand/demands_1939.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.man · 格子 man
+- `dm.1939.people.t3` · `data/cards/demand/demands_1939.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.man · 格子 man
+- `dm.1940.goods.t0` · `data/cards/demand/demands_1940.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.goods · 格子 goods
+- `dm.1940.goods.t1` · `data/cards/demand/demands_1940.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.goods · 格子 goods
+- `dm.1940.goods.t2` · `data/cards/demand/demands_1940.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.goods · 格子 goods
+- `dm.1940.goods.t3` · `data/cards/demand/demands_1940.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.goods · 格子 goods
+- `dm.1940.info.t0` · `data/cards/demand/demands_1940.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.news · 格子 news
+- `dm.1940.info.t1` · `data/cards/demand/demands_1940.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.news · 格子 news
+- `dm.1940.info.t2` · `data/cards/demand/demands_1940.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.news · 格子 news
+- `dm.1940.info.t3` · `data/cards/demand/demands_1940.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.news · 格子 news
+- `dm.1940.money.t0` · `data/cards/demand/demands_1940.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.cash · 格子 cash
+- `dm.1940.money.t1` · `data/cards/demand/demands_1940.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.cash · 格子 cash
+- `dm.1940.money.t2` · `data/cards/demand/demands_1940.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.cash · 格子 cash
+- `dm.1940.money.t3` · `data/cards/demand/demands_1940.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.cash · 格子 cash
+- `dm.1940.people.t0` · `data/cards/demand/demands_1940.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.man · 格子 man
+- `dm.1940.people.t1` · `data/cards/demand/demands_1940.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.man · 格子 man
+- `dm.1940.people.t2` · `data/cards/demand/demands_1940.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.man · 格子 man
+- `dm.1940.people.t3` · `data/cards/demand/demands_1940.json` · 要写：title、body、outcomes.success、outcomes.fail、lines.issue、slots.man · 格子 man
+
+### dossier_fragment（369）
+
+- `df.brother.1938.de196` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 brother
+- `df.brother.1938.farewell` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 brother
+- `df.brother.1938.farewell_cold` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 brother
+- `df.brother.1938.quiet` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 brother
+- `df.brother.1938.ticket196` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 brother
+- `df.brother.1939.after_farewell` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 brother
+- `df.brother.1939.first_letter` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 brother
+- `df.brother.1939.letter` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 brother
+- `df.brother.1939.letter_argue` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 brother
+- `df.brother.1939.letter_listen` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 brother
+- `df.brother.1939.letter_note` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 brother
+- `df.brother.1939.quiet` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 brother
+- `df.brother.1940.after_letter` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 brother
+- `df.brother.1940.letter` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 brother
+- `df.brother.1940.letter_cold` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 brother
+- `df.brother.1940.link_from_chen` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 brother
+- `df.brother.1940.road` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 brother
+- `df.brother.any.family_word` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 brother
+- `df.brother.any.trust` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 brother
+- `df.chen.1938.clinic` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 chen
+- `df.chen.1938.farewell` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 chen
+- `df.chen.1938.old_post` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 chen
+- `df.chen.1938.quiet` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 chen
+- `df.chen.1938.scroll` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 chen
+- `df.chen.1938.ticket` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 chen
+- `df.chen.1938.wire` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 chen
+- `df.chen.1939.after_clinic` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 chen
+- `df.chen.1939.clock` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 chen
+- `df.chen.1939.code` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 chen
+- `df.chen.1939.letter_route` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 chen
+- `df.chen.1939.letter_unread` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 chen
+- `df.chen.1939.quiet` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 chen
+- `df.chen.1939.redeem` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 chen
+- `df.chen.1940.after_code` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 chen
+- `df.chen.1940.exposed` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 chen
+- `df.chen.1940.link` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 chen
+- `df.chen.1940.link_one` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 chen
+- `df.chen.1940.plain` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 chen
+- `df.chen.1940.quinine` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 chen
+- `df.chen.1940.redeemed` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 chen
+- `df.chen.1940.scrap` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 chen
+- `df.guanjia.1938.errand` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 guanjia
+- `df.guanjia.1938.kitchen` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 guanjia
+- `df.guanjia.1938.ledger` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 guanjia
+- `df.guanjia.1938.list` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 guanjia
+- `df.guanjia.1938.rice` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 guanjia
+- `df.guanjia.1938.stranger` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 guanjia
+- `df.guanjia.1939.after_errand` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 guanjia
+- `df.guanjia.1939.bangle` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 guanjia
+- `df.guanjia.1939.gate` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 guanjia
+- `df.guanjia.1939.ledger` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 guanjia
+- `df.guanjia.1939.snub` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 guanjia
+- `df.guanjia.1940.after_gate` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 guanjia
+- `df.guanjia.1940.intro` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 guanjia
+- `df.guanjia.1940.pledge` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 guanjia
+- `df.guanjia.1940.scroll` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 guanjia
+- `df.guanjia.1940.stance_echo` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 guanjia
+- `df.hu2.1938.errand` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 hu2
+- `df.hu2.1938.ledger` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 hu2
+- `df.hu2.1938.levy` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 hu2
+- `df.hu2.1938.police` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 hu2
+- `df.hu2.1938.quiet` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 hu2
+- `df.hu2.1938.ring` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 hu2
+- `df.hu2.1938.route` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 hu2
+- `df.hu2.1939.after_errand` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 hu2
+- `df.hu2.1939.coat` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 hu2
+- `df.hu2.1939.redeem` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 hu2
+- `df.hu2.1939.rounds` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 hu2
+- `df.hu2.1940.after_rounds` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 hu2
+- `df.hu2.1940.clerk` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 hu2
+- `df.hu2.1940.gone` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 hu2
+- `df.hu2.1940.regime` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 hu2
+- `df.hu2.1940.slip_new` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 hu2
+- `df.hu2.1940.slip_old` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 hu2
+- `df.hu2.1940.title_new` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 hu2
+- `df.li.1938.books` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 li
+- `df.li.1938.letter` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 li
+- `df.li.1938.poster` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 li
+- `df.li.1938.redeem` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 li
+- `df.li.1938.school` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 li
+- `df.li.1939.after_books` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 li
+- `df.li.1939.gate` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 li
+- `df.li.1939.quiet` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 li
+- `df.li.1939.redeem` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 li
+- `df.li.1939.robe` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 li
+- `df.li.1939.school` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 li
+- `df.li.1940.after_gate` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 li
+- `df.li.1940.calligraphy` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 li
+- `df.li.1940.gate` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 li
+- `df.li.1940.quiet` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 li
+- `df.li.1940.school` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 li
+- `df.linsao.1938.forfeit` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 linsao
+- `df.linsao.1938.hairpin` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 linsao
+- `df.linsao.1938.husband` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 linsao
+- `df.linsao.1938.neighbors` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 linsao
+- `df.linsao.1938.quiet` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 linsao
+- `df.linsao.1938.redeem` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 linsao
+- `df.linsao.1938.term` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 linsao
+- `df.linsao.1938.wait` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 linsao
+- `df.linsao.1939.after_hairpin` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 linsao
+- `df.linsao.1939.child` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 linsao
+- `df.linsao.1939.quiet` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 linsao
+- `df.linsao.1939.winter_coat` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 linsao
+- `df.linsao.1939.winter_redeem` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 linsao
+- `df.linsao.1939.year_end` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 linsao
+- `df.linsao.1940.after_child` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 linsao
+- `df.linsao.1940.coat` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 linsao
+- `df.linsao.1940.gone_word` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 linsao
+- `df.linsao.1940.redeemed` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 linsao
+- `df.ma.1938.clip` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 ma
+- `df.ma.1938.levy` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 ma
+- `df.ma.1938.levy_no` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 ma
+- `df.ma.1938.names` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 ma
+- `df.ma.1938.quiet` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 ma
+- `df.ma.1938.rice` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 ma
+- `df.ma.1938.street` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 ma
+- `df.ma.1939.after_levy` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 ma
+- `df.ma.1939.grudge` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 ma
+- `df.ma.1939.grudge_refused` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 ma
+- `df.ma.1939.office_hard` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 ma
+- `df.ma.1939.office_soft` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 ma
+- `df.ma.1939.post` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 ma
+- `df.ma.1939.refused_hard` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 ma
+- `df.ma.1939.refused_soft` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 ma
+- `df.ma.1940.after_post` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 ma
+- `df.ma.1940.baozhang_ask` · `data/cards/era/1940/officialdom.json` · 要写：body · 人物 ma
+- `df.ma.1940.baozhang_buy_off` · `data/cards/era/1940/officialdom.json` · 要写：body · 人物 ma
+- `df.ma.1940.baozhang_nominal` · `data/cards/era/1940/officialdom.json` · 要写：body · 人物 ma
+- `df.ma.1940.baozhang_refuse` · `data/cards/era/1940/officialdom.json` · 要写：body · 人物 ma
+- `df.ma.1940.baozhang_take` · `data/cards/era/1940/officialdom.json` · 要写：body · 人物 ma
+- `df.ma.1940.levy_harsh` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 ma
+- `df.ma.1940.levy_new` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 ma
+- `df.ma.1940.levy_old` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 ma
+- `df.ma.1940.levy_word` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 ma
+- `df.ma.1940.new_post` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 ma
+- `df.ma.1940.quiet` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 ma
+- `df.ma.1940.title_kept` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 ma
+- `df.ma.1940.title_new` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 ma
+- `df.nf1938a.1938.boat` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 nf1938a
+- `df.nf1938a.1938.heard` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 nf1938a
+- `df.nf1938a.1938.pawn` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 nf1938a
+- `df.nf1938a.1938.rice` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 nf1938a
+- `df.nf1938a.1939.after_pawn` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 nf1938a
+- `df.nf1938b.1938.bangle` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 nf1938b
+- `df.nf1938b.1938.cloth` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 nf1938b
+- `df.nf1938b.1938.heard` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 nf1938b
+- `df.nf1938c.1938.ask` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 nf1938c
+- `df.nf1938c.1938.med` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 nf1938c
+- `df.nf1938c.1938.note` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 nf1938c
+- `df.nf1938c.1939.after_ask` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 nf1938c
+- `df.nf1938d.1938.boat` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 nf1938d
+- `df.nf1938d.1938.pawn` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 nf1938d
+- `df.nf1938d.1938.watch` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 nf1938d
+- `df.nf1939a.1939.coat` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 nf1939a
+- `df.nf1939a.1939.heard` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 nf1939a
+- `df.nf1939a.1940.after_coat` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 nf1939a
+- `df.nf1939b.1939.cocoon` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 nf1939b
+- `df.nf1939b.1939.gate` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 nf1939b
+- `df.nf1939b.1939.said` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 nf1939b
+- `df.nf1939c.1939.cocoon` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 nf1939c
+- `df.nf1939c.1939.heard` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 nf1939c
+- `df.nf1939c.1939.scarf` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 nf1939c
+- `df.nf1939c.1940.after_cocoon` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 nf1939c
+- `df.nf1939d.1939.office` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 nf1939d
+- `df.nf1939d.1939.return` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 nf1939d
+- `df.nf1939d.1939.road` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 nf1939d
+- `df.nf1939d.1939.word` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 nf1939d
+- `df.nf1940a.1940.register` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 nf1940a
+- `df.nf1940a.1940.said` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 nf1940a
+- `df.nf1940a.1940.seal` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 nf1940a
+- `df.nf1940b.1940.ask` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 nf1940b
+- `df.nf1940b.1940.rumor` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 nf1940b
+- `df.nf1940b.1940.visit` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 nf1940b
+- `df.nf1940c.1940.clip` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 nf1940c
+- `df.nf1940c.1940.redeemed` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 nf1940c
+- `df.nf1940c.1940.robe` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 nf1940c
+- `df.nf1940c.1940.said` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 nf1940c
+- `df.nf1940d.1940.half_ticket` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 nf1940d
+- `df.nf1940d.1940.letter` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 nf1940d
+- `df.nf1940d.1940.road` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 nf1940d
+- `df.postman.1938.copy` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 postman
+- `df.postman.1938.letter` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 postman
+- `df.postman.1938.quiet` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 postman
+- `df.postman.1938.route` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 postman
+- `df.postman.1938.silence` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 postman
+- `df.postman.1938.stamp` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 postman
+- `df.postman.1938.window` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 postman
+- `df.postman.1939.after_route` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 postman
+- `df.postman.1939.held` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 postman
+- `df.postman.1939.letter_run` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 postman
+- `df.postman.1939.mail` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 postman
+- `df.postman.1939.quiet` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 postman
+- `df.postman.1939.rounds` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 postman
+- `df.postman.1940.after_run` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 postman
+- `df.postman.1940.code_book` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 postman
+- `df.postman.1940.hook_letter` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 postman
+- `df.postman.1940.hook_sealed` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 postman
+- `df.postman.1940.mail` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 postman
+- `df.postman.1940.quiet` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 postman
+- `df.stranger_boatman.any.boat` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_boatman
+- `df.stranger_boatman.any.dock` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_boatman
+- `df.stranger_boatman.any.net` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_boatman
+- `df.stranger_collector.any.art` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_collector
+- `df.stranger_collector.any.ask` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_collector
+- `df.stranger_collector.any.shop` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_collector
+- `df.stranger_fence.any.box` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_fence
+- `df.stranger_fence.any.lane` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_fence
+- `df.stranger_fence.any.ring` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_fence
+- `df.stranger_peddler.any.bowl` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_peddler
+- `df.stranger_peddler.any.route` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_peddler
+- `df.stranger_peddler.any.tray` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_peddler
+- `df.stranger_refugee.any.bundle` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_refugee
+- `df.stranger_refugee.any.coat` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_refugee
+- `df.stranger_refugee.any.kin` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_refugee
+- `df.stranger_student.any.book` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_student
+- `df.stranger_student.any.road` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_student
+- `df.stranger_waixiang.any.alms` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_waixiang
+- `df.stranger_waixiang.any.coat` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_waixiang
+- `df.stranger_waixiang.any.scarf` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_waixiang
+- `df.stranger_waixiang.any.thanks` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_waixiang
+- `df.stranger_widow.any.help` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_widow
+- `df.stranger_widow.any.pin` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_widow
+- `df.stranger_widow.any.well` · `data/cards/dossier/fragments_any.json` · 要写：body · 人物 stranger_widow
+- `df.sunlaoye.1938.account` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 sunlaoye
+- `df.sunlaoye.1938.field` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 sunlaoye
+- `df.sunlaoye.1938.guild` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 sunlaoye
+- `df.sunlaoye.1938.land` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 sunlaoye
+- `df.sunlaoye.1938.visit` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 sunlaoye
+- `df.sunlaoye.1939.after_guild` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 sunlaoye
+- `df.sunlaoye.1939.ask` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 sunlaoye
+- `df.sunlaoye.1939.deed` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 sunlaoye
+- `df.sunlaoye.1939.market` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 sunlaoye
+- `df.sunlaoye.1939.quiet` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 sunlaoye
+- `df.sunlaoye.1939.quiet_house` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 sunlaoye
+- `df.sunlaoye.1940.after_quiet` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 sunlaoye
+- `df.sunlaoye.1940.favor` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 sunlaoye
+- `df.sunlaoye.1940.pressure` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 sunlaoye
+- `df.sunlaoye.1940.quiet` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 sunlaoye
+- `df.sunlaoye.1940.stance` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 sunlaoye
+- `df.sunlaoye.1940.stance_apart` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 sunlaoye
+- `df.sunlaoye.1940.stance_hedge` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 sunlaoye
+- `df.sunlaoye.1940.stance_with` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 sunlaoye
+- `df.sunyoung.1938.deed` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 sunyoung
+- `df.sunyoung.1938.jade` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 sunyoung
+- `df.sunyoung.1938.quiet` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 sunyoung
+- `df.sunyoung.1938.street` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 sunyoung
+- `df.sunyoung.1938.temper` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 sunyoung
+- `df.sunyoung.1939.after_deed` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 sunyoung
+- `df.sunyoung.1939.qipao` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 sunyoung
+- `df.sunyoung.1939.redeem` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 sunyoung
+- `df.sunyoung.1939.scroll` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 sunyoung
+- `df.sunyoung.1939.spend` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 sunyoung
+- `df.sunyoung.1940.borrow` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 sunyoung
+- `df.sunyoung.1940.redeemed` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 sunyoung
+- `df.sunyoung.1940.ring` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 sunyoung
+- `df.tudi.1939.harsh` · `data/cards/era/1939/apprentice.json` · 要写：body · 人物 tudi
+- `df.tudi.1939.take` · `data/cards/era/1939/apprentice.json` · 要写：body · 人物 tudi
+- `df.wangshan.1938.dock` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 wangshan
+- `df.wangshan.1938.food` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 wangshan
+- `df.wangshan.1938.meet` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 wangshan
+- `df.wangshan.1938.met` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 wangshan
+- `df.wangshan.1938.road` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 wangshan
+- `df.wangshan.1938.trust` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 wangshan
+- `df.wangshan.1938.turned` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 wangshan
+- `df.wangshan.1939.after_dock` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 wangshan
+- `df.wangshan.1939.quiet` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 wangshan
+- `df.wangshan.1939.redeem` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 wangshan
+- `df.wangshan.1939.ring` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 wangshan
+- `df.wangshan.1939.sent_off` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 wangshan
+- `df.wangshan.1939.sheltered` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 wangshan
+- `df.wangshan.1939.wary` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 wangshan
+- `df.wangshan.1939.whereabouts` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 wangshan
+- `df.wangshan.1939.whisper` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 wangshan
+- `df.wangshan.1940.after_where` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 wangshan
+- `df.wangshan.1940.link_from_chen` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 wangshan
+- `df.wangshan.1940.lost` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 wangshan
+- `df.wangshan.1940.shelter` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 wangshan
+- `df.wangshan.1940.turned` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 wangshan
+- `df.wu.1938.buy` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 wu
+- `df.wu.1938.jing` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 wu
+- `df.wu.1938.quiet` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 wu
+- `df.wu.1938.rice_quote` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 wu
+- `df.wu.1938.shop` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 wu
+- `df.wu.1938.ticket` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 wu
+- `df.wu.1939.after_quote` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 wu
+- `df.wu.1939.board` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 wu
+- `df.wu.1939.cold` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 wu
+- `df.wu.1939.price` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 wu
+- `df.wu.1939.quiet` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 wu
+- `df.wu.1939.rice_bought` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 wu
+- `df.wu.1939.rice_sold` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 wu
+- `df.wu.1939.supply` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 wu
+- `df.wu.1940.after_price` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 wu
+- `df.wu.1940.board` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 wu
+- `df.wu.1940.quiet` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 wu
+- `df.wu.1940.rice` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 wu
+- `df.wu.1940.stock` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 wu
+- `df.xiaoding.1938.kitchen` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 xiaoding
+- `df.xiaoding.1938.mother` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 xiaoding
+- `df.xiaoding.1938.quiet` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 xiaoding
+- `df.xiaoding.1938.rice` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 xiaoding
+- `df.xiaoding.1939.after_rice` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 xiaoding
+- `df.xiaoding.1939.redeem` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 xiaoding
+- `df.xiaoding.1939.scarf_cold` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 xiaoding
+- `df.xiaoding.1939.scarf_known` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 xiaoding
+- `df.xiaoding.1939.still` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 xiaoding
+- `df.xiaoding.1940.after_still` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 xiaoding
+- `df.xiaoding.1940.quiet` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 xiaoding
+- `df.xiaoding.1940.redeemed` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 xiaoding
+- `df.xiaoding.1940.rice` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 xiaoding
+- `df.xiaoding.1940.stay` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 xiaoding
+- `df.zhang.1938.hospital` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhang
+- `df.zhang.1938.quiet` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhang
+- `df.zhang.1938.shanghai` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhang
+- `df.zhang.1938.sulfa` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhang
+- `df.zhang.1938.ticket` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhang
+- `df.zhang.1939.after_sulfa` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 zhang
+- `df.zhang.1939.coat` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 zhang
+- `df.zhang.1939.medicine` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 zhang
+- `df.zhang.1939.quiet` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 zhang
+- `df.zhang.1939.redeem` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 zhang
+- `df.zhang.1939.ward` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 zhang
+- `df.zhang.1940.after_ward` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 zhang
+- `df.zhang.1940.quiet` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 zhang
+- `df.zhang.1940.short` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 zhang
+- `df.zhang.1940.sulfa` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 zhang
+- `df.zhang.1940.ward` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 zhang
+- `df.zhao.1938.borrow` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhao
+- `df.zhao.1938.land` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhao
+- `df.zhao.1938.neighbors` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhao
+- `df.zhao.1938.partial` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhao
+- `df.zhao.1938.quiet` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhao
+- `df.zhao.1938.redeem` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhao
+- `df.zhao.1938.refused` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhao
+- `df.zhao.1938.robe` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhao
+- `df.zhao.1938.thanks` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhao
+- `df.zhao.1939.after_land` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 zhao
+- `df.zhao.1939.coat` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 zhao
+- `df.zhao.1939.crowd` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 zhao
+- `df.zhao.1939.fuel` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 zhao
+- `df.zhao.1939.quiet` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 zhao
+- `df.zhao.1939.redeem` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 zhao
+- `df.zhao.1939.repay` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 zhao
+- `df.zhao.1939.waived` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 zhao
+- `df.zhao.1939.year_end` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 zhao
+- `df.zhao.1940.after_year_end` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 zhao
+- `df.zhao.1940.field` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 zhao
+- `df.zhao.1940.lent_again` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 zhao
+- `df.zhao.1940.redeemed` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 zhao
+- `df.zhouma.1938.kitchen` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhouma
+- `df.zhouma.1938.meal` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhouma
+- `df.zhouma.1938.police_open` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhouma
+- `df.zhouma.1938.quiet` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhouma
+- `df.zhouma.1938.teahouse` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhouma
+- `df.zhouma.1938.town` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhouma
+- `df.zhouma.1938.tut_news` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhouma
+- `df.zhouma.1938.zhao` · `data/cards/dossier/fragments_1938.json` · 要写：body · 人物 zhouma
+- `df.zhouma.1939.after_kitchen` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 zhouma
+- `df.zhouma.1939.heard_dock` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 zhouma
+- `df.zhouma.1939.redeem` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 zhouma
+- `df.zhouma.1939.rumor` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 zhouma
+- `df.zhouma.1939.scarf` · `data/cards/dossier/fragments_1939.json` · 要写：body · 人物 zhouma
+- `df.zhouma.1940.after_dock` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 zhouma
+- `df.zhouma.1940.hook` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 zhouma
+- `df.zhouma.1940.quiet` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 zhouma
+- `df.zhouma.1940.scarf` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 zhouma
+- `df.zhouma.1940.tea` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 zhouma
+- `df.zhouma.1940.tea_cold` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 zhouma
+- `df.zhouma.1940.teahouse_word` · `data/cards/dossier/fragments_1940.json` · 要写：body · 人物 zhouma
+
+### dossier_page（37）
+
+- `dp.brother` · `data/cards/dossier/pages.json` · 要写：title · 人物 brother
+- `dp.chen` · `data/cards/dossier/pages.json` · 要写：title · 人物 chen
+- `dp.guanjia` · `data/cards/dossier/pages.json` · 要写：title · 人物 guanjia
+- `dp.hu2` · `data/cards/dossier/pages.json` · 要写：title · 人物 hu2
+- `dp.li` · `data/cards/dossier/pages.json` · 要写：title · 人物 li
+- `dp.linsao` · `data/cards/dossier/pages.json` · 要写：title · 人物 linsao
+- `dp.ma` · `data/cards/dossier/pages.json` · 要写：title · 人物 ma
+- `dp.nf1938a` · `data/cards/dossier/pages.json` · 要写：title · 人物 nf1938a
+- `dp.nf1938b` · `data/cards/dossier/pages.json` · 要写：title · 人物 nf1938b
+- `dp.nf1938c` · `data/cards/dossier/pages.json` · 要写：title · 人物 nf1938c
+- `dp.nf1938d` · `data/cards/dossier/pages.json` · 要写：title · 人物 nf1938d
+- `dp.nf1939a` · `data/cards/dossier/pages.json` · 要写：title · 人物 nf1939a
+- `dp.nf1939b` · `data/cards/dossier/pages.json` · 要写：title · 人物 nf1939b
+- `dp.nf1939c` · `data/cards/dossier/pages.json` · 要写：title · 人物 nf1939c
+- `dp.nf1939d` · `data/cards/dossier/pages.json` · 要写：title · 人物 nf1939d
+- `dp.nf1940a` · `data/cards/dossier/pages.json` · 要写：title · 人物 nf1940a
+- `dp.nf1940b` · `data/cards/dossier/pages.json` · 要写：title · 人物 nf1940b
+- `dp.nf1940c` · `data/cards/dossier/pages.json` · 要写：title · 人物 nf1940c
+- `dp.nf1940d` · `data/cards/dossier/pages.json` · 要写：title · 人物 nf1940d
+- `dp.postman` · `data/cards/dossier/pages.json` · 要写：title · 人物 postman
+- `dp.stranger_boatman` · `data/cards/dossier/pages.json` · 要写：title · 人物 stranger_boatman
+- `dp.stranger_collector` · `data/cards/dossier/pages.json` · 要写：title · 人物 stranger_collector
+- `dp.stranger_fence` · `data/cards/dossier/pages.json` · 要写：title · 人物 stranger_fence
+- `dp.stranger_peddler` · `data/cards/dossier/pages.json` · 要写：title · 人物 stranger_peddler
+- `dp.stranger_refugee` · `data/cards/dossier/pages.json` · 要写：title · 人物 stranger_refugee
+- `dp.stranger_student` · `data/cards/dossier/pages.json` · 要写：title · 人物 stranger_student
+- `dp.stranger_waixiang` · `data/cards/dossier/pages.json` · 要写：title · 人物 stranger_waixiang
+- `dp.stranger_widow` · `data/cards/dossier/pages.json` · 要写：title · 人物 stranger_widow
+- `dp.sunlaoye` · `data/cards/dossier/pages.json` · 要写：title · 人物 sunlaoye
+- `dp.sunyoung` · `data/cards/dossier/pages.json` · 要写：title · 人物 sunyoung
+- `dp.tudi` · `data/cards/era/1939/apprentice.json` · 要写：title · 人物 tudi
+- `dp.wangshan` · `data/cards/dossier/pages.json` · 要写：title · 人物 wangshan
+- `dp.wu` · `data/cards/dossier/pages.json` · 要写：title · 人物 wu
+- `dp.xiaoding` · `data/cards/dossier/pages.json` · 要写：title · 人物 xiaoding
+- `dp.zhang` · `data/cards/dossier/pages.json` · 要写：title · 人物 zhang
+- `dp.zhao` · `data/cards/dossier/pages.json` · 要写：title · 人物 zhao
+- `dp.zhouma` · `data/cards/dossier/pages.json` · 要写：title · 人物 zhouma
+
+### estate（5）
+
+- `es.counter` · `data/cards/common/estates.json` · 要写：title、body、mortgaged
+- `es.jewel_cabinet` · `data/cards/common/estates.json` · 要写：title、body、mortgaged
+- `es.old_house` · `data/cards/common/estates.json` · 要写：title、body、mortgaged
+- `es.shopfront` · `data/cards/common/estates.json` · 要写：title、body、mortgaged
+- `es.storeroom` · `data/cards/common/estates.json` · 要写：title、body、mortgaged
+
+### event（51）
+
+- `ev.1938.cat_arrive` · `data/cards/era/1938/pet.json` · 要写：title、body、choices.keep、choices.shoo、outcomes.ignored · 选项 keep、shoo
+- `ev.1938.dock_night` · `data/cards/era/1938/events.json` · 要写：title、body、choices.help、choices.refuse、choices.report、slots.man、outcomes.success、outcomes.fail · 选项 help、refuse、report · 格子 man
+- `ev.1938.find_cat` · `data/cards/era/1938/pet.json` · 要写：title、body、choices.search、choices.leave_it、outcomes.ignored · 选项 search、leave_it
+- `ev.1938.levy_call` · `data/cards/era/1938/events.json` · 要写：title、body、choices.pay、choices.talk、choices.ignore、slots.favor、slots.man、outcomes.success、outcomes.fail、outcomes.ignored · 选项 pay、talk、ignore · 格子 favor、man
+- `ev.1938.night_patrol` · `data/cards/era/1938/events.json` · 要写：title、body、slots.man、slots.cash、outcomes.success、outcomes.fail · 格子 man、cash
+- `ev.1938.police_check` · `data/cards/era/1938/events.json` · 要写：title、body、slots.paper、slots.cash、slots.man、outcomes.success、outcomes.fail · 格子 paper、cash、man
+- `ev.1938.police_open` · `data/cards/era/1938/events.json` · 要写：title、body、choices.attend、choices.stay、choices.send、slots.man、outcomes.success、outcomes.fail、outcomes.ignored · 选项 attend、stay、send · 格子 man
+- `ev.1938.puppet_roll` · `data/cards/era/1938/events.json` · 要写：title、body、choices.go、choices.send、choices.skip、slots.man、outcomes.success、outcomes.fail、outcomes.ignored · 选项 go、send、skip · 格子 man
+- `ev.1938.refugee_door` · `data/cards/era/1938/events.json` · 要写：title、body、choices.give、choices.turn、outcomes.ignored · 选项 give、turn
+- `ev.1938.rice_line` · `data/cards/era/1938/events.json` · 要写：title、body、slots.cash、slots.man、outcomes.success、outcomes.fail · 格子 cash、man
+- `ev.1938.road_pass` · `data/cards/era/1938/events.json` · 要写：title、body、slots.paper、slots.cash、slots.man、outcomes.success、outcomes.fail · 格子 paper、cash、man
+- `ev.1938.tut_contact` · `data/cards/era/1938/tutorial.json` · 要写：title、body、choices.trust、outcomes.ignored · 选项 trust
+- `ev.1938.tut_fortune` · `data/cards/era/1938/tutorial.json` · 要写：title、body、choices.pass · 选项 pass
+- `ev.1938.tut_slots` · `data/cards/era/1938/tutorial.json` · 要写：title、body、slots.who、slots.cash、outcomes.success、outcomes.fail · 格子 who、cash
+- `ev.1938.wharf_due` · `data/cards/era/1938/events.json` · 要写：title、body、choices.pay、choices.haggle、choices.refuse、slots.man、outcomes.success、outcomes.fail、outcomes.ignored · 选项 pay、haggle、refuse · 格子 man
+- `ev.1939.charcoal_spike` · `data/cards/era/1939/events.json` · 要写：title、body、choices.buy、choices.endure、choices.fetch、slots.man、outcomes.success、outcomes.fail、outcomes.ignored · 选项 buy、endure、fetch · 格子 man
+- `ev.1939.cocoon_desk` · `data/cards/era/1939/events.json` · 要写：title、body、choices.register、choices.refuse、choices.delay、slots.fixer、outcomes.success、outcomes.fail、outcomes.ignored · 选项 register、refuse、delay · 格子 fixer
+- `ev.1939.countryside_word` · `data/cards/era/1939/events.json` · 要写：title、body、choices.listen、choices.pay_runner、choices.ignore · 选项 listen、pay_runner、ignore
+- `ev.1939.district_levy` · `data/cards/era/1939/events.json` · 要写：title、body、choices.give、choices.cash、choices.hide、slots.man、outcomes.success、outcomes.fail、outcomes.ignored · 选项 give、cash、hide · 格子 man
+- `ev.1939.gate_check` · `data/cards/era/1939/events.json` · 要写：title、body、slots.paper、slots.cash、slots.man、outcomes.success、outcomes.fail、outcomes.ignored · 格子 paper、cash、man
+- `ev.1939.night_market` · `data/cards/era/1939/events.json` · 要写：title、body、choices.stay_open、choices.close_early、outcomes.ignored · 选项 stay_open、close_early
+- `ev.1939.patrol` · `data/cards/era/1939/events.json` · 要写：title、body、slots.paper、slots.cash、slots.man、outcomes.success、outcomes.fail · 格子 paper、cash、man
+- `ev.1939.refugee_cold` · `data/cards/era/1939/events.json` · 要写：title、body、choices.give、choices.direct、choices.send_off、outcomes.ignored · 选项 give、direct、send_off
+- `ev.1939.snow_road` · `data/cards/era/1939/events.json` · 要写：title、body、choices.clear、choices.wait、slots.man、outcomes.success、outcomes.fail、outcomes.ignored · 选项 clear、wait · 格子 man
+- `ev.1939.wu_price` · `data/cards/era/1939/events.json` · 要写：title、body、choices.buy、choices.haggle、choices.refuse、slots.talker、outcomes.success、outcomes.fail、outcomes.ignored · 选项 buy、haggle、refuse · 格子 talker
+- `ev.1939.year_debt` · `data/cards/era/1939/events.json` · 要写：title、body、choices.pay、choices.plead、choices.hide、slots.talker、slots.man、outcomes.success、outcomes.fail、outcomes.ignored · 选项 pay、plead、hide · 格子 talker、man
+- `ev.1940.curfew` · `data/cards/era/1940/events.json` · 要写：title、body、choices.obey、choices.stay、outcomes.ignored · 选项 obey、stay
+- `ev.1940.gate_tight` · `data/cards/era/1940/events.json` · 要写：title、body、choices.bribe、choices.talk、choices.stay、slots.talker、outcomes.success、outcomes.fail、outcomes.ignored · 选项 bribe、talk、stay · 格子 talker
+- `ev.1940.household_count` · `data/cards/era/1940/events.json` · 要写：title、body、slots.paper、slots.cash、slots.man、outcomes.success、outcomes.fail · 格子 paper、cash、man
+- `ev.1940.levy_rename` · `data/cards/era/1940/events.json` · 要写：title、body、choices.pay、choices.haggle、choices.refuse、slots.talker、outcomes.success、outcomes.fail、outcomes.ignored · 选项 pay、haggle、refuse · 格子 talker
+- `ev.1940.new_official` · `data/cards/era/1940/events.json` · 要写：title、body、choices.register、choices.gift、choices.avoid、outcomes.ignored · 选项 register、gift、avoid
+- `ev.1940.papers_swap` · `data/cards/era/1940/events.json` · 要写：title、body、choices.show、choices.buy、choices.ignore、outcomes.ignored · 选项 show、buy、ignore
+- `ev.1940.rice_notice` · `data/cards/era/1940/events.json` · 要写：title、body、choices.buy、choices.accept、choices.raise、outcomes.ignored · 选项 buy、accept、raise
+- `ev.1940.shop_search` · `data/cards/era/1940/events.json` · 要写：title、body、slots.paper、slots.cash、slots.man、outcomes.success、outcomes.fail · 格子 paper、cash、man
+- `ev.1940.signboard` · `data/cards/era/1940/events.json` · 要写：title、body、choices.change、choices.keep、outcomes.ignored · 选项 change、keep
+- `ev.1940.wang_regime` · `data/cards/era/1940/events.json` · 要写：title、body、choices.read、choices.open_shop、choices.shut、outcomes.ignored · 选项 read、open_shop、shut
+- `ev.any.alley_row` · `data/cards/era/common/events.json` · 要写：title、body、slots.man、slots.favor、outcomes.success、outcomes.fail · 格子 man、favor
+- `ev.any.apprentice_audit` · `data/cards/era/1939/apprentice.json` · 要写：title、body、choices.forgive、choices.scold、choices.dismiss、outcomes.ignored · 选项 forgive、scold、dismiss
+- `ev.any.apprentice_steal` · `data/cards/era/1939/apprentice.json` · 要写：title、body、choices.catch、choices.overlook、choices.dismiss、outcomes.ignored · 选项 catch、overlook、dismiss
+- `ev.any.apprentice_succeed` · `data/cards/era/1939/apprentice.json` · 要写：title、body、choices.accept、choices.later、outcomes.ignored · 选项 accept、later
+- `ev.any.apprentice_tip` · `data/cards/era/1939/apprentice.json` · 要写：title、body、choices.cover、choices.let、choices.dismiss、outcomes.ignored · 选项 cover、let、dismiss
+- `ev.any.cezi_stall` · `data/cards/era/common/events.json` · 要写：title、body、choices.pass · 选项 pass
+- `ev.any.curfew` · `data/cards/era/common/events.json` · 要写：title、body、slots.paper、slots.man、outcomes.success、outcomes.fail · 格子 paper、man
+- `ev.any.demand_return` · `data/cards/demand/demand_return.json` · 要写：title、body、slots.who、outcomes.success、outcomes.fail、outcomes.ignored · 格子 who
+- `ev.any.fair` · `data/cards/era/common/events.json` · 要写：title、body、choices.pass · 选项 pass
+- `ev.any.fortune_teller` · `data/cards/era/common/events.json` · 要写：title、body、choices.pass · 选项 pass
+- `ev.any.gamble_stall` · `data/cards/era/common/events.json` · 要写：title、body、choices.pass · 选项 pass
+- `ev.any.market_haggle` · `data/cards/era/common/events.json` · 要写：title、body、slots.man、slots.cash、outcomes.success、outcomes.fail · 格子 man、cash
+- `ev.any.rain_leak` · `data/cards/era/common/events.json` · 要写：title、body、slots.cash、slots.man、outcomes.success、outcomes.fail · 格子 cash、man
+- `ev.any.temple_lot` · `data/cards/era/common/events.json` · 要写：title、body、choices.pass · 选项 pass
+- `ev.any.wheel_go` · `data/cards/era/common/events.json` · 要写：title、body
+
+### fate（30）
+
+- `fa.1938.door_fine` · `data/cards/era/1938/fate.json` · 要写：title、body、choices.pay、choices.argue、choices.shut、slots.man、outcomes.success、outcomes.fail、outcomes.ignored · 选项 pay、argue、shut · 格子 man
+- `fa.1938.kin_money` · `data/cards/era/1938/fate.json` · 要写：title、body、choices.take、choices.send_back、choices.ask_more、slots.man、outcomes.success、outcomes.fail · 选项 take、send_back、ask_more · 格子 man
+- `fa.1938.requisition` · `data/cards/era/1938/fate.json` · 要写：title、body、choices.hide、choices.hand、choices.bribe、slots.man、outcomes.success、outcomes.fail、outcomes.ignored · 选项 hide、hand、bribe · 格子 man
+- `fa.1938.rice_ease` · `data/cards/era/1938/fate.json` · 要写：title、body、choices.stock、choices.intro、choices.pass · 选项 stock、intro、pass
+- `fa.1939.charcoal_wind` · `data/cards/era/1939/fate.json` · 要写：title、body、choices.buy、choices.wait、outcomes.ignored · 选项 buy、wait
+- `fa.1939.district_fine` · `data/cards/era/1939/fate.json` · 要写：title、body、choices.pay、choices.refuse、outcomes.ignored · 选项 pay、refuse
+- `fa.1939.gate_wink` · `data/cards/era/1939/fate.json` · 要写：title、body、choices.pay、choices.refuse、outcomes.ignored · 选项 pay、refuse
+- `fa.1939.year_remittance` · `data/cards/era/1939/fate.json` · 要写：title、body、choices.accept、choices.send_back · 选项 accept、send_back
+- `fa.1940.old_buyer` · `data/cards/era/1940/fate.json` · 要写：title、body、choices.fair、choices.hard、choices.wave、outcomes.ignored · 选项 fair、hard、wave
+- `fa.1940.rice_spike` · `data/cards/era/1940/fate.json` · 要写：title、body、choices.buy_now、choices.wait、choices.sell、outcomes.ignored · 选项 buy_now、wait、sell
+- `fa.1940.spring_rain` · `data/cards/era/1940/fate.json` · 要写：title、body、choices.repair、choices.move、choices.ignore、slots.man、outcomes.success、outcomes.fail、outcomes.ignored · 选项 repair、move、ignore · 格子 man
+- `fa.1940.whisper` · `data/cards/era/1940/fate.json` · 要写：title、body、choices.hush、choices.face、choices.explain、slots.talker、outcomes.success、outcomes.fail、outcomes.ignored · 选项 hush、face、explain · 格子 talker
+- `fa.any.clear_road` · `data/cards/era/common/fate.json` · 要写：title、body、choices.open_up、choices.stay、outcomes.ignored · 选项 open_up、stay
+- `fa.any.damp_loss` · `data/cards/era/common/fate.json` · 要写：title、body、choices.cover、choices.ignore、outcomes.ignored · 选项 cover、ignore
+- `fa.any.false_charge` · `data/cards/era/common/fate.json` · 要写：title、body、choices.argue、choices.payoff、choices.silent、slots.talker、outcomes.success、outcomes.fail、outcomes.ignored · 选项 argue、payoff、silent · 格子 talker
+- `fa.any.fire_next_door` · `data/cards/era/common/fate.json` · 要写：title、body、choices.move_goods、choices.call_help、choices.shut_door、slots.man、outcomes.success、outcomes.fail、outcomes.ignored · 选项 move_goods、call_help、shut_door · 格子 man
+- `fa.any.found_claim` · `data/cards/era/common/fate.json` · 要写：title、body、choices.return_it、choices.keep、outcomes.ignored · 选项 return_it、keep
+- `fa.any.found_purse` · `data/cards/era/common/fate.json` · 要写：title、body、choices.keep、choices.return_it · 选项 keep、return_it
+- `fa.any.illness` · `data/cards/era/common/fate.json` · 要写：title、body、choices.buy_medicine、choices.endure、outcomes.ignored · 选项 buy_medicine、endure
+- `fa.any.kin_money` · `data/cards/era/common/fate.json` · 要写：title、body、choices.accept、choices.send_back · 选项 accept、send_back
+- `fa.any.neighbor_row` · `data/cards/era/common/fate.json` · 要写：title、body、choices.mediate、choices.stay_out、slots.talker、outcomes.success、outcomes.fail、outcomes.ignored · 选项 mediate、stay_out · 格子 talker
+- `fa.any.night_knock` · `data/cards/era/common/fate.json` · 要写：title、body、choices.open_door、choices.shut、outcomes.ignored · 选项 open_door、shut
+- `fa.any.regular_intro` · `data/cards/era/common/fate.json` · 要写：title、body、choices.welcome、choices.busy · 选项 welcome、busy
+- `fa.any.requisition` · `data/cards/era/common/fate.json` · 要写：title、body、choices.give、choices.hide、slots.man、outcomes.success、outcomes.fail、outcomes.ignored · 选项 give、hide · 格子 man
+- `fa.any.rice_dip` · `data/cards/era/common/fate.json` · 要写：title、body、choices.buy、choices.pass · 选项 buy、pass
+- `fa.any.shop_sealed` · `data/cards/era/common/fate.json` · 要写：title、body、choices.bribe、choices.accept、outcomes.ignored · 选项 bribe、accept
+- `fa.any.snow_day` · `data/cards/era/common/fate.json` · 要写：title、body、choices.sell、choices.stay_in、outcomes.ignored · 选项 sell、stay_in
+- `fa.any.stranger_deal` · `data/cards/era/common/fate.json` · 要写：title、body、choices.take、choices.refuse、outcomes.ignored · 选项 take、refuse
+- `fa.any.street_fine` · `data/cards/era/common/fate.json` · 要写：title、body、choices.pay、choices.refuse、outcomes.ignored · 选项 pay、refuse
+- `fa.any.theft` · `data/cards/era/common/fate.json` · 要写：title、body、choices.chase、choices.let_go、slots.man、outcomes.success、outcomes.fail、outcomes.ignored · 选项 chase、let_go · 格子 man
+
+### fortune_lot（35）
+
+- `lot.g0.any` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g0.dispute` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g0.fire` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g0.illness` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g0.official` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g0.road` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g0.stranger` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g1.any` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g1.dispute` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g1.family` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g1.far` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g1.illness` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g1.water` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g1.wealth` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g2.any` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g2.family` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g2.fire` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g2.official` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g2.road` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g2.stranger` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g2.water` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g3.any` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g3.family` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g3.far` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g3.official` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g3.road` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g3.water` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g3.wealth` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g4.any` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g4.family` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g4.far` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g4.fire` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g4.illness` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g4.water` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+- `lot.g4.wealth` · `data/cards/fortune/lots.json` · 要写：verse、gloss
+
+### goal（18）
+
+- `gl.1938.keep_shop` · `data/cards/era/1938/goals.json` · 要写：title、done、failed
+- `gl.1938.levy_clear` · `data/cards/era/1938/goals.json` · 要写：title、done、failed
+- `gl.1938.low_heat` · `data/cards/era/1938/goals.json` · 要写：title、done、failed
+- `gl.1938.redeem_cabinet` · `data/cards/era/1938/goals.json` · 要写：title、done、failed
+- `gl.1938.storeroom` · `data/cards/era/1938/goals.json` · 要写：title、done、failed
+- `gl.1938.zhouma_page` · `data/cards/era/1938/goals.json` · 要写：title、done、failed
+- `gl.1939.cabinet_free` · `data/cards/era/1939/goals.json` · 要写：title、done、failed
+- `gl.1939.clear_books` · `data/cards/era/1939/goals.json` · 要写：title、done、failed
+- `gl.1939.debt_paid` · `data/cards/era/1939/goals.json` · 要写：title、done、failed
+- `gl.1939.gate_passed` · `data/cards/era/1939/goals.json` · 要写：title、done、failed
+- `gl.1939.quiet_year` · `data/cards/era/1939/goals.json` · 要写：title、done、failed
+- `gl.1939.rice_ready` · `data/cards/era/1939/goals.json` · 要写：title、done、failed
+- `gl.1940.cash_left` · `data/cards/era/1940/goals.json` · 要写：title、done、failed
+- `gl.1940.census_clear` · `data/cards/era/1940/goals.json` · 要写：title、done、failed
+- `gl.1940.heat_quiet` · `data/cards/era/1940/goals.json` · 要写：title、done、failed
+- `gl.1940.levy_done` · `data/cards/era/1940/goals.json` · 要写：title、done、failed
+- `gl.1940.ruhua_well` · `data/cards/era/1940/goals.json` · 要写：title、done、failed
+- `gl.1940.stand_rules` · `data/cards/era/1940/goals.json` · 要写：title、done、failed
+
+### guide_step（70）
+
+- `gd.almanac` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 almanac · 谁 obj.almanac
+- `gd.apprentice` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 apprentice · 谁 obj.brother_ledger
+- `gd.big_wheel` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 big_wheel · 谁 obj.brother_ledger
+- `gd.branch_pick` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 branch_pick
+- `gd.cezi` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 cezi · 谁 suanming
+- `gd.choice` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 choice · 谁 brother
+- `gd.coins` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 coins · 谁 obj.brother_ledger
+- `gd.contact` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 contact · 谁 zhouma
+- `gd.contacts_full` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 contacts_full · 谁 obj.brother_ledger
+- `gd.currency` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 currency · 谁 obj.notice
+- `gd.d1.buyer` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 buyer · 谁 brother
+- `gd.d1.close` · `data/cards/guide/steps.json` · 要写：say、bubble · 谁 brother
+- `gd.d1.deal` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 deal · 谁 brother
+- `gd.d1.look` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 counter · 谁 brother
+- `gd.d1.night` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 night · 谁 brother
+- `gd.d1.notice` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 notice · 谁 brother
+- `gd.d1.person` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 person · 谁 brother
+- `gd.d1.settle` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 settle · 谁 brother
+- `gd.d1.shelf` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 shelf · 谁 brother
+- `gd.d1.spot` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 mg.spot · 谁 brother
+- `gd.d1.ticket` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 ticket · 谁 brother
+- `gd.d1.tiers` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 counter · 谁 brother
+- `gd.d2.gold` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 gold · 谁 brother
+- `gd.d2.keep` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 keep · 谁 brother
+- `gd.d2.rules` · `data/cards/guide/steps.json` · 要写：say、bubble · 谁 brother
+- `gd.demand` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 demand · 谁 hu2
+- `gd.demand_delay` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 demand_delay · 谁 hu2
+- `gd.demand_fail` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 demand_fail · 谁 hu2
+- `gd.demand_inform` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 demand_inform、demand_fabricate · 谁 obj.brother_ledger
+- `gd.demand_people` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 demand_people_return · 谁 obj.brother_ledger
+- `gd.dossier` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 dossier · 谁 zhouma
+- `gd.dossier_gap` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 dossier_gap · 谁 obj.brother_ledger
+- `gd.fair_wheel` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 fair_wheel、wheel_stake · 谁 obj.notice
+- `gd.fate` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 fate · 谁 obj.brother_ledger
+- `gd.gamble_wheel` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 gamble_wheel
+- `gd.game_over` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 game_over
+- `gd.gold_leave` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 gold_leave · 谁 obj.brother_ledger
+- `gd.kept_expire` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 kept_expire · 谁 obj.brother_ledger
+- `gd.kept_full` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 kept_full · 谁 obj.brother_ledger
+- `gd.kept_risk` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 kept_risk · 谁 obj.brother_ledger
+- `gd.life` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 life · 谁 obj.brother_ledger
+- `gd.lot` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 lot · 谁 suanming
+- `gd.m.incense` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 incense · 谁 brother
+- `gd.m.open` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 month_open · 谁 brother
+- `gd.m.wheel` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 month_wheel · 谁 brother
+- `gd.market_day` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 market_day · 谁 obj.notice
+- `gd.mg.coin_ring` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 mg.coin_ring · 谁 obj.brother_ledger
+- `gd.mg.decode` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 mg.decode · 谁 postman
+- `gd.mg.fragments` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 mg.fragments · 谁 obj.brother_ledger
+- `gd.mg.weigh` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 mg.weigh · 谁 obj.brother_ledger
+- `gd.money_short` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 money_short
+- `gd.month_close` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 month_close · 谁 obj.brother_ledger
+- `gd.mortgage` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 mortgage
+- `gd.must` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 must_resolve · 谁 obj.brother_ledger
+- `gd.news` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 news · 谁 zhouma
+- `gd.office` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 office · 谁 obj.brother_ledger
+- `gd.person_state` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 person_state · 谁 obj.brother_ledger
+- `gd.pet` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 pet · 谁 obj.brother_ledger
+- `gd.prison` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 prison
+- `gd.redeem` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 redeem · 谁 obj.brother_ledger
+- `gd.resume` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 resume
+- `gd.retry` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 retry
+- `gd.scare` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 scare · 谁 obj.brother_ledger
+- `gd.shop_closed` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 shop_closed · 谁 obj.notice
+- `gd.slots` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 slots · 谁 obj.brother_ledger
+- `gd.street` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 street
+- `gd.tiers` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 tier_rep、tier_heat · 谁 zhouma
+- `gd.weather` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 weather · 谁 obj.notice
+- `gd.year_after` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 year_after · 谁 obj.brother_ledger
+- `gd.year_jump` · `data/cards/guide/steps.json` · 要写：say、bubble · 教 year_jump · 谁 obj.brother_ledger
+
+### item（82）
+
+- `it.art.calligraphy` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.art.flowers` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.art.landscape` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.art.woodcut` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.clothing.coat` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.clothing.qipao` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.clothing.robe` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.clothing.scarf` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.documents.field` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.documents.house` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.documents.letter` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.documents.receipt` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.goldbar.bar_one` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.goldbar.bar_ten` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.jewelry.bangle` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.jewelry.hairpin` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.jewelry.jade` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.jewelry.ring` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.medicine.aspirin` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.medicine.iodine` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.medicine.quinine` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.medicine.sulfa` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.papers.iou` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.papers.shop_slip` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.papers.tax_slip` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.papers.waybill` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.rice.broken` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.rice.jing` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.rice.nuo` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.rice.xian` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.silver.bits` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.silver.yuan_a` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.silver.yuan_b` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.silver.yuan_c` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.silverware.box` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.silverware.cup` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.silverware.spoon` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.utensils.bowl` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.utensils.clock` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.utensils.tinpot` · `data/cards/minigames/items.json` · 要写：title、body
+- `it.utensils.warmer` · `data/cards/minigames/items.json` · 要写：title、body
+- `item.art.calligraphy` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.art.flowers` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.art.landscape` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.art.woodcut` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.clothing.coat` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.clothing.qipao` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.clothing.robe` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.clothing.scarf` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.documents.field` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.documents.house` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.documents.letter` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.documents.receipt` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.goldbar.bar_one` · `data/cards/items/templates_extra.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.goldbar.bar_ten` · `data/cards/items/templates_extra.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.jewelry.bangle` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.jewelry.hairpin` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.jewelry.jade` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.jewelry.ring` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.medicine.aspirin` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.medicine.iodine` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.medicine.quinine` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.medicine.sulfa` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.papers.iou` · `data/cards/items/templates_extra.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.papers.shop_slip` · `data/cards/items/templates_extra.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.papers.tax_slip` · `data/cards/items/templates_extra.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.papers.waybill` · `data/cards/items/templates_extra.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.rice.broken` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.rice.jing` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.rice.nuo` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.rice.xian` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.silver.bits` · `data/cards/items/templates_extra.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.silver.yuan_a` · `data/cards/items/templates_extra.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.silver.yuan_b` · `data/cards/items/templates_extra.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.silver.yuan_c` · `data/cards/items/templates_extra.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.silverware.box` · `data/cards/items/templates_extra.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.silverware.cup` · `data/cards/items/templates_extra.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.silverware.spoon` · `data/cards/items/templates_extra.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.utensils.bowl` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.utensils.clock` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.utensils.tinpot` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+- `item.utensils.warmer` · `data/town/item_templates.json` · 要写：name、material、good_text、worn_text、real_text、fake_text、ticket_condition
+
+### kept（16）
+
+- `kp.blank_ticket` · `data/cards/common/kept.json` · 要写：title、body、use
+- `kp.brother_note` · `data/cards/common/kept.json` · 要写：title、body、use
+- `kp.gate_pass` · `data/cards/common/kept.json` · 要写：title、body、use
+- `kp.gold_bar` · `data/cards/common/kept.json` · 要写：title、body、use
+- `kp.hu_owes` · `data/cards/common/kept.json` · 要写：title、body、use
+- `kp.leverage.li` · `data/cards/common/kept.json` · 要写：title、body、use
+- `kp.leverage.wu` · `data/cards/common/kept.json` · 要写：title、body、use
+- `kp.leverage.xiaoding` · `data/cards/common/kept.json` · 要写：title、body、use
+- `kp.leverage.zhang` · `data/cards/common/kept.json` · 要写：title、body、use
+- `kp.liangmin` · `data/cards/common/kept.json` · 要写：title、body、use
+- `kp.ma_owes` · `data/cards/common/kept.json` · 要写：title、body、use
+- `kp.mystery_box` · `data/cards/common/kept.json` · 要写：title、body、use
+- `kp.pistol` · `data/cards/era/1939/weapon.json` · 要写：title、body、use
+- `kp.silver_keepsake` · `data/cards/common/kept.json` · 要写：title、body、use
+- `kp.sunfu_letter` · `data/cards/common/kept.json` · 要写：title、body、use
+- `kp.zhao_favor` · `data/cards/common/kept.json` · 要写：title、body、use
+
+### life（22）
+
+- `lf.1938.qingming_prep` · `data/cards/era/1938/life.json` · 要写：title、body、choices.buy、choices.skip、outcomes.ignored · 选项 buy、skip
+- `lf.1938.spring_chill` · `data/cards/era/1938/life.json` · 要写：title、body、choices.buy、choices.endure、outcomes.ignored · 选项 buy、endure
+- `lf.1938.spring_roof` · `data/cards/era/1938/life.json` · 要写：title、body、choices.fix、choices.wait、outcomes.ignored · 选项 fix、wait
+- `lf.1939.fuel_stock` · `data/cards/era/1939/life.json` · 要写：title、body、choices.buy、choices.skip、outcomes.ignored · 选项 buy、skip
+- `lf.1939.new_year_goods` · `data/cards/era/1939/life.json` · 要写：title、body、choices.buy、choices.skip、outcomes.ignored · 选项 buy、skip
+- `lf.1939.pawn_coat` · `data/cards/era/1939/life.json` · 要写：title、body、choices.pawn、choices.borrow、choices.endure、outcomes.ignored · 选项 pawn、borrow、endure
+- `lf.1939.year_tab` · `data/cards/era/1939/life.json` · 要写：title、body、choices.pay、choices.delay、outcomes.ignored · 选项 pay、delay
+- `lf.1940.census_chit` · `data/cards/era/1940/life.json` · 要写：title、body、choices.pay、choices.endure、outcomes.ignored · 选项 pay、endure
+- `lf.1940.door_paper` · `data/cards/era/1940/life.json` · 要写：title、body、choices.pay、choices.endure、outcomes.ignored · 选项 pay、endure
+- `lf.1940.school_rename` · `data/cards/era/1940/life.json` · 要写：title、body、choices.pay、choices.endure、outcomes.ignored · 选项 pay、endure
+- `lf.any.coal_out` · `data/cards/era/common/life.json` · 要写：title、body、choices.buy、choices.endure、outcomes.ignored · 选项 buy、endure
+- `lf.any.debt_due` · `data/cards/era/common/life.json` · 要写：title、body、choices.pay、choices.endure、outcomes.ignored · 选项 pay、endure
+- `lf.any.funeral` · `data/cards/era/common/life.json` · 要写：title、body、choices.pay、choices.endure、outcomes.ignored · 选项 pay、endure
+- `lf.any.lamp_oil` · `data/cards/era/common/life.json` · 要写：title、body、choices.pay、choices.endure、outcomes.ignored · 选项 pay、endure
+- `lf.any.mother_cough` · `data/cards/era/common/life.json` · 要写：title、body、choices.pay、choices.endure、outcomes.ignored · 选项 pay、endure
+- `lf.any.new_year` · `data/cards/era/common/life.json` · 要写：title、body、choices.pay、choices.endure、outcomes.ignored · 选项 pay、endure
+- `lf.any.rent` · `data/cards/era/common/life.json` · 要写：title、body、choices.pay、choices.endure、outcomes.ignored · 选项 pay、endure
+- `lf.any.repair_house` · `data/cards/era/common/life.json` · 要写：title、body、choices.pay、choices.endure、outcomes.ignored · 选项 pay、endure
+- `lf.any.rice_low` · `data/cards/era/common/life.json` · 要写：title、body、choices.buy、choices.endure、outcomes.ignored · 选项 buy、endure
+- `lf.any.school_fee` · `data/cards/era/common/life.json` · 要写：title、body、choices.pay、choices.endure、outcomes.ignored · 选项 pay、endure
+- `lf.any.see_doctor` · `data/cards/era/common/life.json` · 要写：title、body、choices.pay、choices.endure、outcomes.ignored · 选项 pay、endure
+- `lf.any.wedding_gift` · `data/cards/era/common/life.json` · 要写：title、body、choices.pay、choices.endure、outcomes.ignored · 选项 pay、endure
+
+### news（44）
+
+- `nw.1938.chen_wire` · `data/cards/news/news_1938.json` · 要写：title、body
+- `nw.1938.de196_whisper` · `data/cards/news/news_1938.json` · 要写：title、body
+- `nw.1938.hu_round` · `data/cards/news/news_1938.json` · 要写：title、body
+- `nw.1938.liangmin_talk` · `data/cards/news/news_1938.json` · 要写：title、body
+- `nw.1938.linsao_boat` · `data/cards/news/news_1938.json` · 要写：title、body
+- `nw.1938.mail_delay` · `data/cards/news/news_1938.json` · 要写：title、body
+- `nw.1938.reform_paper` · `data/cards/news/news_1938.json` · 要写：title、body
+- `nw.1938.rice_board` · `data/cards/news/news_1938.json` · 要写：title、body
+- `nw.1938.sun_deed` · `data/cards/news/news_1938.json` · 要写：title、body
+- `nw.1938.teahouse_rumor` · `data/cards/news/news_1938.json` · 要写：title、body
+- `nw.1938.tut_zhouma` · `data/cards/era/1938/tutorial.json` · 要写：title、body
+- `nw.1938.wangshan_dock` · `data/cards/news/news_1938.json` · 要写：title、body
+- `nw.1938.xiaoding_rice` · `data/cards/news/news_1938.json` · 要写：title、body
+- `nw.1938.zhang_sulfa` · `data/cards/news/news_1938.json` · 要写：title、body
+- `nw.1938.zhao_land` · `data/cards/news/news_1938.json` · 要写：title、body
+- `nw.1939.brother_letter` · `data/cards/news/news_1939.json` · 要写：title、body
+- `nw.1939.brother_torn` · `data/cards/news/news_1939.json` · 要写：title、body
+- `nw.1939.chen_letter` · `data/cards/news/news_1939.json` · 要写：title、body
+- `nw.1939.cocoon_down` · `data/cards/news/news_1939.json` · 要写：title、body
+- `nw.1939.county_paper` · `data/cards/news/news_1939.json` · 要写：title、body
+- `nw.1939.firewood` · `data/cards/news/news_1939.json` · 要写：title、body
+- `nw.1939.gate_check` · `data/cards/news/news_1939.json` · 要写：title、body
+- `nw.1939.linsao_child` · `data/cards/news/news_1939.json` · 要写：title、body
+- `nw.1939.postman_run` · `data/cards/news/news_1939.json` · 要写：title、body
+- `nw.1939.rice_jump` · `data/cards/news/news_1939.json` · 要写：title、body
+- `nw.1939.student_gate` · `data/cards/news/news_1939.json` · 要写：title、body
+- `nw.1939.sun_quiet` · `data/cards/news/news_1939.json` · 要写：title、body
+- `nw.1939.wangshan_word` · `data/cards/news/news_1939.json` · 要写：title、body
+- `nw.1939.year_pawn` · `data/cards/news/news_1939.json` · 要写：title、body
+- `nw.1939.zhang_ward` · `data/cards/news/news_1939.json` · 要写：title、body
+- `nw.1940.brother_after` · `data/cards/news/news_1940.json` · 要写：title、body
+- `nw.1940.chen_code` · `data/cards/news/news_1940.json` · 要写：title、body
+- `nw.1940.dock_link` · `data/cards/news/news_1940.json` · 要写：title、body
+- `nw.1940.gate_still` · `data/cards/news/news_1940.json` · 要写：title、body
+- `nw.1940.levy_new` · `data/cards/news/news_1940.json` · 要写：title、body
+- `nw.1940.new_clerk` · `data/cards/news/news_1940.json` · 要写：title、body
+- `nw.1940.nurse_short` · `data/cards/news/news_1940.json` · 要写：title、body
+- `nw.1940.rice_still` · `data/cards/news/news_1940.json` · 要写：title、body
+- `nw.1940.stranger_clip` · `data/cards/news/news_1940.json` · 要写：title、body
+- `nw.1940.sun_ask` · `data/cards/news/news_1940.json` · 要写：title、body
+- `nw.1940.wang_paper` · `data/cards/news/news_1940.json` · 要写：title、body
+- `nw.1940.xiaoding_stay` · `data/cards/news/news_1940.json` · 要写：title、body
+- `nw.1940.zhouma_hook` · `data/cards/news/news_1940.json` · 要写：title、body
+- `nw.any.family_word` · `data/cards/news/news_any.json` · 要写：title、body
+
+### night（6）
+
+- `nt.accounts` · `data/cards/common/night.json` · 要写：title、body
+- `nt.backdoor` · `data/cards/common/night.json` · 要写：title、body
+- `nt.early_sleep` · `data/cards/common/night.json` · 要写：title、body
+- `nt.family_dinner` · `data/cards/common/night.json` · 要写：title、body · 选项 waive_life、family_word
+- `nt.telegraph` · `data/cards/common/night.json` · 要写：title、body
+- `nt.tidy` · `data/cards/common/night.json` · 要写：title、body
+
+### obs（111）
+
+- `obs.coin_ring.buzzy` · `data/cards/minigames/obs/coin_ring.json` · 要写：t · 教 coin_ring
+- `obs.coin_ring.dull` · `data/cards/minigames/obs/coin_ring.json` · 要写：t · 教 coin_ring
+- `obs.coin_ring.like_reference` · `data/cards/minigames/obs/coin_ring.json` · 要写：t · 教 coin_ring
+- `obs.coin_ring.pitch_low` · `data/cards/minigames/obs/coin_ring.json` · 要写：t · 教 coin_ring
+- `obs.coin_ring.ring_long` · `data/cards/minigames/obs/coin_ring.json` · 要写：t · 教 coin_ring
+- `obs.coin_ring.ring_short` · `data/cards/minigames/obs/coin_ring.json` · 要写：t · 教 coin_ring
+- `obs.coin_ring.ring_vague` · `data/cards/minigames/obs/coin_ring.json` · 要写：t · 教 coin_ring
+- `obs.coin_ring.unlike_reference` · `data/cards/minigames/obs/coin_ring.json` · 要写：t · 教 coin_ring
+- `obs.coin_ring.unsure` · `data/cards/minigames/obs/coin_ring.json` · 要写：t · 教 coin_ring
+- `obs.decode.5101` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5102` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5103` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5104` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5105` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5106` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5107` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5108` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5109` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5110` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5111` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5112` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5113` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5114` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5115` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5116` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5117` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5118` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5119` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5120` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5121` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5122` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5123` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5124` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5125` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5126` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5127` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5128` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5129` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5130` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5131` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5132` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5133` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5134` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5135` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5136` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5137` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5138` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5139` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5140` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5141` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5142` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5143` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5144` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5145` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5146` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5147` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5148` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5149` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5150` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5151` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5152` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5153` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5154` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5155` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5156` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5157` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5158` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5159` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5160` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5161` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5162` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5163` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5164` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5165` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5166` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5167` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5168` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5169` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5170` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5171` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.5172` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.decode.partial` · `data/cards/minigames/obs/decode.json` · 要写：t · 教 decode
+- `obs.fragments.dangzi_clear` · `data/cards/minigames/obs/fragments.json` · 要写：t · 教 fragments
+- `obs.fragments.ink_breaks` · `data/cards/minigames/obs/fragments.json` · 要写：t · 教 fragments
+- `obs.fragments.ink_continuous` · `data/cards/minigames/obs/fragments.json` · 要写：t · 教 fragments
+- `obs.fragments.piece_missing` · `data/cards/minigames/obs/fragments.json` · 要写：t · 教 fragments
+- `obs.fragments.seal_aligned` · `data/cards/minigames/obs/fragments.json` · 要写：t · 教 fragments
+- `obs.fragments.seal_offset` · `data/cards/minigames/obs/fragments.json` · 要写：t · 教 fragments
+- `obs.fragments.unsure` · `data/cards/minigames/obs/fragments.json` · 要写：t · 教 fragments
+- `obs.spot.authenticity.differs` · `data/cards/minigames/obs/spot.json` · 要写：t · 教 spot
+- `obs.spot.authenticity.plain` · `data/cards/minigames/obs/spot.json` · 要写：t · 教 spot
+- `obs.spot.authenticity.unclear` · `data/cards/minigames/obs/spot.json` · 要写：t · 教 spot
+- `obs.spot.authenticity.wear` · `data/cards/minigames/obs/spot.json` · 要写：t · 教 spot
+- `obs.spot.condition.differs` · `data/cards/minigames/obs/spot.json` · 要写：t · 教 spot
+- `obs.spot.condition.plain` · `data/cards/minigames/obs/spot.json` · 要写：t · 教 spot
+- `obs.spot.condition.unclear` · `data/cards/minigames/obs/spot.json` · 要写：t · 教 spot
+- `obs.spot.condition.wear` · `data/cards/minigames/obs/spot.json` · 要写：t · 教 spot
+- `obs.spot.material.differs` · `data/cards/minigames/obs/spot.json` · 要写：t · 教 spot
+- `obs.spot.material.plain` · `data/cards/minigames/obs/spot.json` · 要写：t · 教 spot
+- `obs.spot.material.unclear` · `data/cards/minigames/obs/spot.json` · 要写：t · 教 spot
+- `obs.spot.material.wear` · `data/cards/minigames/obs/spot.json` · 要写：t · 教 spot
+- `obs.spot.provenance.differs` · `data/cards/minigames/obs/spot.json` · 要写：t · 教 spot
+- `obs.spot.provenance.plain` · `data/cards/minigames/obs/spot.json` · 要写：t · 教 spot
+- `obs.spot.provenance.unclear` · `data/cards/minigames/obs/spot.json` · 要写：t · 教 spot
+- `obs.spot.provenance.wear` · `data/cards/minigames/obs/spot.json` · 要写：t · 教 spot
+- `obs.weigh.heavy` · `data/cards/minigames/obs/weigh.json` · 要写：t · 教 weigh
+- `obs.weigh.light_much` · `data/cards/minigames/obs/weigh.json` · 要写：t · 教 weigh
+- `obs.weigh.light_small` · `data/cards/minigames/obs/weigh.json` · 要写：t · 教 weigh
+- `obs.weigh.light_vague` · `data/cards/minigames/obs/weigh.json` · 要写：t · 教 weigh
+- `obs.weigh.match` · `data/cards/minigames/obs/weigh.json` · 要写：t · 教 weigh
+- `obs.weigh.unsure` · `data/cards/minigames/obs/weigh.json` · 要写：t · 教 weigh
+
+### pawn_ticket（1）
+
+- `tk.1938.de196` · `data/cards/era/1938/story.json` · 要写：body
+
+### person（163）
+
+- `p.any.redeem` · `data/cards/era/common/passersby.json` · 要写：title、body、lines.greet · 人物 stranger_refugee · 来意 redeem
+- `p.brother.1938.farewell` · `data/cards/era/1938/story.json` · 要写：title、body、lines.greet、choices.listen、choices.argue、outcomes.ignored · 人物 brother · 来意 story · 选项 listen、argue
+- `p.brother.1940.letter_cold` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.keep_blank、choices.burn · 人物 brother · 来意 ask · 选项 keep_blank、burn
+- `p.brother.1940.letter_warm` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.read_on、choices.set_aside · 人物 brother · 来意 ask · 选项 read_on、set_aside
+- `p.chen.1938.ask_ticket` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.tell、choices.dodge · 人物 chen · 来意 ask · 选项 tell、dodge
+- `p.chen.1938.buy_scroll` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 chen · 来意 buy
+- `p.chen.1938.help_farewell` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.stay、choices.send · 人物 chen · 来意 help · 选项 stay、send
+- `p.chen.1939.ask_letter` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、choices.tell、choices.decline · 人物 chen · 来意 ask · 选项 tell、decline
+- `p.chen.1939.pawn_clock` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 chen · 来意 pawn
+- `p.chen.1939.redeem` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet · 人物 chen · 来意 redeem
+- `p.chen.1940.dossier_link` · `data/cards/era/1940/story.json` · 要写：title、body、lines.greet、choices.link_all、choices.one_page、outcomes.ignored · 人物 chen · 来意 story · 选项 link_all、one_page
+- `p.chen.1940.pawn_quinine` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 chen · 来意 pawn
+- `p.chen.1940.redeem` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet · 人物 chen · 来意 redeem
+- `p.guanjia.1938.ask_ledger` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.tell、choices.dodge、choices.show · 人物 guanjia · 来意 ask · 选项 tell、dodge、show · 格子 talker
+- `p.guanjia.1938.ask_stranger` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.tell、choices.dodge · 人物 guanjia · 来意 ask · 选项 tell、dodge
+- `p.guanjia.1938.help_rice` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.return、choices.keep、outcomes.ignored · 人物 guanjia · 来意 help · 选项 return、keep
+- `p.guanjia.1938.tut_buy` · `data/cards/era/1938/tutorial.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 guanjia · 来意 buy
+- `p.guanjia.1939.ask_ledger` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、choices.tell、choices.hush · 人物 guanjia · 来意 ask · 选项 tell、hush
+- `p.guanjia.1939.ask_snub` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、choices.tell、choices.hush · 人物 guanjia · 来意 ask · 选项 tell、hush
+- `p.guanjia.1939.buy_bangle` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 guanjia · 来意 buy
+- `p.guanjia.1940.buy_scroll` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 guanjia · 来意 buy
+- `p.guanjia.1940.intro` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.give_letter、choices.decline_letter · 人物 guanjia · 来意 ask · 选项 give_letter、decline_letter
+- `p.guanjia.1940.pledge` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.pledge、choices.refuse_pledge · 人物 guanjia · 来意 help · 选项 pledge、refuse_pledge
+- `p.hu2.1938.ask_levy` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.tell、choices.dodge · 人物 hu2 · 来意 ask · 选项 tell、dodge
+- `p.hu2.1938.sell_ring` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 hu2 · 来意 sell
+- `p.hu2.1939.pawn_coat` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 hu2 · 来意 pawn
+- `p.hu2.1939.redeem` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet · 人物 hu2 · 来意 redeem
+- `p.hu2.1940.office_shift` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.take_new、choices.send_off · 人物 hu2 · 来意 ask · 选项 take_new、send_off
+- `p.hu2.1940.slip_cold` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.hear、choices.bar_again · 人物 hu2 · 来意 ask · 选项 hear、bar_again
+- `p.hu2.1940.slip_new` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.pay_lip、choices.cold · 人物 hu2 · 来意 ask · 选项 pay_lip、cold
+- `p.hu2.1940.slip_old` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.take_old、choices.bar、outcomes.ignored · 人物 hu2 · 来意 ask · 选项 take_old、bar
+- `p.li.1938.pawn_letter` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 li · 来意 pawn
+- `p.li.1938.redeem` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet · 人物 li · 来意 redeem
+- `p.li.1938.tut_sell` · `data/cards/era/1938/tutorial.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 li · 来意 sell
+- `p.li.1939.pawn_robe` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 li · 来意 pawn
+- `p.li.1939.redeem` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet · 人物 li · 来意 redeem
+- `p.li.1940.ask_school` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.hear、choices.dismiss · 人物 li · 来意 ask · 选项 hear、dismiss
+- `p.li.1940.sell_calligraphy` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 li · 来意 sell
+- `p.linsao.1938.help_wait` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.wait、choices.refuse · 人物 linsao · 来意 help · 选项 wait、refuse
+- `p.linsao.1938.pawn_hairpin` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused、outcomes.ignored · 人物 linsao · 来意 pawn
+- `p.linsao.1938.redeem` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet · 人物 linsao · 来意 redeem
+- `p.linsao.1938.term` · `data/cards/era/1938/story.json` · 要写：title、body、lines.greet、choices.extend、choices.forfeit、outcomes.ignored · 人物 linsao · 来意 story · 选项 extend、forfeit
+- `p.linsao.1939.pawn_coat` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 linsao · 来意 pawn
+- `p.linsao.1939.redeem` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet · 人物 linsao · 来意 redeem
+- `p.linsao.1939.year_end` · `data/cards/era/1939/story.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused、outcomes.ignored · 人物 linsao · 来意 pawn
+- `p.linsao.1940.ask_gone` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.note_gap、choices.ask_boat · 人物 linsao · 来意 ask · 选项 note_gap、ask_boat
+- `p.linsao.1940.pawn_coat` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused、outcomes.ignored · 人物 linsao · 来意 pawn
+- `p.linsao.1940.redeem` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet · 人物 linsao · 来意 redeem
+- `p.ma.1938.ask_names` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.tell、choices.dodge、outcomes.ignored · 人物 ma · 来意 ask · 选项 tell、dodge
+- `p.ma.1938.levy` · `data/cards/era/1938/story.json` · 要写：title、body、lines.greet、choices.pay、choices.refuse、choices.talk、outcomes.ignored · 人物 ma · 来意 story · 选项 pay、refuse、talk · 格子 talker
+- `p.ma.1938.sell_rice` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 ma · 来意 sell
+- `p.ma.1939.ask_grudge` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、choices.comply、choices.refuse · 人物 ma · 来意 ask · 选项 comply、refuse
+- `p.ma.1939.ask_hard` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、choices.comply、choices.refuse、outcomes.ignored · 人物 ma · 来意 ask · 选项 comply、refuse
+- `p.ma.1939.ask_soft` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、choices.comply、choices.refuse · 人物 ma · 来意 ask · 选项 comply、refuse
+- `p.ma.1940.baozhang` · `data/cards/era/1940/officialdom.json` · 要写：title、body、lines.greet、choices.take、choices.nominal、choices.buy_off、choices.refuse、outcomes.ignored · 人物 ma · 来意 story · 选项 take、nominal、buy_off、refuse
+- `p.ma.1940.levy_harsh` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.brace、choices.soothe · 人物 ma · 来意 ask · 选项 brace、soothe
+- `p.ma.1940.levy_new` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.pay_new、choices.cold · 人物 ma · 来意 ask · 选项 pay_new、cold
+- `p.ma.1940.levy_old` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.pay_old、choices.haggle、outcomes.ignored · 人物 ma · 来意 ask · 选项 pay_old、haggle
+- `p.ma.1940.office_shift` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.accept_title、choices.keep_old · 人物 ma · 来意 ask · 选项 accept_title、keep_old
+- `p.nf1938a.1938.ask_boat` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.tell、choices.dodge · 人物 nf1938a · 来意 ask · 选项 tell、dodge
+- `p.nf1938a.1938.sell_rice` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 nf1938a · 来意 sell
+- `p.nf1938b.1938.pawn_bangle` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 nf1938b · 来意 pawn
+- `p.nf1938c.1938.buy_med` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 nf1938c · 来意 buy
+- `p.nf1938d.1938.ask_watch` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.tell、choices.dodge · 人物 nf1938d · 来意 ask · 选项 tell、dodge
+- `p.nf1939a.1939.pawn_coat` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 nf1939a · 来意 pawn
+- `p.nf1939b.1939.ask_cocoon` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、choices.answer、choices.refuse · 人物 nf1939b · 来意 ask · 选项 answer、refuse
+- `p.nf1939c.1939.pawn_scarf` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 nf1939c · 来意 pawn
+- `p.nf1939d.1939.ask_office` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、choices.show、choices.refuse、outcomes.ignored · 人物 nf1939d · 来意 ask · 选项 show、refuse
+- `p.nf1939d.1939.ask_return` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、choices.show、choices.refuse · 人物 nf1939d · 来意 ask · 选项 show、refuse
+- `p.nf1940a.1940.register` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.comply、choices.delay、outcomes.ignored · 人物 nf1940a · 来意 ask · 选项 comply、delay
+- `p.nf1940a.1940.register_cold` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.comply_late、choices.delay_again · 人物 nf1940a · 来意 ask · 选项 comply_late、delay_again
+- `p.nf1940b.1940.ask_rumor` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.keep_paper、choices.refuse_paper · 人物 nf1940b · 来意 ask · 选项 keep_paper、refuse_paper
+- `p.nf1940c.1940.pawn_robe` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 nf1940c · 来意 pawn
+- `p.nf1940c.1940.redeem` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet · 人物 nf1940c · 来意 redeem
+- `p.nf1940d.1940.ask_ticket` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.copy_ticket、choices.turn_away_ticket · 人物 nf1940d · 来意 ask · 选项 copy_ticket、turn_away_ticket
+- `p.nf_pistol.1939.pawn_gun` · `data/cards/era/1939/weapon.json` · 要写：title、body、lines.greet、choices.hide、choices.refuse、outcomes.ignored · 人物 nf_pistol · 来意 story · 选项 hide、refuse
+- `p.postman.1938.ask_letter` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.keep、choices.skip · 人物 postman · 来意 ask · 选项 keep、skip
+- `p.postman.1938.ask_silence` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.open、choices.shut · 人物 postman · 来意 ask · 选项 open、shut
+- `p.postman.1938.help_copy` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.copy、choices.refuse · 人物 postman · 来意 help · 选项 copy、refuse
+- `p.postman.1938.tut_buy` · `data/cards/era/1938/tutorial.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 postman · 来意 buy
+- `p.postman.1939.ask_mail` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、choices.take_news、choices.later · 人物 postman · 来意 ask · 选项 take_news、later
+- `p.postman.1939.brother_letter` · `data/cards/era/1939/story.json` · 要写：title、body、lines.greet、choices.read、choices.hold、outcomes.ignored · 人物 postman · 来意 story · 选项 read、hold
+- `p.postman.1940.deliver` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.take、choices.refuse · 人物 postman · 来意 ask · 选项 take、refuse
+- `p.postman.1940.hook` · `data/cards/era/1940/story.json` · 要写：title、body、lines.greet、choices.follow、choices.seal、outcomes.ignored · 人物 postman · 来意 story · 选项 follow、seal
+- `p.stranger_boatman.any.ask_dock` · `data/cards/era/common/passersby.json` · 要写：title、body、lines.greet、choices.tell、choices.dodge · 人物 stranger_boatman · 来意 ask · 选项 tell、dodge
+- `p.stranger_coindealer.any.pawn_silver` · `data/cards/era/common/passersby.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 stranger_refugee · 来意 pawn
+- `p.stranger_collector.any.buy_art` · `data/cards/era/common/passersby.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 stranger_collector · 来意 buy
+- `p.stranger_fence.any.sell_ring` · `data/cards/era/common/passersby.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 stranger_fence · 来意 sell
+- `p.stranger_peddler.any.sell_bowl` · `data/cards/era/common/passersby.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 stranger_peddler · 来意 sell
+- `p.stranger_refugee.any.pawn_coat` · `data/cards/era/common/passersby.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 stranger_refugee · 来意 pawn
+- `p.stranger_student.any.ask_road` · `data/cards/era/common/passersby.json` · 要写：title、body、lines.greet、choices.tell、choices.dodge · 人物 stranger_student · 来意 ask · 选项 tell、dodge
+- `p.stranger_waixiang.any.pawn_scarf` · `data/cards/era/common/passersby.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused、choices.alms · 人物 stranger_waixiang · 来意 pawn · 选项 alms
+- `p.stranger_widow.any.help_cold` · `data/cards/era/common/passersby.json` · 要写：title、body、lines.greet、choices.give、choices.refuse · 人物 stranger_widow · 来意 help · 选项 give、refuse
+- `p.sunlaoye.1938.ask_land` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.agree、choices.refuse、outcomes.ignored · 人物 sunlaoye · 来意 ask · 选项 agree、refuse
+- `p.sunlaoye.1938.buy_field` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 sunlaoye · 来意 buy
+- `p.sunlaoye.1939.ask_year` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、choices.hear、choices.dismiss · 人物 sunlaoye · 来意 ask · 选项 hear、dismiss
+- `p.sunlaoye.1939.buy_deed` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused、outcomes.ignored · 人物 sunlaoye · 来意 buy
+- `p.sunlaoye.1940.ask_cold` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.bend、choices.hold · 人物 sunlaoye · 来意 ask · 选项 bend、hold
+- `p.sunlaoye.1940.ask_favor` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.grant、choices.refuse · 人物 sunlaoye · 来意 ask · 选项 grant、refuse
+- `p.sunlaoye.1940.stance` · `data/cards/era/1940/story.json` · 要写：title、body、lines.greet、choices.with_sun、choices.apart、choices.hedge、outcomes.ignored · 人物 sunlaoye · 来意 story · 选项 with_sun、apart、hedge
+- `p.sunyoung.1938.ask_deed` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.tell、choices.dodge · 人物 sunyoung · 来意 ask · 选项 tell、dodge
+- `p.sunyoung.1938.buy_jade` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 sunyoung · 来意 buy
+- `p.sunyoung.1938.tut_pawn` · `data/cards/era/1938/tutorial.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 sunyoung · 来意 pawn
+- `p.sunyoung.1939.buy_scroll` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 sunyoung · 来意 buy
+- `p.sunyoung.1939.pawn_qipao` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 sunyoung · 来意 pawn
+- `p.sunyoung.1939.redeem` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet · 人物 sunyoung · 来意 redeem
+- `p.sunyoung.1940.borrow` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.lend、choices.refuse · 人物 sunyoung · 来意 help · 选项 lend、refuse
+- `p.sunyoung.1940.pawn_ring` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 sunyoung · 来意 pawn
+- `p.sunyoung.1940.redeem` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet · 人物 sunyoung · 来意 redeem
+- `p.tudi.1939.ask` · `data/cards/era/1939/apprentice.json` · 要写：title、body、lines.greet、choices.take、choices.take_harsh、choices.refuse、outcomes.ignored · 人物 tudi · 来意 ask · 选项 take、take_harsh、refuse
+- `p.wangshan.1938.ask_road` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.tell、choices.dodge · 人物 wangshan · 来意 ask · 选项 tell、dodge
+- `p.wangshan.1938.help_food` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.give、choices.refuse · 人物 wangshan · 来意 help · 选项 give、refuse
+- `p.wangshan.1938.visit` · `data/cards/era/1938/story.json` · 要写：title、body、lines.greet、choices.shelter、choices.turn_in、outcomes.ignored · 人物 wangshan · 来意 story · 选项 shelter、turn_in
+- `p.wangshan.1939.ask_wary` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、choices.hear、choices.shut · 人物 wangshan · 来意 ask · 选项 hear、shut
+- `p.wangshan.1939.pawn_ring` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 wangshan · 来意 pawn
+- `p.wangshan.1939.redeem` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet · 人物 wangshan · 来意 redeem
+- `p.wangshan.1939.whereabouts` · `data/cards/era/1939/story.json` · 要写：title、body、lines.greet、choices.ask_where、choices.shelter、choices.send_off、outcomes.ignored · 人物 wangshan · 来意 story · 选项 ask_where、shelter、send_off
+- `p.wangshan.1940.ask_lost` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.note、choices.drop · 人物 wangshan · 来意 ask · 选项 note、drop
+- `p.wangshan.1940.help_hide` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.shelter、choices.turn_away · 人物 wangshan · 来意 help · 选项 shelter、turn_away
+- `p.wu.1938.buy_rice` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 wu · 来意 buy
+- `p.wu.1938.sell_jing` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 wu · 来意 sell
+- `p.wu.1938.tut_sell` · `data/cards/era/1938/tutorial.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 wu · 来意 sell
+- `p.wu.1939.ask_cold` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、choices.listen、choices.pass · 人物 wu · 来意 ask · 选项 listen、pass
+- `p.wu.1939.ask_supply` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、choices.listen、choices.pass · 人物 wu · 来意 ask · 选项 listen、pass
+- `p.wu.1939.buy_rice` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 wu · 来意 buy
+- `p.wu.1939.sell_rice` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused、outcomes.ignored · 人物 wu · 来意 sell
+- `p.wu.1940.ask_stock` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.stock_up、choices.wait · 人物 wu · 来意 ask · 选项 stock_up、wait
+- `p.wu.1940.sell_rice` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 wu · 来意 sell
+- `p.xiaoding.1938.help_mother` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.give、choices.refuse · 人物 xiaoding · 来意 help · 选项 give、refuse
+- `p.xiaoding.1938.sell_rice` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 xiaoding · 来意 sell
+- `p.xiaoding.1938.tut_buy` · `data/cards/era/1938/tutorial.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 xiaoding · 来意 buy
+- `p.xiaoding.1939.pawn_scarf_cold` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 xiaoding · 来意 pawn
+- `p.xiaoding.1939.pawn_scarf_known` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 xiaoding · 来意 pawn
+- `p.xiaoding.1939.redeem` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet · 人物 xiaoding · 来意 redeem
+- `p.xiaoding.1940.pawn_rice` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 xiaoding · 来意 pawn
+- `p.xiaoding.1940.redeem` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet · 人物 xiaoding · 来意 redeem
+- `p.zhang.1938.help_shanghai` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.give、choices.refuse · 人物 zhang · 来意 help · 选项 give、refuse
+- `p.zhang.1938.sell_sulfa` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 zhang · 来意 sell
+- `p.zhang.1938.tut_pawn` · `data/cards/era/1938/tutorial.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 zhang · 来意 pawn
+- `p.zhang.1939.pawn_coat` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 zhang · 来意 pawn
+- `p.zhang.1939.redeem` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet · 人物 zhang · 来意 redeem
+- `p.zhang.1939.sell_medicine` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 zhang · 来意 sell
+- `p.zhang.1940.ask_ward` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.reserve、choices.refuse · 人物 zhang · 来意 ask · 选项 reserve、refuse
+- `p.zhang.1940.sell_sulfa` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 zhang · 来意 sell
+- `p.zhao.1938.borrow` · `data/cards/era/1938/story.json` · 要写：title、body、lines.greet、choices.lend、choices.partial、choices.refuse、outcomes.ignored · 人物 zhao · 来意 story · 选项 lend、partial、refuse
+- `p.zhao.1938.help_thanks` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.listen、choices.cut · 人物 zhao · 来意 help · 选项 listen、cut
+- `p.zhao.1938.pawn_robe` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 zhao · 来意 pawn
+- `p.zhao.1938.redeem` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet · 人物 zhao · 来意 redeem
+- `p.zhao.1939.pawn_coat` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 zhao · 来意 pawn
+- `p.zhao.1939.redeem` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet · 人物 zhao · 来意 redeem
+- `p.zhao.1939.repay` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、choices.take、choices.waive · 人物 zhao · 来意 help · 选项 take、waive
+- `p.zhao.1940.help_again` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.lend、choices.refuse · 人物 zhao · 来意 help · 选项 lend、refuse
+- `p.zhao.1940.pawn_field` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 zhao · 来意 pawn
+- `p.zhao.1940.redeem` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet · 人物 zhao · 来意 redeem
+- `p.zhouma.1938.ask_town` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.tell、choices.dodge · 人物 zhouma · 来意 ask · 选项 tell、dodge
+- `p.zhouma.1938.ask_zhao` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.tell、choices.dodge · 人物 zhouma · 来意 ask · 选项 tell、dodge
+- `p.zhouma.1938.help_meal` · `data/cards/era/1938/people.json` · 要写：title、body、lines.greet、choices.carry、choices.refuse · 人物 zhouma · 来意 help · 选项 carry、refuse
+- `p.zhouma.1939.ask_rumor` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、choices.listen、choices.pass · 人物 zhouma · 来意 ask · 选项 listen、pass
+- `p.zhouma.1939.pawn_scarf` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 zhouma · 来意 pawn
+- `p.zhouma.1939.redeem` · `data/cards/era/1939/people.json` · 要写：title、body、lines.greet · 人物 zhouma · 来意 redeem
+- `p.zhouma.1940.ask_cold` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.listen、choices.hush · 人物 zhouma · 来意 ask · 选项 listen、hush
+- `p.zhouma.1940.ask_open` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、choices.listen、choices.hush · 人物 zhouma · 来意 ask · 选项 listen、hush
+- `p.zhouma.1940.sell_scarf` · `data/cards/era/1940/people.json` · 要写：title、body、lines.greet、lines.accept、lines.leave、lines.refused · 人物 zhouma · 来意 sell
+
+### person_name（49）
+
+- `brother` · `data/cast.json` · 要写：name · 人物 brother
+- `chen` · `data/cast.json` · 要写：name · 人物 chen
+- `ex_girl` · `data/cards/common/extras.json` · 要写：name · 人物 ex_girl
+- `ex_hu2_man` · `data/cards/common/extras.json` · 要写：name · 人物 ex_hu2_man
+- `ex_newsboy` · `data/cards/common/extras.json` · 要写：name · 人物 ex_newsboy
+- `ex_oldman` · `data/cards/common/extras.json` · 要写：name · 人物 ex_oldman
+- `ex_patrol` · `data/cards/common/extras.json` · 要写：name · 人物 ex_patrol
+- `ex_porter` · `data/cards/common/extras.json` · 要写：name · 人物 ex_porter
+- `ex_shopboy` · `data/cards/common/extras.json` · 要写：name · 人物 ex_shopboy
+- `ex_soldier` · `data/cards/common/extras.json` · 要写：name · 人物 ex_soldier
+- `ex_student` · `data/cards/common/extras.json` · 要写：name · 人物 ex_student
+- `guanjia` · `data/cast.json` · 要写：name · 人物 guanjia
+- `hu2` · `data/cast.json` · 要写：name · 人物 hu2
+- `li` · `data/cast.json` · 要写：name · 人物 li
+- `linsao` · `data/cast.json` · 要写：name · 人物 linsao
+- `ma` · `data/cast.json` · 要写：name · 人物 ma
+- `nf1938a` · `data/cards/era/1938/people.json` · 要写：name · 人物 nf1938a
+- `nf1938b` · `data/cards/era/1938/people.json` · 要写：name · 人物 nf1938b
+- `nf1938c` · `data/cards/era/1938/people.json` · 要写：name · 人物 nf1938c
+- `nf1938d` · `data/cards/era/1938/people.json` · 要写：name · 人物 nf1938d
+- `nf1939a` · `data/cards/era/1939/people.json` · 要写：name · 人物 nf1939a
+- `nf1939b` · `data/cards/era/1939/people.json` · 要写：name · 人物 nf1939b
+- `nf1939c` · `data/cards/era/1939/people.json` · 要写：name · 人物 nf1939c
+- `nf1939d` · `data/cards/era/1939/people.json` · 要写：name · 人物 nf1939d
+- `nf1940a` · `data/cards/era/1940/people.json` · 要写：name · 人物 nf1940a
+- `nf1940b` · `data/cards/era/1940/people.json` · 要写：name · 人物 nf1940b
+- `nf1940c` · `data/cards/era/1940/people.json` · 要写：name · 人物 nf1940c
+- `nf1940d` · `data/cards/era/1940/people.json` · 要写：name · 人物 nf1940d
+- `nf_pistol` · `data/cards/era/1939/weapon.json` · 要写：name · 人物 nf_pistol
+- `postman` · `data/cast.json` · 要写：name · 人物 postman
+- `ruhua` · `data/cards/common/self.json` · 要写：name · 人物 ruhua
+- `stranger_boatman` · `data/cards/era/common/passersby.json` · 要写：name · 人物 stranger_boatman
+- `stranger_collector` · `data/cards/era/common/passersby.json` · 要写：name · 人物 stranger_collector
+- `stranger_fence` · `data/cards/era/common/passersby.json` · 要写：name · 人物 stranger_fence
+- `stranger_peddler` · `data/cards/era/common/passersby.json` · 要写：name · 人物 stranger_peddler
+- `stranger_refugee` · `data/cards/era/common/passersby.json` · 要写：name · 人物 stranger_refugee
+- `stranger_student` · `data/cards/era/common/passersby.json` · 要写：name · 人物 stranger_student
+- `stranger_waixiang` · `data/cards/era/common/passersby.json` · 要写：name · 人物 stranger_waixiang
+- `stranger_widow` · `data/cards/era/common/passersby.json` · 要写：name · 人物 stranger_widow
+- `suanming` · `data/cards/era/common/passersby.json` · 要写：name · 人物 suanming
+- `sunlaoye` · `data/cast.json` · 要写：name · 人物 sunlaoye
+- `sunyoung` · `data/cast.json` · 要写：name · 人物 sunyoung
+- `tudi` · `data/cards/era/1939/apprentice.json` · 要写：name · 人物 tudi
+- `wangshan` · `data/cast.json` · 要写：name · 人物 wangshan
+- `wu` · `data/cast.json` · 要写：name · 人物 wu
+- `xiaoding` · `data/cast.json` · 要写：name · 人物 xiaoding
+- `zhang` · `data/cast.json` · 要写：name · 人物 zhang
+- `zhao` · `data/cast.json` · 要写：name · 人物 zhao
+- `zhouma` · `data/cast.json` · 要写：name · 人物 zhouma
+
+### prison（1）
+
+- `pr.cell` · `data/cards/common/prison.json` · 要写：title、body、slots.bribe、slots.bail、slots.favor、outcomes.success、outcomes.fail · 格子 bribe、bail、favor
+
+### rule_page（26）
+
+- `rule.almanac` · `data/cards/guide/rule_pages.json` · 要写：title、body · 谁 obj.almanac
+- `rule.appraise` · `data/cards/guide/rule_pages.json` · 要写：title、body · 谁 brother
+- `rule.branch` · `data/cards/guide/rule_pages.json` · 要写：title、body
+- `rule.contact` · `data/cards/guide/rule_pages.json` · 要写：title、body · 谁 zhouma
+- `rule.counter` · `data/cards/guide/rule_pages.json` · 要写：title、body · 谁 brother
+- `rule.day` · `data/cards/guide/rule_pages.json` · 要写：title、body · 谁 brother
+- `rule.demand` · `data/cards/guide/rule_pages.json` · 要写：title、body · 谁 hu2
+- `rule.dossier` · `data/cards/guide/rule_pages.json` · 要写：title、body · 谁 zhouma
+- `rule.fate` · `data/cards/guide/rule_pages.json` · 要写：title、body · 谁 obj.brother_ledger
+- `rule.fortune` · `data/cards/guide/rule_pages.json` · 要写：title、body
+- `rule.gold` · `data/cards/guide/rule_pages.json` · 要写：title、body · 谁 brother
+- `rule.kept` · `data/cards/guide/rule_pages.json` · 要写：title、body · 谁 brother
+- `rule.ladder` · `data/cards/guide/rule_pages.json` · 要写：title、body
+- `rule.life` · `data/cards/guide/rule_pages.json` · 要写：title、body · 谁 obj.brother_ledger
+- `rule.month` · `data/cards/guide/rule_pages.json` · 要写：title、body · 谁 brother
+- `rule.news` · `data/cards/guide/rule_pages.json` · 要写：title、body · 谁 zhouma
+- `rule.night` · `data/cards/guide/rule_pages.json` · 要写：title、body · 谁 brother
+- `rule.person` · `data/cards/guide/rule_pages.json` · 要写：title、body · 谁 brother
+- `rule.prison` · `data/cards/guide/rule_pages.json` · 要写：title、body
+- `rule.retry` · `data/cards/guide/rule_pages.json` · 要写：title、body
+- `rule.shelf` · `data/cards/guide/rule_pages.json` · 要写：title、body · 谁 brother
+- `rule.slots` · `data/cards/guide/rule_pages.json` · 要写：title、body · 谁 obj.brother_ledger
+- `rule.ticket` · `data/cards/guide/rule_pages.json` · 要写：title、body · 谁 brother
+- `rule.tiers` · `data/cards/guide/rule_pages.json` · 要写：title、body · 谁 zhouma
+- `rule.wheel` · `data/cards/guide/rule_pages.json` · 要写：title、body · 谁 brother
+- `rule.year` · `data/cards/guide/rule_pages.json` · 要写：title、body · 谁 obj.brother_ledger
+
+### self（1）
+
+- `self.ruhua` · `data/cards/common/self.json` · 要写：title、body · 人物 ruhua
+
+### stage（3）
+
+- `stage.1938` · `data/cards/era/1938/stage.json` · 要写：intro.p1、intro.p2、intro.p3 · 开场 3 段
+- `stage.1939` · `data/cards/era/1939/stage.json` · 要写：intro.p1、intro.p2、intro.p3 · 开场 3 段
+- `stage.1940` · `data/cards/era/1940/stage.json` · 要写：intro.p1、intro.p2、intro.p3 · 开场 3 段
+
+### street（12）
+
+- `st.ask_kin` · `data/cards/common/street.json` · 要写：title、body、slots.who、outcomes.success、outcomes.fail · 格子 who
+- `st.beg` · `data/cards/common/street.json` · 要写：title、body、slots.you、outcomes.success、outcomes.fail · 格子 you
+- `st.carry` · `data/cards/common/street.json` · 要写：title、body、slots.you、outcomes.success、outcomes.fail · 格子 you
+- `st.copy` · `data/cards/common/street.json` · 要写：title、body、slots.you、outcomes.success、outcomes.fail · 格子 you
+- `st.errand` · `data/cards/common/street.json` · 要写：title、body、slots.you、outcomes.success、outcomes.fail · 格子 you
+- `st.gamble` · `data/cards/common/street.json` · 要写：title、body、choices.go、choices.skip · 选项 go、skip
+- `st.odd_job` · `data/cards/common/street.json` · 要写：title、body、slots.you、outcomes.success、outcomes.fail · 格子 you
+- `st.pawn_own` · `data/cards/common/street.json` · 要写：title、body、slots.goods、outcomes.success、outcomes.fail · 格子 goods
+- `st.scavenge` · `data/cards/common/street.json` · 要写：title、body、slots.you、outcomes.success、outcomes.fail · 格子 you
+- `st.stall` · `data/cards/common/street.json` · 要写：title、body、slots.you、outcomes.success、outcomes.fail · 格子 you
+- `st.watch` · `data/cards/common/street.json` · 要写：title、body、slots.you、outcomes.success、outcomes.fail · 格子 you
+- `st.write_letters` · `data/cards/common/street.json` · 要写：title、body、slots.you、outcomes.success、outcomes.fail · 格子 you
+
+### ui_key（3）
+
+- `w0.stage.at_door` · `data/cards/ui_keys/W0.json` · 要写：t · 参数 {name}
+- `w0.stage.enter` · `data/cards/ui_keys/W0.json` · 要写：t · 参数 {name}
+- `w0.stage.leave` · `data/cards/ui_keys/W0.json` · 要写：t · 参数 {name}
+
+### wheel（4）
+
+- `wh.big` · `data/cards/fortune/wheels.json` · 要写：title
+- `wh.fair` · `data/cards/fortune/wheels.json` · 要写：title
+- `wh.gamble` · `data/cards/fortune/wheels.json` · 要写：title
+- `wh.month` · `data/cards/fortune/wheels.json` · 要写：title
+
+### wheel_segment（48）
+
+- `ws.1938.big.fanshen_pass` · `data/cards/fortune/segments_1938.json` · 要写：title、body
+- `ws.1938.big.pingan_shop` · `data/cards/fortune/segments_1938.json` · 要写：title、body
+- `ws.1938.big.zhuidi_levy` · `data/cards/fortune/segments_1938.json` · 要写：title、body
+- `ws.1938.month.caixing` · `data/cards/fortune/segments_1938.json` · 要写：title、body
+- `ws.1938.month.guanmian` · `data/cards/fortune/segments_1938.json` · 要写：title、body
+- `ws.1938.month.koushe` · `data/cards/fortune/segments_1938.json` · 要写：title、body
+- `ws.1938.month.liunian` · `data/cards/fortune/segments_1938.json` · 要写：title、body
+- `ws.1938.month.pingan` · `data/cards/fortune/segments_1938.json` · 要写：title、body
+- `ws.1938.month.shunshui` · `data/cards/fortune/segments_1938.json` · 要写：title、body
+- `ws.1938.month.wenxing` · `data/cards/fortune/segments_1938.json` · 要写：title、body
+- `ws.1939.big.fanshen_letter` · `data/cards/fortune/segments_1939.json` · 要写：title、body
+- `ws.1939.big.pingan_year` · `data/cards/fortune/segments_1939.json` · 要写：title、body
+- `ws.1939.big.zhuidi_gate` · `data/cards/fortune/segments_1939.json` · 要写：title、body
+- `ws.1939.month.chengmen` · `data/cards/fortune/segments_1939.json` · 要写：title、body
+- `ws.1939.month.jiashu` · `data/cards/fortune/segments_1939.json` · 要写：title、body
+- `ws.1939.month.micang` · `data/cards/fortune/segments_1939.json` · 要写：title、body
+- `ws.1939.month.nianhuo` · `data/cards/fortune/segments_1939.json` · 要写：title、body
+- `ws.1939.month.nianwei` · `data/cards/fortune/segments_1939.json` · 要写：title、body
+- `ws.1939.month.pingan` · `data/cards/fortune/segments_1939.json` · 要写：title、body
+- `ws.1939.month.qingzhang` · `data/cards/fortune/segments_1939.json` · 要写：title、body
+- `ws.1940.big.fanshen_quiet` · `data/cards/fortune/segments_1940.json` · 要写：title、body
+- `ws.1940.big.pingan_hold` · `data/cards/fortune/segments_1940.json` · 要写：title、body
+- `ws.1940.big.zhuidi_office` · `data/cards/fortune/segments_1940.json` · 要写：title、body
+- `ws.1940.month.caixing` · `data/cards/fortune/segments_1940.json` · 要写：title、body
+- `ws.1940.month.diqi` · `data/cards/fortune/segments_1940.json` · 要写：title、body
+- `ws.1940.month.koushe` · `data/cards/fortune/segments_1940.json` · 要写：title、body
+- `ws.1940.month.pingan` · `data/cards/fortune/segments_1940.json` · 要写：title、body
+- `ws.1940.month.tanpai` · `data/cards/fortune/segments_1940.json` · 要写：title、body
+- `ws.1940.month.xinzheng` · `data/cards/fortune/segments_1940.json` · 要写：title、body
+- `ws.1940.month.yuanyang` · `data/cards/fortune/segments_1940.json` · 要写：title、body
+- `ws.any.big.fanshen_ship` · `data/cards/fortune/segments_any.json` · 要写：title、body
+- `ws.any.big.fanshen_sun` · `data/cards/fortune/segments_any.json` · 要写：title、body
+- `ws.any.big.pingan` · `data/cards/fortune/segments_any.json` · 要写：title、body
+- `ws.any.big.pingan_rep` · `data/cards/fortune/segments_any.json` · 要写：title、body
+- `ws.any.big.zhuidi_box` · `data/cards/fortune/segments_any.json` · 要写：title、body
+- `ws.any.big.zhuidi_house` · `data/cards/fortune/segments_any.json` · 要写：title、body
+- `ws.any.fair.guashi` · `data/cards/fortune/segments_any.json` · 要写：title、body
+- `ws.any.fair.kanshi` · `data/cards/fortune/segments_any.json` · 要写：title、body
+- `ws.any.fair.koujue` · `data/cards/fortune/segments_any.json` · 要写：title、body
+- `ws.any.fair.renyuan` · `data/cards/fortune/segments_any.json` · 要写：title、body
+- `ws.any.fair.xiaocai` · `data/cards/fortune/segments_any.json` · 要写：title、body
+- `ws.any.fair.xiaoshi` · `data/cards/fortune/segments_any.json` · 要写：title、body
+- `ws.any.gamble.heju` · `data/cards/fortune/segments_any.json` · 要写：title、body
+- `ws.any.gamble.pingju` · `data/cards/fortune/segments_any.json` · 要写：title、body
+- `ws.any.gamble.shunshou` · `data/cards/fortune/segments_any.json` · 要写：title、body
+- `ws.any.gamble.shuqian` · `data/cards/fortune/segments_any.json` · 要写：title、body
+- `ws.any.gamble.yingqian` · `data/cards/fortune/segments_any.json` · 要写：title、body
+- `ws.any.gamble.zhekou` · `data/cards/fortune/segments_any.json` · 要写：title、body
+
+## B · 界面文字、F1 帮助、设置
+
+### ui_key（654）
+
+- `c01.btn.close_day.begin_month` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.btn.close_day.done` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.btn.close_day.end_day` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.btn.close_day.game_over` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.btn.close_day.left` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.btn.close_day.mode.prison` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.btn.close_day.mode.sealed` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.btn.close_day.mode.street` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.btn.close_day.month_next` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.btn.close_day.next_day` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.btn.close_day.open_day` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.btn.close_day.skip_night` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.btn.close_day.year_next` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.btn.drawer_close` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.btn.mg_abort` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.drawer.almanac` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.hud.date` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.hud.fortune` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.hud.market` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.hud.status.prison` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.hud.status.sealed` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.hud.status.street` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.hud.time.day` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.hud.time.dusk` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.hud.time.night` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.money.unit.fabi` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.money.wan` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.notice.a` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.notice.b` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.tab.contacts` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.tab.demands` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.tab.dossier` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.tab.estates` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.tab.rules` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.tab.settings` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.tab.shelf` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c01.tab.tickets` · `data/cards/ui_keys/C01.json` · 要写：t
+- `c02.btn.back` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.btn.keep` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.btn.play` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.days.badge` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.hero.eye` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.hero.nerve` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.hero.pull` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.hero.tongue` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.hero.used` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.intent.ask` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.intent.buy` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.intent.help` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.intent.pawn` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.intent.redeem` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.intent.sell` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.intent.story` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.kept.badge` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.night.none` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.type.big_fate` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.type.contact` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.type.demand` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.type.estate` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.type.event` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.type.fate` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.type.kept` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.type.life` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.type.news` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.type.night` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.type.pawn_ticket` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.type.person` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.type.prison` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.type.self` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c02.type.street` · `data/cards/ui_keys/C02.json` · 要写：t
+- `c03.btn.close` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.btn.continue` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.btn.keep` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.btn.look` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.btn.read` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.btn.remove` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.btn.roll` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.coins.auto_pass` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.coins.line` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.contacts_full.new` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.contacts_full.title` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.drawer.title` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.err.bad_args` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.err.insufficient_money` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.err.kept_full` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.err.not_allowed` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.err.not_implemented` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.err.not_keepable` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.err.person_busy` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.err.slot_full` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.err.slot_reject` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.err.slot_required` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.err.unknown` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.err.unknown_uid` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.kept_full.new` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.kept_full.title` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.money.minus` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.money.plus` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.picker.away` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.picker.contact` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.picker.item` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.picker.kept` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.picker.minus` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.picker.money` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.picker.news` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.picker.plus` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.picker.self` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.picker.title` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.picker.used` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.reply.keep` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.reply.later` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.reply.look` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.reply.read` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.reply.roll` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.state.away` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.state.days` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.state.used` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.sys.roll` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.wants.favor` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.wants.goods` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.wants.hard` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.wants.money` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.wants.news` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.wants.official` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.wants.papers` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c03.wants.person` · `data/cards/ui_keys/C03.json` · 要写：t
+- `c04.btn.send_off` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.cat.art` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.cat.clothing` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.cat.documents` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.cat.jewelry` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.cat.silver` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.cat.utensils` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.cond.0` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.cond.1` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.cond.2` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.cond.3` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.cond.4` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.dialog.sample` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.dialog.skip` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.intent.buy` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.intent.pawn` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.intent.redeem` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.intent.sell` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.label.asking` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.label.days` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.label.principal` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.redeem.buy_back` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.redeem.by_rule` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.redeem.compensate` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.redeem.squeeze` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.reply.accept` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.reply.decline` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.reply.later` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.reply.look` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.reply.pick` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.reply.refuse` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.result.shelved` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.result.ticket` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.shelf.count` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.shelf.title` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.tickets.foreign` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.tickets.row` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.tickets.title` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.tier.fair.pay` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.tier.fair.receive` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.tier.harsh.pay` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.tier.harsh.receive` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.tier.kind.pay` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c04.tier.kind.receive` · `data/cards/ui_keys/C04.json` · 要写：t
+- `c05.amount` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.board.title` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.btn.delay` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.btn.submit` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.days` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.delay.note` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.drawer.title` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.inform.note` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.kind.goods` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.kind.info` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.kind.money` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.kind.people` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.mode.fabricate` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.mode.haggle` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.mode.inform` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.mode.pay` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.mode.send_person` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.mode.substitute` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.reply.delay` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.reply.later` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.reply.submit` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.tier.0` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.tier.1` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.tier.2` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c05.tier.3` · `data/cards/ui_keys/C05.json` · 要写：t
+- `c06.btn.close` · `data/cards/ui_keys/C06.json` · 要写：t
+- `c06.btn.continue` · `data/cards/ui_keys/C06.json` · 要写：t
+- `c06.btn.spin` · `data/cards/ui_keys/C06.json` · 要写：t
+- `c06.cost.money` · `data/cards/ui_keys/C06.json` · 要写：t
+- `c06.cost.stake` · `data/cards/ui_keys/C06.json` · 要写：t
+- `c06.err.insufficient_money` · `data/cards/ui_keys/C06.json` · 要写：t
+- `c06.err.missing` · `data/cards/ui_keys/C06.json` · 要写：t
+- `c06.err.stake_required` · `data/cards/ui_keys/C06.json` · 要写：t
+- `c06.incense.offer` · `data/cards/ui_keys/C06.json` · 要写：t
+- `c06.incense.take` · `data/cards/ui_keys/C06.json` · 要写：t
+- `c06.incense.title` · `data/cards/ui_keys/C06.json` · 要写：t
+- `c06.segment.body` · `data/cards/ui_keys/C06.json` · 要写：t
+- `c06.segment.name` · `data/cards/ui_keys/C06.json` · 要写：t
+- `c06.stake.pick` · `data/cards/ui_keys/C06.json` · 要写：t
+- `c06.title.big` · `data/cards/ui_keys/C06.json` · 要写：t
+- `c06.title.fair` · `data/cards/ui_keys/C06.json` · 要写：t
+- `c06.title.gamble` · `data/cards/ui_keys/C06.json` · 要写：t
+- `c06.title.month` · `data/cards/ui_keys/C06.json` · 要写：t
+- `c07.btn.cezi` · `data/cards/ui_keys/C07.json` · 要写：t
+- `c07.btn.lot` · `data/cards/ui_keys/C07.json` · 要写：t
+- `c07.btn.ok` · `data/cards/ui_keys/C07.json` · 要写：t
+- `c07.btn.pass` · `data/cards/ui_keys/C07.json` · 要写：t
+- `c07.cezi.pick` · `data/cards/ui_keys/C07.json` · 要写：t
+- `c07.cost` · `data/cards/ui_keys/C07.json` · 要写：t
+- `c07.drawer.fortune` · `data/cards/ui_keys/C07.json` · 要写：t
+- `c07.drawer.lots` · `data/cards/ui_keys/C07.json` · 要写：t
+- `c07.drawer.none` · `data/cards/ui_keys/C07.json` · 要写：t
+- `c07.drawer.title` · `data/cards/ui_keys/C07.json` · 要写：t
+- `c07.err.money` · `data/cards/ui_keys/C07.json` · 要写：t
+- `c07.grade.0` · `data/cards/ui_keys/C07.json` · 要写：t
+- `c07.grade.1` · `data/cards/ui_keys/C07.json` · 要写：t
+- `c07.grade.2` · `data/cards/ui_keys/C07.json` · 要写：t
+- `c07.grade.3` · `data/cards/ui_keys/C07.json` · 要写：t
+- `c07.grade.4` · `data/cards/ui_keys/C07.json` · 要写：t
+- `c07.strip.ji` · `data/cards/ui_keys/C07.json` · 要写：t
+- `c07.strip.yi` · `data/cards/ui_keys/C07.json` · 要写：t
+- `c08.btn.back` · `data/cards/ui_keys/C08.json` · 要写：t
+- `c08.btn.confirm` · `data/cards/ui_keys/C08.json` · 要写：t
+- `c08.end.note` · `data/cards/ui_keys/C08.json` · 要写：t
+- `c08.end.title` · `data/cards/ui_keys/C08.json` · 要写：t
+- `c08.end.wait` · `data/cards/ui_keys/C08.json` · 要写：t
+- `c08.gold.reminder` · `data/cards/ui_keys/C08.json` · 要写：t
+- `c08.narr.night_open` · `data/cards/ui_keys/C08.json` · 要写：t
+- `c08.night.skip` · `data/cards/ui_keys/C08.json` · 要写：t
+- `c08.reply.dawn` · `data/cards/ui_keys/C08.json` · 要写：t
+- `c08.settle.title` · `data/cards/ui_keys/C08.json` · 要写：t
+- `c09.btn.begin` · `data/cards/ui_keys/C09.json` · 要写：t
+- `c09.btn.next_month` · `data/cards/ui_keys/C09.json` · 要写：t
+- `c09.btn.next_year` · `data/cards/ui_keys/C09.json` · 要写：t
+- `c09.btn.resume` · `data/cards/ui_keys/C09.json` · 要写：t
+- `c09.btn.retry` · `data/cards/ui_keys/C09.json` · 要写：t
+- `c09.btn.title` · `data/cards/ui_keys/C09.json` · 要写：t
+- `c09.goals.done` · `data/cards/ui_keys/C09.json` · 要写：t
+- `c09.goals.failed` · `data/cards/ui_keys/C09.json` · 要写：t
+- `c09.goals.main` · `data/cards/ui_keys/C09.json` · 要写：t
+- `c09.goals.title` · `data/cards/ui_keys/C09.json` · 要写：t
+- `c09.year.page` · `data/cards/ui_keys/C09.json` · 要写：t
+- `c10.btn.close` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c10.help.day_flow` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c10.help.keys.enter` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c10.help.keys.esc` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c10.help.keys.f1` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c10.help.keys.num` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c10.help.keys.space` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c10.help.keys.tab` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c10.help.title` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c10.kind.clipping` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c10.kind.heard` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c10.kind.letter` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c10.kind.pawn` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c10.kind.said` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c10.kind.ticket` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c10.kind.year_after` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c10.tab.controls` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c10.tab.people` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c10.tab.rules` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c10.teacher.almanac` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c10.teacher.brother_ledger` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c10.teacher.notice` · `data/cards/ui_keys/C10.json` · 要写：t
+- `c11.btn.close` · `data/cards/ui_keys/C11.json` · 要写：t
+- `c11.btn.mortgage` · `data/cards/ui_keys/C11.json` · 要写：t
+- `c11.btn.redeem` · `data/cards/ui_keys/C11.json` · 要写：t
+- `c11.interest` · `data/cards/ui_keys/C11.json` · 要写：t
+- `c11.money` · `data/cards/ui_keys/C11.json` · 要写：t
+- `c11.prison.days` · `data/cards/ui_keys/C11.json` · 要写：t
+- `c11.prison.try` · `data/cards/ui_keys/C11.json` · 要写：t
+- `c11.reply.later` · `data/cards/ui_keys/C11.json` · 要写：t
+- `c11.reply.try` · `data/cards/ui_keys/C11.json` · 要写：t
+- `c11.short.amount` · `data/cards/ui_keys/C11.json` · 要写：t
+- `c11.short.default` · `data/cards/ui_keys/C11.json` · 要写：t
+- `c11.short.default_note` · `data/cards/ui_keys/C11.json` · 要写：t
+- `c11.short.estate` · `data/cards/ui_keys/C11.json` · 要写：t
+- `c11.short.goods` · `data/cards/ui_keys/C11.json` · 要写：t
+- `c11.status.held` · `data/cards/ui_keys/C11.json` · 要写：t
+- `c11.status.lost` · `data/cards/ui_keys/C11.json` · 要写：t
+- `c11.status.mortgaged` · `data/cards/ui_keys/C11.json` · 要写：t
+- `c11.street.hint` · `data/cards/ui_keys/C11.json` · 要写：t
+- `c11.street.redeem` · `data/cards/ui_keys/C11.json` · 要写：t
+- `c12.btn.atlas_open` · `data/cards/ui_keys/C12.json` · 要写：t
+- `c12.btn.done` · `data/cards/ui_keys/C12.json` · 要写：t
+- `c12.ink` · `data/cards/ui_keys/C12.json` · 要写：t
+- `c12.title` · `data/cards/ui_keys/C12.json` · 要写：t
+- `c12.tool.atlas` · `data/cards/ui_keys/C12.json` · 要写：t
+- `c12.tool.eye` · `data/cards/ui_keys/C12.json` · 要写：t
+- `c12.tool.lens` · `data/cards/ui_keys/C12.json` · 要写：t
+- `c13.btn.done` · `data/cards/ui_keys/C13.json` · 要写：t
+- `c13.title` · `data/cards/ui_keys/C13.json` · 要写：t
+- `c13.tool.blow` · `data/cards/ui_keys/C13.json` · 要写：t
+- `c13.tool.clink` · `data/cards/ui_keys/C13.json` · 要写：t
+- `c13.tool.compare` · `data/cards/ui_keys/C13.json` · 要写：t
+- `c13.tool.ear` · `data/cards/ui_keys/C13.json` · 要写：t
+- `c13.tries` · `data/cards/ui_keys/C13.json` · 要写：t
+- `c14.btn.done` · `data/cards/ui_keys/C14.json` · 要写：t
+- `c14.btn.read` · `data/cards/ui_keys/C14.json` · 要写：t
+- `c14.claimed` · `data/cards/ui_keys/C14.json` · 要写：t
+- `c14.title` · `data/cards/ui_keys/C14.json` · 要写：t
+- `c14.tool.dengzi` · `data/cards/ui_keys/C14.json` · 要写：t
+- `c14.tool.poise` · `data/cards/ui_keys/C14.json` · 要写：t
+- `c14.tool.read` · `data/cards/ui_keys/C14.json` · 要写：t
+- `c14.tool.steelyard` · `data/cards/ui_keys/C14.json` · 要写：t
+- `c14.tool.weight` · `data/cards/ui_keys/C14.json` · 要写：t
+- `c15.book.title` · `data/cards/ui_keys/C15.json` · 要写：t
+- `c15.btn.done` · `data/cards/ui_keys/C15.json` · 要写：t
+- `c15.decode.title` · `data/cards/ui_keys/C15.json` · 要写：t
+- `c15.fragments.title` · `data/cards/ui_keys/C15.json` · 要写：t
+- `c15.tool.ink` · `data/cards/ui_keys/C15.json` · 要写：t
+- `c15.tool.lookup` · `data/cards/ui_keys/C15.json` · 要写：t
+- `c15.tool.move` · `data/cards/ui_keys/C15.json` · 要写：t
+- `c15.tool.rotate` · `data/cards/ui_keys/C15.json` · 要写：t
+- `c15.tool.seal` · `data/cards/ui_keys/C15.json` · 要写：t
+- `c15.tool.write` · `data/cards/ui_keys/C15.json` · 要写：t
+- `c16.pause.help` · `data/cards/ui_keys/C16.json` · 要写：t
+- `c16.pause.quit` · `data/cards/ui_keys/C16.json` · 要写：t
+- `c16.pause.resume` · `data/cards/ui_keys/C16.json` · 要写：t
+- `c16.pause.save_note` · `data/cards/ui_keys/C16.json` · 要写：t
+- `c16.pause.settings` · `data/cards/ui_keys/C16.json` · 要写：t
+- `c16.pause.title` · `data/cards/ui_keys/C16.json` · 要写：t
+- `c16.settings.close` · `data/cards/ui_keys/C16.json` · 要写：t
+- `c16.settings.fast_anim` · `data/cards/ui_keys/C16.json` · 要写：t
+- `c16.settings.guide_hints` · `data/cards/ui_keys/C16.json` · 要写：t
+- `c16.settings.music` · `data/cards/ui_keys/C16.json` · 要写：t
+- `c16.settings.off` · `data/cards/ui_keys/C16.json` · 要写：t
+- `c16.settings.on` · `data/cards/ui_keys/C16.json` · 要写：t
+- `c16.settings.sfx` · `data/cards/ui_keys/C16.json` · 要写：t
+- `c16.settings.text_speed` · `data/cards/ui_keys/C16.json` · 要写：t
+- `c16.title.continue` · `data/cards/ui_keys/C16.json` · 要写：t
+- `c16.title.name` · `data/cards/ui_keys/C16.json` · 要写：t
+- `c16.title.new` · `data/cards/ui_keys/C16.json` · 要写：t
+- `c16.title.quit` · `data/cards/ui_keys/C16.json` · 要写：t
+- `c16.title.settings` · `data/cards/ui_keys/C16.json` · 要写：t
+- `g01.end.discard` · `data/cards/ui_keys/G01.json` · 要写：t
+- `g01.end.wait` · `data/cards/ui_keys/G01.json` · 要写：t
+- `g02.end.auto_spin` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.end.ignore` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.end.leave` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.end.pass` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.end.skip_night` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.ending.ending` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.month.goal.done` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.month.goal.failed` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.month.goal.open` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.month.verdict.0` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.month.verdict.1` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.month.verdict.2` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.month.verdict.3` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.notice.clear` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.notice.cloud` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.notice.fog` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.notice.market_day` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.notice.rain` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.notice.snow` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.notice.wind` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.reason.big_fate` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.reason.event` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.reason.fate` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.reason.gold_left` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.reason.person` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.reason.prison` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.settle.gold_left` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.settle.heat_tier` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.settle.money_in` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.settle.money_out` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.settle.rep_tier` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.year.advance` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g02.year.contact` · `data/cards/ui_keys/G02.json` · 要写：t
+- `g03.arrest.demand` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g03.arrest.heat` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g03.demand.done` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g03.demand.failed` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g03.end.demand` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g03.end.release` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g03.reason.condition` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g03.reason.demand` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g03.reason.fine` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g03.reason.money` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g03.reason.person_busy` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g03.reason.slot_money` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g03.tier.heat.0` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g03.tier.heat.1` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g03.tier.heat.2` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g03.tier.heat.3` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g03.tier.heat.4` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g03.tier.rep.0` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g03.tier.rep.1` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g03.tier.rep.2` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g03.tier.rep.3` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g03.tier.rep.4` · `data/cards/ui_keys/G03.json` · 要写：t
+- `g04.cond.0` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.cond.1` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.cond.2` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.cond.3` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.cond.4` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.counter.intake_blocked` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.month.expenses` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.month.forfeit` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.month.tickets` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.reason.buy_back` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.reason.buy_out` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.reason.compensate` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.reason.currency` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.reason.expenses` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.reason.fee` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.reason.fund` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.reason.interest` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.reason.pawn_out` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.reason.redeem_in` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.reason.sell_in` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.reason.start` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.ticket.forfeited` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.ticket.number` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g04.ticket.overdue` · `data/cards/ui_keys/G04.json` · 要写：t
+- `g05.almanac.buy_in` · `data/cards/ui_keys/G05.json` · 要写：t
+- `g05.almanac.lend` · `data/cards/ui_keys/G05.json` · 要写：t
+- `g05.almanac.meet` · `data/cards/ui_keys/G05.json` · 要写：t
+- `g05.almanac.pawn_in` · `data/cards/ui_keys/G05.json` · 要写：t
+- `g05.almanac.pray` · `data/cards/ui_keys/G05.json` · 要写：t
+- `g05.almanac.redeem` · `data/cards/ui_keys/G05.json` · 要写：t
+- `g05.almanac.repair` · `data/cards/ui_keys/G05.json` · 要写：t
+- `g05.almanac.rest` · `data/cards/ui_keys/G05.json` · 要写：t
+- `g05.almanac.sell_out` · `data/cards/ui_keys/G05.json` · 要写：t
+- `g05.almanac.trade` · `data/cards/ui_keys/G05.json` · 要写：t
+- `g05.almanac.travel` · `data/cards/ui_keys/G05.json` · 要写：t
+- `g05.almanac.wed` · `data/cards/ui_keys/G05.json` · 要写：t
+- `g05.end.void` · `data/cards/ui_keys/G05.json` · 要写：t
+- `g05.notice.almanac` · `data/cards/ui_keys/G05.json` · 要写：t
+- `g05.notice.peek` · `data/cards/ui_keys/G05.json` · 要写：t
+- `g05.reason.fortune` · `data/cards/ui_keys/G05.json` · 要写：t
+- `g05.reason.incense` · `data/cards/ui_keys/G05.json` · 要写：t
+- `g05.reason.wheel` · `data/cards/ui_keys/G05.json` · 要写：t
+- `g06.end.fail` · `data/cards/ui_keys/G06.json` · 要写：t
+- `g06.end.short` · `data/cards/ui_keys/G06.json` · 要写：t
+- `g06.end.stay` · `data/cards/ui_keys/G06.json` · 要写：t
+- `g06.month.interest` · `data/cards/ui_keys/G06.json` · 要写：t
+- `g06.month.shop_lost` · `data/cards/ui_keys/G06.json` · 要写：t
+- `g06.prison.arrested` · `data/cards/ui_keys/G06.json` · 要写：t
+- `g06.reason.interest` · `data/cards/ui_keys/G06.json` · 要写：t
+- `g06.reason.mortgage` · `data/cards/ui_keys/G06.json` · 要写：t
+- `g06.reason.redeem_estate` · `data/cards/ui_keys/G06.json` · 要写：t
+- `g06.reason.redeem_shop` · `data/cards/ui_keys/G06.json` · 要写：t
+- `g06.reason.seize` · `data/cards/ui_keys/G06.json` · 要写：t
+- `g06.short.default` · `data/cards/ui_keys/G06.json` · 要写：t
+- `g06.short.goods` · `data/cards/ui_keys/G06.json` · 要写：t
+- `g06.short.payment` · `data/cards/ui_keys/G06.json` · 要写：t
+- `g06.street.redeemed` · `data/cards/ui_keys/G06.json` · 要写：t
+- `k01.notice.brother_ignored` · `data/cards/ui_keys/K01.json` · 要写：t
+- `k01.notice.levy_paid` · `data/cards/ui_keys/K01.json` · 要写：t
+- `k01.notice.linsao_ignored` · `data/cards/ui_keys/K01.json` · 要写：t
+- `k01.notice.ma_ignored` · `data/cards/ui_keys/K01.json` · 要写：t
+- `k01.notice.ticket_pieced` · `data/cards/ui_keys/K01.json` · 要写：t
+- `k01.notice.waixiang_alms` · `data/cards/ui_keys/K01.json` · 要写：t
+- `k01.notice.wangshan_ignored` · `data/cards/ui_keys/K01.json` · 要写：t
+- `k01.notice.xiaoding_rice` · `data/cards/ui_keys/K01.json` · 要写：t
+- `k01.notice.zhao_ignored` · `data/cards/ui_keys/K01.json` · 要写：t
+- `k01.reason.ma_levy` · `data/cards/ui_keys/K01.json` · 要写：t
+- `k01.reason.wangshan_food` · `data/cards/ui_keys/K01.json` · 要写：t
+- `k01.reason.widow_help` · `data/cards/ui_keys/K01.json` · 要写：t
+- `k01.reason.xiaoding_med` · `data/cards/ui_keys/K01.json` · 要写：t
+- `k01.reason.zhang_road` · `data/cards/ui_keys/K01.json` · 要写：t
+- `k01.reason.zhao_lend` · `data/cards/ui_keys/K01.json` · 要写：t
+- `k01.reason.zhao_part` · `data/cards/ui_keys/K01.json` · 要写：t
+- `k02.notice.curfew` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.notice.fine` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.notice.kin` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.notice.levy` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.notice.patrol` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.notice.police_fail` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.notice.police_open` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.notice.police_pass` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.notice.requisition` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.notice.rice` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.notice.road` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.reason.bail` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.reason.bigfate` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.reason.dock` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.reason.fine` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.reason.kin` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.reason.levy` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.reason.market` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.reason.medicine` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.reason.qingming` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.reason.quiet` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.reason.refugee` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.reason.repair` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.reason.requisition` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.reason.rice` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.reason.roof` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k02.reason.wharf` · `data/cards/ui_keys/K02.json` · 要写：t
+- `k03.notice.letter_arrived` · `data/cards/ui_keys/K03.json` · 要写：t
+- `k03.notice.letter_held` · `data/cards/ui_keys/K03.json` · 要写：t
+- `k03.notice.ma_office` · `data/cards/ui_keys/K03.json` · 要写：t
+- `k03.notice.wangshan_left` · `data/cards/ui_keys/K03.json` · 要写：t
+- `k03.notice.xiaoding_away` · `data/cards/ui_keys/K03.json` · 要写：t
+- `k03.reason.levy` · `data/cards/ui_keys/K03.json` · 要写：t
+- `k03.reason.repay` · `data/cards/ui_keys/K03.json` · 要写：t
+- `k04.notice.books_done` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.notice.books_fail` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.notice.cocoon` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.notice.countryside` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.notice.debt_delay` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.notice.debt_hide` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.notice.debt_paid` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.notice.gate_fail` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.notice.gate_pass` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.notice.levy` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.notice.patrol_fail` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.notice.patrol_pass` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.notice.snow` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.notice.wu_buy` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.notice.wu_fail` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.notice.wu_haggle` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.notice.wu_refuse` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.charcoal` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.charge` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.clothes` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.countryside` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.damp` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.debt` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.fine` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.fire` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.gate` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.hoard` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.kin` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.levy` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.medicine` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.night` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.passage` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.purse` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.refugee` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.requisition` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.rice` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.seal` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.snow` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.stranger` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.tab` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.theft` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k04.reason.year_goods` · `data/cards/ui_keys/K04.json` · 要写：t
+- `k05.notice.dossier_linked` · `data/cards/ui_keys/K05.json` · 要写：t
+- `k05.notice.hu2_changed` · `data/cards/ui_keys/K05.json` · 要写：t
+- `k05.notice.ma_changed` · `data/cards/ui_keys/K05.json` · 要写：t
+- `k05.notice.ma_kept` · `data/cards/ui_keys/K05.json` · 要写：t
+- `k05.notice.registered` · `data/cards/ui_keys/K05.json` · 要写：t
+- `k05.notice.sunfu_apart` · `data/cards/ui_keys/K05.json` · 要写：t
+- `k05.notice.sunfu_hedge` · `data/cards/ui_keys/K05.json` · 要写：t
+- `k05.notice.sunfu_with` · `data/cards/ui_keys/K05.json` · 要写：t
+- `k05.reason.sun_borrow` · `data/cards/ui_keys/K05.json` · 要写：t
+- `k05.reason.wu_rice` · `data/cards/ui_keys/K05.json` · 要写：t
+- `k05.reason.zhao_lend` · `data/cards/ui_keys/K05.json` · 要写：t
+- `k06.notice.census_fail` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.notice.census_ok` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.notice.crate` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.notice.levy_rename` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.notice.new_official` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.notice.papers` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.notice.rice` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.notice.search` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.notice.signboard` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.notice.wang_regime` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.bribe` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.buyer` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.census` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.coal` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.crate` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.curfew` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.debt` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.doctor` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.door_slip` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.funeral` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.gift` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.hush` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.lamp` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.levy` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.medicine` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.new_year` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.night_road` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.papers` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.rain_loss` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.register` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.rent` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.repair` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.rice` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.rice_sell` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.school` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.signboard` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k06.reason.wedding` · `data/cards/ui_keys/K06.json` · 要写：t
+- `k07.notice.fine` · `data/cards/ui_keys/K07.json` · 要写：t
+- `k07.notice.not_back` · `data/cards/ui_keys/K07.json` · 要写：t
+- `k07.reason.fine` · `data/cards/ui_keys/K07.json` · 要写：t
+- `k07.reason.pay` · `data/cards/ui_keys/K07.json` · 要写：t
+- `k07.reason.substitute` · `data/cards/ui_keys/K07.json` · 要写：t
+- `k08.notice.decoded` · `data/cards/ui_keys/K08.json` · 要写：t
+- `k08.notice.family` · `data/cards/ui_keys/K08.json` · 要写：t
+- `k08.notice.informed` · `data/cards/ui_keys/K08.json` · 要写：t
+- `k08.notice.pieced` · `data/cards/ui_keys/K08.json` · 要写：t
+- `k09.arrest.contraband` · `data/cards/ui_keys/K09.json` · 要写：t
+- `k09.arrest.leverage` · `data/cards/ui_keys/K09.json` · 要写：t
+- `k09.notice.accounts` · `data/cards/ui_keys/K09.json` · 要写：t
+- `k09.notice.chen_leave` · `data/cards/ui_keys/K09.json` · 要写：t
+- `k09.notice.guanjia_leave` · `data/cards/ui_keys/K09.json` · 要写：t
+- `k09.notice.li_leave` · `data/cards/ui_keys/K09.json` · 要写：t
+- `k09.notice.linsao_leave` · `data/cards/ui_keys/K09.json` · 要写：t
+- `k09.notice.ma_leave` · `data/cards/ui_keys/K09.json` · 要写：t
+- `k09.notice.postman_leave` · `data/cards/ui_keys/K09.json` · 要写：t
+- `k09.notice.telegraph_sent` · `data/cards/ui_keys/K09.json` · 要写：t
+- `k09.notice.wangshan_leave` · `data/cards/ui_keys/K09.json` · 要写：t
+- `k09.notice.wu_leave` · `data/cards/ui_keys/K09.json` · 要写：t
+- `k09.notice.xiaoding_leave` · `data/cards/ui_keys/K09.json` · 要写：t
+- `k09.notice.zhang_leave` · `data/cards/ui_keys/K09.json` · 要写：t
+- `k09.notice.zhouma_leave` · `data/cards/ui_keys/K09.json` · 要写：t
+- `k09.reason.box_returned` · `data/cards/ui_keys/K09.json` · 要写：t
+- `k09.reason.street_pawn` · `data/cards/ui_keys/K09.json` · 要写：t
+- `k09.reason.street_work` · `data/cards/ui_keys/K09.json` · 要写：t
+- `k10.notice.fair_look` · `data/cards/ui_keys/K10.json` · 要写：t
+- `k10.notice.fair_rumor` · `data/cards/ui_keys/K10.json` · 要写：t
+- `k10.notice.gamble_hold` · `data/cards/ui_keys/K10.json` · 要写：t
+- `k10.notice.gamble_word` · `data/cards/ui_keys/K10.json` · 要写：t
+- `k10.reason.almanac` · `data/cards/ui_keys/K10.json` · 要写：t
+- `k10.reason.fair` · `data/cards/ui_keys/K10.json` · 要写：t
+- `k10.reason.gamble` · `data/cards/ui_keys/K10.json` · 要写：t
+- `k10.reason.incense` · `data/cards/ui_keys/K10.json` · 要写：t
+- `k16.notice.tut_day1` · `data/cards/ui_keys/K16.json` · 要写：t
+- `k16.reason.tut_contact` · `data/cards/ui_keys/K16.json` · 要写：t
+- `k16.reason.tut_sell` · `data/cards/ui_keys/K16.json` · 要写：t
+- `k16.reason.tut_slots_fail` · `data/cards/ui_keys/K16.json` · 要写：t
+- `k16.reason.tut_slots_ok` · `data/cards/ui_keys/K16.json` · 要写：t
+- `k18.notice.books_match` · `data/cards/ui_keys/K18.json` · 要写：t
+- `k18.notice.books_short` · `data/cards/ui_keys/K18.json` · 要写：t
+- `k18.notice.found` · `data/cards/ui_keys/K18.json` · 要写：t
+- `k18.notice.ignored_find` · `data/cards/ui_keys/K18.json` · 要写：t
+- `k18.notice.kept` · `data/cards/ui_keys/K18.json` · 要写：t
+- `k18.notice.left_out` · `data/cards/ui_keys/K18.json` · 要写：t
+- `k18.notice.missed` · `data/cards/ui_keys/K18.json` · 要写：t
+- `k18.notice.shoo` · `data/cards/ui_keys/K18.json` · 要写：t
+- `k18.notice.still_lost` · `data/cards/ui_keys/K18.json` · 要写：t
+- `k18.notice.watching` · `data/cards/ui_keys/K18.json` · 要写：t
+- `k18.pet.home` · `data/cards/ui_keys/K18.json` · 要写：t
+- `k18.pet.lost` · `data/cards/ui_keys/K18.json` · 要写：t
+- `k18.reason.skim` · `data/cards/ui_keys/K18.json` · 要写：t
+- `k18.reason.tip_cover` · `data/cards/ui_keys/K18.json` · 要写：t
+- `k18.reply.scare` · `data/cards/ui_keys/K18.json` · 要写：t
+
+## W0 桩用的键，正式界面换掉后可删
+
+### ui_key（62）
+
+- `w0.btn.close` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.btn.close_day` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.btn.primary` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.card.keep` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.dialog.skip` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.hand.play` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.hand.sleep` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.hero.eye` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.hero.nerve` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.hero.pull` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.hero.tongue` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.mg.done` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.mock.bought` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.mock.estate` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.mock.fortune` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.mock.incense` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.mock.notice` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.mock.pawn_out` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.mock.payee` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.mock.slot_money` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.mock.sold` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.almanac` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.contacts` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.contacts_full` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.counter` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.demand` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.demands` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.dossier` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.end_day` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.estates` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.fortune` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.game_over` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.help` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.kept_full` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.minigame` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.month_close` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.month_open` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.night` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.pause` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.prison` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.read` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.settings` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.settle` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.shelf` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.short` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.slots` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.tickets` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.wheel` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.panel.year_jump` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.street.redeem` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.title.continue` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.title.new` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.title.quit` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.title.settings` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.top.day` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.top.money` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.zone.contacts` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.zone.dossier` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.zone.kept` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.zone.self` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.zone.shelf` · `data/cards/ui_keys/W0.json` · 要写：t
+- `w0.zone.tickets` · `data/cards/ui_keys/W0.json` · 要写：t

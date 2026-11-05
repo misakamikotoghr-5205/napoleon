@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1
+  },
+  "cards": [
+    {
+      "id": "ev.ignored.miss",
+      "type": "event",
+      "era": ["*"],
+      "effects": {
+        "on_expire": [{"op": "flag", "key": "missed"}]
+      }
+    },
+    {
+      "id": "ev.silent",
+      "type": "event",
+      "era": ["*"],
+      "effects": {"on_expire": []}
+    }
+  ]
+}

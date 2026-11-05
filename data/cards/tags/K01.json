@@ -1,0 +1,95 @@
+{
+  "_meta": {
+    "owner": "K01",
+    "schema": 1,
+    "brief": "K01 人物牌用到的、W0 征兆家族以外的标签。",
+    "_provenance": {
+      "by": "ai",
+      "task": "K01",
+      "date": "2026-10-13"
+    }
+  },
+  "tags": {
+    "boat": {
+      "brief": "船与船户"
+    },
+    "buyer": {
+      "brief": "来买货的人"
+    },
+    "collector": {
+      "brief": "上门收货的人"
+    },
+    "cook": {
+      "brief": "厨下"
+    },
+    "dock": {
+      "brief": "码头与船"
+    },
+    "family": {
+      "brief": "家宅与亲人"
+    },
+    "farmer": {
+      "brief": "种田的人"
+    },
+    "fence": {
+      "brief": "销赃的人"
+    },
+    "landlord": {
+      "brief": "孙府与地主"
+    },
+    "levy": {
+      "brief": "摊派"
+    },
+    "medicine": {
+      "brief": "药材与成药"
+    },
+    "new_face": {
+      "brief": "1938 年新面孔"
+    },
+    "nurse": {
+      "brief": "医院里做事的人"
+    },
+    "official": {
+      "brief": "官面、文书、伪政权一边的事"
+    },
+    "peddler": {
+      "brief": "货郎"
+    },
+    "poor": {
+      "brief": "手头紧的人"
+    },
+    "post": {
+      "brief": "邮电"
+    },
+    "pregnant": {
+      "brief": "有孕"
+    },
+    "redeem": {
+      "brief": "来赎当"
+    },
+    "refugee": {
+      "brief": "逃难的过路人"
+    },
+    "rice": {
+      "brief": "米粮"
+    },
+    "steward": {
+      "brief": "管家"
+    },
+    "story": {
+      "brief": "主线节点上出现的人物"
+    },
+    "student": {
+      "brief": "学生"
+    },
+    "waixiang": {
+      "brief": "外乡人"
+    },
+    "widow": {
+      "brief": "守寡的过路人"
+    },
+    "woman": {
+      "brief": "女性"
+    }
+  }
+}

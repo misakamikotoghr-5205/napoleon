@@ -1,0 +1,70 @@
+{
+  "_meta": {
+    "owner": "C08",
+    "schema": 1,
+    "brief": "夜里没有夜牌，只剩睡了",
+    "_provenance": {
+      "by": "ai",
+      "task": "C08",
+      "date": "2026-10-14"
+    }
+  },
+  "queries": {},
+  "responses": [
+    {
+      "cmd": "night.choose",
+      "match": {
+        "def": ""
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "settle"
+        }
+      ],
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    }
+  ],
+  "view": {
+    "busy": false,
+    "date": {
+      "abs_day": 4,
+      "d": 4,
+      "era": "1938",
+      "m": 3,
+      "minute": 900,
+      "stage": 0,
+      "stage_day": 4,
+      "stage_days": 30,
+      "weekday": 4,
+      "y": 1938
+    },
+    "hand": [],
+    "heat_tier": 0,
+    "mode": "shop",
+    "money": {
+      "amount": 40,
+      "currency": "fabi"
+    },
+    "night_offers": [],
+    "phase": "night",
+    "rep_tier": 1,
+    "stage": {
+      "sealed": false,
+      "set": "counter",
+      "time": "night"
+    },
+    "v": 1
+  }
+}

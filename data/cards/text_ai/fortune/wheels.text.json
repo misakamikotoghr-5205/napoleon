@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-misc"
+  },
+  "wh.month": {
+    "title": "本月运势"
+  },
+  "wh.big": {
+    "title": "大轮盘"
+  },
+  "wh.fair": {
+    "title": "庙会转盘"
+  },
+  "wh.gamble": {
+    "title": "赌摊转盘"
+  }
+}

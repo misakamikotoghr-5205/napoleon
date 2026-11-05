@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-3940"
+  },
+  "ev.any.demand_return": {
+    "title": "派出去的人",
+    "body": "条子上派出去当差的人，今天该回来了。路上不太平，能不能平安回来，要看他的胆气。",
+    "slots": {
+      "who": "派出去的人"
+    },
+    "outcomes": {
+      "success": "人平安回来了，照常能用。",
+      "fail": "等到天黑，人也没有回来。",
+      "ignored": "没人去接，人晚回来一天。"
+    }
+  }
+}

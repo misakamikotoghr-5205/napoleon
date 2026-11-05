@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-3940"
+  },
+  "bf.1940.night_road": {
+    "title": "一张夜路条",
+    "body": "有人塞给你一张路条，凭它夜里能出城。",
+    "choices": {
+      "use": "连夜出城",
+      "sell": "卖掉路条",
+      "stay": "留着"
+    }
+  },
+  "bf.1940.yamen_crate": {
+    "title": "一箱旧文书",
+    "body": "伪维新政府的衙门要撤了，有人出大价钱，请你收下一箱文书。",
+    "choices": {
+      "hide": "收下藏好",
+      "pass_on": "转手",
+      "decline": "不收"
+    }
+  }
+}

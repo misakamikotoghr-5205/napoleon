@@ -1,0 +1,20 @@
+G06_mortgage|res://scripts/tests/cards/G06/test_mortgage.gd|120|
+G06_short_ladder|res://scripts/tests/cards/G06/test_short_ladder.gd|120|
+G06_street|res://scripts/tests/cards/G06/test_street.gd|120|
+G06_prison|res://scripts/tests/cards/G06/test_prison.gd|120|
+G06_prison_integration|res://scripts/tests/cards/G06/test_prison_integration.gd|180|
+G06_ops_conds_mods|res://scripts/tests/cards/G06/test_ops_conds_mods.gd|120|
+G06_firsts|res://scripts/tests/cards/G06/test_firsts.gd|120|
+G06_determinism_save|res://scripts/tests/cards/G06/test_determinism_save.gd|120|
+G06_economy_integration|res://scripts/tests/cards/G06/test_economy_integration.gd|180|
+G06_policies_no_stall|res://scripts/tests/cards/G06/test_policies_no_stall.gd|600|--stages=3 --seeds=3
+G06_autoplay_recovery|res://scripts/tests/cards/G06/test_autoplay_recovery.gd|120|
+G06_policy_sources|res://scripts/tests/cards/G06/test_policy_sources.gd|180|
+G06_cached_api|res://scripts/tests/cards/G06/test_cached_api.gd|300|
+G06_replay|res://scripts/tests/cards/G06/test_replay.gd|300|
+G06_report_schema|res://scripts/tests/cards/G06/test_report_schema.gd|300|
+G06_golden|res://scripts/tests/cards/golden/test_golden.gd|300|
+G06_no_deadlock_1|res://scripts/tests/cards/G06/test_no_deadlock.gd|1200|--name=G06_no_deadlock_1 --seed_from=1 --seed_to=250 --days=6 --long_days=32
+G06_no_deadlock_2|res://scripts/tests/cards/G06/test_no_deadlock.gd|1200|--name=G06_no_deadlock_2 --seed_from=251 --seed_to=500 --days=6 --long_days=32
+G06_no_deadlock_3|res://scripts/tests/cards/G06/test_no_deadlock.gd|1200|--name=G06_no_deadlock_3 --seed_from=501 --seed_to=750 --days=6 --long_days=32
+G06_no_deadlock_4|res://scripts/tests/cards/G06/test_no_deadlock.gd|1200|--name=G06_no_deadlock_4 --seed_from=751 --seed_to=1000 --days=6 --long_days=32

@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-3940"
+  },
+  "lf.1939.fuel_stock": {
+    "title": "置办柴火",
+    "body": "天冷了，家里得备些柴火过冬。",
+    "choices": {
+      "buy": "买柴",
+      "skip": "先不买"
+    },
+    "outcomes": {
+      "ignored": "柴一直没买，屋里冷，这几天你没什么精神。"
+    }
+  },
+  "lf.1939.new_year_goods": {
+    "title": "置办年货",
+    "body": "腊月了，家里的年货还没着落。",
+    "choices": {
+      "buy": "置办",
+      "skip": "先不办"
+    },
+    "outcomes": {
+      "ignored": "年货没办，街坊看在眼里，背后有些闲话。"
+    }
+  },
+  "lf.1939.pawn_coat": {
+    "title": "当衣过年",
+    "body": "手头太紧，你想把自己的一件冬衣当了，换钱过年。",
+    "choices": {
+      "pawn": "当掉衣物",
+      "borrow": "向家里挪",
+      "endure": "挨着"
+    },
+    "outcomes": {
+      "ignored": "这几天就这么挨着，冻得人发怵。"
+    }
+  },
+  "lf.1939.year_tab": {
+    "title": "年关清账",
+    "body": "铺租、伙食这些日常的账，年关前得清一清。",
+    "choices": {
+      "pay": "还上",
+      "delay": "再拖"
+    },
+    "outcomes": {
+      "ignored": "账一拖再拖，上门催的人多了，风声紧了些。"
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "_meta": {
+    "owner": "C02",
+    "schema": 1,
+    "brief": "Hero used today, one contact away for 3 days",
+    "_provenance": {
+      "by": "ai",
+      "task": "C02",
+      "date": "2026-10-14"
+    }
+  },
+  "self": {
+    "uid": "self1",
+    "used_today": true,
+    "attrs": {
+      "eye": 3,
+      "tongue": 2,
+      "pull": 4,
+      "nerve": 1
+    }
+  },
+  "contacts": [
+    {
+      "actions": [],
+      "art": "portrait.linsao",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "days_left": -1,
+      "expires_in": -1,
+      "gold": false,
+      "intent": "",
+      "keepable": false,
+      "must_resolve": false,
+      "person": "linsao",
+      "status": "open",
+      "type": "contact",
+      "used_today": false,
+      "uid": "c1",
+      "def": "ct.c1",
+      "zone": "contacts"
+    },
+    {
+      "actions": [],
+      "art": "portrait.linsao",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "days_left": -1,
+      "expires_in": -1,
+      "gold": false,
+      "intent": "",
+      "keepable": false,
+      "must_resolve": false,
+      "person": "linsao",
+      "status": "open",
+      "type": "contact",
+      "used_today": false,
+      "uid": "c2",
+      "def": "ct.c2",
+      "zone": "contacts"
+    },
+    {
+      "actions": [],
+      "art": "portrait.linsao",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 3,
+      "days_left": -1,
+      "expires_in": -1,
+      "gold": false,
+      "intent": "",
+      "keepable": false,
+      "must_resolve": false,
+      "person": "linsao",
+      "status": "open",
+      "type": "contact",
+      "used_today": false,
+      "uid": "c3",
+      "def": "ct.c3",
+      "zone": "contacts"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "g05.almanac.pawn_in": {
+    "t": "收当"
+  },
+  "g05.almanac.buy_in": {
+    "t": "收货"
+  },
+  "g05.almanac.sell_out": {
+    "t": "出货"
+  },
+  "g05.almanac.redeem": {
+    "t": "赎当"
+  },
+  "g05.almanac.trade": {
+    "t": "交易"
+  },
+  "g05.almanac.meet": {
+    "t": "会友"
+  },
+  "g05.almanac.travel": {
+    "t": "出行"
+  },
+  "g05.almanac.pray": {
+    "t": "祭祀"
+  },
+  "g05.almanac.repair": {
+    "t": "修造"
+  },
+  "g05.almanac.rest": {
+    "t": "安床"
+  },
+  "g05.almanac.lend": {
+    "t": "借贷"
+  },
+  "g05.almanac.wed": {
+    "t": "嫁娶"
+  },
+  "g05.reason.wheel": {
+    "t": "转轮盘"
+  },
+  "g05.reason.incense": {
+    "t": "香火钱"
+  },
+  "g05.reason.fortune": {
+    "t": "算命钱"
+  },
+  "g05.notice.peek": {
+    "t": "明天要来的事，你心里先有了数。"
+  },
+  "g05.notice.almanac": {
+    "t": "今天照着黄历办，讨了个好彩头。"
+  },
+  "g05.end.void": {
+    "t": "大轮盘没转，这回翻身的机会就错过了。"
+  },
+  "g05.weather.clear": {
+    "t": "晴"
+  },
+  "g05.weather.cloud": {
+    "t": "阴"
+  },
+  "g05.weather.rain": {
+    "t": "雨"
+  },
+  "g05.weather.fog": {
+    "t": "雾"
+  },
+  "g05.weather.wind": {
+    "t": "风大"
+  },
+  "g05.weather.snow": {
+    "t": "雪"
+  }
+}

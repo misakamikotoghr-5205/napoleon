@@ -1,0 +1,87 @@
+{
+ "events": [
+  {
+   "id": "ev_common_rumor",
+   "weight": 2,
+   "once": true,
+   "title": "传闻",
+   "location": "路上",
+   "speaker": "hero",
+   "body": [
+    "听到一则传闻。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "listen",
+     "label": "听",
+     "effects": {
+      "morale": 2
+     }
+    },
+    {
+     "id": "ignore",
+     "label": "不听"
+    }
+   ]
+  },
+  {
+   "id": "ev_common_cache",
+   "weight": 1,
+   "once": true,
+   "title": "弃置的辎重",
+   "location": "路边",
+   "speaker": "hero",
+   "body": [
+    "一车辎重。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "take",
+     "label": "收下",
+     "rogue": {
+      "coins": {
+       "supply": 2
+      }
+     },
+     "days": 1
+    },
+    {
+     "id": "leave",
+     "label": "不碰"
+    }
+   ]
+  },
+  {
+   "id": "ev_common_marie",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "alive": [
+     "marie"
+    ]
+   },
+   "weight_by_trust": {
+    "companion": "marie",
+    "per_trust": 2
+   },
+   "title": "军医",
+   "location": "营地",
+   "speaker": "hero",
+   "body": [
+    "玛丽来找你。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "thanks",
+     "label": "道谢",
+     "rogue": {
+      "heal": 5
+     }
+    }
+   ]
+  }
+ ]
+}

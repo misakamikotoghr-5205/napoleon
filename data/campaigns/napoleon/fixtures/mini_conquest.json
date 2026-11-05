@@ -1,0 +1,452 @@
+{
+ "id": "mini_conquest",
+ "version": 2,
+ "title": "迷你鹰飞",
+ "initial": {
+  "treasury": 1000,
+  "morale": 60,
+  "heat": 10,
+  "vitality": 70,
+  "construction": 0,
+  "exploration": 0
+ },
+ "chapters": [
+  {
+   "id": "mk_one",
+   "title": "百日",
+   "currency": "franc",
+   "currency_name": "法郎",
+   "treasury_start": 1500,
+   "scene_ids": [
+    "mk_land",
+    "mk_boss",
+    "mk_night"
+   ]
+  },
+  {
+   "id": "mk_two",
+   "title": "莱茵",
+   "currency": "franc",
+   "currency_name": "法郎",
+   "treasury_start": 1500,
+   "scene_ids": [
+    "mk_rhine"
+   ],
+   "volume": 2
+  }
+ ],
+ "characters": [
+  {
+   "id": "hero",
+   "name": "维尔福",
+   "role": "军需官"
+  }
+ ],
+ "items": [
+  {
+   "id": "mini_watch",
+   "name": "怀表",
+   "chapter": "mk_one",
+   "description": "一块旧怀表。"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "mk_land",
+   "chapter": "mk_one",
+   "date": "1800-01-01",
+   "title": "登陆",
+   "location": "登陆",
+   "speaker": "hero",
+   "body": [
+    "登陆。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "mk_go",
+     "label": "进军"
+    }
+   ]
+  },
+  {
+   "id": "mk_boss",
+   "chapter": "mk_one",
+   "date": "1800-01-01",
+   "title": "会战",
+   "location": "会战",
+   "speaker": "hero",
+   "body": [
+    "会战。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "mk_after",
+     "label": "收兵",
+     "flags": [
+      "k_mini_won"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mk_night",
+   "chapter": "mk_one",
+   "date": "1800-01-01",
+   "title": "会战之夜",
+   "location": "会战之夜",
+   "speaker": "hero",
+   "body": [
+    "会战之夜。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "mk_end",
+     "label": "过夜"
+    }
+   ]
+  },
+  {
+   "id": "mk_rhine",
+   "chapter": "mk_two",
+   "date": "1800-01-01",
+   "title": "莱茵",
+   "location": "莱茵",
+   "speaker": "hero",
+   "body": [
+    "莱茵。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "mk_rhine_go",
+     "label": "渡河"
+    }
+   ]
+  }
+ ],
+ "endings": [
+  {
+   "id": "bankruptcy",
+   "kind": "failure",
+   "title": "军费告罄",
+   "body": [
+    "钱袋见底。"
+   ]
+  },
+  {
+   "id": "loss",
+   "kind": "failure",
+   "title": "大军溃散",
+   "body": [
+    "人困马乏。"
+   ]
+  },
+  {
+   "id": "blockade",
+   "kind": "failure",
+   "title": "全区起义",
+   "body": [
+    "四处都是追兵。"
+   ]
+  },
+  {
+   "id": "k_mini_vol_win",
+   "kind": "volume",
+   "title": "百日（卷终）",
+   "body": [
+    "打赢了。"
+   ]
+  },
+  {
+   "id": "k_mini_vol_dusk",
+   "kind": "volume",
+   "title": "黄昏（卷终）",
+   "body": [
+    "天黑了。"
+   ]
+  }
+ ],
+ "tuning": {},
+ "rules": {
+  "failures": [
+   {
+    "ending": "bankruptcy",
+    "reason": "treasury",
+    "when": {
+     "metric": {
+      "treasury": [
+       "<=",
+       0
+      ]
+     }
+    }
+   },
+   {
+    "ending": "loss",
+    "reason": "vitality",
+    "when": {
+     "metric": {
+      "vitality": [
+       "<=",
+       0
+      ]
+     }
+    }
+   },
+   {
+    "ending": "blockade",
+    "reason": "heat",
+    "when": {
+     "metric": {
+      "heat": [
+       ">=",
+       100
+      ]
+     }
+    }
+   }
+  ],
+  "endings": [],
+  "default_ending": "k_mini_vol_dusk",
+  "exclusive_flags": [],
+  "actions": {
+   "build": {
+    "metric": "construction",
+    "chapters": [],
+    "cost": 200,
+    "gain": 25
+   },
+   "explore": {
+    "metric": "exploration",
+    "chapters": [],
+    "cost": 200,
+    "gain": 25
+   },
+   "fund": {
+    "chapters": [],
+    "yes": {
+     "cost": 1000,
+     "effects": {
+      "morale": 15
+     },
+     "flags": []
+    },
+    "no": {
+     "flags": []
+    }
+   }
+  },
+  "signs": {
+   "white": {
+    "daily": {},
+    "map": {}
+   },
+   "red": {
+    "daily": {
+     "heat": 10
+    },
+    "map": {
+     "pass_supply": 1
+    }
+   },
+   "black": {
+    "daily": {
+     "treasury": -10,
+     "heat": -10
+    },
+    "map": {
+     "mp": -1
+    }
+   }
+  },
+  "volume_endings": [
+   {
+    "id": "k_mini_vol_win",
+    "when": {
+     "flags": [
+      "k_mini_won",
+      "k_mini_scout"
+     ]
+    }
+   }
+  ],
+  "default_volume_ending": "k_mini_vol_dusk"
+ },
+ "big_fate_extra": [
+  {
+   "id": "fate_mini_exile",
+   "title": "随驾流放",
+   "desc": "跟皇帝上船。",
+   "scenes": [
+    "mk_boss"
+   ],
+   "jump": "ocean",
+   "effects": {
+    "morale": -5
+   },
+   "once_per_run": true
+  }
+ ],
+ "events": [
+  {
+   "id": "ev_mk_council",
+   "pool": "fixed",
+   "council": true,
+   "title": "军议",
+   "location": "营帐",
+   "speaker": "hero",
+   "body": [
+    "三条方略。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "cp",
+     "label": "多带军令",
+     "boss_mod": {
+      "cp_bonus": 2
+     }
+    },
+    {
+     "id": "morale",
+     "label": "先挫敌锐气",
+     "boss_mod": {
+      "enemy_morale": -2
+     }
+    },
+    {
+     "id": "prep",
+     "label": "多一回合布阵",
+     "boss_mod": {
+      "prep_turn": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_mk_fixed",
+   "pool": "fixed",
+   "title": "铁笼",
+   "location": "欧塞尔",
+   "speaker": "hero",
+   "body": [
+    "笼子里关着一位元帅。"
+   ],
+   "appraisals": [
+    {
+     "id": "mk_lock",
+     "kind": "spot",
+     "label": "看锁",
+     "observation": "锁是新的。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "free",
+     "label": "放他出来",
+     "requires_clues": [
+      "mk_lock"
+     ],
+     "rogue": {
+      "recruit": [
+       "ney"
+      ]
+     },
+     "flags": [
+      "k_mini_scout"
+     ],
+     "reveal": 2
+    },
+    {
+     "id": "leave",
+     "label": "不管",
+     "effects": {
+      "morale": -1
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_mk_pool",
+   "pool": "conquest",
+   "weight": 2,
+   "once": true,
+   "title": "斥候回报",
+   "location": "林间",
+   "speaker": "hero",
+   "body": [
+    "斥候带回消息。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "listen",
+     "label": "听",
+     "flags": [
+      "k_mini_scout"
+     ]
+    },
+    {
+     "id": "skip",
+     "label": "不听"
+    }
+   ]
+  },
+  {
+   "id": "ev_mk_campnight",
+   "interlude": "camp_night",
+   "offer": 3,
+   "chapters": [
+    "mk_one"
+   ],
+   "title": "野营夜",
+   "location": "营火",
+   "speaker": "hero",
+   "body": [
+    "夜里能做一件事。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "rest",
+     "label": "早睡",
+     "effects": {
+      "vitality": 5
+     }
+    },
+    {
+     "id": "drill",
+     "label": "操练",
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     }
+    },
+    {
+     "id": "forage",
+     "label": "征粮",
+     "rogue": {
+      "coins": {
+       "supply": 2
+      }
+     }
+    },
+    {
+     "id": "letters",
+     "label": "写信",
+     "effects": {
+      "morale": 3
+     }
+    }
+   ]
+  }
+ ]
+}

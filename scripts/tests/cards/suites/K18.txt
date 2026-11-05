@@ -1,0 +1,9 @@
+# K18 收徒 + 店里的猫 + 武器只开吓唬（#182 第 3、2、4 条）
+K18_validate|res://scripts/cards/core/validate_main.gd|120|--only=data/cards/era/1939/apprentice.json,data/cards/rules/apprentice.json,data/cards/era/1938/pet.json,data/cards/rules/pet.json,data/cards/era/1939/weapon.json,data/cards/tags/K18.json,data/cards/ui_keys/K18.json,data/cards/guide/steps.json,data/cards/guide/rule_pages.json --name=K18_validate
+K18_apprentice|res://scripts/tests/cards/K18/test_apprentice.gd|180|
+K18_apprentice_ui|res://scripts/tests/cards/K18/test_apprentice_ui.gd|120|
+K18_pet|res://scripts/tests/cards/K18/test_pet.gd|240|
+K18_pet_edges|res://scripts/tests/cards/K18/test_pet_edges.gd|60|
+K18_pet_flow|res://scripts/tests/cards/K18/test_pet_flow.gd|300|
+K18_scare|res://scripts/tests/cards/K18/test_scare.gd|180|
+K18_scare_ui|res://scripts/tests/cards/K18/test_scare_ui.gd|240|

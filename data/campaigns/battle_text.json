@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "_doc": [
+    "战斗规则内核（scripts/cards/campaign/battle/battle_rules.gd）新增部分的中文：两档新规模、28 种新地形、8 种天时的名字，和新规则写进交火日志的句子。",
+    "旧的 3 档规模、12 种旧地形和旧日志句子仍写在 battle_rules.gd 里（golden 要逐字节相等，没有搬）。",
+    "{} 里是占位符，由内核用 String.format 填；改字只改这里，不改规则。界面的说明文字在 battle_ui.json。"
+  ],
+  "scale_names": {
+    "grand": "大会战",
+    "epic": "决战"
+  },
+  "terrain_names": {
+    "void": "虚空",
+    "wall": "墙",
+    "rubble": "瓦砾",
+    "snow": "雪地",
+    "mud": "泥地",
+    "ice": "冰面",
+    "sand": "沙地",
+    "dune": "沙丘",
+    "well": "水井",
+    "deck": "甲板",
+    "quarterdeck": "艉楼",
+    "rigging": "桅盘",
+    "mast": "桅杆",
+    "sea": "海",
+    "shallows": "浅水",
+    "reef": "暗礁",
+    "beach": "沙滩",
+    "cave": "洞穴",
+    "dock": "码头",
+    "plank": "跳板",
+    "hatch": "舱口",
+    "street": "街道",
+    "building": "房屋",
+    "rooftop": "屋顶",
+    "corridor": "牢廊",
+    "cell": "牢房",
+    "door": "牢门",
+    "catacomb": "墓穴"
+  },
+  "weather_names": {
+    "clear": "晴",
+    "rain": "雨",
+    "mud": "泥泞",
+    "snow": "雪",
+    "fog": "雾",
+    "night": "夜",
+    "desert": "酷热",
+    "storm": "风暴"
+  },
+  "weather_desc": {
+    "clear": "",
+    "rain": "小火器攻 −1（伤害至少 1），炮不受影响。",
+    "mud": "敌骑兵每格步耗 +1；骠骑兵冲锋距离 −1。",
+    "snow": "每回合军令点 −1；军医回复 −1。",
+    "fog": "来敌提前公开的回合数 −1。",
+    "night": "所有远程射程 −1；来敌提前公开的回合数 −1。",
+    "desert": "第 3、6、9……回合，身边 1 格内没有水井的我方单位兵力 −1（最低留 1）。",
+    "storm": "每回合结束时桅盘上的我方单位兵力 −1（最低留 1）；敌炮艇每 3 回合开一炮。"
+  },
+  "unknown_enemy": "？",
+  "list_sep": "、",
+  "log": {
+    "open": "{name}（{scale}，Lv {lv}，{weather}）：{turns} 回合，敌军心 {em}。",
+    "wave_sealed": "{cell} 已经封死，这一波敌人没能出来。",
+    "pushed_off": "{cell} 变成了{terrain}，{name}退回部署栏（{n} 回合后可再部署）。",
+    "barricade_lost": "{cell} 变成了{terrain}，那道拒马没了。",
+    "carried_off": "{cell} 变成了{terrain}，濒死的{name}被抬下战场。",
+    "drowned": "{name}落水，敌军心 −{loss}（{em}）。",
+    "fell": "{name}坠落，敌军心 −{loss}（{em}）。",
+    "on_kill": "{who}倒下：{cell} 变成了{terrain}。",
+    "thirst": "缺水：{names}各 −1 兵力。",
+    "storm": "风暴：桅盘上的{names}各 −1 兵力。",
+    "skirmish": "{name}放了一枪就散开，下回合后撤 1 格。",
+    "arrest": "{by}当场拿下了主角！",
+    "loot": "{name}抢走了一批军需。",
+    "ransom": "{name}掳走了一名人质。",
+    "rocket": "火箭溅射到 {cell}。",
+    "pair_morale": "伙伴羁绊",
+    "order_move": "{name}移动到 {cell}，消耗1军令点。"
+  }
+}

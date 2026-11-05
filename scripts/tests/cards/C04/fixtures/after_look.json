@@ -1,0 +1,139 @@
+{
+  "_meta": {
+    "owner": "C04",
+    "schema": 1,
+    "brief": "pawn guest already looked; three observation lines",
+    "_provenance": {
+      "by": "ai",
+      "task": "C04",
+      "date": "2026-10-13"
+    }
+  },
+  "guide_progress": {},
+  "view": {
+    "phase": "day",
+    "mode": "shop",
+    "date": {
+      "abs_day": 1,
+      "stage": 0,
+      "stage_day": 1,
+      "y": 1938,
+      "m": 3,
+      "d": 2,
+      "weekday": 2
+    },
+    "money": {
+      "amount": 340,
+      "currency": "fabi"
+    },
+    "hand": [],
+    "tickets": [],
+    "notice": {
+      "weather": "clear",
+      "news": []
+    }
+  },
+  "queries": {
+    "counter|{\"uid\":\"c0021\"}": {
+      "uid": "c0021",
+      "person": "linsao",
+      "intent": "pawn",
+      "item": {
+        "item": "I001",
+        "template": "jewelry.hairpin",
+        "cat": "jewelry",
+        "art": "item.jewelry.hairpin",
+        "condition_word": 2,
+        "observations": [
+          "obs.weigh.match",
+          "obs.weigh.light_much",
+          "obs.weigh.unsure"
+        ],
+        "on_shelf_since": -1
+      },
+      "asking": 294,
+      "tiers": {
+        "harsh": 161,
+        "fair": 220,
+        "kind": 279
+      },
+      "direction": "pay",
+      "round": 0,
+      "last_reply": "",
+      "last_price": 0,
+      "line_key": "p.linsao.1938.pawn_hairpin#lines.greet",
+      "can_appraise": false,
+      "stock": [],
+      "ticket": null
+    },
+    "card|{\"uid\":\"c0021\"}": {
+      "uid": "c0021",
+      "def": "p.linsao.1938.pawn_hairpin",
+      "type": "person",
+      "person": "linsao",
+      "intent": "pawn",
+      "art": "portrait.linsao",
+      "panel": "counter",
+      "choices": [],
+      "zone": "hand",
+      "status": "open"
+    },
+    "stock|{}": {
+      "items": []
+    },
+    "tickets|{}": {
+      "tickets": []
+    }
+  },
+  "responses": [
+    {
+      "cmd": "counter.offer",
+      "match": {
+        "uid": "c0021",
+        "tier": "fair"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "reply": "counter",
+        "price": 200
+      },
+      "events": []
+    },
+    {
+      "cmd": "counter.answer",
+      "match": {
+        "uid": "c0021",
+        "accept": true
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "reply": "accept",
+        "price": 200
+      },
+      "events": [
+        [
+          "first_time",
+          "ticket",
+          {
+            "no": 2
+          }
+        ],
+        [
+          "card_left",
+          "c0021",
+          "resolved"
+        ]
+      ]
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "ok": true,
+        "err": ""
+      },
+      "events": []
+    }
+  ]
+}

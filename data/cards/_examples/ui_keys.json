@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "owner": "W0",
+    "schema": 1,
+    "brief": "例子集用到的原因键、告示键（键可以用任何前缀，§2.5）"
+  },
+  "keys": {
+    "k02.reason.bigfate": {
+      "brief": "大命运进出的钱"
+    },
+    "k04.reason.fire": {
+      "brief": "失火损失"
+    },
+    "k06.reason.coal": {
+      "brief": "买煤"
+    },
+    "k07.notice.not_back": {
+      "brief": "派出去的人没回来"
+    },
+    "k09.arrest.contraband": {
+      "brief": "带着违禁的东西被抓"
+    },
+    "k09.reason.box_returned": {
+      "brief": "箱子被取走，给的一笔钱"
+    },
+    "k09.reason.street_work": {
+      "brief": "街头做活挣的钱"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "res://data/cards/_schema/source.json",
+  "title": "card type source",
+  "description": "Rogue v1 customer source picked at the weekly stocktake; lasts until the end of the stage (docs/cards/rogue/ROGUE_V1.md section 6). Never dealt; held in state.stock. Player text (title, body, use, lines.gain) lives in text/** and text_ai/**.",
+  "type": "object",
+  "required": ["id", "type", "era", "brief", "_provenance", "art"],
+  "properties": {
+    "id": {"type": "string", "description": "ky.<slug>"},
+    "type": {"type": "string", "description": "source"},
+    "era": {"type": "array", "items": {"type": "string"}, "description": "['*'] in v1"},
+    "weight": {"type": "integer", "description": "Offer weight; 0 = never offered"},
+    "tags": {"type": "array", "items": {"type": "string"}, "description": "Unused in v1"},
+    "conditions": {"type": "object", "description": "Must hold for the source to be offered; checked at offer time only"},
+    "mods": {"type": "array", "items": {"type": "object"}, "description": "Standing modifier rows, ROGUE_V1 section 5.5; only pool_weight and deal_count rows"},
+    "art": {"type": "string", "description": "illus.ky.<slug>, 64x48"},
+    "brief": {"type": "string", "description": "Designer note with the real numbers; never shown"},
+    "_provenance": {"type": "object", "description": "{by, task, date}"}
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-25:rogue-v1"
+  },
+  "rg2.notice.stocktake": {
+    "t": "周末盘账：这周做成了 {deals} 笔生意，库房里翻出几样东西，门口也有人来打听。"
+  },
+  "rg2.notice.stocktake_few": {
+    "t": "周末盘账：这周只做成 {deals} 笔，翻出来的不多。"
+  },
+  "rg2.notice.passed": {
+    "t": "这回都没要，东西包好放回去了。"
+  },
+  "rg2.notice.sources_lapsed": {
+    "t": "过了这一阵，门口常来的那几拨人散了。"
+  },
+  "rg2.notice.peddler_empty": {
+    "t": "货郎翻了翻担子，没什么合适的。"
+  },
+  "rg2.reason.offer_closed": {
+    "t": "这一份已经挑过，或者过了时候。"
+  },
+  "rg2.notice.lapsed": {
+    "t": "昨天翻出来的那几样没挑，一早又收回去了。"
+  }
+}

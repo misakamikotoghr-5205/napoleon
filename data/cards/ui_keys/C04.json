@@ -1,0 +1,341 @@
+{
+  "_meta": {
+    "owner": "C04",
+    "schema": 1,
+    "brief": "柜台面板用的界面键（当、卖、买、赎）。只登记键和 brief，正文由人写。",
+    "_provenance": {
+      "by": "ai",
+      "task": "C04",
+      "date": "2026-10-13"
+    }
+  },
+  "keys": {
+    "c04.tier.harsh.pay": {
+      "brief": "来当或来卖时的压价按钮（你少付钱）"
+    },
+    "c04.tier.fair.pay": {
+      "brief": "来当或来卖时的公道价按钮"
+    },
+    "c04.tier.kind.pay": {
+      "brief": "来当或来卖时的厚道价按钮（你多付钱）"
+    },
+    "c04.tier.harsh.receive": {
+      "brief": "来买或来赎时的狠价按钮（你多收钱）"
+    },
+    "c04.tier.fair.receive": {
+      "brief": "来买或来赎时的公道价按钮"
+    },
+    "c04.tier.kind.receive": {
+      "brief": "来买时的厚道价按钮（价低，你少收钱）"
+    },
+    "c04.intent.pawn": {
+      "brief": "来意：来当"
+    },
+    "c04.intent.sell": {
+      "brief": "来意：来卖"
+    },
+    "c04.intent.buy": {
+      "brief": "来意：来买"
+    },
+    "c04.intent.redeem": {
+      "brief": "来意：来赎"
+    },
+    "c04.cond.0": {
+      "brief": "成色档：破旧"
+    },
+    "c04.cond.1": {
+      "brief": "成色档：差"
+    },
+    "c04.cond.2": {
+      "brief": "成色档：平常"
+    },
+    "c04.cond.3": {
+      "brief": "成色档：好"
+    },
+    "c04.cond.4": {
+      "brief": "成色档：顶好"
+    },
+    "c04.reply.look": {
+      "brief": "回话：细看这件东西"
+    },
+    "c04.reply.refuse": {
+      "brief": "回话：不收"
+    },
+    "c04.reply.later": {
+      "brief": "回话：请他先等等，回头再说"
+    },
+    "c04.reply.accept": {
+      "brief": "回话：接下客人的还价"
+    },
+    "c04.reply.decline": {
+      "brief": "回话：不接客人的还价"
+    },
+    "c04.reply.pick": {
+      "brief": "回话：从货架上挑一件"
+    },
+    "c04.dialog.skip": {
+      "brief": "对话框：跳过剩下的句子"
+    },
+    "c04.dialog.sample": {
+      "brief": "left\n\nright"
+    },
+    "c04.shelf.title": {
+      "brief": "货架抽屉的标题"
+    },
+    "c04.shelf.count": {
+      "brief": "货架件数和上限，参数 {n} {cap}"
+    },
+    "c04.tickets.title": {
+      "brief": "当票抽屉的标题"
+    },
+    "c04.tickets.row": {
+      "brief": "当票一行：当票号和剩几天，参数 {n} {days}"
+    },
+    "c04.tickets.foreign": {
+      "brief": "外来当票的标记"
+    },
+    "c04.btn.send_off": {
+      "brief": "送客，关掉柜台"
+    },
+    "c04.redeem.by_rule": {
+      "brief": "来赎：照规矩"
+    },
+    "c04.redeem.squeeze": {
+      "brief": "来赎：刁难加价"
+    },
+    "c04.redeem.compensate": {
+      "brief": "东西已经卖了：赔钱"
+    },
+    "c04.redeem.buy_back": {
+      "brief": "东西已经卖了：去买回来"
+    },
+    "c04.result.ticket": {
+      "brief": "来当成交：开了当票"
+    },
+    "c04.result.shelved": {
+      "brief": "来卖成交：东西上了货架"
+    },
+    "c04.label.asking": {
+      "brief": "客人开口报的价"
+    },
+    "c04.label.principal": {
+      "brief": "当票上的当本"
+    },
+    "c04.label.days": {
+      "brief": "当票还剩几天"
+    },
+    "c04.cat.jewelry": {
+      "brief": "物品类别：首饰"
+    },
+    "c04.cat.utensils": {
+      "brief": "物品类别：器物"
+    },
+    "c04.cat.art": {
+      "brief": "物品类别：书画"
+    },
+    "c04.cat.clothing": {
+      "brief": "物品类别：衣裳"
+    },
+    "c04.cat.silver": {
+      "brief": "物品类别：银器"
+    },
+    "c04.cat.documents": {
+      "brief": "物品类别：文书"
+    },
+    "c04.reply.mark.choice": {
+      "brief": "回话行前的记号：选项"
+    },
+    "c04.reply.mark.tier": {
+      "brief": "回话行前的记号：三档价"
+    },
+    "c04.reply.mark.look": {
+      "brief": "回话行前的记号：细看、称、吹"
+    },
+    "c04.reply.mark.roll": {
+      "brief": "回话行前的记号：掷铜钱"
+    },
+    "c04.reply.mark.wheel": {
+      "brief": "回话行前的记号：去转轮盘"
+    },
+    "c04.reply.mark.later": {
+      "brief": "回话行前的记号：回头再说"
+    },
+    "c04.dialog.more": {
+      "brief": "对话框右下角“点一下继续”的记号"
+    },
+    "c04.header.join": {
+      "brief": "物品行标签串的连接：{a} 是前面的，{b} 是后面一个标签"
+    },
+    "c04.header.pawn": {
+      "brief": "物品行标题：来当的东西摆在柜上（{name} 物品名）"
+    },
+    "c04.header.sell": {
+      "brief": "物品行标题：来卖的东西摆在柜上（{name} 物品名）"
+    },
+    "c04.header.buy": {
+      "brief": "物品行标题：从货架上挑出来拿给来买的人看（{name} 物品名）"
+    },
+    "c04.header.buy_none": {
+      "brief": "物品行标题：来买的人还没挑东西"
+    },
+    "c04.header.redeem": {
+      "brief": "物品行标题：来赎的东西（{name} 物品名）"
+    },
+    "c04.header.cond": {
+      "brief": "物品行标签：成色（{cond} 是成色档的字）"
+    },
+    "c04.header.asking": {
+      "brief": "物品行标签：客人开口要的价（{n} 钱数）"
+    },
+    "c04.header.counter": {
+      "brief": "物品行标签：客人还的价（{n} 钱数）"
+    },
+    "c04.header.principal": {
+      "brief": "物品行和当票上的标签：当本（{n} 钱数）"
+    },
+    "c04.header.days": {
+      "brief": "物品行和当票上的标签：离到期还剩几天（{n} 天数）"
+    },
+    "c04.note.spot": {
+      "brief": "细看批注条前的金字：放大镜细看"
+    },
+    "c04.note.weigh": {
+      "brief": "细看批注条前的金字：上戥子称"
+    },
+    "c04.note.coin_ring": {
+      "brief": "细看批注条前的金字：吹银元听声"
+    },
+    "c04.note.fragments": {
+      "brief": "细看批注条前的金字：拼碎当票"
+    },
+    "c04.note.decode": {
+      "brief": "细看批注条前的金字：对密码本"
+    },
+    "c04.note.other": {
+      "brief": "细看批注条前的金字：别的看法"
+    },
+    "c04.reason.shelf_empty": {
+      "brief": "“从货架上挑一件”不能点时下面的小字：货架上没有合他要的东西"
+    },
+    "c04.reason.money_short": {
+      "brief": "三档价、“就这个价”不能点时下面的小字：柜上的钱不够付这个价（G04 的 tier_err / accept_err 是 money_short）。不写数。"
+    },
+    "c04.reason.shelf_full": {
+      "brief": "来卖时三档价不能点时下面的小字：货架满了，收不下（G04 的 tier_err 是 shelf_full）。"
+    },
+    "c04.drawer.close": {
+      "brief": "货架、当票抽屉单独打开（没有抽屉框）时自己的“合上”按钮"
+    },
+    "c04.shelf.pick_hint": {
+      "brief": "来买时货架抽屉里的说明：点一件拿给客人看"
+    },
+    "c04.shelf.empty_cell": {
+      "brief": "货架上空着的格子"
+    },
+    "c04.tickets.note": {
+      "brief": "当票抽屉顶上的说明：当票怎么回事"
+    },
+    "c04.tickets.empty": {
+      "brief": "当票抽屉里一张当票都没有时的说明"
+    },
+    "c04.tickets.head": {
+      "brief": "当票一行的粗体标题：{n} 是当票号，{name} 是东西"
+    },
+    "c04.role.brother": {
+      "brief": "对话框名字后面的身份小字（人物 id brother）"
+    },
+    "c04.role.chen": {
+      "brief": "对话框名字后面的身份小字（人物 id chen）"
+    },
+    "c04.role.xiaoding": {
+      "brief": "对话框名字后面的身份小字（人物 id xiaoding）"
+    },
+    "c04.role.zhang": {
+      "brief": "对话框名字后面的身份小字（人物 id zhang）"
+    },
+    "c04.role.wangshan": {
+      "brief": "对话框名字后面的身份小字（人物 id wangshan）"
+    },
+    "c04.role.li": {
+      "brief": "对话框名字后面的身份小字（人物 id li）"
+    },
+    "c04.role.linsao": {
+      "brief": "对话框名字后面的身份小字（人物 id linsao）"
+    },
+    "c04.role.zhouma": {
+      "brief": "对话框名字后面的身份小字（人物 id zhouma）"
+    },
+    "c04.role.zhao": {
+      "brief": "对话框名字后面的身份小字（人物 id zhao）"
+    },
+    "c04.role.sunyoung": {
+      "brief": "对话框名字后面的身份小字（人物 id sunyoung）"
+    },
+    "c04.role.ma": {
+      "brief": "对话框名字后面的身份小字（人物 id ma）"
+    },
+    "c04.role.hu2": {
+      "brief": "对话框名字后面的身份小字（人物 id hu2）"
+    },
+    "c04.role.sunlaoye": {
+      "brief": "对话框名字后面的身份小字（人物 id sunlaoye）"
+    },
+    "c04.role.guanjia": {
+      "brief": "对话框名字后面的身份小字（人物 id guanjia）"
+    },
+    "c04.role.wu": {
+      "brief": "对话框名字后面的身份小字（人物 id wu）"
+    },
+    "c04.role.postman": {
+      "brief": "对话框名字后面的身份小字（人物 id postman）"
+    },
+    "c04.role.nf1938a": {
+      "brief": "对话框名字后面的身份小字（人物 id nf1938a）"
+    },
+    "c04.role.nf1938b": {
+      "brief": "对话框名字后面的身份小字（人物 id nf1938b）"
+    },
+    "c04.role.nf1938c": {
+      "brief": "对话框名字后面的身份小字（人物 id nf1938c）"
+    },
+    "c04.role.nf1938d": {
+      "brief": "对话框名字后面的身份小字（人物 id nf1938d）"
+    },
+    "c04.role.tudi": {
+      "brief": "对话框名字后面的身份小字（人物 id tudi）"
+    },
+    "c04.role.suanming": {
+      "brief": "对话框名字后面的身份小字（人物 id suanming）"
+    },
+    "c04.role.stranger_peddler": {
+      "brief": "对话框名字后面的身份小字（人物 id stranger_peddler）"
+    },
+    "c04.role.stranger_waixiang": {
+      "brief": "对话框名字后面的身份小字（人物 id stranger_waixiang）"
+    },
+    "c04.role.stranger_boatman": {
+      "brief": "对话框名字后面的身份小字（人物 id stranger_boatman）"
+    },
+    "c04.role.stranger_refugee": {
+      "brief": "对话框名字后面的身份小字（人物 id stranger_refugee）"
+    },
+    "c04.role.stranger_widow": {
+      "brief": "对话框名字后面的身份小字（人物 id stranger_widow）"
+    },
+    "c04.role.stranger_student": {
+      "brief": "对话框名字后面的身份小字（人物 id stranger_student）"
+    },
+    "c04.role.stranger_collector": {
+      "brief": "对话框名字后面的身份小字（人物 id stranger_collector）"
+    },
+    "c04.role.stranger_fence": {
+      "brief": "对话框名字后面的身份小字（人物 id stranger_fence）"
+    },
+    "c04.header.ticket": {
+      "brief": "物品行标签：当票号（{n} 号数）"
+    },
+    "c04.reply.aside": {
+      "brief": "“回头再说”一类次要回话套的括号（{text} 是回话的字）"
+    }
+  }
+}

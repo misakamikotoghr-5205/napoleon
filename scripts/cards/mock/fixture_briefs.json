@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "owner": "W0",
+    "schema": 1,
+    "brief": "基础夹具的说明（build_fixtures.gd 生成夹具时写进 _meta.brief）"
+  },
+  "briefs": {
+    "day_counter": {
+      "brief": "第 1 天白天：林嫂来当金簪，柜台已打开（找不同的布局由真 ItemGen 生成）"
+    },
+    "day_full": {
+      "brief": "白天：9 张手牌（金色牌在最左）、两张留着的牌、一个人脉、一张条子、货架上两件货"
+    },
+    "month_close": {
+      "brief": "月底结账"
+    },
+    "month_open": {
+      "brief": "开月：第一关开局，引擎要求打开本月运势轮盘（香案还空着）"
+    },
+    "month_wheel": {
+      "brief": "本月运势轮盘：香案上放了 10 个香火钱，好的扇区变宽了，还没转"
+    },
+    "morning": {
+      "brief": "第 1 天早上：告示、黄历出来了，还没发牌"
+    },
+    "night": {
+      "brief": "第 1 天晚上：三张夜牌选一张"
+    },
+    "settle": {
+      "brief": "第 1 天日结"
+    },
+    "street_prison": {
+      "brief": "流落街头又被抓进牢房：牢房牌在手上，引擎要求打开牢房面板"
+    },
+    "year_jump": {
+      "brief": "一年过去：满当、档案簿一年后、人脉变化"
+    }
+  }
+}

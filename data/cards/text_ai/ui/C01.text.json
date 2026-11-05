@@ -1,0 +1,144 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "c01.tab.contacts": {
+    "t": "人脉"
+  },
+  "c01.tab.demands": {
+    "t": "条子"
+  },
+  "c01.tab.dossier": {
+    "t": "档案簿"
+  },
+  "c01.tab.rules": {
+    "t": "规矩"
+  },
+  "c01.tab.shelf": {
+    "t": "货架"
+  },
+  "c01.tab.tickets": {
+    "t": "当票"
+  },
+  "c01.tab.estates": {
+    "t": "家当"
+  },
+  "c01.tab.settings": {
+    "t": "设置"
+  },
+  "c01.btn.drawer_close": {
+    "t": "合上"
+  },
+  "c01.drawer.almanac": {
+    "t": "黄历"
+  },
+  "c01.hud.time.day": {
+    "t": "白天"
+  },
+  "c01.hud.time.dusk": {
+    "t": "黄昏"
+  },
+  "c01.hud.time.night": {
+    "t": "夜里"
+  },
+  "c01.hud.market": {
+    "t": "集市日"
+  },
+  "c01.hud.status.street": {
+    "t": "流落街头"
+  },
+  "c01.hud.status.prison": {
+    "t": "在牢里"
+  },
+  "c01.hud.status.sealed": {
+    "t": "铺子被封"
+  },
+  "c01.hud.fortune": {
+    "t": "本月 · {seg}"
+  },
+  "c01.hud.date": {
+    "t": "{y}年{m}月{d}日 · 第{day}/{days}天"
+  },
+  "c01.btn.close_day.end_day": {
+    "t": "打烊 · 下一天"
+  },
+  "c01.btn.close_day.skip_night": {
+    "t": "睡了 · 到天亮"
+  },
+  "c01.btn.close_day.next_day": {
+    "t": "天亮了"
+  },
+  "c01.btn.close_day.open_day": {
+    "t": "开张"
+  },
+  "c01.btn.close_day.begin_month": {
+    "t": "开张 · 这个月"
+  },
+  "c01.btn.close_day.month_next": {
+    "t": "结账 · 下个月"
+  },
+  "c01.btn.close_day.year_next": {
+    "t": "一年以后"
+  },
+  "c01.btn.close_day.game_over": {
+    "t": "这一局完了"
+  },
+  "c01.btn.close_day.left": {
+    "t": "还有 {n} 件没办"
+  },
+  "c01.btn.close_day.done": {
+    "t": "今天的事都办了"
+  },
+  "c01.btn.mg_abort": {
+    "t": "算了"
+  },
+  "c01.money.unit.fabi": {
+    "t": "蚨"
+  },
+  "c01.money.wan": {
+    "t": "万"
+  },
+  "c01.notice.a": {
+    "t": "今日照常开门。"
+  },
+  "c01.notice.b": {
+    "t": "米价又涨了。"
+  },
+  "c01.btn.close_day.mode.prison": {
+    "t": "熬过这一夜"
+  },
+  "c01.btn.close_day.mode.street": {
+    "t": "找个地方过夜"
+  },
+  "c01.btn.close_day.mode.sealed": {
+    "t": "歇业 · 下一天"
+  },
+  "c01.hud.brand": {
+    "t": "德厚当"
+  },
+  "c01.hud.sep": {
+    "t": " · "
+  },
+  "c01.btn.close_day.night_sub": {
+    "t": "今晚不做什么"
+  },
+  "c01.toast.money.up": {
+    "t": "+{n} {unit}"
+  },
+  "c01.toast.money.down": {
+    "t": "-{n} {unit}"
+  },
+  "c01.toast.nothing_to_look": {
+    "t": "柜上没东西可看。"
+  },
+  "c01.toast.redeem_short": {
+    "t": "赎回铺面要 {price} {unit}，钱不够。"
+  },
+  "c01.toast.redeem_failed": {
+    "t": "铺面没赎回来。"
+  },
+  "c01.drawer.estates": {
+    "t": "钱匣 · 家当"
+  }
+}

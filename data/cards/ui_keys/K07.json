@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "owner": "K07",
+    "schema": 1,
+    "brief": "条子的原因键和告示键。交钱、顶替、罚款走原因键；人没回来走告示键。胡二送条子的台词是牌的正文 lines.issue，留给 A，不在这里。"
+  },
+  "keys": {
+    "k07.reason.pay": {
+      "brief": "交钱办成要钱的条子"
+    },
+    "k07.reason.fine": {
+      "brief": "条子没办成时罚的钱"
+    },
+    "k07.reason.substitute": {
+      "brief": "花钱顶替要货或要人的条子"
+    },
+    "k07.notice.not_back": {
+      "brief": "派出去的人到日子没回来"
+    },
+    "k07.notice.fine": {
+      "brief": "条子没办成、按罚款处理时的告示"
+    }
+  }
+}

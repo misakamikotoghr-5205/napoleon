@@ -1,0 +1,48 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "c08.end.title": {
+    "t": "打烊之前"
+  },
+  "c08.end.note": {
+    "t": "照样打烊的话，下面这些就按“没理会”算："
+  },
+  "c08.end.wait": {
+    "t": "明天接着算"
+  },
+  "c08.btn.back": {
+    "t": "再看看"
+  },
+  "c08.btn.confirm": {
+    "t": "照样打烊"
+  },
+  "c08.gold.reminder": {
+    "t": "今天不理他，他就走了；档案簿那一页会留个缺口。"
+  },
+  "c08.night.skip": {
+    "t": "这一夜没什么能做的，熬到天亮再说。"
+  },
+  "c08.narr.night_open": {
+    "t": "打烊了。手里是今晚能做的事：挑一张打出去；不想做，就睡了。"
+  },
+  "c08.settle.title": {
+    "t": "打烊了，算算今天的账。"
+  },
+  "c08.reply.dawn": {
+    "t": "天亮了"
+  },
+  "c08.end.title_month": {
+    "t": "开张之前"
+  },
+  "c08.end.note_month": {
+    "t": "这个月的运势轮盘还没转。可以回去转一转；照样开张的话，就照香案上供的替你转一回。"
+  },
+  "c08.btn.to_pending": {
+    "t": "去转轮盘"
+  },
+  "c08.btn.confirm_month": {
+    "t": "照样开张"
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "_meta": {
+    "owner": "K09",
+    "schema": 1,
+    "brief": "六张夜牌。第 1 天铺子开着时至少三张能进三选一"
+  },
+  "cards": [
+    {
+      "id": "nt.tidy",
+      "type": "night",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "conditions": {
+        "mode": "shop"
+      },
+      "art": "illus.nt.tidy",
+      "brief": "整理库房。货架上的东西归置一下，明天卖的时候稍好出手，只维持一天。黄历算修缮。第 1 天晚上就能选。待调。",
+      "effects": {
+        "on_choose": [
+          {
+            "op": "price_mod",
+            "scope": "shelf",
+            "pct": 5,
+            "days": 1
+          }
+        ]
+      },
+      "almanac": [
+        "repair"
+      ],
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "nt.accounts",
+      "type": "night",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "conditions": {
+        "mode": "shop"
+      },
+      "art": "illus.nt.accounts",
+      "brief": "对账。看清这个月进出，并在明天多发一张消息牌（账上翻出来的问题）。第 1 天晚上就能选。待调。",
+      "effects": {
+        "on_choose": [
+          {
+            "op": "notice",
+            "key": "k09.notice.accounts"
+          },
+          {
+            "op": "extra_deal",
+            "type": "news",
+            "n": 1,
+            "day": "tomorrow"
+          }
+        ]
+      },
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "nt.backdoor",
+      "type": "night",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "conditions": {
+        "mode": "shop"
+      },
+      "art": "illus.nt.backdoor",
+      "brief": "后门收货。夜里有人敲门，货价松一档，只维持一天，风声往上走。来路不明。第 1 天晚上就能选。price_mod 的 pct 是增量：-8 = 货架卖价落 8%（合同 §5.2）。待调。",
+      "effects": {
+        "on_choose": [
+          {
+            "op": "price_mod",
+            "scope": "shelf",
+            "pct": -8,
+            "days": 1
+          },
+          {
+            "op": "heat",
+            "delta": 3
+          }
+        ]
+      },
+      "almanac": [
+        "buy_in"
+      ],
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "nt.telegraph",
+      "type": "night",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "conditions": {
+        "all": [
+          {
+            "mode": "shop"
+          },
+          {
+            "day_gte": 3
+          },
+          {
+            "flag": "telegraph_ok"
+          }
+        ]
+      },
+      "art": "illus.nt.telegraph",
+      "brief": "发电报。第 3 天起，并且旗标 telegraph_ok 已经置上，才进夜里的三选一。发给远方。明天多一张消息。黄历算出行。旗标由陈文庭一线置，本文件不置。第 1 天晚上不出现。",
+      "effects": {
+        "on_choose": [
+          {
+            "op": "flag",
+            "key": "telegraph_sent",
+            "value": true
+          },
+          {
+            "op": "notice",
+            "key": "k09.notice.telegraph_sent"
+          },
+          {
+            "op": "extra_deal",
+            "type": "news",
+            "n": 1,
+            "day": "tomorrow"
+          }
+        ]
+      },
+      "almanac": [
+        "travel"
+      ],
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "nt.family_dinner",
+      "type": "night",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "conditions": {
+        "mode": "shop"
+      },
+      "art": "illus.nt.family_dinner",
+      "brief": "回家吃饭。一家人吃顿饭，二选一：抵掉一张生活牌的坏处，或者明天得到一张家人的消息。第 1 天晚上就能选。",
+      "choices": [
+        {
+          "id": "waive_life",
+          "effects": [
+            {
+              "op": "waive",
+              "match": {
+                "type": "life"
+              },
+              "n": 1
+            }
+          ],
+          "brief": "抵掉一张生活牌的坏处"
+        },
+        {
+          "id": "family_word",
+          "effects": [
+            {
+              "op": "add_card",
+              "card": "nw.any.family_word",
+              "to": "hand",
+              "in_days": 1
+            }
+          ],
+          "brief": "明天得到一张家人的消息"
+        }
+      ],
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "nt.early_sleep",
+      "type": "night",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "conditions": {
+        "mode": "shop"
+      },
+      "art": "illus.nt.early_sleep",
+      "brief": "早点睡。明天多来一位客人。黄历算安歇。第 1 天晚上就能选。待调。",
+      "effects": {
+        "on_choose": [
+          {
+            "op": "extra_deal",
+            "type": "person",
+            "n": 1,
+            "day": "tomorrow"
+          }
+        ]
+      },
+      "almanac": [
+        "rest"
+      ],
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "_meta": {
+    "owner": "G05",
+    "date": "2026-10-13",
+    "kind": "offline-integrated-test-evidence",
+    "snapshot": "cb5e31a + G05 ee34384 (detached924ad3c)",
+    "runtime": "Godot4.7.1"
+  },
+  "scope": {
+    "assembled_modules": [
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06"
+    ],
+    "suite": "G05",
+    "passed": 17,
+    "data": "private ASCII fixtures completing missing grades and sectors",
+    "oracle": "actual CardComposer.compose / CardSchedule.due with assembled modules",
+    "notes": [
+      "Suite keeps narrow W0 pay/rep/extra_deal/conscience-condition doubles; fortune accuracy uses zero-cost lots and actual composer/pin budget/substitution implementations.",
+      "Full CardEngine contact/money integration probe uses actual handlers without doubles.",
+      "Original W0 evidence.json certificate5275/5275 is retained separately."
+    ]
+  },
+  "fortune": {
+    "seed_from": 0,
+    "seed_to_exclusive": 1000,
+    "lots_per_seed": 3,
+    "successful_lots": 3000,
+    "unique_pinned_promises": 5301,
+    "delivered_promises": 5301,
+    "accuracy_pct": 100,
+    "shards": [
+      {
+        "seed_from": 0,
+        "seed_to_exclusive": 250,
+        "lots": 750,
+        "promises": 1312,
+        "delivered": 1312
+      },
+      {
+        "seed_from": 250,
+        "seed_to_exclusive": 500,
+        "lots": 750,
+        "promises": 1314,
+        "delivered": 1314
+      },
+      {
+        "seed_from": 500,
+        "seed_to_exclusive": 750,
+        "lots": 750,
+        "promises": 1330,
+        "delivered": 1330
+      },
+      {
+        "seed_from": 750,
+        "seed_to_exclusive": 1000,
+        "lots": 750,
+        "promises": 1345,
+        "delivered": 1345
+      }
+    ]
+  },
+  "conscience": {
+    "seeds": 500,
+    "picks_per_seed": 2,
+    "high_bad_picks": 90,
+    "low_bad_picks": 224,
+    "sample_picks_per_group": 1000,
+    "difference_pct_points": 13.4
+  },
+  "cezi": {
+    "seeds": 200,
+    "has": 200,
+    "none": 200,
+    "actual_delivery_and_bans_verified": true
+  },
+  "contact_integration": {
+    "engine_api_no_handler_doubles": true,
+    "real_pull_attribute_widens_good_arc": true,
+    "spin_marks_ma_used_today": true,
+    "contact_preserved": true,
+    "same_day_slot_rejects_used_ma": true,
+    "slot_reservations_in_demands_and_pending_block_incense": true,
+    "slot_money_reserved": 300,
+    "incense_overcommit_amount": 50,
+    "incense_overcommit_rejected": true,
+    "funds_preserved": 340,
+    "no_state_floats_or_view_leaks": true
+  },
+  "wheel_calibration": {
+    "seeds": 2000,
+    "plain": {
+      "good": 517,
+      "samples": 2000,
+      "observed": 0.2585,
+      "expected": 0.25
+    },
+    "ma_incense": {
+      "good": 727,
+      "samples": 2000,
+      "observed": 0.3635,
+      "expected": 0.34782608695652173
+    },
+    "max_allowed_absolute_error": 0.025,
+    "both_within_error": true,
+    "actual_spin_effects_and_person_marking": true
+  },
+  "logs": {
+    "suite": "/workspace/scratch/G05-assembled-suite.log",
+    "contact": "/workspace/scratch/G05-true-integration.log",
+    "wheel_calibration": "/workspace/scratch/G05-wheel-calibration.log"
+  }
+}

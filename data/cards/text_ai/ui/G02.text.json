@@ -1,0 +1,108 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "g02.notice.clear": {
+    "t": "今天天晴。"
+  },
+  "g02.notice.cloud": {
+    "t": "今天阴天。"
+  },
+  "g02.notice.rain": {
+    "t": "今天下雨，街上人少。"
+  },
+  "g02.notice.snow": {
+    "t": "今天下雪，路不好走。"
+  },
+  "g02.notice.fog": {
+    "t": "今早起了雾，河上看不清船。"
+  },
+  "g02.notice.market_day": {
+    "t": "今天逢集，街上人多。"
+  },
+  "g02.settle.money_in": {
+    "t": "今天进账 {money} 蚨。"
+  },
+  "g02.settle.money_out": {
+    "t": "今天出账 {money} 蚨。"
+  },
+  "g02.settle.rep_tier": {
+    "t": "街坊说起你的口气变了。"
+  },
+  "g02.settle.heat_tier": {
+    "t": "镇上盯着你的眼睛变了。"
+  },
+  "g02.settle.gold_left": {
+    "t": "有人今天等不到你，走了。"
+  },
+  "g02.month.verdict.0": {
+    "t": "这个月，一件事也没办成。"
+  },
+  "g02.month.verdict.1": {
+    "t": "这个月办成了一件，总算撑过来了。"
+  },
+  "g02.month.verdict.2": {
+    "t": "这个月办得还算像样。"
+  },
+  "g02.month.verdict.3": {
+    "t": "这个月要办的事都办成了。"
+  },
+  "g02.month.goal.open": {
+    "t": "有一件事还悬着。"
+  },
+  "g02.month.goal.done": {
+    "t": "办成了一件事。"
+  },
+  "g02.month.goal.failed": {
+    "t": "有一件事没办成。"
+  },
+  "g02.reason.gold_left": {
+    "t": "人走了"
+  },
+  "g02.reason.person": {
+    "t": "客人没等到"
+  },
+  "g02.reason.event": {
+    "t": "没理会"
+  },
+  "g02.reason.fate": {
+    "t": "没理会"
+  },
+  "g02.reason.big_fate": {
+    "t": "错过了"
+  },
+  "g02.reason.prison": {
+    "t": "牢里多待一夜"
+  },
+  "g02.ending.ending": {
+    "t": "德厚当的门板又一块块卸下来，日子还得往下过。这一段，先说到这里。"
+  },
+  "g02.year.advance": {
+    "t": "一年过去了：{from} 年，到了 {to} 年。"
+  },
+  "g02.year.contact": {
+    "t": "人脉里的人，这一年各有各的去处。"
+  },
+  "g02.notice.wind": {
+    "t": "今天风大。"
+  },
+  "g02.end.leave": {
+    "t": "他等不到你，走了。"
+  },
+  "g02.end.ignore": {
+    "t": "这件事就这么过去了。"
+  },
+  "g02.end.pass": {
+    "t": "今天的机会过去了。"
+  },
+  "g02.end.skip_night": {
+    "t": "今晚什么也不做，睡了。"
+  },
+  "g02.end.auto_spin": {
+    "t": "照香案上供的，转这个月的运，然后开张。"
+  },
+  "g02.ending.prison": {
+    "t": "这一回没能从牢里出来。德厚当的门板没再卸下来，这一段，先说到这里。"
+  }
+}

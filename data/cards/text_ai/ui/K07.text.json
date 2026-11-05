@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "k07.reason.pay": {
+    "t": "交条子"
+  },
+  "k07.reason.fine": {
+    "t": "条子罚款"
+  },
+  "k07.reason.substitute": {
+    "t": "花钱顶替"
+  },
+  "k07.notice.not_back": {
+    "t": "派出去的人到了日子，还没回来。"
+  },
+  "k07.notice.fine": {
+    "t": "条子没办成，罚了钱。"
+  }
+}

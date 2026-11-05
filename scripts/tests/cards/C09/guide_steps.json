@@ -1,0 +1,82 @@
+{
+  "settings": {
+    "gap_ms": 0,
+    "default_seconds": 4,
+    "max_new_per_day": 16,
+    "bubble_max_w": 360
+  },
+  "steps": [
+    {
+      "id": "gd.m.open",
+      "trigger": {"first": "month_open"},
+      "teacher": "brother",
+      "anchor": "a.month.goals",
+      "anchor_fallback": "",
+      "done_when": ["ui:panel_closed", "timeout"],
+      "rule_page": "rule.month",
+      "priority": 10,
+      "max_shows": 2,
+      "seconds": 4
+    },
+    {
+      "id": "gd.month_close",
+      "trigger": {"first": "month_close"},
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.mclose.accounts",
+      "anchor_fallback": "",
+      "done_when": ["ui:panel_closed", "timeout"],
+      "rule_page": "rule.month",
+      "priority": 20,
+      "max_shows": 2,
+      "seconds": 4
+    },
+    {
+      "id": "gd.year_jump",
+      "trigger": {"first": "year_jump"},
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.year.forfeit",
+      "anchor_fallback": "",
+      "done_when": ["ui:panel_closed", "timeout"],
+      "rule_page": "rule.year",
+      "priority": 30,
+      "max_shows": 2,
+      "seconds": 4
+    },
+    {
+      "id": "gd.year_after",
+      "trigger": {"first": "year_after"},
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.year.after",
+      "anchor_fallback": "a.dossier.page",
+      "done_when": ["ui:panel_closed", "timeout"],
+      "rule_page": "rule.dossier",
+      "priority": 40,
+      "max_shows": 2,
+      "seconds": 4
+    },
+    {
+      "id": "gd.game_over",
+      "trigger": {"first": "game_over"},
+      "teacher": "",
+      "anchor": "a.over.retry",
+      "anchor_fallback": "",
+      "done_when": ["ui:panel_closed", "timeout"],
+      "rule_page": "rule.retry",
+      "priority": 50,
+      "max_shows": 2,
+      "seconds": 4
+    },
+    {
+      "id": "gd.retry",
+      "trigger": {"first": "retry"},
+      "teacher": "",
+      "anchor": "a.top.date",
+      "anchor_fallback": "",
+      "done_when": ["ui:panel_closed", "timeout"],
+      "rule_page": "rule.retry",
+      "priority": 60,
+      "max_shows": 2,
+      "seconds": 4
+    }
+  ]
+}

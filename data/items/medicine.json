@@ -1,0 +1,490 @@
+{
+  "items": {
+    "quinine": {
+      "name": "奈宁片（一瓶）",
+      "cat": "medicine",
+      "cat_cn": "药品",
+      "market": 100,
+      "claimed": 0,
+      "fake": false,
+      "grade": "",
+      "origin": "normal",
+      "contraband": true,
+      "est": [
+        60,
+        120
+      ],
+      "suggest": 60,
+      "ask_w": 130,
+      "weight": "",
+      "tags": [],
+      "sprite": "art/items/quinine.png",
+      "ticket_condition": "",
+      "parts": [
+        {
+          "id": "label",
+          "label": "看标签厂名",
+          "text": "蓝底白字：“海昌药厂 · 奈宁片”。",
+          "tool": "magnifier",
+          "rect": [
+            14,
+            33,
+            23,
+            18
+          ],
+          "tell": false
+        },
+        {
+          "id": "batch",
+          "label": "看批号",
+          "text": "批号：HC 26·10 0517",
+          "tool": "book",
+          "rect": [
+            17,
+            44,
+            17,
+            4
+          ],
+          "tell": false
+        },
+        {
+          "id": "seal",
+          "label": "看封口",
+          "text": "锡纸封口完整，压着“海昌”二字。",
+          "tool": "magnifier",
+          "rect": [
+            20,
+            8,
+            11,
+            8
+          ],
+          "tell": false
+        },
+        {
+          "id": "pill",
+          "label": "倒一片看",
+          "text": "药片纯白，刻着“Q”，舔一下极苦。",
+          "tool": "hand",
+          "rect": [
+            44,
+            44,
+            13,
+            12
+          ],
+          "tell": false
+        }
+      ],
+      "ref": "med_quinine",
+      "flaws": [
+        {
+          "part": "label",
+          "kind": "scuff",
+          "benign": true,
+          "note": "标签上蹭了几道"
+        }
+      ]
+    },
+    "mercuro": {
+      "name": "红药水（两瓶）",
+      "cat": "medicine",
+      "cat_cn": "药品",
+      "market": 24,
+      "claimed": 0,
+      "fake": false,
+      "grade": "",
+      "origin": "normal",
+      "contraband": false,
+      "est": [
+        14,
+        30
+      ],
+      "suggest": 14,
+      "ask_w": 40,
+      "weight": "",
+      "tags": [],
+      "sprite": "art/items/mercuro.png",
+      "ticket_condition": "",
+      "parts": [
+        {
+          "id": "label",
+          "label": "看标签厂名",
+          "text": "绿色小瓶：“华美药房”。",
+          "tool": "magnifier",
+          "rect": [
+            11,
+            40,
+            43,
+            8
+          ],
+          "tell": false
+        },
+        {
+          "id": "batch",
+          "label": "看批号",
+          "text": "批号：HM 26·12 2203",
+          "tool": "book",
+          "rect": [
+            11,
+            40,
+            11,
+            8
+          ],
+          "tell": false
+        },
+        {
+          "id": "liquid",
+          "label": "晃一晃",
+          "text": "液体深红，晃动时挂壁。",
+          "tool": "hand",
+          "rect": [
+            9,
+            26,
+            47,
+            31
+          ],
+          "tell": false
+        }
+      ],
+      "ref": "med_mercuro"
+    },
+    "sulfa_fake": {
+      "name": "磺胺粉（一盒）",
+      "cat": "medicine",
+      "cat_cn": "药品",
+      "market": 0,
+      "claimed": 180,
+      "fake": true,
+      "grade": "",
+      "origin": "normal",
+      "contraband": true,
+      "est": [
+        150,
+        200
+      ],
+      "suggest": 0,
+      "ask_w": 90,
+      "weight": "",
+      "tags": [],
+      "sprite": "art/items/sulfa_fake.png",
+      "ticket_condition": "",
+      "parts": [
+        {
+          "id": "label",
+          "label": "看铁盒",
+          "text": "厂标是印上去的四个小方块，手指摸不到凹印——正品是凹印的圆标。",
+          "tool": "hand",
+          "rect": [
+            9,
+            39,
+            16,
+            10
+          ],
+          "tell": true,
+          "flag": "found_fake_sulfa"
+        },
+        {
+          "id": "batch",
+          "label": "看批号",
+          "text": "批号：DT 26·08 0007",
+          "tool": "book",
+          "rect": [
+            28,
+            40,
+            20,
+            7
+          ],
+          "tell": true,
+          "flag": "found_fake_sulfa"
+        },
+        {
+          "id": "powder",
+          "label": "打开看粉末",
+          "text": "粉末纯白，不像正品那样微黄；凑近闻，一点药味也没有。",
+          "tool": "hand",
+          "rect": [
+            12,
+            24,
+            39,
+            11
+          ],
+          "tell": true,
+          "flag": "found_fake_sulfa"
+        }
+      ],
+      "ref": "med_sulfa"
+    },
+    "aspirin": {
+      "name": "阿司匹林片（一瓶）",
+      "cat": "medicine",
+      "cat_cn": "药品",
+      "market": 40,
+      "claimed": 0,
+      "fake": false,
+      "grade": "",
+      "origin": "normal",
+      "contraband": false,
+      "est": [
+        30,
+        50
+      ],
+      "suggest": 0,
+      "ask_w": 1.0,
+      "weight": "",
+      "tags": [],
+      "sprite": "art/items/aspirin.png",
+      "ticket_condition": "",
+      "parts": [
+        {
+          "id": "label",
+          "label": "看标签",
+          "text": "红白条纹标签，印刷清楚。",
+          "tool": "magnifier",
+          "rect": [
+            16,
+            36,
+            27,
+            17
+          ],
+          "tell": false
+        },
+        {
+          "id": "batch",
+          "label": "看批号",
+          "text": "批号：RH 26·07 2046",
+          "tool": "book",
+          "rect": [
+            18,
+            44,
+            23,
+            4
+          ],
+          "tell": false
+        },
+        {
+          "id": "seal",
+          "label": "看蜡封",
+          "text": "蜡封完整。",
+          "tool": "magnifier",
+          "rect": [
+            16,
+            21,
+            27,
+            8
+          ],
+          "tell": false
+        },
+        {
+          "id": "pill",
+          "label": "倒一片看",
+          "text": "片上有十字线。",
+          "tool": "hand",
+          "rect": [
+            46,
+            44,
+            13,
+            13
+          ],
+          "tell": false
+        }
+      ],
+      "ref": "med_aspirin"
+    },
+    "iodine": {
+      "name": "碘酒（一瓶）",
+      "cat": "medicine",
+      "cat_cn": "药品",
+      "market": 15,
+      "claimed": 0,
+      "fake": false,
+      "grade": "",
+      "origin": "normal",
+      "contraband": false,
+      "est": [
+        10,
+        20
+      ],
+      "suggest": 0,
+      "ask_w": 1.0,
+      "weight": "",
+      "tags": [],
+      "sprite": "art/items/iodine.png",
+      "ticket_condition": "",
+      "parts": [
+        {
+          "id": "label",
+          "label": "看标签厂名",
+          "text": "标签印着“华美药房”。",
+          "tool": "magnifier",
+          "rect": [
+            24,
+            33,
+            15,
+            13
+          ],
+          "tell": false
+        },
+        {
+          "id": "batch",
+          "label": "看批号",
+          "text": "批号：HM 26·11 1508",
+          "tool": "book",
+          "rect": [
+            25,
+            41,
+            13,
+            4
+          ],
+          "tell": false
+        },
+        {
+          "id": "wax",
+          "label": "看塞子和蜡封",
+          "text": "棕色玻璃瓶，软木塞加蜡，蜡封完整。",
+          "tool": "magnifier",
+          "rect": [
+            25,
+            5,
+            13,
+            8
+          ],
+          "tell": false
+        },
+        {
+          "id": "smell",
+          "label": "凑近瓶口闻",
+          "text": "液体深褐，有刺鼻味。",
+          "tool": "nose",
+          "rect": [
+            27,
+            13,
+            9,
+            8
+          ],
+          "tell": false
+        }
+      ],
+      "ref": "med_iodine",
+      "flaws": [
+        {
+          "part": "wax",
+          "kind": "scuff",
+          "benign": true,
+          "note": "蜡封上有几道擦痕"
+        }
+      ]
+    },
+    "sulfa": {
+      "name": "磺胺粉（一盒）",
+      "cat": "medicine",
+      "cat_cn": "药品",
+      "market": 180,
+      "claimed": 0,
+      "fake": false,
+      "grade": "",
+      "origin": "normal",
+      "contraband": true,
+      "est": [
+        150,
+        200
+      ],
+      "suggest": 0,
+      "ask_w": 1.0,
+      "weight": "",
+      "tags": [],
+      "sprite": "art/items/sulfa.png",
+      "ticket_condition": "",
+      "parts": [
+        {
+          "id": "label",
+          "label": "看铁盒",
+          "text": "铁盒上印着“德泰洋行”，厂标是凹印的，手指能摸出来。",
+          "tool": "hand",
+          "rect": [
+            9,
+            39,
+            16,
+            10
+          ],
+          "tell": false
+        },
+        {
+          "id": "batch",
+          "label": "看批号",
+          "text": "批号：DT 26·09 1134",
+          "tool": "book",
+          "rect": [
+            28,
+            40,
+            20,
+            7
+          ],
+          "tell": false
+        },
+        {
+          "id": "powder",
+          "label": "打开看粉末",
+          "text": "粉末微黄，没有结块。",
+          "tool": "hand",
+          "rect": [
+            12,
+            24,
+            39,
+            11
+          ],
+          "tell": false
+        }
+      ],
+      "ref": "med_sulfa"
+    },
+    "morphine": {
+      "name": "吗啡针剂（一盒）",
+      "cat": "medicine",
+      "cat_cn": "药品",
+      "market": 300,
+      "claimed": 0,
+      "fake": false,
+      "grade": "",
+      "origin": "contraband",
+      "contraband": true,
+      "est": [
+        250,
+        350
+      ],
+      "suggest": 0,
+      "ask_w": 1.0,
+      "weight": "",
+      "tags": [],
+      "sprite": "art/items/morphine.png",
+      "ticket_condition": "",
+      "parts": [
+        {
+          "id": "label",
+          "label": "看盒面",
+          "text": "标签印着“教会医院专用，不对外销售”。",
+          "tool": "magnifier",
+          "rect": [
+            11,
+            28,
+            39,
+            27
+          ],
+          "tell": false
+        },
+        {
+          "id": "ampoules",
+          "label": "拿一支看",
+          "text": "玻璃安瓿排得整整齐齐，里面是无色的液体。",
+          "tool": "hand",
+          "rect": [
+            14,
+            12,
+            32,
+            14
+          ],
+          "tell": false
+        }
+      ],
+      "ref": "med_morphine"
+    }
+  }
+}

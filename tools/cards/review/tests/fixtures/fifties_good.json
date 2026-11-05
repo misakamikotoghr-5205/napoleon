@@ -1,0 +1,43 @@
+{
+  "cards": [
+    {
+      "id": "ft.1953.ok",
+      "type": "fate",
+      "era": [
+        "1953"
+      ],
+      "brief": "收购站多收了一季。",
+      "weight": 2,
+      "valence": "good"
+    },
+    {
+      "id": "ft.1938.fire",
+      "type": "fate",
+      "era": [
+        "1938"
+      ],
+      "brief": "邻铺失火，货受了潮。",
+      "weight": 8,
+      "valence": "bad"
+    },
+    {
+      "id": "ev.1952.policy",
+      "type": "event",
+      "era": [
+        "1952"
+      ],
+      "brief": "不写斗争会，只写凭票买粮和查账。",
+      "weight": 0
+    },
+    {
+      "id": "ft.any.road",
+      "type": "fate",
+      "era": [
+        "*"
+      ],
+      "brief": "路不好走。",
+      "weight": 5,
+      "valence": "bad"
+    }
+  ]
+}

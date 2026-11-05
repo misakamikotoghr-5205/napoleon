@@ -1,0 +1,152 @@
+{
+  "_meta": {
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-misc"
+  },
+  "ruhua": {
+    "name": "沈如花"
+  },
+  "brother": {
+    "name": "沈如松"
+  },
+  "chen": {
+    "name": "陈文庭"
+  },
+  "xiaoding": {
+    "name": "小丁"
+  },
+  "zhang": {
+    "name": "张慧娟"
+  },
+  "wangshan": {
+    "name": "王山"
+  },
+  "li": {
+    "name": "李敬之"
+  },
+  "linsao": {
+    "name": "林嫂"
+  },
+  "zhouma": {
+    "name": "周妈"
+  },
+  "zhao": {
+    "name": "赵老三"
+  },
+  "sunyoung": {
+    "name": "孙富贵"
+  },
+  "ma": {
+    "name": "马万利"
+  },
+  "hu2": {
+    "name": "胡二"
+  },
+  "sunlaoye": {
+    "name": "孙德昌"
+  },
+  "guanjia": {
+    "name": "孙福"
+  },
+  "wu": {
+    "name": "吴长发"
+  },
+  "postman": {
+    "name": "何启明"
+  },
+  "nf1938a": {
+    "name": "钱阿根"
+  },
+  "nf1938b": {
+    "name": "周阿绣"
+  },
+  "nf1938c": {
+    "name": "方小安"
+  },
+  "nf1938d": {
+    "name": "崔老奎"
+  },
+  "nf1939a": {
+    "name": "柴佬"
+  },
+  "nf1939b": {
+    "name": "茧账"
+  },
+  "nf1939c": {
+    "name": "乡嫂"
+  },
+  "nf1939d": {
+    "name": "区抄"
+  },
+  "nf1940a": {
+    "name": "顾承年"
+  },
+  "nf1940b": {
+    "name": "齐路生"
+  },
+  "nf1940c": {
+    "name": "蔡布成"
+  },
+  "nf1940d": {
+    "name": "方晚晴"
+  },
+  "nf_pistol": {
+    "name": "送枪的人"
+  },
+  "tudi": {
+    "name": "学徒"
+  },
+  "suanming": {
+    "name": "算命先生"
+  },
+  "ex_newsboy": {
+    "name": "报童"
+  },
+  "ex_patrol": {
+    "name": "巡警"
+  },
+  "ex_soldier": {
+    "name": "伪军"
+  },
+  "ex_girl": {
+    "name": "对门的姑娘"
+  },
+  "ex_shopboy": {
+    "name": "邻铺伙计"
+  },
+  "ex_oldman": {
+    "name": "街上的老先生"
+  },
+  "ex_porter": {
+    "name": "码头扛包的"
+  },
+  "ex_student": {
+    "name": "镇上的学生"
+  },
+  "ex_hu2_man": {
+    "name": "胡二的人"
+  },
+  "stranger_peddler": {
+    "name": "货郎"
+  },
+  "stranger_waixiang": {
+    "name": "外乡人"
+  },
+  "stranger_boatman": {
+    "name": "船工"
+  },
+  "stranger_refugee": {
+    "name": "逃难的人"
+  },
+  "stranger_widow": {
+    "name": "守寡的过路人"
+  },
+  "stranger_student": {
+    "name": "赶路的学生"
+  },
+  "stranger_collector": {
+    "name": "上门收货的"
+  },
+  "stranger_fence": {
+    "name": "销赃的"
+  }
+}

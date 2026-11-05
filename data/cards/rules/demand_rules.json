@@ -1,0 +1,52 @@
+{
+  "_meta": {
+    "owner": "G03",
+    "schema": 1
+  },
+  "_doc": [
+    "条子：每周一发、七天、拖一拖、按档吃亏阶梯（§4.6、§4.7.6）。"
+  ],
+  "issue_weekday": 0,
+  "deadline_days": 7,
+  "delay": {
+    "days": 3,
+    "tier_up": 1,
+    "max": 1
+  },
+  "tier_by_stage": [
+    0,
+    1,
+    1
+  ],
+  "tier_heat_step": 40,
+  "max_tier": 3,
+  "fail": {
+    "t0": [
+      {
+        "op": "pay",
+        "amount": 30,
+        "payee": "levy",
+        "reason": "g03.reason.fine",
+        "short": "partial"
+      }
+    ],
+    "t1": [
+      {
+        "op": "shop_closed",
+        "days": 3
+      }
+    ],
+    "t2": [
+      {
+        "op": "estate_seize",
+        "pick": "worst"
+      }
+    ],
+    "t3": [
+      {
+        "op": "arrest",
+        "reason": "g03.arrest.demand"
+      }
+    ]
+  }
+}

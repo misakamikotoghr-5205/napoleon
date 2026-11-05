@@ -1,0 +1,180 @@
+{
+  "_meta": {
+    "owner": "G04",
+    "schema": 1
+  },
+  "_doc": [
+    "柜台、当票、赎当、鉴定清晰度门槛（§4.6）。tiers.pay 相对客人报价，receive 相对看得见的估价。",
+    "price_mod_min_pct：price_mod 增量合计后卖价最低是原价的百分之几（§5.2），待调。",
+    "appraise（主创 10-25：看出来才算数，见 DESIGN 鉴定改版）：expert_pct 以上的 appraise_pct 算有懂行的人脉（全图例、对光）；aids 是眼力辅助（eye = CardMeters.attr(ruhua, eye)）：墨 = ink_base + eye/ink_eye_div，镜片半径 = lens_px_base + lens_px_per_eye×eye，按住对照 eye≥blink_eye；吹次 = tries_base + eye/tries_eye_div，余音淡影 = ghosts_base + (eye≥ghosts_eye)；放大 = zoom_base + (eye≥zoom_eye)，小星 eye≥minor_ticks_eye，定盘针 = needle_gain_base + needle_gain_per_eye×eye；洇字 = 规格数 − eye/smudge_eye_div。",
+    "appraise.spot：每件固定 marks_total 处痕迹（真假一样多）；细处比例 differs/wear 千分比，少见或上等货的假痕再加 fine_craft_permille；at 小矩形边长区间（粗 at_px、细 at_fine_px，fine≥fine_cut 算细）；判分容差 tol_px / tol_fine_px；图例总是列出本品类画得出的每一样（fix2：没见过的样子学不会）。at 落在物品图的身子上（物品牌 spot.opaque 是图的不透明像素，C12 的 spot_body_tool 生成）：至少 body_pct% 是身子，磕口、露铜这类 edge_looks 至少 edge_body_pct% 是身子且压着外轮廓；部位框里没有这样的位置就取全图离部位最近的 near_spots 处；look_alias 把老画法名换成小游戏画得出同样东西的那一样（thin、erase 画成描笔，notch 画成磕口，stain 画成水渍）。coin_ring：旧洋、做得好的哑板比例与幅度；weigh.boxes 是各种秤手边的砝码（规格的 weight_box 选一套，修 B2），small_permille 是规格没写 small_fen 时“一点点”的兜底；fragments：水渍比例、印偏多少像素算错开、随机东西最多几块；lever 是说破（Level B）：识破让价、冤枉了耐心掉一截底价抬高，offend_rep 0 = 不扣口碑（编排 10-25 第 6 条）。全部【待调】。"
+  ],
+  "start_money": 340,
+  "shelf_cap": 12,
+  "max_rounds": 5,
+  "tiers": {
+    "pay": {
+      "harsh": 55,
+      "fair": 75,
+      "kind": 95
+    },
+    "receive": {
+      "harsh": 130,
+      "fair": 105,
+      "kind": 85
+    }
+  },
+  "patience": {
+    "offer_min": 10,
+    "counter_min": 10
+  },
+  "ticket": {
+    "term_days": 15,
+    "grace_days": 3,
+    "rate_pct_month": 3,
+    "storage_permille_month": 5
+  },
+  "redeem": {
+    "squeeze_pct": 20,
+    "come_num": 2,
+    "come_den": 3,
+    "compensate_pct": 120
+  },
+  "appraise": {
+    "clear_permille": 700,
+    "partial_permille": 350,
+    "expert_pct": 100,
+    "aids": {
+      "spot": {
+        "ink_base": 3,
+        "ink_eye_div": 2,
+        "lens_px_base": 56,
+        "lens_px_per_eye": 8,
+        "blink_eye": 3
+      },
+      "coin_ring": {
+        "tries_base": 4,
+        "tries_eye_div": 2,
+        "ghosts_base": 1,
+        "ghosts_eye": 3
+      },
+      "weigh": {
+        "zoom_base": 2,
+        "zoom_eye": 4,
+        "minor_ticks_eye": 2,
+        "needle_gain_base": 6,
+        "needle_gain_per_eye": 1
+      },
+      "fragments": {
+        "lens_px_base": 56,
+        "lens_px_per_eye": 8,
+        "backlight_eye": 3
+      },
+      "decode": {
+        "smudge_eye_div": 2
+      }
+    },
+    "spot": {
+      "marks_total": 3,
+      "fine_differs_permille": 700,
+      "fine_wear_permille": 300,
+      "fine_craft_permille": 200,
+      "fine_cut": 500,
+      "at_px": [
+        5,
+        8
+      ],
+      "at_fine_px": [
+        4,
+        6
+      ],
+      "tol_px": 2,
+      "tol_fine_px": 1,
+      "look_alias": {
+        "thin": "retrace",
+        "erase": "retrace",
+        "notch": "chip",
+        "stain": "watermark"
+      },
+      "edge_looks": [
+        "chip",
+        "base_metal"
+      ],
+      "body_pct": 60,
+      "edge_body_pct": 40,
+      "near_spots": 12
+    },
+    "coin_ring": {
+      "worn_permille": 350,
+      "worn_ring_cut_pct": [
+        15,
+        30
+      ],
+      "worn_buzz_add": [
+        0,
+        10
+      ],
+      "well_made_permille": 400,
+      "well_made_craft_permille": 300,
+      "well_made_ring_pct": [
+        90,
+        100
+      ],
+      "sample_jitter_pct": 3,
+      "stack_two_bad_from": 4
+    },
+    "weigh": {
+      "small_permille": 60,
+      "boxes": {
+        "dengzi": [
+          1,
+          2,
+          5,
+          10,
+          20,
+          50,
+          100,
+          200
+        ],
+        "dengzi_heavy": [
+          10,
+          20,
+          20,
+          50,
+          100,
+          200,
+          200,
+          500
+        ],
+        "steelyard": [
+          100,
+          200,
+          500,
+          1000,
+          2000,
+          2000,
+          2000,
+          2000
+        ]
+      }
+    },
+    "fragments": {
+      "stain_permille": 500,
+      "seal_off_px": 2,
+      "item_pieces_max": 6
+    },
+    "decode": {
+      "groups_default": 4
+    },
+    "lever": {
+      "caught_ask_pct": 70,
+      "caught_floor_pct": 55,
+      "soft_pct": 95,
+      "offend_min": 20,
+      "offend_floor_pct": 110,
+      "offend_rep": 0
+    }
+  },
+  "month_expenses": 30,
+  "price_mod_min_pct": 10
+}

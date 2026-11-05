@@ -1,0 +1,536 @@
+{
+  "_meta": {
+    "_provenance": "ai_placeholder",
+    "brief": "开月：第一关开局，引擎要求打开本月运势轮盘（香案还空着）",
+    "generated_by": "res://scripts/cards/mock/build_fixtures.gd",
+    "owner": "W0",
+    "schema": 1
+  },
+  "guide_progress": {},
+  "queries": {
+    "almanac|{}": {
+      "done": [],
+      "id": "alm.shoudang",
+      "ji": [
+        "travel"
+      ],
+      "yi": [
+        "pawn_in",
+        "meet"
+      ]
+    },
+    "day.end_preview|{}": {
+      "items": [
+        {
+          "args": {},
+          "consequence_key": "g02.end.auto_spin",
+          "def": "",
+          "kind": "auto_spin",
+          "uid": ""
+        }
+      ],
+      "needs_confirm": true,
+      "step": "begin_month"
+    },
+    "dossier|{}": {
+      "pages": []
+    },
+    "estates|{}": {
+      "estates": [
+        {
+          "id": "es.jewel_cabinet",
+          "interest_money": 4,
+          "money": 80,
+          "status": "held"
+        },
+        {
+          "id": "es.storeroom",
+          "interest_money": 6,
+          "money": 120,
+          "status": "held"
+        },
+        {
+          "id": "es.counter",
+          "interest_money": 7,
+          "money": 150,
+          "status": "held"
+        },
+        {
+          "id": "es.old_house",
+          "interest_money": 10,
+          "money": 260,
+          "status": "held"
+        },
+        {
+          "id": "es.shopfront",
+          "interest_money": 16,
+          "money": 400,
+          "status": "held"
+        }
+      ]
+    },
+    "firsts|{}": {
+      "firsts": {
+        "month_open": 0,
+        "month_wheel": 0
+      }
+    },
+    "month_report|{}": {
+      "lines": []
+    },
+    "settle_report|{}": {
+      "lines": []
+    },
+    "short|{}": {
+      "amount": 20,
+      "estates": [
+        {
+          "id": "es.jewel_cabinet",
+          "interest_money": 4,
+          "money": 80,
+          "status": "held"
+        },
+        {
+          "id": "es.storeroom",
+          "interest_money": 6,
+          "money": 120,
+          "status": "held"
+        },
+        {
+          "id": "es.counter",
+          "interest_money": 7,
+          "money": 150,
+          "status": "held"
+        },
+        {
+          "id": "es.old_house",
+          "interest_money": 10,
+          "money": 260,
+          "status": "held"
+        },
+        {
+          "id": "es.shopfront",
+          "interest_money": 16,
+          "money": 400,
+          "status": "held"
+        }
+      ],
+      "goods": [],
+      "options": [
+        "goods",
+        "estate",
+        "default"
+      ],
+      "payee": "w0.mock.payee",
+      "source": ""
+    },
+    "stock|{}": {
+      "items": []
+    },
+    "tickets|{}": {
+      "tickets": []
+    },
+    "wheel|{\"uid\":\"\",\"wheel\":\"wh.month\"}": {
+      "art": "wheel.month",
+      "cost": {
+        "money": 0,
+        "stake": false
+      },
+      "incense": {
+        "accepts": [
+          "money",
+          "kept",
+          "contact"
+        ],
+        "full": false,
+        "placed": []
+      },
+      "kind": "month",
+      "result": {
+        "segment": "",
+        "stop_deg": 0.0
+      },
+      "segments": [
+        {
+          "arc_deg": 108.0,
+          "art": "icon.ws.caixing",
+          "id": "ws.1938.month.caixing"
+        },
+        {
+          "arc_deg": 108.0,
+          "art": "icon.ws.liunian",
+          "id": "ws.1938.month.liunian"
+        },
+        {
+          "arc_deg": 144.0,
+          "art": "icon.ws.pingan",
+          "id": "ws.1938.month.pingan"
+        }
+      ],
+      "spun": false,
+      "staked": "",
+      "uid": "",
+      "wheel": "wh.month"
+    },
+    "year_report|{}": {
+      "lines": []
+    }
+  },
+  "responses": [
+    {
+      "cmd": "wheel.offer",
+      "events": [
+        [
+          "first_time",
+          "incense",
+          {}
+        ]
+      ],
+      "match": {
+        "source": {
+          "amount": 10,
+          "kind": "money"
+        },
+        "uid": "",
+        "wheel": "wh.month"
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "notice",
+          "value": {
+            "almanac": {
+              "done": [
+                "pray"
+              ],
+              "id": "alm.shoudang",
+              "ji": [
+                "travel"
+              ],
+              "yi": [
+                "pawn_in",
+                "meet"
+              ]
+            },
+            "fortune": "",
+            "market_day": false,
+            "news": [],
+            "weather": "clear"
+          }
+        }
+      ],
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "wheel.spin",
+      "events": [
+        [
+          "wheel_spun",
+          "wh.month",
+          "ws.1938.month.caixing",
+          13.185
+        ]
+      ],
+      "match": {
+        "uid": "",
+        "wheel": "wh.month"
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "notice",
+          "value": {
+            "almanac": {
+              "done": [],
+              "id": "alm.shoudang",
+              "ji": [
+                "travel"
+              ],
+              "yi": [
+                "pawn_in",
+                "meet"
+              ]
+            },
+            "fortune": "ws.1938.month.caixing",
+            "market_day": false,
+            "news": [],
+            "weather": "clear"
+          }
+        },
+        {
+          "op": "set",
+          "path": "open_panel",
+          "value": {
+            "args": {},
+            "kind": ""
+          }
+        }
+      ],
+      "result": {
+        "err": "",
+        "ok": true,
+        "segment": "ws.1938.month.caixing",
+        "stop_deg": 13.185
+      }
+    },
+    {
+      "cmd": "month.begin",
+      "events": [],
+      "match": {},
+      "patch": [],
+      "result": {
+        "err": "wheel_pending",
+        "ok": false
+      }
+    },
+    {
+      "cmd": "day.end",
+      "events": [],
+      "match": {
+        "confirm": false
+      },
+      "patch": [],
+      "result": {
+        "err": "must_resolve_pending",
+        "items": [
+          {
+            "args": {},
+            "consequence_key": "g02.end.auto_spin",
+            "def": "",
+            "kind": "auto_spin",
+            "uid": ""
+          }
+        ],
+        "needs_confirm": true,
+        "ok": false,
+        "step": "begin_month"
+      }
+    },
+    {
+      "cmd": "day.end",
+      "events": [
+        [
+          "wheel_spun",
+          "wh.month",
+          "ws.1938.month.caixing",
+          13.185
+        ],
+        [
+          "phase_changed",
+          "month_open",
+          "morning"
+        ],
+        [
+          "first_time",
+          "notice",
+          {}
+        ],
+        [
+          "first_time",
+          "almanac",
+          {}
+        ]
+      ],
+      "match": {
+        "confirm": true
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "date",
+          "value": {
+            "abs_day": 1,
+            "d": 1,
+            "era": "1938",
+            "m": 3,
+            "minute": 480,
+            "stage": 0,
+            "stage_day": 1,
+            "stage_days": 30,
+            "weekday": 1,
+            "y": 1938
+          }
+        },
+        {
+          "op": "set",
+          "path": "notice",
+          "value": {
+            "almanac": {
+              "done": [],
+              "id": "alm.shoudang",
+              "ji": [
+                "travel"
+              ],
+              "yi": [
+                "pawn_in",
+                "meet"
+              ]
+            },
+            "fortune": "ws.1938.month.caixing",
+            "market_day": false,
+            "news": [
+              "w0.mock.notice"
+            ],
+            "weather": "clear"
+          }
+        },
+        {
+          "op": "set",
+          "path": "open_panel",
+          "value": {
+            "args": {},
+            "kind": ""
+          }
+        },
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "morning"
+        }
+      ],
+      "result": {
+        "err": "",
+        "items": [
+          {
+            "args": {},
+            "consequence_key": "g02.end.auto_spin",
+            "def": "",
+            "kind": "auto_spin",
+            "uid": ""
+          }
+        ],
+        "ok": true,
+        "step": "begin_month"
+      }
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    }
+  ],
+  "view": {
+    "busy": false,
+    "caps": {
+      "contacts": 3,
+      "kept": 5,
+      "shelf": 12
+    },
+    "contacts": [],
+    "date": {
+      "abs_day": 0,
+      "d": 1,
+      "era": "1938",
+      "m": 3,
+      "minute": 480,
+      "stage": 0,
+      "stage_day": 0,
+      "stage_days": 30,
+      "weekday": 1,
+      "y": 1938
+    },
+    "demands": [],
+    "dossier_new": 0,
+    "estates": [
+      {
+        "id": "es.jewel_cabinet",
+        "interest_money": 4,
+        "money": 80,
+        "status": "held"
+      },
+      {
+        "id": "es.storeroom",
+        "interest_money": 6,
+        "money": 120,
+        "status": "held"
+      },
+      {
+        "id": "es.counter",
+        "interest_money": 7,
+        "money": 150,
+        "status": "held"
+      },
+      {
+        "id": "es.old_house",
+        "interest_money": 10,
+        "money": 260,
+        "status": "held"
+      },
+      {
+        "id": "es.shopfront",
+        "interest_money": 16,
+        "money": 400,
+        "status": "held"
+      }
+    ],
+    "goals": [
+      {
+        "id": "gl.1938.keep_shop",
+        "main": true,
+        "status": "open"
+      }
+    ],
+    "hand": [],
+    "heat_tier": 0,
+    "kept": [],
+    "lots": [],
+    "mode": "shop",
+    "money": {
+      "amount": 340,
+      "currency": "fabi"
+    },
+    "night_offers": [],
+    "notice": {
+      "almanac": {
+        "done": [],
+        "id": "alm.shoudang",
+        "ji": [
+          "travel"
+        ],
+        "yi": [
+          "pawn_in",
+          "meet"
+        ]
+      },
+      "fortune": "",
+      "market_day": false,
+      "news": [],
+      "weather": "clear"
+    },
+    "open_panel": {
+      "args": {
+        "required": true,
+        "uid": "",
+        "wheel": "wh.month"
+      },
+      "kind": "wheel"
+    },
+    "pending": [],
+    "phase": "month_open",
+    "rep_tier": 1,
+    "self": {
+      "attrs": {
+        "eye": 2,
+        "nerve": 1,
+        "pull": 1,
+        "tongue": 1
+      },
+      "def": "self.ruhua",
+      "uid": "c0001",
+      "used_today": false
+    },
+    "shelf_count": 0,
+    "stage": {
+      "sealed": false,
+      "set": "counter",
+      "time": "day"
+    },
+    "tickets": [],
+    "v": 1
+  }
+}

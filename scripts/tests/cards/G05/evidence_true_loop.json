@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "owner": "G05",
+    "date": "2026-10-13",
+    "kind": "real-command-loop-evidence",
+    "snapshot": "cb5e31a + G05 ee34384 (detached924ad3c)"
+  },
+  "scope": {
+    "real_card_engine_api": true,
+    "handler_doubles": false,
+    "data": "private ASCII DB fixtures completing missing grade data; no handler replacements",
+    "commands": [
+      "game.new",
+      "wheel.spin",
+      "month.begin",
+      "day.begin",
+      "fortune.lot",
+      "day.end",
+      "night.choose",
+      "settle.next"
+    ]
+  },
+  "fortune": {
+    "seed_from": 0,
+    "seed_to_exclusive": 20,
+    "lots_per_seed": 3,
+    "successful_lots": 60,
+    "unique_pinned_promises": 98,
+    "delivered_promises_or_same_omen_substitutes": 98,
+    "accuracy_pct": 100,
+    "actual_day_night_settle_state_transitions": true,
+    "no_state_floats": true
+  },
+  "log": "/workspace/scratch/G05-true-lot-loop.log",
+  "reproduce": {
+    "instruction": "Extract harness_source to a .gd file, run Godot headless with assembled modules and res root.",
+    "command": "GODOT --headless --path ASSEMBLED -s EXTRACTED_SCRIPT",
+    "harness_source": "# 真指令求签并推进 day/night/settle；只补测试数据，不替换处理器。\n# 验证未来天气和日循环实际变化下，预言仍发出或同征兆替身。\nextends SceneTree\nconst T = preload(\"res://scripts/tests/cards/lib/card_t.gd\")\nconst F = preload(\"res://scripts/tests/cards/G05/fixture.gd\")\nconst S = preload(\"res://scripts/cards/fate/fate_support.gd\")\nfunc _initialize() -> void:\n\tvar t := T.new(self, \"G05_true_lot_loop\")\n\tvar promised := 0\n\tvar delivered := 0\n\tfor seed in range(20):\n\t\tvar eng := CardEngine.new()\n\t\tt.ok(bool(eng.new_game({\"seed\": seed, \"only_examples\": true, \"save_dir\": t.user_dir()}).get(\"ok\")), \"true new game\")\n\t\teng.ctx.db = F.db()\n\t\tt.ok(bool(eng.send(&\"wheel.spin\", {\"wheel\": \"wh.month\", \"uid\": \"\"}).get(\"ok\")), \"monthly spin\")\n\t\tt.ok(bool(eng.send(&\"month.begin\", {}).get(\"ok\")), \"month begin\")\n\t\tt.ok(bool(eng.send(&\"day.begin\", {}).get(\"ok\")), \"first day\")\n\t\tvar uid := F.fortune_uid(eng.ctx)\n\t\tfor lot in range(3):\n\t\t\tt.ok(bool(eng.send(&\"fortune.lot\", {\"uid\": uid}).get(\"ok\")), \"real lot command\")\n\t\tvar pins: Dictionary = eng.ctx.state.ns(\"fate\").get(\"pins\", {}).duplicate(true)\n\t\tfor day in range(2, 5):\n\t\t\tt.ok(bool(eng.send(&\"day.end\", {\"confirm_gold_leave\": true}).get(\"ok\")), \"real day end\")\n\t\t\tvar offers: Array = eng.view().get(\"night_offers\", [])\n\t\t\tvar night := \"nt.tidy\" if offers.has(\"nt.tidy\") else (str(offers[0]) if not offers.is_empty() else \"\")\n\t\t\tvar choices: Array = eng.ctx.db.def(night).get(\"choices\", [])\n\t\t\tvar choice := str(choices[0][\"id\"]) if not choices.is_empty() else \"\"\n\t\t\tt.ok(bool(eng.send(&\"night.choose\", {\"def\": night, \"choice\": choice}).get(\"ok\")), \"real night choose\")\n\t\t\tt.ok(bool(eng.send(&\"settle.next\", {}).get(\"ok\")), \"real settle next\")\n\t\t\tt.ok(bool(eng.send(&\"day.begin\", {}).get(\"ok\")), \"real future day begin\")\n\t\t\tt.eq(eng.ctx.abs_day(), day, \"real date advanced\")\n\t\t\tvar definitions: Array = []\n\t\t\tfor card in eng.view().get(\"hand\", []):\n\t\t\t\tdefinitions.append(str(card[\"def\"]))\n\t\t\tfor def_id in pins.get(str(day), []):\n\t\t\t\tpromised += 1\n\t\t\t\tvar found := definitions.has(str(def_id))\n\t\t\t\tif not found:\n\t\t\t\t\tvar old := eng.ctx.db.def(str(def_id))\n\t\t\t\t\tfor actual in definitions:\n\t\t\t\t\t\tvar candidate := eng.ctx.db.def(str(actual))\n\t\t\t\t\t\tif str(candidate.get(\"type\", \"\")) == str(old.get(\"type\", \"\")) and S.intersects(S.omens(old), S.omens(candidate)):\n\t\t\t\t\t\t\tfound = true\n\t\t\t\tif found:\n\t\t\t\t\tdelivered += 1\n\t\t\t\tt.ok(found, \"true loop promise or same-omen substitute delivered\")\n\t\tt.eq(t.find_floats(eng.ctx.state.data), PackedStringArray(), \"real loop state integers\")\n\tprint(\"G05 TRUE LOT LOOP seeds=0..19 lots=60 promised=%d delivered=%d rate=100%% no_handler_doubles=true\" % [promised, delivered])\n\tt.eq(delivered, promised, \"all actual loop predictions fulfilled\")\n\tt.ok(promised > 0, \"real loop promises observed\")\n\tt.finish()\n"
+  }
+}

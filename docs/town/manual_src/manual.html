@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>德厚当 v0.4 小镇版 · 制作说明</title>
+<style>
+@font-face { font-family: "DSerif"; src: url("file:///home/user/dehoudang/fonts/NotoSerifSC-Regular-subset.otf"); }
+@font-face { font-family: "DTitle"; src: url("file:///home/user/dehoudang/fonts/MaShanZheng-Title-subset.ttf"); }
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+:root { --ink:#2a1f17; --soft:#5d4a3a; --seal:#a3262a; --paper:#fbf6ea; --line:#d9c9a8; --wood:#7b5638; }
+* { box-sizing: border-box; }
+body { font-family: "DSerif", "WenQuanYi Zen Hei", serif; color: var(--ink); font-size: 10.5pt; line-height: 1.68; margin: 0; }
+h1 { font-family: "DTitle", "DSerif", serif; font-weight: normal; color: var(--seal); font-size: 30pt; margin: 0 0 4mm; letter-spacing: 2px; }
+h2 { font-size: 15pt; color: var(--seal); border-bottom: 1.5px solid var(--seal); padding-bottom: 1.5mm; margin: 9mm 0 3.5mm; break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 5mm 0 2mm; color: var(--wood); break-after: avoid; }
+p { margin: 0 0 2.6mm; }
+.lead { font-size: 11.5pt; color: var(--soft); }
+.cover { height: 262mm; display: flex; flex-direction: column; justify-content: space-between; break-after: page; }
+.cover img { width: 100%; border: 1px solid var(--line); border-radius: 2mm; }
+.cover .meta { color: var(--soft); font-size: 10pt; }
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin: 4mm 0; }
+.kpi { border: 1px solid var(--line); background: var(--paper); border-radius: 2mm; padding: 2.5mm 3mm; }
+.kpi b { display: block; font-size: 17pt; color: var(--seal); line-height: 1.2; }
+.kpi span { font-size: 8.8pt; color: var(--soft); }
+table { width: 100%; border-collapse: collapse; margin: 2mm 0 4mm; font-size: 9.4pt; break-inside: auto; }
+th, td { border: 1px solid var(--line); padding: 1.6mm 2.2mm; vertical-align: top; text-align: left; }
+th { background: #efe3c8; font-weight: normal; color: var(--ink); }
+tr { break-inside: avoid; }
+.note { background: var(--paper); border-left: 3px solid var(--seal); padding: 2.5mm 3.5mm; margin: 3mm 0; font-size: 9.6pt; }
+.steps { counter-reset: s; margin: 0; padding: 0; list-style: none; }
+.steps li { counter-increment: s; position: relative; padding: 0 0 2.6mm 9mm; break-inside: avoid; }
+.steps li::before { content: counter(s); position: absolute; left: 0; top: 0.2mm; width: 6.2mm; height: 6.2mm; border-radius: 50%; background: var(--seal); color: #fff; font-size: 9pt; text-align: center; line-height: 6.2mm; }
+.arch { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2.5mm; margin: 3mm 0 4mm; font-size: 9pt; }
+.box { border: 1.2px solid var(--wood); border-radius: 2mm; padding: 2mm 2.5mm; background: #fff; break-inside: avoid; }
+.box b { color: var(--seal); display: block; margin-bottom: 0.8mm; font-weight: normal; font-size: 10pt; }
+.box.wide { grid-column: span 3; text-align: center; background: var(--paper); }
+.gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm 4mm; }
+figure { margin: 0; break-inside: avoid; }
+figure img { width: 100%; display: block; border: 1px solid var(--line); border-radius: 1.2mm; image-rendering: pixelated; }
+figcaption { font-size: 8.8pt; color: var(--soft); margin-top: 1mm; line-height: 1.45; }
+figure.full { grid-column: span 2; }
+.pb { break-before: page; }
+.small { font-size: 9pt; color: var(--soft); }
+code { font-family: "DSerif", monospace; background: #f1e8d4; padding: 0 1mm; border-radius: 1mm; font-size: 9pt; }
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div>
+    <h1>德厚当 · 小镇版 v0.4</h1>
+    <p class="lead">制作说明：从“一张柜台”到“一个会自己过日子的江南小镇”，这一版是怎么做出来的</p>
+    <p class="meta">2026 年 10 月 11 日 · 仓库 misakamikotoghr-5205/dehoudang · 分支 claude/festive-ride-vud32a · 引擎 Godot 4.7</p>
+  </div>
+  <img src="file:///home/user/dehoudang/screenshots/v04_gallery/g07_town_pawnshop_front.png" alt="">
+  <div class="kpis">
+    <div class="kpi"><b>10</b><span>栋建筑，6 家可进店特写</span></div>
+    <div class="kpi"><b>16</b><span>位镇上人物，各有日程</span></div>
+    <div class="kpi"><b>42</b><span>张主线故事卡，第 1–14 天</span></div>
+    <div class="kpi"><b>88</b><span>项自动测试全部通过</span></div>
+    <div class="kpi"><b>54,000</b><span>个模拟日的数值验证</span></div>
+    <div class="kpi"><b>10</b><span>段原创江南丝竹配乐</span></div>
+    <div class="kpi"><b>3</b><span>个 AI 分工协作（GPT / Grok / Claude）</span></div>
+    <div class="kpi"><b>~11,600</b><span>行新增/改写的游戏代码</span></div>
+  </div>
+</section>
+
+<h2>一、一页看懂</h2>
+<p><b>问题：</b>v0.3 是一张固定柜台，客人一个接一个进来，验货、砍价、下一位。这套骨架和 Probably Stolen 几乎一样，照这个方向做下去会成为它的翻版。</p>
+<p><b>改法：</b>把当铺变成青溪镇里的一栋楼。你每天要自己安排：什么时候站到柜台后面接客，什么时候出门去米行买米、去茶馆听消息、去保公所跟马保长讨价、去邮电局取哥哥的信。出门的时间就是不守柜台的时间，这是游戏里最核心的取舍。当票、赊账、人情会在几周里慢慢收场；镇上的店随着事情发生一家家开门，警察所一开始就贴着封条立在桥那头。</p>
+<p><b>画风：</b>你在三种示意图里选了 A、B 混合——小镇和当铺内部是星露谷那样的俯视、能走动；接客时切回原来的柜台特写（放大镜、算盘、当票都保留）；其他店进门切成侧视特写，掌柜立绘配对白菜单。</p>
+<p><b>压力：</b>每天的开销不再是一个固定数，而是几笔会变的账：伙食随米价、柴炭灯油随天气、生病买药、人情请帖、维持会摊派、房捐、良民证。每笔都提前看得见来源和日期，拖欠的后果晚到、逐级加重，多数可以赊、可以谈。</p>
+<p><b>随机：</b>主线（父母失踪、陈叔叔的电台、德字第一九六号、哥哥的信）钉在日程上，其余每天由你的 GameJev 生成器摇出来：天气、米价、每栋楼的事件、谁来当铺、带什么东西、东西是真是假是不是赃物、流言怎么传、警察所什么时候开门。概率、好感、底价一律藏在后台。</p>
+
+<h2>二、和 Probably Stolen 的区别</h2>
+<table>
+<tr><th style="width:16%"></th><th style="width:40%">Probably Stolen</th><th>德厚当 v0.4</th></tr>
+<tr><td>一局的单位</td><td>一个房间里排队的客人</td><td>小镇里的一天：几点去哪儿是你的选择</td></tr>
+<tr><td>核心对象</td><td>要倒手的货</td><td>随时间展开的合同：当期、月息、续当、赎当、满当</td></tr>
+<tr><td>卖货</td><td>同一屋里的展示柜</td><td>满当货架（客人可只买一件）＋集市估衣摊＋茶馆找买主＋卖给店家</td></tr>
+<tr><td>客人</td><td>生成器堆出的一叠人</td><td>有住处、日程、家人和债的镇上人；街上也能遇见</td></tr>
+<tr><td>执法</td><td>检查官扫违禁、罚款、开枪</td><td>机构是具体的人：可以讨价的保长、封条里的警察所；没有枪战</td></tr>
+<tr><td>压力</td><td>租金、贷款倒计时</td><td>几笔会变的家用账，提前可见、后果滞后、可赊可谈</td></tr>
+<tr><td>信息</td><td>晨报界面</td><td>流言沿熟人关系传，越传越走样；〔亲眼〕〔听说〕〔推测〕</td></tr>
+</table>
+
+<h2 class="pb">三、我是怎么做的（时间线）</h2>
+<ol class="steps">
+<li><b>读懂三份材料。</b>你给的问题清单（18 条）、Probably Stolen 机制文档、GameJev 归档（含你 29 条关键原话和“不得悄悄改掉的要求”）。同时派 6 个子智能体并行调研：现有代码架构、界面与美术管线、现有剧情人物、GameJev 设计约束、GameJev 生成器源码、参考游戏（星露谷、Papers Please、RimWorld 叙事者、Fallen London 故事卡等）。读源码的那个顺手把生成器移植成了 GDScript 原型，与 Python 版逐位一致，21 天跑通。</li>
+<li><b>画示意图、算采购成本。</b>用 Python 程序画了三种画风的示意图（C 方案是 Godot 真 3D 渲染），同时调研了日后买素材的成本、米画师单价和 Steam 的 AI 披露规则。你选定 A、B 混合。</li>
+<li><b>写设计稿。</b>把“不像 Probably Stolen”落到具体结构：一天怎么过、建筑怎么开门、九类家用账、生成器每天早上按什么顺序摇、主线怎么嵌进去、docx 18 条各落在哪。</li>
+<li><b>写接口合同和任务卡，交给 GitHub。</b>为了省你的 Claude 额度，我没有自己写全部代码，而是写了一份接口合同（谁能改哪些文件、数据格式、生成器与前端的调用约定、画面规格、测试红线、Git 流程）和 7 张任务卡，放在 <code>docs/handoff/</code>，你把开场提示贴给 GPT 和 Grok 就能各自开工。</li>
+<li><b>三个 AI 并行开发。</b>GPT 做生成器核心、主线与玩法后端、数值平衡；Grok 做美术管线与地图、店铺内容、当铺内部返工；我（用更便宜的子智能体）做小镇前端。每个任务一个分支，测试全绿才开 PR。</li>
+<li><b>集成审查。</b>我把各分支合在一起跑全部测试，看截图，逐项核对合同：发现并修了社交关系数据对不上的问题；把当铺内部打回 Grok 返工（原版几乎是一片空地板，返工后与示意图一致）；派审查智能体读前端代码，找出“第一次睡觉后屏幕变黑”“保公所谈价时对白不显示”等硬伤，交给修复智能体。</li>
+<li><b>配乐。</b>按你说的“贴合背景、不要鼓点”，用代码合成古筝、琵琶、二胡、笛子、箫、扬琴，写了 6 首原创循环曲和 4 段提示音，接进游戏按画面和时间切换。</li>
+<li><b>测试、截图、打包。</b>88 项自动测试全绿后推到 GitHub；用真实渲染拍了这份文档里的截图；Windows 导出已验证可行，修复合并后出 exe。</li>
+</ol>
+
+<h2>四、设计要点</h2>
+<h3>建筑和开门条件（都由镇上的事引起，不靠好感度兑换）</h3>
+<table>
+<tr><th style="width:18%">建筑</th><th style="width:16%">人</th><th>干什么</th><th style="width:28%">怎么开门</th></tr>
+<tr><td>德厚当</td><td>沈如花</td><td>柜台接客、满当货架、库房、后门、电报机、睡觉</td><td>开局</td></tr>
+<tr><td>桥头茶馆</td><td>周妈</td><td>听流言、托人找买主、打听人</td><td>开局</td></tr>
+<tr><td>裕丰米行</td><td>吴掌柜</td><td>牌价、买米、赊账、柴炭灯油、问米船</td><td>开局</td></tr>
+<tr><td>济生堂</td><td>陈叔叔</td><td>买药、对批号、卖药</td><td>陈叔叔来过之后</td></tr>
+<tr><td>保公所</td><td>马保长</td><td>维持费、房捐、良民证，可以讨价</td><td>马保长第一次上门收费后</td></tr>
+<tr><td>邮电代办所</td><td>何先生</td><td>哥哥的信、电报、汇款</td><td>哥哥的第一封信寄到</td></tr>
+<tr><td>集市</td><td>摊主们</td><td>卖满当货的主渠道，五天一集</td><td>手里第一次有满当货</td></tr>
+<tr><td>警察所</td><td>新巡长</td><td>报案、搜查、许可</td><td>维新政府成立（约第 22 天），或被人告发收赃后提前</td></tr>
+</table>
+<h3>每天会变的账</h3>
+<table>
+<tr><th style="width:16%">账目</th><th>怎么变</th><th style="width:30%">提前在哪儿知道</th></tr>
+<tr><td>伙食</td><td>米价是随机游走，米船没到、封锁、新米上市会冲击它</td><td>米行牌价、茶馆传言</td></tr>
+<tr><td>柴炭灯油</td><td>按季节和天气（倒春寒、连阴雨）</td><td>清晨告示、天色</td></tr>
+<tr><td>药</td><td>饥寒连带生病，或镇上疫病</td><td>济生堂</td></tr>
+<tr><td>人情</td><td>镇上人的红白喜事、满月、探病</td><td>请帖提前 3–7 天到</td></tr>
+<tr><td>摊派与房捐</td><td>维持会的怀疑、上头指令；可以讨价还价</td><td>马保长上门、告示墙</td></tr>
+</table>
+<div class="note">难度用三种“年景”代替：太平年 / 常年 / 乱世。GPT 用 3 难度 × 200 个种子 × 3 种玩法 × 30 天（共 54,000 个模拟日）验证：常年难度下老实经营 30 天存活 91%，每周平均吃紧 1 次；坑骗型赚得多一些，但 17% 的局会被盯上，老实型是 0%。详细见 <code>docs/town/balance_report.md</code>。</div>
+
+<h2 class="pb">五、技术结构</h2>
+<div class="arch">
+  <div class="box wide"><b>数据（全部可改，不写死在代码里）</b>town_pack.json（压力、轮盘、建筑、人物日程、陌生人、九类账、规范、机构）· storylets.json（42 张故事卡）· item_templates.json（当物模板）· maps/*.json（小镇、当铺地图）· shops/*.json（六家店菜单与对白）· music.json</div>
+  <div class="box"><b>生成器 scripts/sim（GPT）</b>JevRng 确定性随机（种子＋领域＋语义键）、压力模型、世界轮盘、九类开销、人物日程、流言网、机构、解锁、当物生成、TownSim 总调度</div>
+  <div class="box"><b>核心 scripts/core（原有＋GPT 扩展）</b>剧情解释器 Director（新增小镇接口）、账本 Ledger（钱只在账户间移动）、议价 Session、人格大脑、存档 save.gd</div>
+  <div class="box"><b>前端 scripts/town（Claude）</b>TownGame 时钟与模式、320×180 ×4 像素地图、Y 轴遮挡与屋檐、主角与 NPC 走路、店铺特写、HUD、告示/家用簿/暂停/设置</div>
+  <div class="box"><b>原有界面 scripts/ui</b>柜台特写、验货放大镜、模拟算盘、当票、账簿档案簿、对白气泡与打字声</div>
+  <div class="box"><b>美术 tools/art/town（Grok）</b>Python 程序画瓦片、建筑、行走图、立绘、店内背景；尺寸和文件名按合同，日后买素材直接替换</div>
+  <div class="box"><b>配乐 scripts/audio + tools/audio</b>程序合成民乐、两轨交叉淡入淡出、对话时压低</div>
+</div>
+<p><b>确定性：</b>模拟里不用普通随机函数，每个随机数都由“世界种子＋领域＋语义键”算出来。同一个种子结果完全一样；存档读档、预览选项都不会改变结果；你的操作不会“用掉”天气的随机数。测试逐位验证了这些。</p>
+<p><b>看不见的东西：</b>界面只能读白名单里的数据（告示、账单、牌价、听到的流言、客观账目、档案簿）；人格、好感、客人底价、轮盘权重只在开发日志里。</p>
+
+<h2>六、三个 AI 怎么分工</h2>
+<table>
+<tr><th style="width:10%">任务</th><th style="width:10%">谁</th><th>交付了什么</th><th style="width:26%">怎么验证</th></tr>
+<tr><td>T01 生成器</td><td>GPT</td><td>把 GameJev 拆成 11 个模块；10 栋建筑、16 位人物日程、5 种陌生人、9 类开销、3 种难度</td><td>3 难度 × 50 种子 × 30 天、21.6 万项检查</td></tr>
+<tr><td>T02 美术地图</td><td>Grok</td><td>瓦片、10 栋建筑、28 张行走图、新立绘、6 张店内背景、小镇与当铺地图</td><td>尺寸、瓦片、每扇门可达</td></tr>
+<tr><td>T02b 返工</td><td>Grok</td><td>当铺内部按示意图重做：横贯屋子的高柜台、后墙满当货架</td><td>我审图后打回，第二版通过</td></tr>
+<tr><td>T03 前端</td><td>Claude</td><td>走动、门、时钟、HUD、店铺特写、柜台衔接、暂停菜单、设置、返回标题、自动试玩</td><td>7 个界面测试 + 自动试玩</td></tr>
+<tr><td>T04 主线玩法</td><td>GPT</td><td>42 张故事卡、40 个小镇剧本；卖货、活当续当、家用账、摊派议价、请帖人情、存档</td><td>14 天 × 3 策略 × 5 种子，789 项检查</td></tr>
+<tr><td>T05 店铺内容</td><td>Grok</td><td>六家店的招呼、菜单、话题；新人物吴掌柜、何先生</td><td>配置与条件全部可求值</td></tr>
+<tr><td>T07 数值</td><td>GPT</td><td>1800 局蒙特卡洛与平衡报告</td><td>5 项默认目标全部达到</td></tr>
+<tr><td>集成与配乐</td><td>Claude</td><td>合并、审查、返工派单、配乐、文档、打包</td><td>全部 88 项测试</td></tr>
+</table>
+
+<h2>七、质量把关</h2>
+<p><b>测试红线：</b>任何 SCRIPT ERROR、ERROR、WARNING 都算失败；旧版 63 项测试一直保持全绿，旧的线性柜台版用 <code>--legacy</code> 仍能玩。</p>
+<p><b>集成时发现并处理的问题：</b>新人物社交关系两边对不上（已修）；当铺内部太空（返工）；审查找出的前端硬伤——第一次睡觉后屏幕变黑、保公所谈价对白被隐藏、谈价结果显示错误、自动试玩会覆盖玩家存档、睡觉可能重复执行夜间脚本等（修复中，合并后出 exe）；数据缺口——门的位置与图对不上、店里付账对象名称不一致、客人站位挡在柜台里、个别条件表达式在数字时报错、新立绘带底色（修复中）；配乐退出时资源未释放（已修）。</p>
+
+<h2>八、美术、配乐与 Steam</h2>
+<p>这一版的美术和配乐都是程序生成的<b>临时素材</b>。所有图都按统一规格出（16 像素瓦片、16×32 行走图 4 方向 × 4 帧、48×64 立绘、320×180 店内背景），日后买来的素材或米画师定制稿直接按文件名替换，不用改代码。采购成本调研（A、B 混合）：垂直切片约 ¥3.4–3.5 万，完整版约 ¥6–8 万；钱主要花在民国服装的人物与头像上。</p>
+<p>Steam 的 AI 披露：买素材只能把“美术”这一项去掉；对白、剧情文本如果是 AI 写的照样要披露（这一版新文字都标了 <code>_provenance: ai_draft</code>，方便统计）；用 AI 写代码不用披露。程序合成的配乐按保守理解也要披露或日后替换。</p>
+
+<h2 class="pb">九、截图（真实游戏画面）</h2>
+<div class="gallery">
+<figure class="full"><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g25_title.png"><figcaption>标题画面：开张 / 继续 / 设置 / 退出</figcaption></figure>
+<figure><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g01_morning_notice.png"><figcaption>清晨告示：天气、牌价、今天的账、请帖</figcaption></figure>
+<figure><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g02_panel_household.png"><figcaption>家用簿：米缸、柴炭、灯油、体力，玩家自己的状态</figcaption></figure>
+<figure><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g03_pawnshop_customer.png"><figcaption>当铺内部：高柜台、满当货架，客人进门等候</figcaption></figure>
+<figure><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g03b_counter_trade.png"><figcaption>接客切回柜台特写：放大镜、算盘、口述报价照旧</figcaption></figure>
+<figure><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g07_town_pawnshop_front.png"><figcaption>桥头街：德厚当和白墙上的“当”字</figcaption></figure>
+<figure><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g08_town_ricehall.png"><figcaption>米行门口：镇上的人按日程走动</figcaption></figure>
+<figure><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g09_town_baogong.png"><figcaption>药铺与保公所</figcaption></figure>
+<figure><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g11_town_police.png"><figcaption>桥那头贴着封条的警察所</figcaption></figure>
+<figure><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g14_shop_teahouse.png"><figcaption>茶馆特写：周妈，听消息、托人找买主</figcaption></figure>
+<figure><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g15_shop_ricehall.png"><figcaption>米行特写：吴掌柜，牌价、买米、赊账</figcaption></figure>
+<figure><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g16_shop_pharmacy.png"><figcaption>济生堂特写：陈叔叔</figcaption></figure>
+<figure><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g17_shop_baogong.png"><figcaption>保公所特写：马保长，维持费可以讨价</figcaption></figure>
+<figure><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g18_shop_post.png"><figcaption>邮电代办所：何先生，哥哥的信</figcaption></figure>
+<figure><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g19_shop_market.png"><figcaption>集市估衣摊：卖满当货</figcaption></figure>
+<figure><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g20_town_dusk.png"><figcaption>傍晚：灯笼点起来，人们归家</figcaption></figure>
+<figure><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g21_town_night.png"><figcaption>宵禁以后的桥头街</figcaption></figure>
+<figure><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g22_pawnshop_night.png"><figcaption>夜里的当铺</figcaption></figure>
+<figure><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g04_panel_ledger.png"><figcaption>账簿：钱匣、流水、活当、借据</figcaption></figure>
+<figure><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g06_panel_calendar.png"><figcaption>万年历：牌价与到期的事</figcaption></figure>
+<figure><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g23_pause_menu.png"><figcaption>暂停菜单：继续 / 存档 / 设置 / 返回标题 / 退出</figcaption></figure>
+<figure><img src="file:///home/user/dehoudang/screenshots/v04_gallery/g24_settings.png"><figcaption>设置：音乐音量、音效音量、文字速度</figcaption></figure>
+<figure class="full"><img src="file:///home/user/dehoudang/docs/town/mockups/compare_sheet.png"><figcaption>当初的三种画风示意图（你选了 A、B 混合：小镇和当铺俯视走动，其他店侧视特写）</figcaption></figure>
+</div>
+
+<h2 class="pb">十、已知问题与下一步</h2>
+<table>
+<tr><th style="width:24%">问题</th><th>现状与打算</th></tr>
+<tr><td>前端几处硬伤</td><td>睡觉后黑屏、谈价对白不显示等，修复智能体正在改，合并、测试后再出 exe</td></tr>
+<tr><td>小镇南北两侧空</td><td>地图上下有大片空草地；可以加人家、田埂，或者把地图收窄</td></tr>
+<tr><td>临时美术与配乐</td><td>上 Steam 前要换成购买或定制的；规格已统一，替换不用改代码</td></tr>
+<tr><td>长期平衡</td><td>30 天达标；35 天的诊断里月末房租让存活率下降，月末后果需要你定</td></tr>
+<tr><td>第 14 天以后</td><td>林嫂第 32 天的当期、年末转行（docx 第 9 条）、神秘盒子（第 11 条）、金融与法庭军队官场只留了接口</td></tr>
+<tr><td>AI 文字</td><td>店铺对白、新剧本是 AI 起草，标了来源；上架前人工重写或披露</td></tr>
+</table>
+
+<h3>怎么运行</h3>
+<p>Windows：解压后双击 <code>德厚当.exe</code>（修复合并后发给你）。源码：用 Godot 4.7 打开仓库根目录运行；<code>tools/run_tests.sh</code> 跑全部测试。操作：WASD/方向键走路（Shift 跑），E/空格交互，Tab 账簿、J 档案簿、H 家用簿、C 万年历，Esc 暂停菜单。</p>
+<p class="small">所有交接文件在 <code>docs/handoff/</code>；设计稿、调研、示意图在 <code>docs/town/</code>；配乐说明在 <code>audio/music/MUSIC_NOTES.md</code>。</p>
+</body>
+</html>

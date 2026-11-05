@@ -1,0 +1,20 @@
+# C15 拼碎片与解密（docs/handoff_cards/C15_mg-fragments-decode.md；鉴定改版 10-25：玩家自己判断）
+C15_validate|res://scripts/cards/core/validate_main.gd|120|--only=data/cards/minigames/obs/fragments.json,data/cards/minigames/obs/decode.json --name=C15_validate
+C15_fragments|res://scripts/tests/cards/C15/test_fragments.gd|120|
+C15_decode|res://scripts/tests/cards/C15/test_decode.gd|120|
+C15_decode_eye|res://scripts/tests/cards/C15/test_decode_eye.gd|180|
+C15_determinism|res://scripts/tests/cards/C15/test_determinism.gd|120|
+C15_judgment|res://scripts/tests/cards/C15/test_judgment.gd|240|
+C15_replay|res://scripts/tests/cards/C15/test_replay.gd|240|
+C15_no_reveal|res://scripts/tests/cards/C15/test_no_reveal.gd|240|
+C15_mouse|res://scripts/tests/cards/C15/test_mouse.gd|180|
+C15_compat|res://scripts/tests/cards/C15/test_compat.gd|180|
+C15_no_legacy|res://scripts/tests/cards/C15/test_no_legacy.gd|60|
+C15_guide|res://scripts/tests/cards/C15/test_guide.gd|120|
+C15_real_engine|res://scripts/tests/cards/C15/test_real_engine.gd|180|--name=C15_real_engine
+C15_real_data|res://scripts/tests/cards/C15/test_real_data.gd|240|--name=C15_real_data
+C15_mainline|res://scripts/tests/cards/C15/test_mainline.gd|240|
+C15_guide_k16|res://scripts/tests/cards/C15/test_guide.gd|180|--steps=k16 --name=C15_guide_k16
+C15_host_abort_fragments|res://scripts/tests/cards/C13/test_host_abort.gd|120|--game=fragments --name=C15_host_abort_fragments
+C15_host_abort_decode|res://scripts/tests/cards/C13/test_host_abort.gd|120|--game=decode --name=C15_host_abort_decode
+C15_fragments_eye|res://scripts/tests/cards/C15/test_fragments_eye.gd|240|

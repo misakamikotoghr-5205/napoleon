@@ -1,0 +1,366 @@
+{
+ "id": "mini_conquest_map",
+ "version": 1,
+ "segment": "conquest",
+ "views": {
+  "europe": {
+   "proj": "mercator",
+   "base": "europe",
+   "bg": "map_europe"
+  }
+ },
+ "sheets": [
+  {
+   "chapter": "mk_one",
+   "view": "europe",
+   "start": "k_land",
+   "days_max": 10,
+   "stamps_need": 1,
+   "muster": "k_muster",
+   "boss": "k_boss",
+   "interlude": "camp_night",
+   "sets": [
+    {
+     "id": "k_set",
+     "nodes": [
+      "k_post",
+      "k_depot2"
+     ],
+     "bonus": {
+      "pass_supply": 1
+     }
+    }
+   ],
+   "nodes": [
+    {
+     "id": "k_land",
+     "type": "story",
+     "label": "k_land",
+     "scene": "mk_land",
+     "fixed": true,
+     "geo": [
+      278,
+      4978
+     ]
+    },
+    {
+     "id": "k_post",
+     "type": "supply",
+     "label": "k_post",
+     "role": "post",
+     "pass": {
+      "stamp": 1
+     },
+     "geo": [
+      408,
+      5061
+     ]
+    },
+    {
+     "id": "k_depot2",
+     "type": "supply",
+     "label": "k_depot2",
+     "geo": [
+      408,
+      4867
+     ]
+    },
+    {
+     "id": "k_fixed",
+     "type": "event",
+     "label": "k_fixed",
+     "event": "ev_mk_fixed",
+     "geo": [
+      539,
+      4978
+     ]
+    },
+    {
+     "id": "k_slot1",
+     "type": "slot",
+     "label": "k_slot1",
+     "fog": "type",
+     "slot": {
+      "pool": "mk_one",
+      "kinds": {
+       "event": 3,
+       "camp": 1
+      },
+      "level": 4
+     },
+     "geo": [
+      539,
+      5117
+     ]
+    },
+    {
+     "id": "k_slot2",
+     "type": "slot",
+     "label": "k_slot2",
+     "fog": "hidden",
+     "slot": {
+      "pool": "conquest",
+      "kinds": {
+       "event": 2,
+       "camp": 1
+      },
+      "level": 4
+     },
+     "geo": [
+      539,
+      4811
+     ]
+    },
+    {
+     "id": "k_slot3",
+     "type": "slot",
+     "label": "k_slot3",
+     "slot": {
+      "pool": "mk_one",
+      "kinds": {
+       "event": 1
+      },
+      "level": 4
+     },
+     "geo": [
+      669,
+      5061
+     ]
+    },
+    {
+     "id": "k_slot4",
+     "type": "slot",
+     "label": "k_slot4",
+     "slot": {
+      "pool": "conquest",
+      "kinds": {
+       "event": 2,
+       "supply": 1
+      },
+      "level": 4
+     },
+     "geo": [
+      669,
+      4950
+     ]
+    },
+    {
+     "id": "k_slot5",
+     "type": "slot",
+     "label": "k_slot5",
+     "slot": {
+      "pool": "conquest",
+      "kinds": {
+       "event": 1,
+       "battle": 1
+      },
+      "level": 4
+     },
+     "geo": [
+      408,
+      4728
+     ]
+    },
+    {
+     "id": "k_outpost",
+     "type": "battle",
+     "label": "k_outpost",
+     "template": "skirmish_b",
+     "level": 4,
+     "forced": true,
+     "geo": [
+      669,
+      4839
+     ]
+    },
+    {
+     "id": "k_elite",
+     "type": "elite",
+     "label": "k_elite",
+     "template": "elite_a",
+     "level": 6,
+     "geo": [
+      799,
+      4811
+     ]
+    },
+    {
+     "id": "k_teaser",
+     "type": "teaser",
+     "label": "k_teaser",
+     "teaser": "莱茵（第二卷）",
+     "geo": [
+      903,
+      4783
+     ]
+    },
+    {
+     "id": "k_muster",
+     "type": "camp",
+     "label": "k_muster",
+     "role": "muster",
+     "geo": [
+      799,
+      4978
+     ]
+    },
+    {
+     "id": "k_council",
+     "type": "event",
+     "label": "k_council",
+     "role": "council",
+     "event": "ev_mk_council",
+     "phase": "campaign",
+     "geo": [
+      903,
+      4978
+     ]
+    },
+    {
+     "id": "k_camp",
+     "type": "camp",
+     "label": "k_camp",
+     "phase": "campaign",
+     "geo": [
+      1007,
+      4978
+     ]
+    },
+    {
+     "id": "k_boss",
+     "type": "boss",
+     "label": "k_boss",
+     "scene": "mk_boss",
+     "phase": "campaign",
+     "fixed": true,
+     "geo": [
+      1111,
+      4978
+     ]
+    },
+    {
+     "id": "k_night",
+     "type": "story",
+     "label": "k_night",
+     "scene": "mk_night",
+     "phase": "campaign",
+     "geo": [
+      1111,
+      4811
+     ]
+    }
+   ],
+   "links": [
+    {
+     "a": "k_land",
+     "b": "k_post",
+     "legs": 1
+    },
+    {
+     "a": "k_land",
+     "b": "k_depot2",
+     "legs": 1
+    },
+    {
+     "a": "k_post",
+     "b": "k_slot1",
+     "legs": 1
+    },
+    {
+     "a": "k_post",
+     "b": "k_fixed",
+     "legs": 1,
+     "toll": {
+      "gold": 1
+     }
+    },
+    {
+     "a": "k_depot2",
+     "b": "k_fixed",
+     "legs": 1
+    },
+    {
+     "a": "k_depot2",
+     "b": "k_slot2",
+     "legs": 1
+    },
+    {
+     "a": "k_depot2",
+     "b": "k_slot5",
+     "legs": 1
+    },
+    {
+     "a": "k_slot1",
+     "b": "k_slot3",
+     "legs": 1
+    },
+    {
+     "a": "k_fixed",
+     "b": "k_slot3",
+     "legs": 1
+    },
+    {
+     "a": "k_fixed",
+     "b": "k_slot4",
+     "legs": 1
+    },
+    {
+     "a": "k_slot2",
+     "b": "k_outpost",
+     "legs": 1
+    },
+    {
+     "a": "k_slot4",
+     "b": "k_outpost",
+     "legs": 1
+    },
+    {
+     "a": "k_outpost",
+     "b": "k_elite",
+     "legs": 2,
+     "rush": true
+    },
+    {
+     "a": "k_slot3",
+     "b": "k_muster",
+     "legs": 2
+    },
+    {
+     "a": "k_slot4",
+     "b": "k_muster",
+     "legs": 1
+    },
+    {
+     "a": "k_elite",
+     "b": "k_muster",
+     "legs": 1
+    },
+    {
+     "a": "k_elite",
+     "b": "k_teaser",
+     "legs": 1
+    },
+    {
+     "a": "k_muster",
+     "b": "k_council",
+     "legs": 1
+    },
+    {
+     "a": "k_council",
+     "b": "k_camp",
+     "legs": 1
+    },
+    {
+     "a": "k_camp",
+     "b": "k_boss",
+     "legs": 1
+    },
+    {
+     "a": "k_boss",
+     "b": "k_night",
+     "legs": 1
+    }
+   ]
+  }
+ ]
+}

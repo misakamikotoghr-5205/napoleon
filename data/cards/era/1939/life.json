@@ -1,0 +1,307 @@
+{
+  "_meta": {
+    "owner": "K04",
+    "schema": 1,
+    "brief": "1939 腊月生活牌：年货、还账、当衣、置办柴火。"
+  },
+  "cards": [
+    {
+      "id": "lf.1939.new_year_goods",
+      "type": "life",
+      "era": [
+        "1939"
+      ],
+      "weight": 8,
+      "tags": [
+        "home",
+        "year_end",
+        "omen_family"
+      ],
+      "season": [
+        3,
+        0
+      ],
+      "due_days": 5,
+      "waivable": true,
+      "must_resolve": false,
+      "choices": [
+        {
+          "id": "buy",
+          "brief": "置办",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 48,
+              "payee": "year_market",
+              "reason": "k04.reason.year_goods",
+              "short": "ladder"
+            },
+            {
+              "op": "flag",
+              "key": "k04_year_goods"
+            }
+          ],
+          "almanac": [
+            "buy_in"
+          ]
+        },
+        {
+          "id": "skip",
+          "brief": "先不办",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -2
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "rep",
+            "delta": -2
+          }
+        ]
+      },
+      "art": "illus.lf.1939.new_year_goods",
+      "brief": "1939 腊月置办年货。买（付钱起步 48，钱不够走阶梯）或先不办（口碑掉）。五天内；打烊没到期留到明天，到期没办按先不办（挨过去）。回家吃饭可免掉坏处。季节含冬，并含春，免得腊月交春后抽不到。依据：年关当铺最忙、物价涨。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lf.1939.year_tab",
+      "type": "life",
+      "era": [
+        "1939"
+      ],
+      "weight": 8,
+      "tags": [
+        "debt",
+        "year_end",
+        "omen_wealth"
+      ],
+      "season": [
+        3,
+        0
+      ],
+      "due_days": 7,
+      "waivable": true,
+      "must_resolve": false,
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "还上",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 80,
+              "payee": "year_tab",
+              "reason": "k04.reason.tab",
+              "short": "ladder"
+            },
+            {
+              "op": "flag",
+              "key": "k04_year_tab_paid"
+            }
+          ]
+        },
+        {
+          "id": "delay",
+          "brief": "再拖",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 4
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "heat",
+            "delta": 4
+          }
+        ]
+      },
+      "art": "illus.lf.1939.year_tab",
+      "brief": "年关要清一笔日常的账（铺租、伙食这一类），不是主线目标本身。还（起步 80）或再拖（风声涨）。七天。打烊没到期留到明天，到期按再拖（挨过去）。回家吃饭可免掉坏处。季节含冬和春。1939 腊月。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lf.1939.pawn_coat",
+      "type": "life",
+      "era": [
+        "1939"
+      ],
+      "weight": 7,
+      "tags": [
+        "home",
+        "winter",
+        "omen_family"
+      ],
+      "season": [
+        3,
+        0
+      ],
+      "due_days": 4,
+      "waivable": true,
+      "must_resolve": false,
+      "choices": [
+        {
+          "id": "pawn",
+          "brief": "当掉衣物",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 28,
+              "reason": "k04.reason.clothes"
+            },
+            {
+              "op": "attr",
+              "who": "ruhua",
+              "attr": "nerve",
+              "delta": -1,
+              "days": 6
+            },
+            {
+              "op": "flag",
+              "key": "k04_coat_pawned"
+            }
+          ],
+          "almanac": [
+            "pawn_in"
+          ]
+        },
+        {
+          "id": "borrow",
+          "brief": "向家里挪",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 12,
+              "reason": "k04.reason.clothes"
+            },
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        },
+        {
+          "id": "endure",
+          "brief": "挨着",
+          "effects": [
+            {
+              "op": "attr",
+              "who": "ruhua",
+              "attr": "nerve",
+              "delta": -1,
+              "days": 4
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "attr",
+            "who": "ruhua",
+            "attr": "nerve",
+            "delta": -1,
+            "days": 4
+          }
+        ]
+      },
+      "art": "illus.lf.1939.pawn_coat",
+      "brief": "当衣过年：当的是自己的衣物，不是客人来当（客人归 K03 的 s1939.year_end）。①当掉换现钱（起步进 28，六天胆量少一点）②向家里挪一点（进 12，口碑掉）③挨着（四天胆量少一点）。四天内。打烊没到期留到明天，到期按挨着（挨过去）。回家吃饭可免掉坏处。季节含冬和春。1939 腊月。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lf.1939.fuel_stock",
+      "type": "life",
+      "era": [
+        "1939"
+      ],
+      "weight": 8,
+      "tags": [
+        "fuel",
+        "winter",
+        "home",
+        "omen_family"
+      ],
+      "season": [
+        3,
+        0
+      ],
+      "due_days": 4,
+      "waivable": true,
+      "must_resolve": false,
+      "choices": [
+        {
+          "id": "buy",
+          "brief": "买柴",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 32,
+              "payee": "charcoal",
+              "reason": "k04.reason.charcoal",
+              "short": "ladder"
+            },
+            {
+              "op": "flag",
+              "key": "k04_fuel_ok"
+            }
+          ],
+          "almanac": [
+            "buy_in"
+          ]
+        },
+        {
+          "id": "skip",
+          "brief": "先不买",
+          "effects": [
+            {
+              "op": "attr",
+              "who": "ruhua",
+              "attr": "nerve",
+              "delta": -1,
+              "days": 5
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "attr",
+            "who": "ruhua",
+            "attr": "nerve",
+            "delta": -1,
+            "days": 5
+          }
+        ]
+      },
+      "art": "illus.lf.1939.fuel_stock",
+      "brief": "置办柴火。1939 柴涨得凶。买（起步 32）或先不买（五天胆量少一点）。四天内。打烊没到期留到明天，到期按先不买（挨过去）。回家吃饭可免掉坏处。季节含冬和春。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

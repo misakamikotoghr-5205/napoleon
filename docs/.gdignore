@@ -1,0 +1,1 @@
+# Godot 不导入 docs/ 下的任何东西（截图等只是文档）；代码用 FileAccess 读 docs/ 里的 json、md 不受影响。

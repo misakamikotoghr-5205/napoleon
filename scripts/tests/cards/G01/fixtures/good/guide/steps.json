@@ -1,0 +1,126 @@
+{
+  "_meta": {
+    "owner": "K16",
+    "schema": 1,
+    "brief": "例子集：新手指引步骤（3 步）；正式的在 data/cards/guide/steps.json（K16）"
+  },
+  "_test": {
+    "d1_3": [
+      "gd.d1.deal",
+      "gd.d1.person",
+      "gd.slots"
+    ]
+  },
+  "cards": [
+    {
+      "id": "gd.d1.deal",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "deal"
+      ],
+      "trigger": {
+        "first": "deal",
+        "phase": "day",
+        "mode": "shop"
+      },
+      "teacher": "brother",
+      "anchor": "a.hand",
+      "anchor_fallback": "",
+      "done_when": [
+        "ui:hand_selected",
+        "panel:counter",
+        "panel:slots",
+        "timeout"
+      ],
+      "rule_page": "rule.day",
+      "priority": 70,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 8,
+      "brief": "（W0 例子）哥哥指着桌上新发的一排牌：今天的事都在这里，一张一张处理。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.d1.person",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "person"
+      ],
+      "trigger": {
+        "first": "person",
+        "phase": "day",
+        "mode": "shop",
+        "after": [
+          "gd.d1.deal"
+        ]
+      },
+      "teacher": "brother",
+      "anchor": "a.card@{uid}",
+      "anchor_fallback": "a.hand",
+      "done_when": [
+        "panel:counter",
+        "cmd:counter.open",
+        "timeout"
+      ],
+      "rule_page": "rule.person",
+      "priority": 60,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 16,
+      "brief": "哥哥指着第一个进门的人：这是今天来的客人，点开他看他要干什么；拒绝也算处理，但不能当没看见。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "id": "gd.slots",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "slots",
+        "coins"
+      ],
+      "trigger": {
+        "first": "slots",
+        "phase": "day",
+        "stage_day_gte": 3
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.slots.first",
+      "anchor_fallback": "a.card@{uid}",
+      "done_when": [
+        "cmd:slot.roll",
+        "cmd:slot.place",
+        "timeout"
+      ],
+      "rule_page": "rule.slots",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 12,
+      "brief": "（W0 例子）账簿批注：带格子的牌，往格子里放人、放钱，看够不够几个正面，再掷。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

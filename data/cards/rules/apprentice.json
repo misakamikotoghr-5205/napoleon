@@ -1,0 +1,14 @@
+{
+  "_meta": {
+    "owner": "K18",
+    "schema": 1,
+    "brief": "收徒的阈值。忠心和克扣不进界面。数字起步，待调。"
+  },
+  "steal_at": 25,
+  "tip_at": 12,
+  "succeed_at": 80,
+  "honest_at": 50,
+  "skim_per_day": 6,
+  "attr_cap": 5,
+  "succeed_months": 2
+}

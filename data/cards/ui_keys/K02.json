@@ -1,0 +1,90 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1,
+    "brief": "K02 的原因键和告示键"
+  },
+  "keys": {
+    "k02.notice.curfew": {
+      "brief": "宵禁那一趟被拦住，告示上记一行"
+    },
+    "k02.notice.fine": {
+      "brief": "罚款贴在门上，硬顶了"
+    },
+    "k02.notice.kin": {
+      "brief": "远亲的钱到了"
+    },
+    "k02.notice.levy": {
+      "brief": "伪维持会的摊派贴在门上，没理"
+    },
+    "k02.notice.patrol": {
+      "brief": "夜巡没过"
+    },
+    "k02.notice.police_fail": {
+      "brief": "查验证件没过，告示上记一行"
+    },
+    "k02.notice.police_open": {
+      "brief": "月底警察所开门这件事记了一行"
+    },
+    "k02.notice.police_pass": {
+      "brief": "查验证件这一关过去了"
+    },
+    "k02.notice.requisition": {
+      "brief": "藏货没藏住"
+    },
+    "k02.notice.rice": {
+      "brief": "米行排队买上了"
+    },
+    "k02.notice.road": {
+      "brief": "出镇路条放行"
+    },
+    "k02.reason.bail": {
+      "brief": "从警察所领人的保钱"
+    },
+    "k02.reason.bigfate": {
+      "brief": "大赌进出的钱"
+    },
+    "k02.reason.dock": {
+      "brief": "码头卸货的工钱"
+    },
+    "k02.reason.fine": {
+      "brief": "伪维持会临时罚款"
+    },
+    "k02.reason.kin": {
+      "brief": "远亲寄来的钱"
+    },
+    "k02.reason.levy": {
+      "brief": "交给伪维持会摊派的钱"
+    },
+    "k02.reason.market": {
+      "brief": "集市上讲价省下或亏掉的钱"
+    },
+    "k02.reason.medicine": {
+      "brief": "春寒抓药"
+    },
+    "k02.reason.qingming": {
+      "brief": "清明纸锭和那一桌"
+    },
+    "k02.reason.quiet": {
+      "brief": "花钱把风声压下去"
+    },
+    "k02.reason.refugee": {
+      "brief": "给逃难的人一口饭"
+    },
+    "k02.reason.repair": {
+      "brief": "漏雨损失的货"
+    },
+    "k02.reason.requisition": {
+      "brief": "征用拿走或挡回去的货"
+    },
+    "k02.reason.rice": {
+      "brief": "买米的钱"
+    },
+    "k02.reason.roof": {
+      "brief": "修瓦，或屋漏泡了的货"
+    },
+    "k02.reason.wharf": {
+      "brief": "码头捐"
+    }
+  }
+}

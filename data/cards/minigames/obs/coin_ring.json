@@ -1,0 +1,111 @@
+{
+  "_meta": {
+    "owner": "C13",
+    "schema": 1,
+    "kind": "coin_ring",
+    "brief": "吹银元的观察 = 玩家自己的判断（appraise/DESIGN.md §5.5）：单枚说像足银样洋 / 像哑板样洋 / 说不好；一摞说都响 / 一枚哑 / 不止一枚哑。说错了照样记。hedge：清晰度不够这一档时换成口气软的那一条（引擎按 DESIGN §3.2 换）。不写判词。",
+    "_provenance": {
+      "by": "ai",
+      "task": "C13",
+      "date": "2026-10-25"
+    }
+  },
+  "obs": {
+    "obs.coin_ring.like_reference": {
+      "fidelity": "clear",
+      "hedge": {
+        "partial": "obs.coin_ring.like_reference_maybe",
+        "vague": "obs.coin_ring.unsure"
+      },
+      "brief": "玩家自己说：客人这一枚听着像柜上那枚足银样洋"
+    },
+    "obs.coin_ring.like_reference_maybe": {
+      "fidelity": "partial",
+      "brief": "玩家觉得像足银样洋，但没听全或没对着样洋比，口气软"
+    },
+    "obs.coin_ring.like_dull_sample": {
+      "fidelity": "clear",
+      "hedge": {
+        "partial": "obs.coin_ring.like_dull_maybe",
+        "vague": "obs.coin_ring.unsure"
+      },
+      "brief": "玩家自己说：客人这一枚听着像柜上拴红线的哑板样洋"
+    },
+    "obs.coin_ring.like_dull_maybe": {
+      "fidelity": "partial",
+      "brief": "玩家觉得像哑板样洋，但没听全或没对着样洋比，口气软"
+    },
+    "obs.coin_ring.all_ring": {
+      "fidelity": "clear",
+      "hedge": {
+        "partial": "obs.coin_ring.all_ring_maybe",
+        "vague": "obs.coin_ring.unsure"
+      },
+      "brief": "一摞银元，玩家每一枚都标了响"
+    },
+    "obs.coin_ring.all_ring_maybe": {
+      "fidelity": "partial",
+      "brief": "一摞银元，玩家觉得都响，口气软"
+    },
+    "obs.coin_ring.one_dull": {
+      "fidelity": "clear",
+      "hedge": {
+        "partial": "obs.coin_ring.one_dull_maybe",
+        "vague": "obs.coin_ring.unsure"
+      },
+      "brief": "一摞银元，玩家标出恰好一枚哑"
+    },
+    "obs.coin_ring.one_dull_maybe": {
+      "fidelity": "partial",
+      "brief": "一摞银元，玩家觉得里面有一枚哑，口气软"
+    },
+    "obs.coin_ring.some_dull": {
+      "fidelity": "clear",
+      "hedge": {
+        "partial": "obs.coin_ring.some_dull_maybe",
+        "vague": "obs.coin_ring.unsure"
+      },
+      "brief": "一摞银元，玩家标出两枚以上哑"
+    },
+    "obs.coin_ring.some_dull_maybe": {
+      "fidelity": "partial",
+      "brief": "一摞银元，玩家觉得里面不止一枚哑，口气软"
+    },
+    "obs.coin_ring.unsure": {
+      "fidelity": "vague",
+      "hedge": {
+        "clear": "obs.coin_ring.unsure",
+        "partial": "obs.coin_ring.unsure"
+      },
+      "brief": "没听清 / 说不好；哪一档清晰度都照记（hedge 把清楚、一半两档都指回自己，等于 fidelity any）"
+    },
+    "obs.coin_ring.ring_long": {
+      "fidelity": "clear",
+      "brief": "余音拖得比较长（老键，留着兼容旧存档；吹银元改版后不再发）"
+    },
+    "obs.coin_ring.ring_short": {
+      "fidelity": "clear",
+      "brief": "余音很快收住（老键，留着兼容旧存档；吹银元改版后不再发）"
+    },
+    "obs.coin_ring.dull": {
+      "fidelity": "clear",
+      "brief": "声音发闷、不亮（老键，留着兼容旧存档；吹银元改版后不再发）"
+    },
+    "obs.coin_ring.buzzy": {
+      "fidelity": "clear",
+      "brief": "余音里夹着杂音（老键，留着兼容旧存档；吹银元改版后不再发）"
+    },
+    "obs.coin_ring.pitch_low": {
+      "fidelity": "clear",
+      "brief": "听起来偏低（老键，留着兼容旧存档；吹银元改版后不再发）"
+    },
+    "obs.coin_ring.unlike_reference": {
+      "fidelity": "clear",
+      "brief": "和标准银元的余音差一截（老键，留着兼容旧存档；吹银元改版后不再发）"
+    },
+    "obs.coin_ring.ring_vague": {
+      "fidelity": "partial",
+      "brief": "听到一点余音，长短没把握（老键，留着兼容旧存档；吹银元改版后不再发）"
+    }
+  }
+}

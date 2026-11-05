@@ -1,0 +1,102 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-1938"
+  },
+  "ev.any.alley_row": {
+    "title": "巷口评理",
+    "body": "巷口两家吵了起来，拉你去评评理。",
+    "slots": {
+      "man": "会说话的人",
+      "favor": "人情"
+    },
+    "outcomes": {
+      "success": "两家都服了你的话，街坊说你公道。",
+      "fail": "没劝住，反倒落了埋怨，风声也动了动。"
+    }
+  },
+  "ev.any.cezi_stall": {
+    "title": "测字摊",
+    "body": "街边有个测字摊，花几个钱能测一个字。",
+    "lines": {
+      "greet": "姑娘，测个字吧？"
+    },
+    "choices": {
+      "pass": "不测了"
+    }
+  },
+  "ev.any.curfew": {
+    "title": "宵禁提前",
+    "body": "告示贴出来，宵禁提前了，天一黑过街都要查。",
+    "slots": {
+      "paper": "证件",
+      "man": "胆大的人"
+    },
+    "outcomes": {
+      "success": "查过去了，平安回到铺里。",
+      "fail": "被拦了下来，记了一笔，风声紧了。"
+    }
+  },
+  "ev.any.fair": {
+    "title": "庙会",
+    "body": "城隍庙办庙会，人山人海。花几个钱，可以去转一转庙会的轮盘。",
+    "choices": {
+      "pass": "不去了"
+    }
+  },
+  "ev.any.fortune_teller": {
+    "title": "算命摊",
+    "body": "街口有个算命摊，花几个钱可以求签，也可以测字。",
+    "lines": {
+      "greet": "姑娘，求支签，还是测个字？"
+    },
+    "choices": {
+      "pass": "不算了"
+    }
+  },
+  "ev.any.gamble_stall": {
+    "title": "街口赌摊",
+    "body": "街口支起一个赌摊。押上一张留着的牌，就能转一把轮盘。",
+    "choices": {
+      "pass": "不押"
+    }
+  },
+  "ev.any.market_haggle": {
+    "title": "集市讲价",
+    "body": "今天赶集，乡下人挑来不少货，讲好了价能省下一笔。",
+    "slots": {
+      "man": "会说话的人",
+      "cash": "钱"
+    },
+    "outcomes": {
+      "success": "讲下了好价钱，省了一笔，街坊也夸你会过日子。",
+      "fail": "价没讲下来，白跑一趟。"
+    }
+  },
+  "ev.any.rain_leak": {
+    "title": "铺面漏雨",
+    "body": "雨下大了，铺面顶上开始漏水。",
+    "slots": {
+      "cash": "钱",
+      "man": "敢爬上去的人"
+    },
+    "outcomes": {
+      "success": "漏的地方暂时补上了。",
+      "fail": "没补住，货架上的东西泡坏了一件。"
+    }
+  },
+  "ev.any.temple_lot": {
+    "title": "城隍庙求签",
+    "body": "城隍庙里香火正旺，花几个钱可以求一支签。",
+    "lines": {
+      "greet": "求支签吧，问问这些天的运气。"
+    },
+    "choices": {
+      "pass": "不求了"
+    }
+  },
+  "ev.any.wheel_go": {
+    "title": "去转轮盘",
+    "body": "有一次转轮盘的机会，去不去由你。"
+  }
+}

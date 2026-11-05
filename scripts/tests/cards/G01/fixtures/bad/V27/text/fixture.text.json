@@ -1,0 +1,1226 @@
+{
+  "dp.linsao": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1"
+  },
+  "df.linsao.1938.hairpin": {
+    "_provenance": "human:A:2026-10-13",
+    "body": "TXT_1"
+  },
+  "df.linsao.1938.husband": {
+    "_provenance": "human:A:2026-10-13",
+    "body": "TXT_1"
+  },
+  "df.linsao.1938.neighbors": {
+    "_provenance": "human:A:2026-10-13",
+    "body": "TXT_1"
+  },
+  "df.linsao.1939.after_hairpin": {
+    "_provenance": "human:A:2026-10-13",
+    "body": "TXT_1"
+  },
+  "df.linsao.1939.child": {
+    "_provenance": "human:A:2026-10-13",
+    "body": "TXT_1"
+  },
+  "dp.brother": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1"
+  },
+  "df.brother.1938.farewell": {
+    "_provenance": "human:A:2026-10-13",
+    "body": "TXT_1"
+  },
+  "df.brother.1938.farewell_cold": {
+    "_provenance": "human:A:2026-10-13",
+    "body": "TXT_1"
+  },
+  "dp.wangshan": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1"
+  },
+  "df.wangshan.1938.dock": {
+    "_provenance": "human:A:2026-10-13",
+    "body": "TXT_1"
+  },
+  "df.wangshan.1938.trust": {
+    "_provenance": "human:A:2026-10-13",
+    "body": "TXT_1"
+  },
+  "cb.word.0417": {
+    "_provenance": "human:A:2026-10-13",
+    "word": "TXT_1"
+  },
+  "cb.word.2201": {
+    "_provenance": "human:A:2026-10-13",
+    "word": "TXT_1"
+  },
+  "item.jewelry.hairpin": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1",
+    "desc": "TXT_1"
+  },
+  "item.silver.yuan_a": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1",
+    "desc": "TXT_1"
+  },
+  "nt.tidy": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1"
+  },
+  "nt.family_dinner": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "choices": {
+      "waive_life": "TXT_1",
+      "family_word": "TXT_1"
+    }
+  },
+  "nt.early_sleep": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1"
+  },
+  "es.jewel_cabinet": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "mortgaged": "TXT_1"
+  },
+  "es.storeroom": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "mortgaged": "TXT_1"
+  },
+  "es.counter": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "mortgaged": "TXT_1"
+  },
+  "es.old_house": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "mortgaged": "TXT_1"
+  },
+  "es.shopfront": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "mortgaged": "TXT_1"
+  },
+  "ct.ma": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "lines": {
+      "leave": "TXT_1"
+    }
+  },
+  "st.write_letters": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "slots": {
+      "you": "TXT_1"
+    },
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    }
+  },
+  "pr.cell": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "slots": {
+      "bribe": "TXT_1",
+      "bail": "TXT_1",
+      "favor": "TXT_1"
+    },
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    }
+  },
+  "self.ruhua": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1"
+  },
+  "ruhua": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1"
+  },
+  "kp.ma_owes": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "use": "TXT_1"
+  },
+  "kp.mystery_box": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "use": "TXT_1"
+  },
+  "kp.liangmin": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "use": "TXT_1"
+  },
+  "kp.brother_note": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "use": "TXT_1"
+  },
+  "wh.month": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1"
+  },
+  "wh.big": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1"
+  },
+  "wh.fair": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1"
+  },
+  "wh.gamble": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1"
+  },
+  "ws.1938.month.caixing": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1"
+  },
+  "ws.1938.month.liunian": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1"
+  },
+  "ws.1938.month.pingan": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1"
+  },
+  "ws.any.big.fanshen_ship": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1"
+  },
+  "ws.any.big.pingan": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1"
+  },
+  "ws.any.big.zhuidi": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1"
+  },
+  "lot.g1.official": {
+    "_provenance": "human:A:2026-10-13",
+    "verse": "TXT_1",
+    "gloss": "TXT_1"
+  },
+  "lot.g1.any": {
+    "_provenance": "human:A:2026-10-13",
+    "verse": "TXT_1",
+    "gloss": "TXT_1"
+  },
+  "lot.g0.fixture": {
+    "_provenance": "human:A:2026-10-13",
+    "verse": "TXT_1",
+    "gloss": "TXT_1"
+  },
+  "lot.g1.fixture": {
+    "_provenance": "human:A:2026-10-13",
+    "verse": "TXT_1",
+    "gloss": "TXT_1"
+  },
+  "lot.g2.fixture": {
+    "_provenance": "human:A:2026-10-13",
+    "verse": "TXT_1",
+    "gloss": "TXT_1"
+  },
+  "lot.g3.fixture": {
+    "_provenance": "human:A:2026-10-13",
+    "verse": "TXT_1",
+    "gloss": "TXT_1"
+  },
+  "lot.g4.fixture": {
+    "_provenance": "human:A:2026-10-13",
+    "verse": "TXT_1",
+    "gloss": "TXT_1"
+  },
+  "cz.shui": {
+    "_provenance": "human:A:2026-10-13",
+    "char": "TXT_1",
+    "has": "TXT_1",
+    "none": "TXT_1"
+  },
+  "gd.d1.deal": {
+    "_provenance": "human:A:2026-10-13",
+    "say": "TXT_1",
+    "bubble": "TXT_1"
+  },
+  "gd.d1.person": {
+    "_provenance": "human:A:2026-10-13",
+    "say": "TXT_1",
+    "bubble": "TXT_1"
+  },
+  "gd.slots": {
+    "_provenance": "human:A:2026-10-13",
+    "say": "TXT_1",
+    "bubble": "TXT_1"
+  },
+  "rule.day": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1"
+  },
+  "rule.person": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1"
+  },
+  "rule.slots": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1"
+  },
+  "gd.fixture": {
+    "_provenance": "human:A:2026-10-13",
+    "say": "TXT_1",
+    "bubble": "TXT_1"
+  },
+  "rule.fixture": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1"
+  },
+  "k07.notice.not_back": {
+    "_provenance": "human:A:2026-10-13",
+    "t": "TXT_1"
+  },
+  "k04.reason.fire": {
+    "_provenance": "human:A:2026-10-13",
+    "t": "TXT_1"
+  },
+  "k02.reason.bigfate": {
+    "_provenance": "human:A:2026-10-13",
+    "t": "TXT_1"
+  },
+  "k06.reason.coal": {
+    "_provenance": "human:A:2026-10-13",
+    "t": "TXT_1"
+  },
+  "k09.arrest.contraband": {
+    "_provenance": "human:A:2026-10-13",
+    "t": "TXT_1"
+  },
+  "k09.reason.box_returned": {
+    "_provenance": "human:A:2026-10-13",
+    "t": "TXT_1"
+  },
+  "k09.reason.street_work": {
+    "_provenance": "human:A:2026-10-13",
+    "t": "TXT_1"
+  },
+  "dm.1938.money.t1": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    },
+    "slots": {
+      "cash": "TXT_1",
+      "favor": "TXT_1",
+      "talker": "TXT_1"
+    }
+  },
+  "dm.1938.goods.t0": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    },
+    "slots": {
+      "goods": "TXT_1"
+    }
+  },
+  "dm.1938.people.t2": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    },
+    "slots": {
+      "man": "TXT_1"
+    }
+  },
+  "dm.1938.info.t3": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    },
+    "slots": {
+      "news": "TXT_1"
+    }
+  },
+  "ev.any.demand_return": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "slots": {
+      "who": "TXT_1"
+    },
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    }
+  },
+  "dm.1938.money.t0": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1938.money.t2": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1938.money.t3": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1938.goods.t1": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1938.goods.t2": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1938.goods.t3": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1938.people.t0": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1938.people.t1": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1938.people.t3": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1938.info.t0": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1938.info.t1": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1938.info.t2": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1939.money.t0": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1939.money.t1": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1939.money.t2": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1939.money.t3": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1939.goods.t0": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1939.goods.t1": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1939.goods.t2": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1939.goods.t3": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1939.people.t0": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1939.people.t1": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1939.people.t2": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1939.people.t3": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1939.info.t0": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1939.info.t1": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1939.info.t2": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1939.info.t3": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1940.money.t0": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1940.money.t1": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1940.money.t2": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1940.money.t3": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1940.goods.t0": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1940.goods.t1": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1940.goods.t2": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1940.goods.t3": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1940.people.t0": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1940.people.t1": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1940.people.t2": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1940.people.t3": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1940.info.t0": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1940.info.t1": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1940.info.t2": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "dm.1940.info.t3": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    },
+    "lines": {
+      "issue": "TXT_1"
+    }
+  },
+  "nw.1938.wangshan_dock": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1"
+  },
+  "nw.any.family_word": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1"
+  },
+  "obs.weigh.match": {
+    "_provenance": "human:A:2026-10-13",
+    "t": "TXT_1"
+  },
+  "obs.weigh.light_small": {
+    "_provenance": "human:A:2026-10-13",
+    "t": "TXT_1"
+  },
+  "obs.weigh.light_much": {
+    "_provenance": "human:A:2026-10-13",
+    "t": "TXT_1"
+  },
+  "obs.weigh.heavy": {
+    "_provenance": "human:A:2026-10-13",
+    "t": "TXT_1"
+  },
+  "obs.weigh.light_vague": {
+    "_provenance": "human:A:2026-10-13",
+    "t": "TXT_1"
+  },
+  "obs.weigh.unsure": {
+    "_provenance": "human:A:2026-10-13",
+    "t": "TXT_1"
+  },
+  "bf.wheel": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1"
+  },
+  "bf.any.mystery_box": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "choices": {
+      "take": "TXT_1",
+      "decline": "TXT_1"
+    }
+  },
+  "bf.any.ship_ticket": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "choices": {
+      "go": "TXT_1",
+      "sell": "TXT_1"
+    }
+  },
+  "lf.any.coal_out": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "choices": {
+      "buy": "TXT_1",
+      "endure": "TXT_1"
+    },
+    "outcomes": {
+      "ignored": "TXT_IGNORED"
+    }
+  },
+  "p.stranger_peddler.any.sell_bowl": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "lines": {
+      "greet": "TXT_1"
+    }
+  },
+  "p.any.redeem": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "lines": {
+      "greet": "TXT_1"
+    }
+  },
+  "stranger_peddler": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1"
+  },
+  "stranger_refugee": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1"
+  },
+  "suanming": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1"
+  },
+  "ev.fixture.refs": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1"
+  },
+  "ev.any.fortune_teller": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "choices": {
+      "pass": "TXT_1"
+    }
+  },
+  "ev.any.wheel_go": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1"
+  },
+  "fa.any.fire_next_door": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "choices": {
+      "move_goods": "TXT_1",
+      "call_police": "TXT_1",
+      "shut_door": "TXT_1"
+    },
+    "slots": {
+      "man": "TXT_1"
+    }
+  },
+  "gl.1938.keep_shop": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "done": "TXT_1",
+    "failed": "TXT_1"
+  },
+  "ev.1938.police_check": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "slots": {
+      "paper": "TXT_1",
+      "cash": "TXT_1",
+      "man": "TXT_1"
+    },
+    "outcomes": {
+      "success": "TXT_1",
+      "fail": "TXT_1"
+    }
+  },
+  "stage.1938": {
+    "_provenance": "human:A:2026-10-13",
+    "intro": {
+      "p1": "TXT_1",
+      "p2": "TXT_1",
+      "p3": "TXT_1"
+    }
+  },
+  "tk.1938.de196": {
+    "_provenance": "human:A:2026-10-13",
+    "body": "TXT_1"
+  },
+  "p.linsao.1938.pawn_hairpin": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_50%",
+    "body": "TXT_1",
+    "lines": {
+      "greet": "TXT_1"
+    }
+  },
+  "p.brother.1938.farewell": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "lines": {
+      "greet": "TXT_1"
+    },
+    "choices": {
+      "listen": "TXT_1",
+      "argue": "TXT_1"
+    },
+    "outcomes": {
+      "ignored": "TXT_IGNORED"
+    }
+  },
+  "p.chen.1938.buy_scroll": {
+    "_provenance": "human:A:2026-10-13",
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "lines": {
+      "greet": "TXT_1"
+    }
+  },
+  "brother": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1"
+  },
+  "chen": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1"
+  },
+  "xiaoding": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1"
+  },
+  "zhang": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1"
+  },
+  "wangshan": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1"
+  },
+  "li": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1"
+  },
+  "linsao": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1"
+  },
+  "zhouma": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1"
+  },
+  "zhao": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1"
+  },
+  "sunyoung": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1"
+  },
+  "ma": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1"
+  },
+  "hu2": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1"
+  },
+  "sunlaoye": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1"
+  },
+  "guanjia": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1"
+  },
+  "wu": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1"
+  },
+  "postman": {
+    "_provenance": "human:A:2026-10-13",
+    "name": "TXT_1"
+  },
+  "ws.fixture.fair0": {
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "_provenance": "human:A:2026-10-13"
+  },
+  "ws.fixture.fair1": {
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "_provenance": "human:A:2026-10-13"
+  },
+  "ws.fixture.fair2": {
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "_provenance": "human:A:2026-10-13"
+  },
+  "ws.fixture.gamble0": {
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "_provenance": "human:A:2026-10-13"
+  },
+  "ws.fixture.gamble1": {
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "_provenance": "human:A:2026-10-13"
+  },
+  "ws.fixture.gamble2": {
+    "title": "TXT_1",
+    "body": "TXT_1",
+    "_provenance": "human:A:2026-10-13"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "d1_li",
+  "npc": "li",
+  "mode": "buy",
+  "items": [{"def": "newspapers"}, {"def": "ciyuan"}],
+  "ask": 30,
+  "floor": 15,
+  "suggest": 25,
+  "est": [25, 45],
+  "show_floor": true,
+  "hard_floor": false,
+  "fund_button": true,
+  "min_inspect": 0,
+  "require": ["newspapers.weigh", "newspapers.flip"],
+  "split": false,
+  "hint": "破烂按斤称，可称完了要翻一翻。有时候值钱的不是纸，是夹在纸里的东西。",
+  "pre": [
+    {"op": "tutorial", "target": "scale", "who": "brother", "text": "破烂按斤称，可称完了要翻一翻。有时候值钱的不是纸，是夹在纸里的东西。"},
+    {"op": "page", "id": "scrap_rules"},
+    {"op": "narr", "text": "傍晚。一个穿学生装的少年抱着一捆报纸和几本书进来，帽檐压得很低。"}
+  ],
+  "intro": [
+    {"op": "say", "who": "li", "text": "掌柜的，这些旧书旧报。我想换点钱买笔墨纸张。"},
+    {"op": "say", "who": "li", "text": "……我给报馆投稿。上海租界里的报馆，一篇稿子能换三十蚨。"}
+  ],
+  "on_inspect": {
+    "tabloid": [
+      {"op": "item", "def": "tabloid", "owner": "li", "location": "counter"},
+      {"op": "narr", "text": "夹在报纸中间的三张油印小报，上面写着县城据点的消息：哪天换防，哪条路设了卡。"},
+      {"op": "note", "kind": "线索", "source": "seen", "text": "油印小报《太湖快讯》（三张）：县城据点的消息，哪天换防，哪条路设了卡。", "via": "li"},
+      {"op": "narr", "text": "李敬之愣了一下，然后装作没看见。"},
+      {"op": "say", "who": "li", "text": "那个……我不知道是什么，夹在里面的。"},
+      {"op": "choice", "who": "you", "text": "小报怎么处理？", "options": [
+        {"id": "returned", "label": "悄悄塞还给他", "steps": [
+          {"op": "stat", "stat": "benxin", "delta": 1, "why": "悄悄把小报还给李敬之"},
+          {"op": "set", "flag": "li_paper", "value": "returned"},
+          {"op": "move_item", "def": "tabloid", "to": "npc:li", "note": "小报还给李敬之"}
+        ]},
+        {"id": "burned", "label": "丢进垃圾箱（夜里烧掉）", "steps": [
+          {"op": "set", "flag": "li_paper", "value": "burned"},
+          {"op": "move_item", "def": "tabloid", "to": "trash", "note": "小报丢进垃圾箱"}
+        ]},
+        {"id": "kept", "label": "收进典当盒藏起来", "steps": [
+          {"op": "stat", "stat": "suspicion", "delta": 2, "why": "藏起小报，万一被搜到"},
+          {"op": "set", "flag": "li_paper", "value": "kept"},
+          {"op": "move_item", "def": "tabloid", "to": "stock", "note": "小报收进典当盒"}
+        ]},
+        {"id": "reported", "label": "告诉他“我要交给维持会”", "steps": [
+          {"op": "say", "who": "li", "text": "……维持会？！"},
+          {"op": "stat", "stat": "benxin", "delta": -8, "why": "把李敬之的小报交给维持会"},
+          {"op": "stat", "stat": "faction:维持会", "delta": 5, "why": "举报小报"},
+          {"op": "set", "flag": "li_paper", "value": "reported"},
+          {"op": "move_item", "def": "tabloid", "to": "npc:ma", "note": "小报交给维持会（马保长）"},
+          {"op": "rumor", "key": "li_reported", "origin": "ma"}
+        ]}
+      ]}
+    ]
+  },
+  "extras": [],
+  "deals": [],
+  "on_accept": [
+    {"op": "if", "cond": "price() < 18", "then": [
+      {"op": "stat", "stat": "benxin", "delta": -2, "why": "压价收李敬之的旧书报"},
+      {"op": "set", "flag": "li_fund", "value": "low"}
+    ]},
+    {"op": "if", "cond": "price() >= 18 and price() <= 39", "then": [
+      {"op": "set", "flag": "li_fund", "value": "normal"}
+    ]},
+    {"op": "if", "cond": "price() >= 40", "then": [
+      {"op": "stat", "stat": "benxin", "delta": 3, "why": "资助李敬之"},
+      {"op": "stat", "stat": "favor:li", "delta": 10, "why": "资助李敬之"},
+      {"op": "set", "flag": "li_fund", "value": "high"},
+      {"op": "say", "who": "li", "text": "……太多了。等我的文章登出来，第一份报纸送给你。"}
+    ]}
+  ],
+  "outro": [
+    {"op": "if", "cond": "not inspected('newspapers', 'flip')", "then": [
+      {"op": "set", "flag": "li_paper", "value": "unseen"}
+    ]}
+  ],
+  "on_leave": [
+    {"op": "set", "flag": "li_fund", "value": "none"}
+  ],
+  "post": []
+}

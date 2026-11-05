@@ -1,0 +1,282 @@
+{
+  "id": "d1_xiaoding",
+  "npc": "xiaoding",
+  "mode": "buy",
+  "items": [
+    {
+      "def": "rice_sunji"
+    }
+  ],
+  "ask": 50,
+  "floor": 25,
+  "suggest": 40,
+  "est": [
+    40,
+    90
+  ],
+  "show_floor": true,
+  "hard_floor": false,
+  "fund_button": false,
+  "min_inspect": 3,
+  "split": false,
+  "hint": "收米先问是什么米，再自己看。粳米短圆、籼米细长、糯米乳白。然后看新陈、看碎米、闻气味。甲乙丙丁四等，等级决定价钱。",
+  "_note": "价格分档（设计师定）：35–50 公道 fair 口碑+2；<30 压价 low 本心-3；30–34 fair 不加口碑；>50 fair 口碑+2。suggest 字段仅作文档，引擎按市价×60%计算建议价（米 68 → 41）。推回去按钮在有 deals 的会话中隐藏，两条 deals 即为拒收路线。走人（on_leave）仍记 xiaoding_rice=refused。",
+  "pre": [
+    {
+      "op": "say",
+      "who": "brother",
+      "text": "收米先问是什么米，再自己看。粳米短圆、籼米细长、糯米乳白。然后看新陈、看碎米、闻气味。甲乙丙丁四等，等级决定价钱。"
+    },
+    {
+      "op": "page",
+      "id": "rice_grades"
+    },
+    {
+      "op": "set",
+      "flag": "xiaoding_loan",
+      "value": 0
+    },
+    {
+      "op": "set",
+      "flag": "rice_bag_swapped",
+      "value": false
+    }
+  ],
+  "intro": [
+    {
+      "op": "narr",
+      "text": "一个瘦高的后生侧身进门，背着一只翻了面的米袋。"
+    },
+    {
+      "op": "say",
+      "who": "xiaoding",
+      "text": "小、小掌柜……收米吗？一小袋，三十来斤。"
+    },
+    {
+      "op": "say",
+      "who": "xiaoding",
+      "text": "是……是我自家的。我娘病了，发冷发热的，要钱抓药。"
+    },
+    {
+      "op": "note",
+      "kind": "消息",
+      "text": "小丁的娘病了，发冷发热，要钱抓药。",
+      "source": "heard",
+      "via": "xiaoding"
+    },
+    {
+      "op": "tutorial",
+      "target": "magnifier",
+      "who": "brother",
+      "text": "（哥哥朝放大镜点点头：先对着图鉴看货，圈出三处来。）"
+    }
+  ],
+  "on_inspect": {
+    "bag_sunji": [
+      {
+        "op": "set",
+        "flag": "found_stolen",
+        "value": true
+      }
+    ]
+  },
+  "extras": [
+    {
+      "id": "ask_origin",
+      "label": "追问来路",
+      "when": "is('found_sunji')",
+      "once": true,
+      "steps": [
+        {
+          "op": "say",
+          "who": "xiaoding",
+          "text": "我……我在孙家烧饭。库房里的米堆得都发了霉，少一袋没人知道的。我娘实在……"
+        },
+        {
+          "op": "say",
+          "who": "brother",
+          "text": "（小声）赃物。收不收，你自己定。"
+        },
+        {
+          "op": "note",
+          "kind": "线索",
+          "text": "米是孙家库房的——是偷出来的。",
+          "source": "inferred"
+        },
+        {
+          "op": "set",
+          "flag": "found_stolen_rice",
+          "value": true
+        }
+      ]
+    }
+  ],
+  "deals": [
+    {
+      "id": "refuse_return",
+      "label": "拒收，劝他送回去",
+      "steps": [
+        {
+          "op": "stat",
+          "stat": "benxin",
+          "delta": 1,
+          "why": "拒收小丁的米，劝他送回去"
+        },
+        {
+          "op": "set",
+          "flag": "xiaoding_rice",
+          "value": "refused"
+        },
+        {
+          "op": "move_item",
+          "def": "rice_sunji",
+          "to": "npc:xiaoding",
+          "note": "米还给小丁"
+        }
+      ]
+    },
+    {
+      "id": "loan_20",
+      "label": "拒收，另借他 20 蚨抓药",
+      "when": "cash() >= 20",
+      "steps": [
+        {
+          "op": "debt",
+          "debtor": "xiaoding",
+          "creditor": "player",
+          "amount": 20,
+          "cash": true,
+          "note": "借给小丁抓药（无息，未定期）"
+        },
+        {
+          "op": "set",
+          "flag": "xiaoding_loan",
+          "value": 20
+        },
+        {
+          "op": "set",
+          "flag": "xiaoding_rice",
+          "value": "refused"
+        },
+        {
+          "op": "stat",
+          "stat": "benxin",
+          "delta": 4,
+          "why": "拒收小丁的米，借钱给他抓药"
+        },
+        {
+          "op": "stat",
+          "stat": "koubei",
+          "delta": 2,
+          "why": "拒收小丁的米，借钱给他抓药"
+        },
+        {
+          "op": "move_item",
+          "def": "rice_sunji",
+          "to": "npc:xiaoding",
+          "note": "米还给小丁"
+        }
+      ]
+    }
+  ],
+  "on_accept": [
+    {
+      "op": "set",
+      "flag": "xiaoding_rice",
+      "value": "fair",
+      "when": "price() >= 35 and price() <= 50"
+    },
+    {
+      "op": "stat",
+      "stat": "koubei",
+      "delta": 2,
+      "why": "公道收小丁的米",
+      "when": "price() >= 35 and price() <= 50"
+    },
+    {
+      "op": "rumor",
+      "key": "fair_shop",
+      "origin": "xiaoding",
+      "when": "price() >= 35 and price() <= 50"
+    },
+    {
+      "op": "set",
+      "flag": "xiaoding_rice",
+      "value": "low",
+      "when": "price() < 30"
+    },
+    {
+      "op": "stat",
+      "stat": "benxin",
+      "delta": -3,
+      "why": "压价收小丁的米",
+      "when": "price() < 30"
+    },
+    {
+      "op": "set",
+      "flag": "xiaoding_rice",
+      "value": "fair",
+      "when": "price() >= 30 and price() < 35"
+    },
+    {
+      "op": "set",
+      "flag": "xiaoding_rice",
+      "value": "fair",
+      "when": "price() > 50"
+    },
+    {
+      "op": "stat",
+      "stat": "koubei",
+      "delta": 2,
+      "why": "高价收小丁的米",
+      "when": "price() > 50"
+    },
+    {
+      "op": "choice",
+      "text": "这个“孙记”的袋子……",
+      "when": "is('found_sunji')",
+      "options": [
+        {
+          "id": "swap",
+          "label": "拆掉“孙记”袋子，换成自家袋",
+          "steps": [
+            {
+              "op": "call",
+              "fn": "swap_rice_bag"
+            },
+            {
+              "op": "set",
+              "flag": "rice_bag_swapped",
+              "value": true
+            },
+            {
+              "op": "stat",
+              "stat": "suspicion",
+              "delta": -1,
+              "why": "拆掉“孙记”袋子，风险降低"
+            }
+          ]
+        },
+        {
+          "id": "keep",
+          "label": "原样收着",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "op": "say",
+      "who": "xiaoding",
+      "text": "多谢小掌柜……你……你别跟别人说。"
+    }
+  ],
+  "on_leave": [
+    {
+      "op": "set",
+      "flag": "xiaoding_rice",
+      "value": "refused"
+    }
+  ],
+  "outro": [],
+  "post": []
+}

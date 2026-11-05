@@ -1,0 +1,60 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "c06.btn.spin": {
+    "t": "转轮盘"
+  },
+  "c06.btn.continue": {
+    "t": "看完了"
+  },
+  "c06.btn.close": {
+    "t": "先回柜台"
+  },
+  "c06.incense.title": {
+    "t": "香案"
+  },
+  "c06.incense.offer": {
+    "t": "添一炷香"
+  },
+  "c06.incense.take": {
+    "t": "拿回来"
+  },
+  "c06.cost.money": {
+    "t": "转一回要 {n} 蚨。"
+  },
+  "c06.cost.stake": {
+    "t": "先押一张留着的牌"
+  },
+  "c06.stake.pick": {
+    "t": "押这张"
+  },
+  "c06.title.month": {
+    "t": "本月运势"
+  },
+  "c06.title.big": {
+    "t": "大轮盘"
+  },
+  "c06.title.fair": {
+    "t": "庙会轮盘"
+  },
+  "c06.title.gamble": {
+    "t": "赌摊"
+  },
+  "c06.err.stake_required": {
+    "t": "还没押上留着的牌，转不了。"
+  },
+  "c06.err.insufficient_money": {
+    "t": "钱不够，这一回转不了。"
+  },
+  "c06.err.missing": {
+    "t": "这一回转不了。"
+  },
+  "c06.segment.name": {
+    "t": "一格"
+  },
+  "c06.segment.body": {
+    "t": "轮盘停在这一格。"
+  }
+}

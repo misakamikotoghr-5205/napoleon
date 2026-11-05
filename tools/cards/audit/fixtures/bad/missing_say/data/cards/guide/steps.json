@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "owner": "K16",
+    "schema": 1
+  },
+  "cards": [
+    {
+      "id": "gd.missing",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "deal"
+      ],
+      "teacher": "brother"
+    }
+  ]
+}

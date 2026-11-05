@@ -1,0 +1,406 @@
+{
+ "id": "mini",
+ "version": 1,
+ "volume": 1,
+ "start": "trunk",
+ "title": {
+  "name": "迷你书",
+  "sub": "内核测试用的两章主干加三条迷你分支"
+ },
+ "segments": {
+  "trunk": {
+   "file": "res://data/campaigns/napoleon/fixtures/mini_trunk.json",
+   "map": "res://data/campaigns/napoleon/fixtures/maps/mini_trunk.json",
+   "kind": "trunk",
+   "brand": "主干",
+   "badge": "eagle",
+   "scene_battles": {
+    "mt_battle1": {
+     "template": "elite_a",
+     "level": 1
+    },
+    "mt_boss2": {
+     "template": "major_a",
+     "level": 3
+    }
+   }
+  },
+  "conquest": {
+   "file": "res://data/campaigns/napoleon/fixtures/mini_conquest.json",
+   "map": "res://data/campaigns/napoleon/fixtures/maps/mini_conquest.json",
+   "kind": "branch",
+   "brand": "鹰飞",
+   "badge": "eagle_flight",
+   "scene_battles": {
+    "mk_boss": {
+     "template": "rivoli",
+     "level": 7,
+     "mods_when": [
+      {
+       "when": {
+        "flags": [
+         "k_mini_scout"
+        ]
+       },
+       "mods": {
+        "prep_turn": 1
+       }
+      }
+     ]
+    }
+   }
+  },
+  "ocean": {
+   "file": "res://data/campaigns/napoleon/fixtures/mini_ocean.json",
+   "map": "res://data/campaigns/napoleon/fixtures/maps/mini_ocean.json",
+   "kind": "branch",
+   "brand": "远洋",
+   "badge": "nautilus",
+   "events": "res://data/campaigns/napoleon/fixtures/mini_ocean_events.json",
+   "gauges": {
+    "treasury": "军费",
+    "morale": "威望",
+    "heat": "警戒",
+    "vitality": "体力",
+    "construction": "建设",
+    "exploration": "探索"
+   },
+   "scene_battles": {
+    "scene07": {
+     "template": ""
+    },
+    "mo_boss1": {
+     "template": "major_a",
+     "level": 5
+    },
+    "mo_boss2": {
+     "template": "major_a",
+     "level": 9
+    }
+   }
+  },
+  "cristo": {
+   "file": "res://data/campaigns/napoleon/fixtures/mini_cristo.json",
+   "map": "res://data/campaigns/napoleon/fixtures/maps/mini_cristo.json",
+   "kind": "branch",
+   "brand": "伊夫堡",
+   "badge": "castle",
+   "scene_battles": {
+    "mc_boss": {
+     "template": "major_a",
+     "level": 6,
+     "order_flag": "m_mini_order"
+    }
+   }
+  }
+ },
+ "branches": {
+  "conquest": {
+   "from": "trunk",
+   "scene": "mt_fork",
+   "level_offset": 12,
+   "entry": "",
+   "requires": {
+    "any": [
+     {
+      "stat": {
+       "medal_earned": [
+        ">=",
+        30
+       ]
+      }
+     },
+     {
+      "flags": [
+       "t_mini_oath"
+      ]
+     }
+    ],
+    "hero_ok": true
+   },
+   "reasons": {
+    "any": "忠诚不够",
+    "hero_ok": "主角重伤"
+   },
+   "offer": "随皇帝北上"
+  },
+  "ocean": {
+   "from": "trunk",
+   "scene": "mt_fork",
+   "level_offset": 12,
+   "entry": "",
+   "requires": {},
+   "offer": "随驾"
+  },
+  "cristo": {
+   "from": "trunk",
+   "scene": "mt_fork",
+   "level_offset": 12,
+   "entry": "",
+   "requires": {
+    "any": [
+     {
+      "flags": [
+       "t_mini_letter"
+      ]
+     }
+    ]
+   },
+   "reasons": {
+    "any": "和马赛没有交集"
+   },
+   "offer": "去马赛"
+  }
+ },
+ "carry": {
+  "metrics": {
+   "treasury": "chapter_start",
+   "morale": "keep",
+   "heat": "initial",
+   "vitality": [
+    "keep_min",
+    40
+   ],
+   "construction": "initial",
+   "exploration": "initial"
+  },
+  "treasury_bonus": [
+   1,
+   4
+  ],
+  "flags": "all",
+  "items": [
+   "mini_watch"
+  ],
+  "rogue": "all",
+  "coin_cap": 20
+ },
+ "shared_flags": [
+  "t_mini_letter",
+  "t_mini_oath"
+ ],
+ "companions": "res://data/campaigns/napoleon/fixtures/mini_companions.json",
+ "events_common": "res://data/campaigns/napoleon/fixtures/mini_events.json",
+ "bond_set": "ocean",
+ "start_rogue": {
+  "coins": {
+   "gold": 4,
+   "supply": 6,
+   "medal": 2,
+   "intel": 2
+  },
+  "props": [
+   "prop_loaded_dice",
+   "prop_field_ration",
+   "prop_smoke_bomb"
+  ],
+  "odd_seed_prop": "prop_spyglass",
+  "even_seed_prop": "prop_barricade",
+  "companions": [
+   "baptiste"
+  ]
+ },
+ "start_troops": {
+  "mt_one": [
+   "line",
+   "line",
+   "jager"
+  ],
+  "mt_two": [
+   "line",
+   "line",
+   "jager",
+   "artillery"
+  ],
+  "mk_one": [
+   "line",
+   "line",
+   "grenadier",
+   "jager",
+   "hussar"
+  ],
+  "mo_one": [
+   "line",
+   "line",
+   "jager"
+  ],
+  "mo_two": [
+   "line",
+   "grenadier",
+   "jager",
+   "artillery"
+  ],
+  "mc_one": [
+   "line",
+   "line",
+   "jager",
+   "hussar"
+  ]
+ },
+ "march_cards": {
+  "march_2": {
+   "mp": 2
+  },
+  "march_3": {
+   "mp": 3
+  },
+  "forced_4": {
+   "mp": 4,
+   "effects": {
+    "vitality": -4
+   }
+  },
+  "scout_1": {
+   "mp": 1,
+   "reveal": 2
+  },
+  "wagon_1": {
+   "mp": 1,
+   "coins": {
+    "supply": 2
+   }
+  },
+  "night_2": {
+   "mp": 2,
+   "ignore_forced": true
+  },
+  "fair_wind": {
+   "mp": 0,
+   "voyage_minus": 1
+  },
+  "dive_3": {
+   "mp": 3,
+   "ignore_forced": true
+  }
+ },
+ "march_deck": [
+  "march_2",
+  "march_2",
+  "march_2",
+  "march_3",
+  "march_3",
+  "forced_4",
+  "scout_1",
+  "wagon_1",
+  "night_2"
+ ],
+ "march_deck_extra": {
+  "ocean": {
+   "mo_one": [
+    "fair_wind"
+   ]
+  }
+ },
+ "battle_pool": {
+  "trunk": {
+   "1-6": [
+    "skirmish_a",
+    "skirmish_b"
+   ]
+  },
+  "conquest": {
+   "3-12": [
+    "skirmish_c"
+   ]
+  },
+  "ocean": {
+   "3-9": [
+    "skirmish_a",
+    "skirmish_c"
+   ]
+  },
+  "cristo": {
+   "3-12": [
+    "skirmish_b"
+   ]
+  }
+ },
+ "reward_pct_per_level": 4,
+ "hero_hp_max": 24,
+ "meta": {
+  "count_endings": {
+   "conquest": [
+    "k_mini_vol_win",
+    "k_mini_vol_dusk"
+   ],
+   "ocean": [
+    "o_mini_alliance",
+    "o_mini_plain"
+   ],
+   "cristo": [
+    "m_mini_vol_free",
+    "m_mini_vol_wait"
+   ]
+  }
+ },
+ "debug_carry": {
+  "branch_point": {
+   "coins": {
+    "gold": 6,
+    "supply": 8,
+    "medal": 10,
+    "intel": 3
+   },
+   "flags": [
+    "t_mini_letter"
+   ],
+   "items": [
+    "mini_watch"
+   ],
+   "companions": {
+    "baptiste": 2,
+    "corso": 2,
+    "marie": 1
+   },
+   "troops": [
+    "line",
+    "line",
+    "grenadier",
+    "jager",
+    "hussar",
+    "artillery"
+   ]
+  },
+  "trunk": {
+   "stages": {
+    "1": {
+     "companions": {
+      "baptiste": 1,
+      "corso": 1
+     }
+    }
+   }
+  },
+  "conquest": {
+   "from": "branch_point",
+   "flags_add": [
+    "t_mini_oath"
+   ],
+   "stages": {}
+  },
+  "ocean": {
+   "from": "branch_point",
+   "stages": {
+    "1": {
+     "companions": {
+      "baptiste": 2,
+      "dantes": 1,
+      "faria": 1
+     },
+     "coins": {
+      "gold": 5,
+      "supply": 9,
+      "medal": 11,
+      "intel": 4
+     }
+    }
+   }
+  },
+  "cristo": {
+   "from": "branch_point",
+   "flags_add": [
+    "m_mini_letter_carried"
+   ]
+  }
+ }
+}

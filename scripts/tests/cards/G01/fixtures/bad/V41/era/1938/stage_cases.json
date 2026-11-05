@@ -1,0 +1,12 @@
+{
+  "_meta": {"owner": "K02", "schema": 1, "brief": "V41"},
+  "cards": [{
+    "id": "ev.stage.valid", "type": "event", "era": ["1938"], "weight": 10,
+    "must_resolve": false, "tags": ["omen_official"],
+    "stage": {"set": "counter", "cast": [
+      {"who": "linsao", "at": "customer", "brief": "FIRST"},
+      {"who": "linsao", "at": "customer", "brief": "DUPLICATE"}
+    ], "brief": "V41"},
+    "brief": "V41", "_provenance": {"by": "ai", "task": "G01", "date": "2026-10-14"}
+  }]
+}

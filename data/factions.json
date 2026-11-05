@@ -1,0 +1,90 @@
+{
+  "factions": [
+    {
+      "key": "城里的兵",
+      "piece": "黑子",
+      "color": "#0d0a08",
+      "line": "城里那些人，你不会见到他们。你只会见到替他们说话的人。",
+      "wants": "粮食、药品、铜铁、情报"
+    },
+    {
+      "key": "维持会",
+      "piece": "白子",
+      "color": "#e0e0d8",
+      "line": "这就是替他们说话的人。要钱，也要消息。给钱可以，给消息要小心。",
+      "wants": "保护费、来路不明的货、举报"
+    },
+    {
+      "key": "湖上的人",
+      "piece": "青子",
+      "color": "#4a6a9a",
+      "line": "太湖那边的，说话带上海口音，出手大方。",
+      "wants": "情报、金银、药品"
+    },
+    {
+      "key": "山里的人",
+      "piece": "红子",
+      "color": "#b0262a",
+      "line": "山里下来的，穿得破，开借条。借条能不能兑现，要看以后。",
+      "wants": "药品、纸张油墨、盐、电池"
+    },
+    {
+      "key": "孙府",
+      "piece": "黄子",
+      "color": "#c8a030",
+      "line": "孙家不站在任何一边，只站在孙家那边。",
+      "wants": "保住家产、低价收地"
+    },
+    {
+      "key": "水路上的",
+      "piece": "灰子",
+      "color": "#6b7680",
+      "line": "湖匪帮会。他们的东西，一样都别收。",
+      "wants": "销赃、保护费"
+    }
+  ],
+  "door_flags": [
+    {
+      "id": "none",
+      "label": "不挂",
+      "public": "照常营业",
+      "secret": "—",
+      "unlock": "default"
+    },
+    {
+      "id": "blue",
+      "label": "蓝布旗",
+      "public": "一切如常",
+      "secret": "店里安全，可以来",
+      "unlock": "prologue"
+    },
+    {
+      "id": "white",
+      "label": "白布旗",
+      "public": "家中有丧",
+      "secret": "有人盯着，别来",
+      "unlock": "telegram"
+    },
+    {
+      "id": "red",
+      "label": "红布旗",
+      "public": "有喜事",
+      "secret": "有货，夜里来取",
+      "unlock": "telegram"
+    }
+  ],
+  "signs": [
+    {
+      "id": "rice",
+      "label": "收米粮"
+    },
+    {
+      "id": "books",
+      "label": "收旧书报"
+    },
+    {
+      "id": "gold",
+      "label": "金银首饰"
+    }
+  ]
+}

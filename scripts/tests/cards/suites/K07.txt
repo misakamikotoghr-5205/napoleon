@@ -1,0 +1,4 @@
+# K07 条子（docs/handoff_cards/K07_data-demand.md）
+K07_validate|res://scripts/cards/core/validate_main.gd|120|--only=data/cards/demand/**,data/cards/tags/K07.json,data/cards/ui_keys/K07.json --name=K07_validate
+K07_data|res://scripts/tests/cards/K07/test_data.gd|120|
+K07_guide_support|res://scripts/tests/cards/K07/test_guide_support.gd|120|

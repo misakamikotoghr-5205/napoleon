@@ -1,0 +1,68 @@
+{
+  "_meta": {
+    "owner": "C06",
+    "schema": 1,
+    "brief": "命运轮盘面板的界面键。正文由人写；代价那条带参数 {n}，面板不另外画阿拉伯数字。",
+    "_provenance": {
+      "by": "ai",
+      "task": "C06",
+      "date": "2026-10-13"
+    }
+  },
+  "keys": {
+    "c06.btn.spin": {
+      "brief": "转"
+    },
+    "c06.btn.continue": {
+      "brief": "看完了，继续"
+    },
+    "c06.btn.close": {
+      "brief": "离开"
+    },
+    "c06.incense.title": {
+      "brief": "香案"
+    },
+    "c06.incense.offer": {
+      "brief": "添一炷香"
+    },
+    "c06.incense.take": {
+      "brief": "拿回来"
+    },
+    "c06.cost.money": {
+      "brief": "这场要花钱，数目在参数 {n} 里，写成一句人话，面板不另画数目"
+    },
+    "c06.cost.stake": {
+      "brief": "先押一张留着的牌"
+    },
+    "c06.stake.pick": {
+      "brief": "押这张"
+    },
+    "c06.title.month": {
+      "brief": "本月运势"
+    },
+    "c06.title.big": {
+      "brief": "大轮盘"
+    },
+    "c06.title.fair": {
+      "brief": "庙会轮盘"
+    },
+    "c06.title.gamble": {
+      "brief": "赌摊轮盘"
+    },
+    "c06.err.stake_required": {
+      "brief": "还没押上留着的牌，转不了"
+    },
+    "c06.err.insufficient_money": {
+      "brief": "钱不够，这场转不了"
+    },
+    "c06.err.missing": {
+      "brief": "这张牌开不了轮盘"
+    },
+    "c06.segment.name": {
+      "brief": "扇区"
+    },
+    "c06.segment.body": {
+      "brief": "落到这一格"
+    }
+  }
+}

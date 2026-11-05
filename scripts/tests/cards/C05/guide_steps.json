@@ -1,0 +1,53 @@
+{
+  "settings": {
+    "gap_ms": 2000,
+    "fade_in_ms": 0,
+    "fade_out_ms": 0,
+    "fade_fast_ms": 0,
+    "default_seconds": 16,
+    "max_new_per_day": 16,
+    "bubble_max_w": 360
+  },
+  "steps": [
+    {
+      "id": "gd.demand_delay",
+      "trigger": {"first": "demand_delay", "panel": "demand"},
+      "anchor": "a.demand.delay",
+      "anchor_fallback": "",
+      "done_when": ["cmd:demand.delay"],
+      "priority": 80,
+      "max_shows": 2,
+      "seconds": 16
+    },
+    {
+      "id": "gd.demand_people",
+      "trigger": {"first": "demand_people_return"},
+      "anchor": "a.card@{uid}",
+      "anchor_fallback": "",
+      "done_when": ["panel:slots"],
+      "priority": 70,
+      "max_shows": 2,
+      "seconds": 16
+    },
+    {
+      "id": "gd.demand_inform",
+      "trigger": {"first": "demand_inform", "panel": "demand"},
+      "anchor": "a.demand.modes",
+      "anchor_fallback": "",
+      "done_when": ["cmd:card.choose"],
+      "priority": 70,
+      "max_shows": 2,
+      "seconds": 16
+    },
+    {
+      "id": "gd.demand_fail",
+      "trigger": {"first": "demand_fail"},
+      "anchor": "a.demand.tier",
+      "anchor_fallback": "a.scene.notice",
+      "done_when": ["cmd:demand.submit", "timeout"],
+      "priority": 60,
+      "max_shows": 2,
+      "seconds": 8
+    }
+  ]
+}

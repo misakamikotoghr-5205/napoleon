@@ -1,0 +1,1368 @@
+{
+ "version": 1,
+ "from": "C (标签 conquest)",
+ "_doc": "主干与鹰飞草稿需要的美术（data/hd/art_list.json 的条目形状）。B 合并进 art_list.json；variant_of 表示给现有条目加变体，不是新 id。ARCH §4.6 已经列的地形、摆件、map_europe 等不在这里重复。",
+ "assets": [
+  {
+   "kind": "bg",
+   "id": "ollioules_depot",
+   "name": "奥利乌勒炮兵库",
+   "priority": "P0",
+   "desc": "1793 年冬，普罗旺斯山谷里的临时炮兵库：石头谷仓，成排的火药桶，桶上有粉笔写的编号；门外泥地上有很深的车辙，远处是灰色的海和土伦港里的帆。雨天，冷光。画面里不要有人物和文字。",
+   "used_in": [
+    "toulon_arrival"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "mulgrave_redoubt_night",
+   "name": "小直布罗陀棱堡·暴雨夜",
+   "priority": "P0",
+   "desc": "1793 年 12 月 17 日凌晨，凯尔高地上的英军棱堡：木桩胸墙、炮位、散落的英军红衣帽和刺刀，暴雨，防风灯的暖光，远处港湾里英国舰队的灯。画面里不要有人物和文字。",
+   "used_in": [
+    "toulon_mulgrave"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "nice_hq_1796",
+   "name": "尼斯·意大利军团司令部",
+   "priority": "P0",
+   "desc": "1796 年春，尼斯一座旧宅改成的司令部：长桌上摊着阿尔卑斯和皮埃蒙特的地图，空钱柜敞着盖，墙上挂着三色旗；窗外是地中海和推车的随军商贩。画面里不要有人物和文字。",
+   "used_in": [
+    "italy_nice"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "milan_serbelloni",
+   "name": "米兰·塞尔贝洛尼宫",
+   "priority": "P0",
+   "desc": "1796 年 5 月，米兰塞尔贝洛尼宫的大厅：镀金天花板，地上排着待装箱的油画和木箱，一张写满清单的桌子，窗外广场上人群和花。画面里不要有人物和文字。",
+   "used_in": [
+    "italy_milan"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "rivoli_moonlight",
+   "name": "里沃利高原·月夜",
+   "priority": "P0",
+   "desc": "1797 年 1 月 14 日凌晨，里沃利高原：雪地反着月光，远山上一串营火像项链，近处是弹药车和炮，峡谷口的之字路往下蜿蜒。画面里不要有人物和文字。",
+   "used_in": [
+    "italy_rivoli"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "passariano_villa",
+   "name": "帕塞里亚诺别墅",
+   "priority": "P1",
+   "desc": "1797 年秋，威尼托的帕塞里亚诺别墅：大理石厅里堆满运往巴黎的木箱，一只箱子开着露出画框一角；窗外是平原和远处的亚得里亚海。画面里不要有人物和文字。",
+   "used_in": [
+    "italy_campo_formio"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "toulon_harbour_1798",
+   "name": "土伦港·三百艘船",
+   "priority": "P1",
+   "desc": "1798 年 5 月的土伦港：港里挤满战舰和运输船，码头上堆着大炮、骆驼鞍和学者的仪器箱，远处山上是五年前的炮台废墟。画面里不要有人物和文字。",
+   "used_in": [
+    "orient_orders"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "acre_trenches",
+   "name": "阿卡城下的壕沟",
+   "priority": "P1",
+   "desc": "1799 年 5 月，阿卡城外：沙色城墙上有炮眼，壕沟和沙袋，海上停着英国船，近处有一顶写着隔离字样的白帐篷（字样别写出来）。烈日。画面里不要有人物和文字。",
+   "used_in": [
+    "orient_acre"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "marengo_plain",
+   "name": "马伦哥平原·下午三点",
+   "priority": "P1",
+   "desc": "1800 年 6 月，波河平原：麦田、葡萄架、硝烟，地平线上一道尘土；路边摆着一排白兰地桶。画面里不要有人物和文字。",
+   "used_in": [
+    "alps_marengo"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "boulogne_camp",
+   "name": "布洛涅营地",
+   "priority": "P1",
+   "desc": "1805 年夏，布洛涅海边的大军营地：成排的木屋，港里的平底船，远处海平线上隐约的英国白崖，一顶大帐篷里有地图桌。画面里不要有人物和文字。",
+   "used_in": [
+    "boulogne_orders",
+    "k_choice_1817"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "pratzen_fog",
+   "name": "普拉岑高地·雾",
+   "priority": "P1",
+   "desc": "1805 年 12 月 2 日清晨，摩拉维亚：雾从洼地里升起，高地顶上露出阳光，远处结冰的池塘反光。画面里不要有人物和文字。",
+   "used_in": [
+    "austerlitz_sun"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "eylau_churchyard",
+   "name": "埃劳墓地·暴雪",
+   "priority": "P1",
+   "desc": "1807 年 2 月，东普鲁士埃劳：雪中的小教堂和墓地，墓碑半埋在雪里，远处炮火的闪光。画面里不要有人物和文字。",
+   "used_in": [
+    "eylau_snow"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "bayonne_marracq",
+   "name": "巴约讷·马拉克城堡",
+   "priority": "P2",
+   "desc": "1808 年春，巴约讷城外的马拉克城堡：方正的石头城堡、花园、门口停着西班牙王室的马车。画面里不要有人物和文字。",
+   "used_in": [
+    "bayonne_orders"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "saragossa_ruins",
+   "name": "萨拉戈萨·修道院废墟",
+   "priority": "P1",
+   "desc": "1809 年 2 月，萨拉戈萨：被炸塌一半的修道院，街垒，屋顶上的沙袋，地道入口。画面里不要有人物和文字。",
+   "used_in": [
+    "saragossa_siege"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "lobau_bridges",
+   "name": "洛鲍岛的浮桥",
+   "priority": "P1",
+   "desc": "1809 年 7 月，多瑙河洛鲍岛：暴雨夜，河上一排编了号的浮桥，木牌上的数字（只画数字的牌子轮廓，不写字）、锚链和工兵的灯。画面里不要有人物和文字。",
+   "used_in": [
+    "wagram_lobau",
+    "ev_danube_pontoons"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "niemen_pontoons",
+   "name": "涅曼河浮桥",
+   "priority": "P1",
+   "desc": "1812 年 6 月，涅曼河：三座浮桥伸向空无一人的对岸，岸上是望不到头的车队，晴天，对岸的村子冒着烟。画面里不要有人物和文字。",
+   "used_in": [
+    "russia_niemen",
+    "k_niemen",
+    "ev_tilsit_raft"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "raevsky_redoubt",
+   "name": "博罗季诺·多面堡",
+   "priority": "P1",
+   "desc": "1812 年 9 月 7 日，博罗季诺：冒烟的土木多面堡、翻倒的炮、焦黑的田野，远处的村庄在烧。画面里不要有人物和文字。",
+   "used_in": [
+    "russia_borodino"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "berezina_bridges",
+   "name": "别列津纳河的两座桥",
+   "priority": "P0",
+   "desc": "1812 年 11 月，别列津纳河：冰水里的两座木桥，河上漂着浮冰，岸边雪地里翻倒的大车和一面鼓。灰白天色。画面里不要有人物和文字。",
+   "used_in": [
+    "russia_berezina"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "lutzen_conscripts",
+   "name": "吕岑·新兵营",
+   "priority": "P2",
+   "desc": "1813 年 5 月，萨克森的春天：田野里成排的帐篷，没有军靴的鞋子摆在一边，枪架。画面里不要有人物和文字。",
+   "used_in": [
+    "collapse_lutzen"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "leipzig_elster",
+   "name": "莱比锡·埃尔斯特河桥",
+   "priority": "P1",
+   "desc": "1813 年 10 月，莱比锡城外：埃尔斯特河上唯一的石桥，桥上挤满车和人，远处城里的教堂尖顶和硝烟。画面里不要有人物和文字。",
+   "used_in": [
+    "collapse_leipzig"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "fontainebleau_cour",
+   "name": "枫丹白露·白马庭院",
+   "priority": "P0",
+   "desc": "1814 年 4 月 20 日，枫丹白露宫白马庭院：马蹄形的大台阶，庭院里列队的老近卫军（远景、小，不出脸），一面鹰旗。阴天。",
+   "used_in": [
+    "collapse_fontainebleau"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "portoferraio_quay",
+   "name": "费拉约港码头",
+   "priority": "P0",
+   "desc": "1814 年，厄尔巴岛费拉约港：小港湾、黄色和赭色的房子、山上的星形要塞，码头上卸着箱子，港里停着英国护卫舰。画面里不要有人物和文字。",
+   "used_in": [
+    "elba_arrival",
+    "ev_pharaon_elba"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "portoferraio_warehouse",
+   "name": "码头仓库·夜",
+   "priority": "P0",
+   "desc": "1815 年 2 月 24 日夜，费拉约港的码头仓库：十二只上锁的箱子，一条跳板通向双桅船，海上远处三盏灯。画面里不要有人物和文字。",
+   "used_in": [
+    "elba_night"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "mulini_billiard",
+   "name": "穆利尼宫·台球桌上的地图",
+   "priority": "P0",
+   "desc": "1815 年 2 月，穆利尼宫的小厅：绿呢台球桌上摊着法国地图，旁边一封封好的信，窗外港里一条双桅船正在升帆。画面里不要有人物和文字。",
+   "used_in": [
+    "elba_1815"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "golfe_juan_beach",
+   "name": "儒安湾海滩",
+   "priority": "P0",
+   "desc": "1815 年 3 月 1 日，儒安湾：多石的海滩、小船、一个小小的海关哨所，远处昂蒂布炮台上的白旗。冬天的阳光。画面里不要有人物和文字。",
+   "used_in": [
+    "k_golfe_juan"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "laffrey_meadow",
+   "name": "拉弗雷·相遇的草地",
+   "priority": "P0",
+   "desc": "1815 年 3 月 7 日，阿尔卑斯山间的拉弗雷：湖、雪山、一片草地，路上一排列队的步兵（远景，小，不出脸）。",
+   "used_in": [
+    "k_laffrey"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "tuileries_bees",
+   "name": "杜伊勒里宫·蜜蜂挂毯",
+   "priority": "P0",
+   "desc": "1815 年 3 月 20 日夜，杜伊勒里宫：撕掉一半百合花的挂毯，底下露出金色蜜蜂，烛台，窗外花园里的人群和火把。画面里不要有人物和文字。",
+   "used_in": [
+    "k_tuileries"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "charleroi_bridge_dawn",
+   "name": "沙勒罗瓦·桑布尔河桥",
+   "priority": "P0",
+   "desc": "1815 年 6 月 15 日黎明，沙勒罗瓦：石桥上的路障、对岸临河的房子、河上的薄雾。画面里不要有人物和文字。",
+   "used_in": [
+    "k_charleroi"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "plancenoit_churchyard",
+   "name": "普朗斯努瓦教堂墓园",
+   "priority": "P0",
+   "desc": "1815 年 6 月 18 日下午，普朗斯努瓦：泥泞的村街、齐胸高的墓园矮墙、石头教堂，硝烟，墙后摆成一排的鼓。画面里不要有人物和文字。",
+   "used_in": [
+    "k_waterloo"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "waterloo_inn",
+   "name": "滑铁卢村·客栈",
+   "priority": "P0",
+   "desc": "1815 年 6 月 18 日夜，滑铁卢村的客栈：低矮木梁、烛光、桌上摊着账簿，门口堆着缴获的军旗（旗面不写字）。画面里不要有人物和文字。",
+   "used_in": [
+    "k_waterloo_night"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "brussels_warehouse",
+   "name": "布鲁塞尔·威灵顿的仓库",
+   "priority": "P1",
+   "desc": "1815 年夏，布鲁塞尔的大仓库：成堆的靴子、饼干桶、一只开着的金币箱。画面里不要有人物和文字。",
+   "used_in": [
+    "k_brussels"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "metz_hall",
+   "name": "梅斯·会议厅",
+   "priority": "P1",
+   "desc": "1815 年夏，梅斯市政厅的会议厅：长桌、两把相对的椅子、地图和墨水瓶。画面里不要有人物和文字。",
+   "used_in": [
+    "k_ultimatum"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "lauter_lines",
+   "name": "维桑堡防线",
+   "priority": "P1",
+   "desc": "1815 年秋，阿尔萨斯劳特河边的旧土墙防线：涨水的小河、渡船、雨。画面里不要有人物和文字。",
+   "used_in": [
+    "k_rhine"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "nymphenburg",
+   "name": "慕尼黑·宁芬堡宫",
+   "priority": "P2",
+   "desc": "1816 年春，宁芬堡宫的长廊和运河，冰正在化。画面里不要有人物和文字。",
+   "used_in": [
+    "k_bavaria"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "vienna_breach",
+   "name": "维也纳·城墙缺口",
+   "priority": "P1",
+   "desc": "1816 年 6 月，维也纳城墙的缺口：碎石、远处圣斯特凡大教堂的尖顶，屋顶上的人影（小，不出脸）。",
+   "used_in": [
+    "k_vienna"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "schoenbrunn_nursery",
+   "name": "美泉宫·东翼的儿童房",
+   "priority": "P0",
+   "desc": "1816 年 6 月，美泉宫东翼的儿童房：小床、木马、一排锡兵、窗外的花园。画面里不要有人物和文字。",
+   "used_in": [
+    "k_schoenbrunn"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "torres_vedras_lines",
+   "name": "托雷斯韦德拉什防线",
+   "priority": "P1",
+   "desc": "1817 年秋，葡萄牙的山岭：一道道土墙和炮台沿山脊排开，山上拆了翼的风车。画面里不要有人物和文字。",
+   "used_in": [
+    "k_torres_vedras"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "dover_cliffs",
+   "name": "多佛尔白崖",
+   "priority": "P1",
+   "desc": "1817 年 8 月，从海滩仰望多佛尔的白崖：崖顶炮台、退潮的海滩、靠岸的平底船。画面里不要有人物和文字。",
+   "used_in": [
+    "k_dover"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "warsaw_castle",
+   "name": "华沙王宫广场",
+   "priority": "P2",
+   "desc": "1818 年 5 月，华沙王宫前的广场：红白两色的旗、跳舞的人群（远景）、宫殿钟楼。画面里不要有人物和文字。",
+   "used_in": [
+    "k_warsaw"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "tuileries_fireworks",
+   "name": "杜伊勒里花园·烟火",
+   "priority": "P2",
+   "desc": "1819 年 8 月 15 日夜，杜伊勒里花园上空的烟火，宫殿的灯。画面里不要有人物和文字。",
+   "used_in": [
+    "k_paris_1819"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "leipzig_villages",
+   "name": "莱比锡南郊",
+   "priority": "P1",
+   "desc": "1819 年 10 月，莱比锡南边的村子和平原，远处一块新立的石碑。秋天。画面里不要有人物和文字。",
+   "used_in": [
+    "k_leipzig_1819"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "emperor_tent_night",
+   "name": "皇帝的帐篷·夜",
+   "priority": "P0",
+   "desc": "1819 年 10 月 19 日夜，普罗布斯泰达的帐篷：行军桌上并排放着一卷和约、一张皇冠的图样、一封信。烛光。画面里不要有人物和文字。",
+   "used_in": [
+    "k_final"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "hq_tent",
+   "name": "司令部营帐（军议）",
+   "priority": "P0",
+   "desc": "行军司令部的大帐篷：地图桌、蜡烛、折叠椅、帐外的哨兵影子。军议事件通用。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_council_*",
+    "ev_muiron_letter"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "roadside_woods",
+   "name": "行军路旁的树林",
+   "priority": "P1",
+   "desc": "欧洲乡间道路边的树林、车辙、倒在路边的大车。随机事件通用。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_deserters",
+    "ev_barbets_convoy",
+    "ev_ulm_prisoners",
+    "ev_ratisbon_wound",
+    "ev_lodi_veteran",
+    "ev_courier_lost"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "officers_mess",
+   "name": "军官食堂",
+   "priority": "P2",
+   "desc": "村舍改的军官食堂：长桌、牌、酒瓶、烛台。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_faro_table"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "bivouac_rain",
+   "name": "雨夜宿营",
+   "priority": "P1",
+   "desc": "雨夜的宿营地：大车下面睡着人（看不清脸）、冒烟的营火、油布。画面里不要有人物和文字。",
+   "used_in": [
+    "ic_rain_bivouac",
+    "ib_fireside",
+    "ev_marie_cantine",
+    "ev_conscript_letter"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "bivouac_snow",
+   "name": "雪夜宿营",
+   "priority": "P1",
+   "desc": "雪地里的营火、烧了一半的马鞍、远处的松林。画面里不要有人物和文字。",
+   "used_in": [
+    "ic_snow_bivouac",
+    "ev_horse_meat"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "spada_library",
+   "name": "博洛尼亚·斯帕达府书房",
+   "priority": "P0",
+   "desc": "18 世纪末的意大利贵族书房：高书架、装了一半的书箱、一本旧日课经放在桌上。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_faria_half_letter"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "monastery_library",
+   "name": "修道院图书馆",
+   "priority": "P2",
+   "desc": "巴洛克修道院的图书馆：彩绘穹顶、金色书架、窗外多瑙河。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_melk_library"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "valletta_cathedral",
+   "name": "瓦莱塔·圣约翰大教堂",
+   "priority": "P2",
+   "desc": "马耳他圣约翰大教堂的侧廊：金色雕饰、一扇刷成黑色的大门。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_malta_silver"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "st_bernard_hospice",
+   "name": "大圣伯纳德济贫院",
+   "priority": "P1",
+   "desc": "阿尔卑斯山口的石头修道院、积雪、路边摆着面包和酒的长桌、掏空的松树干。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_st_bernard",
+    "ev_alps_mules"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "war_ministry_archive",
+   "name": "战争部档案室",
+   "priority": "P0",
+   "desc": "1815 年巴黎战争部的档案室：一排排文件格、桌上一摞请愿书、台灯。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_morrel_petition",
+    "ev_vendee_rising"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "auxerre_prefecture",
+   "name": "欧塞尔省长官邸",
+   "priority": "P2",
+   "desc": "法国外省官邸的门厅：大理石楼梯、门外列队的骑兵（远景）。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_ney_auxerre"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "weimar_garden",
+   "name": "魏玛·歌德的花园小屋",
+   "priority": "P2",
+   "desc": "伊尔姆河边的小花园屋：茶具、书、窗外河上的桥。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_goethe_tea"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "depot_warehouse",
+   "name": "军需仓库",
+   "priority": "P1",
+   "desc": "石头仓库内部：面粉袋、木桶、一杆大秤、账桌。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_storks_scale",
+    "ev_dos_de_mayo"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "village_street",
+   "name": "村街",
+   "priority": "P1",
+   "desc": "18—19 世纪欧洲乡村的街道：石头房子、教堂钟楼、井台、泥路。随机事件通用。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_pavia_revolt",
+    "ev_capoliveri",
+    "ev_six_days",
+    "ev_bread_ovens",
+    "ev_post_horses",
+    "ev_carters_debt"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "harbour_quay",
+   "name": "地中海小港码头",
+   "priority": "P1",
+   "desc": "地中海小港：石头码头、渔船和三桅商船、成堆的粮袋。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_morrel_grain",
+    "ev_smugglers_deal"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "palace_hall",
+   "name": "宫殿大厅",
+   "priority": "P1",
+   "desc": "巴洛克宫殿的大厅：镶木地板、大窗、空着的宝座、靠墙的木箱。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_frederick_sword",
+    "ev_marie_louise_letter"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "cairo_courtyard",
+   "name": "开罗·司令部庭院",
+   "priority": "P2",
+   "desc": "1799 年开罗的马穆鲁克宅邸庭院：喷泉、木格窗、棕榈。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_mysore_envoy"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "mountain_hermitage",
+   "name": "山间小庵",
+   "priority": "P2",
+   "desc": "厄尔巴岛马尔恰纳山上的小教堂和石屋，栗树林，远处的海。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_walewska"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "smolensk_fire",
+   "name": "燃烧的斯摩棱斯克",
+   "priority": "P2",
+   "desc": "第聂伯河边燃烧的城市、石头粮仓、浓烟。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_smolensk_granary"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "desert_road",
+   "name": "沙漠行军路",
+   "priority": "P2",
+   "desc": "埃及沙漠里的行军路：骆驼、木箱、热浪。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_scholars_crates"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "village_well",
+   "name": "村口的井",
+   "priority": "P2",
+   "desc": "卡斯蒂利亚空无一人的村子，井口边一只水桶。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_poisoned_well"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "salamanca_field",
+   "name": "萨拉曼卡城南的麦田",
+   "priority": "P2",
+   "desc": "收割过的麦田、远处两座小山（阿拉皮莱斯）、犁沟里的白点。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_arapiles_bones"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "paris_faubourg",
+   "name": "巴黎圣安托万区",
+   "priority": "P2",
+   "desc": "1815 年巴黎东郊的工人街区：作坊、狭窄的街、三色旗。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_federes"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "vineyard",
+   "name": "阿尔萨斯的葡萄园",
+   "priority": "P2",
+   "desc": "秋天的葡萄园、山坡、远处的教堂和土墙防线。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_alsace_harvest"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "alpine_inn",
+   "name": "蒂罗尔的客栈",
+   "priority": "P2",
+   "desc": "因河边的木头客栈：壁炉、鹿角、窗外的雪山。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_tyrol_innkeeper"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "invalides",
+   "name": "荣军院",
+   "priority": "P2",
+   "desc": "巴黎荣军院的庭院：拱廊、金色穹顶。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_guard_pensions"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "dunkirk_dock",
+   "name": "敦刻尔克船坞",
+   "priority": "P2",
+   "desc": "1817 年的敦刻尔克船坞：船台上一条怪模样的船、图纸摊在木箱上。画面里不要有人物和文字。",
+   "used_in": [
+    "ev_fulton_nautilus"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "map_toulon_1793",
+   "name": "土伦围城图 1793",
+   "priority": "P0",
+   "desc": "手绘风格的局部地图：土伦港、小锚地、凯尔高地上的小直布罗陀、奥利乌勒山谷、萨纳里和邦多勒小港、拉塞讷。18 世纪军事地图的配色（羊皮纸底、淡彩海面、晕渲山地），不写地名（地名由游戏叠加）。节点位置照 maps/europe.json 里 toulon 图的 xy（1920×1080）。",
+   "used_in": [
+    "map:toulon"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "map_elba",
+   "name": "厄尔巴岛图",
+   "priority": "P0",
+   "desc": "手绘风格的厄尔巴岛全岛图：费拉约港在北岸，东边里奥铁矿，南边隆戈内港和卡波利韦里，西边马尔恰纳山。羊皮纸底，不写地名。节点 xy 见 elba 图。",
+   "used_in": [
+    "map:elba"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "map_portoferraio",
+   "name": "费拉约港城图",
+   "priority": "P0",
+   "desc": "费拉约港城和港湾的俯视图：星堡、法尔科内堡、穆利尼宫、码头和仓库、港口外的海。羊皮纸底，不写地名。节点 xy 见 elba 图的 portoferraio_1815 镜头。",
+   "used_in": [
+    "map:elba"
+   ]
+  },
+  {
+   "kind": "cg",
+   "id": "ending_k_pax",
+   "name": "结局·鹰的和平",
+   "priority": "P1",
+   "desc": "杜伊勒里宫的签约大厅：各国旗帜挂在同一面墙上，长桌上的和约，一个少年（拿破仑二世）站在窗边。暖光。",
+   "used_in": [
+    "k_pax"
+   ]
+  },
+  {
+   "kind": "cg",
+   "id": "ending_k_iron",
+   "name": "结局·铁的欧洲",
+   "priority": "P1",
+   "desc": "圣母院里的加冕：一顶新皇冠的特写，背景里密密麻麻的军旗，冷色调。",
+   "used_in": [
+    "k_iron"
+   ]
+  },
+  {
+   "kind": "cg",
+   "id": "ending_k_return",
+   "name": "结局·回到马赛",
+   "priority": "P0",
+   "desc": "马赛老港的婚宴：码头上的长桌、法老号的桅杆、一对新人（唐泰斯与梅尔塞苔丝）的背影，主角举杯（侧脸）。夏日夕阳。",
+   "used_in": [
+    "k_return"
+   ]
+  },
+  {
+   "kind": "cg",
+   "id": "ending_k_dusk",
+   "name": "结局·鹰落",
+   "priority": "P1",
+   "desc": "1821 年的葬礼行列：老近卫军抬着灵柩走过塞纳河的桥，雨，一本账簿夹在一个人的胳膊下。",
+   "used_in": [
+    "k_dusk"
+   ]
+  },
+  {
+   "kind": "chara",
+   "id": "bonaparte",
+   "name": "拿破仑·波拿巴（1793—1799）",
+   "priority": "P0",
+   "desc": "24 到 30 岁的炮兵军官、后来的意大利军团司令：很瘦，长发披到领口，苍白，眼睛很亮；1793 年是蓝色炮兵上尉服，1796 年起是将军的蓝外套和三色腰带。和现有的 napoleon（皇帝）是同一人年轻时，脸要对得上。"
+  },
+  {
+   "kind": "face",
+   "id": "bonaparte",
+   "name": "拿破仑·波拿巴（1793—1799）",
+   "priority": "P0",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "dugommier",
+   "name": "杜戈米埃将军",
+   "priority": "P2",
+   "desc": "55 岁上下的共和国将军，花白头发，旧式三角帽，雨中的大衣。"
+  },
+  {
+   "kind": "face",
+   "id": "dugommier",
+   "name": "杜戈米埃将军",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "saliceti",
+   "name": "萨利切蒂特派员",
+   "priority": "P2",
+   "desc": "40 岁上下的科西嘉人，督政府特派员的三色饰带，精明的笑。"
+  },
+  {
+   "kind": "face",
+   "id": "saliceti",
+   "name": "萨利切蒂特派员",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "muiron",
+   "name": "米隆",
+   "priority": "P1",
+   "desc": "22 岁的副官：年轻、诚恳，蓝色副官服，手里一盏防风灯。"
+  },
+  {
+   "kind": "face",
+   "id": "muiron",
+   "name": "米隆",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "lannes",
+   "name": "拉纳",
+   "priority": "P1",
+   "desc": "27 到 40 岁的勇将：粗犷、加斯科涅人的鼻子，帽子上有弹孔，掷弹兵出身的大个子。"
+  },
+  {
+   "kind": "face",
+   "id": "lannes",
+   "name": "拉纳",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "murat",
+   "name": "缪拉",
+   "priority": "P1",
+   "desc": "30 岁上下的骑兵统领：黑色卷发，华丽到夸张的骠骑兵服、羽毛，金鼻烟壶。"
+  },
+  {
+   "kind": "face",
+   "id": "murat",
+   "name": "缪拉",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "desaix",
+   "name": "德塞",
+   "priority": "P1",
+   "desc": "31 岁的将军：长发随意束起，衣着朴素，面容端正，脸上有一道旧刀疤。"
+  },
+  {
+   "kind": "face",
+   "id": "desaix",
+   "name": "德塞",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "larrey",
+   "name": "拉雷",
+   "priority": "P1",
+   "desc": "30 到 50 岁的军医：长发、和气，袖子卷着，胳膊上搭着绷带。"
+  },
+  {
+   "kind": "face",
+   "id": "larrey",
+   "name": "拉雷",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "rustam",
+   "name": "鲁斯塔姆",
+   "priority": "P2",
+   "desc": "20 岁上下的马穆鲁克护卫：缠头巾、宽袍、弯刀。"
+  },
+  {
+   "kind": "face",
+   "id": "rustam",
+   "name": "鲁斯塔姆",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "eble",
+   "name": "埃布莱",
+   "priority": "P1",
+   "desc": "50 岁上下的舟桥兵将军：高瘦、灰发，手里一本小本子，裤腿湿到膝盖。"
+  },
+  {
+   "kind": "face",
+   "id": "eble",
+   "name": "埃布莱",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "drouot",
+   "name": "德鲁奥将军",
+   "priority": "P0",
+   "desc": "40 岁上下的近卫炮兵将军：严肃朴素，戴眼镜，腋下夹一本《圣经》。"
+  },
+  {
+   "kind": "face",
+   "id": "drouot",
+   "name": "德鲁奥将军",
+   "priority": "P0",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "cambronne",
+   "name": "康布罗纳将军",
+   "priority": "P0",
+   "desc": "45 岁上下的老近卫军将军：熊皮帽、浓眉、伤疤、倔强的下巴。"
+  },
+  {
+   "kind": "face",
+   "id": "cambronne",
+   "name": "康布罗纳将军",
+   "priority": "P0",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "ney",
+   "name": "内伊元帅",
+   "priority": "P0",
+   "desc": "46 岁的元帅：红头发、红脸膛，元帅服，焦躁又真诚。"
+  },
+  {
+   "kind": "face",
+   "id": "ney",
+   "name": "内伊元帅",
+   "priority": "P0",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "davout",
+   "name": "达武元帅",
+   "priority": "P2",
+   "desc": "45 岁的元帅：光头、圆眼镜、冷静。"
+  },
+  {
+   "kind": "face",
+   "id": "davout",
+   "name": "达武元帅",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "fouche",
+   "name": "富歇",
+   "priority": "P1",
+   "desc": "56 岁的警务部长：瘦削苍白，薄嘴唇，永远在笑，手里一个小本子。"
+  },
+  {
+   "kind": "face",
+   "id": "fouche",
+   "name": "富歇",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "grouchy",
+   "name": "格鲁希元帅",
+   "priority": "P2",
+   "desc": "49 岁的骑兵元帅：端正、迟疑的表情，手里一张没写时辰的命令。"
+  },
+  {
+   "kind": "face",
+   "id": "grouchy",
+   "name": "格鲁希元帅",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "talleyrand",
+   "name": "塔列朗亲王",
+   "priority": "P1",
+   "desc": "61 岁的外交家：扑粉的头发、跛足、手杖，似笑非笑。"
+  },
+  {
+   "kind": "face",
+   "id": "talleyrand",
+   "name": "塔列朗亲王",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "max_joseph",
+   "name": "马克西米利安国王",
+   "priority": "P2",
+   "desc": "60 岁的巴伐利亚国王：圆脸、和气、精于计算。"
+  },
+  {
+   "kind": "face",
+   "id": "max_joseph",
+   "name": "马克西米利安国王",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "king_of_rome",
+   "name": "罗马王",
+   "priority": "P0",
+   "desc": "5 岁的男孩，金色卷发，穿一身小号的奥地利军装，手里一只锡兵。"
+  },
+  {
+   "kind": "face",
+   "id": "king_of_rome",
+   "name": "罗马王",
+   "priority": "P0",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "gerard_villefort",
+   "name": "杰拉尔·德·维尔福",
+   "priority": "P1",
+   "desc": "27 岁的王家检察官：黑衣、白领巾，苍白英俊，眼神冷。和主角同宗，眉眼要有一点像。（伊夫堡包也会用到：同一人物，以那边的描述为准）"
+  },
+  {
+   "kind": "face",
+   "id": "gerard_villefort",
+   "name": "杰拉尔·德·维尔福",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "goethe",
+   "name": "歌德",
+   "priority": "P2",
+   "desc": "70 岁的诗人：高额头、深色外套、眼神温和而锐利。"
+  },
+  {
+   "kind": "face",
+   "id": "goethe",
+   "name": "歌德",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "campbell",
+   "name": "坎贝尔上校",
+   "priority": "P2",
+   "desc": "40 岁上下的英国军官：红色军服、单片眼镜。"
+  },
+  {
+   "kind": "face",
+   "id": "campbell",
+   "name": "坎贝尔上校",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "villefort",
+   "name": "埃德蒙·德·维尔福（年龄变体）",
+   "priority": "P0",
+   "desc": "现有立绘的年龄变体，同一张脸：young（1793，17 岁，炮兵库书记，破旧蓝外套、墨水手指）；1805（29 岁，军需官制服、双角帽）；1815（39 岁，近卫军军需司库，鹰徽怀表——不要天平坠子）。",
+   "variants": [
+    "young",
+    "1805",
+    "1815"
+   ],
+   "variant_of": "villefort"
+  },
+  {
+   "kind": "chara",
+   "id": "marie",
+   "name": "玛丽·朗热（年龄变体）",
+   "priority": "P1",
+   "desc": "现有立绘的年轻变体 cantiniere（1796，28 岁上下的随军女商贩：三角头巾、围裙、腰间挂酒壶）。",
+   "variants": [
+    "cantiniere"
+   ],
+   "variant_of": "marie"
+  },
+  {
+   "kind": "chara",
+   "id": "pierre",
+   "name": "小皮埃尔（年龄变体）",
+   "priority": "P0",
+   "desc": "现有立绘的年幼变体 drummer（1812，10 岁上下的鼓手：大一号的军服、脖子上挂着鼓，冻红的脸）。",
+   "variants": [
+    "drummer"
+   ],
+   "variant_of": "pierre"
+  },
+  {
+   "kind": "chara",
+   "id": "baptiste",
+   "name": "巴蒂斯特（年龄变体）",
+   "priority": "P2",
+   "desc": "现有立绘的年轻变体 1793（25 岁的工兵下士）。",
+   "variants": [
+    "1793"
+   ],
+   "variant_of": "baptiste"
+  },
+  {
+   "kind": "unit",
+   "id": "muiron",
+   "name": "muiron",
+   "priority": "P1",
+   "desc": "伙伴上阵的样子（兵种 line）：按上面的人物描述，全身、单人。",
+   "role": "companion"
+  },
+  {
+   "kind": "unit",
+   "id": "lannes",
+   "name": "lannes",
+   "priority": "P1",
+   "desc": "伙伴上阵的样子（兵种 grenadier）：按上面的人物描述，全身、单人。",
+   "role": "companion"
+  },
+  {
+   "kind": "unit",
+   "id": "murat",
+   "name": "murat",
+   "priority": "P1",
+   "desc": "伙伴上阵的样子（兵种 hussar）：按上面的人物描述，全身、单人。",
+   "role": "companion"
+  },
+  {
+   "kind": "unit",
+   "id": "desaix",
+   "name": "desaix",
+   "priority": "P1",
+   "desc": "伙伴上阵的样子（兵种 line）：按上面的人物描述，全身、单人。",
+   "role": "companion"
+  },
+  {
+   "kind": "unit",
+   "id": "larrey",
+   "name": "larrey",
+   "priority": "P1",
+   "desc": "伙伴上阵的样子（兵种 medic）：按上面的人物描述，全身、单人。",
+   "role": "companion"
+  },
+  {
+   "kind": "unit",
+   "id": "rustam",
+   "name": "rustam",
+   "priority": "P1",
+   "desc": "伙伴上阵的样子（兵种 hussar）：按上面的人物描述，全身、单人。",
+   "role": "companion"
+  },
+  {
+   "kind": "unit",
+   "id": "eble",
+   "name": "eble",
+   "priority": "P1",
+   "desc": "伙伴上阵的样子（兵种 engineer）：按上面的人物描述，全身、单人。",
+   "role": "companion"
+  },
+  {
+   "kind": "unit",
+   "id": "pierre",
+   "name": "pierre",
+   "priority": "P1",
+   "desc": "伙伴上阵的样子（兵种 drummer）：按上面的人物描述，全身、单人。",
+   "role": "companion"
+  },
+  {
+   "kind": "unit",
+   "id": "drouot",
+   "name": "drouot",
+   "priority": "P1",
+   "desc": "伙伴上阵的样子（兵种 artillery）：按上面的人物描述，全身、单人。",
+   "role": "companion"
+  },
+  {
+   "kind": "unit",
+   "id": "cambronne",
+   "name": "cambronne",
+   "priority": "P1",
+   "desc": "伙伴上阵的样子（兵种 grenadier）：按上面的人物描述，全身、单人。",
+   "role": "companion"
+  },
+  {
+   "kind": "unit",
+   "id": "ney",
+   "name": "ney",
+   "priority": "P1",
+   "desc": "伙伴上阵的样子（兵种 hussar）：按上面的人物描述，全身、单人。",
+   "role": "companion"
+  },
+  {
+   "kind": "unit",
+   "id": "baptiste",
+   "name": "baptiste",
+   "priority": "P1",
+   "desc": "伙伴上阵的样子（兵种 engineer）：按上面的人物描述，全身、单人。",
+   "role": "companion"
+  },
+  {
+   "kind": "unit",
+   "id": "enemy_piedmontese",
+   "name": "皮埃蒙特步兵",
+   "priority": "P1",
+   "desc": "蓝色军服、黑色三角帽的皮埃蒙特-撒丁步兵。单人、全身。",
+   "role": "enemy"
+  },
+  {
+   "kind": "face",
+   "id": "enemy_piedmontese",
+   "name": "皮埃蒙特步兵",
+   "priority": "P2",
+   "desc": "同一兵种的头像。"
+  },
+  {
+   "kind": "unit",
+   "id": "enemy_barbet",
+   "name": "巴尔贝山民",
+   "priority": "P1",
+   "desc": "滨海阿尔卑斯的山民游击队：粗布衣、宽檐帽、猎枪。单人、全身。",
+   "role": "enemy"
+  },
+  {
+   "kind": "face",
+   "id": "enemy_barbet",
+   "name": "巴尔贝山民",
+   "priority": "P2",
+   "desc": "同一兵种的头像。"
+  },
+  {
+   "kind": "unit",
+   "id": "enemy_tyrolean",
+   "name": "蒂罗尔射手",
+   "priority": "P1",
+   "desc": "绿色短外套、插羽毛的宽檐帽、长猎枪。单人、全身。",
+   "role": "enemy"
+  },
+  {
+   "kind": "face",
+   "id": "enemy_tyrolean",
+   "name": "蒂罗尔射手",
+   "priority": "P2",
+   "desc": "同一兵种的头像。"
+  },
+  {
+   "kind": "unit",
+   "id": "enemy_chevauleger",
+   "name": "奥军轻骑兵",
+   "priority": "P1",
+   "desc": "绿色或白色轻骑兵服、头盔，马刀。单人、全身。",
+   "role": "enemy"
+  },
+  {
+   "kind": "face",
+   "id": "enemy_chevauleger",
+   "name": "奥军轻骑兵",
+   "priority": "P2",
+   "desc": "同一兵种的头像。"
+  },
+  {
+   "kind": "unit",
+   "id": "enemy_dutch_belgian",
+   "name": "荷比步兵",
+   "priority": "P1",
+   "desc": "1815 年荷兰-比利时军：蓝色军服、高筒军帽。单人、全身。",
+   "role": "enemy"
+  },
+  {
+   "kind": "face",
+   "id": "enemy_dutch_belgian",
+   "name": "荷比步兵",
+   "priority": "P2",
+   "desc": "同一兵种的头像。"
+  },
+  {
+   "kind": "unit",
+   "id": "enemy_brunswicker",
+   "name": "布伦瑞克兵",
+   "priority": "P1",
+   "desc": "全身黑衣、帽子上一个银色骷髅徽（只画轮廓，不写字）。单人、全身。",
+   "role": "enemy"
+  },
+  {
+   "kind": "face",
+   "id": "enemy_brunswicker",
+   "name": "布伦瑞克兵",
+   "priority": "P2",
+   "desc": "同一兵种的头像。"
+  },
+  {
+   "kind": "unit",
+   "id": "enemy_blucher",
+   "name": "布吕歇尔",
+   "priority": "P1",
+   "desc": "72 岁的普鲁士元帅：白色大胡子、骑兵大衣、挥着马刀。单人、全身。",
+   "role": "enemy"
+  },
+  {
+   "kind": "face",
+   "id": "enemy_blucher",
+   "name": "布吕歇尔",
+   "priority": "P2",
+   "desc": "同一兵种的头像。"
+  },
+  {
+   "kind": "icon",
+   "id": "council",
+   "name": "地图节点·军议",
+   "priority": "P1",
+   "desc": "圆章图标：两把交叉的羽毛笔压在地图上。256×256 透明底。"
+  },
+  {
+   "kind": "icon",
+   "id": "rival",
+   "name": "地图·对手分遣队",
+   "priority": "P1",
+   "desc": "棋子样的圆章：一面小三角旗。256×256 透明底。"
+  },
+  {
+   "kind": "icon",
+   "id": "depot",
+   "name": "地图·兵站",
+   "priority": "P1",
+   "desc": "圆章图标：一只木桶和一袋面粉。256×256 透明底。"
+  }
+ ]
+}

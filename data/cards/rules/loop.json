@@ -1,0 +1,2 @@
+{"_meta":{"owner":"G02","schema":1},"_doc":["钟点仅显示，不自动打烊；每周生活牌避开脚本日。"],"open_minute":480,"close_minute":1080,"dusk_pct":60,"life_per_week":{"min":1,"max":2}}
+

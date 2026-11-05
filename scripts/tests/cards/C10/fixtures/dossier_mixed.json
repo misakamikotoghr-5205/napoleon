@@ -1,0 +1,140 @@
+{
+  "_meta": {
+    "owner": "C10",
+    "schema": 1,
+    "brief": "Three dossier pages: a gap, a complete page, and a 1939 year-after fragment.",
+    "_provenance": {
+      "by": "ai",
+      "task": "C10",
+      "date": "2026-10-13"
+    }
+  },
+  "guide": "examples",
+  "guide_progress": {},
+  "queries": {
+    "dossier|{}": {
+      "pages": [
+        {
+          "person": "brother",
+          "complete": false,
+          "new": 1,
+          "fragments": [
+            {
+              "id": "df.brother.1938.farewell_cold",
+              "order": 2,
+              "era": "1938",
+              "kind": "said",
+              "state": "have",
+              "new": true
+            },
+            {
+              "id": "df.brother.1938.farewell",
+              "order": 1,
+              "era": "1938",
+              "kind": "said",
+              "state": "gap",
+              "new": false
+            }
+          ]
+        },
+        {
+          "person": "wangshan",
+          "complete": true,
+          "new": 0,
+          "fragments": [
+            {
+              "id": "df.wangshan.1938.trust",
+              "order": 2,
+              "era": "1938",
+              "kind": "said",
+              "state": "have",
+              "new": false
+            },
+            {
+              "id": "df.wangshan.1938.dock",
+              "order": 1,
+              "era": "1938",
+              "kind": "heard",
+              "state": "have",
+              "new": false
+            }
+          ]
+        },
+        {
+          "person": "linsao",
+          "complete": false,
+          "new": 1,
+          "fragments": [
+            {
+              "id": "df.linsao.1939.after_hairpin",
+              "order": 4,
+              "era": "1939",
+              "kind": "year_after",
+              "state": "have",
+              "new": true
+            }
+          ]
+        }
+      ]
+    },
+    "firsts|{}": {
+      "firsts": {
+        "deal": 1,
+        "person": 1,
+        "slots": 1
+      }
+    }
+  },
+  "view": {
+    "v": 1,
+    "phase": "day",
+    "mode": "shop",
+    "busy": false,
+    "date": {
+      "stage": 0,
+      "era": "1938",
+      "y": 1938,
+      "m": 3,
+      "d": 2,
+      "weekday": 2,
+      "stage_day": 2,
+      "stage_days": 30,
+      "abs_day": 2,
+      "minute": 480
+    },
+    "notice": {
+      "weather": "clear",
+      "market_day": false,
+      "news": [],
+      "almanac": {
+        "yi": [],
+        "ji": [],
+        "done": []
+      },
+      "fortune": ""
+    },
+    "caps": {
+      "kept": 5,
+      "contacts": 3,
+      "shelf": 12
+    },
+    "goals": [],
+    "night_offers": [],
+    "open_panel": {
+      "kind": "",
+      "args": {}
+    },
+    "money": {
+      "amount": 100,
+      "currency": "fabi"
+    },
+    "rep_tier": 0,
+    "heat_tier": 0,
+    "hand": [],
+    "kept": [],
+    "contacts": [],
+    "demands": [],
+    "tickets": [],
+    "dossier_new": 2
+  }
+}

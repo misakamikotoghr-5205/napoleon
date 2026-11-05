@@ -1,0 +1,4 @@
+# RG3 肉鸽 v1：数据、AI 基础层正文、程序美术（docs/cards/rogue/ROGUE_V1.md §6、§12、§14 RG3）
+RG3_validate|res://scripts/cards/core/validate_main.gd|120|--mode=strict --only=data/cards/era/common/relics.json,data/cards/era/common/sources.json,data/cards/era/1938/curio_peddler.json,data/cards/era/1938/tutorial.json,data/cards/rules/relics.json,data/cards/rules/stock.json,data/cards/rules/legacy.json,data/cards/text_ai/era/common/relics.text.json,data/cards/text_ai/era/common/sources.text.json,data/cards/text_ai/era/1938/curio_peddler.text.json,data/cards/art/manifest.json --name=RG3_validate
+RG3_data|res://scripts/tests/cards/RG3/test_data.gd|120|
+RG3_art|res://scripts/tests/cards/RG3/test_art.gd|300|

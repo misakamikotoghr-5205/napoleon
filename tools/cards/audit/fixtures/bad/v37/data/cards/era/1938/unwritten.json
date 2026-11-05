@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1
+  },
+  "cards": [
+    {
+      "id": "ev.v37.miss",
+      "type": "event",
+      "era": ["*"]
+    },
+    {
+      "id": "bf.wheel",
+      "type": "big_fate",
+      "era": ["*"]
+    },
+    {
+      "id": "ev.pass",
+      "type": "event",
+      "era": ["*"],
+      "must_resolve": false
+    },
+    {
+      "id": "ev.checked",
+      "type": "event",
+      "era": ["*"],
+      "check": {"need": 1}
+    },
+    {
+      "id": "ev.blank",
+      "type": "event",
+      "era": ["*"],
+      "effects": {"on_expire": []}
+    }
+  ]
+}

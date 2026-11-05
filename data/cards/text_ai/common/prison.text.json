@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-1938"
+  },
+  "pr.cell": {
+    "title": "牢房",
+    "body": "你被抓了进去。想出去，得有人打点、有人作保，或者拿出管用的东西。",
+    "slots": {
+      "bribe": "打点的钱",
+      "bail": "作保的人",
+      "favor": "人情或证件"
+    },
+    "outcomes": {
+      "success": "打点通了，你被放了出来。",
+      "fail": "打点不通，你没能出去。"
+    }
+  }
+}

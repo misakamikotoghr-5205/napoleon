@@ -1,0 +1,45 @@
+{
+  "_meta": {
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-misc"
+  },
+  "ws.1939.month.nianhuo": {
+    "title": "年货兴旺",
+    "body": "年关办年货的人多，来买东西的也多。"
+  },
+  "ws.1939.month.qingzhang": {
+    "title": "账清人和",
+    "body": "这个月好事来得多一点。"
+  },
+  "ws.1939.month.nianwei": {
+    "title": "年关难过",
+    "body": "年关坏事来得多，凡事多留个心。"
+  },
+  "ws.1939.month.micang": {
+    "title": "米缸见底",
+    "body": "米和柴都紧，家里的事多一些。"
+  },
+  "ws.1939.month.chengmen": {
+    "title": "城门盘查",
+    "body": "城门盘查得紧，官面上的事多。"
+  },
+  "ws.1939.month.pingan": {
+    "title": "平平",
+    "body": "不好不坏，凭本事过年关。"
+  },
+  "ws.1939.month.jiashu": {
+    "title": "鸿雁传书",
+    "body": "这个月远方来的消息多一些。"
+  },
+  "ws.1939.big.fanshen_letter": {
+    "title": "远方接应",
+    "body": "风声松了些。有人能把你送出城躲一躲，走不走由你。"
+  },
+  "ws.1939.big.pingan_year": {
+    "title": "年关挺过",
+    "body": "风声落了些，年关总算挺了过去。"
+  },
+  "ws.1939.big.zhuidi_gate": {
+    "title": "城门锁紧",
+    "body": "城门盘查更紧，风声紧了，麻烦也找上门来。"
+  }
+}

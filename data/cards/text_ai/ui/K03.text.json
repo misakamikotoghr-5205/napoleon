@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "k03.notice.letter_arrived": {
+    "t": "邮差何启明送来一封家书。"
+  },
+  "k03.notice.letter_held": {
+    "t": "家书先压在柜上，没拆。"
+  },
+  "k03.notice.ma_office": {
+    "t": "告示说，马保长如今归伪区公所管。"
+  },
+  "k03.notice.wangshan_left": {
+    "t": "王山又离开了镇子。"
+  },
+  "k03.notice.xiaoding_away": {
+    "t": "小丁这一阵不来了。"
+  },
+  "k03.reason.levy": {
+    "t": "年关摊派"
+  },
+  "k03.reason.repay": {
+    "t": "赵老三还钱"
+  }
+}

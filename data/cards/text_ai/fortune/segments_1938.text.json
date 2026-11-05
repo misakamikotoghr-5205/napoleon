@@ -1,0 +1,45 @@
+{
+  "_meta": {
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-misc"
+  },
+  "ws.1938.month.caixing": {
+    "title": "财星高照",
+    "body": "这个月来买东西的人多一些，也肯出价。"
+  },
+  "ws.1938.month.wenxing": {
+    "title": "文星临门",
+    "body": "这个月好事来得多一点。"
+  },
+  "ws.1938.month.liunian": {
+    "title": "流年不利",
+    "body": "这个月坏事来得多一些，凡事多留个心。"
+  },
+  "ws.1938.month.guanmian": {
+    "title": "官面多事",
+    "body": "这个月官面上的事多，查问也多。"
+  },
+  "ws.1938.month.pingan": {
+    "title": "平平",
+    "body": "不好不坏，凭本事过日子。"
+  },
+  "ws.1938.month.koushe": {
+    "title": "口舌是非",
+    "body": "这个月口舌纠纷多一些，说话留神。"
+  },
+  "ws.1938.month.shunshui": {
+    "title": "水路通",
+    "body": "这个月水边码头的消息多一些。"
+  },
+  "ws.1938.big.fanshen_pass": {
+    "title": "绝处逢生",
+    "body": "风声松了些。码头上有人夜里来谈一桩买卖，做不做由你。"
+  },
+  "ws.1938.big.pingan_shop": {
+    "title": "虚惊一场",
+    "body": "铺子平平安安挺了过来，街坊高看你一眼。"
+  },
+  "ws.1938.big.zhuidi_levy": {
+    "title": "雪上加霜",
+    "body": "伪维持会的摊派压了上来，风声更紧了。"
+  }
+}

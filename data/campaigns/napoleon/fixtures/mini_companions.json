@@ -1,0 +1,164 @@
+{
+ "companions": {
+  "baptiste": {
+   "name": "巴蒂斯特",
+   "short": "巴蒂斯特",
+   "segments": [
+    "trunk",
+    "conquest",
+    "ocean",
+    "cristo"
+   ],
+   "bonds": [
+    "imperial",
+    "scholar"
+   ],
+   "gold": 2,
+   "battle": {
+    "cls": "engineer",
+    "hp": 14,
+    "atk": 3,
+    "def": 2,
+    "block": 1,
+    "cost": 3,
+    "skill": "fortify",
+    "skill_title": "fortify",
+    "role": "engineer"
+   }
+  },
+  "corso": {
+   "name": "科尔索",
+   "short": "科尔索",
+   "segments": [
+    "trunk",
+    "conquest",
+    "ocean",
+    "cristo"
+   ],
+   "bonds": [
+    "imperial",
+    "shadow"
+   ],
+   "gold": 2,
+   "battle": {
+    "cls": "jager",
+    "hp": 8,
+    "atk": 4,
+    "def": 0,
+    "block": 0,
+    "cost": 3,
+    "skill": "mark_target",
+    "skill_title": "mark_target",
+    "role": "jager"
+   }
+  },
+  "marie": {
+   "name": "玛丽",
+   "short": "玛丽",
+   "segments": [
+    "trunk",
+    "conquest",
+    "ocean",
+    "cristo"
+   ],
+   "bonds": [
+    "island",
+    "imperial"
+   ],
+   "gold": 2,
+   "battle": {
+    "cls": "medic",
+    "hp": 10,
+    "atk": 0,
+    "def": 1,
+    "block": 0,
+    "cost": 3,
+    "skill": "mark_target",
+    "skill_title": "mark_target",
+    "role": "medic"
+   }
+  },
+  "ney": {
+   "name": "内伊",
+   "short": "内伊",
+   "segments": [
+    "conquest"
+   ],
+   "bonds": [
+    "imperial",
+    "far_sea"
+   ],
+   "gold": 2,
+   "battle": {
+    "cls": "hussar",
+    "hp": 13,
+    "atk": 6,
+    "def": 1,
+    "block": 1,
+    "cost": 4,
+    "skill": "bayonet_charge",
+    "skill_title": "bayonet_charge",
+    "role": "hussar"
+   },
+   "fated": [
+    {
+     "seg": "conquest",
+     "template": "rivoli"
+    }
+   ]
+  },
+  "dantes": {
+   "name": "唐泰斯",
+   "short": "唐泰斯",
+   "segments": [
+    "ocean",
+    "cristo"
+   ],
+   "bonds": [
+    "far_sea",
+    "shadow"
+   ],
+   "gold": 2,
+   "battle": {
+    "cls": "hussar",
+    "hp": 12,
+    "atk": 6,
+    "def": 1,
+    "block": 1,
+    "cost": 4,
+    "skill": "bayonet_charge",
+    "skill_title": "bayonet_charge",
+    "role": "hussar"
+   }
+  },
+  "faria": {
+   "name": "法利亚",
+   "short": "法利亚",
+   "segments": [
+    "ocean",
+    "cristo"
+   ],
+   "bonds": [
+    "scholar",
+    "shadow"
+   ],
+   "gold": 2,
+   "battle": {
+    "cls": "engineer",
+    "hp": 14,
+    "atk": 3,
+    "def": 2,
+    "block": 1,
+    "cost": 3,
+    "skill": "fortify",
+    "skill_title": "fortify",
+    "role": "engineer"
+   },
+   "available_from": {
+    "seg": "cristo",
+    "template": "major_a",
+    "turn": 3
+   }
+  }
+ }
+}

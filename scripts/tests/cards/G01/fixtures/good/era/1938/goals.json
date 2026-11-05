@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1,
+    "brief": "例子集：本关目标（§4.7.20）"
+  },
+  "cards": [
+    {
+      "id": "gl.1938.keep_shop",
+      "type": "goal",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "main": true,
+      "done_when": {
+        "estate_status": [
+          "es.shopfront",
+          "held"
+        ]
+      },
+      "eval": "month_close",
+      "effects": {
+        "on_done": [],
+        "on_fail": []
+      },
+      "brief": "主线目标：撑过第一个月，保住铺面。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-14"
+      }
+    }
+  ]
+}

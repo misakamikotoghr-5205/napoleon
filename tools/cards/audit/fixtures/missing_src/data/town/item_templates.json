@@ -1,0 +1,15 @@
+{
+  "categories": {
+    "rice": {
+      "label": "THIS_BRIEF_MUST_NOT_LEAK_LABEL",
+      "variants": [
+        {
+          "id": "jing",
+          "name": "THIS_BRIEF_MUST_NOT_LEAK_NAME",
+          "material": "",
+          "sprite": "art/items/rice.png"
+        }
+      ]
+    }
+  }
+}

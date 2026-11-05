@@ -1,0 +1,680 @@
+{
+  "_meta": {
+    "owner": "K01",
+    "schema": 1,
+    "brief": "1938 年三月主线：哥哥告别、德字第一九六号、王山、赵老三借钱、林嫂当期、马万利摊派。警察所开门归 K02。"
+  },
+  "cards": [
+    {
+      "id": "p.brother.1938.farewell",
+      "type": "person",
+      "person": "brother",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "family",
+        "story",
+        "omen_far",
+        "omen_family"
+      ],
+      "gold": true,
+      "story_node": "s1938.brother_farewell",
+      "intent": "story",
+      "keepable": false,
+      "schedule": {
+        "stage_day": 2,
+        "order": 1
+      },
+      "choices": [
+        {
+          "id": "listen",
+          "brief": "听他交代完",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1938.brother_farewell",
+              "outcome": "listened"
+            },
+            {
+              "op": "add_card",
+              "card": "kp.brother_note",
+              "to": "kept"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.brother.1938.farewell"
+            },
+            {
+              "op": "person_state",
+              "person": "brother",
+              "state": "gone"
+            }
+          ]
+        },
+        {
+          "id": "argue",
+          "brief": "和他争",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1938.brother_farewell",
+              "outcome": "argued"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.brother.1938.farewell_cold"
+            },
+            {
+              "op": "person_state",
+              "person": "brother",
+              "state": "gone"
+            },
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "story",
+            "node": "s1938.brother_farewell",
+            "outcome": "ignored"
+          },
+          {
+            "op": "dossier_gap",
+            "frag": "df.brother.1938.farewell"
+          },
+          {
+            "op": "person_state",
+            "person": "brother",
+            "state": "gone"
+          },
+          {
+            "op": "notice",
+            "key": "k01.notice.brother_ignored"
+          }
+        ]
+      },
+      "art": "portrait.brother",
+      "brief": "1938 年三月第一关第 2 天的金色人物牌。哥哥来柜台把铺子交给你，人要走。第一个选项听完交代：主线记 listened，留牌 kp.brother_note 放进留着的牌，补档案，人离开。第二个选项和他争：记 argued，补另一块档案，人仍离开。当天不处理：记 ignored，听交代那块档案变成缺口。不进随机牌库。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "tk.1938.de196",
+      "type": "pawn_ticket",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "official",
+        "story",
+        "omen_official",
+        "omen_far"
+      ],
+      "story_node": "s1938.ticket196",
+      "keepable": true,
+      "expires_days": 0,
+      "must_resolve": false,
+      "number": 196,
+      "holder": "",
+      "item_template": "documents.receipt",
+      "foreign": true,
+      "minigame": "fragments",
+      "fragments": {
+        "doc": "pawn_ticket",
+        "pieces": 6,
+        "dangzi_marks": 3,
+        "seal_offset_px": 0,
+        "ink_mismatch": [],
+        "missing_piece": -1
+      },
+      "schedule": {
+        "stage_day": 4,
+        "order": 1
+      },
+      "effects": {
+        "on_resolve": [
+          {
+            "op": "story",
+            "node": "s1938.ticket196",
+            "outcome": "pieced"
+          },
+          {
+            "op": "dossier",
+            "frag": "df.brother.1938.ticket196"
+          },
+          {
+            "op": "flag",
+            "key": "k01_ticket196_pieced",
+            "value": true
+          },
+          {
+            "op": "notice",
+            "key": "k01.notice.ticket_pieced"
+          }
+        ]
+      },
+      "art": "illus.tk.de196",
+      "brief": "1938 年三月主线当票“德字第一九六号”，第 4 天发到手牌。不是这间铺子开的，不走账。拼碎片。拼完记走向 pieced，并补一块档案。可以留着，不当天必须处理。鉴定改版（10-25）：fragments 是这张当票的拼法（六块、当字三处、印对得上、纸都一样）；拼对拼错不分剧情（编排 10-25 第 5 条）。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.wangshan.1938.visit",
+      "type": "person",
+      "person": "wangshan",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "story",
+        "omen_stranger",
+        "omen_road",
+        "bad_omen"
+      ],
+      "gold": true,
+      "story_node": "s1938.wangshan",
+      "intent": "story",
+      "keepable": false,
+      "schedule": {
+        "stage_day": 9,
+        "order": 1
+      },
+      "choices": [
+        {
+          "id": "shelter",
+          "brief": "收留他",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1938.wangshan",
+              "outcome": "helped"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.wangshan.1938.met"
+            },
+            {
+              "op": "flag",
+              "key": "k01_wangshan_helped",
+              "value": true
+            },
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "conscience",
+              "delta": 1
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "id": "turn_in",
+          "brief": "交出去",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1938.wangshan",
+              "outcome": "turned"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.wangshan.1938.turned"
+            },
+            {
+              "op": "person_state",
+              "person": "wangshan",
+              "state": "away",
+              "days": 12
+            },
+            {
+              "op": "heat",
+              "delta": -2
+            },
+            {
+              "op": "conscience",
+              "delta": -2
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "story",
+            "node": "s1938.wangshan",
+            "outcome": "ignored"
+          },
+          {
+            "op": "dossier_gap",
+            "frag": "df.wangshan.1938.met"
+          },
+          {
+            "op": "notice",
+            "key": "k01.notice.wangshan_ignored"
+          }
+        ]
+      },
+      "art": "portrait.wangshan",
+      "brief": "1938 年三月主线，自称过路的青年找上门。金色牌，第 9 天。哪一边先不写死。收留：走向 helped，补见面那块档案，风声变紧。交出去：走向 turned，人暂时不来，补另一块档案。当天不理：走向 ignored，见面那块变成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhao.1938.borrow",
+      "type": "person",
+      "person": "zhao",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "story",
+        "farmer",
+        "poor",
+        "omen_family",
+        "omen_dispute",
+        "bad_omen"
+      ],
+      "gold": true,
+      "story_node": "s1938.zhao_borrow",
+      "intent": "story",
+      "keepable": false,
+      "schedule": {
+        "stage_day": 12,
+        "order": 1
+      },
+      "choices": [
+        {
+          "id": "lend",
+          "brief": "借出三百",
+          "almanac": [
+            "lend"
+          ],
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 300,
+              "payee": "zhao",
+              "reason": "k01.reason.zhao_lend",
+              "short": "ladder"
+            },
+            {
+              "op": "story",
+              "node": "s1938.zhao_borrow",
+              "outcome": "lent"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.zhao.1938.borrow"
+            },
+            {
+              "op": "flag",
+              "key": "k01_zhao_lent",
+              "value": true
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            },
+            {
+              "op": "add_card",
+              "card": "kp.zhao_favor",
+              "to": "kept"
+            }
+          ]
+        },
+        {
+          "id": "partial",
+          "brief": "先付一百",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 100,
+              "payee": "zhao",
+              "reason": "k01.reason.zhao_part",
+              "short": "ladder"
+            },
+            {
+              "op": "story",
+              "node": "s1938.zhao_borrow",
+              "outcome": "partial"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.zhao.1938.partial"
+            },
+            {
+              "op": "flag",
+              "key": "k01_zhao_partial",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "不借",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1938.zhao_borrow",
+              "outcome": "refused"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.zhao.1938.refused"
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            },
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "story",
+            "node": "s1938.zhao_borrow",
+            "outcome": "ignored"
+          },
+          {
+            "op": "dossier_gap",
+            "frag": "df.zhao.1938.borrow"
+          },
+          {
+            "op": "notice",
+            "key": "k01.notice.zhao_ignored"
+          }
+        ]
+      },
+      "art": "portrait.zhao",
+      "brief": "1938 年三月主线，佃户来借三百，要去赎回被伪军拉走的家里人。金色牌，第 12 天。借出三百记 lent；先付一百记 partial；不借记 refused。当天不理：记 ignored，借钱那块档案变成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.linsao.1938.term",
+      "type": "person",
+      "person": "linsao",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "story",
+        "woman",
+        "boat",
+        "pregnant",
+        "omen_water",
+        "omen_family"
+      ],
+      "gold": true,
+      "story_node": "s1938.linsao_term",
+      "intent": "story",
+      "keepable": false,
+      "schedule": {
+        "stage_day": 16,
+        "order": 1
+      },
+      "choices": [
+        {
+          "id": "extend",
+          "brief": "宽限当期",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1938.linsao_term",
+              "outcome": "extended"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.linsao.1938.term"
+            },
+            {
+              "op": "flag",
+              "key": "k01_linsao_extended",
+              "value": true
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "id": "forfeit",
+          "brief": "按满当收下",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1938.linsao_term",
+              "outcome": "forfeited"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.linsao.1938.forfeit"
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "story",
+            "node": "s1938.linsao_term",
+            "outcome": "ignored"
+          },
+          {
+            "op": "dossier_gap",
+            "frag": "df.linsao.1938.term"
+          },
+          {
+            "op": "notice",
+            "key": "k01.notice.linsao_ignored"
+          }
+        ]
+      },
+      "art": "portrait.linsao",
+      "brief": "1938 年三月主线，有孕的船户家眷来处理金簪当期。金色牌，第 16 天。不依赖是否先抽到当簪那张。宽限记 extended；按满当收下记 forfeited，这条没有后续人物牌。当天不理：记 ignored，当期那块档案变成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.ma.1938.levy",
+      "type": "person",
+      "person": "ma",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "story",
+        "official",
+        "levy",
+        "omen_official",
+        "bad_omen"
+      ],
+      "gold": true,
+      "story_node": "s1938.ma_levy",
+      "intent": "story",
+      "keepable": false,
+      "schedule": {
+        "stage_day": 20,
+        "order": 1
+      },
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "交这笔摊派",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 40,
+              "payee": "ma",
+              "reason": "k01.reason.ma_levy",
+              "short": "ladder"
+            },
+            {
+              "op": "story",
+              "node": "s1938.ma_levy",
+              "outcome": "paid"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.ma.1938.levy"
+            },
+            {
+              "op": "heat",
+              "delta": -2
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            },
+            {
+              "op": "notice",
+              "key": "k01.notice.levy_paid"
+            },
+            {
+              "op": "add_card",
+              "card": "kp.ma_owes",
+              "to": "kept"
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "不交",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1938.ma_levy",
+              "outcome": "refused"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.ma.1938.levy_no"
+            },
+            {
+              "op": "heat",
+              "delta": 3
+            },
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        },
+        {
+          "id": "talk",
+          "brief": "跟他讲一讲",
+          "check": {
+            "slots": [
+              {
+                "id": "talker",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "attr": "tongue",
+                "brief": "出面说话的人"
+              }
+            ],
+            "need": 2,
+            "on_success": [
+              {
+                "op": "story",
+                "node": "s1938.ma_levy",
+                "outcome": "talked"
+              },
+              {
+                "op": "dossier",
+                "frag": "df.ma.1938.levy"
+              },
+              {
+                "op": "heat",
+                "delta": -1
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "story",
+                "node": "s1938.ma_levy",
+                "outcome": "refused"
+              },
+              {
+                "op": "dossier",
+                "frag": "df.ma.1938.levy_no"
+              },
+              {
+                "op": "heat",
+                "delta": 2
+              }
+            ]
+          }
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "story",
+            "node": "s1938.ma_levy",
+            "outcome": "ignored"
+          },
+          {
+            "op": "dossier_gap",
+            "frag": "df.ma.1938.levy"
+          },
+          {
+            "op": "notice",
+            "key": "k01.notice.ma_ignored"
+          }
+        ]
+      },
+      "art": "portrait.ma",
+      "brief": "1938 年三月主线，伪维持会的保长上门摊派。金色牌，第 20 天。交 40 记 paid；不交记 refused；放口才掷铜钱，成了记 talked，不成也按 refused。当天不理：记 ignored，摊派那块档案变成缺口。伪维新政府这个月月底才成立，这张仍用伪维持会的名目。月底警察所开门是事件牌，不在这张上。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

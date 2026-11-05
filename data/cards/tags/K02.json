@@ -1,0 +1,90 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1,
+    "brief": "K02 用到的标签"
+  },
+  "tags": {
+    "big": {
+      "brief": "大命运、大轮盘"
+    },
+    "contraband": {
+      "brief": "来路不明，被查会出事"
+    },
+    "dispute": {
+      "brief": "口舌、拉人评理"
+    },
+    "dock": {
+      "brief": "码头、船"
+    },
+    "dossier": {
+      "brief": "档案簿"
+    },
+    "family": {
+      "brief": "家里的人"
+    },
+    "favor": {
+      "brief": "人情、作保"
+    },
+    "fortune": {
+      "brief": "算命、求签、测字、庙会和赌摊"
+    },
+    "home": {
+      "brief": "家宅和铺里的日子"
+    },
+    "leverage": {
+      "brief": "把柄，被翻出来会出事"
+    },
+    "levy": {
+      "brief": "摊派和点名交钱"
+    },
+    "market": {
+      "brief": "集市"
+    },
+    "medicine": {
+      "brief": "药"
+    },
+    "official": {
+      "brief": "官面、告示、点名"
+    },
+    "papers": {
+      "brief": "证件、路条一类留牌"
+    },
+    "police": {
+      "brief": "警察、巡查、新开的所"
+    },
+    "refugee": {
+      "brief": "逃难的人"
+    },
+    "rice": {
+      "brief": "米"
+    },
+    "ritual": {
+      "brief": "节令、庙里的事"
+    },
+    "road": {
+      "brief": "出门、路条"
+    },
+    "roof": {
+      "brief": "屋漏、修瓦"
+    },
+    "rumor": {
+      "brief": "风声这一档的事"
+    },
+    "search": {
+      "brief": "挨家查、翻留着的牌"
+    },
+    "shop": {
+      "brief": "铺面和家当"
+    },
+    "spring": {
+      "brief": "春天"
+    },
+    "stranger": {
+      "brief": "生人"
+    },
+    "water": {
+      "brief": "船、河、雨"
+    }
+  }
+}

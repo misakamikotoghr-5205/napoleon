@@ -1,0 +1,120 @@
+{
+  "_meta": {
+    "owner": "W0",
+    "schema": 1,
+    "brief": "例子集：轮盘（§4.7.17）"
+  },
+  "cards": [
+    {
+      "id": "wh.month",
+      "type": "wheel",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "month",
+      "incense": {
+        "accepts": [
+          "money",
+          "kept",
+          "contact"
+        ],
+        "money_per_unit": 5,
+        "contact_attr": "pull",
+        "unit_widen_pct": 15,
+        "max_units": 6
+      },
+      "cost": {},
+      "art": "wheel.month",
+      "brief": "每关开头转一次，定这个月的运势。香案上放香火钱、留着的牌、人脉，好的扇区变宽。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "id": "wh.big",
+      "type": "wheel",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "big",
+      "incense": {
+        "accepts": [
+          "money",
+          "kept",
+          "contact"
+        ],
+        "money_per_unit": 10,
+        "contact_attr": "pull",
+        "unit_widen_pct": 20,
+        "max_units": 6
+      },
+      "cost": {},
+      "art": "wheel.big",
+      "brief": "（W0 例子）大轮盘：快输时由 bf.wheel 打开；翻身／平安／坠底。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "wh.fair",
+      "type": "wheel",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "fair",
+      "incense": {
+        "accepts": [
+          "money"
+        ],
+        "money_per_unit": 5,
+        "unit_widen_pct": 10,
+        "max_units": 4
+      },
+      "cost": {
+        "money": 2
+      },
+      "art": "wheel.fair",
+      "brief": "（W0 例子）庙会：花两个钱转一次。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "wh.gamble",
+      "type": "wheel",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "gamble",
+      "incense": {
+        "accepts": [
+          "money",
+          "kept"
+        ],
+        "money_per_unit": 10,
+        "unit_widen_pct": 10,
+        "max_units": 4
+      },
+      "cost": {
+        "stake": true
+      },
+      "art": "wheel.gamble",
+      "brief": "（W0 例子）赌摊：押一张留着的牌才能转。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

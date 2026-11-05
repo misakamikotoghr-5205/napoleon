@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "_provenance": "ai:claude:opus-5.5:2026-10-25:appraise-weigh"
+  },
+  "obs.weigh.match": {
+    "t": "称出来和客人说的分量对得上。"
+  },
+  "obs.weigh.light_small": {
+    "t": "比客人说的轻一点点。"
+  },
+  "obs.weigh.light_much": {
+    "t": "比客人说的轻了不少。"
+  },
+  "obs.weigh.heavy": {
+    "t": "比客人说的还重。"
+  },
+  "obs.weigh.match_maybe": {
+    "t": "好像和客人说的分量对得上，秤没压得很稳。"
+  },
+  "obs.weigh.heavy_maybe": {
+    "t": "好像比客人说的还重，秤没压得很稳。"
+  },
+  "obs.weigh.light_vague": {
+    "t": "好像轻一些，戥子没压稳。"
+  },
+  "obs.weigh.unsure": {
+    "t": "没称准，说不好。"
+  }
+}

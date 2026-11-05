@@ -1,0 +1,22 @@
+{
+  "cards": [
+    {
+      "id": "rule.bad.hidden",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "brief": "这一页不该出现权重、底价或真假。",
+      "weight": 0
+    },
+    {
+      "id": "rule.ok.clean",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "brief": "一天的顺序：早上发牌，白天处理，打烊，夜里选一件事。",
+      "weight": 0
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "_meta": {
+    "owner": "C08",
+    "schema": 1,
+    "brief": "回家吃饭是 {def, choices} 字典，另外两张仍是裸 id",
+    "_provenance": {
+      "by": "ai",
+      "task": "C08",
+      "date": "2026-10-13"
+    }
+  },
+  "queries": {},
+  "responses": [
+    {
+      "cmd": "night.choose",
+      "events": [
+        [
+          "phase_changed",
+          "night",
+          "settle"
+        ]
+      ],
+      "match": {
+        "choice": "waive_life",
+        "def": "nt.family_dinner"
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "settle"
+        }
+      ],
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "night.choose",
+      "events": [
+        [
+          "phase_changed",
+          "night",
+          "settle"
+        ]
+      ],
+      "match": {
+        "choice": "family_word",
+        "def": "nt.family_dinner"
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "settle"
+        }
+      ],
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "night.choose",
+      "match": {
+        "def": "nt.tidy"
+      },
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "night.choose",
+      "match": {
+        "def": "nt.early_sleep"
+      },
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    }
+  ],
+  "view": {
+    "busy": false,
+    "date": {
+      "abs_day": 1,
+      "d": 1,
+      "era": "1938",
+      "m": 3,
+      "minute": 900,
+      "stage": 0,
+      "stage_day": 1,
+      "stage_days": 30,
+      "weekday": 1,
+      "y": 1938
+    },
+    "hand": [],
+    "heat_tier": 0,
+    "mode": "shop",
+    "money": {
+      "amount": 118,
+      "currency": "fabi"
+    },
+    "night_offers": [
+      {
+        "art": "illus.nt.family_dinner",
+        "choices": ["waive_life", "family_word"],
+        "def": "nt.family_dinner"
+      },
+      "nt.tidy",
+      {
+        "art": "illus.nt.early_sleep",
+        "choices": [],
+        "def": "nt.early_sleep"
+      }
+    ],
+    "phase": "night",
+    "rep_tier": 1,
+    "stage": {
+      "sealed": false,
+      "set": "counter",
+      "time": "night"
+    },
+    "v": 1
+  }
+}

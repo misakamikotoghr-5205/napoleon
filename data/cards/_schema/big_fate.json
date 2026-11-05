@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "res://data/cards/_schema/big_fate.json",
+  "title": "card type big_fate",
+  "description": "Mechanical skeleton of a 'big_fate' card (docs/cards/CARDS_INTERFACES.md section 4). Player-facing text lives in data/cards/text/** (human only).",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "era",
+    "brief",
+    "_provenance"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Card id, regex ^[a-z][a-z0-9_]*(\\.[a-z0-9_]+)+$, first segment fixed by type (section 4.2)"
+    },
+    "type": {
+      "type": "string",
+      "description": "Card type name (section 4.2)"
+    },
+    "era": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Eras the card exists in: ['1938'], ['1938','1939'] or ['*']"
+    },
+    "weight": {
+      "type": "integer",
+      "description": "Base weight in its pool; 0 = never drawn at random, only by schedule/effects"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tags declared in some data/cards/tags/*.json"
+    },
+    "gold": {
+      "type": "boolean",
+      "description": "Gold story card (section 10); only person with story_node"
+    },
+    "story_node": {
+      "type": "string",
+      "description": "Story node id s<year>.<slug>"
+    },
+    "keepable": {
+      "type": "boolean",
+      "description": "Can be kept in hand zone 'kept' (kept type always true, gold always false)"
+    },
+    "expires_days": {
+      "type": "integer",
+      "description": "Days after keeping until it expires; 0 = never"
+    },
+    "must_resolve": {
+      "type": "boolean",
+      "description": "Must be handled before closing the shop (defaults per type)"
+    },
+    "conditions": {
+      "type": "object",
+      "description": "Condition (section 5.3) for entering the pool / being dealt"
+    },
+    "schedule": {
+      "type": "object",
+      "description": "Schedule {stage_day, when, order, once} (section 4.4.4)"
+    },
+    "slots": {
+      "type": "array",
+      "description": "Slots on the card face (section 4.4.1)"
+    },
+    "check": {
+      "type": "object",
+      "description": "Coin check {need, on_success, on_fail} (section 4.4.2)"
+    },
+    "choices": {
+      "type": "array",
+      "description": "Choices (section 4.4.3)"
+    },
+    "effects": {
+      "type": "object",
+      "description": "Hook name -> effects array (section 4.4.5)"
+    },
+    "art": {
+      "type": "string",
+      "description": "Art id (section 4.8)"
+    },
+    "brief": {
+      "type": "string",
+      "description": "Designer note; never shipped (stripped by stage_ship.py)"
+    },
+    "opens_wheel": {
+      "type": "string",
+      "description": "Wheel id"
+    },
+    "crisis": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Crisis kinds"
+    },
+    "valence": {
+      "type": "string",
+      "description": "good bad mixed"
+    },
+    "stage": {
+      "type": "object",
+      "description": "stage block (4.7.24)"
+    }
+  },
+  "patternProperties": {
+    "^_": {
+      "description": "Underscore fields (_provenance, _doc) are allowed"
+    }
+  },
+  "additionalProperties": false
+}

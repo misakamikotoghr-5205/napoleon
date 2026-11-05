@@ -1,0 +1,58 @@
+{
+  "_meta": {
+    "owner": "G06",
+    "schema": 1,
+    "_provenance": {
+      "by": "ai",
+      "task": "G06",
+      "date": "2026-10-13"
+    }
+  },
+  "keys": {
+    "g06.end.stay": {
+      "brief": "牢房留宿，参数 nights 为即将住的第几晚、max 为最多几晚"
+    },
+    "g06.end.fail": {
+      "brief": "牢房达到最后一晚，按打点失败结算，参数 nights 与 max"
+    },
+    "g06.end.short": {
+      "brief": "打烊时未选择钱不够路线，按认了执行原来源后果"
+    },
+    "g06.reason.mortgage": {
+      "brief": "抵押家当收款原因"
+    },
+    "g06.reason.interest": {
+      "brief": "家当月底利息原因"
+    },
+    "g06.reason.redeem_estate": {
+      "brief": "赎回家当付款原因"
+    },
+    "g06.reason.redeem_shop": {
+      "brief": "街头赎回铺面付款原因"
+    },
+    "g06.reason.seize": {
+      "brief": "家当被没收原因"
+    },
+    "g06.short.payment": {
+      "brief": "待付钱款原因"
+    },
+    "g06.short.goods": {
+      "brief": "拿货抵钱款原因"
+    },
+    "g06.short.default": {
+      "brief": "不付款并执行原来源钱不够后果"
+    },
+    "g06.street.redeemed": {
+      "brief": "赎回铺面后恢复店铺模式"
+    },
+    "g06.prison.arrested": {
+      "brief": "被捕后打开牢房牌的格子面板"
+    },
+    "g06.month.interest": {
+      "brief": "月底已索取家当利息，参数家当与钱数"
+    },
+    "g06.month.shop_lost": {
+      "brief": "铺面月底仍抵押，丢失后进入街头"
+    }
+  }
+}

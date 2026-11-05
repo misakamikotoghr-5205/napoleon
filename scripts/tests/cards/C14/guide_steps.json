@@ -1,0 +1,27 @@
+{
+  "steps": [
+    {
+      "id": "gd.mg.weigh",
+      "type": "guide_step",
+      "era": ["*"],
+      "weight": 0,
+      "teaches": ["mg.weigh"],
+      "trigger": {"first": "mg.weigh"},
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.mg.weigh.weights",
+      "anchor_fallback": "a.mg.weigh.main",
+      "done_when": ["ui:mg_tool"],
+      "rule_page": "rule.appraise",
+      "priority": 80,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 16
+    }
+  ],
+  "settings": {
+    "gap_ms": 0,
+    "default_seconds": 16,
+    "max_new_per_day": 16,
+    "bubble_max_w": 360
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "_meta": {
+    "owner": "C06",
+    "schema": 1,
+    "wheel": "wh.fair",
+    "uid": "c0101",
+    "required": false,
+    "brief": "庙会：花钱才能转。",
+    "_provenance": {
+      "by": "ai",
+      "task": "C06",
+      "date": "2026-10-13"
+    }
+  },
+  "view": {
+    "v": 1,
+    "phase": "day",
+    "mode": "shop",
+    "busy": false,
+    "money": {
+      "amount": 340,
+      "currency": "fabi"
+    },
+    "hand": [],
+    "kept": [],
+    "contacts": [],
+    "date": {
+      "abs_day": 1,
+      "stage": 0,
+      "stage_day": 1,
+      "era": "1938"
+    },
+    "open_panel": {
+      "kind": "wheel",
+      "args": {
+        "wheel": "wh.fair",
+        "uid": "c0101",
+        "required": false
+      }
+    }
+  },
+  "queries": {
+    "wheel|{\"uid\":\"c0101\",\"wheel\":\"wh.fair\"}": {
+      "wheel": "wh.fair",
+      "uid": "c0101",
+      "kind": "fair",
+      "art": "wheel.fair",
+      "segments": [
+        {
+          "id": "ws.fair.lantern",
+          "arc_deg": 60.0,
+          "art": "icon.ws.caixing"
+        },
+        {
+          "id": "ws.fair.drum",
+          "arc_deg": 60.0,
+          "art": "icon.ws.liunian"
+        },
+        {
+          "id": "ws.fair.sugar",
+          "arc_deg": 60.0,
+          "art": "icon.ws.pingan"
+        },
+        {
+          "id": "ws.fair.mask",
+          "arc_deg": 60.0,
+          "art": "icon.ws.fanshen"
+        },
+        {
+          "id": "ws.fair.kite",
+          "arc_deg": 60.0,
+          "art": "icon.ws.zhuidi"
+        },
+        {
+          "id": "ws.fair.tea",
+          "arc_deg": 60.0,
+          "art": "icon.ws.pingan"
+        }
+      ],
+      "incense": {
+        "accepts": [
+          "money"
+        ],
+        "placed": [],
+        "full": false
+      },
+      "cost": {
+        "money": 2,
+        "stake": false
+      },
+      "staked": "",
+      "spun": false,
+      "result": {
+        "segment": "",
+        "stop_deg": 0.0
+      }
+    }
+  },
+  "responses": [
+    {
+      "cmd": "wheel.offer",
+      "match": {
+        "uid": "c0101",
+        "wheel": "wh.fair",
+        "source": {
+          "kind": "money",
+          "amount": 10
+        }
+      },
+      "result": {
+        "ok": true,
+        "err": ""
+      },
+      "events": []
+    },
+    {
+      "cmd": "wheel.withdraw",
+      "match": {
+        "uid": "c0101",
+        "wheel": "wh.fair",
+        "index": 0
+      },
+      "result": {
+        "ok": true,
+        "err": ""
+      },
+      "events": []
+    },
+    {
+      "cmd": "wheel.spin",
+      "match": {
+        "uid": "c0101",
+        "wheel": "wh.fair"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "segment": "ws.fair.sugar",
+        "stop_deg": 150.0
+      },
+      "events": [
+        [
+          "wheel_spun",
+          "wh.fair",
+          "ws.fair.sugar",
+          150.0
+        ]
+      ]
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "ok": true,
+        "err": ""
+      }
+    }
+  ]
+}

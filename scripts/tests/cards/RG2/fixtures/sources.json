@@ -1,0 +1,212 @@
+{
+  "_meta": {
+    "owner": "RG3",
+    "schema": 1,
+    "brief": "客源 6 种（肉鸽 v1）：周末盘账时挑，管到这一关月底，改门口来的人。只用 pool_weight 与 deal_count。"
+  },
+  "cards": [
+    {
+      "id": "ky.traveling_buyers",
+      "type": "source",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "mods": [
+        {
+          "mod": "pool_weight",
+          "pool": "person",
+          "intents": [
+            "buy"
+          ],
+          "pct": 180
+        },
+        {
+          "mod": "pool_weight",
+          "pool": "person",
+          "intents": [
+            "ask"
+          ],
+          "pct": 80
+        }
+      ],
+      "art": "illus.ky.traveling_buyers",
+      "brief": "跑单帮的买主：来买东西的多（buy 180），光打听不办事的少一点（ask 80）。",
+      "_provenance": {
+        "by": "ai",
+        "task": "RG3",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "ky.needy_neighbors",
+      "type": "source",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "mods": [
+        {
+          "mod": "pool_weight",
+          "pool": "person",
+          "intents": [
+            "pawn"
+          ],
+          "pct": 170
+        },
+        {
+          "mod": "pool_weight",
+          "pool": "person",
+          "intents": [
+            "help"
+          ],
+          "pct": 130
+        }
+      ],
+      "art": "illus.ky.needy_neighbors",
+      "brief": "急等钱用的街坊：来当东西的多（pawn 170），求帮忙的也多（help 130）。",
+      "_provenance": {
+        "by": "ai",
+        "task": "RG3",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "ky.junk_runners",
+      "type": "source",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "mods": [
+        {
+          "mod": "pool_weight",
+          "pool": "person",
+          "intents": [
+            "sell"
+          ],
+          "pct": 170
+        },
+        {
+          "mod": "pool_weight",
+          "pool": "event",
+          "tags_any": [
+            "police",
+            "search"
+          ],
+          "pct": 115
+        }
+      ],
+      "art": "illus.ky.junk_runners",
+      "brief": "收旧货的门路：来卖东西给你的多（sell 170）；来路杂，查铺、巡警的事多一点（event 115）。",
+      "_provenance": {
+        "by": "ai",
+        "task": "RG3",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "ky.old_customers",
+      "type": "source",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "mods": [
+        {
+          "mod": "pool_weight",
+          "pool": "person",
+          "intents": [
+            "redeem"
+          ],
+          "pct": 170
+        },
+        {
+          "mod": "deal_count",
+          "type": "person",
+          "delta": 1,
+          "when": {
+            "market_day": true
+          }
+        }
+      ],
+      "art": "illus.ky.old_customers",
+      "brief": "老主顾：来赎当的多（redeem 170），集市日多一位客人（deal_count +1）。",
+      "_provenance": {
+        "by": "ai",
+        "task": "RG3",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "ky.dockhands",
+      "type": "source",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "mods": [
+        {
+          "mod": "pool_weight",
+          "pool": "person",
+          "tags_any": [
+            "dock",
+            "boat",
+            "merchant"
+          ],
+          "pct": 200
+        },
+        {
+          "mod": "pool_weight",
+          "pool": "news",
+          "tags_any": [
+            "omen_water"
+          ],
+          "pct": 150
+        }
+      ],
+      "art": "illus.ky.dockhands",
+      "brief": "码头上的人：脚夫船家行商常来（person dock/boat/merchant 200），水边的消息多（news omen_water 150）。",
+      "_provenance": {
+        "by": "ai",
+        "task": "RG3",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "ky.big_households",
+      "type": "source",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "mods": [
+        {
+          "mod": "pool_weight",
+          "pool": "person",
+          "tags_any": [
+            "landlord",
+            "steward",
+            "sunfu"
+          ],
+          "pct": 180
+        },
+        {
+          "mod": "pool_weight",
+          "pool": "event",
+          "tags_any": [
+            "official"
+          ],
+          "pct": 120
+        }
+      ],
+      "art": "illus.ky.big_households",
+      "brief": "大户人家的管事：地主、管家、孙府的人常来（person 180）；官面上的事也跟着多（event official 120）。",
+      "_provenance": {
+        "by": "ai",
+        "task": "RG3",
+        "date": "2026-10-25"
+      }
+    }
+  ]
+}

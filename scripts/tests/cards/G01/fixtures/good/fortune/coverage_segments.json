@@ -1,0 +1,116 @@
+{
+  "_meta": {
+    "owner": "K10",
+    "schema": 1
+  },
+  "cards": [
+    {
+      "id": "ws.fixture.fair0",
+      "type": "wheel_segment",
+      "wheel": "wh.fair",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 1,
+      "valence": "good",
+      "effects": [],
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.fixture.fair1",
+      "type": "wheel_segment",
+      "wheel": "wh.fair",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 1,
+      "valence": "neutral",
+      "effects": [],
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.fixture.fair2",
+      "type": "wheel_segment",
+      "wheel": "wh.fair",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 1,
+      "valence": "bad",
+      "effects": [],
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.fixture.gamble0",
+      "type": "wheel_segment",
+      "wheel": "wh.gamble",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 1,
+      "valence": "good",
+      "effects": [],
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.fixture.gamble1",
+      "type": "wheel_segment",
+      "wheel": "wh.gamble",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 1,
+      "valence": "neutral",
+      "effects": [],
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.fixture.gamble2",
+      "type": "wheel_segment",
+      "wheel": "wh.gamble",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 1,
+      "valence": "bad",
+      "effects": [],
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

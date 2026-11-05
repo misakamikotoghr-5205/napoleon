@@ -1,0 +1,922 @@
+{
+  "_meta": {
+    "owner": "K06",
+    "schema": 1,
+    "brief": "1940 三月事件。节点 s1940.wang_regime 与 s1940.new_official 在此；人物出面的节点归 K05。"
+  },
+  "cards": [
+    {
+      "id": "ev.1940.wang_regime",
+      "type": "event",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "tags": [
+        "official",
+        "omen_official"
+      ],
+      "must_resolve": true,
+      "story_node": "s1940.wang_regime",
+      "schedule": {
+        "stage_day": 30,
+        "order": 2,
+        "once": true
+      },
+      "choices": [
+        {
+          "id": "read",
+          "brief": "把告示看完",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1940.wang_regime",
+              "outcome": "read"
+            },
+            {
+              "op": "flag",
+              "key": "regime_read"
+            },
+            {
+              "op": "notice",
+              "key": "k06.notice.wang_regime"
+            }
+          ]
+        },
+        {
+          "id": "open_shop",
+          "brief": "照常开门",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1940.wang_regime",
+              "outcome": "opened"
+            },
+            {
+              "op": "flag",
+              "key": "regime_read"
+            },
+            {
+              "op": "notice",
+              "key": "k06.notice.wang_regime"
+            }
+          ]
+        },
+        {
+          "id": "shut",
+          "brief": "关门一天",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1940.wang_regime",
+              "outcome": "shut"
+            },
+            {
+              "op": "shop_closed",
+              "days": 1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "story",
+            "node": "s1940.wang_regime",
+            "outcome": "ignored"
+          },
+          {
+            "op": "shop_closed",
+            "days": 1
+          }
+        ]
+      },
+      "art": "illus.ev.1940.wang_regime",
+      "brief": "1940 年 3 月 30 日南京成立“汪伪国民政府”，原来的“伪维新政府”并入。镇上贴出告示。看完或照常开门都算知道了；关门则停一天生计。没理会：主线记成没理告示，铺子停一天。孙府站队不在这张牌上。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1940.new_official",
+      "type": "event",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "tags": [
+        "official",
+        "omen_official",
+        "bad_omen"
+      ],
+      "must_resolve": true,
+      "story_node": "s1940.new_official",
+      "schedule": {
+        "stage_day": 28,
+        "order": 1,
+        "once": true
+      },
+      "choices": [
+        {
+          "id": "register",
+          "brief": "去衙门报备",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 8,
+              "payee": "yamen",
+              "reason": "k06.reason.register",
+              "short": "ladder"
+            },
+            {
+              "op": "story",
+              "node": "s1940.new_official",
+              "outcome": "registered"
+            },
+            {
+              "op": "flag",
+              "key": "stood_1940"
+            },
+            {
+              "op": "demand_tier",
+              "delta": 1
+            },
+            {
+              "op": "notice",
+              "key": "k06.notice.new_official"
+            }
+          ]
+        },
+        {
+          "id": "gift",
+          "brief": "备一份礼",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 20,
+              "payee": "yamen",
+              "reason": "k06.reason.gift",
+              "short": "ladder"
+            },
+            {
+              "op": "story",
+              "node": "s1940.new_official",
+              "outcome": "gifted"
+            },
+            {
+              "op": "flag",
+              "key": "stood_1940"
+            },
+            {
+              "op": "rep",
+              "tier": 1
+            },
+            {
+              "op": "demand_tier",
+              "delta": 1
+            },
+            {
+              "op": "notice",
+              "key": "k06.notice.new_official"
+            }
+          ]
+        },
+        {
+          "id": "avoid",
+          "brief": "躲开",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1940.new_official",
+              "outcome": "avoided"
+            },
+            {
+              "op": "heat",
+              "tier": 1
+            },
+            {
+              "op": "demand_tier",
+              "delta": 1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "story",
+            "node": "s1940.new_official",
+            "outcome": "ignored"
+          },
+          {
+            "op": "heat",
+            "tier": 1
+          },
+          {
+            "op": "demand_tier",
+            "delta": 1
+          }
+        ]
+      },
+      "art": "illus.ev.1940.new_official",
+      "brief": "新官到任。报备或送礼算在新规矩下露了面，下一张条子升一档；躲开也升一档，并且风声再上一档。没理会：主线记成没理新官，条子升一档，风声上一档。条子换什么名目由条子那条线写，这里只动档。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1940.levy_rename",
+      "type": "event",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "tags": [
+        "levy",
+        "official",
+        "omen_official",
+        "bad_omen"
+      ],
+      "must_resolve": true,
+      "schedule": {
+        "stage_day": 27,
+        "order": 1,
+        "once": true
+      },
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "按新名目交",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 36,
+              "payee": "levy",
+              "reason": "k06.reason.levy",
+              "short": "ladder"
+            },
+            {
+              "op": "flag",
+              "key": "levy_handled"
+            },
+            {
+              "op": "notice",
+              "key": "k06.notice.levy_rename"
+            }
+          ]
+        },
+        {
+          "id": "haggle",
+          "brief": "去讲价",
+          "check": {
+            "slots": [
+              {
+                "id": "talker",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "attr": "tongue",
+                "max": 2,
+                "brief": "人"
+              }
+            ],
+            "need": 2,
+            "on_success": [
+              {
+                "op": "flag",
+                "key": "levy_handled"
+              },
+              {
+                "op": "notice",
+                "key": "k06.notice.levy_rename"
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "heat",
+                "tier": 1
+              },
+              {
+                "op": "notice",
+                "key": "k06.notice.levy_rename"
+              }
+            ]
+          }
+        },
+        {
+          "id": "refuse",
+          "brief": "不交",
+          "effects": [
+            {
+              "op": "heat",
+              "tier": 1
+            },
+            {
+              "op": "shop_closed",
+              "days": 2
+            },
+            {
+              "op": "notice",
+              "key": "k06.notice.levy_rename"
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "heat",
+            "tier": 1
+          },
+          {
+            "op": "shop_closed",
+            "days": 2
+          },
+          {
+            "op": "notice",
+            "key": "k06.notice.levy_rename"
+          }
+        ]
+      },
+      "art": "illus.ev.1940.levy_rename",
+      "brief": "摊派换了名目，仍是一笔摊派，不另造算法。交了算办过；讲价要 2 个正面，讲成了也算办过，讲砸了风声上一档且没办成；不交则风声上一档并查封两天。具体条子牌面归条子那条线。伪政权只换叫法。没理会当不交，风声上一档，查封两天。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1940.household_count",
+      "type": "event",
+      "era": [
+        "1940"
+      ],
+      "weight": 9,
+      "tags": [
+        "census",
+        "official",
+        "omen_official",
+        "bad_omen"
+      ],
+      "must_resolve": true,
+      "slots": [
+        {
+          "id": "paper",
+          "accepts": [
+            "kept"
+          ],
+          "tags": [
+            "papers"
+          ],
+          "brief": "证件"
+        },
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "tags": [
+            "official"
+          ],
+          "money_per_coin": 10,
+          "brief": "钱"
+        },
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "attr": "nerve",
+          "brief": "胆量",
+          "tags": [
+            "official"
+          ]
+        }
+      ],
+      "check": {
+        "need": 2,
+        "on_success": [
+          {
+            "op": "flag",
+            "key": "census_cleared"
+          },
+          {
+            "op": "rep",
+            "tier": 1
+          },
+          {
+            "op": "notice",
+            "key": "k06.notice.census_ok"
+          }
+        ],
+        "on_fail": [
+          {
+            "op": "heat",
+            "tier": 1
+          },
+          {
+            "op": "notice",
+            "key": "k06.notice.census_fail"
+          }
+        ]
+      },
+      "art": "illus.ev.1940.household_count",
+      "brief": "来人清点户口。放证件、钱或有胆量的人，要 2 个正面才过。过了记下已清，口碑上一档；没过风声上一档。没理会当没过，风声上一档。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1940.papers_swap",
+      "type": "event",
+      "era": [
+        "1940"
+      ],
+      "weight": 8,
+      "tags": [
+        "papers",
+        "official",
+        "omen_official"
+      ],
+      "must_resolve": true,
+      "choices": [
+        {
+          "id": "show",
+          "brief": "拿出原有的纸",
+          "conditions": {
+            "has_kept": {
+              "tags_any": [
+                "papers"
+              ]
+            }
+          },
+          "effects": [
+            {
+              "op": "flag",
+              "key": "papers_ok"
+            },
+            {
+              "op": "notice",
+              "key": "k06.notice.papers"
+            }
+          ]
+        },
+        {
+          "id": "buy",
+          "brief": "花钱办一张",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 10,
+              "payee": "yamen",
+              "reason": "k06.reason.papers",
+              "short": "ladder"
+            },
+            {
+              "op": "flag",
+              "key": "papers_ok"
+            },
+            {
+              "op": "notice",
+              "key": "k06.notice.papers"
+            }
+          ]
+        },
+        {
+          "id": "ignore",
+          "brief": "先不办",
+          "effects": [
+            {
+              "op": "heat",
+              "tier": 1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "heat",
+            "tier": 1
+          }
+        ]
+      },
+      "art": "illus.ev.1940.papers_swap",
+      "brief": "新规矩要换一张纸。有留着的证件就出示；否则花钱办；不办风声上一档。没理会当先不办，风声上一档。证件牌本身不在这张上造。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1940.signboard",
+      "type": "event",
+      "era": [
+        "1940"
+      ],
+      "weight": 6,
+      "tags": [
+        "official",
+        "omen_official"
+      ],
+      "must_resolve": true,
+      "choices": [
+        {
+          "id": "change",
+          "brief": "换一块",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 12,
+              "payee": "carpenter",
+              "reason": "k06.reason.signboard",
+              "short": "ladder"
+            },
+            {
+              "op": "flag",
+              "key": "sign_new"
+            },
+            {
+              "op": "rep",
+              "tier": 1
+            },
+            {
+              "op": "notice",
+              "key": "k06.notice.signboard"
+            }
+          ]
+        },
+        {
+          "id": "keep",
+          "brief": "先留着",
+          "effects": [
+            {
+              "op": "heat",
+              "tier": 1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "heat",
+            "tier": 1
+          }
+        ]
+      },
+      "art": "illus.ev.1940.signboard",
+      "brief": "衙门换了匾，铺子门脸也被问起。换掉则口碑上一档；先留着则风声上一档。没理会当先留着，风声上一档。旧匾是伪维新政府留下的，不单写某个人。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1940.shop_search",
+      "type": "event",
+      "era": [
+        "1940"
+      ],
+      "weight": 7,
+      "tags": [
+        "search",
+        "official",
+        "police",
+        "omen_official",
+        "bad_omen"
+      ],
+      "must_resolve": true,
+      "slots": [
+        {
+          "id": "paper",
+          "accepts": [
+            "kept"
+          ],
+          "tags": [
+            "papers"
+          ],
+          "brief": "证件"
+        },
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "tags": [
+            "official"
+          ],
+          "money_per_coin": 10,
+          "brief": "钱"
+        },
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "attr": "nerve",
+          "brief": "胆量",
+          "tags": [
+            "official"
+          ]
+        }
+      ],
+      "check": {
+        "need": 2,
+        "on_success": [
+          {
+            "op": "notice",
+            "key": "k06.notice.search"
+          }
+        ],
+        "on_fail": [
+          {
+            "op": "heat",
+            "tier": 1
+          },
+          {
+            "op": "kept_risk",
+            "tags_any": [
+              "contraband"
+            ]
+          },
+          {
+            "op": "notice",
+            "key": "k06.notice.search"
+          }
+        ]
+      },
+      "art": "illus.ev.1940.shop_search",
+      "brief": "新规矩下查铺。放证件、钱或胆量，要 2 个正面。没过风声上一档，手上带违禁标签的留牌会出事。没理会当没过，风声上一档，违禁留牌会出事。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1940.rice_notice",
+      "type": "event",
+      "era": [
+        "1940"
+      ],
+      "weight": 9,
+      "tags": [
+        "price",
+        "rice",
+        "omen_wealth",
+        "bad_omen"
+      ],
+      "must_resolve": true,
+      "choices": [
+        {
+          "id": "buy",
+          "brief": "先囤一点",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 18,
+              "payee": "rice_shop",
+              "reason": "k06.reason.rice",
+              "short": "ladder"
+            },
+            {
+              "op": "item_gain",
+              "cat": "rice",
+              "n": 1
+            }
+          ]
+        },
+        {
+          "id": "accept",
+          "brief": "按告示走",
+          "effects": [
+            {
+              "op": "price_mod",
+              "scope": "cat",
+              "cat": "rice",
+              "pct": 20,
+              "days": 6
+            },
+            {
+              "op": "notice",
+              "key": "k06.notice.rice"
+            }
+          ]
+        },
+        {
+          "id": "raise",
+          "brief": "再抬一截",
+          "effects": [
+            {
+              "op": "price_mod",
+              "scope": "cat",
+              "cat": "rice",
+              "pct": 40,
+              "days": 4
+            },
+            {
+              "op": "conscience",
+              "delta": -2
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "price_mod",
+            "scope": "cat",
+            "cat": "rice",
+            "pct": 40,
+            "days": 4
+          },
+          {
+            "op": "conscience",
+            "delta": -2
+          }
+        ]
+      },
+      "art": "illus.ev.1940.rice_notice",
+      "brief": "米行贴出涨价告示。可以先囤一点米；按告示走则这几天米的出手价往上走；再抬一截则本心往下走一点。没理会当再抬一截，本心往下一点，米价再高几天。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1940.gate_tight",
+      "type": "event",
+      "era": [
+        "1940"
+      ],
+      "weight": 7,
+      "tags": [
+        "gate",
+        "official",
+        "omen_road",
+        "bad_omen"
+      ],
+      "must_resolve": true,
+      "choices": [
+        {
+          "id": "bribe",
+          "brief": "塞一笔",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 15,
+              "payee": "gate",
+              "reason": "k06.reason.bribe",
+              "short": "ladder"
+            },
+            {
+              "op": "flag",
+              "key": "gate_passed"
+            },
+            {
+              "op": "add_card",
+              "card": "kp.gate_pass",
+              "to": "kept"
+            }
+          ]
+        },
+        {
+          "id": "talk",
+          "brief": "口头应付",
+          "check": {
+            "slots": [
+              {
+                "id": "talker",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "attr": "tongue",
+                "max": 2,
+                "brief": "人"
+              }
+            ],
+            "need": 2,
+            "on_success": [
+              {
+                "op": "flag",
+                "key": "gate_passed"
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "heat",
+                "tier": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "stay",
+          "brief": "今天不出门",
+          "effects": [
+            {
+              "op": "rep",
+              "tier": -1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "rep",
+            "tier": -1
+          }
+        ]
+      },
+      "art": "illus.ev.1940.gate_tight",
+      "brief": "城门加岗。塞一笔或把话说圆（要 2 个正面）能过；说砸了风声上一档；今天不出门口碑掉一档。没理会当今天不出门，口碑掉一档。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1940.curfew",
+      "type": "event",
+      "era": [
+        "1940"
+      ],
+      "weight": 6,
+      "tags": [
+        "curfew",
+        "official",
+        "omen_official",
+        "bad_omen"
+      ],
+      "must_resolve": true,
+      "choices": [
+        {
+          "id": "obey",
+          "brief": "提前打烊",
+          "effects": [
+            {
+              "op": "flag",
+              "key": "curfew_obeyed"
+            },
+            {
+              "op": "rep",
+              "tier": 1
+            }
+          ]
+        },
+        {
+          "id": "stay",
+          "brief": "留门做一笔",
+          "effects": [
+            {
+              "op": "heat",
+              "tier": 1
+            },
+            {
+              "op": "money",
+              "delta": 8,
+              "reason": "k06.reason.curfew"
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "heat",
+            "tier": 1
+          },
+          {
+            "op": "money",
+            "delta": 8,
+            "reason": "k06.reason.curfew"
+          }
+        ]
+      },
+      "art": "illus.ev.1940.curfew",
+      "brief": "夜里提前净街。提前打烊口碑上一档；留门能进一点钱，风声上一档。没理会当留门，进一点钱，风声上一档。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

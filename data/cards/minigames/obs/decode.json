@@ -1,0 +1,307 @@
+{
+  "_meta": {
+    "owner": "C15",
+    "schema": 1,
+    "kind": "decode",
+    "brief": "解密观察键：K11 电码本每个四位码一条，没译完用 partial。鉴定改版（主创 10-25）：抄下的就是抄下的，各码和 partial 都是 any，哪一档都照记（修 B12：没译完时一条都记不下）。",
+    "_provenance": {
+      "by": "ai",
+      "task": "C15",
+      "date": "2026-10-25"
+    }
+  },
+  "obs": {
+    "obs.decode.5101": {
+      "fidelity": "any",
+      "brief": "四位码 5101 译出的那个词"
+    },
+    "obs.decode.5102": {
+      "fidelity": "any",
+      "brief": "四位码 5102 译出的那个词"
+    },
+    "obs.decode.5103": {
+      "fidelity": "any",
+      "brief": "四位码 5103 译出的那个词"
+    },
+    "obs.decode.5104": {
+      "fidelity": "any",
+      "brief": "四位码 5104 译出的那个词"
+    },
+    "obs.decode.5105": {
+      "fidelity": "any",
+      "brief": "四位码 5105 译出的那个词"
+    },
+    "obs.decode.5106": {
+      "fidelity": "any",
+      "brief": "四位码 5106 译出的那个词"
+    },
+    "obs.decode.5107": {
+      "fidelity": "any",
+      "brief": "四位码 5107 译出的那个词"
+    },
+    "obs.decode.5108": {
+      "fidelity": "any",
+      "brief": "四位码 5108 译出的那个词"
+    },
+    "obs.decode.5109": {
+      "fidelity": "any",
+      "brief": "四位码 5109 译出的那个词"
+    },
+    "obs.decode.5110": {
+      "fidelity": "any",
+      "brief": "四位码 5110 译出的那个词"
+    },
+    "obs.decode.5111": {
+      "fidelity": "any",
+      "brief": "四位码 5111 译出的那个词"
+    },
+    "obs.decode.5112": {
+      "fidelity": "any",
+      "brief": "四位码 5112 译出的那个词"
+    },
+    "obs.decode.5113": {
+      "fidelity": "any",
+      "brief": "四位码 5113 译出的那个词"
+    },
+    "obs.decode.5114": {
+      "fidelity": "any",
+      "brief": "四位码 5114 译出的那个词"
+    },
+    "obs.decode.5115": {
+      "fidelity": "any",
+      "brief": "四位码 5115 译出的那个词"
+    },
+    "obs.decode.5116": {
+      "fidelity": "any",
+      "brief": "四位码 5116 译出的那个词"
+    },
+    "obs.decode.5117": {
+      "fidelity": "any",
+      "brief": "四位码 5117 译出的那个词"
+    },
+    "obs.decode.5118": {
+      "fidelity": "any",
+      "brief": "四位码 5118 译出的那个词"
+    },
+    "obs.decode.5119": {
+      "fidelity": "any",
+      "brief": "四位码 5119 译出的那个词"
+    },
+    "obs.decode.5120": {
+      "fidelity": "any",
+      "brief": "四位码 5120 译出的那个词"
+    },
+    "obs.decode.5121": {
+      "fidelity": "any",
+      "brief": "四位码 5121 译出的那个词"
+    },
+    "obs.decode.5122": {
+      "fidelity": "any",
+      "brief": "四位码 5122 译出的那个词"
+    },
+    "obs.decode.5123": {
+      "fidelity": "any",
+      "brief": "四位码 5123 译出的那个词"
+    },
+    "obs.decode.5124": {
+      "fidelity": "any",
+      "brief": "四位码 5124 译出的那个词"
+    },
+    "obs.decode.5125": {
+      "fidelity": "any",
+      "brief": "四位码 5125 译出的那个词"
+    },
+    "obs.decode.5126": {
+      "fidelity": "any",
+      "brief": "四位码 5126 译出的那个词"
+    },
+    "obs.decode.5127": {
+      "fidelity": "any",
+      "brief": "四位码 5127 译出的那个词"
+    },
+    "obs.decode.5128": {
+      "fidelity": "any",
+      "brief": "四位码 5128 译出的那个词"
+    },
+    "obs.decode.5129": {
+      "fidelity": "any",
+      "brief": "四位码 5129 译出的那个词"
+    },
+    "obs.decode.5130": {
+      "fidelity": "any",
+      "brief": "四位码 5130 译出的那个词"
+    },
+    "obs.decode.5131": {
+      "fidelity": "any",
+      "brief": "四位码 5131 译出的那个词"
+    },
+    "obs.decode.5132": {
+      "fidelity": "any",
+      "brief": "四位码 5132 译出的那个词"
+    },
+    "obs.decode.5133": {
+      "fidelity": "any",
+      "brief": "四位码 5133 译出的那个词"
+    },
+    "obs.decode.5134": {
+      "fidelity": "any",
+      "brief": "四位码 5134 译出的那个词"
+    },
+    "obs.decode.5135": {
+      "fidelity": "any",
+      "brief": "四位码 5135 译出的那个词"
+    },
+    "obs.decode.5136": {
+      "fidelity": "any",
+      "brief": "四位码 5136 译出的那个词"
+    },
+    "obs.decode.5137": {
+      "fidelity": "any",
+      "brief": "四位码 5137 译出的那个词"
+    },
+    "obs.decode.5138": {
+      "fidelity": "any",
+      "brief": "四位码 5138 译出的那个词"
+    },
+    "obs.decode.5139": {
+      "fidelity": "any",
+      "brief": "四位码 5139 译出的那个词"
+    },
+    "obs.decode.5140": {
+      "fidelity": "any",
+      "brief": "四位码 5140 译出的那个词"
+    },
+    "obs.decode.5141": {
+      "fidelity": "any",
+      "brief": "四位码 5141 译出的那个词"
+    },
+    "obs.decode.5142": {
+      "fidelity": "any",
+      "brief": "四位码 5142 译出的那个词"
+    },
+    "obs.decode.5143": {
+      "fidelity": "any",
+      "brief": "四位码 5143 译出的那个词"
+    },
+    "obs.decode.5144": {
+      "fidelity": "any",
+      "brief": "四位码 5144 译出的那个词"
+    },
+    "obs.decode.5145": {
+      "fidelity": "any",
+      "brief": "四位码 5145 译出的那个词"
+    },
+    "obs.decode.5146": {
+      "fidelity": "any",
+      "brief": "四位码 5146 译出的那个词"
+    },
+    "obs.decode.5147": {
+      "fidelity": "any",
+      "brief": "四位码 5147 译出的那个词"
+    },
+    "obs.decode.5148": {
+      "fidelity": "any",
+      "brief": "四位码 5148 译出的那个词"
+    },
+    "obs.decode.5149": {
+      "fidelity": "any",
+      "brief": "四位码 5149 译出的那个词"
+    },
+    "obs.decode.5150": {
+      "fidelity": "any",
+      "brief": "四位码 5150 译出的那个词"
+    },
+    "obs.decode.5151": {
+      "fidelity": "any",
+      "brief": "四位码 5151 译出的那个词"
+    },
+    "obs.decode.5152": {
+      "fidelity": "any",
+      "brief": "四位码 5152 译出的那个词"
+    },
+    "obs.decode.5153": {
+      "fidelity": "any",
+      "brief": "四位码 5153 译出的那个词"
+    },
+    "obs.decode.5154": {
+      "fidelity": "any",
+      "brief": "四位码 5154 译出的那个词"
+    },
+    "obs.decode.5155": {
+      "fidelity": "any",
+      "brief": "四位码 5155 译出的那个词"
+    },
+    "obs.decode.5156": {
+      "fidelity": "any",
+      "brief": "四位码 5156 译出的那个词"
+    },
+    "obs.decode.5157": {
+      "fidelity": "any",
+      "brief": "四位码 5157 译出的那个词"
+    },
+    "obs.decode.5158": {
+      "fidelity": "any",
+      "brief": "四位码 5158 译出的那个词"
+    },
+    "obs.decode.5159": {
+      "fidelity": "any",
+      "brief": "四位码 5159 译出的那个词"
+    },
+    "obs.decode.5160": {
+      "fidelity": "any",
+      "brief": "四位码 5160 译出的那个词"
+    },
+    "obs.decode.5161": {
+      "fidelity": "any",
+      "brief": "四位码 5161 译出的那个词"
+    },
+    "obs.decode.5162": {
+      "fidelity": "any",
+      "brief": "四位码 5162 译出的那个词"
+    },
+    "obs.decode.5163": {
+      "fidelity": "any",
+      "brief": "四位码 5163 译出的那个词"
+    },
+    "obs.decode.5164": {
+      "fidelity": "any",
+      "brief": "四位码 5164 译出的那个词"
+    },
+    "obs.decode.5165": {
+      "fidelity": "any",
+      "brief": "四位码 5165 译出的那个词"
+    },
+    "obs.decode.5166": {
+      "fidelity": "any",
+      "brief": "四位码 5166 译出的那个词"
+    },
+    "obs.decode.5167": {
+      "fidelity": "any",
+      "brief": "四位码 5167 译出的那个词"
+    },
+    "obs.decode.5168": {
+      "fidelity": "any",
+      "brief": "四位码 5168 译出的那个词"
+    },
+    "obs.decode.5169": {
+      "fidelity": "any",
+      "brief": "四位码 5169 译出的那个词"
+    },
+    "obs.decode.5170": {
+      "fidelity": "any",
+      "brief": "四位码 5170 译出的那个词"
+    },
+    "obs.decode.5171": {
+      "fidelity": "any",
+      "brief": "四位码 5171 译出的那个词"
+    },
+    "obs.decode.5172": {
+      "fidelity": "any",
+      "brief": "四位码 5172 译出的那个词"
+    },
+    "obs.decode.partial": {
+      "fidelity": "any",
+      "brief": "电文还有没译出的码"
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "_meta": {
+    "owner": "K04",
+    "schema": 1,
+    "brief": "例子集：命运牌（§4.7.4）"
+  },
+  "cards": [
+    {
+      "id": "fa.any.fire_next_door",
+      "type": "fate",
+      "era": [
+        "*"
+      ],
+      "weight": 6,
+      "valence": "mixed",
+      "tags": [
+        "fire",
+        "disaster",
+        "omen_fire"
+      ],
+      "choices": [
+        {
+          "id": "move_goods",
+          "check": {
+            "slots": [
+              {
+                "id": "man",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "attr": "nerve",
+                "max": 2
+              }
+            ],
+            "need": 2,
+            "on_success": [
+              {
+                "op": "rep",
+                "delta": 3
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "item_lose",
+                "match": {
+                  "pick": "best"
+                },
+                "n": 1,
+                "reason": "k04.reason.fire"
+              },
+              {
+                "op": "person_state",
+                "person": "ruhua",
+                "state": "hurt",
+                "days": 2
+              }
+            ]
+          },
+          "almanac": [
+            "repair"
+          ],
+          "brief": "搬货（掷胆量）"
+        },
+        {
+          "id": "call_police",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 5
+            },
+            {
+              "op": "item_lose",
+              "match": {
+                "pick": "any"
+              },
+              "n": 1,
+              "reason": "k04.reason.fire"
+            }
+          ],
+          "brief": "报警"
+        },
+        {
+          "id": "shut_door",
+          "effects": [
+            {
+              "op": "item_lose",
+              "match": {
+                "pick": "any"
+              },
+              "n": 2,
+              "reason": "k04.reason.fire"
+            },
+            {
+              "op": "rep",
+              "delta": -3
+            }
+          ],
+          "brief": "关门躲"
+        }
+      ],
+      "art": "illus.fa.any.fire_next_door",
+      "brief": "邻铺失火，火往这边烧。①搬货（掷胆量）②报警（风声动）③关门躲（损货、口碑掉）。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-14"
+      },
+      "effects": {}
+    }
+  ]
+}

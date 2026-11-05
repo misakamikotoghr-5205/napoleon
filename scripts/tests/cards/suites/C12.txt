@@ -1,0 +1,17 @@
+# C12 找不同（docs/handoff_cards/C12_mg-spot.md）
+C12_validate|res://scripts/cards/core/validate_main.gd|120|--only=data/cards/minigames/obs/spot.json --name=C12_validate
+C12_determinism|res://scripts/tests/cards/C12/test_determinism.gd|120|
+C12_fidelity|res://scripts/tests/cards/C12/test_fidelity.gd|120|
+C12_no_verdict|res://scripts/tests/cards/C12/test_no_verdict.gd|120|
+C12_controls|res://scripts/tests/cards/C12/test_controls.gd|300|
+C12_guide|res://scripts/tests/cards/C12/test_guide.gd|120|
+C12_guide_k16|res://scripts/tests/cards/C12/test_guide.gd|300|--steps=k16 --name=C12_guide_k16
+C12_real_engine|res://scripts/tests/cards/C12/test_real_engine.gd|180|--name=C12_real_engine
+C12_host_abort|res://scripts/tests/cards/C13/test_host_abort.gd|120|--game=spot --name=C12_host_abort
+C12_judgment|res://scripts/tests/cards/C12/test_judgment.gd|180|
+C12_replay|res://scripts/tests/cards/C12/test_replay.gd|180|
+C12_no_reveal|res://scripts/tests/cards/C12/test_no_reveal.gd|180|
+C12_mouse|res://scripts/tests/cards/C12/test_mouse.gd|180|
+C12_compat|res://scripts/tests/cards/C12/test_compat.gd|180|
+C12_marks|res://scripts/tests/cards/C12/test_marks.gd|180|
+C12_evidence|res://scripts/tests/cards/C12/test_evidence.gd|300|

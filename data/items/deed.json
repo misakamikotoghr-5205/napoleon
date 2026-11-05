@@ -1,0 +1,186 @@
+{
+  "items": {
+    "deed_zhao": {
+      "name": "红契（水田一亩二分）",
+      "cat": "deed",
+      "cat_cn": "纸契",
+      "market": 2000,
+      "claimed": 0,
+      "fake": false,
+      "grade": "",
+      "origin": "normal",
+      "contraband": false,
+      "est": [1500, 2500],
+      "suggest": 600,
+      "ask_w": 1.0,
+      "weight": "",
+      "tags": [],
+      "sprite": "art/items/deed_zhao.png",
+      "ticket_condition": "红契一张，契尾齐全",
+      "parts": [
+        {
+          "id": "owner",
+          "label": "看业主姓名",
+          "text": "业主：赵德福，是他父亲。契纸右下角有一行小字“传长子赵老三”。",
+          "tool": "hand",
+          "rect": [38, 12, 10, 22]
+        },
+        {
+          "id": "bounds",
+          "label": "看四至",
+          "text": "东至孙家田，西至青溪河，南至镇外大路，北至赵家坑。你记得这块地。",
+          "tool": "hand",
+          "rect": [28, 12, 10, 30],
+          "flag": "saw_zhao_bounds"
+        },
+        {
+          "id": "seal",
+          "label": "看官印与契尾",
+          "text": "印泥暗红，契尾齐全——是红契。",
+          "tool": "magnifier",
+          "rect": [30, 38, 28, 22],
+          "est": [1800, 2200],
+          "flag": "saw_zhao_seal"
+        },
+        {
+          "id": "witness",
+          "label": "看中人画押",
+          "text": "三个画押，其中一个是“沈……”——是如花的祖父。",
+          "tool": "magnifier",
+          "rect": [6, 44, 22, 14],
+          "event": "witness"
+        },
+        {
+          "id": "paper",
+          "label": "看纸张",
+          "text": "纸是老纸，发黄发脆，边角磨得起了毛——是放了好些年的旧契。",
+          "tool": "hand",
+          "rect": [6, 4, 50, 56]
+        }
+      ],
+      "ref": "deed_red",
+      "flaws": [
+        {
+          "part": "paper",
+          "kind": "watermark",
+          "rect": [8, 6, 18, 16],
+          "benign": true,
+          "note": "左上角有一圈旧水渍"
+        }
+      ]
+    },
+    "deed_fake": {
+      "name": "地契（孙家三十亩）",
+      "cat": "deed",
+      "cat_cn": "纸契",
+      "market": 0,
+      "claimed": 10000,
+      "fake": true,
+      "grade": "",
+      "origin": "normal",
+      "contraband": false,
+      "est": [500, 3000],
+      "suggest": 0,
+      "ask_w": 1.0,
+      "weight": "",
+      "tags": [],
+      "sprite": "art/items/deed_fake.png",
+      "ticket_condition": "红契一张（契尾缺失）",
+      "parts": [
+        {
+          "id": "owner",
+          "label": "看业主姓名",
+          "text": "业主：孙德昌——是他父亲。没有代当的字据。",
+          "tool": "hand",
+          "rect": [38, 12, 10, 22],
+          "tell": true
+        },
+        {
+          "id": "bounds",
+          "label": "看四至",
+          "text": "“东至青溪河”。可青溪河明明在孙家田的西边。",
+          "tool": "hand",
+          "rect": [28, 12, 10, 30],
+          "tell": true,
+          "highlight_if": "saw_zhao_bounds",
+          "highlight_note": "（你想起赵老三那张契：西至青溪河——河在孙家田的西边。）"
+        },
+        {
+          "id": "seal",
+          "label": "看官印",
+          "text": "印泥鲜红发亮，和赵老三红契上的暗红色完全不同。",
+          "tool": "magnifier",
+          "rect": [30, 38, 16, 18],
+          "tell": true
+        },
+        {
+          "id": "tail",
+          "label": "看契尾",
+          "text": "契尾：缺失。",
+          "tool": "hand",
+          "rect": [49, 22, 8, 36],
+          "tell": true
+        },
+        {
+          "id": "paper",
+          "label": "看纸张",
+          "text": "纸是新的，边上刷了一道茶渍做旧。",
+          "tool": "hand",
+          "rect": [6, 4, 44, 56],
+          "tell": true
+        }
+      ],
+      "ref": "deed_red"
+    },
+    "deed_sun_real": {
+      "name": "红契（孙家三十亩）",
+      "cat": "deed",
+      "cat_cn": "纸契",
+      "market": 9000,
+      "claimed": 0,
+      "fake": false,
+      "grade": "",
+      "origin": "normal",
+      "contraband": false,
+      "est": [4000, 9000],
+      "suggest": 2700,
+      "ask_w": 1.0,
+      "weight": "",
+      "tags": [],
+      "sprite": "art/items/deed_sun_real.png",
+      "ticket_condition": "红契一张，契尾齐全",
+      "parts": [
+        {
+          "id": "owner",
+          "label": "看业主姓名",
+          "text": "业主：孙德昌。契纸右下角一行小字：“孙家长房”。",
+          "tool": "hand",
+          "rect": [38, 12, 10, 22]
+        },
+        {
+          "id": "bounds",
+          "label": "看四至",
+          "text": "东至田埂，西至青溪河，南至镇外大路，北至赵家坑。",
+          "tool": "hand",
+          "rect": [28, 12, 10, 30]
+        },
+        {
+          "id": "seal",
+          "label": "看官印与契尾",
+          "text": "印泥暗红，契尾齐全——是红契。",
+          "tool": "magnifier",
+          "rect": [30, 38, 28, 22],
+          "est": [7000, 9000]
+        },
+        {
+          "id": "witness",
+          "label": "看中人画押",
+          "text": "三个画押，中人与见证的名字都对得上本镇的老户。",
+          "tool": "magnifier",
+          "rect": [6, 44, 22, 14]
+        }
+      ],
+      "ref": "deed_red"
+    }
+  }
+}

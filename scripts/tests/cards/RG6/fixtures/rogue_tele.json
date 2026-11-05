@@ -1,0 +1,414 @@
+{
+	"_meta": {
+		"_provenance": {
+			"by": "ai",
+			"date": "2026-10-25",
+			"task": "RG6"
+		},
+		"brief": "RG6：遥测用。第 14 天白天；打烊进日结时开周末盘账 w0.1（请求两次只算一份），选 look 开货郎报价 p8。",
+		"owner": "RG6",
+		"schema": 1
+	},
+	"queries": {
+		"almanac|{}": {
+			"done": [],
+			"id": "alm.shoudang",
+			"ji": [],
+			"yi": []
+		},
+		"day.end_preview|{}": {
+			"items": [],
+			"needs_confirm": false,
+			"step": "next_day"
+		},
+		"relics|{}": {
+			"cap": 6,
+			"count": 2,
+			"dormant": false,
+			"err": "",
+			"held": [
+				{
+					"art": "prop.relic.stub_box",
+					"depth": "plain",
+					"id": "rl.stub_box",
+					"since": 8
+				},
+				{
+					"art": "prop.relic.oilpaper_umbrella",
+					"depth": "plain",
+					"id": "rl.oilpaper_umbrella",
+					"since": 9
+				}
+			],
+			"ok": true
+		},
+		"stocktake|{\"offer\":\"p8\"}": {
+			"cap": 6,
+			"deals": 0,
+			"err": "",
+			"from": "peddler",
+			"full": false,
+			"held": [],
+			"items": [
+				{
+					"art": "prop.relic.stub_box",
+					"depth": "plain",
+					"id": "rl.stub_box",
+					"kind": "relic"
+				},
+				{
+					"art": "prop.relic.oilpaper_umbrella",
+					"depth": "plain",
+					"id": "rl.oilpaper_umbrella",
+					"kind": "relic"
+				}
+			],
+			"offer": "p8",
+			"ok": true,
+			"picked": "",
+			"stage": 0,
+			"status": "open",
+			"week": -1
+		},
+		"stocktake|{\"offer\":\"w0.1\"}": {
+			"cap": 6,
+			"deals": 3,
+			"err": "",
+			"from": "week",
+			"full": false,
+			"held": [
+				{
+					"art": "prop.relic.stub_box",
+					"depth": "plain",
+					"id": "rl.stub_box"
+				},
+				{
+					"art": "prop.relic.oilpaper_umbrella",
+					"depth": "plain",
+					"id": "rl.oilpaper_umbrella"
+				}
+			],
+			"items": [
+				{
+					"art": "prop.relic.chen_mortar",
+					"depth": "storied",
+					"id": "rl.chen_mortar",
+					"kind": "relic"
+				},
+				{
+					"art": "illus.ky.traveling_buyers",
+					"depth": "",
+					"id": "ky.traveling_buyers",
+					"kind": "source"
+				},
+				{
+					"art": "prop.relic.blue_curtain",
+					"depth": "plain",
+					"id": "rl.blue_curtain",
+					"kind": "relic"
+				}
+			],
+			"offer": "w0.1",
+			"ok": true,
+			"picked": "",
+			"stage": 0,
+			"status": "open",
+			"week": 1
+		},
+		"stocktake|{}": {
+			"cap": 6,
+			"deals": 3,
+			"err": "",
+			"from": "week",
+			"full": false,
+			"held": [
+				{
+					"art": "prop.relic.stub_box",
+					"depth": "plain",
+					"id": "rl.stub_box"
+				},
+				{
+					"art": "prop.relic.oilpaper_umbrella",
+					"depth": "plain",
+					"id": "rl.oilpaper_umbrella"
+				}
+			],
+			"items": [
+				{
+					"art": "prop.relic.chen_mortar",
+					"depth": "storied",
+					"id": "rl.chen_mortar",
+					"kind": "relic"
+				},
+				{
+					"art": "illus.ky.traveling_buyers",
+					"depth": "",
+					"id": "ky.traveling_buyers",
+					"kind": "source"
+				},
+				{
+					"art": "prop.relic.blue_curtain",
+					"depth": "plain",
+					"id": "rl.blue_curtain",
+					"kind": "relic"
+				}
+			],
+			"offer": "w0.1",
+			"ok": true,
+			"picked": "",
+			"stage": 0,
+			"status": "open",
+			"week": 1
+		}
+	},
+	"responses": [
+		{
+			"cmd": "day.end",
+			"events": [
+				[
+					"phase_changed",
+					"day",
+					"settle"
+				],
+				[
+					"request_panel",
+					"stocktake",
+					{
+						"offer": "w0.1"
+					}
+				],
+				[
+					"notice",
+					"rg2.notice.stocktake",
+					{
+						"deals": 3
+					}
+				]
+			],
+			"match": {
+				"confirm": true
+			},
+			"once": true,
+			"patch": [
+				{
+					"op": "set",
+					"path": "phase",
+					"value": "settle"
+				},
+				{
+					"op": "set",
+					"path": "stage",
+					"value": {
+						"sealed": false,
+						"set": "counter",
+						"time": "night"
+					}
+				},
+				{
+					"op": "set",
+					"path": "open_panel",
+					"value": {
+						"args": {
+							"offer": "w0.1"
+						},
+						"kind": "stocktake"
+					}
+				},
+				{
+					"op": "set",
+					"path": "stock.open",
+					"value": "w0.1"
+				}
+			],
+			"result": {
+				"err": "",
+				"items": [],
+				"next_phase": "settle",
+				"ok": true,
+				"step": "settle"
+			}
+		},
+		{
+			"cmd": "card.choose",
+			"events": [
+				[
+					"request_panel",
+					"stocktake",
+					{
+						"offer": "p8"
+					}
+				],
+				[
+					"request_panel",
+					"stocktake",
+					{
+						"offer": "w0.1"
+					}
+				]
+			],
+			"match": {
+				"choice": "look"
+			}
+		},
+		{
+			"cmd": "stock.pick",
+			"match": {
+				"offer": "p8",
+				"pick": ""
+			},
+			"result": {
+				"err": "",
+				"ok": true
+			}
+		},
+		{
+			"cmd": "stock.pick",
+			"match": {
+				"offer": "w0.1",
+				"pick": "rl.chen_mortar"
+			},
+			"result": {
+				"err": "",
+				"kind": "relic",
+				"offer": "w0.1",
+				"ok": true,
+				"picked": "rl.chen_mortar",
+				"released": "rl.stub_box"
+			}
+		},
+		{
+			"cmd": "stock.pick",
+			"match": {},
+			"result": {
+				"err": "not_allowed",
+				"ok": false
+			}
+		}
+	],
+	"view": {
+		"busy": false,
+		"caps": {
+			"contacts": 3,
+			"kept": 5,
+			"shelf": 12
+		},
+		"contacts": [],
+		"date": {
+			"abs_day": 14,
+			"d": 14,
+			"era": "1938",
+			"m": 3,
+			"minute": 1200,
+			"stage": 0,
+			"stage_day": 14,
+			"stage_days": 30,
+			"weekday": 0,
+			"y": 1938
+		},
+		"demands": [],
+		"estates": [
+			{
+				"id": "es.jewel_cabinet",
+				"interest_money": 4,
+				"money": 80,
+				"status": "held"
+			},
+			{
+				"id": "es.storeroom",
+				"interest_money": 6,
+				"money": 120,
+				"status": "held"
+			},
+			{
+				"id": "es.counter",
+				"interest_money": 7,
+				"money": 150,
+				"status": "held"
+			},
+			{
+				"id": "es.old_house",
+				"interest_money": 10,
+				"money": 260,
+				"status": "held"
+			},
+			{
+				"id": "es.shopfront",
+				"interest_money": 16,
+				"money": 400,
+				"status": "held"
+			}
+		],
+		"game_over_reason": "",
+		"goals": [
+			{
+				"id": "gl.1938.keep_shop",
+				"main": true,
+				"status": "open"
+			}
+		],
+		"hand": [],
+		"heat_tier": 0,
+		"kept": [],
+		"mode": "shop",
+		"money": {
+			"amount": 118,
+			"currency": "fabi"
+		},
+		"night_offers": [],
+		"open_panel": {
+			"args": {},
+			"kind": ""
+		},
+		"pending": [],
+		"phase": "day",
+		"relics": {
+			"cap": 6,
+			"count": 2,
+			"dormant": false,
+			"held": [
+				{
+					"art": "prop.relic.stub_box",
+					"depth": "plain",
+					"id": "rl.stub_box",
+					"since": 8
+				},
+				{
+					"art": "prop.relic.oilpaper_umbrella",
+					"depth": "plain",
+					"id": "rl.oilpaper_umbrella",
+					"since": 9
+				}
+			]
+		},
+		"rep_tier": 1,
+		"self": {
+			"attrs": {
+				"eye": 2,
+				"nerve": 1,
+				"pull": 1,
+				"tongue": 1
+			},
+			"def": "self.ruhua",
+			"uid": "c0001",
+			"used_today": false
+		},
+		"shelf_count": 0,
+		"stage": {
+			"sealed": false,
+			"set": "counter",
+			"time": "day"
+		},
+		"stock": {
+			"open": "",
+			"sources": [
+				{
+					"art": "illus.ky.dockhands",
+					"id": "ky.dockhands"
+				}
+			],
+			"week_deals": 3
+		},
+		"tickets": [],
+		"v": 1
+	}
+}

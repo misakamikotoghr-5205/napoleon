@@ -1,0 +1,2513 @@
+{
+  "version": 1,
+  "_doc": "Recorded winning commands for the eight first-volume trunk templates. Each setup is a subset of the documented, level-scaled R(L) benchmark roster, within both the campaign total lineup and companion caps. cp_bonus (0..7) represents legal supply/early-march preparation. Weak and artillery-first public-view policies recorded these commands. Replay through BattleRules.apply without state edits. These are benchmark combat solutions, not claims that these companions are recruited in the trunk story or a complete A1-A6 balance certification.",
+  "plans": {
+    "acre": {
+      "commands": [
+        [
+          "skill",
+          {
+            "unit": "hero"
+          }
+        ],
+        [
+          "card",
+          {
+            "index": 1
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 3,
+            "unit": "t0"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 1,
+            "unit": "morel"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 1,
+            "unit": "t1"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "down",
+            "row": 0,
+            "unit": "t4"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 3,
+            "unit": "t3"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "morel"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 4,
+            "facing": "right",
+            "row": 1,
+            "unit": "dantes"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 4,
+            "unit": "nemo"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "morel"
+          }
+        ],
+        [
+          "skill",
+          {
+            "unit": "t0"
+          }
+        ],
+        [
+          "withdraw",
+          {
+            "unit": "dantes"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 4,
+            "facing": "right",
+            "row": 1,
+            "unit": "dantes"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "col": 3,
+            "row": 3,
+            "unit": "nemo"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 7,
+            "facing": "left",
+            "row": 4,
+            "unit": "t2"
+          }
+        ],
+        [
+          "withdraw",
+          {
+            "unit": "morel"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "fight",
+          {}
+        ]
+      ],
+      "expected_result": {
+        "bonds_used": [
+          "artillery_school"
+        ],
+        "captured": [],
+        "enemy_morale": 6,
+        "fallen": [],
+        "killed_kinds": {
+          "bedouin": 5,
+          "bey": 1,
+          "janissary": 1,
+          "mamluk": 3,
+          "nizam": 4
+        },
+        "kills": 14,
+        "leaks": 4,
+        "level": 5,
+        "loot": 0,
+        "morale": 2,
+        "order_done": false,
+        "outcome": "victory",
+        "protagonist_on_field_at_end": false,
+        "protagonist_withdrew": false,
+        "ransom": 0,
+        "requisitions": 1,
+        "rewards": {
+          "franc": 200,
+          "gold": 1,
+          "medal": 3
+        },
+        "routed": [
+          "t1",
+          "t3"
+        ],
+        "scars": [],
+        "stars": 1,
+        "trust_up": [],
+        "turns": 11,
+        "victory_kind": "hold",
+        "weather": "desert"
+      },
+      "setup": {
+        "cp_bonus": 7,
+        "level": 5,
+        "protagonist": {
+          "enabled": false
+        },
+        "roster": [
+          {
+            "atk": 6,
+            "block": 2,
+            "cls": "line",
+            "cost": 5,
+            "def": 1,
+            "hp": 19,
+            "id": "morel",
+            "name": "morel",
+            "skill": "raise_flag"
+          },
+          {
+            "atk": 8,
+            "block": 0,
+            "cls": "artillery",
+            "cost": 7,
+            "def": 0,
+            "hp": 10,
+            "id": "nemo",
+            "name": "nemo",
+            "skill": "mark_target"
+          },
+          {
+            "atk": 7,
+            "block": 1,
+            "cls": "hussar",
+            "cost": 4,
+            "def": 1,
+            "hp": 14,
+            "id": "dantes",
+            "name": "dantes",
+            "skill": "bayonet_charge"
+          }
+        ],
+        "seed": 2,
+        "troops": [
+          {
+            "cls": "grenadier",
+            "id": "t0"
+          },
+          {
+            "cls": "line",
+            "id": "t1"
+          },
+          {
+            "cls": "artillery",
+            "id": "t2"
+          },
+          {
+            "cls": "line",
+            "id": "t3"
+          },
+          {
+            "cls": "jager",
+            "id": "t4"
+          }
+        ]
+      }
+    },
+    "austerlitz": {
+      "commands": [
+        [
+          "skill",
+          {
+            "unit": "hero"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 3,
+            "facing": "right",
+            "row": 2,
+            "unit": "nemo"
+          }
+        ],
+        [
+          "card",
+          {
+            "index": 1
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 3,
+            "unit": "t1"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "card",
+          {
+            "index": 2
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "down",
+            "row": 0,
+            "unit": "corso"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "col": 6,
+            "row": 1,
+            "unit": "nemo"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "down",
+            "row": 0,
+            "unit": "t4"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 1,
+            "unit": "t0"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "col": 5,
+            "row": 3,
+            "unit": "nemo"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 3,
+            "unit": "morel"
+          }
+        ],
+        [
+          "withdraw",
+          {
+            "unit": "nemo"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 1,
+            "unit": "t3"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "t0"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 1,
+            "unit": "dantes"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "morel"
+          }
+        ],
+        [
+          "withdraw",
+          {
+            "unit": "morel"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 2,
+            "unit": "nemo"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "col": 1,
+            "row": 3,
+            "unit": "corso"
+          }
+        ],
+        [
+          "withdraw",
+          {
+            "unit": "dantes"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 3,
+            "unit": "morel"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ]
+      ],
+      "expected_result": {
+        "bonds_used": [],
+        "captured": [],
+        "enemy_morale": 14,
+        "fallen": [],
+        "killed_kinds": {
+          "cossack": 2,
+          "hungarian": 1,
+          "ru_grenadier": 2,
+          "ru_jaeger": 6,
+          "ru_line": 8
+        },
+        "kills": 19,
+        "leaks": 1,
+        "level": 7,
+        "loot": 0,
+        "morale": 12,
+        "order_done": false,
+        "outcome": "victory",
+        "protagonist_on_field_at_end": false,
+        "protagonist_withdrew": false,
+        "ransom": 0,
+        "requisitions": 1,
+        "rewards": {
+          "franc": 250,
+          "gold": 1,
+          "medal": 4
+        },
+        "routed": [
+          "t1",
+          "t3"
+        ],
+        "scars": [],
+        "stars": 2,
+        "trust_up": [],
+        "turns": 12,
+        "victory_kind": "hold",
+        "weather": "fog"
+      },
+      "setup": {
+        "cp_bonus": 0,
+        "level": 7,
+        "protagonist": {
+          "enabled": false
+        },
+        "roster": [
+          {
+            "atk": 6,
+            "block": 2,
+            "cls": "line",
+            "cost": 5,
+            "def": 1,
+            "hp": 20,
+            "id": "morel",
+            "name": "morel",
+            "skill": "raise_flag"
+          },
+          {
+            "atk": 9,
+            "block": 0,
+            "cls": "artillery",
+            "cost": 7,
+            "def": 0,
+            "hp": 11,
+            "id": "nemo",
+            "name": "nemo",
+            "skill": "mark_target"
+          },
+          {
+            "atk": 7,
+            "block": 1,
+            "cls": "hussar",
+            "cost": 4,
+            "def": 1,
+            "hp": 15,
+            "id": "dantes",
+            "name": "dantes",
+            "skill": "bayonet_charge"
+          },
+          {
+            "atk": 5,
+            "block": 0,
+            "cls": "jager",
+            "cost": 3,
+            "def": 0,
+            "hp": 10,
+            "id": "corso",
+            "name": "corso",
+            "skill": "mark_target"
+          }
+        ],
+        "seed": 2,
+        "troops": [
+          {
+            "cls": "grenadier",
+            "id": "t0"
+          },
+          {
+            "cls": "line",
+            "id": "t1"
+          },
+          {
+            "cls": "line",
+            "id": "t3"
+          },
+          {
+            "cls": "jager",
+            "id": "t4"
+          }
+        ]
+      }
+    },
+    "berezina": {
+      "commands": [
+        [
+          "skill",
+          {
+            "unit": "hero"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 1,
+            "unit": "gourgaud"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 3,
+            "unit": "t0"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 1,
+            "unit": "t5"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "t0"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 4,
+            "facing": "right",
+            "row": 1,
+            "unit": "t1"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "gourgaud"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 1,
+            "unit": "t3"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "t0"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 1,
+            "unit": "dantes"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "gourgaud"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "t0"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "down",
+            "row": 2,
+            "unit": "corso"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "down",
+            "row": 0,
+            "unit": "t4"
+          }
+        ],
+        [
+          "withdraw",
+          {
+            "unit": "dantes"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "gourgaud"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 3,
+            "unit": "dantes"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ]
+      ],
+      "expected_result": {
+        "bonds_used": [],
+        "captured": [],
+        "enemy_morale": 31,
+        "fallen": [],
+        "killed_kinds": {
+          "cossack": 2,
+          "ru_grenadier": 2,
+          "ru_jaeger": 4,
+          "ru_line": 7
+        },
+        "kills": 15,
+        "leaks": 3,
+        "level": 10,
+        "loot": 0,
+        "morale": 1,
+        "order_done": false,
+        "outcome": "victory",
+        "protagonist_on_field_at_end": false,
+        "protagonist_withdrew": false,
+        "ransom": 0,
+        "requisitions": 0,
+        "rewards": {
+          "franc": 200,
+          "gold": 1,
+          "medal": 3
+        },
+        "routed": [
+          "t1",
+          "t5",
+          "t3",
+          "t0"
+        ],
+        "scars": [],
+        "stars": 1,
+        "trust_up": [],
+        "turns": 12,
+        "victory_kind": "hold",
+        "weather": "snow"
+      },
+      "setup": {
+        "cp_bonus": 4,
+        "level": 10,
+        "protagonist": {
+          "enabled": false
+        },
+        "roster": [
+          {
+            "atk": 5,
+            "block": 3,
+            "cls": "grenadier",
+            "cost": 6,
+            "def": 4,
+            "hp": 31,
+            "id": "gourgaud",
+            "name": "gourgaud",
+            "skill": "bayonet_charge"
+          },
+          {
+            "atk": 8,
+            "block": 1,
+            "cls": "hussar",
+            "cost": 4,
+            "def": 1,
+            "hp": 17,
+            "id": "dantes",
+            "name": "dantes",
+            "skill": "bayonet_charge"
+          },
+          {
+            "atk": 5,
+            "block": 0,
+            "cls": "jager",
+            "cost": 3,
+            "def": 0,
+            "hp": 11,
+            "id": "corso",
+            "name": "corso",
+            "skill": "mark_target"
+          }
+        ],
+        "seed": 1,
+        "troops": [
+          {
+            "cls": "grenadier",
+            "id": "t0"
+          },
+          {
+            "cls": "line",
+            "id": "t1"
+          },
+          {
+            "cls": "line",
+            "id": "t3"
+          },
+          {
+            "cls": "jager",
+            "id": "t4"
+          },
+          {
+            "cls": "hussar",
+            "id": "t5"
+          }
+        ]
+      }
+    },
+    "borodino": {
+      "commands": [
+        [
+          "skill",
+          {
+            "unit": "hero"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 1,
+            "unit": "gourgaud"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 4,
+            "unit": "t0"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 1,
+            "unit": "t1"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 3,
+            "facing": "right",
+            "row": 1,
+            "unit": "t5"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 3,
+            "facing": "down",
+            "row": 2,
+            "unit": "corso"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "t0"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 5,
+            "facing": "down",
+            "row": 2,
+            "unit": "t4"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "col": 3,
+            "row": 4,
+            "unit": "corso"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 4,
+            "unit": "morel"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "gourgaud"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 1,
+            "unit": "t3"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "t0"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "morel"
+          }
+        ],
+        [
+          "skill",
+          {
+            "col": 3,
+            "row": 4,
+            "unit": "corso"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 5,
+            "facing": "right",
+            "row": 1,
+            "unit": "dantes"
+          }
+        ],
+        [
+          "withdraw",
+          {
+            "unit": "morel"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "gourgaud"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 0,
+            "unit": "nemo"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "fight",
+          {}
+        ]
+      ],
+      "expected_result": {
+        "bonds_used": [],
+        "captured": [],
+        "enemy_morale": 28,
+        "fallen": [],
+        "killed_kinds": {
+          "cossack": 2,
+          "opolchenie": 3,
+          "ru_grenadier": 2,
+          "ru_jaeger": 2,
+          "ru_line": 3
+        },
+        "kills": 12,
+        "leaks": 4,
+        "level": 9,
+        "loot": 0,
+        "morale": 1,
+        "order_done": false,
+        "outcome": "victory",
+        "protagonist_on_field_at_end": false,
+        "protagonist_withdrew": false,
+        "ransom": 0,
+        "requisitions": 0,
+        "rewards": {
+          "franc": 260,
+          "gold": 1,
+          "medal": 4
+        },
+        "routed": [
+          "t5",
+          "t4",
+          "t1",
+          "t0",
+          "t3"
+        ],
+        "scars": [],
+        "stars": 1,
+        "trust_up": [],
+        "turns": 12,
+        "victory_kind": "hold",
+        "weather": "clear"
+      },
+      "setup": {
+        "cp_bonus": 4,
+        "level": 9,
+        "protagonist": {
+          "enabled": false
+        },
+        "roster": [
+          {
+            "atk": 5,
+            "block": 3,
+            "cls": "grenadier",
+            "cost": 6,
+            "def": 4,
+            "hp": 30,
+            "id": "gourgaud",
+            "name": "gourgaud",
+            "skill": "bayonet_charge"
+          },
+          {
+            "atk": 7,
+            "block": 2,
+            "cls": "line",
+            "cost": 5,
+            "def": 1,
+            "hp": 22,
+            "id": "morel",
+            "name": "morel",
+            "skill": "raise_flag"
+          },
+          {
+            "atk": 9,
+            "block": 0,
+            "cls": "artillery",
+            "cost": 7,
+            "def": 0,
+            "hp": 12,
+            "id": "nemo",
+            "name": "nemo",
+            "skill": "mark_target"
+          },
+          {
+            "atk": 8,
+            "block": 1,
+            "cls": "hussar",
+            "cost": 4,
+            "def": 1,
+            "hp": 16,
+            "id": "dantes",
+            "name": "dantes",
+            "skill": "bayonet_charge"
+          },
+          {
+            "atk": 5,
+            "block": 0,
+            "cls": "jager",
+            "cost": 3,
+            "def": 0,
+            "hp": 11,
+            "id": "corso",
+            "name": "corso",
+            "skill": "mark_target"
+          }
+        ],
+        "seed": 1,
+        "troops": [
+          {
+            "cls": "grenadier",
+            "id": "t0"
+          },
+          {
+            "cls": "line",
+            "id": "t1"
+          },
+          {
+            "cls": "line",
+            "id": "t3"
+          },
+          {
+            "cls": "jager",
+            "id": "t4"
+          },
+          {
+            "cls": "hussar",
+            "id": "t5"
+          }
+        ]
+      }
+    },
+    "elba_cove": {
+      "commands": [
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 2,
+            "unit": "nemo"
+          }
+        ],
+        [
+          "skill",
+          {
+            "unit": "hero"
+          }
+        ],
+        [
+          "card",
+          {
+            "index": 1
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 3,
+            "unit": "gourgaud"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "card",
+          {
+            "index": 2
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 1,
+            "unit": "t1"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "col": 6,
+            "row": 1,
+            "unit": "nemo"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 1,
+            "unit": "t3"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "gourgaud"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 3,
+            "facing": "down",
+            "row": 0,
+            "unit": "corso"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 5,
+            "facing": "right",
+            "row": 1,
+            "unit": "t5"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "col": 6,
+            "row": 1,
+            "unit": "nemo"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "down",
+            "row": 0,
+            "unit": "t4"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "gourgaud"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "col": 3,
+            "row": 1,
+            "unit": "corso"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 4,
+            "facing": "right",
+            "row": 3,
+            "unit": "t0"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "col": 6,
+            "row": 2,
+            "unit": "nemo"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "gourgaud"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 1,
+            "unit": "dantes"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "fight",
+          {}
+        ]
+      ],
+      "expected_result": {
+        "bonds_used": [],
+        "captured": [],
+        "enemy_morale": 38,
+        "fallen": [],
+        "killed_kinds": {
+          "coast_gun": 1,
+          "marine": 2,
+          "mounted_orderly": 3,
+          "redcoat": 2,
+          "redcoat_grenadier": 2,
+          "sailor": 5
+        },
+        "kills": 15,
+        "leaks": 3,
+        "level": 12,
+        "loot": 0,
+        "morale": 5,
+        "order_done": false,
+        "outcome": "victory",
+        "protagonist_on_field_at_end": false,
+        "protagonist_withdrew": false,
+        "ransom": 0,
+        "requisitions": 1,
+        "rewards": {
+          "franc": 250,
+          "gold": 1,
+          "medal": 4
+        },
+        "routed": [
+          "t3",
+          "t5",
+          "t1"
+        ],
+        "scars": [],
+        "stars": 2,
+        "trust_up": [],
+        "turns": 12,
+        "victory_kind": "hold",
+        "weather": "night"
+      },
+      "setup": {
+        "cp_bonus": 4,
+        "level": 12,
+        "protagonist": {
+          "enabled": false
+        },
+        "roster": [
+          {
+            "atk": 6,
+            "block": 3,
+            "cls": "grenadier",
+            "cost": 6,
+            "def": 4,
+            "hp": 34,
+            "id": "gourgaud",
+            "name": "gourgaud",
+            "skill": "bayonet_charge"
+          },
+          {
+            "atk": 10,
+            "block": 0,
+            "cls": "artillery",
+            "cost": 7,
+            "def": 0,
+            "hp": 13,
+            "id": "nemo",
+            "name": "nemo",
+            "skill": "mark_target"
+          },
+          {
+            "atk": 9,
+            "block": 1,
+            "cls": "hussar",
+            "cost": 4,
+            "def": 1,
+            "hp": 18,
+            "id": "dantes",
+            "name": "dantes",
+            "skill": "bayonet_charge"
+          },
+          {
+            "atk": 6,
+            "block": 0,
+            "cls": "jager",
+            "cost": 3,
+            "def": 0,
+            "hp": 12,
+            "id": "corso",
+            "name": "corso",
+            "skill": "mark_target"
+          }
+        ],
+        "seed": 2,
+        "troops": [
+          {
+            "cls": "grenadier",
+            "id": "t0"
+          },
+          {
+            "cls": "line",
+            "id": "t1"
+          },
+          {
+            "cls": "line",
+            "id": "t3"
+          },
+          {
+            "cls": "jager",
+            "id": "t4"
+          },
+          {
+            "cls": "hussar",
+            "id": "t5"
+          }
+        ]
+      }
+    },
+    "leipzig": {
+      "commands": [
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 2,
+            "unit": "nemo"
+          }
+        ],
+        [
+          "skill",
+          {
+            "unit": "hero"
+          }
+        ],
+        [
+          "card",
+          {
+            "index": 1
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 1,
+            "unit": "gourgaud"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 4,
+            "unit": "morel"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "card",
+          {
+            "index": 2
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 4,
+            "unit": "t5"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "gourgaud"
+          }
+        ],
+        [
+          "skill",
+          {
+            "unit": "morel"
+          }
+        ],
+        [
+          "skill",
+          {
+            "col": 4,
+            "row": 1,
+            "unit": "nemo"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "down",
+            "row": 3,
+            "unit": "corso"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 3,
+            "facing": "down",
+            "row": 2,
+            "unit": "t4"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "gourgaud"
+          }
+        ],
+        [
+          "skill",
+          {
+            "unit": "morel"
+          }
+        ],
+        [
+          "skill",
+          {
+            "col": 4,
+            "row": 1,
+            "unit": "nemo"
+          }
+        ],
+        [
+          "skill",
+          {
+            "col": 2,
+            "row": 4,
+            "unit": "corso"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 1,
+            "unit": "t0"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "withdraw",
+          {
+            "unit": "morel"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 4,
+            "unit": "t1"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 4,
+            "unit": "t3"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "gourgaud"
+          }
+        ],
+        [
+          "skill",
+          {
+            "col": 4,
+            "row": 1,
+            "unit": "nemo"
+          }
+        ],
+        [
+          "skill",
+          {
+            "col": 2,
+            "row": 4,
+            "unit": "corso"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "t0"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 4,
+            "facing": "right",
+            "row": 4,
+            "unit": "morel"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 4,
+            "unit": "dantes"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "morel"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ]
+      ],
+      "expected_result": {
+        "bonds_used": [
+          "square"
+        ],
+        "captured": [],
+        "enemy_morale": 32,
+        "fallen": [],
+        "killed_kinds": {
+          "cossack": 1,
+          "dragoon": 1,
+          "fusilier": 2,
+          "pr_grenadier": 1,
+          "ru_grenadier": 2,
+          "ru_line": 1,
+          "uhlan": 1,
+          "whitecoat": 8
+        },
+        "kills": 17,
+        "leaks": 1,
+        "level": 11,
+        "loot": 0,
+        "morale": 10,
+        "order_done": false,
+        "outcome": "victory",
+        "protagonist_on_field_at_end": false,
+        "protagonist_withdrew": false,
+        "ransom": 0,
+        "requisitions": 1,
+        "rewards": {
+          "franc": 325,
+          "gold": 1,
+          "medal": 5
+        },
+        "routed": [
+          "t5",
+          "t1",
+          "t3"
+        ],
+        "scars": [],
+        "stars": 2,
+        "trust_up": [],
+        "turns": 12,
+        "victory_kind": "hold",
+        "weather": "rain"
+      },
+      "setup": {
+        "cp_bonus": 7,
+        "level": 11,
+        "protagonist": {
+          "enabled": false
+        },
+        "roster": [
+          {
+            "atk": 6,
+            "block": 3,
+            "cls": "grenadier",
+            "cost": 6,
+            "def": 4,
+            "hp": 33,
+            "id": "gourgaud",
+            "name": "gourgaud",
+            "skill": "bayonet_charge"
+          },
+          {
+            "atk": 7,
+            "block": 2,
+            "cls": "line",
+            "cost": 5,
+            "def": 1,
+            "hp": 24,
+            "id": "morel",
+            "name": "morel",
+            "skill": "raise_flag"
+          },
+          {
+            "atk": 10,
+            "block": 0,
+            "cls": "artillery",
+            "cost": 7,
+            "def": 0,
+            "hp": 13,
+            "id": "nemo",
+            "name": "nemo",
+            "skill": "mark_target"
+          },
+          {
+            "atk": 9,
+            "block": 1,
+            "cls": "hussar",
+            "cost": 4,
+            "def": 1,
+            "hp": 18,
+            "id": "dantes",
+            "name": "dantes",
+            "skill": "bayonet_charge"
+          },
+          {
+            "atk": 6,
+            "block": 0,
+            "cls": "jager",
+            "cost": 3,
+            "def": 0,
+            "hp": 12,
+            "id": "corso",
+            "name": "corso",
+            "skill": "mark_target"
+          }
+        ],
+        "seed": 2,
+        "troops": [
+          {
+            "cls": "grenadier",
+            "id": "t0"
+          },
+          {
+            "cls": "line",
+            "id": "t1"
+          },
+          {
+            "cls": "line",
+            "id": "t3"
+          },
+          {
+            "cls": "jager",
+            "id": "t4"
+          },
+          {
+            "cls": "hussar",
+            "id": "t5"
+          }
+        ]
+      }
+    },
+    "pyramids": {
+      "commands": [
+        [
+          "skill",
+          {
+            "unit": "hero"
+          }
+        ],
+        [
+          "card",
+          {
+            "index": 0
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 1,
+            "unit": "gourgaud"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 3,
+            "unit": "t0"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "down",
+            "row": 0,
+            "unit": "t4"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 1,
+            "unit": "morel"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "t0"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 3,
+            "unit": "t1"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "gourgaud"
+          }
+        ],
+        [
+          "withdraw",
+          {
+            "unit": "morel"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 1,
+            "unit": "t3"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "t0"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 3,
+            "unit": "morel"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "carry",
+          {
+            "unit": "morel"
+          }
+        ],
+        [
+          "skill",
+          {
+            "unit": "gourgaud"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ]
+      ],
+      "expected_result": {
+        "bonds_used": [],
+        "captured": [],
+        "enemy_morale": 16,
+        "fallen": [
+          {
+            "captured": false,
+            "carried": true,
+            "coin_faces": [],
+            "coins": 0,
+            "died": false,
+            "execute": false,
+            "fated": false,
+            "rolled": false,
+            "scar": true,
+            "unit": "morel",
+            "was_scarred": false
+          }
+        ],
+        "killed_kinds": {
+          "bedouin": 5,
+          "mamluk": 2,
+          "nizam": 1
+        },
+        "kills": 8,
+        "leaks": 1,
+        "level": 4,
+        "loot": 0,
+        "morale": 4,
+        "order_done": false,
+        "outcome": "victory",
+        "protagonist_on_field_at_end": false,
+        "protagonist_withdrew": false,
+        "ransom": 0,
+        "requisitions": 1,
+        "rewards": {
+          "franc": 90,
+          "gold": 0,
+          "medal": 2
+        },
+        "routed": [
+          "t1",
+          "t3"
+        ],
+        "scars": [
+          "morel"
+        ],
+        "stars": 1,
+        "trust_up": [],
+        "turns": 8,
+        "victory_kind": "hold",
+        "weather": "desert"
+      },
+      "setup": {
+        "cp_bonus": 4,
+        "level": 4,
+        "protagonist": {
+          "enabled": false
+        },
+        "roster": [
+          {
+            "atk": 4,
+            "block": 3,
+            "cls": "grenadier",
+            "cost": 6,
+            "def": 3,
+            "hp": 25,
+            "id": "gourgaud",
+            "name": "gourgaud",
+            "skill": "bayonet_charge"
+          },
+          {
+            "atk": 5,
+            "block": 2,
+            "cls": "line",
+            "cost": 5,
+            "def": 1,
+            "hp": 18,
+            "id": "morel",
+            "name": "morel",
+            "skill": "raise_flag"
+          }
+        ],
+        "seed": 1,
+        "troops": [
+          {
+            "cls": "grenadier",
+            "id": "t0"
+          },
+          {
+            "cls": "line",
+            "id": "t1"
+          },
+          {
+            "cls": "line",
+            "id": "t3"
+          },
+          {
+            "cls": "jager",
+            "id": "t4"
+          }
+        ]
+      }
+    },
+    "saragossa": {
+      "commands": [
+        [
+          "skill",
+          {
+            "unit": "hero"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 1,
+            "unit": "gourgaud"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 1,
+            "unit": "t0"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 1,
+            "facing": "right",
+            "row": 3,
+            "unit": "t1"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 3,
+            "facing": "right",
+            "row": 1,
+            "unit": "t5"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "down",
+            "row": 0,
+            "unit": "corso"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 4,
+            "facing": "down",
+            "row": 2,
+            "unit": "t4"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "deploy",
+          {
+            "col": 3,
+            "facing": "right",
+            "row": 1,
+            "unit": "morel"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "gourgaud"
+          }
+        ],
+        [
+          "skill",
+          {
+            "unit": "t0"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 3,
+            "unit": "t3"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "withdraw",
+          {
+            "unit": "morel"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 1,
+            "unit": "dantes"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "gourgaud"
+          }
+        ],
+        [
+          "skill",
+          {
+            "col": 2,
+            "row": 1,
+            "unit": "corso"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 2,
+            "facing": "right",
+            "row": 3,
+            "unit": "morel"
+          }
+        ],
+        [
+          "withdraw",
+          {
+            "unit": "dantes"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ],
+        [
+          "skill",
+          {
+            "unit": "morel"
+          }
+        ],
+        [
+          "deploy",
+          {
+            "col": 4,
+            "facing": "right",
+            "row": 3,
+            "unit": "dantes"
+          }
+        ],
+        [
+          "withdraw",
+          {
+            "unit": "morel"
+          }
+        ],
+        [
+          "fight",
+          {}
+        ]
+      ],
+      "expected_result": {
+        "bonds_used": [
+          "square"
+        ],
+        "captured": [],
+        "enemy_morale": 28,
+        "fallen": [],
+        "killed_kinds": {
+          "es_lancer": 2,
+          "es_regular": 4,
+          "guerrillero": 7,
+          "highlander": 1
+        },
+        "kills": 14,
+        "leaks": 3,
+        "level": 9,
+        "loot": 0,
+        "morale": 1,
+        "order_done": false,
+        "outcome": "victory",
+        "protagonist_on_field_at_end": false,
+        "protagonist_withdrew": false,
+        "ransom": 0,
+        "requisitions": 0,
+        "rewards": {
+          "franc": 200,
+          "gold": 1,
+          "medal": 3
+        },
+        "routed": [
+          "t5",
+          "t0",
+          "t1",
+          "t3"
+        ],
+        "scars": [],
+        "stars": 1,
+        "trust_up": [],
+        "turns": 12,
+        "victory_kind": "hold",
+        "weather": "clear"
+      },
+      "setup": {
+        "cp_bonus": 4,
+        "level": 9,
+        "protagonist": {
+          "enabled": false
+        },
+        "roster": [
+          {
+            "atk": 5,
+            "block": 3,
+            "cls": "grenadier",
+            "cost": 6,
+            "def": 4,
+            "hp": 30,
+            "id": "gourgaud",
+            "name": "gourgaud",
+            "skill": "bayonet_charge"
+          },
+          {
+            "atk": 7,
+            "block": 2,
+            "cls": "line",
+            "cost": 5,
+            "def": 1,
+            "hp": 22,
+            "id": "morel",
+            "name": "morel",
+            "skill": "raise_flag"
+          },
+          {
+            "atk": 8,
+            "block": 1,
+            "cls": "hussar",
+            "cost": 4,
+            "def": 1,
+            "hp": 16,
+            "id": "dantes",
+            "name": "dantes",
+            "skill": "bayonet_charge"
+          },
+          {
+            "atk": 5,
+            "block": 0,
+            "cls": "jager",
+            "cost": 3,
+            "def": 0,
+            "hp": 11,
+            "id": "corso",
+            "name": "corso",
+            "skill": "mark_target"
+          }
+        ],
+        "seed": 1,
+        "troops": [
+          {
+            "cls": "grenadier",
+            "id": "t0"
+          },
+          {
+            "cls": "line",
+            "id": "t1"
+          },
+          {
+            "cls": "line",
+            "id": "t3"
+          },
+          {
+            "cls": "jager",
+            "id": "t4"
+          },
+          {
+            "cls": "hussar",
+            "id": "t5"
+          }
+        ]
+      }
+    }
+  }
+}

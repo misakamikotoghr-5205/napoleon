@@ -1,0 +1,16 @@
+{
+  "kind": "decode",
+  "seed": 1939,
+  "item": "",
+  "art": "illus.kp.brother_note",
+  "minutes_per_step": 1,
+  "max_minutes": 30,
+  "cipher": "ledger",
+  "message": "nw.ex.ledger",
+  "codes": ["5102", "5101", "5114"],
+  "book_words": [],
+  "_with_book": true,
+  "smudges": [[2, 3, "5119"]],
+  "key_shift": 3,
+  "crib": "5150"
+}

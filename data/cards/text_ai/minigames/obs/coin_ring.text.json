@@ -1,0 +1,59 @@
+{
+  "_meta": {
+    "_provenance": "ai:claude:opus-5.5:2026-10-25:appraise-c13"
+  },
+  "obs.coin_ring.ring_long": {
+    "t": "余音拖得长。"
+  },
+  "obs.coin_ring.ring_short": {
+    "t": "余音很快就收住了。"
+  },
+  "obs.coin_ring.dull": {
+    "t": "声音发闷，不亮。"
+  },
+  "obs.coin_ring.buzzy": {
+    "t": "余音里夹着沙沙的杂音。"
+  },
+  "obs.coin_ring.pitch_low": {
+    "t": "声音听着偏低。"
+  },
+  "obs.coin_ring.like_reference": {
+    "t": "听着和柜上那枚足银的样洋一个声。"
+  },
+  "obs.coin_ring.unlike_reference": {
+    "t": "和标准银元的余音差了一截。"
+  },
+  "obs.coin_ring.ring_vague": {
+    "t": "听到一点余音，长短拿不准。"
+  },
+  "obs.coin_ring.unsure": {
+    "t": "没听清，说不好。"
+  },
+  "obs.coin_ring.like_reference_maybe": {
+    "t": "听着像足银的样洋，不过没听真切。"
+  },
+  "obs.coin_ring.like_dull_sample": {
+    "t": "听着和拴红线的那枚哑板一个声。"
+  },
+  "obs.coin_ring.like_dull_maybe": {
+    "t": "听着有点像那枚哑板，不过没听真切。"
+  },
+  "obs.coin_ring.all_ring": {
+    "t": "一摞挨个吹过，枚枚都响。"
+  },
+  "obs.coin_ring.all_ring_maybe": {
+    "t": "一摞听着都还响，不过没听真切。"
+  },
+  "obs.coin_ring.one_dull": {
+    "t": "一摞里有一枚声音发哑。"
+  },
+  "obs.coin_ring.one_dull_maybe": {
+    "t": "一摞里像是有一枚发哑，不过没听真切。"
+  },
+  "obs.coin_ring.some_dull": {
+    "t": "一摞里不止一枚声音发哑。"
+  },
+  "obs.coin_ring.some_dull_maybe": {
+    "t": "一摞里像是不止一枚发哑，不过没听真切。"
+  }
+}

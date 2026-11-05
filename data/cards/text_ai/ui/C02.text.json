@@ -1,0 +1,168 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-23:base-text-ui"
+  },
+  "c02.btn.keep": {
+    "t": "留着"
+  },
+  "c02.btn.play": {
+    "t": "打出"
+  },
+  "c02.btn.back": {
+    "t": "放回手里"
+  },
+  "c02.night.none": {
+    "t": "睡了"
+  },
+  "c02.hero.used": {
+    "t": "今天用过了"
+  },
+  "c02.hero.eye": {
+    "t": "眼力"
+  },
+  "c02.hero.tongue": {
+    "t": "口才"
+  },
+  "c02.hero.pull": {
+    "t": "人脉"
+  },
+  "c02.hero.nerve": {
+    "t": "胆量"
+  },
+  "c02.kept.badge": {
+    "t": "留"
+  },
+  "c02.intent.pawn": {
+    "t": "来当"
+  },
+  "c02.intent.sell": {
+    "t": "来卖"
+  },
+  "c02.intent.buy": {
+    "t": "来买"
+  },
+  "c02.intent.redeem": {
+    "t": "来赎"
+  },
+  "c02.intent.help": {
+    "t": "求助"
+  },
+  "c02.intent.ask": {
+    "t": "打听"
+  },
+  "c02.intent.story": {
+    "t": "主线"
+  },
+  "c02.type.person": {
+    "t": "人物"
+  },
+  "c02.type.self": {
+    "t": "你自己"
+  },
+  "c02.type.contact": {
+    "t": "人脉"
+  },
+  "c02.type.event": {
+    "t": "事件"
+  },
+  "c02.type.fate": {
+    "t": "命运"
+  },
+  "c02.type.big_fate": {
+    "t": "大命运"
+  },
+  "c02.type.demand": {
+    "t": "条子"
+  },
+  "c02.type.life": {
+    "t": "生活"
+  },
+  "c02.type.news": {
+    "t": "消息"
+  },
+  "c02.type.kept": {
+    "t": "留着的牌"
+  },
+  "c02.type.estate": {
+    "t": "家当"
+  },
+  "c02.type.night": {
+    "t": "夜里"
+  },
+  "c02.type.street": {
+    "t": "街头"
+  },
+  "c02.type.prison": {
+    "t": "牢房"
+  },
+  "c02.type.pawn_ticket": {
+    "t": "当票"
+  },
+  "c02.days.badge": {
+    "t": "还剩 {n} 天"
+  },
+  "c02.band.gold": {
+    "t": "主线"
+  },
+  "c02.band.kept_kind": {
+    "t": "留着的牌 · {kind}"
+  },
+  "c02.ribbon.gold": {
+    "t": "主线"
+  },
+  "c02.days.left": {
+    "t": "剩 {n} 天"
+  },
+  "c02.days.tonight": {
+    "t": "今晚到期"
+  },
+  "c02.days.away": {
+    "t": "不在 {n} 天"
+  },
+  "c02.sub.who_item": {
+    "t": "{who} · {item}"
+  },
+  "c02.sub.news_from": {
+    "t": "听{who}说"
+  },
+  "c02.sub.night": {
+    "t": "今晚的事"
+  },
+  "c02.btn.play.person": {
+    "t": "打出 · 请进门"
+  },
+  "c02.btn.play.other": {
+    "t": "打出 · 就办这件"
+  },
+  "c02.btn.play.night": {
+    "t": "今晚做这个"
+  },
+  "c02.hand.empty_done": {
+    "t": "今天的牌都处理完了。"
+  },
+  "c02.drag.drop_here": {
+    "t": "放到这里：打出这张牌"
+  },
+  "c02.attr.eye": {
+    "t": "眼"
+  },
+  "c02.attr.tongue": {
+    "t": "口"
+  },
+  "c02.attr.pull": {
+    "t": "门"
+  },
+  "c02.attr.nerve": {
+    "t": "胆"
+  },
+  "c02.hero.attr_tip": {
+    "t": "眼力 {eye} · 口才 {tongue} · 人脉 {pull} · 胆量 {nerve}"
+  },
+  "c02.contact.away": {
+    "t": "不在 · {n} 天"
+  },
+  "c02.contact.empty": {
+    "t": "人脉"
+  }
+}

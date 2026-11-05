@@ -1,0 +1,269 @@
+COMMAND: GODOT_SILENCE_ROOT_WARNING=1 XDG_DATA_HOME=/tmp/dh198/final-suite-userdata XDG_CONFIG_HOME=/tmp/dh198/config CARDS_SUITES=G06 tools/run_card_tests.sh
+EXIT: 1 (import localhost restriction)
+✗ import (exit 0)
+    ERROR: Condition "_sock == -1" is true. Returning: FAILED
+    ERROR: Condition "err != OK" is true. Returning: ERR_CANT_CREATE
+    ERROR: Condition "_sock == -1" is true. Returning: FAILED
+    ERROR: Condition "err != OK" is true. Returning: ERR_CANT_CREATE
+✓ 数据校验（default）：CARDS VALID 1115 cards, 0 errors
+✓ G06_short_ladder
+✓ G06_street
+✓ G06_prison
+✓ G06_mortgage
+✓ G06_prison_integration
+✓ G06_firsts
+✓ G06_ops_conds_mods
+✓ G06_determinism_save
+✓ G06_economy_integration
+✓ G06_autoplay_recovery
+✓ G06_policy_sources
+✓ G06_report_schema
+✓ G06_replay
+✓ G06_golden
+✓ G06_cached_api
+✓ G06_no_deadlock_1
+✓ G06_policies_no_stall
+✓ G06_no_deadlock_2
+✓ G06_no_deadlock_3
+✓ G06_no_deadlock_4
+卡牌版：20 项清单测试；日志：/tmp/tmp.qpCBVcxvCE
+卡牌版测试失败
+
+
+COMMAND: GODOT_SILENCE_ROOT_WARNING=1 XDG_DATA_HOME=/tmp/dh198/final-validate-userdata XDG_CONFIG_HOME=/tmp/dh198/config timeout 120 godot --headless --path . -s res://scripts/cards/core/validate_main.gd -- --mode=strict --name=cards_data_validate
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+CARDS VALID 1115 cards, 0 errors
+CARDS TEST PASS cards_data_validate
+
+
+COMMAND: GODOT_SILENCE_ROOT_WARNING=1 XDG_DATA_HOME=/tmp/dh198/golden-final-userdata XDG_CONFIG_HOME=/tmp/dh198/config godot --headless --path . -s res://scripts/cards/sim/balance_main.gd -- --data=examples --seeds=1 --seed_from=7 --policies=fair --days=30 --update-golden --out=/tmp/dh198/golden-final --source-rev=0d9176784f89b8d6a7959e669bda62b652df4c1e
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+BALANCE PROGRESS seed=7 policy=fair ok=true reason= steps=790 error=not_allowed
+BALANCE RUNS 1
+BALANCE RESULT passed=1 failed=0
+
+
+COMMAND: python3 tools/cards/balance/test_aggregate.py
+EXIT: 0
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+
+
+SUITE COMMAND: timeout 120 godot --headless --path . -s res://scripts/tests/cards/G06/test_mortgage.gd -- 
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+CARDS TEST PASS G06_mortgage
+
+
+SUITE COMMAND: timeout 120 godot --headless --path . -s res://scripts/tests/cards/G06/test_short_ladder.gd -- 
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+CARDS TEST PASS G06_short_ladder
+
+
+SUITE COMMAND: timeout 120 godot --headless --path . -s res://scripts/tests/cards/G06/test_street.gd -- 
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+CARDS TEST PASS G06_street
+
+
+SUITE COMMAND: timeout 120 godot --headless --path . -s res://scripts/tests/cards/G06/test_prison.gd -- 
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+CARDS TEST PASS G06_prison
+
+
+SUITE COMMAND: timeout 180 godot --headless --path . -s res://scripts/tests/cards/G06/test_prison_integration.gd -- 
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+CARDS TEST PASS G06_prison_integration
+
+
+SUITE COMMAND: timeout 120 godot --headless --path . -s res://scripts/tests/cards/G06/test_ops_conds_mods.gd -- 
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+CARDS TEST PASS G06_ops_conds_mods
+
+
+SUITE COMMAND: timeout 120 godot --headless --path . -s res://scripts/tests/cards/G06/test_firsts.gd -- 
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+CARDS TEST PASS G06_firsts
+
+
+SUITE COMMAND: timeout 120 godot --headless --path . -s res://scripts/tests/cards/G06/test_determinism_save.gd -- 
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+CARDS TEST PASS G06_determinism_save
+
+
+SUITE COMMAND: timeout 180 godot --headless --path . -s res://scripts/tests/cards/G06/test_economy_integration.gd -- 
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+CARDS TEST PASS G06_economy_integration
+
+
+SUITE COMMAND: timeout 600 godot --headless --path . -s res://scripts/tests/cards/G06/test_policies_no_stall.gd -- --stages=3 --seeds=3
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+CARDS TEST PASS G06_policies_no_stall
+
+
+SUITE COMMAND: timeout 120 godot --headless --path . -s res://scripts/tests/cards/G06/test_autoplay_recovery.gd -- 
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+CARDS TEST PASS G06_autoplay_recovery
+
+
+SUITE COMMAND: timeout 180 godot --headless --path . -s res://scripts/tests/cards/G06/test_policy_sources.gd -- 
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+CARDS TEST PASS G06_policy_sources
+
+
+SUITE COMMAND: timeout 300 godot --headless --path . -s res://scripts/tests/cards/G06/test_cached_api.gd -- 
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+CARDS TEST PASS G06_cached_api
+
+
+SUITE COMMAND: timeout 300 godot --headless --path . -s res://scripts/tests/cards/G06/test_replay.gd -- 
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+CARDS TEST PASS G06_replay
+
+
+SUITE COMMAND: timeout 300 godot --headless --path . -s res://scripts/tests/cards/G06/test_report_schema.gd -- 
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+CARDS TEST PASS G06_report_schema
+
+
+SUITE COMMAND: timeout 300 godot --headless --path . -s res://scripts/tests/cards/golden/test_golden.gd -- 
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+CARDS TEST PASS G06_golden
+
+
+SUITE COMMAND: timeout 1200 godot --headless --path . -s res://scripts/tests/cards/G06/test_no_deadlock.gd -- --name=G06_no_deadlock_1 --seed_from=1 --seed_to=250 --days=6 --long_days=32
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+FUZZ PROGRESS 25/250
+FUZZ PROGRESS 50/250
+FUZZ PROGRESS 75/250
+FUZZ PROGRESS 100/250
+FUZZ PROGRESS 125/250
+FUZZ PROGRESS 150/250
+FUZZ PROGRESS 175/250
+FUZZ PROGRESS 200/250
+FUZZ PROGRESS 225/250
+FUZZ PROGRESS 250/250
+CARDS TEST PASS G06_no_deadlock_1
+
+
+SUITE COMMAND: timeout 1200 godot --headless --path . -s res://scripts/tests/cards/G06/test_no_deadlock.gd -- --name=G06_no_deadlock_2 --seed_from=251 --seed_to=500 --days=6 --long_days=32
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+FUZZ PROGRESS 25/250
+FUZZ PROGRESS 50/250
+FUZZ PROGRESS 75/250
+FUZZ PROGRESS 100/250
+FUZZ PROGRESS 125/250
+FUZZ PROGRESS 150/250
+FUZZ PROGRESS 175/250
+FUZZ PROGRESS 200/250
+FUZZ PROGRESS 225/250
+FUZZ PROGRESS 250/250
+CARDS TEST PASS G06_no_deadlock_2
+
+
+SUITE COMMAND: timeout 1200 godot --headless --path . -s res://scripts/tests/cards/G06/test_no_deadlock.gd -- --name=G06_no_deadlock_3 --seed_from=501 --seed_to=750 --days=6 --long_days=32
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+FUZZ PROGRESS 25/250
+FUZZ PROGRESS 50/250
+FUZZ PROGRESS 75/250
+FUZZ PROGRESS 100/250
+FUZZ PROGRESS 125/250
+FUZZ PROGRESS 150/250
+FUZZ PROGRESS 175/250
+FUZZ PROGRESS 200/250
+FUZZ PROGRESS 225/250
+FUZZ PROGRESS 250/250
+CARDS TEST PASS G06_no_deadlock_3
+
+
+SUITE COMMAND: timeout 1200 godot --headless --path . -s res://scripts/tests/cards/G06/test_no_deadlock.gd -- --name=G06_no_deadlock_4 --seed_from=751 --seed_to=1000 --days=6 --long_days=32
+EXIT: 0
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+FUZZ PROGRESS 25/250
+FUZZ PROGRESS 50/250
+FUZZ PROGRESS 75/250
+FUZZ PROGRESS 100/250
+FUZZ PROGRESS 125/250
+FUZZ PROGRESS 150/250
+FUZZ PROGRESS 175/250
+FUZZ PROGRESS 200/250
+FUZZ PROGRESS 225/250
+FUZZ PROGRESS 250/250
+CARDS TEST PASS G06_no_deadlock_4
+
+
+COMMAND: bash tools/cards/balance/w2_run.sh before /tmp/dh198/final-before
+EXIT: 0
+/tmp/dh198/final-before/report_2026-10-18.md
+BALANCE RESULT passed=140 failed=0
+
+
+COMMAND: bash tools/cards/balance/w2_run.sh after /tmp/dh198/final
+EXIT: 0
+/tmp/dh198/final/report_2026-10-18.md
+BALANCE RESULT passed=140 failed=0
+
+
+EVIDENCE CHECK
+/workspace/dehoudang-198/docs/cards/balance/w2_198/before/report_2026-10-18.md
+BALANCE RESULT passed=140 failed=0
+/workspace/dehoudang-198/docs/cards/balance/w2_198/after/report_2026-10-18.md
+BALANCE RESULT passed=140 failed=0
+EVIDENCE PASS: 140 paired runs; only overrides differ; baseline replay 140/140 identical; six unaffected policies identical
+
+
+FINAL AUDIT
+PATHS PASS: 26 files; G06 ownership plus explicitly requested ownership registration
+UNCHANGED scripts/tests/cards/G06/test_no_deadlock.gd SHA256 85efa231274c7cf8544522f0b14ce7c70570d00acb70861fe261b472195cdb5e
+UNCHANGED scripts/tests/cards/G06/fuzz_helpers.gd SHA256 ea744ee27b4e9b6ff32b7602499862cab9541988198a7711c146e033695b82e0
+UNCHANGED scripts/tests/cards/suites/G06.txt SHA256 d186eecde837fcfed2f8bea3bb7f4b7825cc902ce3f12b78a9a8e93dcf2c1e45
+UNCHANGED tools/run_card_tests.sh SHA256 a981520bf4a826bddd722f001627af4b687b06227ddf4ae7ffd122b602c1718e
+UNCHANGED scripts/cards/sim/policy.gd SHA256 25685c843554d6c3844fcf592198e565a929b5a458d6e941a6f12e4e368267ad
+SOURCE HASHES PASS: runtime/report sources match both archived manifests
+git diff --check: exit 0
+bash -n tools/cards/balance/w2_run.sh: exit 0
+branch: gpt/198-balance-report

@@ -1,0 +1,87 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "g04.reason.pawn_out": {
+    "t": "放当"
+  },
+  "g04.reason.sell_in": {
+    "t": "卖货进账"
+  },
+  "g04.reason.buy_out": {
+    "t": "收货"
+  },
+  "g04.reason.redeem_in": {
+    "t": "赎当进账"
+  },
+  "g04.reason.interest": {
+    "t": "利息"
+  },
+  "g04.reason.fee": {
+    "t": "杂费"
+  },
+  "g04.reason.compensate": {
+    "t": "赔钱"
+  },
+  "g04.reason.fund": {
+    "t": "周转"
+  },
+  "g04.reason.start": {
+    "t": "开张本钱"
+  },
+  "g04.reason.currency": {
+    "t": "换钞"
+  },
+  "g04.reason.expenses": {
+    "t": "生活开销"
+  },
+  "g04.reason.buy_back": {
+    "t": "买回当物"
+  },
+  "g04.ticket.number": {
+    "t": "德字当票"
+  },
+  "g04.ticket.overdue": {
+    "t": "过期了"
+  },
+  "g04.ticket.forfeited": {
+    "t": "满当了，东西归铺子"
+  },
+  "g04.counter.intake_blocked": {
+    "t": "眼下收不了东西，只好请他回去。"
+  },
+  "g04.month.expenses": {
+    "t": "这个月的生活开销，花了 {money} 蚨。"
+  },
+  "g04.month.tickets": {
+    "t": "柜上还有 {n} 张当票没赎。"
+  },
+  "g04.month.forfeit": {
+    "t": "{n} 张当票过了期，东西归了铺子。"
+  },
+  "g04.cond.0": {
+    "t": "破旧"
+  },
+  "g04.cond.1": {
+    "t": "差些"
+  },
+  "g04.cond.2": {
+    "t": "平常"
+  },
+  "g04.cond.3": {
+    "t": "尚好"
+  },
+  "g04.cond.4": {
+    "t": "顶好"
+  },
+  "g04.counter.lever.caught": {
+    "t": "……掌柜的眼尖。行，这个数，{price}，您看着办。"
+  },
+  "g04.counter.lever.soft": {
+    "t": "是有些旧了，用了些年头。那就{price}吧。"
+  },
+  "g04.counter.lever.offended": {
+    "t": "您这话说的——东西好好的，哪来的毛病？少了{price}不当。"
+  }
+}

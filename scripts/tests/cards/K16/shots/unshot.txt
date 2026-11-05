@@ -1,0 +1,12 @@
+未截清单（2026-10-13）
+
+环境没有 libXcursor，也没有 wayland-client。xvfb 起不来 X11 显示服务器（Godot 报 Unable to create DisplayServer）。
+--headless 下 shot_d1_3.gd 停在 RenderingServer.frame_post_draw，出不了图。
+
+因此 66 步都没有 1280x720 截图，也没有拼图。
+脚本已放在：
+- scripts/tests/cards/K16/shot_d1_3.gd（第 1–3 天逐步）
+- scripts/tests/cards/K16/shot_all_steps.gd（其余步骤；小游戏锚点和 a.branch.list 预计仍会列进未截）
+
+有显示服务器后：
+xvfb-run -a -s "-screen 0 1280x720x24" $GODOT --rendering-driver opengl3 --audio-driver Dummy --path . -s res://scripts/tests/cards/K16/shot_d1_3.gd -- --out=scripts/tests/cards/K16/shots/d1_3

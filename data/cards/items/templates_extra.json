@@ -1,0 +1,266 @@
+{
+  "_meta": {
+    "owner": "K11",
+    "schema": 1,
+    "brief": "新增物品模板。类别不与 rice clothing jewelry utensils art medicine documents 重名。文字字段全空，正文由 A 写在 items.text.json。图走占位路径，界面 id 是 item.<cat>.<variant>。",
+    "_provenance": {
+      "by": "ai",
+      "task": "K11",
+      "date": "2026-10-13"
+    }
+  },
+  "_doc": [
+    "silver：银元按枚计价（库平七钱二分是铸重，当铺不称）。1933 废两改元后以元为单位；1935-11 法币改革后依法不得流通，民间仍私藏（DESIGN 附录）。碎银按重，用戥子。",
+    "silverware：银器按重，用戥子。吹听只留给银元，不套到器皿上。",
+    "goldbar：金条按两，用戥子。一两=十钱=一百分。base_price 沿用旧模板压缩刻度，不是 1938 年金银比价，等 G04 的 items_balance。",
+    "papers：当票、契据之外的零碎文书（商号条、税捐单、货单、借据）。不并进已有 documents 类，否则校验器合并时整类被忽略。"
+  ],
+  "categories": {
+    "silver": {
+      "label": "",
+      "weight": 2,
+      "scale": "",
+      "can_fake": true,
+      "material_label": "",
+      "condition_label": "",
+      "authenticity_label": "",
+      "provenance_label": "",
+      "normal_text": "",
+      "stolen_text": "",
+      "rare_tag": "",
+      "rare_text": "",
+      "variants": [
+        {
+          "id": "yuan_a",
+          "name": "",
+          "base_price": 28,
+          "sprite": "art/_placeholder/cards/items/silver.yuan_a.png",
+          "material": "",
+          "good_text": "",
+          "worn_text": "",
+          "real_text": "",
+          "fake_text": "",
+          "ticket_condition": "",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "id": "yuan_b",
+          "name": "",
+          "base_price": 26,
+          "sprite": "art/_placeholder/cards/items/silver.yuan_b.png",
+          "material": "",
+          "good_text": "",
+          "worn_text": "",
+          "real_text": "",
+          "fake_text": "",
+          "ticket_condition": "",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "id": "yuan_c",
+          "name": "",
+          "base_price": 22,
+          "sprite": "art/_placeholder/cards/items/silver.yuan_c.png",
+          "material": "",
+          "good_text": "",
+          "worn_text": "",
+          "real_text": "",
+          "fake_text": "",
+          "ticket_condition": "",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "id": "bits",
+          "name": "",
+          "base_price": 48,
+          "sprite": "art/_placeholder/cards/items/silver.bits.png",
+          "material": "",
+          "good_text": "",
+          "worn_text": "",
+          "real_text": "",
+          "fake_text": "",
+          "ticket_condition": "",
+          "weight": 1,
+          "tags": []
+        }
+      ]
+    },
+    "silverware": {
+      "label": "",
+      "weight": 1,
+      "scale": "",
+      "can_fake": true,
+      "material_label": "",
+      "condition_label": "",
+      "authenticity_label": "",
+      "provenance_label": "",
+      "normal_text": "",
+      "stolen_text": "",
+      "rare_tag": "",
+      "rare_text": "",
+      "variants": [
+        {
+          "id": "cup",
+          "name": "",
+          "base_price": 96,
+          "sprite": "art/_placeholder/cards/items/silverware.cup.png",
+          "material": "",
+          "good_text": "",
+          "worn_text": "",
+          "real_text": "",
+          "fake_text": "",
+          "ticket_condition": "",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "id": "spoon",
+          "name": "",
+          "base_price": 32,
+          "sprite": "art/_placeholder/cards/items/silverware.spoon.png",
+          "material": "",
+          "good_text": "",
+          "worn_text": "",
+          "real_text": "",
+          "fake_text": "",
+          "ticket_condition": "",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "id": "box",
+          "name": "",
+          "base_price": 150,
+          "sprite": "art/_placeholder/cards/items/silverware.box.png",
+          "material": "",
+          "good_text": "",
+          "worn_text": "",
+          "real_text": "",
+          "fake_text": "",
+          "ticket_condition": "",
+          "weight": 1,
+          "tags": []
+        }
+      ]
+    },
+    "goldbar": {
+      "label": "",
+      "weight": 1,
+      "scale": "",
+      "can_fake": true,
+      "material_label": "",
+      "condition_label": "",
+      "authenticity_label": "",
+      "provenance_label": "",
+      "normal_text": "",
+      "stolen_text": "",
+      "rare_tag": "",
+      "rare_text": "",
+      "variants": [
+        {
+          "id": "bar_one",
+          "name": "",
+          "base_price": 300,
+          "sprite": "art/_placeholder/cards/items/goldbar.bar_one.png",
+          "material": "",
+          "good_text": "",
+          "worn_text": "",
+          "real_text": "",
+          "fake_text": "",
+          "ticket_condition": "",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "id": "bar_ten",
+          "name": "",
+          "base_price": 520,
+          "sprite": "art/_placeholder/cards/items/goldbar.bar_ten.png",
+          "material": "",
+          "good_text": "",
+          "worn_text": "",
+          "real_text": "",
+          "fake_text": "",
+          "ticket_condition": "",
+          "weight": 1,
+          "tags": []
+        }
+      ]
+    },
+    "papers": {
+      "label": "",
+      "weight": 1,
+      "scale": "",
+      "can_fake": true,
+      "material_label": "",
+      "condition_label": "",
+      "authenticity_label": "",
+      "provenance_label": "",
+      "normal_text": "",
+      "stolen_text": "",
+      "rare_tag": "",
+      "rare_text": "",
+      "variants": [
+        {
+          "id": "shop_slip",
+          "name": "",
+          "base_price": 20,
+          "sprite": "art/_placeholder/cards/items/papers.shop_slip.png",
+          "material": "",
+          "good_text": "",
+          "worn_text": "",
+          "real_text": "",
+          "fake_text": "",
+          "ticket_condition": "",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "id": "tax_slip",
+          "name": "",
+          "base_price": 12,
+          "sprite": "art/_placeholder/cards/items/papers.tax_slip.png",
+          "material": "",
+          "good_text": "",
+          "worn_text": "",
+          "real_text": "",
+          "fake_text": "",
+          "ticket_condition": "",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "id": "waybill",
+          "name": "",
+          "base_price": 16,
+          "sprite": "art/_placeholder/cards/items/papers.waybill.png",
+          "material": "",
+          "good_text": "",
+          "worn_text": "",
+          "real_text": "",
+          "fake_text": "",
+          "ticket_condition": "",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "id": "iou",
+          "name": "",
+          "base_price": 24,
+          "sprite": "art/_placeholder/cards/items/papers.iou.png",
+          "material": "",
+          "good_text": "",
+          "worn_text": "",
+          "real_text": "",
+          "fake_text": "",
+          "ticket_condition": "",
+          "weight": 1,
+          "tags": []
+        }
+      ]
+    }
+  }
+}

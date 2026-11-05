@@ -1,0 +1,524 @@
+{
+ "version": 1,
+ "_doc": "草稿（标签 cristo）：全书伙伴总表（ARCH §1.9 companions.json）里伊夫堡段新增的 8 行，以及 6 个跨段伙伴的补丁（只加伊夫堡段的招募点、阵营标签、宿命之地；battle 数值逐字沿用远洋 / 主干，不改）。bonds_by_segment 是本稿的小提议：同一个人在不同段属于不同阵营（唐泰斯在远洋是远洋同盟，在伊夫堡是马赛老街坊和伯爵府），每段最多 3 个标签；A 不采纳时取并集的前 3 个。",
+ "companions": {
+  "caderousse": {
+   "name": "卡德鲁斯",
+   "short": "卡德鲁斯",
+   "segments": [
+    "cristo"
+   ],
+   "recruit": {
+    "scene": "c_reserve",
+    "choice": "caderousse_home",
+    "or_event": "ev_caderousse_wine"
+   },
+   "bonds": [
+    "marseille"
+   ],
+   "battle": {
+    "short": "卡德鲁斯",
+    "cls": "line",
+    "hp": 14,
+    "atk": 4,
+    "def": 1,
+    "block": 2,
+    "cost": 3,
+    "skill": "raise_flag",
+    "skill_title": "酒馆里的大嗓门（举旗：本行友军攻 +2，2 回合）",
+    "fated_scene": "",
+    "role": "战列步兵 · 胆小的老邻居"
+   },
+   "fated": "auteuil_garden",
+   "keep": "留守：每章情报 +1（他什么闲话都听得到）。",
+   "relic": "卡德鲁斯的裁缝剪（阵亡后：本章第一次过路费免掉）",
+   "personal": [
+    "ev_caderousse_wine"
+   ],
+   "risk": "信赖 0 时，第四章的钻石事件里他会出卖你（追缉 +20，离队）。原著里他死在贝内代托手里（1838）。"
+  },
+  "jacopo": {
+   "name": "雅科波",
+   "short": "雅科波",
+   "segments": [
+    "cristo"
+   ],
+   "recruit": {
+    "scene": "c_morgiou",
+    "choice": [
+     "share_fair",
+     "buy_the_boat"
+    ]
+   },
+   "bonds": [
+    "smugglers",
+    "far_sea"
+   ],
+   "battle": {
+    "short": "雅科波",
+    "cls": "artillery",
+    "hp": 10,
+    "atk": 6,
+    "def": 0,
+    "block": 0,
+    "cost": 6,
+    "skill": "mark_target",
+    "skill_title": "船头回旋炮（标记：对射程内一个敌人 8 伤）",
+    "fated_scene": "",
+    "role": "炮兵 · 走私船的炮手"
+   },
+   "fated": "tiboulen_swim",
+   "keep": "留守：航程连线少 1 天（最少 1 天）。",
+   "relic": "少年阿梅莉号的缆绳（阵亡后：浅水格我方单位防 +1）"
+  },
+  "bertuccio": {
+   "name": "贝尔图乔",
+   "short": "贝尔图乔",
+   "segments": [
+    "cristo"
+   ],
+   "recruit": {
+    "event": "ev_bertuccio_name",
+    "choice": [
+     "tell_truth",
+     "lie"
+    ]
+   },
+   "bonds": [
+    "smugglers",
+    "count"
+   ],
+   "battle": {
+    "short": "贝尔图乔",
+    "cls": "engineer",
+    "hp": 14,
+    "atk": 4,
+    "def": 2,
+    "block": 1,
+    "cost": 3,
+    "skill": "fortify",
+    "skill_title": "科西嘉人的门闩（筑垒：放拒马或筑胸墙）",
+    "fated_scene": "",
+    "role": "工兵 · 发过誓的科西嘉人"
+   },
+   "fated": "auteuil_garden",
+   "keep": "留守：兵站不会被对手烧掉。",
+   "relic": "缠黑布的刀（阵亡后：本场猎官对主角的攻击 −2）"
+  },
+  "haydee": {
+   "name": "海黛",
+   "short": "海黛",
+   "segments": [
+    "cristo"
+   ],
+   "recruit": {
+    "event": "ev_haydee_constantinople"
+   },
+   "bonds": [
+    "orient",
+    "count"
+   ],
+   "battle": {
+    "short": "海黛",
+    "cls": "medic",
+    "hp": 9,
+    "atk": 0,
+    "def": 1,
+    "block": 0,
+    "cost": 3,
+    "skill": "raise_flag",
+    "skill_title": "约阿尼纳的证词（举旗：本行友军攻 +2，2 回合）",
+    "fated_scene": "",
+    "role": "军医 · 总督的女儿"
+   },
+   "fated": "cristo_final",
+   "keep": "留守：每章卷宗 +10。",
+   "relic": "阿里总督的念珠（阵亡后：贵族院一场的证据自动齐全）"
+  },
+  "ali": {
+   "name": "阿里",
+   "short": "阿里",
+   "segments": [
+    "cristo"
+   ],
+   "recruit": {
+    "scene": "c_carnival",
+    "auto": true
+   },
+   "bonds": [
+    "orient",
+    "count"
+   ],
+   "battle": {
+    "short": "阿里",
+    "cls": "grenadier",
+    "hp": 20,
+    "atk": 5,
+    "def": 3,
+    "block": 3,
+    "cost": 6,
+    "skill": "bayonet_charge",
+    "skill_title": "马索（刺刀冲锋：挡住的敌人各受 5 伤并被击退）",
+    "fated_scene": "",
+    "role": "掷弹兵 · 不说话的努比亚人"
+   },
+   "fated": "san_sebastiano",
+   "keep": "留守：每章体力 +4。",
+   "relic": "阿里的马索（阵亡后：骠骑兵冲锋距离 +1）"
+  },
+  "maximilien": {
+   "name": "马克西米利安·莫雷尔",
+   "short": "马克西米利安",
+   "segments": [
+    "cristo"
+   ],
+   "recruit": {
+    "scene": "c_morrel_rescue",
+    "choice": "recruit_maximilien",
+    "or_shop": "paris_1838"
+   },
+   "bonds": [
+    "marseille",
+    "paris"
+   ],
+   "battle": {
+    "short": "马克西米利安",
+    "cls": "hussar",
+    "hp": 12,
+    "atk": 6,
+    "def": 1,
+    "block": 1,
+    "cost": 4,
+    "skill": "bayonet_charge",
+    "skill_title": "北非骑兵的冲锋（刺刀冲锋：挡住的敌人各受 5 伤并被击退）",
+    "fated_scene": "",
+    "role": "骠骑兵 · 北非骑兵上尉"
+   },
+   "fated": "cristo_final",
+   "keep": "留守：每章人心 +2。",
+   "relic": "法老号的模型（阵亡后：莫雷尔攻 +2）"
+  },
+  "vampa": {
+   "name": "路易吉·万帕",
+   "short": "万帕",
+   "segments": [
+    "cristo"
+   ],
+   "recruit": {
+    "scene": "c_san_sebastiano",
+    "choice": "vampa_debt"
+   },
+   "bonds": [
+    "smugglers",
+    "bandit"
+   ],
+   "battle": {
+    "short": "万帕",
+    "cls": "jager",
+    "hp": 9,
+    "atk": 5,
+    "def": 0,
+    "block": 0,
+    "cost": 4,
+    "skill": "mark_target",
+    "skill_title": "牧羊人的子弹（标记：对射程内一个敌人 8 伤）",
+    "fated_scene": "",
+    "role": "猎兵 · 罗马城外的强盗头子"
+   },
+   "fated": "paris_rooftops",
+   "keep": "留守：过路费一律免掉。",
+   "relic": "万帕的《凯撒战记》（阵亡后：伏兵波次提前 1 回合公开）"
+  },
+  "albert": {
+   "name": "阿尔贝·德·莫尔塞夫",
+   "short": "阿尔贝",
+   "segments": [
+    "cristo"
+   ],
+   "recruit": {
+    "scene": "c_san_sebastiano",
+    "choice": "albert_oath"
+   },
+   "bonds": [
+    "paris"
+   ],
+   "battle": {
+    "short": "阿尔贝",
+    "cls": "line",
+    "hp": 13,
+    "atk": 4,
+    "def": 1,
+    "block": 2,
+    "cost": 4,
+    "skill": "raise_flag",
+    "skill_title": "子爵的决斗手套（举旗：本行友军攻 +2，2 回合）",
+    "fated_scene": "",
+    "role": "战列步兵 · 议员的儿子"
+   },
+   "fated": "cristo_final",
+   "keep": "留守：巴黎每章经费 +300。",
+   "relic": "莫尔塞夫家的纹章（阵亡后：梅尔塞苔丝的请求自动成立）",
+   "risk": "第五章贵族院（c_peers）以后，如果海黛也在名册里，两人不能同场（discord）。"
+  }
+ },
+ "shared_patch": {
+  "dantes": {
+   "segments_add": [
+    "cristo"
+   ],
+   "recruit_by_segment": {
+    "cristo": {
+     "scene": "c_faria_dies",
+     "choice": [
+      "sack_plan",
+      "medicine_last",
+      "knife_in_sack"
+     ]
+    }
+   },
+   "bonds_by_segment": {
+    "cristo": [
+     "marseille",
+     "count",
+     "shadow"
+    ]
+   },
+   "fated_by_segment": {
+    "cristo": "if_corridors"
+   },
+   "note": "第二章出狱前一直在伊夫堡里：只能在 if_corridors 上阵（第 9 回合起）。远洋数值不动。"
+  },
+  "faria": {
+   "segments_add": [
+    "cristo"
+   ],
+   "recruit_by_segment": {
+    "cristo": {
+     "scene": "c_faria_dies",
+     "choice": [
+      "medicine_last"
+     ]
+    }
+   },
+   "bonds_by_segment": {
+    "cristo": [
+     "scholar",
+     "count"
+    ]
+   },
+   "fated_by_segment": {
+    "cristo": "monte_cristo_cave"
+   },
+   "note": "原著里死于第三次发作。只有带着药（m_faria_medicine）才能招到；宿命之地是基督山岛的藏宝洞。"
+  },
+  "morel": {
+   "segments_add": [
+    "cristo"
+   ],
+   "recruit_by_segment": {
+    "cristo": {
+     "scene": "c_landfall"
+    }
+   },
+   "bonds_by_segment": {
+    "cristo": [
+     "marseille",
+     "far_sea"
+    ]
+   },
+   "fated_by_segment": {
+    "cristo": "marseille_arrest"
+   },
+   "note": "伙伴 id 用远洋的 morel；人物表里是 morrel（莫雷尔先生，法老号船东）。"
+  },
+  "baptiste": {
+   "note": "主干携带而来；伊夫堡段无专属情节。"
+  },
+  "corso": {
+   "note": "主干携带而来；第二章卡西斯酒馆有他的个人事件（规划）。"
+  },
+  "marie": {
+   "note": "主干携带而来。"
+  }
+ },
+ "shared_battle_reference": {
+  "dantes": {
+   "short": "唐泰斯",
+   "cls": "hussar",
+   "hp": 12,
+   "atk": 6,
+   "def": 1,
+   "block": 1,
+   "cost": 4,
+   "skill": "bayonet_charge",
+   "skill_title": "基督山复仇剑（刺刀冲锋：挡住的敌人各受 5 伤并被击退）",
+   "fated_scene": "",
+   "role": "骠骑兵 · 先锋剑客"
+  },
+  "faria": {
+   "short": "法利亚",
+   "cls": "engineer",
+   "hp": 14,
+   "atk": 3,
+   "def": 2,
+   "block": 1,
+   "cost": 3,
+   "skill": "fortify",
+   "skill_title": "伊夫堡的地道（筑垒：放拒马或筑胸墙）",
+   "fated_scene": "scene04",
+   "role": "工兵 · 挖过十四年地道的神甫"
+  },
+  "morel": {
+   "short": "莫雷尔",
+   "cls": "line",
+   "hp": 16,
+   "atk": 5,
+   "def": 1,
+   "block": 2,
+   "cost": 5,
+   "skill": "raise_flag",
+   "skill_title": "法老号的号旗（举旗：本行友军攻 +2，2 回合）",
+   "fated_scene": "",
+   "role": "战列步兵 · 带队的船长"
+  }
+ },
+ "pairs": [
+  {
+   "id": "master_pupil",
+   "name": "师徒",
+   "a": "dantes",
+   "b": "faria",
+   "tiers": {
+    "1": "同场时法利亚的筑垒每次多放 1 个拒马。",
+    "2": "法利亚相邻时唐泰斯攻 +2。",
+    "3": "法利亚命悬一线 +1 枚；唐泰斯的冲锋不会停在泥地和瓦砾上。"
+   }
+  },
+  {
+   "id": "wait_and_hope",
+   "name": "等待与希望",
+   "a": "dantes",
+   "b": "haydee",
+   "tiers": {
+    "1": "海黛在场时唐泰斯每回合回 2。",
+    "2": "唐泰斯倒下时，海黛的举旗立刻充满。",
+    "3": "解锁结局“等待与希望”的最后一段。"
+   }
+  },
+  {
+   "id": "enemy_name",
+   "name": "仇人的姓",
+   "a": "bertuccio",
+   "b": "hero",
+   "discord": true,
+   "tiers": {
+    "1": "两人同场时贝尔图乔攻 +2；相邻时每回合军心 −1。",
+    "2": "（说过实话 m_bertuccio_knows）不再扣军心。",
+    "3": "（奥特伊之夜后）贝尔图乔替主角挡下第一次猎官攻击。"
+   }
+  },
+  {
+   "id": "old_neighbours",
+   "name": "老邻居",
+   "a": "caderousse",
+   "b": "dantes",
+   "discord": true,
+   "tiers": {
+    "1": "两人同场时卡德鲁斯防 −1。",
+    "2": "（m_caderousse_sworn）卡德鲁斯攻 +2，直到战斗结束。"
+   }
+  },
+  {
+   "id": "father_son",
+   "name": "莫雷尔父子",
+   "a": "morel",
+   "b": "maximilien",
+   "tiers": {
+    "1": "同一行时举旗持续 3 回合。",
+    "2": "一方倒下，另一方本场命悬一线 +1 枚。"
+   }
+  },
+  {
+   "id": "two_children",
+   "name": "两个孩子",
+   "a": "albert",
+   "b": "haydee",
+   "discord": true,
+   "tiers": {
+    "1": "第五章贵族院以后两人不能同场。",
+    "2": "（m_mercedes_spared）discord 解除，同场时两人各攻 +1。"
+   }
+  }
+ ],
+ "bond_set_napoleon_add": [
+  {
+   "id": "marseille_folk",
+   "name": "马赛老街坊",
+   "kind": "faction",
+   "tag": "marseille",
+   "tiers": [
+    2,
+    3
+   ],
+   "effect": "camp_family",
+   "desc": "1815 年就在马赛的人。2：所有伙伴命悬一线 +1 枚；成员周围 2 格内的单位每回合回 1 兵力。3：街巷类地形（街道、房屋）开场军令点 +1。"
+  },
+  {
+   "id": "smugglers",
+   "name": "走私帮",
+   "kind": "faction",
+   "tag": "smugglers",
+   "tiers": [
+    2,
+    3
+   ],
+   "effect": "spoils",
+   "desc": "地中海的走私船和山里的强盗。2：战后法郎 +20%；3：再 +1 金币。"
+  },
+  {
+   "id": "counts_house",
+   "name": "伯爵府",
+   "kind": "faction",
+   "tag": "count",
+   "tiers": [
+    2,
+    3
+   ],
+   "effect": "intel",
+   "desc": "基督山伯爵的人。2：军令手牌补到 4 张；3：来敌提前 3 回合公开（包括隐身的敌人）。"
+  },
+  {
+   "id": "orient",
+   "name": "东方",
+   "kind": "faction",
+   "tag": "orient",
+   "tiers": [
+    2
+   ],
+   "effect": "workshop",
+   "desc": "从约阿尼纳和君士坦丁堡来的人。2：成员技能每回合多充能 1。"
+  },
+  {
+   "id": "bandits",
+   "name": "强盗的信义",
+   "kind": "faction",
+   "tag": "bandit",
+   "tiers": [
+    1
+   ],
+   "effect": "spoils",
+   "desc": "1：赎金（ransom）类敌人走进鹰旗时不扣金币。"
+  },
+  {
+   "id": "paris_society",
+   "name": "巴黎社交界",
+   "kind": "faction",
+   "tag": "paris",
+   "tiers": [
+    2
+   ],
+   "effect": "spoils",
+   "desc": "2：战后法郎 +20%。"
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+  "_meta": {
+    "owner": "C14",
+    "schema": 1,
+    "kind": "weigh",
+    "_provenance": {
+      "by": "ai",
+      "task": "C14",
+      "date": "2026-10-25"
+    }
+  },
+  "obs": {
+    "obs.weigh.match": {
+      "fidelity": "clear",
+      "brief": "称出来和客人说的分量对得上",
+      "hedge": {
+        "partial": "obs.weigh.match_maybe",
+        "vague": "obs.weigh.unsure"
+      }
+    },
+    "obs.weigh.light_small": {
+      "fidelity": "clear",
+      "brief": "比说的轻一点点（这一类东西差在“一点点”以内）",
+      "hedge": {
+        "partial": "obs.weigh.light_vague",
+        "vague": "obs.weigh.unsure"
+      }
+    },
+    "obs.weigh.light_much": {
+      "fidelity": "clear",
+      "brief": "比说的轻不少",
+      "hedge": {
+        "partial": "obs.weigh.light_vague",
+        "vague": "obs.weigh.unsure"
+      }
+    },
+    "obs.weigh.heavy": {
+      "fidelity": "clear",
+      "brief": "比说的重",
+      "hedge": {
+        "partial": "obs.weigh.heavy_maybe",
+        "vague": "obs.weigh.unsure"
+      }
+    },
+    "obs.weigh.match_maybe": {
+      "fidelity": "partial",
+      "brief": "好像和客人说的分量对得上，秤没压得很稳"
+    },
+    "obs.weigh.heavy_maybe": {
+      "fidelity": "partial",
+      "brief": "好像比客人说的重，秤没压得很稳"
+    },
+    "obs.weigh.light_vague": {
+      "fidelity": "partial",
+      "brief": "好像轻一些，戥子没压稳"
+    },
+    "obs.weigh.unsure": {
+      "fidelity": "vague",
+      "brief": "没称准，说不好",
+      "hedge": {
+        "clear": "obs.weigh.unsure",
+        "partial": "obs.weigh.unsure"
+      }
+    }
+  }
+}

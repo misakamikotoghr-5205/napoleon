@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "g06.end.stay": {
+    "t": "在牢里再熬一夜：第 {nights} 夜，最多 {max} 夜。"
+  },
+  "g06.end.fail": {
+    "t": "已是第 {nights} 夜，还出不去，就算打点不成，这一局到此为止。"
+  },
+  "g06.end.short": {
+    "t": "钱不够的那笔没选办法，就当认了。"
+  },
+  "g06.reason.mortgage": {
+    "t": "押家当"
+  },
+  "g06.reason.interest": {
+    "t": "家当利息"
+  },
+  "g06.reason.redeem_estate": {
+    "t": "赎家当"
+  },
+  "g06.reason.redeem_shop": {
+    "t": "赎铺面"
+  },
+  "g06.reason.seize": {
+    "t": "押出去的家当被收走了。"
+  },
+  "g06.short.payment": {
+    "t": "欠着的钱"
+  },
+  "g06.short.goods": {
+    "t": "拿货抵钱"
+  },
+  "g06.short.default": {
+    "t": "认了"
+  },
+  "g06.street.redeemed": {
+    "t": "花了 {money} 蚨，把铺面赎回来了。"
+  },
+  "g06.prison.arrested": {
+    "t": "被抓进了牢里。"
+  },
+  "g06.month.interest": {
+    "t": "押出去的家当，这个月付了 {money} 蚨利息。"
+  },
+  "g06.month.shop_lost": {
+    "t": "铺面到月底还没赎回来，只好流落街头。"
+  }
+}

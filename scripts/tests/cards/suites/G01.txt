@@ -1,0 +1,15 @@
+G01_core_ops|res://scripts/tests/cards/G01/test_core_ops.gd|120|
+G01_composer|res://scripts/tests/cards/G01/test_composer.gd|240|--seeds=50
+G01_piles|res://scripts/tests/cards/G01/test_piles.gd|120|
+G01_state_save|res://scripts/tests/cards/G01/test_state_save.gd|120|
+G01_firsts|res://scripts/tests/cards/G01/test_firsts.gd|120|
+G01_db|res://scripts/tests/cards/G01/test_db.gd|120|
+G01_text|res://scripts/tests/cards/G01/test_text.gd|120|
+G01_text_ai|res://scripts/tests/cards/G01/test_text_ai.gd|120|
+G01_packs|res://scripts/tests/cards/G01/test_packs.gd|240|
+G01_guide_queries|res://scripts/tests/cards/G01/test_guide_queries.gd|120|
+G01_ops|res://scripts/tests/cards/G01/test_ops.gd|120|
+G01_validator_rules|res://scripts/tests/cards/G01/test_validator_rules.gd|240|
+G01_loop_dusk_pct|res://scripts/tests/cards/G01/test_loop_dusk_pct.gd|120|
+G01_end_day|res://scripts/tests/cards/G01/test_end_day.gd|120|
+

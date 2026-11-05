@@ -1,0 +1,826 @@
+{
+  "_meta": {
+    "_provenance": "ai_placeholder",
+    "brief": "第 1 天早上：告示、黄历出来了，还没发牌",
+    "generated_by": "res://scripts/cards/mock/build_fixtures.gd",
+    "owner": "W0",
+    "schema": 1
+  },
+  "guide_progress": {},
+  "queries": {
+    "almanac|{}": {
+      "done": [],
+      "id": "alm.shoudang",
+      "ji": [
+        "travel"
+      ],
+      "yi": [
+        "pawn_in",
+        "meet"
+      ]
+    },
+    "day.end_preview|{}": {
+      "items": [],
+      "needs_confirm": false,
+      "step": "open_day"
+    },
+    "dossier|{}": {
+      "pages": []
+    },
+    "estates|{}": {
+      "estates": [
+        {
+          "id": "es.jewel_cabinet",
+          "interest_money": 4,
+          "money": 80,
+          "status": "held"
+        },
+        {
+          "id": "es.storeroom",
+          "interest_money": 6,
+          "money": 120,
+          "status": "held"
+        },
+        {
+          "id": "es.counter",
+          "interest_money": 7,
+          "money": 150,
+          "status": "held"
+        },
+        {
+          "id": "es.old_house",
+          "interest_money": 10,
+          "money": 260,
+          "status": "held"
+        },
+        {
+          "id": "es.shopfront",
+          "interest_money": 16,
+          "money": 400,
+          "status": "held"
+        }
+      ]
+    },
+    "firsts|{}": {
+      "firsts": {
+        "almanac": 1,
+        "incense": 0,
+        "month_open": 0,
+        "month_wheel": 0,
+        "notice": 1
+      }
+    },
+    "month_report|{}": {
+      "lines": []
+    },
+    "settle_report|{}": {
+      "lines": []
+    },
+    "short|{}": {
+      "amount": 20,
+      "estates": [
+        {
+          "id": "es.jewel_cabinet",
+          "interest_money": 4,
+          "money": 80,
+          "status": "held"
+        },
+        {
+          "id": "es.storeroom",
+          "interest_money": 6,
+          "money": 120,
+          "status": "held"
+        },
+        {
+          "id": "es.counter",
+          "interest_money": 7,
+          "money": 150,
+          "status": "held"
+        },
+        {
+          "id": "es.old_house",
+          "interest_money": 10,
+          "money": 260,
+          "status": "held"
+        },
+        {
+          "id": "es.shopfront",
+          "interest_money": 16,
+          "money": 400,
+          "status": "held"
+        }
+      ],
+      "goods": [],
+      "options": [
+        "goods",
+        "estate",
+        "default"
+      ],
+      "payee": "w0.mock.payee",
+      "source": ""
+    },
+    "stock|{}": {
+      "items": []
+    },
+    "tickets|{}": {
+      "tickets": []
+    },
+    "wheel|{\"uid\":\"\",\"wheel\":\"wh.month\"}": {
+      "art": "wheel.month",
+      "cost": {
+        "money": 0,
+        "stake": false
+      },
+      "incense": {
+        "accepts": [
+          "money",
+          "kept",
+          "contact"
+        ],
+        "full": false,
+        "placed": [
+          {
+            "amount": 10,
+            "kind": "money"
+          }
+        ]
+      },
+      "kind": "month",
+      "result": {
+        "segment": "ws.1938.month.caixing",
+        "stop_deg": 13.185
+      },
+      "segments": [
+        {
+          "arc_deg": 128.807339449541,
+          "art": "icon.ws.caixing",
+          "id": "ws.1938.month.caixing"
+        },
+        {
+          "arc_deg": 99.0825688073395,
+          "art": "icon.ws.liunian",
+          "id": "ws.1938.month.liunian"
+        },
+        {
+          "arc_deg": 132.110091743119,
+          "art": "icon.ws.pingan",
+          "id": "ws.1938.month.pingan"
+        }
+      ],
+      "spun": true,
+      "staked": "",
+      "uid": "",
+      "wheel": "wh.month"
+    },
+    "year_report|{}": {
+      "lines": []
+    }
+  },
+  "responses": [
+    {
+      "cmd": "day.begin",
+      "events": [
+        [
+          "phase_changed",
+          "morning",
+          "day"
+        ],
+        [
+          "cards_dealt",
+          [
+            "c0002",
+            "c0003",
+            "c0004"
+          ]
+        ],
+        [
+          "first_time",
+          "deal",
+          {}
+        ],
+        [
+          "first_time",
+          "person",
+          {
+            "def": "p.linsao.1938.pawn_hairpin",
+            "uid": "c0002"
+          }
+        ]
+      ],
+      "match": {},
+      "patch": [
+        {
+          "op": "set",
+          "path": "hand",
+          "value": [
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "refuse",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.linsao",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.linsao.1938.pawn_hairpin",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "pawn",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "counter",
+              "person": "linsao",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "person",
+              "uid": "c0002",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "refuse",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.stranger_peddler",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.stranger_peddler.any.sell_bowl",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "sell",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "counter",
+              "person": "stranger_peddler",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "person",
+              "uid": "c0003",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "refuse",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.chen",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.chen.1938.buy_scroll",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "buy",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "counter",
+              "person": "chen",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "person",
+              "uid": "c0004",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            }
+          ]
+        },
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "day"
+        }
+      ],
+      "result": {
+        "dealt": [
+          "c0002",
+          "c0003",
+          "c0004"
+        ],
+        "err": "",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "day.end",
+      "events": [
+        [
+          "phase_changed",
+          "morning",
+          "day"
+        ],
+        [
+          "cards_dealt",
+          [
+            "c0002",
+            "c0003",
+            "c0004"
+          ]
+        ],
+        [
+          "first_time",
+          "deal",
+          {}
+        ],
+        [
+          "first_time",
+          "person",
+          {
+            "def": "p.linsao.1938.pawn_hairpin",
+            "uid": "c0002"
+          }
+        ]
+      ],
+      "match": {
+        "confirm": false
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "hand",
+          "value": [
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "refuse",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.linsao",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.linsao.1938.pawn_hairpin",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "pawn",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "counter",
+              "person": "linsao",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "person",
+              "uid": "c0002",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "refuse",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.stranger_peddler",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.stranger_peddler.any.sell_bowl",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "sell",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "counter",
+              "person": "stranger_peddler",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "person",
+              "uid": "c0003",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "refuse",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.chen",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.chen.1938.buy_scroll",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "buy",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "counter",
+              "person": "chen",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "person",
+              "uid": "c0004",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            }
+          ]
+        },
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "day"
+        }
+      ],
+      "result": {
+        "dealt": [
+          "c0002",
+          "c0003",
+          "c0004"
+        ],
+        "err": "",
+        "items": [],
+        "ok": true,
+        "step": "open_day"
+      }
+    },
+    {
+      "cmd": "day.end",
+      "events": [
+        [
+          "phase_changed",
+          "morning",
+          "day"
+        ],
+        [
+          "cards_dealt",
+          [
+            "c0002",
+            "c0003",
+            "c0004"
+          ]
+        ],
+        [
+          "first_time",
+          "deal",
+          {}
+        ],
+        [
+          "first_time",
+          "person",
+          {
+            "def": "p.linsao.1938.pawn_hairpin",
+            "uid": "c0002"
+          }
+        ]
+      ],
+      "match": {
+        "confirm": true
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "hand",
+          "value": [
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "refuse",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.linsao",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.linsao.1938.pawn_hairpin",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "pawn",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "counter",
+              "person": "linsao",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "person",
+              "uid": "c0002",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "refuse",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.stranger_peddler",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.stranger_peddler.any.sell_bowl",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "sell",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "counter",
+              "person": "stranger_peddler",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "person",
+              "uid": "c0003",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            },
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                },
+                {
+                  "enabled": true,
+                  "id": "refuse",
+                  "reason_key": ""
+                }
+              ],
+              "art": "portrait.chen",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "p.chen.1938.buy_scroll",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "buy",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "counter",
+              "person": "chen",
+              "source": "",
+              "stage": {},
+              "status": "open",
+              "type": "person",
+              "uid": "c0004",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            }
+          ]
+        },
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "day"
+        }
+      ],
+      "result": {
+        "dealt": [
+          "c0002",
+          "c0003",
+          "c0004"
+        ],
+        "err": "",
+        "items": [],
+        "ok": true,
+        "step": "open_day"
+      }
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    }
+  ],
+  "view": {
+    "busy": false,
+    "caps": {
+      "contacts": 3,
+      "kept": 5,
+      "shelf": 12
+    },
+    "contacts": [],
+    "date": {
+      "abs_day": 1,
+      "d": 1,
+      "era": "1938",
+      "m": 3,
+      "minute": 480,
+      "stage": 0,
+      "stage_day": 1,
+      "stage_days": 30,
+      "weekday": 1,
+      "y": 1938
+    },
+    "demands": [],
+    "dossier_new": 0,
+    "estates": [
+      {
+        "id": "es.jewel_cabinet",
+        "interest_money": 4,
+        "money": 80,
+        "status": "held"
+      },
+      {
+        "id": "es.storeroom",
+        "interest_money": 6,
+        "money": 120,
+        "status": "held"
+      },
+      {
+        "id": "es.counter",
+        "interest_money": 7,
+        "money": 150,
+        "status": "held"
+      },
+      {
+        "id": "es.old_house",
+        "interest_money": 10,
+        "money": 260,
+        "status": "held"
+      },
+      {
+        "id": "es.shopfront",
+        "interest_money": 16,
+        "money": 400,
+        "status": "held"
+      }
+    ],
+    "goals": [
+      {
+        "id": "gl.1938.keep_shop",
+        "main": true,
+        "status": "open"
+      }
+    ],
+    "hand": [],
+    "heat_tier": 0,
+    "kept": [],
+    "lots": [],
+    "mode": "shop",
+    "money": {
+      "amount": 330,
+      "currency": "fabi"
+    },
+    "night_offers": [],
+    "notice": {
+      "almanac": {
+        "done": [],
+        "id": "alm.shoudang",
+        "ji": [
+          "travel"
+        ],
+        "yi": [
+          "pawn_in",
+          "meet"
+        ]
+      },
+      "fortune": "ws.1938.month.caixing",
+      "market_day": false,
+      "news": [
+        "w0.mock.notice"
+      ],
+      "weather": "clear"
+    },
+    "open_panel": {
+      "args": {},
+      "kind": ""
+    },
+    "pending": [],
+    "phase": "morning",
+    "rep_tier": 1,
+    "self": {
+      "attrs": {
+        "eye": 2,
+        "nerve": 1,
+        "pull": 1,
+        "tongue": 1
+      },
+      "def": "self.ruhua",
+      "uid": "c0001",
+      "used_today": false
+    },
+    "shelf_count": 0,
+    "stage": {
+      "sealed": false,
+      "set": "counter",
+      "time": "day"
+    },
+    "tickets": [],
+    "v": 1
+  }
+}

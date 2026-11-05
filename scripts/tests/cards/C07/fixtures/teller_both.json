@@ -1,0 +1,233 @@
+{
+  "_meta": {
+    "owner": "C07",
+    "schema": 1,
+    "brief": "Stall offers a lot and a character reading, with three characters on the mat.",
+    "_provenance": {
+      "by": "ai",
+      "task": "C07",
+      "date": "2026-10-13"
+    }
+  },
+  "guide_progress": {},
+  "view": {
+    "v": 1,
+    "phase": "day",
+    "mode": "shop",
+    "busy": false,
+    "date": {
+      "stage": 0,
+      "era": "1938",
+      "y": 1938,
+      "m": 3,
+      "d": 5,
+      "weekday": 5,
+      "stage_day": 5,
+      "stage_days": 30,
+      "abs_day": 5,
+      "minute": 540
+    },
+    "notice": {
+      "weather": "clear",
+      "market_day": false,
+      "news": [],
+      "almanac": {
+        "id": "alm.shoudang",
+        "yi": [
+          "pawn_in",
+          "meet"
+        ],
+        "ji": [
+          "travel"
+        ],
+        "done": []
+      },
+      "fortune": ""
+    },
+    "money": {
+      "amount": 40,
+      "currency": "fabi"
+    },
+    "rep_tier": 1,
+    "heat_tier": 0,
+    "self": {
+      "uid": "c0001",
+      "def": "self.ruhua",
+      "attrs": {},
+      "used_today": false
+    },
+    "hand": [
+      {
+        "uid": "c0701",
+        "def": "ev.any.fortune_teller",
+        "type": "event",
+        "zone": "hand",
+        "gold": false,
+        "must_resolve": false,
+        "keepable": false,
+        "expires_in": -1,
+        "status": "open",
+        "art": "illus.ev.any.fortune_teller",
+        "person": "",
+        "intent": "",
+        "item": null,
+        "asking": -1,
+        "observations": [],
+        "days_left": -1,
+        "panel": "fortune",
+        "actions": [
+          {
+            "id": "open",
+            "enabled": true,
+            "reason_key": ""
+          }
+        ]
+      }
+    ],
+    "kept": [],
+    "contacts": [],
+    "pending": [],
+    "demands": [],
+    "caps": {
+      "kept": 5,
+      "contacts": 3,
+      "shelf": 12
+    },
+    "shelf_count": 0,
+    "tickets": [],
+    "estates": [],
+    "goals": [],
+    "night_offers": [],
+    "open_panel": {
+      "kind": "",
+      "args": {}
+    },
+    "lots": [],
+    "dossier_new": 0
+  },
+  "queries": {
+    "fortune|{\"uid\":\"c0701\"}": {
+      "cost": 3,
+      "can_lot": true,
+      "can_cezi": true,
+      "cezi": [
+        "cz.shui",
+        "cz.huo",
+        "cz.guan"
+      ],
+      "last": {}
+    },
+    "card|{\"uid\":\"c0701\"}": {
+      "uid": "c0701",
+      "def": "ev.any.fortune_teller",
+      "type": "event",
+      "zone": "hand",
+      "gold": false,
+      "must_resolve": false,
+      "keepable": false,
+      "expires_in": -1,
+      "status": "open",
+      "art": "illus.ev.any.fortune_teller",
+      "person": "",
+      "intent": "",
+      "item": null,
+      "asking": -1,
+      "observations": [],
+      "days_left": -1,
+      "panel": "fortune",
+      "actions": [
+        {
+          "id": "open",
+          "enabled": true,
+          "reason_key": ""
+        }
+      ]
+    },
+    "firsts|{}": {
+      "firsts": {}
+    },
+    "almanac|{}": {
+      "id": "alm.shoudang",
+      "yi": [
+        "pawn_in",
+        "meet"
+      ],
+      "ji": [
+        "travel"
+      ],
+      "done": []
+    }
+  },
+  "responses": [
+    {
+      "cmd": "fortune.cezi",
+      "match": {
+        "uid": "c0701",
+        "char": "cz.huo"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "char": "cz.huo",
+        "reading": "none"
+      }
+    },
+    {
+      "cmd": "fortune.cezi",
+      "match": {
+        "uid": "c0701",
+        "char": "cz.guan"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "char": "cz.guan",
+        "reading": "has"
+      }
+    },
+    {
+      "cmd": "fortune.cezi",
+      "match": {
+        "uid": "c0701",
+        "char": "cz.shui"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "char": "cz.shui",
+        "reading": "has"
+      }
+    },
+    {
+      "cmd": "fortune.lot",
+      "match": {
+        "uid": "c0701"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "lot": "lot.g1.official",
+        "grade": 1
+      }
+    },
+    {
+      "cmd": "card.choose",
+      "match": {
+        "uid": "c0701",
+        "choice": "pass"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "needs_slots": false
+      }
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "ok": true,
+        "err": ""
+      }
+    }
+  ]
+}

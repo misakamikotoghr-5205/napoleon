@@ -1,0 +1,187 @@
+{
+  "_meta": {
+    "owner": "C01",
+    "schema": 1,
+    "brief": "dusk at the counter after most of the day's cards are dealt with",
+    "_provenance": {
+      "by": "ai",
+      "task": "C01",
+      "date": "2026-10-14"
+    }
+  },
+  "guide": "examples",
+  "view": {
+    "v": 1,
+    "phase": "day",
+    "mode": "shop",
+    "busy": false,
+    "date": {
+      "stage": 0,
+      "era": "1938",
+      "y": 1938,
+      "m": 3,
+      "d": 9,
+      "weekday": 2,
+      "stage_day": 9,
+      "stage_days": 30,
+      "abs_day": 9,
+      "minute": 480
+    },
+    "notice": {
+      "weather": "rain",
+      "market_day": true,
+      "news": [
+        "c01.notice.a",
+        "c01.notice.b"
+      ],
+      "almanac": {
+        "id": "alm.shoudang",
+        "yi": [
+          "pawn_in"
+        ],
+        "ji": [
+          "travel"
+        ],
+        "done": []
+      },
+      "fortune": ""
+    },
+    "money": {
+      "amount": 340,
+      "currency": "fabi"
+    },
+    "rep_tier": 3,
+    "heat_tier": 2,
+    "self": {
+      "uid": "c0001",
+      "def": "self.ruhua",
+      "type": "self",
+      "zone": "self",
+      "attrs": {
+        "eye": 2,
+        "tongue": 1,
+        "pull": 1,
+        "nerve": 1
+      },
+      "used_today": false,
+      "art": "",
+      "gold": false,
+      "panel": "none",
+      "actions": [],
+      "must_resolve": false,
+      "keepable": false,
+      "expires_in": -1,
+      "status": "open",
+      "person": "ruhua",
+      "intent": "",
+      "item": null,
+      "asking": -1,
+      "observations": [],
+      "days_left": -1,
+      "away_days": 0,
+      "can_appraise": false
+    },
+    "hand": [
+      {
+        "uid": "c0101",
+        "def": "p.ex.gold",
+        "type": "person",
+        "zone": "hand",
+        "gold": true,
+        "must_resolve": true,
+        "keepable": false,
+        "expires_in": -1,
+        "status": "open",
+        "art": "",
+        "person": "brother",
+        "intent": "",
+        "item": null,
+        "asking": -1,
+        "observations": [],
+        "days_left": -1,
+        "attrs": {},
+        "used_today": false,
+        "away_days": 0,
+        "can_appraise": false,
+        "panel": "slots",
+        "actions": []
+      }
+    ],
+    "kept": [],
+    "contacts": [],
+    "pending": [],
+    "demands": [],
+    "caps": {
+      "kept": 5,
+      "contacts": 3,
+      "shelf": 12
+    },
+    "shelf_count": 1,
+    "tickets": [],
+    "estates": [],
+    "goals": [],
+    "night_offers": [],
+    "open_panel": {
+      "kind": "",
+      "args": {}
+    },
+    "lots": [],
+    "dossier_new": 1,
+    "stage": {
+      "set": "counter",
+      "time": "dusk",
+      "sealed": false
+    }
+  },
+  "queries": {
+    "firsts|{}": {
+      "firsts": {}
+    },
+    "stock|{}": {
+      "items": [
+        {
+          "item": "I001",
+          "template": "jewelry.hairpin",
+          "cat": "jewelry",
+          "art": "item.jewelry.hairpin",
+          "condition_word": 2,
+          "observations": [],
+          "on_shelf_since": 1
+        }
+      ]
+    },
+    "card|{\"uid\":\"c0101\"}": {
+      "uid": "c0101",
+      "def": "p.ex.gold",
+      "type": "person",
+      "zone": "hand",
+      "gold": true,
+      "must_resolve": true,
+      "keepable": false,
+      "expires_in": -1,
+      "status": "open",
+      "art": "",
+      "person": "brother",
+      "intent": "",
+      "item": null,
+      "asking": -1,
+      "observations": [],
+      "days_left": -1,
+      "attrs": {},
+      "used_today": false,
+      "away_days": 0,
+      "can_appraise": false,
+      "panel": "slots",
+      "actions": []
+    }
+  },
+  "responses": [
+    {
+      "cmd": "*",
+      "result": {
+        "ok": true,
+        "err": ""
+      }
+    }
+  ]
+}

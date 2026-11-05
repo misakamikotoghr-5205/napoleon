@@ -1,0 +1,138 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "c16.title.name": {
+    "t": "德厚当"
+  },
+  "c16.title.new": {
+    "t": "开张"
+  },
+  "c16.title.continue": {
+    "t": "接着做生意"
+  },
+  "c16.title.settings": {
+    "t": "设置"
+  },
+  "c16.title.quit": {
+    "t": "离开"
+  },
+  "c16.title.new_failed": {
+    "t": "数据文件有错，新局没能开始。请把下面的文件名告诉做游戏的人。"
+  },
+  "c16.pause.resume": {
+    "t": "回到柜台"
+  },
+  "c16.pause.save_note": {
+    "t": "每天早上自动存一次，不用自己存档。"
+  },
+  "c16.pause.settings": {
+    "t": "设置"
+  },
+  "c16.pause.help": {
+    "t": "帮助"
+  },
+  "c16.pause.title": {
+    "t": "回到标题"
+  },
+  "c16.pause.quit": {
+    "t": "离开"
+  },
+  "c16.settings.music": {
+    "t": "音乐"
+  },
+  "c16.settings.sfx": {
+    "t": "音效"
+  },
+  "c16.settings.text_speed": {
+    "t": "文字速度"
+  },
+  "c16.settings.guide_hints": {
+    "t": "新手指引"
+  },
+  "c16.settings.fast_anim": {
+    "t": "动画加快"
+  },
+  "c16.settings.on": {
+    "t": "开着"
+  },
+  "c16.settings.off": {
+    "t": "关着"
+  },
+  "c16.settings.close": {
+    "t": "回去"
+  },
+  "c16.title.tagline": {
+    "t": "一九三八年 · 三月 · 青溪镇"
+  },
+  "c16.title.blurb": {
+    "t": "爸妈出门半个月没有音信，哥哥沈如松要去找他们，德厚当交到你手上。每天开门，进门的人一个个走到柜台前：来当的、来卖的、来买的、来赎的。"
+  },
+  "c16.title.hint": {
+    "t": "手里的牌拖到门口，或者点一下再按“打出”，就是请这个人进门。\n每天早上自动存一次；“接着做生意”从那里接上。"
+  },
+  "c16.pause.heading": {
+    "t": "歇一歇"
+  },
+  "c16.pause.confirm_quit": {
+    "t": "现在离开，今天早上以后做的事都不会留下。真的离开？"
+  },
+  "c16.pause.confirm_title": {
+    "t": "回到标题，今天早上以后做的事都不会留下。真的回去？"
+  },
+  "c16.pause.confirm_yes": {
+    "t": "确定"
+  },
+  "c16.pause.confirm_no": {
+    "t": "再想想"
+  },
+  "c16.settings.speed.0": {
+    "t": "慢"
+  },
+  "c16.settings.speed.1": {
+    "t": "中"
+  },
+  "c16.settings.speed.2": {
+    "t": "快"
+  },
+  "c16.settings.speed.3": {
+    "t": "瞬间"
+  },
+  "c16.guide.ok": {
+    "t": "知道了"
+  },
+  "c16.guide.ok_more": {
+    "t": "知道了（还有 {n} 条）"
+  },
+  "c16.guide.off": {
+    "t": "关掉指引"
+  },
+  "c16.guide.off_flash": {
+    "t": "指引关了。设置里能再打开，规矩页能回看。"
+  },
+  "c16.guide.who.brother": {
+    "t": "哥哥沈如松"
+  },
+  "c16.guide.who.zhouma": {
+    "t": "周妈"
+  },
+  "c16.guide.who.hu2": {
+    "t": "胡二"
+  },
+  "c16.guide.who.suanming": {
+    "t": "算命先生"
+  },
+  "c16.guide.who.postman": {
+    "t": "何启明"
+  },
+  "c16.guide.who.obj.brother_ledger": {
+    "t": "哥哥的账簿批注"
+  },
+  "c16.guide.who.obj.almanac": {
+    "t": "黄历"
+  },
+  "c16.guide.who.obj.notice": {
+    "t": "告示"
+  }
+}

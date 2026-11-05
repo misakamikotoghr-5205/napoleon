@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "owner": "K08",
+    "schema": 1,
+    "brief": "消息看过或交出去之后的告示键。",
+    "_provenance": {
+      "by": "ai",
+      "task": "K08",
+      "date": "2026-10-13"
+    }
+  },
+  "keys": {
+    "k08.notice.family": {
+      "brief": "看过家人捎来的消息之后的一行告示"
+    },
+    "k08.notice.decoded": {
+      "brief": "电报译开之后的一行告示"
+    },
+    "k08.notice.pieced": {
+      "brief": "撕开的信拼回去之后的一行告示"
+    },
+    "k08.notice.informed": {
+      "brief": "把消息交给要消息的条子之后的一行告示"
+    }
+  }
+}

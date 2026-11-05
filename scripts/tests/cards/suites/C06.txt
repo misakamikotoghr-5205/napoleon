@@ -1,0 +1,9 @@
+# C06 命运轮盘（docs/handoff_cards/C06_wheel.md）
+C06_month|res://scripts/tests/cards/C06/test_month.gd|180|
+C06_stop_angle|res://scripts/tests/cards/C06/test_stop_angle.gd|120|
+C06_kinds|res://scripts/tests/cards/C06/test_kinds.gd|180|
+C06_no_numbers|res://scripts/tests/cards/C06/test_no_numbers.gd|120|
+C06_guide|res://scripts/tests/cards/C06/test_guide.gd|180|
+C06_guide_k16|res://scripts/tests/cards/C06/test_guide.gd|180|--steps=k16 --name=C06_guide_k16
+C06_real_engine|res://scripts/tests/cards/C06/test_real_engine.gd|180|--name=C06_real_engine
+C06_real_kdata|res://scripts/tests/cards/C06/test_real_engine.gd|180|--name=C06_real_kdata --examples=0

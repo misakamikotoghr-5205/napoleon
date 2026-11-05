@@ -1,0 +1,135 @@
+{
+  "_meta": {
+    "owner": "K04",
+    "schema": 1,
+    "brief": "K04 的原因键与告示键。玩家看见的句子由人写。"
+  },
+  "keys": {
+    "k04.notice.books_done": {
+      "brief": "告示：年关的账结清了"
+    },
+    "k04.notice.books_fail": {
+      "brief": "告示：年关的账没结清"
+    },
+    "k04.notice.cocoon": {
+      "brief": "告示：茧行对过账"
+    },
+    "k04.notice.countryside": {
+      "brief": "告示：乡下有消息"
+    },
+    "k04.notice.debt_delay": {
+      "brief": "告示：年关的债没能按下"
+    },
+    "k04.notice.debt_hide": {
+      "brief": "告示：这一天躲开了讨债"
+    },
+    "k04.notice.debt_paid": {
+      "brief": "告示：年关的债还上了"
+    },
+    "k04.notice.gate_fail": {
+      "brief": "告示：城门盘查没过"
+    },
+    "k04.notice.gate_pass": {
+      "brief": "告示：城门盘查通过"
+    },
+    "k04.notice.levy": {
+      "brief": "告示：伪区公所要了一笔"
+    },
+    "k04.notice.patrol_fail": {
+      "brief": "告示：街上盘查没过"
+    },
+    "k04.notice.patrol_pass": {
+      "brief": "告示：街上盘查过去了"
+    },
+    "k04.notice.snow": {
+      "brief": "告示：城外的路被雪封着或铲开了"
+    },
+    "k04.notice.wu_buy": {
+      "brief": "告示：照新价买了米"
+    },
+    "k04.notice.wu_fail": {
+      "brief": "告示：米价没讲下来"
+    },
+    "k04.notice.wu_haggle": {
+      "brief": "告示：米价讲下来了"
+    },
+    "k04.notice.wu_refuse": {
+      "brief": "告示：没买这批米"
+    },
+    "k04.reason.charcoal": {
+      "brief": "买柴"
+    },
+    "k04.reason.charge": {
+      "brief": "诬告里花钱了事"
+    },
+    "k04.reason.clothes": {
+      "brief": "当衣或向家里挪的钱"
+    },
+    "k04.reason.countryside": {
+      "brief": "把乡下的消息带全"
+    },
+    "k04.reason.damp": {
+      "brief": "返潮损失"
+    },
+    "k04.reason.debt": {
+      "brief": "年关还债"
+    },
+    "k04.reason.fine": {
+      "brief": "罚款"
+    },
+    "k04.reason.fire": {
+      "brief": "失火损失"
+    },
+    "k04.reason.gate": {
+      "brief": "城门通融的钱"
+    },
+    "k04.reason.hoard": {
+      "brief": "转手一批米得到的钱"
+    },
+    "k04.reason.kin": {
+      "brief": "远亲寄来的钱"
+    },
+    "k04.reason.levy": {
+      "brief": "伪区公所要去的货或折的钱"
+    },
+    "k04.reason.medicine": {
+      "brief": "抓药"
+    },
+    "k04.reason.night": {
+      "brief": "夜里接济"
+    },
+    "k04.reason.passage": {
+      "brief": "出城躲一躲的钱"
+    },
+    "k04.reason.purse": {
+      "brief": "捡到或收下别人来认的钱"
+    },
+    "k04.reason.refugee": {
+      "brief": "给逃难的人的钱"
+    },
+    "k04.reason.requisition": {
+      "brief": "被征用掉的货"
+    },
+    "k04.reason.rice": {
+      "brief": "买米付出的钱"
+    },
+    "k04.reason.seal": {
+      "brief": "疏通查封"
+    },
+    "k04.reason.snow": {
+      "brief": "雪天卖出的钱"
+    },
+    "k04.reason.stranger": {
+      "brief": "生人小买卖的钱"
+    },
+    "k04.reason.tab": {
+      "brief": "年关日常的账"
+    },
+    "k04.reason.theft": {
+      "brief": "失窃丢掉的货"
+    },
+    "k04.reason.year_goods": {
+      "brief": "置办年货"
+    }
+  }
+}

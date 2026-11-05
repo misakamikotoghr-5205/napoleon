@@ -1,0 +1,13 @@
+{
+  "kind": "weigh",
+  "seed": 14005,
+  "item": "it.rice.jing",
+  "art": "item.rice.jing",
+  "minutes_per_step": 1,
+  "max_minutes": 30,
+  "tool": "steelyard",
+  "claimed_fen": 1600,
+  "actual_fen": 1600,
+  "weights_fen": [800, 400, 200, 100],
+  "resolution_fen": 20
+}

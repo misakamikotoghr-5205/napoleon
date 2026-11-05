@@ -1,0 +1,44 @@
+{
+	"cases": [
+		{
+			"data": "examples",
+			"days": 30,
+			"hashes": [
+				{
+					"abs_day": 10,
+					"hash": "8ac7179b8ff12f9a99e1200c8c6890497001593110d4cdd83078379cd9ecb42d"
+				},
+				{
+					"abs_day": 20,
+					"hash": "ca30c98673648e2cd267c487e09fdcfd304a8d9a20f09c8fef5ca52375732310"
+				},
+				{
+					"abs_day": 30,
+					"hash": "959a4762e50b0b1bd0d1d3c35c4318495528075869b2b61821c28d11f1289696"
+				}
+			],
+			"policy": "fair",
+			"seed": 7
+		},
+		{
+			"data": "real",
+			"days": 30,
+			"hashes": [
+				{
+					"abs_day": 10,
+					"hash": "fdd685159d70327874ea1d6bcefbe580481962e103492e32aee4a9f934db9898"
+				},
+				{
+					"abs_day": 20,
+					"hash": "58559a1fb6c3053987633371ce45e7e92623173e675738a8be57fea2652d01fe"
+				},
+				{
+					"abs_day": 30,
+					"hash": "14f083047bc7a756405047de3fee41e1dad06e91c35078b174de9ffaf8597353"
+				}
+			],
+			"policy": "fair",
+			"seed": 7
+		}
+	]
+}

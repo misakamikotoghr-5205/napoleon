@@ -1,0 +1,22 @@
+{
+  "cards": [
+    {
+      "id": "gd.bad.hidden",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "brief": "告诉玩家这一步的概率和本心点数。",
+      "weight": 0
+    },
+    {
+      "id": "gd.ok.clean",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "brief": "哥哥指着新发的牌，让你一张一张处理。",
+      "weight": 0
+    }
+  ]
+}

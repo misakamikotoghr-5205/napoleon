@@ -1,0 +1,14 @@
+{
+  "kind": "fragments",
+  "seed": 23,
+  "item": "",
+  "art": "illus.nw.letter",
+  "minutes_per_step": 1,
+  "max_minutes": 30,
+  "doc": "letter",
+  "pieces": 6,
+  "seal_offset_px": 0,
+  "ink_mismatch": [1],
+  "dangzi_marks": 0,
+  "missing_piece": 3
+}

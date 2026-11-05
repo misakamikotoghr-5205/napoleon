@@ -1,0 +1,60 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1,
+    "brief": "例子集：通用事件与系统牌"
+  },
+  "cards": [
+    {
+      "id": "ev.any.fortune_teller",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "weight": 4,
+      "tags": [
+        "fortune",
+        "omen_stranger"
+      ],
+      "must_resolve": false,
+      "opens_fortune": "both",
+      "cost": {
+        "money": 3
+      },
+      "choices": [
+        {
+          "id": "pass",
+          "effects": [],
+          "brief": "不算"
+        }
+      ],
+      "art": "illus.ev.any.fortune_teller",
+      "brief": "街口来了个算命先生（也可以是测字摊）。花几个钱求一支签或测个字；不算就走过去。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "id": "ev.any.wheel_go",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "tags": [
+        "fortune",
+        "omen_road"
+      ],
+      "must_resolve": false,
+      "art": "illus.ev.any.wheel_go",
+      "brief": "（W0 例子，系统牌）wheel_offer 发的“去转一次”的行动牌：vars 里带 wheel 和 cost，处理它就是打开那个轮盘。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

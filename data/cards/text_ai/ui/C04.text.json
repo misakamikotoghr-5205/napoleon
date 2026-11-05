@@ -1,0 +1,333 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-23:base-text-ui"
+  },
+  "c04.tier.harsh.pay": {
+    "t": "压价 · {n} 蚨"
+  },
+  "c04.tier.fair.pay": {
+    "t": "公道价 · {n} 蚨"
+  },
+  "c04.tier.kind.pay": {
+    "t": "厚道价 · {n} 蚨"
+  },
+  "c04.tier.harsh.receive": {
+    "t": "开高价 · {n} 蚨"
+  },
+  "c04.tier.fair.receive": {
+    "t": "要公道价 · {n} 蚨"
+  },
+  "c04.tier.kind.receive": {
+    "t": "让些价 · {n} 蚨"
+  },
+  "c04.intent.pawn": {
+    "t": "来当"
+  },
+  "c04.intent.sell": {
+    "t": "来卖"
+  },
+  "c04.intent.buy": {
+    "t": "来买"
+  },
+  "c04.intent.redeem": {
+    "t": "来赎"
+  },
+  "c04.cond.0": {
+    "t": "破旧"
+  },
+  "c04.cond.1": {
+    "t": "差些"
+  },
+  "c04.cond.2": {
+    "t": "平常"
+  },
+  "c04.cond.3": {
+    "t": "尚好"
+  },
+  "c04.cond.4": {
+    "t": "顶好"
+  },
+  "c04.reply.look": {
+    "t": "拿放大镜细看"
+  },
+  "c04.reply.refuse": {
+    "t": "不收"
+  },
+  "c04.reply.later": {
+    "t": "请他先等等，回头再说"
+  },
+  "c04.reply.accept": {
+    "t": "行，就这个价"
+  },
+  "c04.reply.decline": {
+    "t": "这个价不行"
+  },
+  "c04.reply.pick": {
+    "t": "从货架上挑一件"
+  },
+  "c04.dialog.skip": {
+    "t": "跳过 ▶▶"
+  },
+  "c04.dialog.sample": {
+    "t": "先说这一句。\n\n再说这一句。"
+  },
+  "c04.shelf.title": {
+    "t": "货架"
+  },
+  "c04.shelf.count": {
+    "t": "{n}/{cap} 格 · 只能卖给来买的人"
+  },
+  "c04.tickets.title": {
+    "t": "当票"
+  },
+  "c04.tickets.row": {
+    "t": "德字第 {n} 号 · 还剩 {days} 天"
+  },
+  "c04.tickets.foreign": {
+    "t": "外来的票"
+  },
+  "c04.btn.send_off": {
+    "t": "送客"
+  },
+  "c04.redeem.by_rule": {
+    "t": "照规矩，收本收息"
+  },
+  "c04.redeem.squeeze": {
+    "t": "刁难一下，多要些"
+  },
+  "c04.redeem.compensate": {
+    "t": "东西卖了，赔他钱"
+  },
+  "c04.redeem.buy_back": {
+    "t": "东西卖了，去买回来"
+  },
+  "c04.result.ticket": {
+    "t": "成交，开了当票。"
+  },
+  "c04.result.shelved": {
+    "t": "成交，东西上了货架。"
+  },
+  "c04.label.asking": {
+    "t": "他开口要"
+  },
+  "c04.label.principal": {
+    "t": "当本"
+  },
+  "c04.label.days": {
+    "t": "还剩"
+  },
+  "c04.cat.jewelry": {
+    "t": "首饰"
+  },
+  "c04.cat.utensils": {
+    "t": "器物"
+  },
+  "c04.cat.art": {
+    "t": "书画"
+  },
+  "c04.cat.clothing": {
+    "t": "衣物"
+  },
+  "c04.cat.silver": {
+    "t": "银器"
+  },
+  "c04.cat.documents": {
+    "t": "文书"
+  },
+  "c04.reply.mark.choice": {
+    "t": "◆"
+  },
+  "c04.reply.mark.tier": {
+    "t": "◆"
+  },
+  "c04.reply.mark.look": {
+    "t": "◇"
+  },
+  "c04.reply.mark.roll": {
+    "t": "▶"
+  },
+  "c04.reply.mark.wheel": {
+    "t": "▶"
+  },
+  "c04.reply.mark.later": {
+    "t": "·"
+  },
+  "c04.dialog.more": {
+    "t": "▼"
+  },
+  "c04.header.join": {
+    "t": "{a} · {b}"
+  },
+  "c04.header.pawn": {
+    "t": "柜上：{name}"
+  },
+  "c04.header.sell": {
+    "t": "柜上：{name}"
+  },
+  "c04.header.buy": {
+    "t": "拿给他看：{name}"
+  },
+  "c04.header.buy_none": {
+    "t": "来买：先从货架上挑一件"
+  },
+  "c04.header.redeem": {
+    "t": "来赎：{name}"
+  },
+  "c04.header.cond": {
+    "t": "成色：{cond}"
+  },
+  "c04.header.asking": {
+    "t": "他开口要 {n} 蚨"
+  },
+  "c04.header.counter": {
+    "t": "他还价 {n} 蚨"
+  },
+  "c04.header.principal": {
+    "t": "当本 {n} 蚨"
+  },
+  "c04.header.days": {
+    "t": "还剩 {n} 天"
+  },
+  "c04.note.spot": {
+    "t": "细看"
+  },
+  "c04.note.weigh": {
+    "t": "称分量"
+  },
+  "c04.note.coin_ring": {
+    "t": "吹银元"
+  },
+  "c04.note.fragments": {
+    "t": "拼碎片"
+  },
+  "c04.note.decode": {
+    "t": "对密码"
+  },
+  "c04.note.other": {
+    "t": "看出来"
+  },
+  "c04.reason.shelf_empty": {
+    "t": "货架上没有合他要的东西。"
+  },
+  "c04.reason.money_short": {
+    "t": "钱不够。"
+  },
+  "c04.reason.shelf_full": {
+    "t": "货架满了，收不下。"
+  },
+  "c04.drawer.close": {
+    "t": "合上"
+  },
+  "c04.shelf.pick_hint": {
+    "t": "点一件，拿给他看。"
+  },
+  "c04.shelf.empty_cell": {
+    "t": "空格"
+  },
+  "c04.tickets.note": {
+    "t": "当出去就开当票。到期他来赎，你收本收息；不来，东西就归铺子。"
+  },
+  "c04.tickets.empty": {
+    "t": "还没开过当票。"
+  },
+  "c04.tickets.head": {
+    "t": "德字第 {n} 号　{name}"
+  },
+  "c04.role.brother": {
+    "t": "哥哥 · 德厚当少东家"
+  },
+  "c04.role.chen": {
+    "t": "父母的老友"
+  },
+  "c04.role.xiaoding": {
+    "t": "孙府伙夫"
+  },
+  "c04.role.zhang": {
+    "t": "县城医院的护士"
+  },
+  "c04.role.wangshan": {
+    "t": "说是过路的青年"
+  },
+  "c04.role.li": {
+    "t": "县立中学的学生"
+  },
+  "c04.role.linsao": {
+    "t": "船户人家的媳妇"
+  },
+  "c04.role.zhouma": {
+    "t": "茶馆厨娘"
+  },
+  "c04.role.zhao": {
+    "t": "佃户"
+  },
+  "c04.role.sunyoung": {
+    "t": "孙府少爷"
+  },
+  "c04.role.ma": {
+    "t": "维持会的保长"
+  },
+  "c04.role.hu2": {
+    "t": "替保长跑腿的"
+  },
+  "c04.role.sunlaoye": {
+    "t": "孙府当家"
+  },
+  "c04.role.guanjia": {
+    "t": "孙府老管家"
+  },
+  "c04.role.wu": {
+    "t": "米行掌柜"
+  },
+  "c04.role.postman": {
+    "t": "邮电代办"
+  },
+  "c04.role.nf1938a": {
+    "t": "米行脚夫"
+  },
+  "c04.role.nf1938b": {
+    "t": "做针线的"
+  },
+  "c04.role.nf1938c": {
+    "t": "药铺学徒"
+  },
+  "c04.role.nf1938d": {
+    "t": "打更的"
+  },
+  "c04.role.tudi": {
+    "t": "来求留下的学徒"
+  },
+  "c04.role.suanming": {
+    "t": "算命先生"
+  },
+  "c04.role.stranger_peddler": {
+    "t": "过路客"
+  },
+  "c04.role.stranger_waixiang": {
+    "t": "过路客"
+  },
+  "c04.role.stranger_boatman": {
+    "t": "过路客"
+  },
+  "c04.role.stranger_refugee": {
+    "t": "赶路的生人"
+  },
+  "c04.role.stranger_widow": {
+    "t": "赶路的生人"
+  },
+  "c04.role.stranger_student": {
+    "t": "赶路的生人"
+  },
+  "c04.role.stranger_collector": {
+    "t": "过路客"
+  },
+  "c04.role.stranger_fence": {
+    "t": "过路客"
+  },
+  "c04.header.ticket": {
+    "t": "德字第 {n} 号"
+  },
+  "c04.reply.aside": {
+    "t": "（{text}）"
+  }
+}

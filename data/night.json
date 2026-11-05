@@ -1,0 +1,120 @@
+{
+  "lamps": 3,
+  "actions": [
+    {
+      "id": "ledger",
+      "label": "对账",
+      "star": true,
+      "cost": 0,
+      "desc": "查看当日收支、库存、到期当票。不消耗灯油",
+      "nights": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "tidy",
+      "label": "整理库房",
+      "star": true,
+      "cost": 1,
+      "desc": "擦银器、晒米、给纸契压平，库存中一件物品价值 +5%",
+      "nights": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "burn",
+      "label": "烧垃圾",
+      "star": true,
+      "cost": 1,
+      "desc": "销毁垃圾箱里的东西；不烧的话，垃圾箱可能被人翻走",
+      "nights": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "nightsell",
+      "label": "夜卖",
+      "star": false,
+      "cost": 1,
+      "desc": "将库存卖给后门的收货人：米行、药铺（济生堂）、废品摊。价格是市价的 70–85%，稳但少赚",
+      "nights": [
+        2
+      ]
+    },
+    {
+      "id": "order",
+      "label": "定货",
+      "star": false,
+      "cost": 1,
+      "desc": "向米行、药铺下单进货，第二天一早送到。价格是市价的 80%，用来卖给白天来买东西的顾客；药品进货需要陈叔叔的信任度",
+      "nights": [
+        2
+      ]
+    },
+    {
+      "id": "flag",
+      "label": "换门旗 / 招牌",
+      "star": false,
+      "cost": 1,
+      "desc": "决定明天的顾客类型和暗号",
+      "nights": [
+        2
+      ]
+    },
+    {
+      "id": "telegraph",
+      "label": "发电报",
+      "star": false,
+      "cost": 1,
+      "desc": "联系陈叔叔；之后可联系其它势力。无线电会被侦测，发得越多越招眼",
+      "nights": [
+        2
+      ]
+    },
+    {
+      "id": "letter",
+      "label": "读家书",
+      "star": false,
+      "cost": 0,
+      "desc": "有信到达时才出现，不消耗灯油；解锁新鉴定技能",
+      "nights": [
+        4
+      ]
+    },
+    {
+      "id": "tell_sun",
+      "label": "派人给孙老爷捎话",
+      "star": false,
+      "cost": 1,
+      "desc": "事后派人告诉孙老爷：孙少爷拿伪契来当。让孙老爷知道少爷干的事——孙府会记你的情，少爷会记你的仇。",
+      "nights": [
+        2
+      ]
+    },
+    {
+      "id": "diary",
+      "label": "写日记",
+      "star": false,
+      "cost": 1,
+      "desc": "心里不踏实的时候，写一写。内容由今天做过的选择生成",
+      "nights": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "sleep",
+      "label": "吹灯睡觉",
+      "star": false,
+      "cost": 0,
+      "desc": "灯油用完或点“吹灯睡觉”就进入第二天。",
+      "nights": [
+        1,
+        2
+      ]
+    }
+  ]
+}

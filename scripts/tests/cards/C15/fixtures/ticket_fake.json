@@ -1,0 +1,18 @@
+{
+  "kind": "fragments",
+  "seed": 4196,
+  "item": "",
+  "art": "",
+  "minutes_per_step": 1,
+  "max_minutes": 30,
+  "doc": "pawn_ticket",
+  "pieces": 6,
+  "seal_offset_px": 3,
+  "ink_mismatch": [1, 4],
+  "dangzi_marks": 2,
+  "missing_piece": -1,
+  "stain": 3,
+  "rotate": true,
+  "lens_px": 72,
+  "backlight": true
+}

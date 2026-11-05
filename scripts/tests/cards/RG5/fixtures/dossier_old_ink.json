@@ -1,0 +1,177 @@
+{
+  "_meta": {
+    "owner": "RG5",
+    "schema": 1,
+    "brief": "C10 的 dossier_mixed 加旧墨查询（ROGUE_V1.md §7.6、§13）：林嫂一页并进两块旧墨；陈文庭只有旧墨，单独一页；哥哥那块旧墨与页上已有的缺口同 id，界面不并。",
+    "_provenance": {
+      "by": "ai",
+      "task": "RG5",
+      "date": "2026-10-25"
+    }
+  },
+  "guide": "examples",
+  "guide_progress": {},
+  "view": {
+    "v": 1,
+    "phase": "day",
+    "mode": "shop",
+    "busy": false,
+    "date": {
+      "stage": 0,
+      "era": "1938",
+      "y": 1938,
+      "m": 3,
+      "d": 2,
+      "weekday": 2,
+      "stage_day": 2,
+      "stage_days": 30,
+      "abs_day": 2,
+      "minute": 480
+    },
+    "notice": {
+      "weather": "clear",
+      "market_day": false,
+      "news": [],
+      "almanac": {
+        "yi": [],
+        "ji": [],
+        "done": []
+      },
+      "fortune": ""
+    },
+    "caps": {
+      "kept": 5,
+      "contacts": 3,
+      "shelf": 12
+    },
+    "goals": [],
+    "night_offers": [],
+    "open_panel": {
+      "kind": "",
+      "args": {}
+    },
+    "money": {
+      "amount": 100,
+      "currency": "fabi"
+    },
+    "rep_tier": 0,
+    "heat_tier": 0,
+    "hand": [],
+    "kept": [],
+    "contacts": [],
+    "demands": [],
+    "tickets": [],
+    "dossier_new": 2
+  },
+  "queries": {
+    "dossier|{}": {
+      "pages": [
+        {
+          "person": "brother",
+          "complete": false,
+          "new": 1,
+          "fragments": [
+            {
+              "id": "df.brother.1938.farewell_cold",
+              "order": 2,
+              "era": "1938",
+              "kind": "said",
+              "state": "have",
+              "new": true
+            },
+            {
+              "id": "df.brother.1938.farewell",
+              "order": 1,
+              "era": "1938",
+              "kind": "said",
+              "state": "gap",
+              "new": false
+            }
+          ]
+        },
+        {
+          "person": "wangshan",
+          "complete": true,
+          "new": 0,
+          "fragments": [
+            {
+              "id": "df.wangshan.1938.trust",
+              "order": 2,
+              "era": "1938",
+              "kind": "said",
+              "state": "have",
+              "new": false
+            },
+            {
+              "id": "df.wangshan.1938.dock",
+              "order": 1,
+              "era": "1938",
+              "kind": "heard",
+              "state": "have",
+              "new": false
+            }
+          ]
+        },
+        {
+          "person": "linsao",
+          "complete": false,
+          "new": 1,
+          "fragments": [
+            {
+              "id": "df.linsao.1939.after_hairpin",
+              "order": 4,
+              "era": "1939",
+              "kind": "year_after",
+              "state": "have",
+              "new": true
+            }
+          ]
+        }
+      ]
+    },
+    "firsts|{}": {
+      "firsts": {
+        "deal": 1,
+        "person": 1,
+        "slots": 1
+      }
+    },
+    "legacy.old_ink|{}": {
+      "ok": true,
+      "err": "",
+      "pages": [
+        {
+          "person": "brother",
+          "fragments": [
+            {
+              "id": "df.brother.1938.farewell",
+              "order": 1
+            }
+          ]
+        },
+        {
+          "person": "chen",
+          "fragments": [
+            {
+              "id": "df.chen.1938.clinic",
+              "order": 1
+            }
+          ]
+        },
+        {
+          "person": "linsao",
+          "fragments": [
+            {
+              "id": "df.linsao.1938.hairpin",
+              "order": 1
+            },
+            {
+              "id": "df.linsao.1938.husband",
+              "order": 2
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

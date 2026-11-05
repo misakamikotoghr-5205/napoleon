@@ -1,0 +1,4 @@
+# K05 1940 三月人物牌、主线节点（docs/handoff_cards/K05_data-1940-people.md）
+K05_validate|res://scripts/cards/core/validate_main.gd|120|--only=data/cards/era/1940/people.json,data/cards/era/1940/story.json,data/cards/tags/K05.json,data/cards/ui_keys/K05.json --name=K05_validate
+K05_data|res://scripts/tests/cards/K05/test_data.gd|120|
+K05_guide_support|res://scripts/tests/cards/K05/test_guide_support.gd|120|

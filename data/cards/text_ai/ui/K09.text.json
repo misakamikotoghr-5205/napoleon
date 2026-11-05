@@ -1,0 +1,60 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "k09.reason.street_work": {
+    "t": "街头做工"
+  },
+  "k09.reason.street_pawn": {
+    "t": "当掉随身东西"
+  },
+  "k09.reason.box_returned": {
+    "t": "箱主补的钱"
+  },
+  "k09.arrest.contraband": {
+    "t": "手里有来路不明的东西，被查了出来。"
+  },
+  "k09.arrest.leverage": {
+    "t": "手里捏着别人的把柄，被查了出来。"
+  },
+  "k09.notice.accounts": {
+    "t": "账对完了。"
+  },
+  "k09.notice.telegraph_sent": {
+    "t": "电报发出去了。"
+  },
+  "k09.notice.zhouma_leave": {
+    "t": "周妈不再是你的人脉了。"
+  },
+  "k09.notice.chen_leave": {
+    "t": "陈文庭不再是你的人脉了。"
+  },
+  "k09.notice.ma_leave": {
+    "t": "马万利不再是你的人脉了。"
+  },
+  "k09.notice.xiaoding_leave": {
+    "t": "小丁不再是你的人脉了。"
+  },
+  "k09.notice.wangshan_leave": {
+    "t": "王山不再是你的人脉了。"
+  },
+  "k09.notice.li_leave": {
+    "t": "李敬之不再是你的人脉了。"
+  },
+  "k09.notice.linsao_leave": {
+    "t": "林嫂不再是你的人脉了。"
+  },
+  "k09.notice.zhang_leave": {
+    "t": "张慧娟不再是你的人脉了。"
+  },
+  "k09.notice.wu_leave": {
+    "t": "吴长发不再是你的人脉了。"
+  },
+  "k09.notice.guanjia_leave": {
+    "t": "孙福不再是你的人脉了。"
+  },
+  "k09.notice.postman_leave": {
+    "t": "何启明不再是你的人脉了。"
+  }
+}

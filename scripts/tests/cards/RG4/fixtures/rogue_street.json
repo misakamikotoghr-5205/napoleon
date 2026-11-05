@@ -1,0 +1,1390 @@
+{
+  "_meta": {
+    "_provenance": "ai_placeholder",
+    "brief": "肉鸽 v1：在牢里，博古格上 3 件都收起来了（dormant）",
+    "generated_by": "hand edit of scripts/cards/mock/fixtures/street_prison.json (ROGUE_V1.md section 13)",
+    "owner": "RG4",
+    "schema": 1
+  },
+  "guide_progress": {},
+  "queries": {
+    "actions|{\"uid\":\"c0011\"}": {
+      "actions": []
+    },
+    "actions|{\"uid\":\"c0012\"}": {
+      "actions": []
+    },
+    "actions|{\"uid\":\"c0013\"}": {
+      "actions": []
+    },
+    "actions|{\"uid\":\"c0014\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        }
+      ]
+    },
+    "actions|{\"uid\":\"c0015\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        }
+      ]
+    },
+    "actions|{\"uid\":\"c0016\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        }
+      ]
+    },
+    "almanac|{}": {
+      "done": [],
+      "id": "alm.shoudang",
+      "ji": [
+        "travel"
+      ],
+      "yi": [
+        "pawn_in",
+        "meet"
+      ]
+    },
+    "card|{\"uid\":\"c0011\"}": {
+      "actions": [],
+      "art": "illus.kp.ma_owes",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "choices": [],
+      "days_left": -1,
+      "def": "kp.ma_owes",
+      "expires_in": 20,
+      "fortune": "",
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": true,
+      "must_resolve": false,
+      "observations": [],
+      "panel": "none",
+      "person": "",
+      "slots": [],
+      "source": "",
+      "stage": {},
+      "status": "open",
+      "type": "kept",
+      "uid": "c0011",
+      "used_today": false,
+      "wheel": "",
+      "zone": "kept"
+    },
+    "card|{\"uid\":\"c0012\"}": {
+      "actions": [],
+      "art": "illus.kp.liangmin",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "choices": [],
+      "days_left": -1,
+      "def": "kp.liangmin",
+      "expires_in": -1,
+      "fortune": "",
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": true,
+      "must_resolve": false,
+      "observations": [],
+      "panel": "none",
+      "person": "",
+      "slots": [],
+      "source": "",
+      "stage": {},
+      "status": "open",
+      "type": "kept",
+      "uid": "c0012",
+      "used_today": false,
+      "wheel": "",
+      "zone": "kept"
+    },
+    "card|{\"uid\":\"c0013\"}": {
+      "actions": [],
+      "art": "portrait.ma",
+      "asking": -1,
+      "attrs": {
+        "eye": 1,
+        "nerve": 1,
+        "pull": 3,
+        "tongue": 2
+      },
+      "away_days": 0,
+      "can_appraise": false,
+      "choices": [],
+      "days_left": -1,
+      "def": "ct.ma",
+      "expires_in": -1,
+      "fortune": "",
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": false,
+      "must_resolve": false,
+      "observations": [],
+      "panel": "none",
+      "person": "ma",
+      "slots": [],
+      "source": "",
+      "stage": {},
+      "status": "open",
+      "type": "contact",
+      "uid": "c0013",
+      "used_today": false,
+      "wheel": "",
+      "zone": "contacts"
+    },
+    "card|{\"uid\":\"c0014\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        }
+      ],
+      "amount": 60,
+      "art": "illus.dm.money",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "choices": [],
+      "days_left": -1,
+      "def": "dm.1938.money.t1",
+      "demand": {
+        "kind": "money",
+        "tier": 1
+      },
+      "expires_in": -1,
+      "fortune": "",
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": false,
+      "must_resolve": false,
+      "observations": [],
+      "panel": "demand",
+      "person": "",
+      "slots": [
+        {
+          "accepts": [
+            "money"
+          ],
+          "attr": "",
+          "coins": 0,
+          "id": "cash",
+          "max": 1,
+          "placed": [],
+          "required": false,
+          "wants": []
+        }
+      ],
+      "source": "",
+      "stage": {},
+      "status": "open",
+      "type": "demand",
+      "uid": "c0014",
+      "used_today": false,
+      "wheel": "",
+      "zone": "demands"
+    },
+    "card|{\"uid\":\"c0015\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        }
+      ],
+      "art": "illus.pr.cell",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "choices": [],
+      "days_left": -1,
+      "def": "pr.cell",
+      "expires_in": -1,
+      "fortune": "",
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "prison",
+      "person": "",
+      "slots": [
+        {
+          "accepts": [
+            "money"
+          ],
+          "attr": "",
+          "coins": 0,
+          "id": "bribe",
+          "max": 3,
+          "placed": [],
+          "required": false,
+          "wants": [
+            "official"
+          ]
+        },
+        {
+          "accepts": [
+            "contact"
+          ],
+          "attr": "pull",
+          "coins": 0,
+          "id": "bail",
+          "max": 1,
+          "placed": [],
+          "required": false,
+          "wants": [
+            "official"
+          ]
+        },
+        {
+          "accepts": [
+            "kept"
+          ],
+          "attr": "",
+          "coins": 0,
+          "id": "favor",
+          "max": 2,
+          "placed": [],
+          "required": false,
+          "wants": [
+            "official",
+            "papers",
+            "favor"
+          ]
+        }
+      ],
+      "source": "",
+      "stage": {
+        "set": "prison"
+      },
+      "status": "open",
+      "type": "prison",
+      "uid": "c0015",
+      "used_today": false,
+      "wheel": "",
+      "zone": "hand"
+    },
+    "card|{\"uid\":\"c0016\"}": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        }
+      ],
+      "art": "illus.st.write_letters",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "choices": [],
+      "days_left": -1,
+      "def": "st.write_letters",
+      "expires_in": -1,
+      "fortune": "",
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "slots",
+      "person": "",
+      "slots": [
+        {
+          "accepts": [
+            "self"
+          ],
+          "attr": "tongue",
+          "coins": 0,
+          "id": "you",
+          "max": 1,
+          "placed": [],
+          "required": false,
+          "wants": []
+        }
+      ],
+      "source": "",
+      "stage": {
+        "cast": [
+          {
+            "at": "door",
+            "who": "ruhua"
+          }
+        ],
+        "props": [
+          {
+            "art": "prop.bench",
+            "at": "counter_mid"
+          }
+        ],
+        "set": "market"
+      },
+      "status": "open",
+      "type": "street",
+      "uid": "c0016",
+      "used_today": false,
+      "wheel": "",
+      "zone": "hand"
+    },
+    "day.end_preview|{}": {
+      "items": [
+        {
+          "args": {
+            "max": 3,
+            "nights": 1
+          },
+          "consequence_key": "g06.end.stay",
+          "def": "pr.cell",
+          "kind": "stay",
+          "uid": "c0015"
+        },
+        {
+          "args": {},
+          "consequence_key": "st.write_letters#outcomes.fail",
+          "def": "st.write_letters",
+          "kind": "ignore",
+          "uid": "c0016"
+        },
+        {
+          "args": {
+            "days": -1
+          },
+          "consequence_key": "g03.end.demand",
+          "def": "dm.1938.money.t1",
+          "kind": "wait",
+          "uid": "c0014"
+        }
+      ],
+      "needs_confirm": true,
+      "step": "end_day"
+    },
+    "dossier|{}": {
+      "pages": []
+    },
+    "estates|{}": {
+      "estates": [
+        {
+          "id": "es.jewel_cabinet",
+          "interest_money": 4,
+          "money": 80,
+          "status": "held"
+        },
+        {
+          "id": "es.storeroom",
+          "interest_money": 6,
+          "money": 120,
+          "status": "held"
+        },
+        {
+          "id": "es.counter",
+          "interest_money": 7,
+          "money": 150,
+          "status": "held"
+        },
+        {
+          "id": "es.old_house",
+          "interest_money": 10,
+          "money": 260,
+          "status": "held"
+        },
+        {
+          "id": "es.shopfront",
+          "interest_money": 16,
+          "money": 400,
+          "status": "lost"
+        }
+      ]
+    },
+    "firsts|{}": {
+      "firsts": {
+        "almanac": 1,
+        "buyer": 1,
+        "cezi": 1,
+        "choice": 1,
+        "coins": 1,
+        "contact": 1,
+        "counter": 1,
+        "deal": 1,
+        "demand": 1,
+        "fate": 1,
+        "gold": 1,
+        "incense": 1,
+        "keep": 1,
+        "life": 1,
+        "lot": 1,
+        "mg.spot": 1,
+        "money_short": 9,
+        "month_open": 1,
+        "month_wheel": 1,
+        "mortgage": 9,
+        "news": 1,
+        "night": 1,
+        "notice": 1,
+        "person": 1,
+        "prison": 9,
+        "settle": 1,
+        "shelf": 1,
+        "slots": 1,
+        "street": 9,
+        "ticket": 1
+      }
+    },
+    "month_report|{}": {
+      "lines": []
+    },
+    "relics|{}": {
+      "cap": 6,
+      "count": 3,
+      "dormant": true,
+      "err": "",
+      "held": [
+        {
+          "art": "prop.relic.stub_box",
+          "depth": "plain",
+          "id": "rl.stub_box",
+          "since": 8
+        },
+        {
+          "art": "prop.relic.camphor_chest",
+          "depth": "storied",
+          "id": "rl.camphor_chest",
+          "since": 14
+        },
+        {
+          "art": "prop.relic.oilpaper_umbrella",
+          "depth": "plain",
+          "id": "rl.oilpaper_umbrella",
+          "since": 21
+        }
+      ],
+      "ok": true
+    },
+    "settle_report|{}": {
+      "lines": []
+    },
+    "short|{}": {
+      "amount": 20,
+      "estates": [
+        {
+          "id": "es.jewel_cabinet",
+          "interest_money": 4,
+          "money": 80,
+          "status": "held"
+        },
+        {
+          "id": "es.storeroom",
+          "interest_money": 6,
+          "money": 120,
+          "status": "held"
+        },
+        {
+          "id": "es.counter",
+          "interest_money": 7,
+          "money": 150,
+          "status": "held"
+        },
+        {
+          "id": "es.old_house",
+          "interest_money": 10,
+          "money": 260,
+          "status": "held"
+        },
+        {
+          "id": "es.shopfront",
+          "interest_money": 16,
+          "money": 400,
+          "status": "lost"
+        }
+      ],
+      "goods": [],
+      "options": [
+        "goods",
+        "estate",
+        "default"
+      ],
+      "payee": "w0.mock.payee",
+      "source": ""
+    },
+    "slots|{\"uid\":\"c0014\"}": {
+      "auto_heads": 0,
+      "auto_pass": false,
+      "coins": 0,
+      "need": 0,
+      "ready": true,
+      "slots": [
+        {
+          "accepts": [
+            "money"
+          ],
+          "attr": "",
+          "coins": 0,
+          "id": "cash",
+          "max": 1,
+          "placed": [],
+          "required": false,
+          "wants": []
+        }
+      ]
+    },
+    "slots|{\"uid\":\"c0015\"}": {
+      "auto_heads": 0,
+      "auto_pass": false,
+      "coins": 0,
+      "need": 3,
+      "ready": true,
+      "slots": [
+        {
+          "accepts": [
+            "money"
+          ],
+          "attr": "",
+          "coins": 0,
+          "id": "bribe",
+          "max": 3,
+          "placed": [],
+          "required": false,
+          "wants": [
+            "official"
+          ]
+        },
+        {
+          "accepts": [
+            "contact"
+          ],
+          "attr": "pull",
+          "coins": 0,
+          "id": "bail",
+          "max": 1,
+          "placed": [],
+          "required": false,
+          "wants": [
+            "official"
+          ]
+        },
+        {
+          "accepts": [
+            "kept"
+          ],
+          "attr": "",
+          "coins": 0,
+          "id": "favor",
+          "max": 2,
+          "placed": [],
+          "required": false,
+          "wants": [
+            "official",
+            "papers",
+            "favor"
+          ]
+        }
+      ]
+    },
+    "slots|{\"uid\":\"c0016\"}": {
+      "auto_heads": 0,
+      "auto_pass": false,
+      "coins": 0,
+      "need": 1,
+      "ready": true,
+      "slots": [
+        {
+          "accepts": [
+            "self"
+          ],
+          "attr": "tongue",
+          "coins": 0,
+          "id": "you",
+          "max": 1,
+          "placed": [],
+          "required": false,
+          "wants": []
+        }
+      ]
+    },
+    "stock|{}": {
+      "items": [
+        {
+          "art": "item.utensils.bowl",
+          "cat": "utensils",
+          "condition_word": 2,
+          "item": "I001",
+          "observations": [],
+          "on_shelf_since": 9,
+          "template": "utensils.bowl"
+        },
+        {
+          "art": "item.art.landscape",
+          "cat": "art",
+          "condition_word": 2,
+          "item": "I002",
+          "observations": [],
+          "on_shelf_since": 9,
+          "template": "art.landscape"
+        }
+      ]
+    },
+    "tickets|{}": {
+      "tickets": []
+    },
+    "wheel|{\"uid\":\"\",\"wheel\":\"wh.month\"}": {
+      "art": "wheel.month",
+      "cost": {
+        "money": 0,
+        "stake": false
+      },
+      "incense": {
+        "accepts": [
+          "money",
+          "kept",
+          "contact"
+        ],
+        "full": false,
+        "placed": []
+      },
+      "kind": "month",
+      "result": {
+        "segment": "",
+        "stop_deg": 0.0
+      },
+      "segments": [
+        {
+          "arc_deg": 108.0,
+          "art": "icon.ws.caixing",
+          "id": "ws.1938.month.caixing"
+        },
+        {
+          "arc_deg": 108.0,
+          "art": "icon.ws.liunian",
+          "id": "ws.1938.month.liunian"
+        },
+        {
+          "arc_deg": 144.0,
+          "art": "icon.ws.pingan",
+          "id": "ws.1938.month.pingan"
+        }
+      ],
+      "spun": false,
+      "staked": "",
+      "uid": "",
+      "wheel": "wh.month"
+    },
+    "year_report|{}": {
+      "lines": []
+    }
+  },
+  "responses": [
+    {
+      "cmd": "slot.place",
+      "events": [
+        [
+          "card_updated",
+          "c0015"
+        ]
+      ],
+      "match": {
+        "slot": "bribe",
+        "source": {
+          "amount": 40,
+          "kind": "money"
+        },
+        "uid": "c0015"
+      },
+      "patch": [],
+      "result": {
+        "coins": 2,
+        "err": "",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "slot.place",
+      "events": [
+        [
+          "card_updated",
+          "c0015"
+        ]
+      ],
+      "match": {
+        "slot": "bail",
+        "source": {
+          "kind": "contact",
+          "uid": "c0013"
+        },
+        "uid": "c0015"
+      },
+      "patch": [],
+      "result": {
+        "coins": 3,
+        "err": "",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "slot.roll",
+      "events": [
+        [
+          "coins_tossed",
+          "c0015",
+          [],
+          3,
+          false
+        ],
+        [
+          "card_left",
+          "c0015",
+          "resolved"
+        ]
+      ],
+      "match": {
+        "uid": "c0015"
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "hand",
+          "value": [
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.st.write_letters",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "st.write_letters",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "slots",
+              "person": "",
+              "source": "",
+              "stage": {
+                "cast": [
+                  {
+                    "at": "door",
+                    "who": "ruhua"
+                  }
+                ],
+                "props": [
+                  {
+                    "art": "prop.bench",
+                    "at": "counter_mid"
+                  }
+                ],
+                "set": "market"
+              },
+              "status": "open",
+              "type": "street",
+              "uid": "c0016",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            }
+          ]
+        },
+        {
+          "op": "set",
+          "path": "open_panel",
+          "value": {
+            "args": {},
+            "kind": ""
+          }
+        },
+        {
+          "op": "set",
+          "path": "stage",
+          "value": {
+            "sealed": false,
+            "set": "street",
+            "time": "day"
+          }
+        }
+      ],
+      "result": {
+        "err": "",
+        "faces": [],
+        "heads": 0,
+        "need": 3,
+        "ok": true,
+        "success": false
+      }
+    },
+    {
+      "cmd": "day.end",
+      "events": [
+        [
+          "first_time",
+          "must_resolve",
+          {
+            "uid": "c0015"
+          }
+        ]
+      ],
+      "match": {
+        "confirm": false
+      },
+      "patch": [],
+      "result": {
+        "err": "must_resolve_pending",
+        "items": [
+          {
+            "args": {
+              "max": 3,
+              "nights": 1
+            },
+            "consequence_key": "g06.end.stay",
+            "def": "pr.cell",
+            "kind": "stay",
+            "uid": "c0015"
+          },
+          {
+            "args": {},
+            "consequence_key": "st.write_letters#outcomes.fail",
+            "def": "st.write_letters",
+            "kind": "ignore",
+            "uid": "c0016"
+          },
+          {
+            "args": {
+              "days": -1
+            },
+            "consequence_key": "g03.end.demand",
+            "def": "dm.1938.money.t1",
+            "kind": "wait",
+            "uid": "c0014"
+          }
+        ],
+        "needs_confirm": true,
+        "ok": false,
+        "step": "end_day"
+      }
+    },
+    {
+      "cmd": "day.end",
+      "events": [
+        [
+          "first_time",
+          "must_resolve",
+          {
+            "uid": "c0015"
+          }
+        ],
+        [
+          "card_left",
+          "c0016",
+          "expired"
+        ],
+        [
+          "phase_changed",
+          "day",
+          "night"
+        ]
+      ],
+      "match": {
+        "confirm": true
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "hand",
+          "value": [
+            {
+              "actions": [
+                {
+                  "enabled": true,
+                  "id": "open",
+                  "reason_key": ""
+                }
+              ],
+              "art": "illus.pr.cell",
+              "asking": -1,
+              "attrs": {},
+              "away_days": 0,
+              "can_appraise": false,
+              "days_left": -1,
+              "def": "pr.cell",
+              "expires_in": -1,
+              "fortune": "",
+              "gold": false,
+              "intent": "",
+              "item": null,
+              "keepable": false,
+              "must_resolve": true,
+              "observations": [],
+              "panel": "prison",
+              "person": "",
+              "source": "",
+              "stage": {
+                "set": "prison"
+              },
+              "status": "open",
+              "type": "prison",
+              "uid": "c0015",
+              "used_today": false,
+              "wheel": "",
+              "zone": "hand"
+            }
+          ]
+        },
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "night"
+        },
+        {
+          "op": "set",
+          "path": "stage",
+          "value": {
+            "sealed": false,
+            "set": "prison",
+            "time": "night"
+          }
+        }
+      ],
+      "result": {
+        "err": "",
+        "items": [
+          {
+            "args": {
+              "max": 3,
+              "nights": 1
+            },
+            "consequence_key": "g06.end.stay",
+            "def": "pr.cell",
+            "kind": "stay",
+            "uid": "c0015"
+          },
+          {
+            "args": {},
+            "consequence_key": "st.write_letters#outcomes.fail",
+            "def": "st.write_letters",
+            "kind": "ignore",
+            "uid": "c0016"
+          },
+          {
+            "args": {
+              "days": -1
+            },
+            "consequence_key": "g03.end.demand",
+            "def": "dm.1938.money.t1",
+            "kind": "wait",
+            "uid": "c0014"
+          }
+        ],
+        "ok": true,
+        "step": "end_day"
+      }
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    }
+  ],
+  "view": {
+    "busy": false,
+    "caps": {
+      "contacts": 3,
+      "kept": 5,
+      "shelf": 12
+    },
+    "contacts": [
+      {
+        "actions": [],
+        "art": "portrait.ma",
+        "asking": -1,
+        "attrs": {
+          "eye": 1,
+          "nerve": 1,
+          "pull": 3,
+          "tongue": 2
+        },
+        "away_days": 0,
+        "can_appraise": false,
+        "days_left": -1,
+        "def": "ct.ma",
+        "expires_in": -1,
+        "fortune": "",
+        "gold": false,
+        "intent": "",
+        "item": null,
+        "keepable": false,
+        "must_resolve": false,
+        "observations": [],
+        "panel": "none",
+        "person": "ma",
+        "source": "",
+        "stage": {},
+        "status": "open",
+        "type": "contact",
+        "uid": "c0013",
+        "used_today": false,
+        "wheel": "",
+        "zone": "contacts"
+      }
+    ],
+    "date": {
+      "abs_day": 9,
+      "d": 9,
+      "era": "1938",
+      "m": 3,
+      "minute": 480,
+      "stage": 0,
+      "stage_day": 9,
+      "stage_days": 30,
+      "weekday": 2,
+      "y": 1938
+    },
+    "demands": [
+      {
+        "actions": [
+          {
+            "enabled": true,
+            "id": "open",
+            "reason_key": ""
+          }
+        ],
+        "amount": 60,
+        "art": "illus.dm.money",
+        "asking": -1,
+        "attrs": {},
+        "away_days": 0,
+        "can_appraise": false,
+        "days_left": -1,
+        "def": "dm.1938.money.t1",
+        "demand": {
+          "kind": "money",
+          "tier": 1
+        },
+        "expires_in": -1,
+        "fortune": "",
+        "gold": false,
+        "intent": "",
+        "item": null,
+        "keepable": false,
+        "must_resolve": false,
+        "observations": [],
+        "panel": "demand",
+        "person": "",
+        "source": "",
+        "stage": {},
+        "status": "open",
+        "type": "demand",
+        "uid": "c0014",
+        "used_today": false,
+        "wheel": "",
+        "zone": "demands"
+      }
+    ],
+    "dossier_new": 0,
+    "estates": [
+      {
+        "id": "es.jewel_cabinet",
+        "interest_money": 4,
+        "money": 80,
+        "status": "held"
+      },
+      {
+        "id": "es.storeroom",
+        "interest_money": 6,
+        "money": 120,
+        "status": "held"
+      },
+      {
+        "id": "es.counter",
+        "interest_money": 7,
+        "money": 150,
+        "status": "held"
+      },
+      {
+        "id": "es.old_house",
+        "interest_money": 10,
+        "money": 260,
+        "status": "held"
+      },
+      {
+        "id": "es.shopfront",
+        "interest_money": 16,
+        "money": 400,
+        "status": "lost"
+      }
+    ],
+    "goals": [
+      {
+        "id": "gl.1938.keep_shop",
+        "main": true,
+        "status": "open"
+      }
+    ],
+    "hand": [
+      {
+        "actions": [
+          {
+            "enabled": true,
+            "id": "open",
+            "reason_key": ""
+          }
+        ],
+        "art": "illus.pr.cell",
+        "asking": -1,
+        "attrs": {},
+        "away_days": 0,
+        "can_appraise": false,
+        "days_left": -1,
+        "def": "pr.cell",
+        "expires_in": -1,
+        "fortune": "",
+        "gold": false,
+        "intent": "",
+        "item": null,
+        "keepable": false,
+        "must_resolve": true,
+        "observations": [],
+        "panel": "prison",
+        "person": "",
+        "source": "",
+        "stage": {
+          "set": "prison"
+        },
+        "status": "open",
+        "type": "prison",
+        "uid": "c0015",
+        "used_today": false,
+        "wheel": "",
+        "zone": "hand"
+      },
+      {
+        "actions": [
+          {
+            "enabled": true,
+            "id": "open",
+            "reason_key": ""
+          }
+        ],
+        "art": "illus.st.write_letters",
+        "asking": -1,
+        "attrs": {},
+        "away_days": 0,
+        "can_appraise": false,
+        "days_left": -1,
+        "def": "st.write_letters",
+        "expires_in": -1,
+        "fortune": "",
+        "gold": false,
+        "intent": "",
+        "item": null,
+        "keepable": false,
+        "must_resolve": true,
+        "observations": [],
+        "panel": "slots",
+        "person": "",
+        "source": "",
+        "stage": {
+          "cast": [
+            {
+              "at": "door",
+              "who": "ruhua"
+            }
+          ],
+          "props": [
+            {
+              "art": "prop.bench",
+              "at": "counter_mid"
+            }
+          ],
+          "set": "market"
+        },
+        "status": "open",
+        "type": "street",
+        "uid": "c0016",
+        "used_today": false,
+        "wheel": "",
+        "zone": "hand"
+      }
+    ],
+    "heat_tier": 0,
+    "kept": [
+      {
+        "actions": [],
+        "art": "illus.kp.ma_owes",
+        "asking": -1,
+        "attrs": {},
+        "away_days": 0,
+        "can_appraise": false,
+        "days_left": -1,
+        "def": "kp.ma_owes",
+        "expires_in": 20,
+        "fortune": "",
+        "gold": false,
+        "intent": "",
+        "item": null,
+        "keepable": true,
+        "must_resolve": false,
+        "observations": [],
+        "panel": "none",
+        "person": "",
+        "source": "",
+        "stage": {},
+        "status": "open",
+        "type": "kept",
+        "uid": "c0011",
+        "used_today": false,
+        "wheel": "",
+        "zone": "kept"
+      },
+      {
+        "actions": [],
+        "art": "illus.kp.liangmin",
+        "asking": -1,
+        "attrs": {},
+        "away_days": 0,
+        "can_appraise": false,
+        "days_left": -1,
+        "def": "kp.liangmin",
+        "expires_in": -1,
+        "fortune": "",
+        "gold": false,
+        "intent": "",
+        "item": null,
+        "keepable": true,
+        "must_resolve": false,
+        "observations": [],
+        "panel": "none",
+        "person": "",
+        "source": "",
+        "stage": {},
+        "status": "open",
+        "type": "kept",
+        "uid": "c0012",
+        "used_today": false,
+        "wheel": "",
+        "zone": "kept"
+      }
+    ],
+    "lots": [],
+    "mode": "street",
+    "money": {
+      "amount": 340,
+      "currency": "fabi"
+    },
+    "night_offers": [],
+    "notice": {
+      "almanac": {
+        "done": [],
+        "id": "alm.shoudang",
+        "ji": [
+          "travel"
+        ],
+        "yi": [
+          "pawn_in",
+          "meet"
+        ]
+      },
+      "fortune": "ws.1938.month.caixing",
+      "market_day": false,
+      "news": [
+        "w0.mock.notice"
+      ],
+      "weather": "clear"
+    },
+    "open_panel": {
+      "args": {
+        "uid": "c0015"
+      },
+      "kind": "prison"
+    },
+    "pending": [],
+    "phase": "day",
+    "relics": {
+      "cap": 6,
+      "count": 3,
+      "dormant": true,
+      "held": [
+        {
+          "art": "prop.relic.stub_box",
+          "depth": "plain",
+          "id": "rl.stub_box",
+          "since": 8
+        },
+        {
+          "art": "prop.relic.camphor_chest",
+          "depth": "storied",
+          "id": "rl.camphor_chest",
+          "since": 14
+        },
+        {
+          "art": "prop.relic.oilpaper_umbrella",
+          "depth": "plain",
+          "id": "rl.oilpaper_umbrella",
+          "since": 21
+        }
+      ]
+    },
+    "rep_tier": 1,
+    "self": {
+      "attrs": {
+        "eye": 2,
+        "nerve": 1,
+        "pull": 1,
+        "tongue": 1
+      },
+      "def": "self.ruhua",
+      "uid": "c0001",
+      "used_today": false
+    },
+    "shelf_count": 2,
+    "stage": {
+      "sealed": false,
+      "set": "prison",
+      "time": "day"
+    },
+    "stock": {
+      "open": "",
+      "sources": [
+        {
+          "art": "illus.ky.dockhands",
+          "id": "ky.dockhands"
+        }
+      ],
+      "week_deals": 0
+    },
+    "tickets": [],
+    "v": 1
+  }
+}

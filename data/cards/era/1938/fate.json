@@ -1,0 +1,398 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1,
+    "brief": "1938 年三月的命运牌"
+  },
+  "cards": [
+    {
+      "id": "fa.1938.door_fine",
+      "type": "fate",
+      "era": [
+        "1938"
+      ],
+      "weight": 6,
+      "tags": [
+        "official",
+        "omen_official"
+      ],
+      "valence": "bad",
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "交",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 24,
+              "payee": "puppet_fine",
+              "reason": "k02.reason.fine",
+              "short": "ladder"
+            },
+            {
+              "op": "flag",
+              "key": "fine_paid"
+            }
+          ]
+        },
+        {
+          "id": "argue",
+          "brief": "去说",
+          "check": {
+            "need": 2,
+            "slots": [
+              {
+                "id": "man",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "brief": "会说话的人",
+                "attr": "tongue"
+              }
+            ],
+            "on_success": [
+              {
+                "op": "flag",
+                "key": "fine_talked"
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "heat",
+                "tier": 1
+              },
+              {
+                "op": "pay",
+                "amount": 24,
+                "payee": "puppet_fine",
+                "reason": "k02.reason.fine",
+                "short": "ladder"
+              }
+            ]
+          }
+        },
+        {
+          "id": "shut",
+          "brief": "硬顶",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 6
+            },
+            {
+              "op": "rep",
+              "delta": -2
+            },
+            {
+              "op": "notice",
+              "key": "k02.notice.fine"
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "heat",
+            "delta": 6
+          },
+          {
+            "op": "rep",
+            "delta": -2
+          },
+          {
+            "op": "notice",
+            "key": "k02.notice.fine"
+          }
+        ]
+      },
+      "art": "illus.fa.1938.door_fine",
+      "brief": "伪维持会的人把一笔临时罚款贴在门上。可以交，可以找人去说。说砸了照样要交，而且风声升一档。也可以关门硬顶，风声涨、口碑掉。1938 年三月的名目。没理会当硬顶，风声涨、口碑掉。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.1938.rice_ease",
+      "type": "fate",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "rice",
+        "omen_wealth"
+      ],
+      "valence": "good",
+      "choices": [
+        {
+          "id": "stock",
+          "brief": "囤一点",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 18,
+              "payee": "rice_shop",
+              "reason": "k02.reason.rice",
+              "short": "ladder"
+            },
+            {
+              "op": "item_gain",
+              "cat": "rice",
+              "n": 1
+            },
+            {
+              "op": "flag",
+              "key": "rice_stocked"
+            }
+          ],
+          "almanac": [
+            "buy_in"
+          ]
+        },
+        {
+          "id": "intro",
+          "brief": "收下介绍",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": 3
+            },
+            {
+              "op": "flag",
+              "key": "customer_intro"
+            }
+          ]
+        },
+        {
+          "id": "pass",
+          "brief": "不动",
+          "effects": []
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.fa.1938.rice_ease",
+      "brief": "这几天米不那么紧。可以趁手头还够先囤一小袋，也可以收下老主顾介绍的一笔生意，或者什么都不做。1938 年春只是松一松，不是后年那种大涨。没理会当不动，没有别的后果。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.1938.requisition",
+      "type": "fate",
+      "era": [
+        "1938"
+      ],
+      "weight": 6,
+      "tags": [
+        "official",
+        "omen_official"
+      ],
+      "valence": "mixed",
+      "choices": [
+        {
+          "id": "hide",
+          "brief": "藏",
+          "check": {
+            "need": 2,
+            "slots": [
+              {
+                "id": "man",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "brief": "胆大的人",
+                "attr": "nerve"
+              }
+            ],
+            "on_success": [
+              {
+                "op": "flag",
+                "key": "hid_grain"
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "item_lose",
+                "match": {
+                  "pick": "any"
+                },
+                "n": 1,
+                "reason": "k02.reason.requisition"
+              },
+              {
+                "op": "heat",
+                "delta": 4
+              },
+              {
+                "op": "notice",
+                "key": "k02.notice.requisition"
+              }
+            ]
+          }
+        },
+        {
+          "id": "hand",
+          "brief": "交出去",
+          "effects": [
+            {
+              "op": "item_lose",
+              "match": {
+                "cat": "rice",
+                "pick": "any"
+              },
+              "n": 1,
+              "reason": "k02.reason.requisition"
+            },
+            {
+              "op": "rep",
+              "delta": -2
+            }
+          ]
+        },
+        {
+          "id": "bribe",
+          "brief": "花钱挡",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 30,
+              "payee": "puppet_req",
+              "reason": "k02.reason.requisition",
+              "short": "ladder"
+            },
+            {
+              "op": "flag",
+              "key": "req_bribed"
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "item_lose",
+            "match": {
+              "cat": "rice",
+              "pick": "any"
+            },
+            "n": 1,
+            "reason": "k02.reason.requisition"
+          },
+          {
+            "op": "rep",
+            "delta": -2
+          }
+        ]
+      },
+      "art": "illus.fa.1938.requisition",
+      "brief": "征用的风声传到铺子，要粮或要船。可以藏、可以交、也可以花钱挡一挡。藏要胆量，藏不住会丢一件货并且风声涨。1938 年三月，占领军和伪维持会都可能来这一手，牌上不写死是哪一路人。没理会当交出去，丢一袋米、口碑掉。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.1938.kin_money",
+      "type": "fate",
+      "era": [
+        "1938"
+      ],
+      "weight": 4,
+      "tags": [
+        "family",
+        "omen_far"
+      ],
+      "valence": "good",
+      "choices": [
+        {
+          "id": "take",
+          "brief": "收下",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 36,
+              "reason": "k02.reason.kin"
+            },
+            {
+              "op": "flag",
+              "key": "kin_money_taken"
+            },
+            {
+              "op": "notice",
+              "key": "k02.notice.kin"
+            }
+          ]
+        },
+        {
+          "id": "send_back",
+          "brief": "退回",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": 2
+            },
+            {
+              "op": "flag",
+              "key": "kin_money_returned"
+            },
+            {
+              "op": "conscience",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "id": "ask_more",
+          "brief": "再张口",
+          "check": {
+            "need": 2,
+            "slots": [
+              {
+                "id": "man",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "brief": "会说话的人",
+                "attr": "tongue"
+              }
+            ],
+            "on_success": [
+              {
+                "op": "money",
+                "delta": 16,
+                "reason": "k02.reason.kin"
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "rep",
+                "delta": -2
+              }
+            ]
+          }
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.fa.1938.kin_money",
+      "brief": "远亲寄来一笔小钱。不是哥哥的信，那封信在下一年。可以收下、退回、或再张口。再张口要口才，张口砸了口碑掉。没理会当没拆，没有别的后果。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

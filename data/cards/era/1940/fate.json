@@ -1,0 +1,396 @@
+{
+  "_meta": {
+    "owner": "K06",
+    "schema": 1,
+    "brief": "1940 三月命运牌。"
+  },
+  "cards": [
+    {
+      "id": "fa.1940.rice_spike",
+      "type": "fate",
+      "era": [
+        "1940"
+      ],
+      "weight": 8,
+      "valence": "bad",
+      "tags": [
+        "price",
+        "rice",
+        "omen_wealth"
+      ],
+      "must_resolve": true,
+      "choices": [
+        {
+          "id": "buy_now",
+          "brief": "立刻买",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 22,
+              "payee": "rice_shop",
+              "reason": "k06.reason.rice",
+              "short": "ladder"
+            }
+          ]
+        },
+        {
+          "id": "wait",
+          "brief": "再看看",
+          "effects": [
+            {
+              "op": "price_mod",
+              "scope": "cat",
+              "cat": "rice",
+              "pct": 25,
+              "days": 5
+            }
+          ]
+        },
+        {
+          "id": "sell",
+          "brief": "把手头的米出手",
+          "effects": [
+            {
+              "op": "if",
+              "cond": {
+                "stock_cat_gte": [
+                  "rice",
+                  1
+                ]
+              },
+              "then": [
+                {
+                  "op": "money",
+                  "delta": 26,
+                  "reason": "k06.reason.rice_sell"
+                },
+                {
+                  "op": "item_lose",
+                  "match": {
+                    "pick": "any",
+                    "cat": "rice"
+                  },
+                  "n": 1,
+                  "reason": "k06.reason.rice_sell"
+                }
+              ],
+              "else": [
+                {
+                  "op": "rep",
+                  "tier": -1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "if",
+            "cond": {
+              "stock_cat_gte": [
+                "rice",
+                1
+              ]
+            },
+            "then": [
+              {
+                "op": "money",
+                "delta": 26,
+                "reason": "k06.reason.rice_sell"
+              },
+              {
+                "op": "item_lose",
+                "match": {
+                  "pick": "any",
+                  "cat": "rice"
+                },
+                "n": 1,
+                "reason": "k06.reason.rice_sell"
+              }
+            ],
+            "else": [
+              {
+                "op": "rep",
+                "tier": -1
+              }
+            ]
+          }
+        ]
+      },
+      "art": "illus.fa.1940.rice_spike",
+      "brief": "春日米价猛地一跳。立刻买、再看几天，或把手头的米出手；手头没有米就口碑掉一档。没理会当出手；没有米则口碑掉一档。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.1940.spring_rain",
+      "type": "fate",
+      "era": [
+        "1940"
+      ],
+      "weight": 7,
+      "valence": "mixed",
+      "tags": [
+        "rain",
+        "omen_water",
+        "omen_family"
+      ],
+      "must_resolve": true,
+      "choices": [
+        {
+          "id": "repair",
+          "brief": "花钱修",
+          "almanac": [
+            "repair"
+          ],
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 16,
+              "payee": "carpenter",
+              "reason": "k06.reason.repair",
+              "short": "ladder"
+            }
+          ]
+        },
+        {
+          "id": "move",
+          "brief": "抢着搬",
+          "check": {
+            "slots": [
+              {
+                "id": "man",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "attr": "nerve",
+                "max": 2,
+                "brief": "胆量"
+              }
+            ],
+            "need": 2,
+            "on_success": [
+              {
+                "op": "rep",
+                "tier": 1
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "item_lose",
+                "match": {
+                  "pick": "any"
+                },
+                "n": 1,
+                "reason": "k06.reason.rain_loss"
+              },
+              {
+                "op": "person_state",
+                "person": "ruhua",
+                "state": "hurt",
+                "days": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "ignore",
+          "brief": "先不管",
+          "effects": [
+            {
+              "op": "item_lose",
+              "match": {
+                "pick": "any"
+              },
+              "n": 1,
+              "reason": "k06.reason.rain_loss"
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "item_lose",
+            "match": {
+              "pick": "any"
+            },
+            "n": 1,
+            "reason": "k06.reason.rain_loss"
+          }
+        ]
+      },
+      "art": "illus.fa.1940.spring_rain",
+      "brief": "春雨连着下，货容易潮。修、抢着搬，或先不管损失一件货。搬砸了如花会不适几天。没理会当先不管，损失一件货。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.1940.whisper",
+      "type": "fate",
+      "era": [
+        "1940"
+      ],
+      "weight": 6,
+      "valence": "bad",
+      "tags": [
+        "informer",
+        "official",
+        "omen_official",
+        "omen_dispute"
+      ],
+      "must_resolve": true,
+      "choices": [
+        {
+          "id": "hush",
+          "brief": "花钱压下去",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 18,
+              "payee": "yamen",
+              "reason": "k06.reason.hush",
+              "short": "ladder"
+            }
+          ]
+        },
+        {
+          "id": "face",
+          "brief": "由它去",
+          "effects": [
+            {
+              "op": "heat",
+              "tier": 1
+            }
+          ]
+        },
+        {
+          "id": "explain",
+          "brief": "自己去解释",
+          "check": {
+            "slots": [
+              {
+                "id": "talker",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "attr": "tongue",
+                "max": 2,
+                "brief": "人"
+              }
+            ],
+            "need": 2,
+            "on_success": [
+              {
+                "op": "heat",
+                "tier": -1
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "heat",
+                "tier": 1
+              }
+            ]
+          }
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "heat",
+            "tier": 1
+          }
+        ]
+      },
+      "art": "illus.fa.1940.whisper",
+      "brief": "有人在新官面前提了你一嘴。压下去、由它去（风声上一档），或自己解释。解释成了风声降一档，砸了再上一档。没理会当由它去，风声上一档。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.1940.old_buyer",
+      "type": "fate",
+      "era": [
+        "1940"
+      ],
+      "weight": 7,
+      "valence": "good",
+      "tags": [
+        "buyer",
+        "omen_wealth"
+      ],
+      "must_resolve": true,
+      "choices": [
+        {
+          "id": "fair",
+          "brief": "按老规矩",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 16,
+              "reason": "k06.reason.buyer"
+            },
+            {
+              "op": "rep",
+              "tier": 1
+            }
+          ]
+        },
+        {
+          "id": "hard",
+          "brief": "咬住价钱",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 28,
+              "reason": "k06.reason.buyer"
+            },
+            {
+              "op": "rep",
+              "tier": -1
+            }
+          ]
+        },
+        {
+          "id": "wave",
+          "brief": "打发走",
+          "effects": [
+            {
+              "op": "rep",
+              "tier": -1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "rep",
+            "tier": -1
+          }
+        ]
+      },
+      "art": "illus.fa.1940.old_buyer",
+      "brief": "开春有旧主顾来买。按老规矩口碑上一档并进一笔；咬住价钱进得更多但口碑掉一档；打发走也掉一档。没理会当打发走，口碑掉一档。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

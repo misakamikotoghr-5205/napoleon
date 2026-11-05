@@ -1,0 +1,108 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-25:base-text-ui"
+  },
+  "c12.title": {
+    "t": "细看 · 找不同"
+  },
+  "c12.tool.eye": {
+    "t": "肉眼"
+  },
+  "c12.tool.lens": {
+    "t": "放大镜"
+  },
+  "c12.tool.atlas": {
+    "t": "图谱"
+  },
+  "c12.ink": {
+    "t": "墨还剩"
+  },
+  "c12.btn.done": {
+    "t": "看完了"
+  },
+  "c12.btn.atlas_open": {
+    "t": "翻开图谱"
+  },
+  "c12.cap.item": {
+    "t": "柜上这一件"
+  },
+  "c12.cap.atlas": {
+    "t": "该有的样子"
+  },
+  "c12.tag.wear": {
+    "t": "旧痕"
+  },
+  "c12.tag.differs": {
+    "t": "不一样"
+  },
+  "c12.tag.cancel": {
+    "t": "×"
+  },
+  "c12.tag.remove": {
+    "t": "拿掉"
+  },
+  "c12.tag.short.wear": {
+    "t": "旧"
+  },
+  "c12.tag.short.differs": {
+    "t": "异"
+  },
+  "c12.tool.blink": {
+    "t": "按住对照"
+  },
+  "c12.legend.wear": {
+    "t": "旧痕 · 原色泛黄泛褐、边是虚的"
+  },
+  "c12.legend.differs": {
+    "t": "不一样 · 新添的硬色：黑白红铜"
+  },
+  "c12.atlas.none": {
+    "t": "手边没有这一类东西的图谱"
+  },
+  "c12.rule.lens": {
+    "t": "细处肉眼看不出，要拿放大镜看"
+  },
+  "c12.look.scuff": {
+    "t": "擦痕"
+  },
+  "c12.look.shine": {
+    "t": "磨花"
+  },
+  "c12.look.watermark": {
+    "t": "水渍"
+  },
+  "c12.look.yellow": {
+    "t": "发黄"
+  },
+  "c12.look.repair": {
+    "t": "旧补"
+  },
+  "c12.look.chip": {
+    "t": "磕口"
+  },
+  "c12.look.speck": {
+    "t": "杂点"
+  },
+  "c12.look.base_metal": {
+    "t": "露铜"
+  },
+  "c12.look.retrace": {
+    "t": "描笔"
+  },
+  "c12.look.stitch": {
+    "t": "新线"
+  },
+  "c12.look.seal": {
+    "t": "补印"
+  },
+  "c12.look.whiten": {
+    "t": "漂白"
+  },
+  "c12.look.patch": {
+    "t": "补块"
+  },
+  "c12.look.scrape": {
+    "t": "刮记号"
+  }
+}

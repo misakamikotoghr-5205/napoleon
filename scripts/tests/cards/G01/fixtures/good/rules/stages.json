@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "owner": "G02",
+    "schema": 1
+  },
+  "_doc": [
+    "三关的公历起止、币种、物价指数、集市日（§4.6）；1939 腊月的公历起点待 K13 核对。"
+  ],
+  "stages": [
+    {
+      "index": 0,
+      "era": "1938",
+      "start": "1938-03-01",
+      "days": 30,
+      "currency": "fabi",
+      "price_index": 100,
+      "market_every": 5,
+      "market_offset": 2
+    },
+    {
+      "index": 1,
+      "era": "1939",
+      "start": "1940-01-09",
+      "days": 30,
+      "currency": "fabi",
+      "price_index": 160,
+      "market_every": 5,
+      "market_offset": 0,
+      "_doc": "1939 腊月按农历；公历起点待 K13 核对"
+    },
+    {
+      "index": 2,
+      "era": "1940",
+      "start": "1940-03-01",
+      "days": 30,
+      "currency": "fabi",
+      "price_index": 220,
+      "market_every": 5,
+      "market_offset": 1
+    }
+  ]
+}

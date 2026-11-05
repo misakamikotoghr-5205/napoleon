@@ -1,0 +1,86 @@
+{
+  "_meta": {
+    "owner": "C10",
+    "schema": 1,
+    "brief": "档案簿与 F1 帮助的界面键。正文由 B 写，这里只有键和 brief。",
+    "_provenance": {
+      "by": "ai",
+      "task": "C10",
+      "date": "2026-10-13"
+    }
+  },
+  "keys": {
+    "c10.tab.people": {
+      "brief": "档案簿页签：人名索引"
+    },
+    "c10.tab.rules": {
+      "brief": "页签：已经解锁的规矩"
+    },
+    "c10.tab.controls": {
+      "brief": "帮助页签：按键和一天怎么过"
+    },
+    "c10.kind.pawn": {
+      "brief": "碎片来源小字：当出去的东西"
+    },
+    "c10.kind.said": {
+      "brief": "碎片来源小字：本人说的"
+    },
+    "c10.kind.heard": {
+      "brief": "碎片来源小字：别人提起"
+    },
+    "c10.kind.clipping": {
+      "brief": "碎片来源小字：剪报"
+    },
+    "c10.kind.ticket": {
+      "brief": "碎片来源小字：当票上的字"
+    },
+    "c10.kind.letter": {
+      "brief": "碎片来源小字：信"
+    },
+    "c10.kind.year_after": {
+      "brief": "碎片来源小字：一年后"
+    },
+    "c10.teacher.notice": {
+      "brief": "规矩落款：告示"
+    },
+    "c10.teacher.almanac": {
+      "brief": "规矩落款：黄历"
+    },
+    "c10.teacher.brother_ledger": {
+      "brief": "规矩落款：哥哥留下的账簿批注"
+    },
+    "c10.help.title": {
+      "brief": "帮助标题"
+    },
+    "c10.help.keys.f1": {
+      "brief": "按键要点：F1 打开或关掉帮助"
+    },
+    "c10.help.keys.esc": {
+      "brief": "按键要点：Esc 关掉最上面这一层"
+    },
+    "c10.help.keys.enter": {
+      "brief": "按键要点：确认当前按钮"
+    },
+    "c10.help.keys.space": {
+      "brief": "按键要点：确认当前按钮"
+    },
+    "c10.help.keys.tab": {
+      "brief": "按键要点：切换栏目"
+    },
+    "c10.help.keys.num": {
+      "brief": "按键要点：数字键 1 到 9 选手里的牌"
+    },
+    "c10.help.day_flow": {
+      "brief": "一天的顺序要点：发牌，处理，打烊，夜里的事，日结。不写成长段教程。"
+    },
+    "c10.btn.close": {
+      "brief": "关掉档案簿或帮助"
+    },
+    "c10.drawer.note": {
+      "brief": "档案簿（左抽屉）人物栏顶上的一句说明：每人一页，见一回补一块，没理他就空一块"
+    },
+    "c10.drawer.empty": {
+      "brief": "档案簿里一页都还没有时的一句"
+    }
+  }
+}

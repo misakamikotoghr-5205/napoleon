@@ -1,0 +1,62 @@
+{
+  "cards": [
+    {
+      "id": "ev.1938.police_check",
+      "type": "event",
+      "era": [
+        "1938"
+      ],
+      "brief": "巡警上门查良民证，例行公事。",
+      "stage": {
+        "brief": "查良民证这一出，两个巡警在门口。",
+        "cast": [
+          {
+            "who": "ex_patrol",
+            "at": "door_l",
+            "brief": "维持会派来的巡警站门口左边。"
+          },
+          {
+            "who": "ex_patrol",
+            "at": "door_r",
+            "brief": "伪维持会的文书站在门口右边。"
+          }
+        ],
+        "props": [
+          {
+            "art": "prop.notice",
+            "at": "door_notice",
+            "brief": "门边贴着查验证件的告示。"
+          }
+        ],
+        "intro": [
+          {
+            "who": "ex_patrol",
+            "ref": "lines.greet",
+            "brief": "巡警说：“把门打开，把良民证拿出来给我看看。”"
+          },
+          {
+            "who": "",
+            "ref": "body",
+            "brief": "旁白：挨家挨户查证件。"
+          }
+        ],
+        "after": {
+          "fail": [
+            {
+              "who": "",
+              "ref": "outcomes.fail",
+              "brief": "旁白：名字被记下来。"
+            }
+          ],
+          "success": [
+            {
+              "who": "ex_patrol",
+              "ref": "lines.pass",
+              "brief": "巡警看过证件，挥手放过。"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

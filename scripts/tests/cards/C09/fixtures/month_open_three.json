@@ -1,0 +1,95 @@
+{
+  "_meta": {
+    "owner": "C09",
+    "schema": 1,
+    "brief": "开月：主线一条加两条可选。背景和段落仍从 stage.json 读，不从本夹具读 brief。"
+  },
+  "guide_progress": {},
+  "queries": {
+    "firsts|{}": {
+      "firsts": {}
+    },
+    "month_report|{}": {
+      "lines": []
+    },
+    "year_report|{}": {
+      "lines": []
+    }
+  },
+  "responses": [
+    {
+      "cmd": "*",
+      "result": {
+        "ok": true,
+        "err": ""
+      }
+    }
+  ],
+  "view": {
+    "v": 1,
+    "phase": "month_open",
+    "mode": "shop",
+    "busy": false,
+    "date": {
+      "stage": 0,
+      "era": "1938",
+      "y": 1938,
+      "m": 3,
+      "d": 1,
+      "weekday": 1,
+      "stage_day": 0,
+      "stage_days": 30,
+      "abs_day": 0,
+      "minute": 480
+    },
+    "notice": {
+      "weather": "clear",
+      "market_day": false,
+      "news": [],
+      "almanac": {
+        "id": "alm.shoudang",
+        "yi": [],
+        "ji": [],
+        "done": []
+      },
+      "fortune": ""
+    },
+    "money": {
+      "amount": 340,
+      "currency": "fabi"
+    },
+    "rep_tier": 1,
+    "heat_tier": 0,
+    "hand": [],
+    "kept": [],
+    "contacts": [],
+    "pending": [],
+    "demands": [],
+    "tickets": [],
+    "goals": [
+      {
+        "id": "gl.1938.keep_shop",
+        "main": true,
+        "status": "open"
+      },
+      {
+        "id": "gl.fx.one",
+        "main": false,
+        "status": "open"
+      },
+      {
+        "id": "gl.fx.two",
+        "main": false,
+        "status": "open"
+      }
+    ],
+    "open_panel": {
+      "kind": "wheel",
+      "args": {
+        "wheel": "wh.month",
+        "uid": "",
+        "required": true
+      }
+    }
+  }
+}

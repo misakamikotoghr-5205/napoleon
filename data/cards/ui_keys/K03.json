@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "owner": "K03",
+    "schema": 1,
+    "brief": "K03 的原因键和告示键，只有设计说明。",
+    "_provenance": {
+      "by": "ai",
+      "task": "K03",
+      "date": "2026-10-13"
+    }
+  },
+  "keys": {
+    "k03.notice.letter_arrived": {
+      "brief": "邮电代办把家书送到"
+    },
+    "k03.notice.letter_held": {
+      "brief": "家书先压在柜上不拆"
+    },
+    "k03.notice.ma_office": {
+      "brief": "保长改挂到伪区公所之后的告示"
+    },
+    "k03.notice.wangshan_left": {
+      "brief": "王山又离开镇子"
+    },
+    "k03.notice.xiaoding_away": {
+      "brief": "年轻伙夫这一阵不来了"
+    },
+    "k03.reason.levy": {
+      "brief": "交给保长的年关摊派"
+    },
+    "k03.reason.repay": {
+      "brief": "佃户还来的一笔年关还款"
+    }
+  }
+}

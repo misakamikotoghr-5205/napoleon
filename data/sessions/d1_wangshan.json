@@ -1,0 +1,93 @@
+{
+  "id": "d1_wangshan",
+  "npc": "wangshan",
+  "mode": "sell",
+  "stock": ["quinine", "sulfa_fake", "mercuro"],
+  "buyer_prices": {
+    "quinine": {"offer": 80, "max": 90},
+    "sulfa_fake": {"offer": 100, "max": 110},
+    "mercuro": {"offer": 24, "max": 26}
+  },
+  "hint": "卖东西也用算盘。咱们收得低，卖得公道，就是赚头。",
+  "pre": [
+    {"op": "tutorial", "target": "abacus", "who": "brother", "text": "卖东西也用算盘。咱们收得低，卖得公道，就是赚头。"},
+    {"op": "narr", "text": "午后。一个穿旧蓑衣的青年进门，先扫了一眼门外，再扫一眼柜台里。站得笔直。"}
+  ],
+  "intro": [
+    {"op": "say", "who": "wangshan", "text": "掌柜的，有药吗？治打摆子的，还有消炎的。"},
+    {"op": "if", "cond": "not stock_has('quinine') and not stock_has('sulfa_fake') and not stock_has('mercuro')", "then": [
+      {"op": "say", "who": "you", "text": "店里现在没有药。"},
+      {"op": "set", "flag": "wangshan", "value": "nostock"},
+      {"op": "end", "result": "nostock"}
+    ]}
+  ],
+  "extras": [
+    {"id": "obs_wrap", "label": "观察：布鞋下的绑腿", "once": true, "steps": [
+      {"op": "narr", "text": "布鞋下露出的绑腿。"},
+      {"op": "if", "cond": "not is('wangshan_soldier_noted')", "then": [
+        {"op": "note", "kind": "人物", "text": "像是当兵的", "source": "inferred"},
+        {"op": "set", "flag": "wangshan_soldier_noted", "value": true}
+      ]}
+    ]},
+    {"id": "obs_bandage", "label": "观察：左手的纱布", "once": true, "steps": [
+      {"op": "narr", "text": "左手缠着渗血的纱布。"},
+      {"op": "if", "cond": "not is('wangshan_soldier_noted')", "then": [
+        {"op": "note", "kind": "人物", "text": "像是当兵的", "source": "inferred"},
+        {"op": "set", "flag": "wangshan_soldier_noted", "value": true}
+      ]}
+    ]},
+    {"id": "listen_accent", "label": "听口音", "once": true, "steps": [
+      {"op": "narr", "text": "说话是外地口音。"},
+      {"op": "if", "cond": "not is('wangshan_soldier_noted')", "then": [
+        {"op": "note", "kind": "人物", "text": "像是当兵的", "source": "inferred"},
+        {"op": "set", "flag": "wangshan_soldier_noted", "value": true}
+      ]}
+    ]},
+    {"id": "ask_origin", "label": "问他是哪里人", "once": true, "steps": [
+      {"op": "say", "who": "wangshan", "text": "过路的。……你不知道，对你好。"}
+    ]},
+    {"id": "tell_fake", "label": "告诉他磺胺是假的", "once": true, "when": "stock_has('sulfa_fake') and is('found_fake_sulfa')", "steps": [
+      {"op": "say", "who": "wangshan", "text": "……多谢。这一句话，比一盒药值钱。"},
+      {"op": "stat", "stat": "faction:王山那边", "delta": 5, "why": "告诉王山磺胺是假的"},
+      {"op": "set", "flag": "told_wangshan_fake", "value": true},
+      {"op": "select", "def": "sulfa_fake", "on": false}
+    ]}
+  ],
+  "deals": [
+    {"id": "iou_quinine", "label": "收现钱40，另记一张60蚨的借条", "when": "stock_has('quinine') and selected('quinine')", "steps": [
+      {"op": "move_item", "def": "quinine", "to": "npc:wangshan", "note": "奈宁交给王山"},
+      {"op": "money", "from": "wangshan", "to": "player", "amount": 40, "reason": "奈宁，现钱部分"},
+      {"op": "debt", "debtor": "wangshan", "creditor": "player", "amount": 60, "cash": false, "due_day": 9, "note": "王山的借条（60 蚨）"},
+      {"op": "stat", "stat": "faction:王山那边", "delta": 5, "why": "王山的借条"},
+      {"op": "set", "flag": "wangshan", "value": "sold"},
+      {"op": "set", "flag": "wangshan_iou", "value": 60}
+    ]},
+    {"id": "gift_quinine", "label": "白送奈宁", "when": "stock_has('quinine') and selected('quinine')", "steps": [
+      {"op": "move_item", "def": "quinine", "to": "npc:wangshan", "note": "白送给王山"},
+      {"op": "stat", "stat": "benxin", "delta": 3, "why": "白送奈宁"},
+      {"op": "stat", "stat": "faction:王山那边", "delta": 8, "why": "白送奈宁"},
+      {"op": "stat", "stat": "suspicion", "delta": 1, "why": "白送奈宁，维持会起疑"},
+      {"op": "note", "kind": "消息", "text": "白送王山一瓶奈宁（进价约 60 蚨）", "source": "seen"},
+      {"op": "set", "flag": "wangshan", "value": "gift"}
+    ]},
+    {"id": "refuse", "label": "说没药，拒卖", "steps": [
+      {"op": "set", "flag": "wangshan", "value": "refused"}
+    ]}
+  ],
+  "on_accept": [
+    {"op": "set", "flag": "wangshan", "value": "sold"},
+    {"op": "stat", "stat": "suspicion", "delta": 1, "why": "卖药给王山"},
+    {"op": "if", "cond": "selected('sulfa_fake')", "then": [
+      {"op": "set", "flag": "sold_fake_to_wangshan", "value": true},
+      {"op": "if", "cond": "is('found_fake_sulfa')", "then": [
+        {"op": "stat", "stat": "benxin", "delta": -6, "why": "明知磺胺是假的，还当真的卖给王山"}
+      ]}
+    ]}
+  ],
+  "on_leave": [
+    {"op": "set", "flag": "wangshan", "value": "refused"}
+  ],
+  "post": [
+    {"op": "say", "who": "brother", "text": "那人腿上打着绑腿。……张护士说得对，来买药的不一定是病人。", "when": "var('result') != 'nostock'"}
+  ]
+}

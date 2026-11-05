@@ -1,0 +1,364 @@
+{
+  "_meta": {
+    "owner": "C03",
+    "schema": 1,
+    "brief": "邻铺失火：三个选项，第一个带检定格子，第三个灰掉"
+  },
+  "view": {
+    "v": 1,
+    "phase": "day",
+    "mode": "shop",
+    "busy": false,
+    "date": {
+      "stage": 0,
+      "era": "1938",
+      "y": 1938,
+      "m": 3,
+      "d": 9,
+      "weekday": 2,
+      "stage_day": 9,
+      "stage_days": 30,
+      "abs_day": 9,
+      "minute": 540
+    },
+    "notice": {
+      "weather": "clear",
+      "market_day": false,
+      "news": [],
+      "almanac": {
+        "id": "alm.shoudang",
+        "yi": [],
+        "ji": [],
+        "done": []
+      },
+      "fortune": ""
+    },
+    "money": {
+      "amount": 340,
+      "currency": "fabi"
+    },
+    "rep_tier": 1,
+    "heat_tier": 0,
+    "self": {
+      "uid": "c0001",
+      "def": "self.ruhua",
+      "type": "self",
+      "zone": "self",
+      "art": "portrait.ruhua",
+      "gold": false,
+      "must_resolve": false,
+      "keepable": false,
+      "expires_in": -1,
+      "status": "open",
+      "person": "",
+      "intent": "",
+      "item": null,
+      "asking": -1,
+      "observations": [],
+      "days_left": -1,
+      "attrs": {
+        "eye": 2,
+        "tongue": 1,
+        "pull": 1,
+        "nerve": 1
+      },
+      "used_today": false,
+      "away_days": 0,
+      "can_appraise": false,
+      "panel": "none",
+      "actions": [
+        {
+          "id": "open",
+          "enabled": true,
+          "reason_key": ""
+        }
+      ]
+    },
+    "hand": [
+      {
+        "uid": "c0004",
+        "def": "fa.any.fire_next_door",
+        "type": "fate",
+        "zone": "hand",
+        "art": "illus.fa.any.fire_next_door",
+        "gold": false,
+        "must_resolve": true,
+        "keepable": false,
+        "expires_in": -1,
+        "status": "open",
+        "person": "",
+        "intent": "",
+        "item": null,
+        "asking": -1,
+        "observations": [],
+        "days_left": -1,
+        "attrs": {},
+        "used_today": false,
+        "away_days": 0,
+        "can_appraise": false,
+        "panel": "slots",
+        "actions": [
+          {
+            "id": "open",
+            "enabled": true,
+            "reason_key": ""
+          }
+        ],
+        "choices": [
+          {
+            "id": "move_goods",
+            "enabled": true,
+            "reason_key": "",
+            "has_check": true
+          },
+          {
+            "id": "call_police",
+            "enabled": true,
+            "reason_key": "",
+            "has_check": false
+          },
+          {
+            "id": "shut_door",
+            "enabled": false,
+            "reason_key": "c03.err.person_busy",
+            "has_check": false
+          }
+        ],
+        "slots": []
+      }
+    ],
+    "kept": [
+      {
+        "uid": "c0020",
+        "def": "kp.liangmin",
+        "type": "kept",
+        "zone": "kept",
+        "art": "illus.kp.liangmin",
+        "gold": false,
+        "must_resolve": false,
+        "keepable": true,
+        "expires_in": -1,
+        "status": "open",
+        "person": "",
+        "intent": "",
+        "item": null,
+        "asking": -1,
+        "observations": [],
+        "days_left": -1,
+        "attrs": {},
+        "used_today": false,
+        "away_days": 0,
+        "can_appraise": false,
+        "panel": "slots",
+        "actions": [
+          {
+            "id": "open",
+            "enabled": true,
+            "reason_key": ""
+          }
+        ]
+      }
+    ],
+    "contacts": [
+      {
+        "uid": "c0012",
+        "def": "ct.ma",
+        "type": "contact",
+        "zone": "contacts",
+        "art": "portrait.ma",
+        "gold": false,
+        "must_resolve": false,
+        "keepable": false,
+        "expires_in": -1,
+        "status": "open",
+        "person": "",
+        "intent": "",
+        "item": null,
+        "asking": -1,
+        "observations": [],
+        "days_left": -1,
+        "attrs": {
+          "eye": 1,
+          "tongue": 2,
+          "pull": 3,
+          "nerve": 1
+        },
+        "used_today": false,
+        "away_days": 0,
+        "can_appraise": false,
+        "panel": "none",
+        "actions": [
+          {
+            "id": "open",
+            "enabled": true,
+            "reason_key": ""
+          }
+        ]
+      }
+    ],
+    "pending": [],
+    "demands": [],
+    "caps": {
+      "kept": 5,
+      "contacts": 3,
+      "shelf": 12
+    },
+    "shelf_count": 1,
+    "tickets": [],
+    "estates": [],
+    "goals": [],
+    "night_offers": [],
+    "open_panel": {
+      "kind": "",
+      "args": {}
+    },
+    "lots": [],
+    "dossier_new": 0
+  },
+  "queries": {
+    "card|{\"uid\":\"c0004\"}": {
+      "uid": "c0004",
+      "def": "fa.any.fire_next_door",
+      "type": "fate",
+      "zone": "hand",
+      "art": "illus.fa.any.fire_next_door",
+      "gold": false,
+      "must_resolve": true,
+      "keepable": false,
+      "expires_in": -1,
+      "status": "open",
+      "person": "",
+      "intent": "",
+      "item": null,
+      "asking": -1,
+      "observations": [],
+      "days_left": -1,
+      "attrs": {},
+      "used_today": false,
+      "away_days": 0,
+      "can_appraise": false,
+      "panel": "slots",
+      "actions": [
+        {
+          "id": "open",
+          "enabled": true,
+          "reason_key": ""
+        }
+      ],
+      "choices": [
+        {
+          "id": "move_goods",
+          "enabled": true,
+          "reason_key": "",
+          "has_check": true
+        },
+        {
+          "id": "call_police",
+          "enabled": true,
+          "reason_key": "",
+          "has_check": false
+        },
+        {
+          "id": "shut_door",
+          "enabled": false,
+          "reason_key": "c03.err.person_busy",
+          "has_check": false
+        }
+      ],
+      "slots": []
+    },
+    "slots|{\"uid\":\"c0004\"}": {
+      "slots": [
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "attr": "nerve",
+          "wants": [],
+          "required": false,
+          "max": 1,
+          "placed": [],
+          "coins": 0
+        }
+      ],
+      "coins": 0,
+      "auto_heads": 0,
+      "need": 2,
+      "auto_pass": false,
+      "ready": true
+    },
+    "stock|{}": {
+      "items": []
+    }
+  },
+  "responses": [
+    {
+      "cmd": "card.choose",
+      "match": {
+        "choice": "move_goods"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "needs_slots": true
+      }
+    },
+    {
+      "cmd": "card.choose",
+      "match": {
+        "choice": "call_police"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "needs_slots": false
+      }
+    },
+    {
+      "cmd": "card.choose",
+      "match": {
+        "choice": "shut_door"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "needs_slots": false
+      }
+    },
+    {
+      "cmd": "slot.roll",
+      "result": {
+        "ok": true,
+        "err": "",
+        "faces": [
+          true,
+          true
+        ],
+        "heads": 2,
+        "need": 2,
+        "success": true
+      },
+      "events": [
+        [
+          "coins_tossed",
+          "c0004",
+          [
+            true,
+            true
+          ],
+          2,
+          true
+        ]
+      ]
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "ok": true,
+        "err": ""
+      }
+    }
+  ]
+}

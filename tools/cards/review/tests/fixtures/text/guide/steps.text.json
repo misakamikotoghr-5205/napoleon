@@ -1,0 +1,12 @@
+{
+  "gd.bad.percent": {
+    "say": "看手里的牌。",
+    "bubble": "成功率 20%。",
+    "_provenance": "human:A:2026-10-13"
+  },
+  "gd.ok.clean": {
+    "say": "看手里的牌。",
+    "bubble": "先处理这一张。",
+    "_provenance": "human:A:2026-10-13"
+  }
+}

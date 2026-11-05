@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "owner": "G05",
+    "schema": 1
+  },
+  "_doc": [
+    "求签、测字、黄历、轮盘默认值（§4.6、§9）。"
+  ],
+  "lot": {
+    "window_days": 3,
+    "pick": 2,
+    "conscience_harsh_below": -20,
+    "harsh_bias_pct": 300
+  },
+  "cezi": {
+    "offer": 6
+  },
+  "almanac": {
+    "reward_rule": "yi_done_and_no_ji"
+  },
+  "wheel": {
+    "default_money_per_unit": 5,
+    "default_unit_widen_pct": 15,
+    "default_max_units": 6
+  }
+}

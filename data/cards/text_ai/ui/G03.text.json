@@ -1,0 +1,72 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "g03.tier.rep.0": {
+    "t": "口碑：没人知道"
+  },
+  "g03.tier.rep.1": {
+    "t": "口碑：有人提起"
+  },
+  "g03.tier.rep.2": {
+    "t": "口碑：信得过"
+  },
+  "g03.tier.rep.3": {
+    "t": "口碑：有名气"
+  },
+  "g03.tier.rep.4": {
+    "t": "口碑：老字号"
+  },
+  "g03.tier.heat.0": {
+    "t": "风声：平静"
+  },
+  "g03.tier.heat.1": {
+    "t": "风声：有人留意"
+  },
+  "g03.tier.heat.2": {
+    "t": "风声：挂了号"
+  },
+  "g03.tier.heat.3": {
+    "t": "风声：被盯上"
+  },
+  "g03.tier.heat.4": {
+    "t": "风声：要抓人"
+  },
+  "g03.reason.money": {
+    "t": "钱不够"
+  },
+  "g03.reason.fine": {
+    "t": "罚款"
+  },
+  "g03.reason.slot_money": {
+    "t": "打点的钱"
+  },
+  "g03.reason.person_busy": {
+    "t": "这个人今天用过了"
+  },
+  "g03.reason.condition": {
+    "t": "眼下办不了"
+  },
+  "g03.reason.demand": {
+    "t": "交条子"
+  },
+  "g03.arrest.heat": {
+    "t": "风声太紧，被抓进去了。"
+  },
+  "g03.arrest.demand": {
+    "t": "条子没办成，被抓进去了。"
+  },
+  "g03.demand.done": {
+    "t": "条子办了。"
+  },
+  "g03.demand.failed": {
+    "t": "条子到期没办成，该罚的照罚。"
+  },
+  "g03.end.release": {
+    "t": "新来的那位，这回就不留了。"
+  },
+  "g03.end.demand": {
+    "t": "条子接着计时，打烊后还剩 {days} 天。"
+  }
+}

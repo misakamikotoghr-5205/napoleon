@@ -1,0 +1,529 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-3940"
+  },
+  "p.brother.1940.letter_cold": {
+    "title": "断了的家书",
+    "body": "哥哥寄来的信只有短短几行，后半页被水泡过，字都看不清了。",
+    "lines": {
+      "greet": "如花：见字如面。"
+    },
+    "choices": {
+      "keep_blank": "收下断信",
+      "burn": "不看"
+    }
+  },
+  "p.brother.1940.letter_warm": {
+    "title": "哥哥的来信",
+    "body": "邮差把哥哥的第二封信送到柜上，信封摸着有点沉。",
+    "lines": {
+      "greet": "如花：见字如面，家里都好吗？"
+    },
+    "choices": {
+      "read_on": "看完这封信",
+      "set_aside": "先搁下"
+    }
+  },
+  "p.chen.1940.pawn_quinine": {
+    "title": "一瓶奎宁",
+    "body": "陈叔叔拿来一瓶奎宁要当，说济生堂一时周转不开。",
+    "lines": {
+      "greet": "如花，叔叔又来给你添麻烦了。",
+      "accept": "好，药先放你这儿，过些日子我来赎。",
+      "leave": "不要紧，我再想办法。",
+      "refused": "也好，叔叔不怪你。",
+      "ask": "这瓶奎宁，能当{price}块吗？",
+      "counter": "{price}块吧，叔叔也不多要。"
+    }
+  },
+  "p.chen.1940.redeem": {
+    "title": "陈叔叔赎药",
+    "body": "陈叔叔来赎他当在柜上的那瓶药。",
+    "lines": {
+      "greet": "如花，我来把药赎回去。",
+      "accept": "好，药拿回来了。",
+      "refused": "也罢，过两天我再来。",
+      "leave": "今天不赎了，改天再说。"
+    }
+  },
+  "p.guanjia.1940.buy_scroll": {
+    "title": "府里挑书画",
+    "body": "孙福来替孙府挑一件书画，说是府里要用。",
+    "lines": {
+      "greet": "沈姑娘，府里要一件像样的书画。",
+      "accept": "这件就行，钱照付。",
+      "leave": "没有合用的，我先回去了。",
+      "refused": "不卖？那我去别家。",
+      "ask": "拿几件书画出来，我挑一挑。",
+      "counter": "{price}块，府里只给这么多。"
+    }
+  },
+  "p.guanjia.1940.intro": {
+    "title": "孙府介绍信",
+    "body": "孙福把一封孙府的介绍信递过来，说往后办事用得着。",
+    "lines": {
+      "greet": "沈姑娘，老爷让我把这个交给你。"
+    },
+    "choices": {
+      "give_letter": "收下信",
+      "decline_letter": "不收"
+    }
+  },
+  "p.guanjia.1940.pledge": {
+    "title": "孙府要作保",
+    "body": "孙福来请铺子出面作保，孙府要拿德厚当的名字去应付新来的官。",
+    "lines": {
+      "greet": "沈姑娘，府里有件事，想请你帮个忙。"
+    },
+    "choices": {
+      "pledge": "作保",
+      "refuse_pledge": "不作保"
+    }
+  },
+  "p.hu2.1940.office_shift": {
+    "title": "胡二换了主",
+    "body": "胡二来说，往后他改替新来的官跑腿了。",
+    "lines": {
+      "greet": "沈姑娘，跟你说一声，我换地方当差了。"
+    },
+    "choices": {
+      "take_new": "认他新差事",
+      "send_off": "让他别来"
+    }
+  },
+  "p.hu2.1940.slip_cold": {
+    "title": "胡二冷着脸",
+    "body": "胡二记着上回被挡在门外，这回冷着脸又来传话。",
+    "lines": {
+      "greet": "沈姑娘，上回的话，还没说完呢。"
+    },
+    "choices": {
+      "hear": "听他说",
+      "bar_again": "再挡一次"
+    }
+  },
+  "p.hu2.1940.slip_new": {
+    "title": "胡二传新话",
+    "body": "胡二替伪县政府的新官传话，说摊派换了名目，要铺子先表个态。",
+    "lines": {
+      "greet": "沈姑娘，新官有话，我给你带到。"
+    },
+    "choices": {
+      "pay_lip": "应承下来",
+      "cold": "冷淡对待"
+    }
+  },
+  "p.hu2.1940.slip_old": {
+    "title": "胡二传旧话",
+    "body": "胡二还挂着伪维持会的名目，挨家挨户传话。",
+    "lines": {
+      "greet": "沈姑娘，上头有话，你听着。"
+    },
+    "choices": {
+      "take_old": "听他传话",
+      "bar": "挡在门外"
+    },
+    "outcomes": {
+      "ignored": "胡二吃了闭门羹，几天不会露面，再来时脸色就不好看了。"
+    }
+  },
+  "p.li.1940.ask_school": {
+    "title": "名册上的人保",
+    "body": "李敬之来问，铺子肯不肯在伪县政府新造的名册上，给他的同学作个人保。",
+    "lines": {
+      "greet": "沈姐姐，有件事想求你。"
+    },
+    "choices": {
+      "hear": "给他作保",
+      "dismiss": "不写"
+    }
+  },
+  "p.li.1940.sell_calligraphy": {
+    "title": "一幅旧字",
+    "body": "李敬之带来一幅旧字，想卖给铺子。",
+    "lines": {
+      "greet": "沈姐姐，这幅字你看看。",
+      "accept": "谢谢沈姐姐。",
+      "leave": "那我拿回去了。",
+      "refused": "没关系，我再问问别处。",
+      "ask": "这幅字，{price}块，您看行吗？",
+      "counter": "那就{price}块吧。"
+    }
+  },
+  "p.linsao.1940.ask_gone": {
+    "title": "码头的传闻",
+    "body": "林嫂很久没来了。码头上有人说，她家的船早些日子已经离开了青溪。",
+    "lines": {
+      "greet": "沈姑娘，开了春我再来看你。"
+    },
+    "choices": {
+      "note_gap": "记下传闻",
+      "ask_boat": "不再问"
+    }
+  },
+  "p.linsao.1940.pawn_coat": {
+    "title": "开春当冬衣",
+    "body": "开春了，林嫂把一件冬衣拿来当，换几天的口粮。",
+    "lines": {
+      "greet": "沈姑娘，天暖了，这件衣裳先当了吧。",
+      "accept": "谢谢你，沈姑娘。",
+      "leave": "那我再去别处问问。",
+      "refused": "好吧，我不为难你。",
+      "ask": "这件冬衣，能当{price}块就好。",
+      "counter": "{price}块，再少就不够了。"
+    },
+    "outcomes": {
+      "ignored": "林嫂等不到人，抱着冬衣走了，往后怕是不会再上门，街上也有了闲话。"
+    }
+  },
+  "p.linsao.1940.redeem": {
+    "title": "林嫂来赎当",
+    "body": "林嫂来赎她当在柜上的冬衣。",
+    "lines": {
+      "greet": "沈姑娘，我来把衣裳赎回去。",
+      "accept": "谢谢沈姑娘，衣裳我拿回去了。",
+      "refused": "好吧，我再凑凑。",
+      "leave": "我改天再来。"
+    }
+  },
+  "p.ma.1940.levy_harsh": {
+    "title": "保长逼摊派",
+    "body": "马保长还挂着伪维持会的名目，记着旧账，这回说话更紧。",
+    "lines": {
+      "greet": "沈姑娘，旧账新账，今天一起算。"
+    },
+    "choices": {
+      "brace": "硬顶",
+      "soothe": "补一笔"
+    }
+  },
+  "p.ma.1940.levy_new": {
+    "title": "新名目摊派",
+    "body": "马保长如今归伪县政府管，来要新名目下的摊派。",
+    "lines": {
+      "greet": "沈姑娘，名目换了，规矩也换了。"
+    },
+    "choices": {
+      "pay_new": "应承下来",
+      "cold": "冷淡对待"
+    }
+  },
+  "p.ma.1940.levy_old": {
+    "title": "保长打招呼",
+    "body": "马保长还用伪维持会时候的名目，先来打个招呼，提一提摊派。",
+    "lines": {
+      "greet": "沈姑娘，老规矩，先跟你说一声。"
+    },
+    "choices": {
+      "pay_old": "应承下来",
+      "haggle": "跟他讲价"
+    },
+    "outcomes": {
+      "ignored": "马保长没见着人，记下了这笔账，往后说话只会更紧，街上也有了闲话。"
+    }
+  },
+  "p.ma.1940.office_shift": {
+    "title": "保长换名目",
+    "body": "马保长来说，他的名目要换了，往后归新来的官管。",
+    "lines": {
+      "greet": "沈姑娘，往后见了我，可得换个叫法。"
+    },
+    "choices": {
+      "accept_title": "认新名目",
+      "keep_old": "仍叫旧称"
+    }
+  },
+  "p.nf1940a.1940.register": {
+    "title": "新官造名册",
+    "body": "新来的书记顾承年要给当铺造名册，让铺子把字号写上去。",
+    "lines": {
+      "greet": "这里是德厚当吧？我来登记名册。"
+    },
+    "choices": {
+      "comply": "写上名册",
+      "delay": "先拖着"
+    },
+    "outcomes": {
+      "ignored": "顾承年没人理会，记下了这家铺子，下回再来就不客气了，街上也有了闲话。"
+    }
+  },
+  "p.nf1940a.1940.register_cold": {
+    "title": "再来核名册",
+    "body": "顾承年又来核对名册，这回板着脸，话也不多。",
+    "lines": {
+      "greet": "上回没登上的，今天补上。"
+    },
+    "choices": {
+      "comply_late": "补上名册",
+      "delay_again": "再拖"
+    }
+  },
+  "p.nf1940b.1940.ask_rumor": {
+    "title": "南京来的传闻",
+    "body": "报贩齐路生从南京方向一路走来，说月底南京要成立一个新政府，伪维新政府也要并进去。",
+    "lines": {
+      "greet": "掌柜的，南京来的新消息，要不要看看？"
+    },
+    "choices": {
+      "keep_paper": "留下这张",
+      "refuse_paper": "不留"
+    }
+  },
+  "p.nf1940c.1940.pawn_robe": {
+    "title": "布贩当长袍",
+    "body": "布贩蔡布成被新摊派压得周转不开，来当一件长袍。",
+    "lines": {
+      "greet": "掌柜的，这件袍子，您给看看。",
+      "accept": "多谢，这下能先把账填上。",
+      "leave": "那我再跑一家。",
+      "refused": "唉，那就算了。",
+      "ask": "这件袍子，当{price}块成不成？",
+      "counter": "{price}块，我急着周转。"
+    }
+  },
+  "p.nf1940c.1940.redeem": {
+    "title": "布贩来赎袍",
+    "body": "蔡布成来赎他那件长袍。",
+    "lines": {
+      "greet": "掌柜的，我来赎袍子。",
+      "accept": "多谢，袍子我拿走了。",
+      "refused": "那我过几天再来。",
+      "leave": "今天先不赎了。"
+    }
+  },
+  "p.nf1940d.1940.ask_ticket": {
+    "title": "半张旧当票",
+    "body": "外乡来的方晚晴拿着半张旧当票来寻人，想在铺子的账上对一对。",
+    "lines": {
+      "greet": "请问，这张当票，是不是从你们这儿出去的？"
+    },
+    "choices": {
+      "copy_ticket": "抄进档案",
+      "turn_away_ticket": "打发她走"
+    }
+  },
+  "p.postman.1940.deliver": {
+    "title": "一封来信",
+    "body": "邮差何启明送来一封寻常的信。",
+    "lines": {
+      "greet": "沈姑娘，有你的信。"
+    },
+    "choices": {
+      "take": "收下信",
+      "refuse": "不收"
+    }
+  },
+  "p.sunlaoye.1940.ask_cold": {
+    "title": "孙老爷施压",
+    "body": "孙老爷亲自上门，话里话外要铺子跟孙府站到一边。",
+    "lines": {
+      "greet": "沈家丫头，你倒是给句准话。"
+    },
+    "choices": {
+      "bend": "低头",
+      "hold": "顶住"
+    }
+  },
+  "p.sunlaoye.1940.ask_favor": {
+    "title": "孙老爷要人情",
+    "body": "孙老爷来要一个人情，想让铺子出面替一户人家说说话。",
+    "lines": {
+      "greet": "沈家丫头，这回轮到你帮孙家一把了。"
+    },
+    "choices": {
+      "grant": "给这个人情",
+      "refuse": "推掉"
+    }
+  },
+  "p.sunyoung.1940.borrow": {
+    "title": "少爷来借钱",
+    "body": "孙少爷来借一笔钱，说是要备礼去见新来的官。",
+    "lines": {
+      "greet": "沈姑娘，手头一时不便，借我一点。"
+    },
+    "choices": {
+      "lend": "借给他",
+      "refuse": "不借"
+    }
+  },
+  "p.sunyoung.1940.pawn_ring": {
+    "title": "少爷当戒指",
+    "body": "孙少爷拿来一枚戒指要当，开口就要高价。",
+    "lines": {
+      "greet": "沈姑娘，这戒指你看看，可别压价。",
+      "accept": "行，就这么定了。",
+      "leave": "算了，不当了。",
+      "refused": "不收？你可别后悔。",
+      "ask": "这枚戒指，{price}块，一个子儿不能少。",
+      "counter": "{price}块，再压价我可走了。"
+    }
+  },
+  "p.sunyoung.1940.redeem": {
+    "title": "少爷来赎当",
+    "body": "孙少爷来赎他那枚戒指。",
+    "lines": {
+      "greet": "沈姑娘，戒指我来取了。",
+      "accept": "戒指我拿走了。",
+      "refused": "不让赎？你可想好了。",
+      "leave": "算了，改天再来。"
+    }
+  },
+  "p.wangshan.1940.ask_lost": {
+    "title": "断了的线",
+    "body": "王山很久没有露面，打听来打听去，消息都断了。",
+    "lines": {
+      "greet": "沈姑娘，等风头过了，我再来。"
+    },
+    "choices": {
+      "note": "记下断线",
+      "drop": "不再问"
+    }
+  },
+  "p.wangshan.1940.help_hide": {
+    "title": "王山求收留",
+    "body": "王山悄悄进门，想在铺子里躲几天。",
+    "lines": {
+      "greet": "沈姑娘，借你这儿躲几天，行吗？"
+    },
+    "choices": {
+      "shelter": "收留几天",
+      "turn_away": "让他走"
+    }
+  },
+  "p.wu.1940.ask_stock": {
+    "title": "趁早备米",
+    "body": "吴掌柜来问，要不要趁新摊派下来之前，先进一袋米。",
+    "lines": {
+      "greet": "沈姑娘，米得趁早备着。"
+    },
+    "choices": {
+      "stock_up": "先进一袋",
+      "wait": "再等等"
+    }
+  },
+  "p.wu.1940.sell_rice": {
+    "title": "开春的粳米",
+    "body": "吴掌柜拿来一小袋粳米要卖。",
+    "lines": {
+      "greet": "沈姑娘，米还要不要？",
+      "accept": "成，米归你了。",
+      "leave": "不要就算了。",
+      "refused": "不要？那我拿走了。",
+      "ask": "这袋粳米，{price}块，要不要？",
+      "counter": "最少{price}块，米不好买。"
+    }
+  },
+  "p.xiaoding.1940.pawn_rice": {
+    "title": "小丁当米",
+    "body": "小丁拎来一小袋粳米要当，袋口是重新缝过的。",
+    "lines": {
+      "greet": "沈姐姐，这袋米，能当点钱吗？",
+      "accept": "谢谢沈姐姐。",
+      "leave": "那我先回去了。",
+      "refused": "我懂了。",
+      "ask": "这袋米，能当{price}块吗？",
+      "counter": "那就{price}块吧。"
+    }
+  },
+  "p.xiaoding.1940.redeem": {
+    "title": "小丁来赎米",
+    "body": "小丁来赎他当在柜上的那袋米。",
+    "lines": {
+      "greet": "沈姐姐，我来赎米。",
+      "accept": "谢谢沈姐姐，米我拿回去了。",
+      "refused": "那我再攒攒。",
+      "leave": "我先回去了。"
+    }
+  },
+  "p.zhang.1940.ask_ward": {
+    "title": "药留给医院",
+    "body": "张护士来问，铺子收到的药，能不能先留给医院。",
+    "lines": {
+      "greet": "沈姑娘，医院里缺药，想求你一件事。"
+    },
+    "choices": {
+      "reserve": "先留给医院",
+      "refuse": "不答应"
+    }
+  },
+  "p.zhang.1940.sell_sulfa": {
+    "title": "一瓶磺胺",
+    "body": "张护士带来一瓶磺胺，想卖给铺子。",
+    "lines": {
+      "greet": "沈姑娘，这瓶药你收吗？",
+      "accept": "谢谢你。",
+      "leave": "那我再去问问别家。",
+      "refused": "好，打扰了。",
+      "ask": "这瓶磺胺，{price}块，你收吗？",
+      "counter": "{price}块，不能再少了。"
+    }
+  },
+  "p.zhao.1940.help_again": {
+    "title": "赵老三求借",
+    "body": "赵老三又来求借一小笔钱，这回不是来当东西。",
+    "lines": {
+      "greet": "沈姑娘，我实在没办法了。"
+    },
+    "choices": {
+      "lend": "借一小笔",
+      "refuse": "不借"
+    }
+  },
+  "p.zhao.1940.pawn_field": {
+    "title": "一张田契",
+    "body": "赵老三拿来一份田契文书要当，说家里再撑一阵就好。",
+    "lines": {
+      "greet": "沈姑娘，这张契，你先替我收着。",
+      "accept": "谢谢姑娘，等收了麦就来赎。",
+      "leave": "那我再想想办法。",
+      "refused": "唉，我明白。",
+      "ask": "这张田契，当{price}块成不成？",
+      "counter": "{price}块吧，姑娘行行好。"
+    }
+  },
+  "p.zhao.1940.redeem": {
+    "title": "赵老三赎契",
+    "body": "赵老三来赎他当在柜上的田契。",
+    "lines": {
+      "greet": "沈姑娘，我来赎契。",
+      "accept": "谢谢姑娘，契总算赎回来了。",
+      "refused": "唉，那我再凑凑。",
+      "leave": "我改天再来。"
+    }
+  },
+  "p.zhouma.1940.ask_cold": {
+    "title": "周妈话变冷",
+    "body": "周妈这回说话冷淡了许多，只捎来几句不咸不淡的闲话。",
+    "lines": {
+      "greet": "沈姑娘，有几句话，听不听随你。"
+    },
+    "choices": {
+      "listen": "还是听",
+      "hush": "挡回去"
+    }
+  },
+  "p.zhouma.1940.ask_open": {
+    "title": "茶馆闲话",
+    "body": "周妈来说茶馆里听来的闲话，有新官的，也有孙府的。",
+    "lines": {
+      "greet": "沈姑娘，茶馆里又有新鲜事了。"
+    },
+    "choices": {
+      "listen": "听完",
+      "hush": "挡回去"
+    }
+  },
+  "p.zhouma.1940.sell_scarf": {
+    "title": "周妈卖围巾",
+    "body": "周妈拿来一条旧围巾，想卖几个钱。",
+    "lines": {
+      "greet": "沈姑娘，天暖了，这围巾用不上，你收不收？",
+      "accept": "好，钱我拿走了。",
+      "leave": "不要就算了。",
+      "refused": "那我拿回去。",
+      "ask": "这条围巾，{price}块就卖。",
+      "counter": "{price}块，咱们街坊，别太较真。"
+    }
+  }
+}

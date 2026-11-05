@@ -1,0 +1,1513 @@
+{
+  "_meta": {
+    "owner": "K11",
+    "schema": 1,
+    "brief": "首发物品到小游戏的物理规格。区间低端更接近客人所报或更齐，高端偏差更大；真假由引擎另算，规格里不写结论。银元只吹不称。金饰、碎银、药材、银器、金条用戥子。米用杆秤。字画与文书拼碎片。找不同只给 item_templates.json 里已有部位布局的模板。dev_bad_pct 为正表示偏轻，为负表示偏重（米袋掺砂）。鉴定改版（主创 10-25，要玩家看出来才算数）：银元补 pitch_cents_good（真货音高）、stack（一摞几枚，默认一枚）、well_made_permille（做得好的哑板比例）、worn_permille（旧洋比例）；称分量补 small_fen（“轻一点点”的上限，品类规矩）、weight_box（手边哪一套砝码，套子在 rules/economy.json 的 appraise.weigh.boxes，修 B2：每个声称区间都压得平），米 resolution_fen 10；拼碎片把 seal_offset_px 拆成 _good [0,0] 与 _bad（坏货取到 0、1 时按对得上算，再至少给一块异纸；鉴定复审 r2 把 _bad 定为 [0,2]：偏也只偏 2 点，拼好了一眼看不出、放大镜里是清楚的台阶，3 点以上拼好一眼就露底，所以不给），ink_mismatch_bad 是异纸几块，stain_permille 是水渍（真假一样），rotate 1 = 字画散开时转着（规格只放整数）；随机东西最多 6 块。找不同 spot.opaque（fix2，10-25）：物品图不透明像素的位图（64 行、每行 16 位十六进制、一位一像素，行间空格），引擎只把痕迹放在物品的身子上；图换了就跑 scripts/tests/cards/C12/spot_body_tool.gd -- --write 重生成（C12_evidence 会报旧）。",
+    "_provenance": {
+      "by": "ai",
+      "task": "K11",
+      "date": "2026-10-13"
+    }
+  },
+  "cards": [
+    {
+      "id": "it.art.calligraphy",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "art.calligraphy",
+      "minigames": [
+        "spot",
+        "fragments"
+      ],
+      "spot": {
+        "opaque": "00000001c0000000 00000003e0000000 0000000ff8000000 0000003f7e000000 00003ffffffc0000 00007ffffffe0000 00007ffffffe0000 00003ffffffc0000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00039ffffff9c000 0007ffffffffe000 0007ffffffffe000 0007ffffffffe000 0007ffffffffe000 0007ffffffffe000 000380000001c000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "fragments": {
+        "doc": "scroll",
+        "pieces": [
+          4,
+          6
+        ],
+        "seal_offset_px_good": [
+          0,
+          0
+        ],
+        "seal_offset_px_bad": [
+          0,
+          2
+        ],
+        "ink_mismatch_bad": [
+          0,
+          2
+        ],
+        "dangzi_marks": 0,
+        "missing_piece": -1,
+        "stain_permille": 500,
+        "rotate": 1
+      },
+      "brief": "模板 art.calligraphy：字画。拼碎片（doc=scroll）并对图找不同。pieces、seal_offset_px、ink_mismatch 是物理规格区间，低端更齐，高端错开更大；规格里不写结论。不是当票，dangzi_marks=0，missing_piece=-1 表示不缺片。依据 DESIGN：字画走拼碎片。鉴定改版：真货 seal_offset_px_good 恒 0；坏货 seal_offset_px_bad，取到 0、1 按对得上算；ink_mismatch_bad 是坏货里异纸几块（引擎保证坏货至少一样证据）；stain_permille 水渍真假一样；pieces 最多 6；rotate 1 = 散开时转着（字画）、0 = 不转。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.art.flowers",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "art.flowers",
+      "minigames": [
+        "spot",
+        "fragments"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 000000000fff0000 000000001fff8000 000000001fff8000 000000001fff8000 003ffffffffff000 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 007ffffffffff800 003ffffffffff000 0000000000000000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "fragments": {
+        "doc": "scroll",
+        "pieces": [
+          3,
+          6
+        ],
+        "seal_offset_px_good": [
+          0,
+          0
+        ],
+        "seal_offset_px_bad": [
+          0,
+          2
+        ],
+        "ink_mismatch_bad": [
+          0,
+          2
+        ],
+        "dangzi_marks": 0,
+        "missing_piece": -1,
+        "stain_permille": 500,
+        "rotate": 1
+      },
+      "brief": "模板 art.flowers：字画。拼碎片（doc=scroll）并对图找不同。pieces、seal_offset_px、ink_mismatch 是物理规格区间，低端更齐，高端错开更大；规格里不写结论。不是当票，dangzi_marks=0，missing_piece=-1 表示不缺片。依据 DESIGN：字画走拼碎片。鉴定改版：真货 seal_offset_px_good 恒 0；坏货 seal_offset_px_bad，取到 0、1 按对得上算；ink_mismatch_bad 是坏货里异纸几块（引擎保证坏货至少一样证据）；stain_permille 水渍真假一样；pieces 最多 6；rotate 1 = 散开时转着（字画）、0 = 不转。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.art.landscape",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "art.landscape",
+      "minigames": [
+        "spot",
+        "fragments"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000001f80 0000000000003fc0 0000000000007fe0 000000000000fff0 300000000000fff0 7ffffffffffffff0 7ffffffffffffff0 7ffffffffffffff0 7ffffffffffffff0 7ffffffffffffff0 7ffffffffffffff0 7ffffffffffffff0 7ffffffffffffff0 7ffffffffffffff0 7ffffffffffffff0 7ffffffffffffff0 7ffffffffffffff0 7ffffffffffffff0 7ffffffffffffff0 7ffffffffffffff0 7ffffffffffffff0 7ffffffffffffff0 7ffffffffffffff0 7ffffffffffffff8 7ffffffffffffff8 7ffffffffffffffc 7ffffffffffffffc 7ffffffffffffffe 7ffffffffffffffe 7ffffffffffffffc 7ffffffffffffff8 7ffffffffffffff0 7ffffffffffffff0 7ffffffffffffff0 7ffffffffffffff0 7ffffffffffffff0 7ffffffffffffff0 300000000000fff0 000000000000fff0 0000000000007fe0 0000000000003fc0 0000000000001f80 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "fragments": {
+        "doc": "scroll",
+        "pieces": [
+          4,
+          6
+        ],
+        "seal_offset_px_good": [
+          0,
+          0
+        ],
+        "seal_offset_px_bad": [
+          0,
+          2
+        ],
+        "ink_mismatch_bad": [
+          0,
+          2
+        ],
+        "dangzi_marks": 0,
+        "missing_piece": -1,
+        "stain_permille": 500,
+        "rotate": 1
+      },
+      "brief": "模板 art.landscape：字画。拼碎片（doc=scroll）并对图找不同。pieces、seal_offset_px、ink_mismatch 是物理规格区间，低端更齐，高端错开更大；规格里不写结论。不是当票，dangzi_marks=0，missing_piece=-1 表示不缺片。依据 DESIGN：字画走拼碎片。鉴定改版：真货 seal_offset_px_good 恒 0；坏货 seal_offset_px_bad，取到 0、1 按对得上算；ink_mismatch_bad 是坏货里异纸几块（引擎保证坏货至少一样证据）；stain_permille 水渍真假一样；pieces 最多 6；rotate 1 = 散开时转着（字画）、0 = 不转。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.art.woodcut",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "art.woodcut",
+      "minigames": [
+        "spot",
+        "fragments"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 00fffffffffffc00 01fffffffffffe00 01fffffffffffe00 01ffffffffffff80 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 00ffffffffffffc0 00ffffffffffffc0 007fffffffffffc0 001fffffffffff80 0000000000000000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "fragments": {
+        "doc": "scroll",
+        "pieces": [
+          3,
+          6
+        ],
+        "seal_offset_px_good": [
+          0,
+          0
+        ],
+        "seal_offset_px_bad": [
+          0,
+          2
+        ],
+        "ink_mismatch_bad": [
+          0,
+          2
+        ],
+        "dangzi_marks": 0,
+        "missing_piece": -1,
+        "stain_permille": 500,
+        "rotate": 1
+      },
+      "brief": "模板 art.woodcut：字画。拼碎片（doc=scroll）并对图找不同。pieces、seal_offset_px、ink_mismatch 是物理规格区间，低端更齐，高端错开更大；规格里不写结论。不是当票，dangzi_marks=0，missing_piece=-1 表示不缺片。依据 DESIGN：字画走拼碎片。鉴定改版：真货 seal_offset_px_good 恒 0；坏货 seal_offset_px_bad，取到 0、1 按对得上算；ink_mismatch_bad 是坏货里异纸几块（引擎保证坏货至少一样证据）；stain_permille 水渍真假一样；pieces 最多 6；rotate 1 = 散开时转着（字画）、0 = 不转。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.clothing.coat",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "clothing.coat",
+      "minigames": [
+        "spot"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000003ffc000000 0000007ffe000000 0000007ffe000000 000000ffff000000 000003ffffc00000 000007ffffe00000 00001ffffff80000 00003ffffffc0000 00007ffffffe0000 00007ffffffe0000 00007ffffffe0000 00007ffffffe0000 00007ffffffe0000 0000ffffffff0000 0001ffffffff8000 0001ffffffff8000 0003ffffffffc000 0007ffffffffe000 000ffffffffff000 001ffffffffff800 003ffffffffffc00 007ffffffffffe00 00ffffffffffff00 01ffffffffffff80 01ffffffffffff80 03ffffffffffffc0 03ffffffffffffc0 07ffffffffffffe0 07ffffffffffffe0 0ffffffffffffff0 0ffffffffffffff0 1ffffffffffffff8 1ffffffffffffff8 3ffffffffffffffc 3ffeffffffff7ffc 7ffeffffffff7ffe 3ffcffffffff3ffc 1ff8ffffffff1ff8 0ff8ffffffff1ff0 03f0ffffffff0fc0 00e0ffffffff0700 0041ffffffff8200 0001ffffffff8000 0001ffffffff8000 0001ffffffff8000 0001ffffffff8000 0001ffffffff8000 0001ffffffff8000 0001ffffffff8000 0001ffffffffc000 0001ffffffffc000 0001ffffffffc000 0000ffffffff8000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "brief": "模板 clothing.coat：衣物。只做找不同（空图时部位表键是 proc:coat）。衣物不称、不吹、不拼。第 1–3 天教学若抽到衣物，找不同可用。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.clothing.qipao",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "clothing.qipao",
+      "minigames": [
+        "spot"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000023c00000 000000007ff80000 00000007ffff0000 0000007fffffe000 000007fffffffc00 0000ffffffffff80 000fffffffffffc0 00ffffffffffffe0 03ffffffffffffe0 07ffffffffffffe0 07fffffffffffff0 07ffffffffffffe0 07ffffffffffffe0 07fffffffffffff0 07ffffffffffffe0 07ffffffffffffe0 07fffffffffffff0 07ffffffffffffe0 07ffffffffffffe0 07fffffffffffff0 07ffffffffffffe0 07ffffffffffffe0 0ffffffffffffff0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffc0 07ffffffffffff00 03fffffffffffe00 01fffffffffffe00 007ffffffffffe00 0007fffffefffe00 0000ffffe0fffe00 00001ffc01fffe00 000003c000fffc00 0000000000fffc00 0000000000fffc00 00000000007ff800 00000000007ff000 00000000003ff800 00000000001ff000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "brief": "模板 clothing.qipao：衣物。只做找不同（空图时部位表键是 proc:qipao）。衣物不称、不吹、不拼。第 1–3 天教学若抽到衣物，找不同可用。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.clothing.robe",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "clothing.robe",
+      "minigames": [
+        "spot"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000001ff8000000 0000003ffc000000 0000003ffc000000 0000003ffc000000 000000ffff000000 00003ffffffc0000 0007ffffffffe000 01ffffffffffff80 0ffffffffffffff0 1ffffffffffffff8 1ffffffffffffff8 3ffffffffffffffc 3ffffffffffffffc 3ffffffffffffffc 7ffffffffffffffe 7ffffffffffffffe 7ffffffffffffffe 7ffffffffffffffe ffffffffffffffff fffff7ffffefffff 7fff0ffffff0fffe 3ff00ffffff00ffc 07000ffffff000e0 00000ffffff00000 00000ffffff00000 00000ffffff00000 00000ffffff00000 00000ffffff00000 00000ffffff00000 00000ffffff00000 00000ffffff00000 00000ffffff00000 00000ffffff00000 00000ffffff00000 00000ffffff00000 00000ffffff00000 00000ffffff00000 00000ffffff00000 00000ffffff00000 00000ffffff00000 00000ffffff00000 00000ffffff00000 00000ffffff00000 00000ffffff00000 00000ffffff00000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00001ffffff80000 00000ffffff00000 0000000000000000"
+      },
+      "brief": "模板 clothing.robe：衣物。只做找不同（空图时部位表键是 proc:robe）。衣物不称、不吹、不拼。第 1–3 天教学若抽到衣物，找不同可用。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.clothing.scarf",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "clothing.scarf",
+      "minigames": [
+        "spot"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000001ff8000000 000000ffff000000 000003ffffc00000 00000ffffff00000 00001ffffff80000 00003ffffffc0000 00007ffffffe0000 0000ffffffff0000 0000ffffffff0000 0001ffffffff8000 0001ffffffff8000 0001ffffffff8000 0001ffffffff8000 0001ffffffff8000 0001ffffffff8000 0000ffffffff0000 0000ffffffff0000 00007ffffffe0000 00003ffffffc0000 00001ffffff80000 00000ffffff00000 000003ffffe00000 000003ffffe00000 000003ffffe00000 000003ffffe00000 000003fffff00000 000003fffff00000 000003fffff00000 000003fffff00000 000007fffff80000 000007fffff80000 000007fffff80000 000007fffff80000 000007fffff80000 000007fffffc0000 000007fffffc0000 00000ffffffc0000 00000ffffffc0000 00000ffffffe0000 00000ffffffe0000 00000fffdffe0000 00000fffdffe0000 00000fffdffe0000 00001fffdfff0000 00001fffdfff0000 00001fff8ffe0000 00000fff8ff90000 00000bff87150000 00000aaf85550000 00000aab05550000 00000aaa05550000 0000022a05500000 0000002201000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "brief": "模板 clothing.scarf：衣物。只做找不同（空图时部位表键是 proc:scarf）。衣物不称、不吹、不拼。第 1–3 天教学若抽到衣物，找不同可用。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.documents.field",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "documents.field",
+      "minigames": [
+        "spot",
+        "fragments"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000000000000 03ffffffffffc000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffff80 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffff80 07ffffffffffe000 03ffffffffffc000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "fragments": {
+        "doc": "scroll",
+        "pieces": [
+          3,
+          6
+        ],
+        "seal_offset_px_good": [
+          0,
+          0
+        ],
+        "seal_offset_px_bad": [
+          0,
+          2
+        ],
+        "ink_mismatch_bad": [
+          0,
+          2
+        ],
+        "dangzi_marks": 0,
+        "missing_piece": -1,
+        "stain_permille": 500,
+        "rotate": 0
+      },
+      "brief": "模板 documents.field：地契一类文书。拼碎片（doc=scroll）并找不同。seal_offset_px、ink_mismatch 只给引擎抽物理量。不是当票，dangzi_marks=0。鉴定改版：真货 seal_offset_px_good 恒 0；坏货 seal_offset_px_bad，取到 0、1 按对得上算；ink_mismatch_bad 是坏货里异纸几块（引擎保证坏货至少一样证据）；stain_permille 水渍真假一样；pieces 最多 6；rotate 1 = 散开时转着（字画）、0 = 不转。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.documents.house",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "documents.house",
+      "minigames": [
+        "spot",
+        "fragments"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000000000000 03ffffffffffc000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffff80 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffff80 07ffffffffffe000 03ffffffffffc000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "fragments": {
+        "doc": "scroll",
+        "pieces": [
+          3,
+          6
+        ],
+        "seal_offset_px_good": [
+          0,
+          0
+        ],
+        "seal_offset_px_bad": [
+          0,
+          2
+        ],
+        "ink_mismatch_bad": [
+          0,
+          2
+        ],
+        "dangzi_marks": 0,
+        "missing_piece": -1,
+        "stain_permille": 500,
+        "rotate": 0
+      },
+      "brief": "模板 documents.house：房契一类文书。拼碎片（doc=scroll）并找不同。seal_offset_px、ink_mismatch 只给引擎抽物理量。不是当票，dangzi_marks=0。鉴定改版：真货 seal_offset_px_good 恒 0；坏货 seal_offset_px_bad，取到 0、1 按对得上算；ink_mismatch_bad 是坏货里异纸几块（引擎保证坏货至少一样证据）；stain_permille 水渍真假一样；pieces 最多 6；rotate 1 = 散开时转着（字画）、0 = 不转。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.documents.letter",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "documents.letter",
+      "minigames": [
+        "spot",
+        "fragments"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000000000000 03ffffffffffc000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffe000 07ffffffffffff80 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffffc0 07ffffffffffff80 07ffffffffffe000 03ffffffffffc000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "fragments": {
+        "doc": "letter",
+        "pieces": [
+          3,
+          5
+        ],
+        "seal_offset_px_good": [
+          0,
+          0
+        ],
+        "seal_offset_px_bad": [
+          0,
+          2
+        ],
+        "ink_mismatch_bad": [
+          0,
+          2
+        ],
+        "dangzi_marks": 0,
+        "missing_piece": -1,
+        "stain_permille": 500,
+        "rotate": 0
+      },
+      "brief": "模板 documents.letter：书札。拼碎片（doc=letter）并找不同。seal_offset_px、ink_mismatch 只给引擎抽物理量。不是当票，dangzi_marks=0。鉴定改版：真货 seal_offset_px_good 恒 0；坏货 seal_offset_px_bad，取到 0、1 按对得上算；ink_mismatch_bad 是坏货里异纸几块（引擎保证坏货至少一样证据）；stain_permille 水渍真假一样；pieces 最多 6；rotate 1 = 散开时转着（字画）、0 = 不转。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.documents.receipt",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "documents.receipt",
+      "minigames": [
+        "spot",
+        "fragments"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 00fffffffffffc00 01fffffffffffe00 01fffffffffffe00 01ffffffffffff80 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 00ffffffffffffc0 00ffffffffffffc0 007fffffffffffc0 001fffffffffff80 0000000000000000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "fragments": {
+        "doc": "pawn_ticket",
+        "pieces": [
+          4,
+          6
+        ],
+        "seal_offset_px_good": [
+          0,
+          0
+        ],
+        "seal_offset_px_bad": [
+          0,
+          2
+        ],
+        "ink_mismatch_bad": [
+          0,
+          2
+        ],
+        "dangzi_marks": [
+          1,
+          4
+        ],
+        "missing_piece": -1,
+        "stain_permille": 500,
+        "rotate": 0
+      },
+      "brief": "模板 documents.receipt：当票。主线 tk.1938.de196 的 item_template 指向这一件。拼碎片（doc=pawn_ticket）并找不同。seal_offset_px、ink_mismatch 只给引擎抽物理量。dangzi_marks 是当字笔画处数的区间。鉴定改版：真货 seal_offset_px_good 恒 0；坏货 seal_offset_px_bad，取到 0、1 按对得上算；ink_mismatch_bad 是坏货里异纸几块（引擎保证坏货至少一样证据）；stain_permille 水渍真假一样；pieces 最多 6；rotate 1 = 散开时转着（字画）、0 = 不转。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.goldbar.bar_one",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "goldbar.bar_one",
+      "minigames": [
+        "weigh"
+      ],
+      "weigh": {
+        "tool": "dengzi",
+        "claimed_fen": [
+          96,
+          104
+        ],
+        "dev_bad_pct": [
+          3,
+          8
+        ],
+        "dev_worn_pct": [
+          0,
+          1
+        ],
+        "small_fen": 3
+      },
+      "brief": "模板 goldbar.bar_one：约一两的金条。1 两=100 分，客人报称在 96–104 分。 掺铜或空心时偏轻，dev_bad_pct 百分之 3 到 8。金条用戥子，不吹、不找不同（新图没有部位表）。base_price 沿用旧模板的压缩刻度，不是 1938 年金银比价，等 G04 平衡。鉴定改版：small_fen 是这一类“轻一点点”的上限（分）；weight_box 选砝码套。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.goldbar.bar_ten",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "goldbar.bar_ten",
+      "minigames": [
+        "weigh"
+      ],
+      "weigh": {
+        "tool": "dengzi",
+        "claimed_fen": [
+          980,
+          1020
+        ],
+        "dev_bad_pct": [
+          2,
+          6
+        ],
+        "dev_worn_pct": [
+          0,
+          1
+        ],
+        "small_fen": 20,
+        "weight_box": "dengzi_heavy",
+        "resolution_fen": 2
+      },
+      "brief": "模板 goldbar.bar_ten：约十两的金条（江南私藏常见的一条规格）。客人报称在 980–1020 分。 掺铜或空心时偏轻，dev_bad_pct 百分之 2 到 6。金条用戥子，不吹、不找不同（新图没有部位表）。base_price 沿用旧模板的压缩刻度，不是 1938 年金银比价，等 G04 平衡。鉴定改版：small_fen 是这一类“轻一点点”的上限（分）；weight_box 选砝码套。十两金条的星点每 2 分一格（resolution_fen 2，C14 10-25 建议：手上好拨）。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.jewelry.bangle",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "jewelry.bangle",
+      "minigames": [
+        "spot",
+        "weigh"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000003ffc000000 000007ffffe00000 00003ffffffc0000 0000ffffffff0000 0003ffffffffc000 0007ffffffffe000 001ffffffffff800 003fffc003fffc00 007ffc00003ffe00 00ffe0000007ff00 01ffc0000003ff80 03ff00000000ffc0 03fe000000007fc0 07fe000000007fe0 07fc000000003fe0 07fc000000003fe0 0ff8000000001ff0 0ff0000000000ff0 0ff8000000001ff0 0ff8000000001ff0 0ffc000000003ff0 0ffe000000007ff0 07ff80000001ffe0 07ffe0000007ffe0 07fff800001fffe0 03ffffc003ffffc0 03ffffffffffffe0 01ffffffffffffc0 00ffffffffffff00 007ffffffffffe00 003ffffffffffc00 001ffffffffff800 0007ffffffffe000 0003ffffffffc000 0000ffffffff0000 00003ffffffc0000 000007ffffe00000 0000003ffc000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "weigh": {
+        "tool": "dengzi",
+        "claimed_fen": [
+          90,
+          150
+        ],
+        "dev_bad_pct": [
+          3,
+          8
+        ],
+        "dev_worn_pct": [
+          0,
+          2
+        ],
+        "small_fen": 3
+      },
+      "brief": "模板 jewelry.bangle：银饰，不是银元。戥子称（claimed_fen 90–150）并找不同。掺假偏轻百分之 3 到 8。银饰按重，不吹听。依据 DESIGN 附录。鉴定改版：small_fen 是这一类“轻一点点”的上限（分）；weight_box 选砝码套。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.jewelry.hairpin",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "jewelry.hairpin",
+      "minigames": [
+        "spot",
+        "weigh"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000000018000 000000000003fce0 000000000007fff0 000000000007fff8 00000000000ffff8 00000000000ffff8 000000000017fff0 00000000001ffff0 00000000001ffff8 00000000001ffff8 00000000000ffff8 00000000000ffff8 00000000001ffff8 00000000001ffffc 00000000001ffffc 00000000000ffff8 00000000001ffff0 00000000003fffc0 00000000007eef00 0000000000fc0000 0000000001f80000 0000000003f00000 0000000007e00000 000000000fc00000 000000001f800000 000000003f000000 00000000fe000000 00000001fc000000 00000003f8000000 00000007f0000000 00000007e0000000 0000000fc0000000 0000001f80000000 0000003f00000000 0000007e00000000 000000fc00000000 000001f800000000 000003f000000000 000007e000000000 00000fc000000000 00001f8000000000 00003f0000000000 00007e0000000000 0000fc0000000000 0001f80000000000 0003f00000000000 0007e00000000000 000fc00000000000 001f800000000000 003f000000000000 007e000000000000 00fc000000000000 01f8000000000000 03f0000000000000 07e0000000000000 07c0000000000000 0f80000000000000 1f00000000000000 3c00000000000000 3000000000000000 0000000000000000 0000000000000000"
+      },
+      "weigh": {
+        "tool": "dengzi",
+        "claimed_fen": [
+          280,
+          320
+        ],
+        "dev_bad_pct": [
+          3,
+          8
+        ],
+        "dev_worn_pct": [
+          0,
+          2
+        ],
+        "small_fen": 10
+      },
+      "brief": "模板 jewelry.hairpin：金饰。戥子称（claimed_fen 280–320，约 2.8–3.2 两）或找不同。掺假偏轻百分之 3 到 8，旧损百分之 0 到 2。金饰用戥子，不按银元吹。第 1 天教学找不同用这一件（W0 夹具已生成过它的部位）。依据 DESIGN 附录。鉴定改版：small_fen 是这一类“轻一点点”的上限（分）；weight_box 选砝码套。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.jewelry.jade",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "jewelry.jade",
+      "minigames": [
+        "spot"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000380000000 00000007c0000000 0000000fe0000000 0000001c70000000 0000001c70000000 0000000ee0000000 0000000ee0000000 00000007c0000000 00000007c0000000 0000000fe0000000 0000000fe0000000 000003ffff800000 00000fffffe00000 00003ffffff80000 00007ffffffc0000 0000fffffffe0000 0003fffc7fff8000 0007ffffffffc000 000fffffffffe000 000fffffffffe000 001ffffffffff000 003ffffffffff800 007ffffffffffc00 007ffffffffffc00 00fffffffffffe00 00fffffffffffe00 01ffffffffffff00 01ffffffffffff00 01ffffffffffff00 01fffff01fffff00 03ffffe00fffff80 03ffffc007ffff80 03ffffc007ffff80 03ffff8003ffff80 03ffff8003ffff80 03ffff8003ffff80 03ffffc007ffff80 03ffffc007ffff80 03ffffe00fffff80 01fffff01fffff00 01fffffc7fffff00 01ffffffffffff00 01ffffffffffff00 00fffffffffffe00 00fffffffffffe00 00fffffffffffe00 007ffffffffffc00 003ffffffffffc00 003ffffffffff800 001ffffffffff000 000fffffffffe000 000fffffffffe000 0003ffffffff8000 0001ffffffff0000 0000fffffffe0000 00007ffffffc0000 00001ffffff80000 000007ffffe00000 000001ffff800000 0000001ff0000000 0000000000000000 0000000000000000"
+      },
+      "brief": "模板 jewelry.jade：玉件。只找不同。玉不按重量做鉴定，也不吹听。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.jewelry.ring",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "jewelry.ring",
+      "minigames": [
+        "spot",
+        "weigh"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000080000000 0000007fff000000 000001ffffc00000 000007fffff00000 00001ffffffc0000 00007fffffff0000 0000ffffffff8000 0001ffffffffc000 0003ffffffffe000 0007fffffffff000 000ffffffffff800 001ffffffffffc00 001ffffffffffc00 003ffffffffffe00 003ffffffffffe00 007fffffffffff00 007fffffffffff00 00ffffffffffff80 00ffffffffffff80 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 03ffffffffffffe0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 01ffffffffffffc0 00ffffffffffff80 00ffffffffffff80 007fffffffffff00 007fffffffffff00 003ffffffffffe00 003ffffffffffe00 001ffffffffffc00 001ffffffffffc00 000ffffffffff800 0007fffffffff000 0003ffffffffe000 0001ffffffffc000 0000ffffffff8000 00007fffffff0000 00001ffffffc0000 000007fffff00000 000001ffffc00000 0000007fff000000 0000000080000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "weigh": {
+        "tool": "dengzi",
+        "claimed_fen": [
+          25,
+          60
+        ],
+        "dev_bad_pct": [
+          3,
+          10
+        ],
+        "dev_worn_pct": [
+          0,
+          2
+        ],
+        "small_fen": 2
+      },
+      "brief": "模板 jewelry.ring：小件银饰。戥子称（claimed_fen 25–60）并找不同。不是银元，不吹听。鉴定改版：small_fen 是这一类“轻一点点”的上限（分）；weight_box 选砝码套。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.medicine.aspirin",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "medicine.aspirin",
+      "minigames": [
+        "spot",
+        "weigh"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000ffffffe00000 0001fffffff00000 0001fffffff00000 0001fffffff00000 0001fffffff00000 0001fffffff00000 0001fffffff00000 0003fffffff80000 0007fffffffc0000 0007fffffffc0000 0007fffffffc0000 0007fffffffc0000 0007fffffffc0000 0007fffffffc0000 0007fffffffc0000 0007fffffffc0000 0007fffffffc0000 0007fffffffc0000 0007fffffffc0000 0007fffffffc0000 0007fffffffc0000 0007fffffffc0000 0007fffffffc0000 0007fffffffc0000 0007fffffffc0800 0007fffffffc7f00 0007fffffffcff80 0007fffffffdffc0 0007fffffffdffc0 0007fffffffdffc0 0007ffffffffffe0 0007fffffffdffc0 0007fffffffdffc0 0003fffffff9ffc0 0001fffffff0ff80 0000ffffffe07f00 00007fffffc00800 00000ffffe000000 0000000400000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "weigh": {
+        "tool": "dengzi",
+        "claimed_fen": [
+          80,
+          140
+        ],
+        "dev_bad_pct": [
+          4,
+          12
+        ],
+        "dev_worn_pct": [
+          0,
+          2
+        ],
+        "small_fen": 5
+      },
+      "brief": "模板 medicine.aspirin：药材或成药。戥子称（claimed_fen 80–140）并找不同。短称、掺淡时偏轻，dev_bad_pct 百分之 4 到 12。药材用戥子，不用杆秤。依据 DESIGN 附录。鉴定改版：small_fen 是这一类“轻一点点”的上限（分）；weight_box 选砝码套。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.medicine.iodine",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "medicine.iodine",
+      "minigames": [
+        "spot",
+        "weigh"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000007ffc000000 000000fffe000000 000000fffe000000 000000fffe000000 000000fffe000000 0000007ffc000000 0000007ffc000000 0000007ffc000000 0000007ffc000000 0000007ffc000000 0000003ff8000000 0000003ff8000000 0000003ff8000000 0000003ff8000000 000007ffffc00000 00000fffffe00000 00000fffffe00000 00000fffffe00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00001ffffff00000 00000fffffe00000 00000fffffe00000 000007ffffc00000 000001ffff000000 0000007ffc000000 0000000100000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "weigh": {
+        "tool": "dengzi",
+        "claimed_fen": [
+          40,
+          80
+        ],
+        "dev_bad_pct": [
+          4,
+          12
+        ],
+        "dev_worn_pct": [
+          0,
+          2
+        ],
+        "small_fen": 2
+      },
+      "brief": "模板 medicine.iodine：药材或成药。戥子称（claimed_fen 40–80）并找不同。短称、掺淡时偏轻，dev_bad_pct 百分之 4 到 12。药材用戥子，不用杆秤。依据 DESIGN 附录。鉴定改版：small_fen 是这一类“轻一点点”的上限（分）；weight_box 选砝码套。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.medicine.quinine",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "medicine.quinine",
+      "minigames": [
+        "spot",
+        "weigh"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 00000ffe00000000 00001fff00000000 00001fff00000000 00001fff00000000 00001fff00000000 00001fff00000000 00001fff00000000 00001fff00000000 00001fff00000000 00000ffe00000000 000007fc00000000 000007fc00000000 000007fc00000000 000007fc00000000 0001fffff0000000 0003fffff8000000 0003fffff8000000 0003fffff8000000 0007fffffc000000 000ffffffe000000 000ffffffe000000 000ffffffe000000 000ffffffe000000 000ffffffe000000 000ffffffe000000 000ffffffe000000 000ffffffe000000 000fffffff800000 000fffffffc00000 000fffffffc00000 000fffffffc00000 000fffffff800000 000ffffffe000000 000ffffffe000000 000ffffffe000000 000ffffffe000000 000ffffffe002000 000ffffffe01fc00 000ffffffe03fe00 000ffffffe07ff00 000ffffffe0fff80 000ffffffe0fff80 000ffffffe1fffc0 000ffffffe0fff80 000ffffffe0fff80 0007fffffc07ff00 0003fffff803fe00 0001fffff001fc00 0000ffffe0002000 00003fff80000000 0000004000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "weigh": {
+        "tool": "dengzi",
+        "claimed_fen": [
+          120,
+          200
+        ],
+        "dev_bad_pct": [
+          4,
+          12
+        ],
+        "dev_worn_pct": [
+          0,
+          2
+        ],
+        "small_fen": 8
+      },
+      "brief": "模板 medicine.quinine：药材或成药。戥子称（claimed_fen 120–200）并找不同。短称、掺淡时偏轻，dev_bad_pct 百分之 4 到 12。药材用戥子，不用杆秤。依据 DESIGN 附录。鉴定改版：small_fen 是这一类“轻一点点”的上限（分）；weight_box 选砝码套。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.medicine.sulfa",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "medicine.sulfa",
+      "minigames": [
+        "spot",
+        "weigh"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000100000000 00000fffffe00000 0000fffffffe0000 0003ffffffff8000 0007ffffffffc000 03ffffffffffffc0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 07ffffffffffffe0 03ffffffffffffc0 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "weigh": {
+        "tool": "dengzi",
+        "claimed_fen": [
+          100,
+          180
+        ],
+        "dev_bad_pct": [
+          4,
+          14
+        ],
+        "dev_worn_pct": [
+          0,
+          2
+        ],
+        "small_fen": 7
+      },
+      "brief": "模板 medicine.sulfa：药材或成药。戥子称（claimed_fen 100–180）并找不同。短称、掺淡时偏轻，dev_bad_pct 百分之 4 到 14。药材用戥子，不用杆秤。依据 DESIGN 附录。鉴定改版：small_fen 是这一类“轻一点点”的上限（分）；weight_box 选砝码套。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.papers.iou",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "papers.iou",
+      "minigames": [
+        "fragments"
+      ],
+      "fragments": {
+        "doc": "letter",
+        "pieces": [
+          4,
+          6
+        ],
+        "seal_offset_px_good": [
+          0,
+          0
+        ],
+        "seal_offset_px_bad": [
+          0,
+          2
+        ],
+        "ink_mismatch_bad": [
+          0,
+          2
+        ],
+        "dangzi_marks": 0,
+        "missing_piece": -1,
+        "stain_permille": 500,
+        "rotate": 0
+      },
+      "brief": "模板 papers.iou：借据。doc=letter。 当票与契据之外的零碎文书，放在新类别 papers，不并进已有的 documents。拼碎片。dangzi_marks=0，missing_piece=-1。没有 spot。1938 年铺面常见这类纸。鉴定改版：真货 seal_offset_px_good 恒 0；坏货 seal_offset_px_bad，取到 0、1 按对得上算；ink_mismatch_bad 是坏货里异纸几块（引擎保证坏货至少一样证据）；stain_permille 水渍真假一样；pieces 最多 6；rotate 1 = 散开时转着（字画）、0 = 不转。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.papers.shop_slip",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "papers.shop_slip",
+      "minigames": [
+        "fragments"
+      ],
+      "fragments": {
+        "doc": "letter",
+        "pieces": [
+          3,
+          5
+        ],
+        "seal_offset_px_good": [
+          0,
+          0
+        ],
+        "seal_offset_px_bad": [
+          0,
+          2
+        ],
+        "ink_mismatch_bad": [
+          0,
+          1
+        ],
+        "dangzi_marks": 0,
+        "missing_piece": -1,
+        "stain_permille": 500,
+        "rotate": 0
+      },
+      "brief": "模板 papers.shop_slip：商号条子。doc=letter。 当票与契据之外的零碎文书，放在新类别 papers，不并进已有的 documents。拼碎片。dangzi_marks=0，missing_piece=-1。没有 spot。1938 年铺面常见这类纸。鉴定改版：真货 seal_offset_px_good 恒 0；坏货 seal_offset_px_bad，取到 0、1 按对得上算；ink_mismatch_bad 是坏货里异纸几块（引擎保证坏货至少一样证据）；stain_permille 水渍真假一样；pieces 最多 6；rotate 1 = 散开时转着（字画）、0 = 不转。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.papers.tax_slip",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "papers.tax_slip",
+      "minigames": [
+        "fragments"
+      ],
+      "fragments": {
+        "doc": "letter",
+        "pieces": [
+          3,
+          5
+        ],
+        "seal_offset_px_good": [
+          0,
+          0
+        ],
+        "seal_offset_px_bad": [
+          0,
+          2
+        ],
+        "ink_mismatch_bad": [
+          0,
+          2
+        ],
+        "dangzi_marks": 0,
+        "missing_piece": -1,
+        "stain_permille": 500,
+        "rotate": 0
+      },
+      "brief": "模板 papers.tax_slip：税捐单据。doc=letter。 当票与契据之外的零碎文书，放在新类别 papers，不并进已有的 documents。拼碎片。dangzi_marks=0，missing_piece=-1。没有 spot。1938 年铺面常见这类纸。鉴定改版：真货 seal_offset_px_good 恒 0；坏货 seal_offset_px_bad，取到 0、1 按对得上算；ink_mismatch_bad 是坏货里异纸几块（引擎保证坏货至少一样证据）；stain_permille 水渍真假一样；pieces 最多 6；rotate 1 = 散开时转着（字画）、0 = 不转。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.papers.waybill",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "papers.waybill",
+      "minigames": [
+        "fragments"
+      ],
+      "fragments": {
+        "doc": "scroll",
+        "pieces": [
+          3,
+          6
+        ],
+        "seal_offset_px_good": [
+          0,
+          0
+        ],
+        "seal_offset_px_bad": [
+          0,
+          2
+        ],
+        "ink_mismatch_bad": [
+          0,
+          2
+        ],
+        "dangzi_marks": 0,
+        "missing_piece": -1,
+        "stain_permille": 500,
+        "rotate": 0
+      },
+      "brief": "模板 papers.waybill：货单。doc=scroll。 当票与契据之外的零碎文书，放在新类别 papers，不并进已有的 documents。拼碎片。dangzi_marks=0，missing_piece=-1。没有 spot。1938 年铺面常见这类纸。鉴定改版：真货 seal_offset_px_good 恒 0；坏货 seal_offset_px_bad，取到 0、1 按对得上算；ink_mismatch_bad 是坏货里异纸几块（引擎保证坏货至少一样证据）；stain_permille 水渍真假一样；pieces 最多 6；rotate 1 = 散开时转着（字画）、0 = 不转。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.rice.broken",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "rice.broken",
+      "minigames": [
+        "spot",
+        "weigh"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 000001ffffc00000 000003ffffe00000 000003ffffe00000 000007fffff00000 000007fffff00000 00000ffffff80000 00000ffffff80000 00001ffffffc0000 00001ffffffc0000 00003ffffffe0000 00003ffffffe0000 00007fffffff0000 0000ffffffff8000 0000ffffffff8000 0001ffffffffc000 0001ffffffffc000 0003ffffffffe000 0007fffffffff000 0007fffffffff000 000ffffffffff800 001ffffffffffc00 001ffffffffffc00 003ffffffffffe00 003ffffffffffe00 003ffffffffffe00 003ffffffffffe00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 00ffffffffffff80 00ffffffffffff80 00ffffffffffff80 00ffffffffffff80 007fffffffffff00 007fffffffffff00 003ffffffffffe00 007fffffffffff00 00ffffffffffff80 01ffffffffffffc0 03ffffffffffffe0 07fffffffffffff0 07fffffffffffff8 0ffffffffffffff8 07fffffffffffff0 07fffffffffffff0 03ffffffffffffe0 01ffffffffffffc0 00ffffffffffff80 003ffffffffffe00 000ffffffffff800 0000ffffffff8000 00000ffffff80000 0000000080000000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "weigh": {
+        "tool": "steelyard",
+        "claimed_fen": [
+          4800,
+          7200
+        ],
+        "dev_bad_pct": [
+          -14,
+          -4
+        ],
+        "dev_worn_pct": [
+          0,
+          3
+        ],
+        "small_fen": 220,
+        "weight_box": "steelyard",
+        "resolution_fen": 10
+      },
+      "brief": "模板 rice.broken：米袋。杆秤称分量，并按袋图找不同。claimed_fen 4800–7200（分；1 斤=1600 分）。掺砂使袋偏重，dev_bad_pct 取负的百分数；陈化偏差用 dev_worn_pct。米走杆秤，不走戥子，也不当银元吹。依据 DESIGN 附录。鉴定改版：small_fen 是这一类“轻一点点”的上限（分）；weight_box 选砝码套。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.rice.jing",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "rice.jing",
+      "minigames": [
+        "spot",
+        "weigh"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 000001ffffc00000 000003ffffe00000 000003ffffe00000 000007fffff00000 000007fffff00000 00000ffffff80000 00000ffffff80000 00001ffffffc0000 00001ffffffc0000 00003ffffffe0000 00003ffffffe0000 00007fffffff0000 0000ffffffff8000 0000ffffffff8000 0001ffffffffc000 0001ffffffffc000 0003ffffffffe000 0007fffffffff000 0007fffffffff000 000ffffffffff800 001ffffffffffc00 001ffffffffffc00 003ffffffffffe00 003ffffffffffe00 003ffffffffffe00 003ffffffffffe00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 00ffffffffffff80 00ffffffffffff80 00ffffffffffff80 00ffffffffffff80 007fffffffffff00 007fffffffffff00 003ffffffffffe00 007fffffffffff00 00ffffffffffff80 01ffffffffffffc0 03ffffffffffffe0 07fffffffffffff0 07fffffffffffff0 0ffffffffffffff8 07fffffffffffff0 07fffffffffffff0 03ffffffffffffe0 01ffffffffffffc0 00ffffffffffff80 003ffffffffffe00 000ffffffffff800 0000ffffffff8000 00000ffffff80000 0000000080000000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "weigh": {
+        "tool": "steelyard",
+        "claimed_fen": [
+          4800,
+          6400
+        ],
+        "dev_bad_pct": [
+          -12,
+          -3
+        ],
+        "dev_worn_pct": [
+          0,
+          2
+        ],
+        "small_fen": 160,
+        "weight_box": "steelyard",
+        "resolution_fen": 10
+      },
+      "brief": "模板 rice.jing：米袋。杆秤称分量，并按袋图找不同。claimed_fen 4800–6400（分；1 斤=1600 分）。掺砂使袋偏重，dev_bad_pct 取负的百分数；陈化偏差用 dev_worn_pct。米走杆秤，不走戥子，也不当银元吹。依据 DESIGN 附录。鉴定改版：small_fen 是这一类“轻一点点”的上限（分）；weight_box 选砝码套。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.rice.nuo",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "rice.nuo",
+      "minigames": [
+        "spot",
+        "weigh"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 000001ffffc00000 000003ffffe00000 000003ffffe00000 000007fffff00000 000007fffff00000 00000ffffff80000 00000ffffff80000 00001ffffffc0000 00001ffffffc0000 00003ffffffe0000 00003ffffffe0000 00007fffffff0000 0000ffffffff8000 0000ffffffff8000 0001ffffffffc000 0001ffffffffc000 0003ffffffffe000 0007fffffffff000 0007fffffffff000 000ffffffffff800 001ffffffffffc00 001ffffffffffc00 003ffffffffffe00 003ffffffffffe00 003ffffffffffe00 003ffffffffffe00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 00ffffffffffff80 00ffffffffffff80 00ffffffffffff80 00ffffffffffff80 007fffffffffff00 007fffffffffff00 003ffffffffffe00 007fffffffffff80 00ffffffffffffc0 01ffffffffffffc0 03ffffffffffffe0 07fffffffffffff0 07fffffffffffff0 0ffffffffffffff8 07fffffffffffff0 07fffffffffffff0 03ffffffffffffe0 01ffffffffffffc0 00ffffffffffff80 003ffffffffffe00 000ffffffffff800 0000ffffffff8000 00000ffffff80000 0000000080000000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "weigh": {
+        "tool": "steelyard",
+        "claimed_fen": [
+          4200,
+          5800
+        ],
+        "dev_bad_pct": [
+          -10,
+          -2
+        ],
+        "dev_worn_pct": [
+          0,
+          2
+        ],
+        "small_fen": 160,
+        "weight_box": "steelyard",
+        "resolution_fen": 10
+      },
+      "brief": "模板 rice.nuo：米袋。杆秤称分量，并按袋图找不同。claimed_fen 4200–5800（分；1 斤=1600 分）。掺砂使袋偏重，dev_bad_pct 取负的百分数；陈化偏差用 dev_worn_pct。米走杆秤，不走戥子，也不当银元吹。依据 DESIGN 附录。鉴定改版：small_fen 是这一类“轻一点点”的上限（分）；weight_box 选砝码套。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.rice.xian",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "rice.xian",
+      "minigames": [
+        "spot",
+        "weigh"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 000001ffffc00000 000003ffffe00000 000003ffffe00000 000007fffff00000 000007fffff00000 00000ffffff80000 00000ffffff80000 00001ffffffc0000 00001ffffffc0000 00003ffffffe0000 00003ffffffe0000 00007fffffff0000 0000ffffffff8000 0000ffffffff8000 0001ffffffffc000 0001ffffffffc000 0003ffffffffe000 0007fffffffff000 0007fffffffff000 000ffffffffff800 001ffffffffffc00 001ffffffffffc00 003ffffffffffe00 003ffffffffffe00 003ffffffffffe00 003ffffffffffe00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 007fffffffffff00 00ffffffffffff80 00ffffffffffff80 00ffffffffffff80 00ffffffffffff80 007fffffffffff00 007fffffffffff00 003ffffffffffe00 007fffffffffff00 00ffffffffffff80 01ffffffffffffc0 03ffffffffffffe0 07fffffffffffff0 07fffffffffffff8 0ffffffffffffff8 07fffffffffffff0 07fffffffffffff0 03ffffffffffffe0 01ffffffffffffc0 00ffffffffffff80 003ffffffffffe00 000ffffffffff800 0000ffffffff8000 00000ffffff80000 0000000080000000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "weigh": {
+        "tool": "steelyard",
+        "claimed_fen": [
+          4500,
+          6200
+        ],
+        "dev_bad_pct": [
+          -12,
+          -3
+        ],
+        "dev_worn_pct": [
+          0,
+          2
+        ],
+        "small_fen": 160,
+        "weight_box": "steelyard",
+        "resolution_fen": 10
+      },
+      "brief": "模板 rice.xian：米袋。杆秤称分量，并按袋图找不同。claimed_fen 4500–6200（分；1 斤=1600 分）。掺砂使袋偏重，dev_bad_pct 取负的百分数；陈化偏差用 dev_worn_pct。米走杆秤，不走戥子，也不当银元吹。依据 DESIGN 附录。鉴定改版：small_fen 是这一类“轻一点点”的上限（分）；weight_box 选砝码套。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.silver.bits",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "silver.bits",
+      "minigames": [
+        "weigh"
+      ],
+      "weigh": {
+        "tool": "dengzi",
+        "claimed_fen": [
+          40,
+          220
+        ],
+        "dev_bad_pct": [
+          3,
+          10
+        ],
+        "dev_worn_pct": [
+          0,
+          2
+        ],
+        "small_fen": 5
+      },
+      "brief": "模板 silver.bits：碎银，不按枚。戥子称（claimed_fen 40–220）。掺假偏轻百分之 3 到 10。碎银用戥子，不吹听。没有 spot。依据 DESIGN 附录。鉴定改版：small_fen 是这一类“轻一点点”的上限（分）；weight_box 选砝码套。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.silver.yuan_a",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "silver.yuan_a",
+      "minigames": [
+        "coin_ring"
+      ],
+      "coin_ring": {
+        "ring_ms_good": [
+          1200,
+          1600
+        ],
+        "ring_ms_bad": [
+          840,
+          1360
+        ],
+        "buzz_good": [
+          0,
+          15
+        ],
+        "buzz_bad": [
+          4,
+          25
+        ],
+        "pitch_cents_bad": [
+          -82,
+          -52
+        ],
+        "pitch_cents_good": [
+          -8,
+          8
+        ],
+        "stack": [
+          1,
+          1
+        ],
+        "well_made_permille": 450,
+        "worn_permille": 450
+      },
+      "brief": "模板 silver.yuan_a。银元甲种：1914 年后中央铸的人像币一类（版别名由 A 定）。按枚计价，不称。库平铸重约七钱二分，当铺仍按枚。吹边缘贴耳听余音：足银细长，掺铜则短、闷、音高偏低。1935-11 法币改革后依法不得流通，民间私藏。依据 DESIGN 附录。 ring_ms 单位是毫秒，buzz 无量纲，pitch_cents_bad 是音分。只有 coin_ring，没有 weigh，没有 spot（新类别没有部位布局）。鉴定改版：pitch_cents_good 是足银的音高区间；stack 一摞几枚；well_made_permille 是做得好的哑板（余音接近足银下沿，音高照样偏低）的比例；worn_permille 是旧洋（余音短一些但不闷不低）的比例。复审二（10-25）：同一种足银一枚和一枚的声高差得很少（pitch_cents_good 收到正负 8 音分），余音线上和柜上甲那枚一样密；只有哑板的线比甲疏。复审三（10-26）：只有声高说真话。ring_ms_bad、buzz_bad 落在同一种旧洋的长短、毛刺里（不比最短的旧洋短、不比最毛的旧洋毛），做得好的哑板按足银的长短（ring_ms_good × well_made_ring_pct）、足银的毛刺吹，长短毛刺挑不出哑板（旧洋占四成半、做得好的哑板占一半上下，长的短的两边差不多）；pitch_cents_bad 收到足银下面三十音分宽的一条，余音线只比甲疏一成半到三成多，要对着甲看前几个波峰才看得出，不是一眼的事。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.silver.yuan_b",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "silver.yuan_b",
+      "minigames": [
+        "coin_ring"
+      ],
+      "coin_ring": {
+        "ring_ms_good": [
+          1100,
+          1550
+        ],
+        "ring_ms_bad": [
+          770,
+          1315
+        ],
+        "buzz_good": [
+          0,
+          18
+        ],
+        "buzz_bad": [
+          4,
+          28
+        ],
+        "pitch_cents_bad": [
+          -80,
+          -50
+        ],
+        "pitch_cents_good": [
+          -8,
+          8
+        ],
+        "stack": [
+          1,
+          1
+        ],
+        "well_made_permille": 500,
+        "worn_permille": 450
+      },
+      "brief": "模板 silver.yuan_b。银元乙种：1920 年代船图人像币一类（版别名由 A 定）。同样按枚吹听，不称。1935-11 之后民间私藏。依据 DESIGN 附录。 ring_ms 单位是毫秒，buzz 无量纲，pitch_cents_bad 是音分。只有 coin_ring，没有 weigh，没有 spot（新类别没有部位布局）。鉴定改版：pitch_cents_good 是足银的音高区间；stack 一摞几枚；well_made_permille 是做得好的哑板（余音接近足银下沿，音高照样偏低）的比例；worn_permille 是旧洋（余音短一些但不闷不低）的比例。复审二（10-25）：同一种足银一枚和一枚的声高差得很少（pitch_cents_good 收到正负 8 音分），余音线上和柜上甲那枚一样密；只有哑板的线比甲疏。复审三（10-26）：只有声高说真话。ring_ms_bad、buzz_bad 落在同一种旧洋的长短、毛刺里（不比最短的旧洋短、不比最毛的旧洋毛），做得好的哑板按足银的长短（ring_ms_good × well_made_ring_pct）、足银的毛刺吹，长短毛刺挑不出哑板（旧洋占四成半、做得好的哑板占一半上下，长的短的两边差不多）；pitch_cents_bad 收到足银下面三十音分宽的一条，余音线只比甲疏一成半到三成多，要对着甲看前几个波峰才看得出，不是一眼的事。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.silver.yuan_c",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "silver.yuan_c",
+      "minigames": [
+        "coin_ring"
+      ],
+      "coin_ring": {
+        "ring_ms_good": [
+          900,
+          1400
+        ],
+        "ring_ms_bad": [
+          630,
+          1190
+        ],
+        "buzz_good": [
+          0,
+          22
+        ],
+        "buzz_bad": [
+          4,
+          32
+        ],
+        "pitch_cents_bad": [
+          -78,
+          -48
+        ],
+        "pitch_cents_good": [
+          -8,
+          8
+        ],
+        "stack": [
+          1,
+          1
+        ],
+        "well_made_permille": 550,
+        "worn_permille": 450
+      },
+      "brief": "模板 silver.yuan_c。银元丙种：清末各省龙纹币一类（版别名由 A 定）。模具与成色更杂，余音规格比甲种更宽、下限更短。仍按枚吹听，不称。依据 DESIGN 附录。 ring_ms 单位是毫秒，buzz 无量纲，pitch_cents_bad 是音分。只有 coin_ring，没有 weigh，没有 spot（新类别没有部位布局）。鉴定改版：pitch_cents_good 是足银的音高区间；stack 一摞几枚；well_made_permille 是做得好的哑板（余音接近足银下沿，音高照样偏低）的比例；worn_permille 是旧洋（余音短一些但不闷不低）的比例。复审二（10-25）：同一种足银一枚和一枚的声高差得很少（pitch_cents_good 收到正负 8 音分），余音线上和柜上甲那枚一样密；只有哑板的线比甲疏。复审三（10-26）：只有声高说真话。ring_ms_bad、buzz_bad 落在同一种旧洋的长短、毛刺里（不比最短的旧洋短、不比最毛的旧洋毛），做得好的哑板按足银的长短（ring_ms_good × well_made_ring_pct）、足银的毛刺吹，长短毛刺挑不出哑板（旧洋占四成半、做得好的哑板占一半上下，长的短的两边差不多）；pitch_cents_bad 收到足银下面三十音分宽的一条，余音线只比甲疏一成半到三成多，要对着甲看前几个波峰才看得出，不是一眼的事。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.silverware.box",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "silverware.box",
+      "minigames": [
+        "weigh"
+      ],
+      "weigh": {
+        "tool": "dengzi",
+        "claimed_fen": [
+          360,
+          640
+        ],
+        "dev_bad_pct": [
+          3,
+          8
+        ],
+        "dev_worn_pct": [
+          0,
+          2
+        ],
+        "small_fen": 15,
+        "weight_box": "dengzi_heavy"
+      },
+      "brief": "模板 silverware.box：银匣一类。按重用戥子，不吹听。 claimed_fen 360–640。没有 spot。依据 DESIGN 附录：金银用戥子。鉴定改版：small_fen 是这一类“轻一点点”的上限（分）；weight_box 选砝码套。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.silverware.cup",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "silverware.cup",
+      "minigames": [
+        "weigh"
+      ],
+      "weigh": {
+        "tool": "dengzi",
+        "claimed_fen": [
+          200,
+          380
+        ],
+        "dev_bad_pct": [
+          3,
+          8
+        ],
+        "dev_worn_pct": [
+          0,
+          2
+        ],
+        "small_fen": 10
+      },
+      "brief": "模板 silverware.cup：银杯一类。按重用戥子，不吹听（吹听只留给银元）。 claimed_fen 200–380。没有 spot。依据 DESIGN 附录：金银用戥子。鉴定改版：small_fen 是这一类“轻一点点”的上限（分）；weight_box 选砝码套。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.silverware.spoon",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "silverware.spoon",
+      "minigames": [
+        "weigh"
+      ],
+      "weigh": {
+        "tool": "dengzi",
+        "claimed_fen": [
+          30,
+          70
+        ],
+        "dev_bad_pct": [
+          3,
+          8
+        ],
+        "dev_worn_pct": [
+          0,
+          2
+        ],
+        "small_fen": 2
+      },
+      "brief": "模板 silverware.spoon：银匙一类。按重用戥子，不吹听。 claimed_fen 30–70。没有 spot。依据 DESIGN 附录：金银用戥子。鉴定改版：small_fen 是这一类“轻一点点”的上限（分）；weight_box 选砝码套。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.utensils.bowl",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "utensils.bowl",
+      "minigames": [
+        "spot"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0001fff800000000 003fffffc0000000 01fffffff8000000 03fffffffc000000 07fffffffe000000 0fffffffff000000 0fffffffff000000 0fffffffff000000 0fffffffff000000 07fffffffe000000 07fffffffe000000 03fffffffc000000 03fffffffc000000 01fffffff8000000 00fffffffffe0000 007ffffffffff000 003ffffffffffe00 000fffffffffff80 0003ffffffffffc0 0000ffffffffffe0 0000fffffffffff0 00007ffffffffff0 00003ffffffffff0 00003ffffffffff0 00001fffffffffe0 00001fffffffffe0 00001fffffffffe0 00000fffffffffc0 000007ffffffff80 000003ffffffff00 000001fffffffe00 000000fffffffc00 0000007ffffff800 0000003ffffff000 0000000fffffc000 00000003ffff0000 00000000fffe0000 00000000fffe0000 000000007ffc0000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "brief": "模板 utensils.bowl：日用器。只找不同（空图时 proc:bowl）。不是金银，也不是药材，不上戥子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.utensils.clock",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "utensils.clock",
+      "minigames": [
+        "spot"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000001fe0000000 000001fffc000000 000007ffff000000 00001fffffc00000 00003ffffff00000 00007ffffff80000 0000fffffffc0000 0001fffffffe0000 0003ffffffff0000 0003ffffffff0000 0007ffffffff8000 000fffffffff8000 000fffffffffc000 001fffffffffc000 001fffffffffe000 001fffffffffe000 003ffffffffff000 003ffffffffff000 003ffffffffff000 003ffffffffff800 003ffffffffff800 003ffffffffff800 003ffffffffff800 007ffffffffff800 00fffffffffffc00 00fffffffffffe00 00ffffffffffff00 00ffffffffffff00 00ffffffffffff00 01fffffffffffe00 03fffffffffffe00 07fffffffffffe00 0fffffffffffff80 1fffffffffffffc0 1fffffffffffffe0 1fffffffffffffe0 1ffffffffffffff0 1ffffffffffffff0 1ffffffffffffff0 3ffffffffffffff0 3ffffffffffffff0 3ffffffffffffff8 1ffffffffffffffc 1ffffffffffffffc 07fffffffffffffc 03fe000000000ff8 01fc0000000007f0 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "brief": "模板 utensils.clock：日用器。只找不同（空图时 proc:clock）。不是金银，也不是药材，不上戥子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.utensils.tinpot",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "utensils.tinpot",
+      "minigames": [
+        "spot"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000001fc0000000 0000007ff0000000 000000f07c000000 000003800e000000 0000070007000000 00000e0003800000 00001c0001c00000 0000180000c00000 0000300000600000 0000300000600000 0000600f00300000 0000601f80300000 0000601f80300000 0000c3fffc180000 0000cfffff180000 0000dfffff980000 0000ffffffd80000 0000fffffff80000 0000fffffff00000 0c01fffffff80000 1e03fffffffc0000 3f87fffffffe0000 3fc7fffffffe0000 1fefffffffff0000 0fffffffffff0000 07ffffffffff8000 03ffffffffff8000 01ffffffffff8000 00ffffffffff8000 007fffffffff8000 003fffffffff8000 001fffffffff8000 001fffffffff8000 000fffffffff0000 000fffffffff0000 0007fffffffe0000 0007fffffffe0000 0003fffffffc0000 0001fffffff80000 0000fffffff00000 00007ffffff00000 00007ffffff00000 00007ffffff00000 00007ffffff00000 00007ffffff00000 00003fffffe00000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000"
+      },
+      "brief": "模板 utensils.tinpot：日用器。只找不同（空图时 proc:tinpot）。不是金银，也不是药材，不上戥子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "it.utensils.warmer",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "utensils.warmer",
+      "minigames": [
+        "spot"
+      ],
+      "spot": {
+        "opaque": "0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 0000000000000000 00000007f0000000 0000003ffe000000 0000007fff000000 000000ffff800000 000001fc1fc00000 000003e003e00000 000007c081f00000 00000ffffff80000 00003ffffffe0000 0000ffffffff8000 0001ffffffffc000 0003ffffffffe000 0007fffffffff000 000ffffffffff800 0007fffffffff000 0003ffffffffe000 0001ffffffffc000 0003ffffffffe000 0007fffffffff000 0007fffffffff000 000ffffffffff800 001ffffffffffc00 001ffffffffffc00 001ffffffffffc00 001ffffffffffc00 003ffffffffffe00 001ffffffffffc00 001ffffffffffc00 001ffffffffffc00 001ffffffffffc00 000ffffffffff800 0007fffffffff000 0007fffffffff000 0003ffffffffe000 0003ffffffffe000 0001ffffffffc000 0001ffffffffc000 0000ffffffff8000 00007fffffff0000 0000ffffffff8000 0001ffffffffc000 0001ffffffffc000 0000ffffffff8000 0000ffffffff8000 00007fffffff0000 00003ffffffe0000 00001f00807c0000 00000fc001f80000 000007e003f00000"
+      },
+      "brief": "模板 utensils.warmer：日用器。只找不同（空图时 proc:warmer）。不是金银，也不是药材，不上戥子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "d2_sunyoung_real",
+  "npc": "sunyoung",
+  "mode": "pawn",
+  "items": [{"def": "deed_sun_real"}],
+  "ask": 1500,
+  "floor": 600,
+  "suggest": 2700,
+  "est": [4000, 9000],
+  "show_floor": false,
+  "hard_floor": false,
+  "fund_button": false,
+  "min_inspect": 0,
+  "split": false,
+  "hint": "",
+  "pre": [],
+  "intro": [
+    {"op": "narr", "text": "孙少爷冷笑一声，从内袋里抽出另一张地契，啪地拍在柜台上。"},
+    {"op": "say", "who": "sunyoung", "text": "看清楚了，这张才是我家的真契。三十亩田，我爸一句话的事。你们当铺要是出不起价，也别在外头乱嚼舌根。"}
+  ],
+  "on_inspect": {},
+  "extras": [],
+  "deals": [
+    {"id": "cannot_afford", "label": "本钱不够，请回", "when": "cash() < 270", "steps": [
+      {"op": "say", "who": "you", "text": "对不住，铺子本钱不够，这张契实在收不起。您请回。"},
+      {"op": "say", "who": "sunyoung", "text": "哼，穷酸铺子，我另想办法。"},
+      {"op": "set", "flag": "sun_real_pawn", "value": false},
+      {"op": "end", "result": "declined"}
+    ]},
+    {"id": "pass_on_deed", "label": "不做这笔生意，请回", "when": "cash() >= 270", "steps": [
+      {"op": "say", "who": "you", "text": "这笔生意我不做，请回吧。"},
+      {"op": "say", "who": "sunyoung", "text": "哼，早料到你们这种铺子接不住。"},
+      {"op": "set", "flag": "sun_real_pawn", "value": false},
+      {"op": "end", "result": "declined"}
+    ]}
+  ],
+  "on_accept": [
+    {"op": "set", "flag": "sun_real_pawn", "value": true}
+  ],
+  "on_leave": [],
+  "outro": [],
+  "post": []
+}

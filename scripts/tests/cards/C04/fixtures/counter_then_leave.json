@@ -1,0 +1,193 @@
+{
+  "_meta": {
+    "owner": "C04",
+    "schema": 1,
+    "brief": "one counter-offer, then the guest leaves",
+    "_provenance": {
+      "by": "ai",
+      "task": "C04",
+      "date": "2026-10-13"
+    }
+  },
+  "guide_progress": {},
+  "view": {
+    "phase": "day",
+    "mode": "shop",
+    "date": {
+      "abs_day": 1,
+      "stage": 0,
+      "stage_day": 1,
+      "y": 1938,
+      "m": 3,
+      "d": 2,
+      "weekday": 2
+    },
+    "money": {
+      "amount": 340,
+      "currency": "fabi"
+    },
+    "hand": [],
+    "tickets": [],
+    "notice": {
+      "weather": "clear",
+      "news": []
+    }
+  },
+  "queries": {
+    "counter|{\"uid\":\"c0002\"}": {
+      "ok": false,
+      "err": "bad_phase"
+    },
+    "card|{\"uid\":\"c0002\"}": {
+      "uid": "c0002",
+      "def": "p.linsao.1938.pawn_hairpin",
+      "type": "person",
+      "person": "linsao",
+      "intent": "pawn",
+      "art": "portrait.linsao",
+      "panel": "counter",
+      "choices": [],
+      "zone": "hand",
+      "status": "open"
+    },
+    "stock|{}": {
+      "items": []
+    },
+    "tickets|{}": {
+      "tickets": [
+        {
+          "no": 1,
+          "person": "linsao",
+          "item": "I001",
+          "principal": 150,
+          "days_left": 15,
+          "status": "open",
+          "foreign": false
+        }
+      ]
+    }
+  },
+  "responses": [
+    {
+      "cmd": "counter.open",
+      "match": {
+        "uid": "c0002"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "uid": "c0002",
+        "person": "linsao",
+        "intent": "pawn",
+        "item": {
+          "item": "I001",
+          "template": "jewelry.hairpin",
+          "cat": "jewelry",
+          "art": "item.jewelry.hairpin",
+          "condition_word": 2,
+          "observations": [],
+          "on_shelf_since": -1
+        },
+        "asking": 294,
+        "tiers": {
+          "harsh": 161,
+          "fair": 220,
+          "kind": 279
+        },
+        "direction": "pay",
+        "round": 0,
+        "last_reply": "",
+        "last_price": 0,
+        "line_key": "p.linsao.1938.pawn_hairpin#lines.greet",
+        "can_appraise": true,
+        "stock": [],
+        "ticket": null
+      },
+      "events": []
+    },
+    {
+      "cmd": "mg.request",
+      "match": {
+        "uid": "c0002",
+        "item": "I001"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "kind": "spot",
+        "params": {
+          "kind": "spot",
+          "item": "I001"
+        }
+      },
+      "events": []
+    },
+    {
+      "cmd": "counter.offer",
+      "match": {
+        "uid": "c0002",
+        "tier": "fair"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "reply": "counter",
+        "price": 150
+      },
+      "events": [
+        [
+          "card_updated",
+          "c0002"
+        ]
+      ]
+    },
+    {
+      "cmd": "counter.answer",
+      "match": {
+        "uid": "c0002",
+        "accept": true
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "reply": "accept",
+        "price": 0
+      },
+      "events": [
+        [
+          "card_left",
+          "c0002",
+          "left"
+        ]
+      ]
+    },
+    {
+      "cmd": "counter.answer",
+      "match": {
+        "uid": "c0002",
+        "accept": false
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "reply": "leave",
+        "price": 0
+      },
+      "events": [
+        [
+          "card_left",
+          "c0002",
+          "left"
+        ]
+      ]
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "ok": true,
+        "err": ""
+      },
+      "events": []
+    }
+  ]
+}

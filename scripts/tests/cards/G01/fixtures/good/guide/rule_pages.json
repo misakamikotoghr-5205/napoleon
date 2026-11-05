@@ -1,0 +1,70 @@
+{
+  "_meta": {
+    "owner": "K16",
+    "schema": 1,
+    "brief": "例子集：规矩页；正式的在 data/cards/guide/rule_pages.json（K16）"
+  },
+  "cards": [
+    {
+      "id": "rule.day",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 10,
+      "unlock_first": [
+        "deal",
+        "notice",
+        "settle"
+      ],
+      "teacher": "brother",
+      "brief": "（W0 例子）一天怎么过：早上发牌，白天一张张处理，打烊，夜里选一件事，日结。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.person",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 20,
+      "unlock_first": [
+        "person",
+        "choice"
+      ],
+      "teacher": "brother",
+      "brief": "（W0 例子）人物牌：来当、来卖、来买、来赎的上柜台；求助、打听、主线的选一个办法。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "rule.slots",
+      "type": "rule_page",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 40,
+      "unlock_first": [
+        "slots",
+        "coins"
+      ],
+      "teacher": "obj.brother_ledger",
+      "brief": "放格子与掷铜钱：格子标着要什么；人按属性点、钱按数目换铜钱；正面够了就成；有的留着的牌直接算正面。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-14"
+      }
+    }
+  ]
+}

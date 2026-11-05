@@ -1,0 +1,2077 @@
+{
+  "version": 2,
+  "_doc": "由 tools/napoleon/merge_presentation.py 合并三包草稿。第二卷启用名羁绊、留守、部署年龄和离队；第一卷不改变状态。遗物仍保留原稿说明。",
+  "hero": {
+    "bonds": [
+      "italy",
+      "quartermaster",
+      "imperial"
+    ]
+  },
+  "companions": {
+    "baptiste": {
+      "name": "巴蒂斯特中士",
+      "short": "巴蒂斯特",
+      "segments": [
+        "trunk",
+        "conquest",
+        "ocean",
+        "cristo"
+      ],
+      "bonds": [
+        "italy",
+        "quartermaster"
+      ],
+      "battle": {
+        "cls": "engineer",
+        "hp": 14,
+        "atk": 3,
+        "def": 2,
+        "block": 1,
+        "cost": 3,
+        "skill": "fortify",
+        "skill_title": "筑垒（相邻一格放拒马，或把平地筑成胸墙）",
+        "role": "工兵 · 土伦起的老搭档"
+      },
+      "keep": "留守：兵站不会被对手分遣队烧掉。",
+      "relic": "巴蒂斯特的工兵斧（阵亡后：拒马兵力 +4）",
+      "personal": [
+        "ib_baptiste_marie"
+      ],
+      "recruit": [
+        {
+          "seg": "trunk",
+          "scene": "toulon_arrival",
+          "choice": "expose_thieves"
+        },
+        {
+          "seg": "trunk",
+          "scene": "toulon_arrival",
+          "choice": "settle_quietly"
+        },
+        {
+          "seg": "trunk",
+          "scene": "toulon_arrival",
+          "choice": "buy_in_marseille"
+        },
+        {
+          "seg": "ocean",
+          "node": "new_elba:water_forge",
+          "gold": 2
+        }
+      ],
+      "fated": [],
+      "gold": 2,
+      "bonds_by_segment": {
+        "ocean": [
+          "imperial",
+          "scholar"
+        ]
+      },
+      "named_pairs": [
+        {
+          "id": "old_friends",
+          "name": "老相识",
+          "a": "baptiste",
+          "b": "marie",
+          "tiers": {
+            "1": "巴蒂斯特筑的拒马和胸墙旁边，友军每回合回 2。",
+            "2": "一方倒下，另一方攻 +3 直到战斗结束，但不能撤退。",
+            "3": "解锁“莱比锡之后两人成婚”；两人同场时各自命悬一线 +1 枚。"
+          },
+          "segments": [
+            "trunk",
+            "conquest",
+            "ocean"
+          ]
+        }
+      ],
+      "reserve": {
+        "depot_guard": 1
+      }
+    },
+    "corso": {
+      "name": "科尔索",
+      "short": "科尔索",
+      "segments": [
+        "trunk",
+        "conquest",
+        "ocean",
+        "cristo"
+      ],
+      "bonds": [
+        "italy",
+        "quartermaster",
+        "imperial"
+      ],
+      "battle": {
+        "short": "科尔索",
+        "cls": "jager",
+        "hp": 8,
+        "atk": 4,
+        "def": 0,
+        "block": 0,
+        "cost": 3,
+        "skill": "mark_target",
+        "skill_title": "科西嘉的老枪（点名：射程内一个敌人 8 伤）",
+        "role": "猎兵 · 科西嘉神枪手"
+      },
+      "keep": "留守：走私，每章金币 +1、民愤 +1。",
+      "relic": "科西嘉的老枪（阵亡后：猎兵射程 +1）",
+      "recruit": [
+        {
+          "seg": "trunk",
+          "scene": "toulon_arrival",
+          "choice": "expose_thieves"
+        },
+        {
+          "seg": "trunk",
+          "scene": "toulon_arrival",
+          "choice": "settle_quietly"
+        },
+        {
+          "seg": "trunk",
+          "scene": "toulon_arrival",
+          "choice": "buy_in_marseille"
+        },
+        {
+          "seg": "ocean",
+          "node": "new_elba:friday_village",
+          "gold": 2
+        }
+      ],
+      "fated": [],
+      "gold": 2,
+      "bonds_by_segment": {
+        "ocean": [
+          "imperial",
+          "scholar"
+        ]
+      },
+      "reserve": {
+        "chapter_coins": {
+          "gold": 1
+        },
+        "chapter_metrics": {
+          "heat": 1
+        }
+      }
+    },
+    "marie": {
+      "name": "玛丽·朗热",
+      "short": "玛丽",
+      "segments": [
+        "trunk",
+        "conquest",
+        "ocean",
+        "cristo"
+      ],
+      "bonds": [
+        "quartermaster",
+        "family",
+        "shadow"
+      ],
+      "battle": {
+        "short": "玛丽",
+        "cls": "medic",
+        "hp": 10,
+        "atk": 0,
+        "def": 1,
+        "block": 0,
+        "cost": 3,
+        "skill": "mark_target",
+        "skill_title": "暗影密信（点名：面前一个敌人 8 伤）",
+        "role": "军医 · 沙龙密使"
+      },
+      "keep": "留守：每场战斗 +30 法郎。",
+      "relic": "玛丽的酒桶车铃铛（阵亡后：营地休整多回 5 体力）",
+      "personal": [
+        "ev_marie_cantine",
+        "ib_baptiste_marie"
+      ],
+      "note": "远洋段里她是朗伍德的洗衣妇“玛丽·朗热夫人”：同一个人，1815 年以后跟去了圣赫勒拿。",
+      "recruit": [
+        {
+          "seg": "trunk",
+          "scene": "italy_nice",
+          "choice": "pay_marie"
+        },
+        {
+          "seg": "trunk",
+          "scene": "italy_nice",
+          "choice": "voucher_marie"
+        },
+        {
+          "seg": "ocean",
+          "node": "st_helena:company_store",
+          "gold": 2
+        }
+      ],
+      "fated": [],
+      "gold": 2,
+      "bonds_by_segment": {
+        "ocean": [
+          "shadow",
+          "imperial"
+        ]
+      },
+      "named_pairs": [
+        {
+          "id": "old_friends",
+          "name": "老相识",
+          "a": "baptiste",
+          "b": "marie",
+          "tiers": {
+            "1": "巴蒂斯特筑的拒马和胸墙旁边，友军每回合回 2。",
+            "2": "一方倒下，另一方攻 +3 直到战斗结束，但不能撤退。",
+            "3": "解锁“莱比锡之后两人成婚”；两人同场时各自命悬一线 +1 枚。"
+          },
+          "segments": [
+            "trunk",
+            "conquest",
+            "ocean"
+          ]
+        }
+      ],
+      "reserve": {
+        "battle_franc": 30
+      }
+    },
+    "muiron": {
+      "name": "米隆",
+      "short": "米隆",
+      "segments": [
+        "trunk"
+      ],
+      "bonds": [
+        "italy",
+        "staff"
+      ],
+      "battle": {
+        "cls": "line",
+        "hp": 16,
+        "atk": 5,
+        "def": 1,
+        "block": 2,
+        "cost": 5,
+        "skill": "raise_flag",
+        "skill_title": "举旗（本行友军攻 +2，2 回合）",
+        "role": "战列步兵 · 波拿巴的副官"
+      },
+      "keep": "留守：行军手牌上限 +1。",
+      "relic": "米隆的肩章（阵亡后：主角命悬一线 +1 枚）",
+      "personal": [
+        "ev_muiron_letter"
+      ],
+      "pair": "替你挡枪",
+      "fated_coins": -2,
+      "recruit": [
+        {
+          "seg": "trunk",
+          "scene": "italy_nice",
+          "choice": "pay_marie"
+        },
+        {
+          "seg": "trunk",
+          "scene": "italy_nice",
+          "choice": "voucher_marie"
+        },
+        {
+          "seg": "trunk",
+          "scene": "italy_nice",
+          "choice": "expose_contractor"
+        }
+      ],
+      "fated": [
+        {
+          "seg": "trunk",
+          "template": "arcole_dikes"
+        }
+      ],
+      "gold": 2,
+      "named_pairs": [
+        {
+          "id": "shield",
+          "name": "替你挡枪",
+          "a": "muiron",
+          "b": "hero",
+          "adjacent": true,
+          "tiers": {
+            "1": "两人相邻时，猎官对主角的攻击转给米隆。",
+            "2": "两人相邻时，主角第一次倒下时，改为米隆替他倒下，米隆的命悬一线 −1 枚。"
+          },
+          "segments": [
+            "trunk",
+            "conquest",
+            "ocean"
+          ]
+        }
+      ],
+      "reserve": {
+        "march_hand": 1
+      }
+    },
+    "lannes": {
+      "name": "拉纳",
+      "short": "拉纳",
+      "segments": [
+        "trunk",
+        "conquest"
+      ],
+      "bonds": [
+        "italy",
+        "marshal"
+      ],
+      "battle": {
+        "cls": "grenadier",
+        "hp": 20,
+        "atk": 5,
+        "def": 3,
+        "block": 3,
+        "cost": 6,
+        "skill": "bayonet_charge",
+        "skill_title": "刺刀冲锋（挡住的敌人各受 5 伤并被击退）",
+        "role": "掷弹兵 · 勇将"
+      },
+      "keep": "留守：征兵减 1 金。",
+      "relic": "拉纳被打穿的帽子（阵亡后：掷弹兵阻挡 +1）",
+      "note": "史实里拉纳 1809 年死于阿斯佩恩。活着打完阿斯佩恩就算改写宿命：架空度 +1，勋章 +3。",
+      "fated_coins": -2,
+      "recruit": [
+        {
+          "seg": "trunk",
+          "scene": "italy_milan",
+          "choice": "pay_soldiers_first"
+        }
+      ],
+      "fated": [
+        {
+          "seg": "trunk",
+          "template": "aspern"
+        }
+      ],
+      "gold": 2,
+      "named_pairs": [
+        {
+          "id": "rivals",
+          "name": "老对头",
+          "a": "lannes",
+          "b": "murat",
+          "discord": true,
+          "tiers": {
+            "1": "两人同场时都攻 +2；相邻时每回合军心 −1。"
+          },
+          "segments": [
+            "trunk",
+            "conquest",
+            "ocean"
+          ]
+        }
+      ],
+      "reserve": {
+        "recruit_discount": 1
+      }
+    },
+    "murat": {
+      "name": "缪拉",
+      "short": "缪拉",
+      "segments": [
+        "trunk"
+      ],
+      "bonds": [
+        "marshal",
+        "italy"
+      ],
+      "battle": {
+        "cls": "hussar",
+        "hp": 12,
+        "atk": 6,
+        "def": 1,
+        "block": 1,
+        "cost": 4,
+        "skill": "bayonet_charge",
+        "skill_title": "骑兵冲锋（刺刀冲锋：挡住的敌人各受 5 伤并被击退）",
+        "role": "骠骑兵 · 骑兵统领"
+      },
+      "keep": "留守：每章金币 +1。",
+      "relic": "缪拉的金鼻烟壶",
+      "recruit": [
+        {
+          "seg": "trunk",
+          "scene": "italy_milan",
+          "choice": "pocket_the_floor"
+        }
+      ],
+      "fated": [],
+      "gold": 2,
+      "leaves": {
+        "leaves_at_chapter": "collapse",
+        "unless": {
+          "trust_hero": [
+            ">=",
+            3
+          ]
+        },
+        "text": "1814 年回那不勒斯，倒向联军。"
+      },
+      "named_pairs": [
+        {
+          "id": "rivals",
+          "name": "老对头",
+          "a": "lannes",
+          "b": "murat",
+          "discord": true,
+          "tiers": {
+            "1": "两人同场时都攻 +2；相邻时每回合军心 −1。"
+          },
+          "segments": [
+            "trunk",
+            "conquest",
+            "ocean"
+          ]
+        }
+      ],
+      "reserve": {
+        "chapter_coins": {
+          "gold": 1
+        }
+      },
+      "leave_rule": {
+        "segment": "trunk",
+        "chapter": "collapse",
+        "trust_below": 3
+      }
+    },
+    "desaix": {
+      "name": "德塞",
+      "short": "德塞",
+      "segments": [
+        "trunk"
+      ],
+      "bonds": [
+        "marshal"
+      ],
+      "battle": {
+        "cls": "line",
+        "hp": 16,
+        "atk": 5,
+        "def": 2,
+        "block": 2,
+        "cost": 5,
+        "skill": "raise_flag",
+        "skill_title": "号令（举旗：本行友军攻 +2，2 回合）",
+        "role": "战列步兵 · 正直的将军"
+      },
+      "keep": "留守：民愤每章 −3。",
+      "relic": "德塞的怀表",
+      "note": "沃盖拉军议选“替德塞备好回程的马”会写 t_desaix_close：他能在马伦哥上场。活过马伦哥 = 改写宿命，转为常驻。",
+      "fated_coins": -2,
+      "recruit": [
+        {
+          "seg": "trunk",
+          "node": "orient_alps:milan_1800",
+          "gold": 3,
+          "requires": {
+            "flags": [
+              "t_alps"
+            ]
+          }
+        }
+      ],
+      "fated": [
+        {
+          "seg": "trunk",
+          "scene": "alps_marengo"
+        }
+      ],
+      "gold": 2,
+      "reserve": {
+        "chapter_metrics": {
+          "heat": -3
+        }
+      }
+    },
+    "larrey": {
+      "name": "拉雷",
+      "short": "拉雷",
+      "segments": [
+        "trunk",
+        "conquest"
+      ],
+      "bonds": [
+        "guard",
+        "family"
+      ],
+      "battle": {
+        "cls": "medic",
+        "hp": 10,
+        "atk": 0,
+        "def": 1,
+        "block": 0,
+        "cost": 3,
+        "skill": "",
+        "skill_title": "（被动）他在场时，所有伙伴的命悬一线 +1 枚",
+        "role": "军医 · 飞行救护车"
+      },
+      "keep": "留守：每章治好一道伤痕。",
+      "relic": "拉雷的锯子",
+      "recruit": [
+        {
+          "seg": "trunk",
+          "scene": "orient_acre",
+          "choice": "sort_the_sick"
+        }
+      ],
+      "fated": [],
+      "gold": 2,
+      "reserve": {
+        "heal_scars": 1
+      }
+    },
+    "rustam": {
+      "name": "鲁斯塔姆",
+      "short": "鲁斯塔姆",
+      "segments": [
+        "trunk"
+      ],
+      "bonds": [
+        "guard",
+        "staff"
+      ],
+      "battle": {
+        "cls": "hussar",
+        "hp": 11,
+        "atk": 5,
+        "def": 1,
+        "block": 1,
+        "cost": 3,
+        "skill": "",
+        "skill_title": "（被动）与主角相邻时，猎官的攻击先打他",
+        "role": "骠骑兵 · 马穆鲁克护卫"
+      },
+      "keep": "留守：主角命悬一线 +1 枚。",
+      "relic": "马穆鲁克弯刀",
+      "recruit": [
+        {
+          "seg": "trunk",
+          "node": "orient_alps:salheyeh",
+          "gold": 2,
+          "requires": {
+            "flags": [
+              "t_orient"
+            ]
+          }
+        }
+      ],
+      "fated": [],
+      "gold": 2,
+      "leaves": {
+        "leaves_at_chapter": "elba",
+        "text": "1814 年没跟去厄尔巴。"
+      },
+      "reserve": {
+        "hero_fate": 1
+      },
+      "leave_rule": {
+        "segment": "trunk",
+        "chapter": "elba"
+      }
+    },
+    "eble": {
+      "name": "埃布莱",
+      "short": "埃布莱",
+      "segments": [
+        "trunk",
+        "conquest"
+      ],
+      "bonds": [
+        "scholar"
+      ],
+      "battle": {
+        "cls": "engineer",
+        "hp": 14,
+        "atk": 3,
+        "def": 2,
+        "block": 1,
+        "cost": 4,
+        "skill": "fortify",
+        "skill_title": "舟桥（筑垒：放拒马或筑胸墙）",
+        "role": "工兵 · 舟桥兵将军"
+      },
+      "keep": "留守：航程与渡河的连线少用 1 天。",
+      "relic": "埃布莱的锚号本子（鹰飞第五章用得上）",
+      "note": "史实里埃布莱 1812 年 12 月死于柯尼斯堡。活过别列津纳就算改写宿命。",
+      "fated_coins": -2,
+      "recruit": [
+        {
+          "seg": "trunk",
+          "scene": "russia_niemen",
+          "choice": "issue_twenty_days"
+        },
+        {
+          "seg": "trunk",
+          "scene": "russia_niemen",
+          "choice": "keep_half_in_vilna"
+        },
+        {
+          "seg": "trunk",
+          "scene": "russia_niemen",
+          "choice": "requisition_lithuania"
+        }
+      ],
+      "fated": [
+        {
+          "seg": "trunk",
+          "scene": "russia_berezina"
+        }
+      ],
+      "gold": 2,
+      "reserve": {
+        "voyage_days": 1
+      }
+    },
+    "gourgaud": {
+      "name": "古尔戈",
+      "short": "古尔戈",
+      "segments": [
+        "trunk",
+        "conquest",
+        "ocean"
+      ],
+      "bonds": [
+        "staff",
+        "imperial",
+        "island"
+      ],
+      "battle": {
+        "short": "古尔戈",
+        "cls": "grenadier",
+        "hp": 22,
+        "atk": 4,
+        "def": 3,
+        "block": 3,
+        "cost": 6,
+        "skill": "bayonet_charge",
+        "skill_title": "老近卫军方阵（刺刀冲锋：挡住的敌人各受 5 伤并被击退）",
+        "role": "掷弹兵 · 老近卫军将军"
+      },
+      "keep": "留守：来敌提前 1 回合公开。",
+      "relic": "古尔戈的望远镜",
+      "recruit": [
+        {
+          "seg": "trunk",
+          "scene": "russia_niemen",
+          "choice": "issue_twenty_days"
+        },
+        {
+          "seg": "trunk",
+          "scene": "russia_niemen",
+          "choice": "keep_half_in_vilna"
+        },
+        {
+          "seg": "trunk",
+          "scene": "russia_niemen",
+          "choice": "requisition_lithuania"
+        },
+        {
+          "seg": "ocean",
+          "node": "prologue:fouras",
+          "gold": 2
+        }
+      ],
+      "fated": [],
+      "gold": 2,
+      "bonds_by_segment": {
+        "ocean": [
+          "imperial",
+          "island"
+        ]
+      },
+      "reserve": {
+        "forecast": 1
+      }
+    },
+    "pierre": {
+      "name": "小皮埃尔",
+      "short": "皮埃尔",
+      "segments": [
+        "trunk",
+        "conquest",
+        "ocean"
+      ],
+      "bonds": [
+        "quartermaster",
+        "family"
+      ],
+      "battle": {
+        "cls": "drummer",
+        "hp": 8,
+        "atk": 1,
+        "def": 0,
+        "block": 1,
+        "cost": 3,
+        "skill": "raise_flag",
+        "skill_title": "鼓点（举旗：本行友军攻 +2，2 回合）",
+        "role": "鼓手 · 别列津纳的孩子"
+      },
+      "deploy": {
+        "from_chapter": {
+          "conquest": "last_coalition",
+          "ocean": "nautilus"
+        },
+        "text": "太小了。1819 年以前只能留守。"
+      },
+      "keep": "留守：守营，民愤每章 −2。",
+      "relic": "皮埃尔的鼓",
+      "recruit": [
+        {
+          "seg": "trunk",
+          "scene": "russia_berezina",
+          "choice": "take_pierre"
+        },
+        {
+          "seg": "trunk",
+          "scene": "russia_berezina",
+          "choice": "wait_for_stragglers"
+        }
+      ],
+      "fated": [],
+      "gold": 2,
+      "reserve": {
+        "chapter_metrics": {
+          "heat": -2
+        }
+      }
+    },
+    "drouot": {
+      "name": "德鲁奥将军",
+      "short": "德鲁奥",
+      "segments": [
+        "trunk",
+        "conquest"
+      ],
+      "bonds": [
+        "guard",
+        "scholar"
+      ],
+      "battle": {
+        "cls": "artillery",
+        "hp": 9,
+        "atk": 7,
+        "def": 1,
+        "block": 0,
+        "cost": 7,
+        "skill": "mark_target",
+        "skill_title": "近卫炮兵直瞄（点名：射程内一个敌人 8 伤）",
+        "role": "炮兵 · 大军团的贤者"
+      },
+      "keep": "留守：炮兵招募减 1 金。",
+      "relic": "德鲁奥的《圣经》",
+      "recruit": [
+        {
+          "seg": "conquest",
+          "scene": "k_golfe_juan",
+          "choice": "only_gold"
+        },
+        {
+          "seg": "conquest",
+          "scene": "k_golfe_juan",
+          "choice": "buy_mules"
+        },
+        {
+          "seg": "conquest",
+          "scene": "k_golfe_juan",
+          "choice": "pay_cannes"
+        }
+      ],
+      "fated": [],
+      "gold": 2,
+      "reserve": {
+        "artillery_discount": 1
+      }
+    },
+    "cambronne": {
+      "name": "康布罗纳将军",
+      "short": "康布罗纳",
+      "segments": [
+        "trunk",
+        "conquest"
+      ],
+      "bonds": [
+        "guard"
+      ],
+      "battle": {
+        "cls": "grenadier",
+        "hp": 22,
+        "atk": 5,
+        "def": 3,
+        "block": 3,
+        "cost": 6,
+        "skill": "bayonet_charge",
+        "skill_title": "最后的方阵（刺刀冲锋：挡住的敌人各受 5 伤并被击退）",
+        "role": "掷弹兵 · 老近卫军"
+      },
+      "keep": "留守：士气每章 +3。",
+      "relic": "康布罗纳的军刀",
+      "fated_coins": -2,
+      "recruit": [
+        {
+          "seg": "conquest",
+          "scene": "k_golfe_juan",
+          "choice": "only_gold"
+        },
+        {
+          "seg": "conquest",
+          "scene": "k_golfe_juan",
+          "choice": "buy_mules"
+        },
+        {
+          "seg": "conquest",
+          "scene": "k_golfe_juan",
+          "choice": "pay_cannes"
+        }
+      ],
+      "fated": [
+        {
+          "seg": "conquest",
+          "template": "waterloo"
+        }
+      ],
+      "gold": 2,
+      "named_pairs": [
+        {
+          "id": "last_square",
+          "name": "最后的方阵",
+          "a": "cambronne",
+          "b": "ney",
+          "tiers": {
+            "1": "两人同场：主角军心第一次掉到 3 以下时，军心回到 5。",
+            "2": "宿命之地（滑铁卢）对两人不再减铜钱。"
+          },
+          "segments": [
+            "trunk",
+            "conquest",
+            "ocean"
+          ]
+        }
+      ],
+      "reserve": {
+        "chapter_metrics": {
+          "morale": 3
+        }
+      }
+    },
+    "ney": {
+      "name": "内伊元帅",
+      "short": "内伊",
+      "segments": [
+        "conquest"
+      ],
+      "bonds": [
+        "marshal"
+      ],
+      "battle": {
+        "cls": "hussar",
+        "hp": 13,
+        "atk": 6,
+        "def": 1,
+        "block": 1,
+        "cost": 4,
+        "skill": "bayonet_charge",
+        "skill_title": "勇士中的勇士（刺刀冲锋：挡住的敌人各受 5 伤并被击退）",
+        "role": "骠骑兵 · 元帅"
+      },
+      "keep": "留守：无（他不肯留在后方，留守时士气 −2）。",
+      "relic": "内伊的红头发……一缕",
+      "recruit": [
+        {
+          "seg": "conquest",
+          "event": "ev_ney_auxerre",
+          "choice": "take_him_in"
+        },
+        {
+          "seg": "conquest",
+          "event": "ev_ney_auxerre",
+          "choice": "iron_cage"
+        }
+      ],
+      "fated": [],
+      "gold": 2,
+      "leaves": {
+        "reckless": true,
+        "text": "上场时攻 +1，可他倒下的命悬一线 −1 枚：他不肯退。"
+      },
+      "named_pairs": [
+        {
+          "id": "last_square",
+          "name": "最后的方阵",
+          "a": "cambronne",
+          "b": "ney",
+          "tiers": {
+            "1": "两人同场：主角军心第一次掉到 3 以下时，军心回到 5。",
+            "2": "宿命之地（滑铁卢）对两人不再减铜钱。"
+          },
+          "segments": [
+            "trunk",
+            "conquest",
+            "ocean"
+          ]
+        }
+      ],
+      "reserve": {
+        "chapter_metrics": {
+          "morale": -2
+        }
+      },
+      "reckless": {
+        "attack": 1,
+        "fate_coins": -1
+      }
+    },
+    "dantes": {
+      "name": "埃德蒙·唐泰斯",
+      "short": "唐泰斯",
+      "segments": [
+        "conquest",
+        "ocean",
+        "cristo"
+      ],
+      "bonds": [
+        "far_sea",
+        "shadow"
+      ],
+      "battle": {
+        "short": "唐泰斯",
+        "cls": "hussar",
+        "hp": 12,
+        "atk": 6,
+        "def": 1,
+        "block": 1,
+        "cost": 4,
+        "skill": "bayonet_charge",
+        "skill_title": "基督山复仇剑（刺刀冲锋：挡住的敌人各受 5 伤并被击退）",
+        "role": "骠骑兵 · 先锋剑客"
+      },
+      "keep": "留守：每章金币 +1（法老号跑船）。",
+      "relic": "法老号的号旗",
+      "recruit": [
+        {
+          "seg": "conquest",
+          "event": "ev_morrel_petition",
+          "choice": "free_34"
+        },
+        {
+          "seg": "conquest",
+          "event": "ev_morrel_petition",
+          "choice": "free_34_and_27"
+        },
+        {
+          "seg": "cristo",
+          "scene": "c_faria_dies",
+          "choice": "sack_plan"
+        },
+        {
+          "seg": "cristo",
+          "scene": "c_faria_dies",
+          "choice": "medicine_last"
+        },
+        {
+          "seg": "cristo",
+          "scene": "c_faria_dies",
+          "choice": "knife_in_sack"
+        },
+        {
+          "seg": "ocean",
+          "node": "prologue:rochefort",
+          "gold": 2
+        },
+        {
+          "seg": "ocean",
+          "node": "st_helena:company_store",
+          "gold": 2
+        }
+      ],
+      "fated": [
+        {
+          "seg": "cristo",
+          "template": "if_corridors"
+        }
+      ],
+      "gold": 2,
+      "bonds_by_segment": {
+        "ocean": [
+          "far_sea",
+          "shadow"
+        ],
+        "cristo": [
+          "marseille",
+          "count",
+          "shadow"
+        ]
+      },
+      "hooks": [
+        {
+          "seg": "ocean",
+          "when": {
+            "flags": [
+              "t_pharaon_known"
+            ]
+          },
+          "trust": 1
+        },
+        {
+          "seg": "ocean",
+          "when": {
+            "flags": [
+              "t_dantes_letter"
+            ]
+          },
+          "trust": 1
+        }
+      ],
+      "available_from": {
+        "seg": "cristo",
+        "template": "if_corridors",
+        "turn": 9
+      },
+      "named_pairs": [
+        {
+          "id": "two_numbers",
+          "name": "34 号和 27 号",
+          "a": "dantes",
+          "b": "faria",
+          "tiers": {
+            "1": "两人同场：法利亚的筑垒每次多放一格。",
+            "2": "唐泰斯的冲锋打死敌人时，返还 1 军令点。",
+            "3": "解锁“斯帕达的另一半信”（伊夫堡段的宝藏线在鹰飞里的回声）。"
+          },
+          "segments": [
+            "trunk",
+            "conquest",
+            "ocean"
+          ]
+        },
+        {
+          "id": "master_pupil",
+          "name": "师徒",
+          "a": "dantes",
+          "b": "faria",
+          "tiers": {
+            "1": "同场时法利亚的筑垒每次多放 1 个拒马。",
+            "2": "法利亚相邻时唐泰斯攻 +2。",
+            "3": "法利亚命悬一线 +1 枚；唐泰斯的冲锋不会停在泥地和瓦砾上。"
+          },
+          "segments": [
+            "cristo"
+          ]
+        },
+        {
+          "id": "wait_and_hope",
+          "name": "等待与希望",
+          "a": "dantes",
+          "b": "haydee",
+          "tiers": {
+            "1": "海黛在场时唐泰斯每回合回 2。",
+            "2": "唐泰斯倒下时，海黛的举旗立刻充满。",
+            "3": "解锁结局“等待与希望”的最后一段。"
+          },
+          "segments": [
+            "cristo"
+          ]
+        },
+        {
+          "id": "old_neighbours",
+          "name": "老邻居",
+          "a": "caderousse",
+          "b": "dantes",
+          "discord": true,
+          "tiers": {
+            "1": "两人同场时卡德鲁斯防 −1。",
+            "2": "发过誓后，卡德鲁斯攻 +2，直到战斗结束。"
+          },
+          "segments": [
+            "cristo"
+          ]
+        }
+      ],
+      "reserve": {
+        "chapter_coins": {
+          "gold": 1
+        }
+      }
+    },
+    "faria": {
+      "name": "法利亚神甫",
+      "short": "法利亚",
+      "segments": [
+        "conquest",
+        "ocean",
+        "cristo"
+      ],
+      "bonds": [
+        "scholar",
+        "shadow"
+      ],
+      "battle": {
+        "short": "法利亚",
+        "cls": "engineer",
+        "hp": 14,
+        "atk": 3,
+        "def": 2,
+        "block": 1,
+        "cost": 3,
+        "skill": "fortify",
+        "skill_title": "伊夫堡的地道（筑垒：放拒马或筑胸墙）",
+        "role": "工兵 · 挖过十四年地道的神甫"
+      },
+      "keep": "留守：每章情报 +1。",
+      "relic": "法利亚的另一半信",
+      "recruit": [
+        {
+          "seg": "conquest",
+          "event": "ev_morrel_petition",
+          "choice": "free_34_and_27"
+        },
+        {
+          "seg": "cristo",
+          "scene": "c_faria_dies",
+          "choice": "medicine_last"
+        },
+        {
+          "seg": "ocean",
+          "node": "prologue:rochefort",
+          "gold": 2
+        },
+        {
+          "seg": "ocean",
+          "node": "st_helena:company_store",
+          "gold": 2
+        }
+      ],
+      "fated": [
+        {
+          "seg": "ocean",
+          "scene": "scene04"
+        },
+        {
+          "seg": "cristo",
+          "template": "monte_cristo_cave"
+        }
+      ],
+      "gold": 2,
+      "bonds_by_segment": {
+        "ocean": [
+          "scholar",
+          "shadow"
+        ],
+        "cristo": [
+          "scholar",
+          "count"
+        ]
+      },
+      "hooks": [
+        {
+          "seg": "ocean",
+          "when": {
+            "flags": [
+              "faria_half_letter"
+            ]
+          },
+          "trust": 1
+        }
+      ],
+      "available_from": {
+        "seg": "cristo",
+        "template": "if_corridors",
+        "turn": 9
+      },
+      "named_pairs": [
+        {
+          "id": "two_numbers",
+          "name": "34 号和 27 号",
+          "a": "dantes",
+          "b": "faria",
+          "tiers": {
+            "1": "两人同场：法利亚的筑垒每次多放一格。",
+            "2": "唐泰斯的冲锋打死敌人时，返还 1 军令点。",
+            "3": "解锁“斯帕达的另一半信”（伊夫堡段的宝藏线在鹰飞里的回声）。"
+          },
+          "segments": [
+            "trunk",
+            "conquest",
+            "ocean"
+          ]
+        },
+        {
+          "id": "master_pupil",
+          "name": "师徒",
+          "a": "dantes",
+          "b": "faria",
+          "tiers": {
+            "1": "同场时法利亚的筑垒每次多放 1 个拒马。",
+            "2": "法利亚相邻时唐泰斯攻 +2。",
+            "3": "法利亚命悬一线 +1 枚；唐泰斯的冲锋不会停在泥地和瓦砾上。"
+          },
+          "segments": [
+            "cristo"
+          ]
+        }
+      ],
+      "reserve": {
+        "chapter_coins": {
+          "intel": 1
+        }
+      }
+    },
+    "caderousse": {
+      "name": "卡德鲁斯",
+      "short": "卡德鲁斯",
+      "segments": [
+        "cristo"
+      ],
+      "bonds": [
+        "marseille"
+      ],
+      "battle": {
+        "short": "卡德鲁斯",
+        "cls": "line",
+        "hp": 14,
+        "atk": 4,
+        "def": 1,
+        "block": 2,
+        "cost": 3,
+        "skill": "raise_flag",
+        "skill_title": "酒馆里的大嗓门（举旗：本行友军攻 +2，2 回合）",
+        "role": "战列步兵 · 胆小的老邻居"
+      },
+      "keep": "留守：每章情报 +1（他什么闲话都听得到）。",
+      "relic": "卡德鲁斯的裁缝剪（阵亡后：本章第一次过路费免掉）",
+      "personal": [
+        "ev_caderousse_wine"
+      ],
+      "recruit": [
+        {
+          "seg": "cristo",
+          "scene": "c_reserve",
+          "choice": "caderousse_home"
+        },
+        {
+          "seg": "cristo",
+          "event": "ev_caderousse_wine",
+          "choice": "hire_him"
+        }
+      ],
+      "fated": [
+        {
+          "seg": "cristo",
+          "template": "auteuil_garden"
+        }
+      ],
+      "gold": 2,
+      "leaves": "信赖 0 时，第四章的钻石事件里他会出卖你（追缉 +20，离队）。原著里他死在贝内代托手里（1838）。",
+      "named_pairs": [
+        {
+          "id": "old_neighbours",
+          "name": "老邻居",
+          "a": "caderousse",
+          "b": "dantes",
+          "discord": true,
+          "tiers": {
+            "1": "两人同场时卡德鲁斯防 −1。",
+            "2": "发过誓后，卡德鲁斯攻 +2，直到战斗结束。"
+          },
+          "segments": [
+            "cristo"
+          ]
+        }
+      ],
+      "reserve": {
+        "chapter_coins": {
+          "intel": 1
+        }
+      },
+      "leave_rule": {
+        "segment": "cristo",
+        "scene": "c_caderousse",
+        "trust_below": 1,
+        "metrics": {
+          "heat": 20
+        }
+      }
+    },
+    "jacopo": {
+      "name": "雅科波",
+      "short": "雅科波",
+      "segments": [
+        "cristo"
+      ],
+      "bonds": [
+        "smugglers",
+        "far_sea"
+      ],
+      "battle": {
+        "short": "雅科波",
+        "cls": "artillery",
+        "hp": 10,
+        "atk": 6,
+        "def": 0,
+        "block": 0,
+        "cost": 6,
+        "skill": "mark_target",
+        "skill_title": "船头回旋炮（标记：对射程内一个敌人 8 伤）",
+        "role": "炮兵 · 走私船的炮手"
+      },
+      "keep": "留守：航程连线少 1 天（最少 1 天）。",
+      "relic": "少年阿梅莉号的缆绳（阵亡后：浅水格我方单位防 +1）",
+      "recruit": [
+        {
+          "seg": "cristo",
+          "scene": "c_morgiou",
+          "choice": "share_fair"
+        },
+        {
+          "seg": "cristo",
+          "scene": "c_morgiou",
+          "choice": "buy_the_boat"
+        }
+      ],
+      "fated": [
+        {
+          "seg": "cristo",
+          "template": "tiboulen_swim"
+        }
+      ],
+      "gold": 2,
+      "reserve": {
+        "voyage_days": 1
+      }
+    },
+    "bertuccio": {
+      "name": "贝尔图乔",
+      "short": "贝尔图乔",
+      "segments": [
+        "cristo"
+      ],
+      "bonds": [
+        "smugglers",
+        "count"
+      ],
+      "battle": {
+        "short": "贝尔图乔",
+        "cls": "engineer",
+        "hp": 14,
+        "atk": 4,
+        "def": 2,
+        "block": 1,
+        "cost": 3,
+        "skill": "fortify",
+        "skill_title": "科西嘉人的门闩（筑垒：放拒马或筑胸墙）",
+        "role": "工兵 · 发过誓的科西嘉人"
+      },
+      "keep": "留守：兵站不会被对手烧掉。",
+      "relic": "缠黑布的刀（阵亡后：本场猎官对主角的攻击 −2）",
+      "recruit": [
+        {
+          "seg": "cristo",
+          "event": "ev_bertuccio_name",
+          "choice": "tell_truth"
+        },
+        {
+          "seg": "cristo",
+          "event": "ev_bertuccio_name",
+          "choice": "lie"
+        }
+      ],
+      "fated": [
+        {
+          "seg": "cristo",
+          "template": "auteuil_garden"
+        }
+      ],
+      "gold": 2,
+      "named_pairs": [
+        {
+          "id": "enemy_name",
+          "name": "仇人的姓",
+          "a": "bertuccio",
+          "b": "hero",
+          "discord": true,
+          "tiers": {
+            "1": "两人同场时贝尔图乔攻 +2；相邻时每回合军心 −1。",
+            "2": "坦白身世后，不再扣军心。",
+            "3": "（奥特伊之夜后）贝尔图乔替主角挡下第一次猎官攻击。"
+          },
+          "segments": [
+            "cristo"
+          ]
+        }
+      ],
+      "reserve": {
+        "depot_guard": 1
+      }
+    },
+    "haydee": {
+      "name": "海黛",
+      "short": "海黛",
+      "segments": [
+        "cristo"
+      ],
+      "bonds": [
+        "orient",
+        "count"
+      ],
+      "battle": {
+        "short": "海黛",
+        "cls": "medic",
+        "hp": 9,
+        "atk": 0,
+        "def": 1,
+        "block": 0,
+        "cost": 3,
+        "skill": "raise_flag",
+        "skill_title": "约阿尼纳的证词（举旗：本行友军攻 +2，2 回合）",
+        "role": "军医 · 总督的女儿"
+      },
+      "keep": "留守：每章卷宗 +10。",
+      "relic": "阿里总督的念珠（阵亡后：贵族院一场的证据自动齐全）",
+      "recruit": [
+        {
+          "seg": "cristo",
+          "event": "ev_haydee_constantinople",
+          "choice": "count_buys"
+        },
+        {
+          "seg": "cristo",
+          "event": "ev_haydee_constantinople",
+          "choice": "fetch_from_marseille"
+        }
+      ],
+      "fated": [
+        {
+          "seg": "cristo",
+          "template": "cristo_final"
+        }
+      ],
+      "gold": 2,
+      "named_pairs": [
+        {
+          "id": "wait_and_hope",
+          "name": "等待与希望",
+          "a": "dantes",
+          "b": "haydee",
+          "tiers": {
+            "1": "海黛在场时唐泰斯每回合回 2。",
+            "2": "唐泰斯倒下时，海黛的举旗立刻充满。",
+            "3": "解锁结局“等待与希望”的最后一段。"
+          },
+          "segments": [
+            "cristo"
+          ]
+        },
+        {
+          "id": "two_children",
+          "name": "两个孩子",
+          "a": "albert",
+          "b": "haydee",
+          "discord": true,
+          "tiers": {
+            "1": "第五章贵族院以后两人不能同场。",
+            "2": "放过梅塞苔丝后，隔阂 解除，同场时两人各攻 +1。"
+          },
+          "segments": [
+            "cristo"
+          ]
+        }
+      ],
+      "reserve": {
+        "chapter_metrics": {
+          "exploration": 10
+        }
+      }
+    },
+    "ali": {
+      "name": "阿里",
+      "short": "阿里",
+      "segments": [
+        "cristo"
+      ],
+      "bonds": [
+        "orient",
+        "count"
+      ],
+      "battle": {
+        "short": "阿里",
+        "cls": "grenadier",
+        "hp": 20,
+        "atk": 5,
+        "def": 3,
+        "block": 3,
+        "cost": 6,
+        "skill": "bayonet_charge",
+        "skill_title": "马索（刺刀冲锋：挡住的敌人各受 5 伤并被击退）",
+        "role": "掷弹兵 · 不说话的努比亚人"
+      },
+      "keep": "留守：每章体力 +4。",
+      "relic": "阿里的马索（阵亡后：骠骑兵冲锋距离 +1）",
+      "recruit": [
+        {
+          "seg": "cristo",
+          "scene": "c_carnival",
+          "choice": "watch_albert"
+        },
+        {
+          "seg": "cristo",
+          "scene": "c_carnival",
+          "choice": "thomson_french"
+        },
+        {
+          "seg": "cristo",
+          "scene": "c_carnival",
+          "choice": "haydee_story"
+        }
+      ],
+      "fated": [
+        {
+          "seg": "cristo",
+          "template": "san_sebastiano"
+        }
+      ],
+      "gold": 2,
+      "reserve": {
+        "chapter_metrics": {
+          "vitality": 4
+        }
+      }
+    },
+    "maximilien": {
+      "name": "马克西米利安·莫雷尔",
+      "short": "马克西米利安",
+      "segments": [
+        "cristo"
+      ],
+      "bonds": [
+        "marseille",
+        "paris"
+      ],
+      "battle": {
+        "short": "马克西米利安",
+        "cls": "hussar",
+        "hp": 12,
+        "atk": 6,
+        "def": 1,
+        "block": 1,
+        "cost": 4,
+        "skill": "bayonet_charge",
+        "skill_title": "北非骑兵的冲锋（刺刀冲锋：挡住的敌人各受 5 伤并被击退）",
+        "role": "骠骑兵 · 北非骑兵上尉"
+      },
+      "keep": "留守：每章人心 +2。",
+      "relic": "法老号的模型（阵亡后：莫雷尔攻 +2）",
+      "recruit": [
+        {
+          "seg": "cristo",
+          "scene": "c_morrel_rescue",
+          "choice": "recruit_maximilien"
+        },
+        {
+          "seg": "cristo",
+          "node": "paris_1838:palais_royal_shop",
+          "gold": 2
+        }
+      ],
+      "fated": [
+        {
+          "seg": "cristo",
+          "template": "cristo_final"
+        }
+      ],
+      "gold": 2,
+      "named_pairs": [
+        {
+          "id": "father_son",
+          "name": "莫雷尔父子",
+          "a": "morel",
+          "b": "maximilien",
+          "tiers": {
+            "1": "同一行时举旗持续 3 回合。",
+            "2": "一方倒下，另一方本场命悬一线 +1 枚。"
+          },
+          "segments": [
+            "cristo"
+          ]
+        }
+      ],
+      "reserve": {
+        "chapter_metrics": {
+          "morale": 2
+        }
+      }
+    },
+    "vampa": {
+      "name": "路易吉·万帕",
+      "short": "万帕",
+      "segments": [
+        "cristo"
+      ],
+      "bonds": [
+        "smugglers"
+      ],
+      "battle": {
+        "short": "万帕",
+        "cls": "jager",
+        "hp": 9,
+        "atk": 5,
+        "def": 0,
+        "block": 0,
+        "cost": 4,
+        "skill": "mark_target",
+        "skill_title": "牧羊人的子弹（标记：对射程内一个敌人 8 伤）",
+        "role": "猎兵 · 罗马城外的强盗头子"
+      },
+      "keep": "留守：过路费一律免掉。",
+      "relic": "万帕的《凯撒战记》（阵亡后：伏兵波次提前 1 回合公开）",
+      "recruit": [
+        {
+          "seg": "cristo",
+          "scene": "c_san_sebastiano",
+          "choice": "vampa_debt"
+        }
+      ],
+      "fated": [
+        {
+          "seg": "cristo",
+          "template": "paris_rooftops"
+        }
+      ],
+      "gold": 2,
+      "reserve": {
+        "toll_free": 1
+      }
+    },
+    "albert": {
+      "name": "阿尔贝·德·莫尔塞夫",
+      "short": "阿尔贝",
+      "segments": [
+        "cristo"
+      ],
+      "bonds": [
+        "paris"
+      ],
+      "battle": {
+        "short": "阿尔贝",
+        "cls": "line",
+        "hp": 13,
+        "atk": 4,
+        "def": 1,
+        "block": 2,
+        "cost": 4,
+        "skill": "raise_flag",
+        "skill_title": "子爵的决斗手套（举旗：本行友军攻 +2，2 回合）",
+        "role": "战列步兵 · 议员的儿子"
+      },
+      "keep": "留守：巴黎每章经费 +300。",
+      "relic": "莫尔塞夫家的纹章（阵亡后：梅尔塞苔丝的请求自动成立）",
+      "recruit": [
+        {
+          "seg": "cristo",
+          "scene": "c_san_sebastiano",
+          "choice": "albert_oath"
+        }
+      ],
+      "fated": [
+        {
+          "seg": "cristo",
+          "template": "cristo_final"
+        }
+      ],
+      "gold": 2,
+      "leaves": "第五章贵族院（c_peers）以后，如果海黛也在名册里，两人不能同场（discord）。",
+      "named_pairs": [
+        {
+          "id": "two_children",
+          "name": "两个孩子",
+          "a": "albert",
+          "b": "haydee",
+          "discord": true,
+          "tiers": {
+            "1": "第五章贵族院以后两人不能同场。",
+            "2": "放过梅塞苔丝后，隔阂 解除，同场时两人各攻 +1。"
+          },
+          "segments": [
+            "cristo"
+          ]
+        }
+      ],
+      "reserve": {
+        "chapter_metrics": {
+          "treasury": 300
+        },
+        "chapters": [
+          "paris_1838"
+        ]
+      }
+    },
+    "friday": {
+      "name": "星期五",
+      "short": "星期五",
+      "segments": [
+        "ocean"
+      ],
+      "battle": {
+        "short": "星期五",
+        "cls": "drummer",
+        "hp": 10,
+        "atk": 2,
+        "def": 0,
+        "block": 1,
+        "cost": 3,
+        "skill": "raise_flag",
+        "skill_title": "荒岛战鼓（举旗：本行友军攻 +2，2 回合）",
+        "role": "鼓手 · 荒岛猎手"
+      },
+      "bonds": [
+        "island",
+        "far_sea"
+      ],
+      "recruit": [
+        {
+          "seg": "ocean",
+          "node": "new_elba:friday_village",
+          "gold": 2
+        }
+      ],
+      "fated": [
+        {
+          "seg": "ocean",
+          "scene": "scene09"
+        }
+      ],
+      "gold": 2,
+      "bonds_by_segment": {
+        "ocean": [
+          "island",
+          "far_sea"
+        ]
+      }
+    },
+    "nemo": {
+      "name": "尼摩",
+      "short": "尼摩",
+      "segments": [
+        "ocean"
+      ],
+      "battle": {
+        "short": "尼摩",
+        "cls": "artillery",
+        "hp": 9,
+        "atk": 7,
+        "def": 0,
+        "block": 0,
+        "cost": 7,
+        "skill": "mark_target",
+        "skill_title": "鹦鹉螺电弧炮（点名：射程内一个敌人 8 伤）",
+        "role": "炮兵 · 鹦鹉螺号船长"
+      },
+      "bonds": [
+        "far_sea",
+        "scholar"
+      ],
+      "recruit": [
+        {
+          "seg": "ocean",
+          "node": "nautilus:new_elba_port",
+          "gold": 3
+        },
+        {
+          "seg": "ocean",
+          "node": "nautilus:rio",
+          "gold": 3
+        }
+      ],
+      "fated": [
+        {
+          "seg": "ocean",
+          "scene": "scene12"
+        }
+      ],
+      "gold": 3,
+      "bonds_by_segment": {
+        "ocean": [
+          "far_sea",
+          "scholar"
+        ]
+      },
+      "hooks": [
+        {
+          "seg": "ocean",
+          "when": {
+            "flags": [
+              "t_mysore_envoy"
+            ]
+          },
+          "gold": -1,
+          "trust": 1,
+          "why": "开罗那个挂虎纹短刀的少年（ARCH §1.2）"
+        }
+      ]
+    },
+    "morel": {
+      "name": "莫雷尔",
+      "short": "莫雷尔",
+      "segments": [
+        "ocean",
+        "cristo"
+      ],
+      "battle": {
+        "short": "莫雷尔",
+        "cls": "line",
+        "hp": 16,
+        "atk": 5,
+        "def": 1,
+        "block": 2,
+        "cost": 5,
+        "skill": "raise_flag",
+        "skill_title": "法老号的号旗（举旗：本行友军攻 +2，2 回合）",
+        "role": "战列步兵 · 法老号船东"
+      },
+      "bonds": [
+        "far_sea",
+        "imperial"
+      ],
+      "recruit": [
+        {
+          "seg": "cristo",
+          "scene": "c_landfall",
+          "choice": "go_reserve"
+        },
+        {
+          "seg": "cristo",
+          "scene": "c_landfall",
+          "choice": "deliver_first"
+        },
+        {
+          "seg": "cristo",
+          "scene": "c_landfall",
+          "choice": "call_on_gerard"
+        },
+        {
+          "seg": "ocean",
+          "node": "st_helena:company_store",
+          "gold": 2
+        },
+        {
+          "seg": "ocean",
+          "node": "nautilus:rio",
+          "gold": 2
+        }
+      ],
+      "fated": [
+        {
+          "seg": "cristo",
+          "template": "marseille_arrest"
+        }
+      ],
+      "gold": 2,
+      "bonds_by_segment": {
+        "ocean": [
+          "far_sea",
+          "imperial"
+        ],
+        "cristo": [
+          "marseille",
+          "far_sea"
+        ]
+      },
+      "hooks": [
+        {
+          "seg": "ocean",
+          "when": {
+            "flags": [
+              "t_pharaon_known"
+            ]
+          },
+          "trust": 1
+        }
+      ],
+      "named_pairs": [
+        {
+          "id": "father_son",
+          "name": "莫雷尔父子",
+          "a": "morel",
+          "b": "maximilien",
+          "tiers": {
+            "1": "同一行时举旗持续 3 回合。",
+            "2": "一方倒下，另一方本场命悬一线 +1 枚。"
+          },
+          "segments": [
+            "cristo"
+          ]
+        }
+      ]
+    }
+  },
+  "pairs": [
+    {
+      "id": "old_friends",
+      "name": "老相识",
+      "a": "baptiste",
+      "b": "marie",
+      "tiers": {
+        "1": "巴蒂斯特筑的拒马和胸墙旁边，友军每回合回 2。",
+        "2": "一方倒下，另一方攻 +3 直到战斗结束，但不能撤退。",
+        "3": "解锁“莱比锡之后两人成婚”；两人同场时各自命悬一线 +1 枚。"
+      },
+      "segments": [
+        "trunk",
+        "conquest",
+        "ocean"
+      ]
+    },
+    {
+      "id": "shield",
+      "name": "替你挡枪",
+      "a": "muiron",
+      "b": "hero",
+      "adjacent": true,
+      "tiers": {
+        "1": "两人相邻时，猎官对主角的攻击转给米隆。",
+        "2": "两人相邻时，主角第一次倒下时，改为米隆替他倒下，米隆的命悬一线 −1 枚。"
+      },
+      "segments": [
+        "trunk",
+        "conquest",
+        "ocean"
+      ]
+    },
+    {
+      "id": "rivals",
+      "name": "老对头",
+      "a": "lannes",
+      "b": "murat",
+      "discord": true,
+      "tiers": {
+        "1": "两人同场时都攻 +2；相邻时每回合军心 −1。"
+      },
+      "segments": [
+        "trunk",
+        "conquest",
+        "ocean"
+      ]
+    },
+    {
+      "id": "last_square",
+      "name": "最后的方阵",
+      "a": "cambronne",
+      "b": "ney",
+      "tiers": {
+        "1": "两人同场：主角军心第一次掉到 3 以下时，军心回到 5。",
+        "2": "宿命之地（滑铁卢）对两人不再减铜钱。"
+      },
+      "segments": [
+        "trunk",
+        "conquest",
+        "ocean"
+      ]
+    },
+    {
+      "id": "two_numbers",
+      "name": "34 号和 27 号",
+      "a": "dantes",
+      "b": "faria",
+      "tiers": {
+        "1": "两人同场：法利亚的筑垒每次多放一格。",
+        "2": "唐泰斯的冲锋打死敌人时，返还 1 军令点。",
+        "3": "解锁“斯帕达的另一半信”（伊夫堡段的宝藏线在鹰飞里的回声）。"
+      },
+      "segments": [
+        "trunk",
+        "conquest",
+        "ocean"
+      ]
+    },
+    {
+      "id": "master_pupil",
+      "name": "师徒",
+      "a": "dantes",
+      "b": "faria",
+      "tiers": {
+        "1": "同场时法利亚的筑垒每次多放 1 个拒马。",
+        "2": "法利亚相邻时唐泰斯攻 +2。",
+        "3": "法利亚命悬一线 +1 枚；唐泰斯的冲锋不会停在泥地和瓦砾上。"
+      },
+      "segments": [
+        "cristo"
+      ]
+    },
+    {
+      "id": "wait_and_hope",
+      "name": "等待与希望",
+      "a": "dantes",
+      "b": "haydee",
+      "tiers": {
+        "1": "海黛在场时唐泰斯每回合回 2。",
+        "2": "唐泰斯倒下时，海黛的举旗立刻充满。",
+        "3": "解锁结局“等待与希望”的最后一段。"
+      },
+      "segments": [
+        "cristo"
+      ]
+    },
+    {
+      "id": "enemy_name",
+      "name": "仇人的姓",
+      "a": "bertuccio",
+      "b": "hero",
+      "discord": true,
+      "tiers": {
+        "1": "两人同场时贝尔图乔攻 +2；相邻时每回合军心 −1。",
+        "2": "坦白身世后，不再扣军心。",
+        "3": "（奥特伊之夜后）贝尔图乔替主角挡下第一次猎官攻击。"
+      },
+      "segments": [
+        "cristo"
+      ]
+    },
+    {
+      "id": "old_neighbours",
+      "name": "老邻居",
+      "a": "caderousse",
+      "b": "dantes",
+      "discord": true,
+      "tiers": {
+        "1": "两人同场时卡德鲁斯防 −1。",
+        "2": "发过誓后，卡德鲁斯攻 +2，直到战斗结束。"
+      },
+      "segments": [
+        "cristo"
+      ]
+    },
+    {
+      "id": "father_son",
+      "name": "莫雷尔父子",
+      "a": "morel",
+      "b": "maximilien",
+      "tiers": {
+        "1": "同一行时举旗持续 3 回合。",
+        "2": "一方倒下，另一方本场命悬一线 +1 枚。"
+      },
+      "segments": [
+        "cristo"
+      ]
+    },
+    {
+      "id": "two_children",
+      "name": "两个孩子",
+      "a": "albert",
+      "b": "haydee",
+      "discord": true,
+      "tiers": {
+        "1": "第五章贵族院以后两人不能同场。",
+        "2": "放过梅塞苔丝后，隔阂 解除，同场时两人各攻 +1。"
+      },
+      "segments": [
+        "cristo"
+      ]
+    }
+  ]
+}

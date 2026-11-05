@@ -1,0 +1,3438 @@
+{
+  "schema": 1,
+  "runs": 2400,
+  "policies": {
+    "fair": {
+      "0": {
+        "pass_rate": {
+          "cleared": 118,
+          "runs": 200,
+          "rate": 0.59
+        },
+        "game_over_reasons": {
+          "prison": 82
+        },
+        "month_money": {
+          "p10": 0,
+          "median": 24,
+          "p90": 51
+        },
+        "rep_tiers": {
+          "0": 4465
+        },
+        "heat_tiers": {
+          "0": 4465
+        },
+        "demands": {
+          "goods:1": {
+            "completed": 0,
+            "delayed": 159,
+            "failed": 119
+          },
+          "info:1": {
+            "completed": 0,
+            "delayed": 149,
+            "failed": 109
+          },
+          "money:0": {
+            "completed": 83,
+            "delayed": 0,
+            "failed": 0
+          },
+          "money:1": {
+            "completed": 11,
+            "delayed": 38,
+            "failed": 4
+          },
+          "people:0": {
+            "completed": 94,
+            "delayed": 0,
+            "failed": 0
+          },
+          "people:1": {
+            "completed": 15,
+            "delayed": 40,
+            "failed": 1
+          }
+        },
+        "mortgaged": {
+          "p10": 0,
+          "median": 5,
+          "p90": 5
+        },
+        "street": {
+          "days": 0,
+          "entered": 118,
+          "recovered": 0,
+          "entered_runs": 118,
+          "rate": 0.59,
+          "recovery_rate": 0.0
+        },
+        "prison": {
+          "arrests": 92,
+          "released": 10,
+          "release_rate": 0.10869565217391304
+        },
+        "big_fate": {
+          "segments": {
+            "bad": 119,
+            "neutral": 130,
+            "good": 95
+          },
+          "spins": 344
+        },
+        "fate": {
+          "bad": 0,
+          "good": 0,
+          "neutral": 1196,
+          "good_rate": 0.0,
+          "bad_rate": 0.0
+        },
+        "hand_counts": {
+          "0": 200,
+          "1": 255,
+          "10": 396,
+          "3": 34,
+          "5": 342,
+          "6": 706,
+          "7": 975,
+          "8": 821,
+          "9": 566,
+          "2": 146,
+          "4": 105,
+          "11": 1
+        },
+        "slot_checks": {
+          "-1": {
+            "success": 0,
+            "total": 896,
+            "rate": 0.0
+          },
+          "-2": {
+            "success": 0,
+            "total": 962,
+            "rate": 0.0
+          },
+          "0": {
+            "success": 48,
+            "total": 208,
+            "rate": 0.23076923076923078
+          },
+          "2": {
+            "success": 424,
+            "total": 616,
+            "rate": 0.6883116883116883
+          },
+          "3": {
+            "success": 1113,
+            "total": 1371,
+            "rate": 0.811816192560175
+          },
+          "1": {
+            "success": 54,
+            "total": 113,
+            "rate": 0.4778761061946903
+          },
+          "-3": {
+            "success": 0,
+            "total": 19,
+            "rate": 0.0
+          }
+        },
+        "lot_accuracy": {
+          "correct": 0,
+          "verified": 0,
+          "rate": null
+        },
+        "almanac": {
+          "actions_followed": 382,
+          "actions_offered": 8930,
+          "followed": 382,
+          "offered": 4465,
+          "rate": 0.08555431131019037
+        },
+        "steps": {
+          "p10": 58,
+          "median": 656,
+          "p90": 798
+        }
+      },
+      "1": {
+        "pass_rate": {
+          "cleared": 116,
+          "runs": 200,
+          "rate": 0.58
+        },
+        "game_over_reasons": {
+          "prison": 2
+        },
+        "month_money": {
+          "p10": 0,
+          "median": 245,
+          "p90": 326
+        },
+        "rep_tiers": {
+          "0": 3481
+        },
+        "heat_tiers": {
+          "0": 3481
+        },
+        "demands": {
+          "info:1": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 31
+          },
+          "money:1": {
+            "completed": 13,
+            "delayed": 0,
+            "failed": 10
+          },
+          "people:1": {
+            "completed": 14,
+            "delayed": 0,
+            "failed": 10
+          },
+          "goods:1": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 23
+          }
+        },
+        "mortgaged": {
+          "p10": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "street": {
+          "days": 3440,
+          "entered": 2,
+          "recovered": 2,
+          "entered_runs": 2,
+          "rate": 0.01,
+          "recovery_rate": 1.0
+        },
+        "prison": {
+          "arrests": 2,
+          "released": 0,
+          "release_rate": 0.0
+        },
+        "big_fate": {
+          "segments": {
+            "good": 22,
+            "neutral": 90,
+            "bad": 77
+          },
+          "spins": 189
+        },
+        "fate": {
+          "bad": 0,
+          "good": 0,
+          "neutral": 1002,
+          "good_rate": 0.0,
+          "bad_rate": 0.0
+        },
+        "hand_counts": {
+          "1": 1698,
+          "2": 1424,
+          "3": 309,
+          "4": 41,
+          "5": 9,
+          "6": 2
+        },
+        "slot_checks": {
+          "-1": {
+            "success": 0,
+            "total": 2983,
+            "rate": 0.0
+          },
+          "0": {
+            "success": 736,
+            "total": 1458,
+            "rate": 0.50480109739369
+          },
+          "-2": {
+            "success": 0,
+            "total": 5,
+            "rate": 0.0
+          },
+          "-3": {
+            "success": 0,
+            "total": 2,
+            "rate": 0.0
+          },
+          "2": {
+            "success": 1,
+            "total": 2,
+            "rate": 0.5
+          }
+        },
+        "lot_accuracy": {
+          "correct": 0,
+          "verified": 0,
+          "rate": null
+        },
+        "almanac": {
+          "actions_followed": 0,
+          "actions_offered": 6962,
+          "followed": 0,
+          "offered": 3481,
+          "rate": 0.0
+        },
+        "steps": {
+          "p10": 0,
+          "median": 218,
+          "p90": 244
+        }
+      },
+      "2": {
+        "pass_rate": {
+          "cleared": 116,
+          "runs": 200,
+          "rate": 0.58
+        },
+        "game_over_reasons": {},
+        "month_money": {
+          "p10": 0,
+          "median": 184,
+          "p90": 560
+        },
+        "rep_tiers": {
+          "0": 3480
+        },
+        "heat_tiers": {
+          "0": 3480
+        },
+        "demands": {},
+        "mortgaged": {
+          "p10": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "street": {
+          "days": 3458,
+          "entered": 1,
+          "recovered": 1,
+          "entered_runs": 1,
+          "rate": 0.005,
+          "recovery_rate": 1.0
+        },
+        "prison": {
+          "arrests": 0,
+          "released": 0,
+          "release_rate": null
+        },
+        "big_fate": {
+          "segments": {
+            "neutral": 72,
+            "good": 28,
+            "bad": 52
+          },
+          "spins": 152
+        },
+        "fate": {
+          "bad": 0,
+          "good": 0,
+          "neutral": 1003,
+          "good_rate": 0.0,
+          "bad_rate": 0.0
+        },
+        "hand_counts": {
+          "1": 1849,
+          "2": 1275,
+          "3": 338,
+          "4": 17,
+          "5": 1
+        },
+        "slot_checks": {
+          "-1": {
+            "success": 0,
+            "total": 2978,
+            "rate": 0.0
+          },
+          "0": {
+            "success": 780,
+            "total": 1479,
+            "rate": 0.5273833671399595
+          },
+          "-2": {
+            "success": 0,
+            "total": 5,
+            "rate": 0.0
+          }
+        },
+        "lot_accuracy": {
+          "correct": 0,
+          "verified": 0,
+          "rate": null
+        },
+        "almanac": {
+          "actions_followed": 0,
+          "actions_offered": 6960,
+          "followed": 0,
+          "offered": 3480,
+          "rate": 0.0
+        },
+        "steps": {
+          "p10": 0,
+          "median": 208,
+          "p90": 218
+        }
+      }
+    },
+    "greedy": {
+      "0": {
+        "pass_rate": {
+          "cleared": 146,
+          "runs": 200,
+          "rate": 0.73
+        },
+        "game_over_reasons": {
+          "prison": 54
+        },
+        "month_money": {
+          "p10": 0,
+          "median": 71,
+          "p90": 243
+        },
+        "rep_tiers": {
+          "0": 4756
+        },
+        "heat_tiers": {
+          "0": 4756
+        },
+        "demands": {
+          "goods:1": {
+            "completed": 0,
+            "delayed": 176,
+            "failed": 142
+          },
+          "info:1": {
+            "completed": 0,
+            "delayed": 157,
+            "failed": 113
+          },
+          "money:0": {
+            "completed": 126,
+            "delayed": 0,
+            "failed": 0
+          },
+          "people:0": {
+            "completed": 141,
+            "delayed": 0,
+            "failed": 0
+          },
+          "money:1": {
+            "completed": 5,
+            "delayed": 9,
+            "failed": 0
+          },
+          "people:1": {
+            "completed": 4,
+            "delayed": 8,
+            "failed": 0
+          }
+        },
+        "mortgaged": {
+          "p10": 0,
+          "median": 5,
+          "p90": 5
+        },
+        "street": {
+          "days": 0,
+          "entered": 133,
+          "recovered": 0,
+          "entered_runs": 133,
+          "rate": 0.665,
+          "recovery_rate": 0.0
+        },
+        "prison": {
+          "arrests": 63,
+          "released": 9,
+          "release_rate": 0.14285714285714285
+        },
+        "big_fate": {
+          "segments": {
+            "bad": 88,
+            "good": 61,
+            "neutral": 89
+          },
+          "spins": 238
+        },
+        "fate": {
+          "bad": 0,
+          "good": 0,
+          "neutral": 1274,
+          "good_rate": 0.0,
+          "bad_rate": 0.0
+        },
+        "hand_counts": {
+          "0": 200,
+          "1": 255,
+          "10": 452,
+          "3": 31,
+          "5": 312,
+          "6": 748,
+          "7": 1054,
+          "8": 883,
+          "9": 623,
+          "2": 146,
+          "4": 106
+        },
+        "slot_checks": {
+          "-1": {
+            "success": 0,
+            "total": 562,
+            "rate": 0.0
+          },
+          "-2": {
+            "success": 0,
+            "total": 881,
+            "rate": 0.0
+          },
+          "2": {
+            "success": 561,
+            "total": 860,
+            "rate": 0.6523255813953488
+          },
+          "3": {
+            "success": 1651,
+            "total": 2025,
+            "rate": 0.8153086419753086
+          },
+          "0": {
+            "success": 12,
+            "total": 86,
+            "rate": 0.13953488372093023
+          },
+          "1": {
+            "success": 12,
+            "total": 24,
+            "rate": 0.5
+          },
+          "-3": {
+            "success": 0,
+            "total": 1,
+            "rate": 0.0
+          }
+        },
+        "lot_accuracy": {
+          "correct": 0,
+          "verified": 0,
+          "rate": null
+        },
+        "almanac": {
+          "actions_followed": 183,
+          "actions_offered": 9512,
+          "followed": 183,
+          "offered": 4756,
+          "rate": 0.03847771236333053
+        },
+        "steps": {
+          "p10": 61,
+          "median": 679,
+          "p90": 728
+        }
+      },
+      "1": {
+        "pass_rate": {
+          "cleared": 146,
+          "runs": 200,
+          "rate": 0.73
+        },
+        "game_over_reasons": {},
+        "month_money": {
+          "p10": 0,
+          "median": 197,
+          "p90": 367
+        },
+        "rep_tiers": {
+          "0": 4380
+        },
+        "heat_tiers": {
+          "0": 4380
+        },
+        "demands": {
+          "info:1": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 37
+          },
+          "money:1": {
+            "completed": 3,
+            "delayed": 0,
+            "failed": 1
+          },
+          "goods:1": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 31
+          },
+          "people:1": {
+            "completed": 3,
+            "delayed": 0,
+            "failed": 1
+          }
+        },
+        "mortgaged": {
+          "p10": 0,
+          "median": 0,
+          "p90": 1
+        },
+        "street": {
+          "days": 3539,
+          "entered": 32,
+          "recovered": 21,
+          "entered_runs": 32,
+          "rate": 0.16,
+          "recovery_rate": 0.65625
+        },
+        "prison": {
+          "arrests": 0,
+          "released": 0,
+          "release_rate": null
+        },
+        "big_fate": {
+          "segments": {
+            "bad": 108,
+            "neutral": 95,
+            "good": 16
+          },
+          "spins": 219
+        },
+        "fate": {
+          "bad": 0,
+          "good": 0,
+          "neutral": 1349,
+          "good_rate": 0.0,
+          "bad_rate": 0.0
+        },
+        "hand_counts": {
+          "2": 1718,
+          "3": 658,
+          "4": 201,
+          "5": 55,
+          "1": 1741,
+          "6": 5,
+          "7": 2
+        },
+        "slot_checks": {
+          "-1": {
+            "success": 0,
+            "total": 3318,
+            "rate": 0.0
+          },
+          "0": {
+            "success": 753,
+            "total": 1502,
+            "rate": 0.5013315579227696
+          },
+          "-2": {
+            "success": 0,
+            "total": 100,
+            "rate": 0.0
+          },
+          "3": {
+            "success": 3,
+            "total": 5,
+            "rate": 0.6
+          },
+          "2": {
+            "success": 2,
+            "total": 2,
+            "rate": 1.0
+          }
+        },
+        "lot_accuracy": {
+          "correct": 0,
+          "verified": 0,
+          "rate": null
+        },
+        "almanac": {
+          "actions_followed": 0,
+          "actions_offered": 8760,
+          "followed": 0,
+          "offered": 4380,
+          "rate": 0.0
+        },
+        "steps": {
+          "p10": 0,
+          "median": 221,
+          "p90": 375
+        }
+      },
+      "2": {
+        "pass_rate": {
+          "cleared": 146,
+          "runs": 200,
+          "rate": 0.73
+        },
+        "game_over_reasons": {},
+        "month_money": {
+          "p10": 0,
+          "median": 265,
+          "p90": 568
+        },
+        "rep_tiers": {
+          "0": 4380
+        },
+        "heat_tiers": {
+          "0": 4380
+        },
+        "demands": {},
+        "mortgaged": {
+          "p10": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "street": {
+          "days": 4279,
+          "entered": 4,
+          "recovered": 2,
+          "entered_runs": 4,
+          "rate": 0.02,
+          "recovery_rate": 0.5
+        },
+        "prison": {
+          "arrests": 0,
+          "released": 0,
+          "release_rate": null
+        },
+        "big_fate": {
+          "segments": {
+            "neutral": 85,
+            "bad": 93,
+            "good": 20
+          },
+          "spins": 198
+        },
+        "fate": {
+          "bad": 0,
+          "good": 0,
+          "neutral": 1270,
+          "good_rate": 0.0,
+          "bad_rate": 0.0
+        },
+        "hand_counts": {
+          "1": 2247,
+          "2": 1628,
+          "3": 422,
+          "4": 55,
+          "5": 26,
+          "6": 2
+        },
+        "slot_checks": {
+          "-1": {
+            "success": 0,
+            "total": 3681,
+            "rate": 0.0
+          },
+          "-2": {
+            "success": 0,
+            "total": 32,
+            "rate": 0.0
+          },
+          "0": {
+            "success": 903,
+            "total": 1838,
+            "rate": 0.4912948857453754
+          }
+        },
+        "lot_accuracy": {
+          "correct": 0,
+          "verified": 0,
+          "rate": null
+        },
+        "almanac": {
+          "actions_followed": 0,
+          "actions_offered": 8760,
+          "followed": 0,
+          "offered": 4380,
+          "rate": 0.0
+        },
+        "steps": {
+          "p10": 0,
+          "median": 209,
+          "p90": 226
+        }
+      }
+    },
+    "hoarder": {
+      "0": {
+        "pass_rate": {
+          "cleared": 120,
+          "runs": 200,
+          "rate": 0.6
+        },
+        "game_over_reasons": {
+          "prison": 80
+        },
+        "month_money": {
+          "p10": 0,
+          "median": 23,
+          "p90": 47
+        },
+        "rep_tiers": {
+          "0": 4540
+        },
+        "heat_tiers": {
+          "0": 4540
+        },
+        "demands": {
+          "goods:1": {
+            "completed": 0,
+            "delayed": 163,
+            "failed": 125
+          },
+          "info:1": {
+            "completed": 0,
+            "delayed": 149,
+            "failed": 108
+          },
+          "money:0": {
+            "completed": 85,
+            "delayed": 0,
+            "failed": 0
+          },
+          "money:1": {
+            "completed": 12,
+            "delayed": 40,
+            "failed": 2
+          },
+          "people:0": {
+            "completed": 97,
+            "delayed": 0,
+            "failed": 0
+          },
+          "people:1": {
+            "completed": 11,
+            "delayed": 42,
+            "failed": 2
+          }
+        },
+        "mortgaged": {
+          "p10": 0,
+          "median": 5,
+          "p90": 5
+        },
+        "street": {
+          "days": 0,
+          "entered": 120,
+          "recovered": 0,
+          "entered_runs": 120,
+          "rate": 0.6,
+          "recovery_rate": 0.0
+        },
+        "prison": {
+          "arrests": 87,
+          "released": 7,
+          "release_rate": 0.08045977011494253
+        },
+        "big_fate": {
+          "segments": {
+            "bad": 126,
+            "good": 90,
+            "neutral": 125
+          },
+          "spins": 341
+        },
+        "fate": {
+          "bad": 0,
+          "good": 0,
+          "neutral": 1275,
+          "good_rate": 0.0,
+          "bad_rate": 0.0
+        },
+        "hand_counts": {
+          "0": 200,
+          "1": 327,
+          "2": 358,
+          "3": 478,
+          "4": 1043,
+          "5": 1227,
+          "6": 666,
+          "7": 256,
+          "8": 65
+        },
+        "slot_checks": {
+          "-1": {
+            "success": 0,
+            "total": 898,
+            "rate": 0.0
+          },
+          "-2": {
+            "success": 0,
+            "total": 1040,
+            "rate": 0.0
+          },
+          "2": {
+            "success": 453,
+            "total": 668,
+            "rate": 0.6781437125748503
+          },
+          "3": {
+            "success": 1147,
+            "total": 1400,
+            "rate": 0.8192857142857143
+          },
+          "0": {
+            "success": 44,
+            "total": 186,
+            "rate": 0.23655913978494625
+          },
+          "1": {
+            "success": 53,
+            "total": 123,
+            "rate": 0.43089430894308944
+          },
+          "-3": {
+            "success": 0,
+            "total": 25,
+            "rate": 0.0
+          }
+        },
+        "lot_accuracy": {
+          "correct": 0,
+          "verified": 0,
+          "rate": null
+        },
+        "almanac": {
+          "actions_followed": 383,
+          "actions_offered": 9080,
+          "followed": 383,
+          "offered": 4540,
+          "rate": 0.08436123348017621
+        },
+        "steps": {
+          "p10": 52,
+          "median": 518,
+          "p90": 639
+        }
+      },
+      "1": {
+        "pass_rate": {
+          "cleared": 119,
+          "runs": 200,
+          "rate": 0.595
+        },
+        "game_over_reasons": {
+          "prison": 1
+        },
+        "month_money": {
+          "p10": 0,
+          "median": 221,
+          "p90": 310
+        },
+        "rep_tiers": {
+          "0": 3571
+        },
+        "heat_tiers": {
+          "0": 3571
+        },
+        "demands": {
+          "info:1": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 26
+          },
+          "money:1": {
+            "completed": 14,
+            "delayed": 0,
+            "failed": 12
+          },
+          "people:1": {
+            "completed": 18,
+            "delayed": 0,
+            "failed": 10
+          },
+          "goods:1": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 26
+          }
+        },
+        "mortgaged": {
+          "p10": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "street": {
+          "days": 3403,
+          "entered": 8,
+          "recovered": 8,
+          "entered_runs": 8,
+          "rate": 0.04,
+          "recovery_rate": 1.0
+        },
+        "prison": {
+          "arrests": 1,
+          "released": 0,
+          "release_rate": 0.0
+        },
+        "big_fate": {
+          "segments": {
+            "good": 23,
+            "neutral": 98,
+            "bad": 80
+          },
+          "spins": 201
+        },
+        "fate": {
+          "bad": 0,
+          "good": 0,
+          "neutral": 1043,
+          "good_rate": 0.0,
+          "bad_rate": 0.0
+        },
+        "hand_counts": {
+          "1": 1697,
+          "2": 1439,
+          "3": 357,
+          "6": 3,
+          "4": 60,
+          "5": 16
+        },
+        "slot_checks": {
+          "-1": {
+            "success": 0,
+            "total": 2979,
+            "rate": 0.0
+          },
+          "0": {
+            "success": 723,
+            "total": 1451,
+            "rate": 0.4982770503101309
+          },
+          "-2": {
+            "success": 0,
+            "total": 31,
+            "rate": 0.0
+          },
+          "2": {
+            "success": 5,
+            "total": 6,
+            "rate": 0.8333333333333334
+          },
+          "1": {
+            "success": 0,
+            "total": 2,
+            "rate": 0.0
+          },
+          "-3": {
+            "success": 0,
+            "total": 1,
+            "rate": 0.0
+          },
+          "3": {
+            "success": 1,
+            "total": 1,
+            "rate": 1.0
+          }
+        },
+        "lot_accuracy": {
+          "correct": 0,
+          "verified": 0,
+          "rate": null
+        },
+        "almanac": {
+          "actions_followed": 0,
+          "actions_offered": 7142,
+          "followed": 0,
+          "offered": 3571,
+          "rate": 0.0
+        },
+        "steps": {
+          "p10": 0,
+          "median": 220,
+          "p90": 247
+        }
+      },
+      "2": {
+        "pass_rate": {
+          "cleared": 119,
+          "runs": 200,
+          "rate": 0.595
+        },
+        "game_over_reasons": {},
+        "month_money": {
+          "p10": 23,
+          "median": 259,
+          "p90": 557
+        },
+        "rep_tiers": {
+          "0": 3570
+        },
+        "heat_tiers": {
+          "0": 3570
+        },
+        "demands": {},
+        "mortgaged": {
+          "p10": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "street": {
+          "days": 3570,
+          "entered": 0,
+          "recovered": 0,
+          "entered_runs": 0,
+          "rate": 0.0,
+          "recovery_rate": null
+        },
+        "prison": {
+          "arrests": 0,
+          "released": 0,
+          "release_rate": null
+        },
+        "big_fate": {
+          "segments": {
+            "bad": 76,
+            "neutral": 58,
+            "good": 12
+          },
+          "spins": 146
+        },
+        "fate": {
+          "bad": 0,
+          "good": 0,
+          "neutral": 1023,
+          "good_rate": 0.0,
+          "bad_rate": 0.0
+        },
+        "hand_counts": {
+          "1": 1916,
+          "2": 1300,
+          "3": 333,
+          "4": 19,
+          "5": 2
+        },
+        "slot_checks": {
+          "-1": {
+            "success": 0,
+            "total": 3053,
+            "rate": 0.0
+          },
+          "0": {
+            "success": 760,
+            "total": 1534,
+            "rate": 0.4954367666232073
+          },
+          "-2": {
+            "success": 0,
+            "total": 6,
+            "rate": 0.0
+          }
+        },
+        "lot_accuracy": {
+          "correct": 0,
+          "verified": 0,
+          "rate": null
+        },
+        "almanac": {
+          "actions_followed": 0,
+          "actions_offered": 7140,
+          "followed": 0,
+          "offered": 3570,
+          "rate": 0.0
+        },
+        "steps": {
+          "p10": 0,
+          "median": 208,
+          "p90": 213
+        }
+      }
+    },
+    "kind": {
+      "0": {
+        "pass_rate": {
+          "cleared": 106,
+          "runs": 200,
+          "rate": 0.53
+        },
+        "game_over_reasons": {
+          "prison": 94
+        },
+        "month_money": {
+          "p10": 0,
+          "median": 5,
+          "p90": 36
+        },
+        "rep_tiers": {
+          "0": 4262
+        },
+        "heat_tiers": {
+          "0": 4262
+        },
+        "demands": {
+          "goods:1": {
+            "completed": 0,
+            "delayed": 160,
+            "failed": 118
+          },
+          "info:1": {
+            "completed": 0,
+            "delayed": 142,
+            "failed": 100
+          },
+          "money:0": {
+            "completed": 66,
+            "delayed": 0,
+            "failed": 0
+          },
+          "money:1": {
+            "completed": 15,
+            "delayed": 45,
+            "failed": 4
+          },
+          "people:0": {
+            "completed": 69,
+            "delayed": 0,
+            "failed": 0
+          },
+          "people:1": {
+            "completed": 24,
+            "delayed": 53,
+            "failed": 3
+          }
+        },
+        "mortgaged": {
+          "p10": 0,
+          "median": 5,
+          "p90": 5
+        },
+        "street": {
+          "days": 0,
+          "entered": 106,
+          "recovered": 0,
+          "entered_runs": 106,
+          "rate": 0.53,
+          "recovery_rate": 0.0
+        },
+        "prison": {
+          "arrests": 104,
+          "released": 10,
+          "release_rate": 0.09615384615384616
+        },
+        "big_fate": {
+          "segments": {
+            "bad": 123,
+            "neutral": 138,
+            "good": 86
+          },
+          "spins": 347
+        },
+        "fate": {
+          "bad": 0,
+          "good": 0,
+          "neutral": 1138,
+          "good_rate": 0.0,
+          "bad_rate": 0.0
+        },
+        "hand_counts": {
+          "0": 200,
+          "1": 255,
+          "10": 379,
+          "3": 29,
+          "5": 325,
+          "6": 700,
+          "7": 924,
+          "8": 784,
+          "9": 511,
+          "2": 146,
+          "4": 102,
+          "11": 1
+        },
+        "slot_checks": {
+          "-1": {
+            "success": 0,
+            "total": 963,
+            "rate": 0.0
+          },
+          "-2": {
+            "success": 0,
+            "total": 962,
+            "rate": 0.0
+          },
+          "2": {
+            "success": 349,
+            "total": 512,
+            "rate": 0.681640625
+          },
+          "3": {
+            "success": 945,
+            "total": 1179,
+            "rate": 0.8015267175572519
+          },
+          "0": {
+            "success": 44,
+            "total": 216,
+            "rate": 0.2037037037037037
+          },
+          "1": {
+            "success": 80,
+            "total": 150,
+            "rate": 0.5333333333333333
+          },
+          "-3": {
+            "success": 0,
+            "total": 28,
+            "rate": 0.0
+          }
+        },
+        "lot_accuracy": {
+          "correct": 0,
+          "verified": 0,
+          "rate": null
+        },
+        "almanac": {
+          "actions_followed": 328,
+          "actions_offered": 8524,
+          "followed": 328,
+          "offered": 4262,
+          "rate": 0.07695917409666823
+        },
+        "steps": {
+          "p10": 56,
+          "median": 645,
+          "p90": 765
+        }
+      },
+      "1": {
+        "pass_rate": {
+          "cleared": 106,
+          "runs": 200,
+          "rate": 0.53
+        },
+        "game_over_reasons": {},
+        "month_money": {
+          "p10": 0,
+          "median": 229,
+          "p90": 309
+        },
+        "rep_tiers": {
+          "0": 3180
+        },
+        "heat_tiers": {
+          "0": 3180
+        },
+        "demands": {
+          "info:1": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 28
+          },
+          "money:1": {
+            "completed": 14,
+            "delayed": 0,
+            "failed": 11
+          },
+          "people:1": {
+            "completed": 19,
+            "delayed": 0,
+            "failed": 6
+          },
+          "goods:1": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 22
+          }
+        },
+        "mortgaged": {
+          "p10": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "street": {
+          "days": 3074,
+          "entered": 5,
+          "recovered": 5,
+          "entered_runs": 5,
+          "rate": 0.025,
+          "recovery_rate": 1.0
+        },
+        "prison": {
+          "arrests": 0,
+          "released": 0,
+          "release_rate": null
+        },
+        "big_fate": {
+          "segments": {
+            "bad": 73,
+            "neutral": 70,
+            "good": 27
+          },
+          "spins": 170
+        },
+        "fate": {
+          "bad": 0,
+          "good": 0,
+          "neutral": 926,
+          "good_rate": 0.0,
+          "bad_rate": 0.0
+        },
+        "hand_counts": {
+          "1": 1519,
+          "2": 1296,
+          "3": 307,
+          "4": 49,
+          "5": 7,
+          "6": 1,
+          "7": 1
+        },
+        "slot_checks": {
+          "-1": {
+            "success": 0,
+            "total": 2690,
+            "rate": 0.0
+          },
+          "0": {
+            "success": 679,
+            "total": 1305,
+            "rate": 0.5203065134099617
+          },
+          "-2": {
+            "success": 0,
+            "total": 13,
+            "rate": 0.0
+          },
+          "1": {
+            "success": 1,
+            "total": 2,
+            "rate": 0.5
+          },
+          "2": {
+            "success": 1,
+            "total": 1,
+            "rate": 1.0
+          }
+        },
+        "lot_accuracy": {
+          "correct": 0,
+          "verified": 0,
+          "rate": null
+        },
+        "almanac": {
+          "actions_followed": 0,
+          "actions_offered": 6360,
+          "followed": 0,
+          "offered": 3180,
+          "rate": 0.0
+        },
+        "steps": {
+          "p10": 0,
+          "median": 215,
+          "p90": 243
+        }
+      },
+      "2": {
+        "pass_rate": {
+          "cleared": 106,
+          "runs": 200,
+          "rate": 0.53
+        },
+        "game_over_reasons": {},
+        "month_money": {
+          "p10": 0,
+          "median": 247,
+          "p90": 554
+        },
+        "rep_tiers": {
+          "0": 3180
+        },
+        "heat_tiers": {
+          "0": 3180
+        },
+        "demands": {},
+        "mortgaged": {
+          "p10": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "street": {
+          "days": 3180,
+          "entered": 0,
+          "recovered": 0,
+          "entered_runs": 0,
+          "rate": 0.0,
+          "recovery_rate": null
+        },
+        "prison": {
+          "arrests": 0,
+          "released": 0,
+          "release_rate": null
+        },
+        "big_fate": {
+          "segments": {
+            "neutral": 59,
+            "bad": 55,
+            "good": 23
+          },
+          "spins": 137
+        },
+        "fate": {
+          "bad": 0,
+          "good": 0,
+          "neutral": 909,
+          "good_rate": 0.0,
+          "bad_rate": 0.0
+        },
+        "hand_counts": {
+          "1": 1709,
+          "2": 1151,
+          "3": 303,
+          "4": 17
+        },
+        "slot_checks": {
+          "-1": {
+            "success": 0,
+            "total": 2720,
+            "rate": 0.0
+          },
+          "0": {
+            "success": 693,
+            "total": 1367,
+            "rate": 0.506949524506218
+          },
+          "-2": {
+            "success": 0,
+            "total": 2,
+            "rate": 0.0
+          }
+        },
+        "lot_accuracy": {
+          "correct": 0,
+          "verified": 0,
+          "rate": null
+        },
+        "almanac": {
+          "actions_followed": 0,
+          "actions_offered": 6360,
+          "followed": 0,
+          "offered": 3180,
+          "rate": 0.0
+        },
+        "steps": {
+          "p10": 0,
+          "median": 207,
+          "p90": 213
+        }
+      }
+    },
+    "random": {
+      "0": {
+        "pass_rate": {
+          "cleared": 186,
+          "runs": 200,
+          "rate": 0.93
+        },
+        "game_over_reasons": {
+          "prison": 14
+        },
+        "month_money": {
+          "p10": 0,
+          "median": 125,
+          "p90": 339
+        },
+        "rep_tiers": {
+          "0": 5651
+        },
+        "heat_tiers": {
+          "0": 4016,
+          "1": 1272,
+          "2": 290,
+          "3": 65,
+          "4": 8
+        },
+        "demands": {
+          "goods:0": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 170
+          },
+          "info:0": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 124
+          },
+          "money:0": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 117
+          },
+          "people:1": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 9
+          },
+          "people:0": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 121
+          },
+          "money:1": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 9
+          },
+          "info:1": {
+            "completed": 0,
+            "delayed": 2,
+            "failed": 7
+          },
+          "goods:1": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 1
+          }
+        },
+        "mortgaged": {
+          "p10": 0,
+          "median": 1,
+          "p90": 2
+        },
+        "street": {
+          "days": 0,
+          "entered": 50,
+          "recovered": 0,
+          "entered_runs": 50,
+          "rate": 0.25,
+          "recovery_rate": 0.0
+        },
+        "prison": {
+          "arrests": 14,
+          "released": 0,
+          "release_rate": 0.0
+        },
+        "big_fate": {
+          "segments": {
+            "bad": 41,
+            "neutral": 37,
+            "good": 25
+          },
+          "spins": 103
+        },
+        "fate": {
+          "bad": 0,
+          "good": 0,
+          "neutral": 1402,
+          "good_rate": 0.0,
+          "bad_rate": 0.0
+        },
+        "hand_counts": {
+          "0": 200,
+          "1": 221,
+          "10": 1216,
+          "2": 179,
+          "6": 524,
+          "7": 974,
+          "8": 1198,
+          "9": 1023,
+          "5": 107,
+          "4": 23
+        },
+        "slot_checks": {
+          "-2": {
+            "success": 0,
+            "total": 991,
+            "rate": 0.0
+          },
+          "2": {
+            "success": 232,
+            "total": 319,
+            "rate": 0.7272727272727273
+          },
+          "3": {
+            "success": 149,
+            "total": 201,
+            "rate": 0.7412935323383084
+          },
+          "-1": {
+            "success": 0,
+            "total": 264,
+            "rate": 0.0
+          },
+          "0": {
+            "success": 2,
+            "total": 11,
+            "rate": 0.18181818181818182
+          },
+          "1": {
+            "success": 6,
+            "total": 13,
+            "rate": 0.46153846153846156
+          },
+          "-3": {
+            "success": 0,
+            "total": 8,
+            "rate": 0.0
+          }
+        },
+        "lot_accuracy": {
+          "correct": 0,
+          "verified": 0,
+          "rate": null
+        },
+        "almanac": {
+          "actions_followed": 136,
+          "actions_offered": 11302,
+          "followed": 136,
+          "offered": 5651,
+          "rate": 0.02406653689612458
+        },
+        "steps": {
+          "p10": 159,
+          "median": 176,
+          "p90": 193
+        }
+      },
+      "1": {
+        "pass_rate": {
+          "cleared": 185,
+          "runs": 200,
+          "rate": 0.925
+        },
+        "game_over_reasons": {
+          "prison": 1
+        },
+        "month_money": {
+          "p10": 27,
+          "median": 196,
+          "p90": 502
+        },
+        "rep_tiers": {
+          "0": 5559
+        },
+        "heat_tiers": {
+          "0": 3244,
+          "1": 1599,
+          "2": 567,
+          "3": 144,
+          "4": 5
+        },
+        "demands": {
+          "info:0": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 36
+          },
+          "money:1": {
+            "completed": 1,
+            "delayed": 7,
+            "failed": 13
+          },
+          "people:0": {
+            "completed": 1,
+            "delayed": 0,
+            "failed": 34
+          },
+          "money:0": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 32
+          },
+          "goods:0": {
+            "completed": 1,
+            "delayed": 0,
+            "failed": 24
+          },
+          "people:1": {
+            "completed": 3,
+            "delayed": 8,
+            "failed": 12
+          },
+          "info:1": {
+            "completed": 0,
+            "delayed": 6,
+            "failed": 13
+          },
+          "goods:1": {
+            "completed": 1,
+            "delayed": 7,
+            "failed": 11
+          },
+          "money:3": {
+            "completed": 0,
+            "delayed": 1,
+            "failed": 1
+          },
+          "info:2": {
+            "completed": 0,
+            "delayed": 1,
+            "failed": 1
+          },
+          "money:2": {
+            "completed": 1,
+            "delayed": 2,
+            "failed": 1
+          }
+        },
+        "mortgaged": {
+          "p10": 0,
+          "median": 1,
+          "p90": 2
+        },
+        "street": {
+          "days": 1450,
+          "entered": 38,
+          "recovered": 1,
+          "entered_runs": 38,
+          "rate": 0.19,
+          "recovery_rate": 0.02631578947368421
+        },
+        "prison": {
+          "arrests": 1,
+          "released": 0,
+          "release_rate": 0.0
+        },
+        "big_fate": {
+          "segments": {
+            "good": 21,
+            "neutral": 35,
+            "bad": 27
+          },
+          "spins": 83
+        },
+        "fate": {
+          "bad": 0,
+          "good": 0,
+          "neutral": 1831,
+          "good_rate": 0.0,
+          "bad_rate": 0.0
+        },
+        "hand_counts": {
+          "2": 1558,
+          "3": 1631,
+          "4": 1034,
+          "5": 516,
+          "8": 6,
+          "6": 184,
+          "7": 45,
+          "1": 586
+        },
+        "slot_checks": {
+          "-2": {
+            "success": 0,
+            "total": 66,
+            "rate": 0.0
+          },
+          "-1": {
+            "success": 0,
+            "total": 414,
+            "rate": 0.0
+          },
+          "0": {
+            "success": 83,
+            "total": 152,
+            "rate": 0.5460526315789473
+          },
+          "2": {
+            "success": 1,
+            "total": 2,
+            "rate": 0.5
+          },
+          "-3": {
+            "success": 0,
+            "total": 1,
+            "rate": 0.0
+          },
+          "3": {
+            "success": 1,
+            "total": 1,
+            "rate": 1.0
+          }
+        },
+        "lot_accuracy": {
+          "correct": 0,
+          "verified": 0,
+          "rate": null
+        },
+        "almanac": {
+          "actions_followed": 1,
+          "actions_offered": 11118,
+          "followed": 1,
+          "offered": 5559,
+          "rate": 0.00017988846914912754
+        },
+        "steps": {
+          "p10": 153,
+          "median": 169,
+          "p90": 181
+        }
+      },
+      "2": {
+        "pass_rate": {
+          "cleared": 185,
+          "runs": 200,
+          "rate": 0.925
+        },
+        "game_over_reasons": {},
+        "month_money": {
+          "p10": 17,
+          "median": 224,
+          "p90": 560
+        },
+        "rep_tiers": {
+          "0": 5550
+        },
+        "heat_tiers": {
+          "0": 5019,
+          "1": 400,
+          "2": 131
+        },
+        "demands": {},
+        "mortgaged": {
+          "p10": 0,
+          "median": 0,
+          "p90": 1
+        },
+        "street": {
+          "days": 2534,
+          "entered": 29,
+          "recovered": 2,
+          "entered_runs": 29,
+          "rate": 0.145,
+          "recovery_rate": 0.06896551724137931
+        },
+        "prison": {
+          "arrests": 0,
+          "released": 0,
+          "release_rate": null
+        },
+        "big_fate": {
+          "segments": {
+            "good": 21,
+            "bad": 41,
+            "neutral": 32
+          },
+          "spins": 94
+        },
+        "fate": {
+          "bad": 0,
+          "good": 0,
+          "neutral": 1756,
+          "good_rate": 0.0,
+          "bad_rate": 0.0
+        },
+        "hand_counts": {
+          "2": 1725,
+          "3": 1344,
+          "4": 828,
+          "5": 412,
+          "6": 137,
+          "1": 1066,
+          "7": 33,
+          "8": 5
+        },
+        "slot_checks": {
+          "-1": {
+            "success": 0,
+            "total": 657,
+            "rate": 0.0
+          },
+          "-2": {
+            "success": 0,
+            "total": 86,
+            "rate": 0.0
+          },
+          "0": {
+            "success": 131,
+            "total": 287,
+            "rate": 0.4564459930313589
+          }
+        },
+        "lot_accuracy": {
+          "correct": 0,
+          "verified": 0,
+          "rate": null
+        },
+        "almanac": {
+          "actions_followed": 0,
+          "actions_offered": 11100,
+          "followed": 0,
+          "offered": 5550,
+          "rate": 0.0
+        },
+        "steps": {
+          "p10": 152,
+          "median": 164,
+          "p90": 178
+        }
+      }
+    },
+    "refuser": {
+      "0": {
+        "pass_rate": {
+          "cleared": 200,
+          "runs": 200,
+          "rate": 1.0
+        },
+        "game_over_reasons": {},
+        "month_money": {
+          "p10": 220,
+          "median": 220,
+          "p90": 220
+        },
+        "rep_tiers": {
+          "0": 6000
+        },
+        "heat_tiers": {
+          "0": 6000
+        },
+        "demands": {
+          "goods:0": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 182
+          },
+          "info:0": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 144
+          },
+          "money:0": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 133
+          },
+          "people:0": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 141
+          }
+        },
+        "mortgaged": {
+          "p10": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "street": {
+          "days": 0,
+          "entered": 0,
+          "recovered": 0,
+          "entered_runs": 0,
+          "rate": 0.0,
+          "recovery_rate": null
+        },
+        "prison": {
+          "arrests": 0,
+          "released": 0,
+          "release_rate": null
+        },
+        "big_fate": {
+          "segments": {},
+          "spins": 0
+        },
+        "fate": {
+          "bad": 0,
+          "good": 0,
+          "neutral": 1470,
+          "good_rate": 0.0,
+          "bad_rate": 0.0
+        },
+        "hand_counts": {
+          "0": 200,
+          "1": 400,
+          "10": 1465,
+          "5": 67,
+          "6": 386,
+          "7": 951,
+          "8": 1325,
+          "9": 1205,
+          "4": 1
+        },
+        "slot_checks": {},
+        "lot_accuracy": {
+          "correct": 0,
+          "verified": 0,
+          "rate": null
+        },
+        "almanac": {
+          "actions_followed": 0,
+          "actions_offered": 12000,
+          "followed": 0,
+          "offered": 6000,
+          "rate": 0.0
+        },
+        "steps": {
+          "p10": 124,
+          "median": 124,
+          "p90": 124
+        }
+      },
+      "1": {
+        "pass_rate": {
+          "cleared": 200,
+          "runs": 200,
+          "rate": 1.0
+        },
+        "game_over_reasons": {},
+        "month_money": {
+          "p10": 142,
+          "median": 142,
+          "p90": 142
+        },
+        "rep_tiers": {
+          "0": 6000
+        },
+        "heat_tiers": {
+          "0": 6000
+        },
+        "demands": {
+          "info:0": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 51
+          },
+          "money:0": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 52
+          },
+          "people:0": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 54
+          },
+          "goods:0": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 43
+          }
+        },
+        "mortgaged": {
+          "p10": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "street": {
+          "days": 0,
+          "entered": 0,
+          "recovered": 0,
+          "entered_runs": 0,
+          "rate": 0.0,
+          "recovery_rate": null
+        },
+        "prison": {
+          "arrests": 0,
+          "released": 0,
+          "release_rate": null
+        },
+        "big_fate": {
+          "segments": {},
+          "spins": 0
+        },
+        "fate": {
+          "bad": 0,
+          "good": 0,
+          "neutral": 1737,
+          "good_rate": 0.0,
+          "bad_rate": 0.0
+        },
+        "hand_counts": {
+          "2": 1597,
+          "3": 2686,
+          "4": 1388,
+          "6": 40,
+          "5": 284,
+          "7": 5
+        },
+        "slot_checks": {},
+        "lot_accuracy": {
+          "correct": 0,
+          "verified": 0,
+          "rate": null
+        },
+        "almanac": {
+          "actions_followed": 0,
+          "actions_offered": 12000,
+          "followed": 0,
+          "offered": 6000,
+          "rate": 0.0
+        },
+        "steps": {
+          "p10": 123,
+          "median": 123,
+          "p90": 123
+        }
+      },
+      "2": {
+        "pass_rate": {
+          "cleared": 200,
+          "runs": 200,
+          "rate": 1.0
+        },
+        "game_over_reasons": {},
+        "month_money": {
+          "p10": 76,
+          "median": 76,
+          "p90": 76
+        },
+        "rep_tiers": {
+          "0": 6000
+        },
+        "heat_tiers": {
+          "0": 6000
+        },
+        "demands": {},
+        "mortgaged": {
+          "p10": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "street": {
+          "days": 0,
+          "entered": 0,
+          "recovered": 0,
+          "entered_runs": 0,
+          "rate": 0.0,
+          "recovery_rate": null
+        },
+        "prison": {
+          "arrests": 0,
+          "released": 0,
+          "release_rate": null
+        },
+        "big_fate": {
+          "segments": {},
+          "spins": 0
+        },
+        "fate": {
+          "bad": 0,
+          "good": 0,
+          "neutral": 1708,
+          "good_rate": 0.0,
+          "bad_rate": 0.0
+        },
+        "hand_counts": {
+          "2": 1636,
+          "3": 2630,
+          "4": 1376,
+          "5": 305,
+          "6": 49,
+          "7": 4
+        },
+        "slot_checks": {},
+        "lot_accuracy": {
+          "correct": 0,
+          "verified": 0,
+          "rate": null
+        },
+        "almanac": {
+          "actions_followed": 0,
+          "actions_offered": 12000,
+          "followed": 0,
+          "offered": 6000,
+          "rate": 0.0
+        },
+        "steps": {
+          "p10": 122,
+          "median": 122,
+          "p90": 122
+        }
+      }
+    },
+    "wheel": {
+      "0": {
+        "pass_rate": {
+          "cleared": 111,
+          "runs": 200,
+          "rate": 0.555
+        },
+        "game_over_reasons": {
+          "prison": 89
+        },
+        "month_money": {
+          "p10": 0,
+          "median": 19,
+          "p90": 46
+        },
+        "rep_tiers": {
+          "0": 4448
+        },
+        "heat_tiers": {
+          "0": 4448
+        },
+        "demands": {
+          "goods:1": {
+            "completed": 0,
+            "delayed": 160,
+            "failed": 120
+          },
+          "money:1": {
+            "completed": 14,
+            "delayed": 49,
+            "failed": 6
+          },
+          "people:0": {
+            "completed": 92,
+            "delayed": 0,
+            "failed": 0
+          },
+          "people:1": {
+            "completed": 16,
+            "delayed": 43,
+            "failed": 1
+          },
+          "info:1": {
+            "completed": 0,
+            "delayed": 147,
+            "failed": 101
+          },
+          "money:0": {
+            "completed": 70,
+            "delayed": 0,
+            "failed": 0
+          }
+        },
+        "mortgaged": {
+          "p10": 0,
+          "median": 5,
+          "p90": 5
+        },
+        "street": {
+          "days": 0,
+          "entered": 111,
+          "recovered": 0,
+          "entered_runs": 111,
+          "rate": 0.555,
+          "recovery_rate": 0.0
+        },
+        "prison": {
+          "arrests": 95,
+          "released": 6,
+          "release_rate": 0.06315789473684211
+        },
+        "big_fate": {
+          "segments": {
+            "bad": 119,
+            "good": 111,
+            "neutral": 120
+          },
+          "spins": 350
+        },
+        "fate": {
+          "bad": 0,
+          "good": 0,
+          "neutral": 1196,
+          "good_rate": 0.0,
+          "bad_rate": 0.0
+        },
+        "hand_counts": {
+          "0": 200,
+          "1": 255,
+          "7": 966,
+          "10": 401,
+          "2": 146,
+          "5": 325,
+          "6": 717,
+          "8": 823,
+          "9": 565,
+          "4": 107,
+          "3": 31,
+          "11": 1
+        },
+        "slot_checks": {
+          "-1": {
+            "success": 0,
+            "total": 950,
+            "rate": 0.0
+          },
+          "-2": {
+            "success": 0,
+            "total": 965,
+            "rate": 0.0
+          },
+          "-3": {
+            "success": 0,
+            "total": 23,
+            "rate": 0.0
+          },
+          "2": {
+            "success": 421,
+            "total": 598,
+            "rate": 0.7040133779264214
+          },
+          "3": {
+            "success": 1050,
+            "total": 1310,
+            "rate": 0.8015267175572519
+          },
+          "0": {
+            "success": 49,
+            "total": 218,
+            "rate": 0.22477064220183487
+          },
+          "1": {
+            "success": 52,
+            "total": 115,
+            "rate": 0.45217391304347826
+          }
+        },
+        "lot_accuracy": {
+          "correct": 0,
+          "verified": 0,
+          "rate": null
+        },
+        "almanac": {
+          "actions_followed": 357,
+          "actions_offered": 8896,
+          "followed": 357,
+          "offered": 4448,
+          "rate": 0.08026079136690648
+        },
+        "steps": {
+          "p10": 62,
+          "median": 647,
+          "p90": 788
+        }
+      },
+      "1": {
+        "pass_rate": {
+          "cleared": 111,
+          "runs": 200,
+          "rate": 0.555
+        },
+        "game_over_reasons": {},
+        "month_money": {
+          "p10": 0,
+          "median": 179,
+          "p90": 302
+        },
+        "rep_tiers": {
+          "0": 3330
+        },
+        "heat_tiers": {
+          "0": 3330
+        },
+        "demands": {
+          "money:1": {
+            "completed": 15,
+            "delayed": 0,
+            "failed": 12
+          },
+          "info:1": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 31
+          },
+          "people:1": {
+            "completed": 21,
+            "delayed": 0,
+            "failed": 5
+          },
+          "goods:1": {
+            "completed": 0,
+            "delayed": 0,
+            "failed": 20
+          }
+        },
+        "mortgaged": {
+          "p10": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "street": {
+          "days": 3170,
+          "entered": 8,
+          "recovered": 8,
+          "entered_runs": 8,
+          "rate": 0.04,
+          "recovery_rate": 1.0
+        },
+        "prison": {
+          "arrests": 0,
+          "released": 0,
+          "release_rate": null
+        },
+        "big_fate": {
+          "segments": {
+            "bad": 81,
+            "good": 31,
+            "neutral": 77
+          },
+          "spins": 189
+        },
+        "fate": {
+          "bad": 0,
+          "good": 0,
+          "neutral": 962,
+          "good_rate": 0.0,
+          "bad_rate": 0.0
+        },
+        "hand_counts": {
+          "1": 1580,
+          "2": 1342,
+          "3": 330,
+          "4": 66,
+          "5": 10,
+          "6": 2
+        },
+        "slot_checks": {
+          "-1": {
+            "success": 0,
+            "total": 2784,
+            "rate": 0.0
+          },
+          "0": {
+            "success": 700,
+            "total": 1349,
+            "rate": 0.5189028910303929
+          },
+          "-2": {
+            "success": 0,
+            "total": 13,
+            "rate": 0.0
+          }
+        },
+        "lot_accuracy": {
+          "correct": 0,
+          "verified": 0,
+          "rate": null
+        },
+        "almanac": {
+          "actions_followed": 0,
+          "actions_offered": 6660,
+          "followed": 0,
+          "offered": 3330,
+          "rate": 0.0
+        },
+        "steps": {
+          "p10": 0,
+          "median": 221,
+          "p90": 248
+        }
+      },
+      "2": {
+        "pass_rate": {
+          "cleared": 111,
+          "runs": 200,
+          "rate": 0.555
+        },
+        "game_over_reasons": {},
+        "month_money": {
+          "p10": 0,
+          "median": 136,
+          "p90": 445
+        },
+        "rep_tiers": {
+          "0": 3330
+        },
+        "heat_tiers": {
+          "0": 3330
+        },
+        "demands": {},
+        "mortgaged": {
+          "p10": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "street": {
+          "days": 3330,
+          "entered": 0,
+          "recovered": 0,
+          "entered_runs": 0,
+          "rate": 0.0,
+          "recovery_rate": null
+        },
+        "prison": {
+          "arrests": 0,
+          "released": 0,
+          "release_rate": null
+        },
+        "big_fate": {
+          "segments": {
+            "neutral": 65,
+            "bad": 51,
+            "good": 27
+          },
+          "spins": 143
+        },
+        "fate": {
+          "bad": 0,
+          "good": 0,
+          "neutral": 956,
+          "good_rate": 0.0,
+          "bad_rate": 0.0
+        },
+        "hand_counts": {
+          "1": 1773,
+          "2": 1227,
+          "3": 314,
+          "4": 14,
+          "6": 1,
+          "5": 1
+        },
+        "slot_checks": {
+          "-1": {
+            "success": 0,
+            "total": 2856,
+            "rate": 0.0
+          },
+          "0": {
+            "success": 755,
+            "total": 1429,
+            "rate": 0.5283414975507348
+          },
+          "-2": {
+            "success": 0,
+            "total": 1,
+            "rate": 0.0
+          }
+        },
+        "lot_accuracy": {
+          "correct": 0,
+          "verified": 0,
+          "rate": null
+        },
+        "almanac": {
+          "actions_followed": 0,
+          "actions_offered": 6660,
+          "followed": 0,
+          "offered": 3330,
+          "rate": 0.0
+        },
+        "steps": {
+          "p10": 0,
+          "median": 210,
+          "p90": 221
+        }
+      }
+    }
+  },
+  "notes": [
+    "Rates with no observations are null; they are not claims of success.",
+    "No balance overrides applied; observed baseline only.",
+    "Public runtime lot accuracy is unavailable: hidden predictions are excluded by contract 9.3 (issue #41).",
+    "Stage pass/street rates use all 200 seeds including unreached stages; missing stage steps/mortgages contribute zero. Month-money quantiles use only observed month-end samples; reached_stage and sample counts are explicit.",
+    "Telemetry steps count command_done events including game.new and rejected commands; they are not identical to autoplay loop iterations. Almanac follow rate is a day with at least one offered yi action and no ji action, divided by days offering yi.",
+    "Simulation ok means three stages or legitimate game over, not zero rejected commands or universal clear.",
+    "The 600-game reference took 12m35.721s, exceeding the 10-minute budget on a four-CPU quota.",
+    "G02 assembled settle peak18.691ms also exceeds its10ms budget; independent one-shot settle1.406ms does not erase that peak.",
+    "Shared W0 engine/strict-validator assertions still fail; owned93 combined tests pass. CI budget and legacy UI failures are separate known limits.",
+    "Slot margins use public tossed faces minus need; auto-heads/auto-pass are not separately exposed in that event, so no binomial accuracy claim is made."
+  ],
+  "external_lot_certificate": {
+    "evidence.json": {
+      "source": "scripts/tests/cards/G05/evidence.json",
+      "evidence": {
+        "_meta": {
+          "owner": "G05",
+          "date": "2026-10-13",
+          "kind": "offline-test-evidence"
+        },
+        "fortune": {
+          "seed_from": 0,
+          "seed_to_exclusive": 1000,
+          "lots_per_seed": 3,
+          "successful_lots": 3000,
+          "unique_pinned_promises": 5275,
+          "delivered_promises": 5275,
+          "accuracy_pct": 100,
+          "shards": [
+            {
+              "seed_from": 0,
+              "seed_to_exclusive": 250,
+              "lots": 750,
+              "promises": 1309,
+              "delivered": 1309
+            },
+            {
+              "seed_from": 250,
+              "seed_to_exclusive": 500,
+              "lots": 750,
+              "promises": 1312,
+              "delivered": 1312
+            },
+            {
+              "seed_from": 500,
+              "seed_to_exclusive": 750,
+              "lots": 750,
+              "promises": 1319,
+              "delivered": 1319
+            },
+            {
+              "seed_from": 750,
+              "seed_to_exclusive": 1000,
+              "lots": 750,
+              "promises": 1335,
+              "delivered": 1335
+            }
+          ]
+        },
+        "conscience": {
+          "seeds": 500,
+          "picks_per_seed": 2,
+          "high_bad_picks": 90,
+          "low_bad_picks": 226,
+          "sample_picks_per_group": 1000,
+          "difference_pct_points": 13.6,
+          "required_difference_pct_points": 10
+        },
+        "cezi": {
+          "seeds": 200,
+          "has": 200,
+          "none": 200,
+          "actual_delivery_and_bans_verified": true
+        },
+        "wheel": {
+          "monotonic_units_from": 0,
+          "monotonic_units_to": 6,
+          "needle_seeds": 200,
+          "condition_filter_verified": true,
+          "stake_trials": 60
+        },
+        "bench_example_mean_ms": {
+          "lot": 3.073,
+          "spin": 0.242,
+          "pool_rows": 0.131
+        },
+        "validation": {
+          "required_g05_suites_passed": 16,
+          "static_bridge_extra_passed": true,
+          "full_card_suites_passed": 23,
+          "full_card_suites_failed": 1,
+          "full_card_failure": "W0_engine obsolete first_time count; issue #40",
+          "legacy_smoke_passed": true,
+          "legacy_smoke_items": 11,
+          "production_cards_validated": 0,
+          "total_g05_suites_passed": 17
+        }
+      }
+    },
+    "evidence_contract12.json": {
+      "source": "scripts/tests/cards/G05/evidence_contract12.json",
+      "evidence": {
+        "_meta": {
+          "owner": "G05",
+          "date": "2026-10-13",
+          "kind": "offline-contract12-fortune-certificate",
+          "snapshot": "63b508a52bc9e4355af3f9d17750c59b41b03188",
+          "source_tree": "7c8e50c66d168057b1cdaa1eab7792bf99001692",
+          "shared_base": "598d1e1",
+          "contract_version": "1.2",
+          "runtime": "Godot4.7.1"
+        },
+        "scope": {
+          "assembled_modules": [
+            "G01",
+            "G02",
+            "G03",
+            "G04",
+            "G05",
+            "G06"
+          ],
+          "suite": "G05_lot_accuracy_a/b/c/d",
+          "data": "public data/cards/_examples at source snapshot, plus private ASCII G05 fixture completing lot grades, fortune access, and candidate cards",
+          "fixture": "scripts/tests/cards/G05/fixture.gd at source snapshot",
+          "oracle": "actual assembled CardComposer.compose / CardSchedule.due and G05 forecast/pin logic",
+          "window_abs_days": [
+            6,
+            7,
+            8
+          ],
+          "runtime_policy_telemetry": false,
+          "notes": [
+            "Independent minimal test contexts retain narrow pay/rep/extra_deal/conscience-condition doubles; lots use zero cost.",
+            "Each seed draws three lots, then uses the actual composer over three future days with alternating rain/clear weather; promises are deduplicated before counting.",
+            "This certifies only forecast/pin delivery exactness under the documented fixture; it does not certify formal K10 balance, full lifecycle on_expire behavior, contact usage, or wheel calibration.",
+            "Root identified the exact suite-start source as 63b508a at 10:54 UTC. A concurrent G06 report-metadata commit changed the assembled HEAD during the run without changing the fate/composer/data scope.",
+            "Earlier evidence.json, evidence_integrated.json and evidence_true_loop.json keep their original snapshot domains; none is relabeled as this source."
+          ]
+        },
+        "fortune": {
+          "seed_from": 0,
+          "seed_to_exclusive": 1000,
+          "lots_per_seed": 3,
+          "successful_lots": 3000,
+          "unique_pinned_promises": 5301,
+          "delivered_promises": 5301,
+          "accuracy_pct": 100,
+          "shards": [
+            {
+              "seed_from": 0,
+              "seed_to_exclusive": 250,
+              "lots": 750,
+              "promises": 1312,
+              "delivered": 1312
+            },
+            {
+              "seed_from": 250,
+              "seed_to_exclusive": 500,
+              "lots": 750,
+              "promises": 1314,
+              "delivered": 1314
+            },
+            {
+              "seed_from": 500,
+              "seed_to_exclusive": 750,
+              "lots": 750,
+              "promises": 1330,
+              "delivered": 1330
+            },
+            {
+              "seed_from": 750,
+              "seed_to_exclusive": 1000,
+              "lots": 750,
+              "promises": 1345,
+              "delivered": 1345
+            }
+          ]
+        },
+        "provenance": {
+          "source_objects": {
+            "scripts/cards/fate": "04fca685c57c709c027e8455148fe8fbdd038ad5",
+            "scripts/cards/core/card_composer.gd": "f7a1b8232c92b0bdc1b71a8832e2221157662f2c",
+            "scripts/cards/loop/schedule.gd": "185454e993c6c7a52fa0078541a86ac143aec12e",
+            "scripts/tests/cards/G05/fixture.gd": "d74b4963ccd009a219233dfd1f55878836fd61d8",
+            "scripts/tests/cards/G05/scenarios.gd": "b2a0d96c60bfbbc1fc00a9b1778d0d958165250c",
+            "data/cards/_examples": "b668bb0e240ba37bd8a6319ed98dacdad7bc6881"
+          },
+          "logs": [
+            {
+              "path": "/tmp/tmp.VIirMfO7UX/G05_lot_accuracy_a_.log",
+              "sha256": "3d4c6c514dee0d7a6d0fd302374589cc2b0dd406af5bf0ab5c5d23e2041f98ae",
+              "summary": "G05 ACCURACY seeds=0..249 lots=750 promised=1312 hit=1312 rate=100%",
+              "pass": "CARDS TEST PASS G05_lot_accuracy_a"
+            },
+            {
+              "path": "/tmp/tmp.VIirMfO7UX/G05_lot_accuracy_b_.log",
+              "sha256": "1f4528be4410d8e449355f2fe9cb0b4eded63555e5d531cf8935ea654653c78f",
+              "summary": "G05 ACCURACY seeds=250..499 lots=750 promised=1314 hit=1314 rate=100%",
+              "pass": "CARDS TEST PASS G05_lot_accuracy_b"
+            },
+            {
+              "path": "/tmp/tmp.VIirMfO7UX/G05_lot_accuracy_c_.log",
+              "sha256": "c0e208ad430a723c3590297510a1233e7fb818314cb9a9d6a85ee9aa898e2d89",
+              "summary": "G05 ACCURACY seeds=500..749 lots=750 promised=1330 hit=1330 rate=100%",
+              "pass": "CARDS TEST PASS G05_lot_accuracy_c"
+            },
+            {
+              "path": "/tmp/tmp.VIirMfO7UX/G05_lot_accuracy_d_.log",
+              "sha256": "cbce33deac51e1742543a2a6cdcd19fbac4fd29d583c001fc15340e3f2206e19",
+              "summary": "G05 ACCURACY seeds=750..999 lots=750 promised=1345 hit=1345 rate=100%",
+              "pass": "CARDS TEST PASS G05_lot_accuracy_d"
+            }
+          ],
+          "all_four_shards_passed_without_errors": true
+        }
+      }
+    },
+    "evidence_integrated.json": {
+      "source": "scripts/tests/cards/G05/evidence_integrated.json",
+      "evidence": {
+        "_meta": {
+          "owner": "G05",
+          "date": "2026-10-13",
+          "kind": "offline-integrated-test-evidence",
+          "snapshot": "cb5e31a + G05 ee34384 (detached924ad3c)",
+          "runtime": "Godot4.7.1"
+        },
+        "scope": {
+          "assembled_modules": [
+            "G01",
+            "G02",
+            "G03",
+            "G04",
+            "G05",
+            "G06"
+          ],
+          "suite": "G05",
+          "passed": 17,
+          "data": "private ASCII fixtures completing missing grades and sectors",
+          "oracle": "actual CardComposer.compose / CardSchedule.due with assembled modules",
+          "notes": [
+            "Suite keeps narrow W0 pay/rep/extra_deal/conscience-condition doubles; fortune accuracy uses zero-cost lots and actual composer/pin budget/substitution implementations.",
+            "Full CardEngine contact/money integration probe uses actual handlers without doubles.",
+            "Original W0 evidence.json certificate5275/5275 is retained separately."
+          ]
+        },
+        "fortune": {
+          "seed_from": 0,
+          "seed_to_exclusive": 1000,
+          "lots_per_seed": 3,
+          "successful_lots": 3000,
+          "unique_pinned_promises": 5301,
+          "delivered_promises": 5301,
+          "accuracy_pct": 100,
+          "shards": [
+            {
+              "seed_from": 0,
+              "seed_to_exclusive": 250,
+              "lots": 750,
+              "promises": 1312,
+              "delivered": 1312
+            },
+            {
+              "seed_from": 250,
+              "seed_to_exclusive": 500,
+              "lots": 750,
+              "promises": 1314,
+              "delivered": 1314
+            },
+            {
+              "seed_from": 500,
+              "seed_to_exclusive": 750,
+              "lots": 750,
+              "promises": 1330,
+              "delivered": 1330
+            },
+            {
+              "seed_from": 750,
+              "seed_to_exclusive": 1000,
+              "lots": 750,
+              "promises": 1345,
+              "delivered": 1345
+            }
+          ]
+        },
+        "conscience": {
+          "seeds": 500,
+          "picks_per_seed": 2,
+          "high_bad_picks": 90,
+          "low_bad_picks": 224,
+          "sample_picks_per_group": 1000,
+          "difference_pct_points": 13.4
+        },
+        "cezi": {
+          "seeds": 200,
+          "has": 200,
+          "none": 200,
+          "actual_delivery_and_bans_verified": true
+        },
+        "contact_integration": {
+          "engine_api_no_handler_doubles": true,
+          "real_pull_attribute_widens_good_arc": true,
+          "spin_marks_ma_used_today": true,
+          "contact_preserved": true,
+          "same_day_slot_rejects_used_ma": true,
+          "slot_reservations_in_demands_and_pending_block_incense": true,
+          "slot_money_reserved": 300,
+          "incense_overcommit_amount": 50,
+          "incense_overcommit_rejected": true,
+          "funds_preserved": 340,
+          "no_state_floats_or_view_leaks": true
+        },
+        "wheel_calibration": {
+          "seeds": 2000,
+          "plain": {
+            "good": 517,
+            "samples": 2000,
+            "observed": 0.2585,
+            "expected": 0.25
+          },
+          "ma_incense": {
+            "good": 727,
+            "samples": 2000,
+            "observed": 0.3635,
+            "expected": 0.34782608695652173
+          },
+          "max_allowed_absolute_error": 0.025,
+          "both_within_error": true,
+          "actual_spin_effects_and_person_marking": true
+        },
+        "logs": {
+          "suite": "/workspace/scratch/G05-assembled-suite.log",
+          "contact": "/workspace/scratch/G05-true-integration.log",
+          "wheel_calibration": "/workspace/scratch/G05-wheel-calibration.log"
+        }
+      }
+    },
+    "evidence_true_loop.json": {
+      "source": "scripts/tests/cards/G05/evidence_true_loop.json",
+      "evidence": {
+        "_meta": {
+          "owner": "G05",
+          "date": "2026-10-13",
+          "kind": "real-command-loop-evidence",
+          "snapshot": "cb5e31a + G05 ee34384 (detached924ad3c)"
+        },
+        "scope": {
+          "real_card_engine_api": true,
+          "handler_doubles": false,
+          "data": "private ASCII DB fixtures completing missing grade data; no handler replacements",
+          "commands": [
+            "game.new",
+            "wheel.spin",
+            "month.begin",
+            "day.begin",
+            "fortune.lot",
+            "day.end",
+            "night.choose",
+            "settle.next"
+          ]
+        },
+        "fortune": {
+          "seed_from": 0,
+          "seed_to_exclusive": 20,
+          "lots_per_seed": 3,
+          "successful_lots": 60,
+          "unique_pinned_promises": 98,
+          "delivered_promises_or_same_omen_substitutes": 98,
+          "accuracy_pct": 100,
+          "actual_day_night_settle_state_transitions": true,
+          "no_state_floats": true
+        },
+        "log": "/workspace/scratch/G05-true-lot-loop.log",
+        "reproduce": {
+          "instruction": "Extract harness_source to a .gd file, run Godot headless with assembled modules and res root.",
+          "command": "GODOT --headless --path ASSEMBLED -s EXTRACTED_SCRIPT",
+          "harness_source": "# 真指令求签并推进 day/night/settle；只补测试数据，不替换处理器。\n# 验证未来天气和日循环实际变化下，预言仍发出或同征兆替身。\nextends SceneTree\nconst T = preload(\"res://scripts/tests/cards/lib/card_t.gd\")\nconst F = preload(\"res://scripts/tests/cards/G05/fixture.gd\")\nconst S = preload(\"res://scripts/cards/fate/fate_support.gd\")\nfunc _initialize() -> void:\n\tvar t := T.new(self, \"G05_true_lot_loop\")\n\tvar promised := 0\n\tvar delivered := 0\n\tfor seed in range(20):\n\t\tvar eng := CardEngine.new()\n\t\tt.ok(bool(eng.new_game({\"seed\": seed, \"only_examples\": true, \"save_dir\": t.user_dir()}).get(\"ok\")), \"true new game\")\n\t\teng.ctx.db = F.db()\n\t\tt.ok(bool(eng.send(&\"wheel.spin\", {\"wheel\": \"wh.month\", \"uid\": \"\"}).get(\"ok\")), \"monthly spin\")\n\t\tt.ok(bool(eng.send(&\"month.begin\", {}).get(\"ok\")), \"month begin\")\n\t\tt.ok(bool(eng.send(&\"day.begin\", {}).get(\"ok\")), \"first day\")\n\t\tvar uid := F.fortune_uid(eng.ctx)\n\t\tfor lot in range(3):\n\t\t\tt.ok(bool(eng.send(&\"fortune.lot\", {\"uid\": uid}).get(\"ok\")), \"real lot command\")\n\t\tvar pins: Dictionary = eng.ctx.state.ns(\"fate\").get(\"pins\", {}).duplicate(true)\n\t\tfor day in range(2, 5):\n\t\t\tt.ok(bool(eng.send(&\"day.end\", {\"confirm_gold_leave\": true}).get(\"ok\")), \"real day end\")\n\t\t\tvar offers: Array = eng.view().get(\"night_offers\", [])\n\t\t\tvar night := \"nt.tidy\" if offers.has(\"nt.tidy\") else (str(offers[0]) if not offers.is_empty() else \"\")\n\t\t\tvar choices: Array = eng.ctx.db.def(night).get(\"choices\", [])\n\t\t\tvar choice := str(choices[0][\"id\"]) if not choices.is_empty() else \"\"\n\t\t\tt.ok(bool(eng.send(&\"night.choose\", {\"def\": night, \"choice\": choice}).get(\"ok\")), \"real night choose\")\n\t\t\tt.ok(bool(eng.send(&\"settle.next\", {}).get(\"ok\")), \"real settle next\")\n\t\t\tt.ok(bool(eng.send(&\"day.begin\", {}).get(\"ok\")), \"real future day begin\")\n\t\t\tt.eq(eng.ctx.abs_day(), day, \"real date advanced\")\n\t\t\tvar definitions: Array = []\n\t\t\tfor card in eng.view().get(\"hand\", []):\n\t\t\t\tdefinitions.append(str(card[\"def\"]))\n\t\t\tfor def_id in pins.get(str(day), []):\n\t\t\t\tpromised += 1\n\t\t\t\tvar found := definitions.has(str(def_id))\n\t\t\t\tif not found:\n\t\t\t\t\tvar old := eng.ctx.db.def(str(def_id))\n\t\t\t\t\tfor actual in definitions:\n\t\t\t\t\t\tvar candidate := eng.ctx.db.def(str(actual))\n\t\t\t\t\t\tif str(candidate.get(\"type\", \"\")) == str(old.get(\"type\", \"\")) and S.intersects(S.omens(old), S.omens(candidate)):\n\t\t\t\t\t\t\tfound = true\n\t\t\t\tif found:\n\t\t\t\t\tdelivered += 1\n\t\t\t\tt.ok(found, \"true loop promise or same-omen substitute delivered\")\n\t\tt.eq(t.find_floats(eng.ctx.state.data), PackedStringArray(), \"real loop state integers\")\n\tprint(\"G05 TRUE LOT LOOP seeds=0..19 lots=60 promised=%d delivered=%d rate=100%% no_handler_doubles=true\" % [promised, delivered])\n\tt.eq(delivered, promised, \"all actual loop predictions fulfilled\")\n\tt.ok(promised > 0, \"real loop promises observed\")\n\tt.finish()\n"
+        }
+      }
+    }
+  },
+  "date": "2026-10-13",
+  "datasets": [
+    "examples_with_G06_test_completion"
+  ],
+  "db_hashes": [
+    "8b13d639adc701b59f399723c5bdc7e77c168b150a276dbab7ffe74960834a9b"
+  ],
+  "source_revisions": [
+    "1e8887d2c97d5625f508f2d643e78726457fc606"
+  ],
+  "fuzz": {
+    "runs": 1000,
+    "passed": 1000,
+    "stages_requested": [
+      3
+    ],
+    "preview_checks": 1046554,
+    "end_checks": 276412,
+    "escape_checks": 44898,
+    "max_escape_steps": 7,
+    "save_loads": 28689,
+    "fresh_facades": 28689,
+    "expected_rejections": 271942,
+    "failed_seeds": [],
+    "scope": "Public API; three stages or legitimate game over; state integer checks and sampled replay belong to G06_no_deadlock suite."
+  },
+  "run_outcomes": {
+    "fair": {
+      "runs": 200,
+      "ok": 200,
+      "reasons": {
+        "ending": 116,
+        "prison": 84
+      },
+      "runs_with_last_error": 194
+    },
+    "greedy": {
+      "runs": 200,
+      "ok": 200,
+      "reasons": {
+        "ending": 146,
+        "prison": 54
+      },
+      "runs_with_last_error": 194
+    },
+    "kind": {
+      "runs": 200,
+      "ok": 200,
+      "reasons": {
+        "ending": 106,
+        "prison": 94
+      },
+      "runs_with_last_error": 194
+    },
+    "random": {
+      "runs": 200,
+      "ok": 200,
+      "reasons": {
+        "ending": 185,
+        "prison": 15
+      },
+      "runs_with_last_error": 196
+    },
+    "refuser": {
+      "runs": 200,
+      "ok": 200,
+      "reasons": {
+        "ending": 200
+      },
+      "runs_with_last_error": 0
+    },
+    "wheel": {
+      "runs": 200,
+      "ok": 200,
+      "reasons": {
+        "prison": 89,
+        "ending": 111
+      },
+      "runs_with_last_error": 200
+    },
+    "hoarder": {
+      "runs": 200,
+      "ok": 200,
+      "reasons": {
+        "ending": 119,
+        "prison": 81
+      },
+      "runs_with_last_error": 194
+    },
+    "fuzz": {
+      "runs": 1000,
+      "ok": 1000,
+      "reasons": {
+        "ending": 949,
+        "prison": 51
+      }
+    }
+  },
+  "evidence_scope": {
+    "game_source": "1e8887d2c97d5625f508f2d643e78726457fc606",
+    "strategy_games": 1400,
+    "full_fuzz_games": 1000,
+    "required_short_fuzz_games": 1000,
+    "G06_suites": 20,
+    "combined_owned_suites": 93,
+    "owned_counts": {
+      "G01": 11,
+      "G02": 17,
+      "G03": 13,
+      "G04": 14,
+      "G05": 18,
+      "G06": 20
+    },
+    "combined_not_single_invocation": true,
+    "shared_W0_obsolete_assertion_failures": 2,
+    "CI_budget_issue": 26,
+    "legacy_smoke_issue": 27,
+    "formal_data_W2": "not_available"
+  },
+  "performance": {
+    "jobs": 6,
+    "environment_cpu_quota": 4,
+    "batches": {
+      "reference_600": {
+        "elapsed_seconds": 755.721,
+        "expected_games": 600,
+        "raw_parts": "/workspace/scratch/G06-final-cached-600/.parts.0gvimv",
+        "scope": "complete CLI batch, six workers, four CPU quota",
+        "budget_seconds": 600,
+        "within_budget": false
+      },
+      "other_800": {
+        "elapsed_seconds": 738.854,
+        "expected_games": 800,
+        "raw_parts": "/workspace/scratch/G06-final-cached-800/.parts.yKU9jb",
+        "scope": "complete CLI batch, six workers, four CPU quota"
+      },
+      "full_fuzz_1000": {
+        "elapsed_seconds": 2493.962,
+        "expected_games": 1000,
+        "raw_parts": "/workspace/scratch/G06-final-cached-fuzz1000/.parts.kevNap",
+        "scope": "complete CLI batch, six workers, four CPU quota"
+      }
+    },
+    "raw_engine_bench": {
+      "load_all_ms": 53.987,
+      "project_fixture_ms": 0.669,
+      "autoplay_30_days_refuser_ms": 577.019,
+      "autoplay_90_days_refuser_ms": 1564.605,
+      "day_begin_ms": 1.696,
+      "settle_next_ms": 1.406,
+      "fortune_lot_ms": 9.794,
+      "save_90_days_bytes": 75629,
+      "scope": "private completion examples; project uses independent fixture; one-shot, idle process",
+      "source_revision": "8388973c1b3fd6b23fab372699c7330a6b12d67a"
+    },
+    "G02_assembled_settle_peak": {
+      "milliseconds": 18.691,
+      "budget_ms": 10,
+      "within_budget": false
+    }
+  },
+  "raw_run_manifest": [
+    {
+      "file": "/workspace/scratch/G06-final-cached-600/.parts.0gvimv/runs_103_136.json",
+      "sha256": "598388f96ce63f749ebb92431db6a98a2d583962f5d9f4ac1e7d8fa146bf9756",
+      "runs": 102,
+      "source_revision": "1e8887d2c97d5625f508f2d643e78726457fc606",
+      "db_hash": "8b13d639adc701b59f399723c5bdc7e77c168b150a276dbab7ffe74960834a9b"
+    },
+    {
+      "file": "/workspace/scratch/G06-final-cached-600/.parts.0gvimv/runs_137_170.json",
+      "sha256": "1cb60497da758133fce3871e7c58b4d9a88cafef17f3bfad16731f8fe3e61879",
+      "runs": 102,
+      "source_revision": "1e8887d2c97d5625f508f2d643e78726457fc606",
+      "db_hash": "8b13d639adc701b59f399723c5bdc7e77c168b150a276dbab7ffe74960834a9b"
+    },
+    {
+      "file": "/workspace/scratch/G06-final-cached-600/.parts.0gvimv/runs_171_200.json",
+      "sha256": "e62d0393b12db451f6f6fcfd7106b1a05de49f10adeb48bed7f990e6cc1fad7e",
+      "runs": 90,
+      "source_revision": "1e8887d2c97d5625f508f2d643e78726457fc606",
+      "db_hash": "8b13d639adc701b59f399723c5bdc7e77c168b150a276dbab7ffe74960834a9b"
+    },
+    {
+      "file": "/workspace/scratch/G06-final-cached-600/.parts.0gvimv/runs_1_34.json",
+      "sha256": "67c5717c4dd317477b4db9b8d6fa45aef6e7540a6cb02c6b3bdbadf90ccd7453",
+      "runs": 102,
+      "source_revision": "1e8887d2c97d5625f508f2d643e78726457fc606",
+      "db_hash": "8b13d639adc701b59f399723c5bdc7e77c168b150a276dbab7ffe74960834a9b"
+    },
+    {
+      "file": "/workspace/scratch/G06-final-cached-600/.parts.0gvimv/runs_35_68.json",
+      "sha256": "b4382165f4df2f99ae10b94dbbc04e30613edca71605d331db9089636d22f466",
+      "runs": 102,
+      "source_revision": "1e8887d2c97d5625f508f2d643e78726457fc606",
+      "db_hash": "8b13d639adc701b59f399723c5bdc7e77c168b150a276dbab7ffe74960834a9b"
+    },
+    {
+      "file": "/workspace/scratch/G06-final-cached-600/.parts.0gvimv/runs_69_102.json",
+      "sha256": "f6fba2f3526a1db9d4c05f24ef8ef11f2c8c487645a161efbf21abaf9f652600",
+      "runs": 102,
+      "source_revision": "1e8887d2c97d5625f508f2d643e78726457fc606",
+      "db_hash": "8b13d639adc701b59f399723c5bdc7e77c168b150a276dbab7ffe74960834a9b"
+    },
+    {
+      "file": "/workspace/scratch/G06-final-cached-800/.parts.yKU9jb/runs_103_136.json",
+      "sha256": "ba87d13b998f8248d0922bf05bf3db8dea90713a136b2ea20f9de92ff0327590",
+      "runs": 136,
+      "source_revision": "1e8887d2c97d5625f508f2d643e78726457fc606",
+      "db_hash": "8b13d639adc701b59f399723c5bdc7e77c168b150a276dbab7ffe74960834a9b"
+    },
+    {
+      "file": "/workspace/scratch/G06-final-cached-800/.parts.yKU9jb/runs_137_170.json",
+      "sha256": "87b088bf8e6e48dfb0201c159a837bbec8568cf22870023860906f259879d346",
+      "runs": 136,
+      "source_revision": "1e8887d2c97d5625f508f2d643e78726457fc606",
+      "db_hash": "8b13d639adc701b59f399723c5bdc7e77c168b150a276dbab7ffe74960834a9b"
+    },
+    {
+      "file": "/workspace/scratch/G06-final-cached-800/.parts.yKU9jb/runs_171_200.json",
+      "sha256": "e2c03b9b8457b814f2fcd912a67a344906d8b00dd90052264783fe403b5d744e",
+      "runs": 120,
+      "source_revision": "1e8887d2c97d5625f508f2d643e78726457fc606",
+      "db_hash": "8b13d639adc701b59f399723c5bdc7e77c168b150a276dbab7ffe74960834a9b"
+    },
+    {
+      "file": "/workspace/scratch/G06-final-cached-800/.parts.yKU9jb/runs_1_34.json",
+      "sha256": "827e5c60f77fa0aea1701e0bc3ca875d6c06f4a7ce0b6265df6a1b54a575046a",
+      "runs": 136,
+      "source_revision": "1e8887d2c97d5625f508f2d643e78726457fc606",
+      "db_hash": "8b13d639adc701b59f399723c5bdc7e77c168b150a276dbab7ffe74960834a9b"
+    },
+    {
+      "file": "/workspace/scratch/G06-final-cached-800/.parts.yKU9jb/runs_35_68.json",
+      "sha256": "fe81624c508a2d0bcfa788eb97eb8716a950e737dedd026dd08f67ab0d1a9e01",
+      "runs": 136,
+      "source_revision": "1e8887d2c97d5625f508f2d643e78726457fc606",
+      "db_hash": "8b13d639adc701b59f399723c5bdc7e77c168b150a276dbab7ffe74960834a9b"
+    },
+    {
+      "file": "/workspace/scratch/G06-final-cached-800/.parts.yKU9jb/runs_69_102.json",
+      "sha256": "0b562d8ad02007127b1dac1ade175d7039b13dac6acfffcdb14aacb5c1d0a5d5",
+      "runs": 136,
+      "source_revision": "1e8887d2c97d5625f508f2d643e78726457fc606",
+      "db_hash": "8b13d639adc701b59f399723c5bdc7e77c168b150a276dbab7ffe74960834a9b"
+    },
+    {
+      "file": "/workspace/scratch/G06-final-cached-fuzz1000/.parts.kevNap/runs_168_334.json",
+      "sha256": "39605bc433d8f0a91947c84d48e316c5c9ff5ce47d541e1be405193a9837f7c8",
+      "runs": 167,
+      "source_revision": "1e8887d2c97d5625f508f2d643e78726457fc606",
+      "db_hash": "8b13d639adc701b59f399723c5bdc7e77c168b150a276dbab7ffe74960834a9b"
+    },
+    {
+      "file": "/workspace/scratch/G06-final-cached-fuzz1000/.parts.kevNap/runs_1_167.json",
+      "sha256": "b2abe816b779587f9aa4e415ae301fa5701a17953720746a1d2f63a4e85b1815",
+      "runs": 167,
+      "source_revision": "1e8887d2c97d5625f508f2d643e78726457fc606",
+      "db_hash": "8b13d639adc701b59f399723c5bdc7e77c168b150a276dbab7ffe74960834a9b"
+    },
+    {
+      "file": "/workspace/scratch/G06-final-cached-fuzz1000/.parts.kevNap/runs_335_501.json",
+      "sha256": "a45ac10e40e44a23311cbf9231b1759253267647e2df69fbceb8ad577d30da26",
+      "runs": 167,
+      "source_revision": "1e8887d2c97d5625f508f2d643e78726457fc606",
+      "db_hash": "8b13d639adc701b59f399723c5bdc7e77c168b150a276dbab7ffe74960834a9b"
+    },
+    {
+      "file": "/workspace/scratch/G06-final-cached-fuzz1000/.parts.kevNap/runs_502_668.json",
+      "sha256": "1ba27f220a543ff32c98f744b57f1f4fb35e054e3113e43c86f4fc4d8f3dc7c5",
+      "runs": 167,
+      "source_revision": "1e8887d2c97d5625f508f2d643e78726457fc606",
+      "db_hash": "8b13d639adc701b59f399723c5bdc7e77c168b150a276dbab7ffe74960834a9b"
+    },
+    {
+      "file": "/workspace/scratch/G06-final-cached-fuzz1000/.parts.kevNap/runs_669_835.json",
+      "sha256": "421d9287c6bfcb29a20377aba6d46169e0bacec9de4c057daa9e610b7ad9cb66",
+      "runs": 167,
+      "source_revision": "1e8887d2c97d5625f508f2d643e78726457fc606",
+      "db_hash": "8b13d639adc701b59f399723c5bdc7e77c168b150a276dbab7ffe74960834a9b"
+    },
+    {
+      "file": "/workspace/scratch/G06-final-cached-fuzz1000/.parts.kevNap/runs_836_1000.json",
+      "sha256": "29a0e2621675eb05bfc6dd5937d9929f4e1213f882c31ee60c2f667493f59b3c",
+      "runs": 165,
+      "source_revision": "1e8887d2c97d5625f508f2d643e78726457fc606",
+      "db_hash": "8b13d639adc701b59f399723c5bdc7e77c168b150a276dbab7ffe74960834a9b"
+    }
+  ],
+  "source_url": "https://github.com/misakamikotoghr-5205/dehoudang/tree/1e8887d2c97d5625f508f2d643e78726457fc606",
+  "metric_denominators": {
+    "fair": {
+      "0": {
+        "all_runs": 200,
+        "reached_stage": 200,
+        "month_money_samples": 120,
+        "settle_day_samples": 4465,
+        "initial_hand_day_samples": 4547
+      },
+      "1": {
+        "all_runs": 200,
+        "reached_stage": 118,
+        "month_money_samples": 116,
+        "settle_day_samples": 3481,
+        "initial_hand_day_samples": 3483
+      },
+      "2": {
+        "all_runs": 200,
+        "reached_stage": 116,
+        "month_money_samples": 116,
+        "settle_day_samples": 3480,
+        "initial_hand_day_samples": 3480
+      }
+    },
+    "greedy": {
+      "0": {
+        "all_runs": 200,
+        "reached_stage": 200,
+        "month_money_samples": 147,
+        "settle_day_samples": 4756,
+        "initial_hand_day_samples": 4810
+      },
+      "1": {
+        "all_runs": 200,
+        "reached_stage": 146,
+        "month_money_samples": 146,
+        "settle_day_samples": 4380,
+        "initial_hand_day_samples": 4380
+      },
+      "2": {
+        "all_runs": 200,
+        "reached_stage": 146,
+        "month_money_samples": 146,
+        "settle_day_samples": 4380,
+        "initial_hand_day_samples": 4380
+      }
+    },
+    "hoarder": {
+      "0": {
+        "all_runs": 200,
+        "reached_stage": 200,
+        "month_money_samples": 125,
+        "settle_day_samples": 4540,
+        "initial_hand_day_samples": 4620
+      },
+      "1": {
+        "all_runs": 200,
+        "reached_stage": 120,
+        "month_money_samples": 119,
+        "settle_day_samples": 3571,
+        "initial_hand_day_samples": 3572
+      },
+      "2": {
+        "all_runs": 200,
+        "reached_stage": 119,
+        "month_money_samples": 119,
+        "settle_day_samples": 3570,
+        "initial_hand_day_samples": 3570
+      }
+    },
+    "kind": {
+      "0": {
+        "all_runs": 200,
+        "reached_stage": 200,
+        "month_money_samples": 107,
+        "settle_day_samples": 4262,
+        "initial_hand_day_samples": 4356
+      },
+      "1": {
+        "all_runs": 200,
+        "reached_stage": 106,
+        "month_money_samples": 106,
+        "settle_day_samples": 3180,
+        "initial_hand_day_samples": 3180
+      },
+      "2": {
+        "all_runs": 200,
+        "reached_stage": 106,
+        "month_money_samples": 106,
+        "settle_day_samples": 3180,
+        "initial_hand_day_samples": 3180
+      }
+    },
+    "random": {
+      "0": {
+        "all_runs": 200,
+        "reached_stage": 200,
+        "month_money_samples": 186,
+        "settle_day_samples": 5651,
+        "initial_hand_day_samples": 5665
+      },
+      "1": {
+        "all_runs": 200,
+        "reached_stage": 186,
+        "month_money_samples": 185,
+        "settle_day_samples": 5559,
+        "initial_hand_day_samples": 5560
+      },
+      "2": {
+        "all_runs": 200,
+        "reached_stage": 185,
+        "month_money_samples": 185,
+        "settle_day_samples": 5550,
+        "initial_hand_day_samples": 5550
+      }
+    },
+    "refuser": {
+      "0": {
+        "all_runs": 200,
+        "reached_stage": 200,
+        "month_money_samples": 200,
+        "settle_day_samples": 6000,
+        "initial_hand_day_samples": 6000
+      },
+      "1": {
+        "all_runs": 200,
+        "reached_stage": 200,
+        "month_money_samples": 200,
+        "settle_day_samples": 6000,
+        "initial_hand_day_samples": 6000
+      },
+      "2": {
+        "all_runs": 200,
+        "reached_stage": 200,
+        "month_money_samples": 200,
+        "settle_day_samples": 6000,
+        "initial_hand_day_samples": 6000
+      }
+    },
+    "wheel": {
+      "0": {
+        "all_runs": 200,
+        "reached_stage": 200,
+        "month_money_samples": 111,
+        "settle_day_samples": 4448,
+        "initial_hand_day_samples": 4537
+      },
+      "1": {
+        "all_runs": 200,
+        "reached_stage": 111,
+        "month_money_samples": 111,
+        "settle_day_samples": 3330,
+        "initial_hand_day_samples": 3330
+      },
+      "2": {
+        "all_runs": 200,
+        "reached_stage": 111,
+        "month_money_samples": 111,
+        "settle_day_samples": 3330,
+        "initial_hand_day_samples": 3330
+      }
+    }
+  }
+}

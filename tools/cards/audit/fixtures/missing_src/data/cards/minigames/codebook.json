@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "owner": "K11",
+    "schema": 1
+  },
+  "codes": {
+    "0417": {
+      "key": "cb.word.0417",
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_CODE"
+    }
+  }
+}

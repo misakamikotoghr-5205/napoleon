@@ -1,0 +1,111 @@
+{
+  "_meta": {
+    "owner": "C08",
+    "schema": 1,
+    "brief": "牢房还没处理：打烊清单是 stay，确认后进夜里",
+    "_provenance": {
+      "by": "ai",
+      "task": "C08",
+      "date": "2026-10-14"
+    }
+  },
+  "queries": {
+    "card|{\"uid\":\"c0601\"}": {
+      "actions": [],
+      "art": "illus.pr.cell",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "days_left": 2,
+      "def": "pr.cell",
+      "expires_in": -1,
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "prison",
+      "person": "",
+      "status": "open",
+      "type": "prison",
+      "uid": "c0601",
+      "used_today": false,
+      "zone": "hand"
+    },
+    "day.end_preview|{}": {
+      "items": [
+        {
+          "args": {
+            "max": 3,
+            "nights": 1
+          },
+          "consequence_key": "g06.end.stay",
+          "def": "pr.cell",
+          "kind": "stay",
+          "uid": "c0601"
+        }
+      ],
+      "needs_confirm": true,
+      "step": "end_day"
+    }
+  },
+  "responses": [
+    {
+      "cmd": "day.end",
+      "match": {
+        "confirm": true
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "night"
+        }
+      ],
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    }
+  ],
+  "view": {
+    "busy": false,
+    "date": {
+      "abs_day": 4,
+      "d": 4,
+      "era": "1938",
+      "m": 3,
+      "minute": 600,
+      "stage": 0,
+      "stage_day": 4,
+      "stage_days": 30,
+      "weekday": 4,
+      "y": 1938
+    },
+    "hand": [],
+    "heat_tier": 0,
+    "mode": "shop",
+    "money": {
+      "amount": 40,
+      "currency": "fabi"
+    },
+    "night_offers": [],
+    "phase": "day",
+    "rep_tier": 1,
+    "stage": {
+      "sealed": false,
+      "set": "counter",
+      "time": "day"
+    },
+    "v": 1
+  }
+}

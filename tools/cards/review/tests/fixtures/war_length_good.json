@@ -1,0 +1,12 @@
+{
+  "cards": [
+    {
+      "id": "ev.any.fourteen",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "brief": "时长按十四年抗战写。"
+    }
+  ]
+}

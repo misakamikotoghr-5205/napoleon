@@ -1,0 +1,2004 @@
+{
+  "_meta": {
+    "owner": "K08",
+    "schema": 1,
+    "brief": "1939 档案碎片，含一年后。",
+    "_provenance": {
+      "by": "ai",
+      "task": "K08",
+      "date": "2026-10-13"
+    }
+  },
+  "cards": [
+    {
+      "id": "df.brother.1939.after_farewell",
+      "type": "dossier_fragment",
+      "person": "brother",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 5,
+      "kind": "year_after",
+      "brief": "一年后：听过交代的人，隔年才知道他离开后铺子被托付给谁。只有拿到了前一年那块才会补这一块。跳年时补，不另写正文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      },
+      "year_after_of": "df.brother.1938.farewell"
+    },
+    {
+      "id": "df.brother.1939.first_letter",
+      "type": "dossier_fragment",
+      "person": "brother",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 6,
+      "kind": "letter",
+      "brief": "1939年，离家后第一封信，纸是撕开的。来源是信，不写信上的句子。 消息 nw.1939.brother_torn 拼完才补这块。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.brother.1939.quiet",
+      "type": "dossier_fragment",
+      "person": "brother",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 7,
+      "kind": "said",
+      "brief": "1939年，信还肯寄到铺子来的那一层信任。来源是本人开口，不写原话。 nw.1939.brother_torn 交给条子则这块变缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.zhouma.1939.after_kitchen",
+      "type": "dossier_fragment",
+      "person": "zhouma",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 5,
+      "kind": "year_after",
+      "brief": "一年后：那口锅隔年仍没人赎，她是否还在茶馆灶边。只有拿到了前一年那块才会补这一块。跳年时补，不另写正文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      },
+      "year_after_of": "df.zhouma.1938.kitchen"
+    },
+    {
+      "id": "df.zhouma.1939.heard_dock",
+      "type": "dossier_fragment",
+      "person": "zhouma",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 6,
+      "kind": "heard",
+      "brief": "1939年，她又提起水边有人见过那个便衣青年。来源是别人提起，不写原话。 消息 nw.1939.wangshan_word 看了补。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.linsao.1939.after_hairpin",
+      "type": "dossier_fragment",
+      "person": "linsao",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 6,
+      "kind": "year_after",
+      "brief": "一年后：金簪隔年仍没人赎，才知道她为什么没来。只有拿到了前一年那块才会补这一块。跳年时补，不另写正文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      },
+      "year_after_of": "df.linsao.1938.hairpin"
+    },
+    {
+      "id": "df.linsao.1939.child",
+      "type": "dossier_fragment",
+      "person": "linsao",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 7,
+      "kind": "heard",
+      "brief": "1939年，隔年有人提起孩子的消息。来源是别人提起，不写原话。 消息 nw.1939.linsao_child 看了补。合同例子 id。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.linsao.1939.quiet",
+      "type": "dossier_fragment",
+      "person": "linsao",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 8,
+      "kind": "said",
+      "brief": "1939年，孩子的事还没有被拿去交差。来源是本人开口，不写原话。 nw.1939.linsao_child 交给条子则这块变缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.wangshan.1939.after_dock",
+      "type": "dossier_fragment",
+      "person": "wangshan",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 4,
+      "kind": "year_after",
+      "brief": "一年后：隔年码头上还有人记得见过他。只有拿到了前一年那块才会补这一块。跳年时补，不另写正文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      },
+      "year_after_of": "df.wangshan.1938.dock"
+    },
+    {
+      "id": "df.wangshan.1939.whereabouts",
+      "type": "dossier_fragment",
+      "person": "wangshan",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 5,
+      "kind": "heard",
+      "brief": "1939年，有人把下落说到实处。来源是别人提起，不写原话。 预留给 K03 金色牌 s1939.wangshan_whereabouts：选项补这块，不理则这块变缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.wangshan.1939.whisper",
+      "type": "dossier_fragment",
+      "person": "wangshan",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 6,
+      "kind": "heard",
+      "brief": "1939年，只是又有人提起水边，还不到下落。来源是别人提起，不写原话。 消息 nw.1939.wangshan_word 看了补周妈那块；这块由同一张消息一并补上，仍不是金色牌那块。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.wangshan.1939.quiet",
+      "type": "dossier_fragment",
+      "person": "wangshan",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 7,
+      "kind": "said",
+      "brief": "1939年，下落还没有被拿去交差。来源是本人开口，不写原话。 nw.1939.wangshan_word 交给条子则这块变缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.zhao.1939.after_land",
+      "type": "dossier_fragment",
+      "person": "zhao",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 5,
+      "kind": "year_after",
+      "brief": "一年后：隔年那件当物仍在架上，才知道田里的收成。只有拿到了前一年那块才会补这一块。跳年时补，不另写正文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      },
+      "year_after_of": "df.zhao.1938.land"
+    },
+    {
+      "id": "df.zhao.1939.year_end",
+      "type": "dossier_fragment",
+      "person": "zhao",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 6,
+      "kind": "pawn",
+      "brief": "1939年，年关他把冬衣也当了。来源是当了什么。 预留给 K03 金色牌 s1939.year_end：选项补这块，不理则这块变缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.zhao.1939.crowd",
+      "type": "dossier_fragment",
+      "person": "zhao",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 7,
+      "kind": "heard",
+      "brief": "1939年，年关柜台前人多，有人说他也在队里。来源是别人提起，不写原话。 消息 nw.1939.year_pawn 看了补。不是金色牌那块。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.zhao.1939.fuel",
+      "type": "dossier_fragment",
+      "person": "zhao",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 8,
+      "kind": "heard",
+      "brief": "1939年，柴价紧的时候有人提起他家灶。来源是别人提起，不写原话。 消息 nw.1939.firewood 看了补。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.zhao.1939.quiet",
+      "type": "dossier_fragment",
+      "person": "zhao",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 9,
+      "kind": "said",
+      "brief": "1939年，年关的事还没有被拿去交差。来源是本人开口，不写原话。 nw.1939.year_pawn 或 nw.1939.firewood 交给条子则这块变缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.ma.1939.after_levy",
+      "type": "dossier_fragment",
+      "person": "ma",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 5,
+      "kind": "year_after",
+      "brief": "一年后：隔年才知道那笔摊派落在谁头上。只有拿到了前一年那块才会补这一块。跳年时补，不另写正文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      },
+      "year_after_of": "df.ma.1938.levy"
+    },
+    {
+      "id": "df.ma.1939.post",
+      "type": "dossier_fragment",
+      "person": "ma",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 6,
+      "kind": "heard",
+      "brief": "1939年，伪县政府和伪区公所取代伪维持会之后，他仍是镇上出面的人。来源是别人提起，不写原话。 消息 nw.1939.county_paper 看了补。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.hu2.1939.after_errand",
+      "type": "dossier_fragment",
+      "person": "hu2",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 6,
+      "kind": "year_after",
+      "brief": "一年后：隔年他还在不在保长身边跑腿。只有拿到了前一年那块才会补这一块。跳年时补，不另写正文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      },
+      "year_after_of": "df.hu2.1938.errand"
+    },
+    {
+      "id": "df.hu2.1939.rounds",
+      "type": "dossier_fragment",
+      "person": "hu2",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 7,
+      "kind": "heard",
+      "brief": "1939年，城门设岗之后，有人说他也去衙门口候着。来源是别人提起，不写原话。 预留给 K03 人物牌或 K04 城门事件补。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.chen.1939.after_clinic",
+      "type": "dossier_fragment",
+      "person": "chen",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 5,
+      "kind": "year_after",
+      "brief": "一年后：隔年济生堂是否还开着。只有拿到了前一年那块才会补这一块。跳年时补，不另写正文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      },
+      "year_after_of": "df.chen.1938.clinic"
+    },
+    {
+      "id": "df.chen.1939.code",
+      "type": "dossier_fragment",
+      "person": "chen",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 6,
+      "kind": "letter",
+      "brief": "1939年，一封没有译开的短笺，只说明有人用码找他。来源是信，不写信上的句子。 消息 nw.1939.chen_letter 看了补。还不是主线那封要译的电报。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.chen.1939.quiet",
+      "type": "dossier_fragment",
+      "person": "chen",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 7,
+      "kind": "said",
+      "brief": "1939年，短笺还没有被你交出去。来源是本人开口，不写原话。 nw.1939.chen_letter 交给条子则这块变缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.xiaoding.1939.after_rice",
+      "type": "dossier_fragment",
+      "person": "xiaoding",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 5,
+      "kind": "year_after",
+      "brief": "一年后：那袋米的当票隔年还在不在。只有拿到了前一年那块才会补这一块。跳年时补，不另写正文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      },
+      "year_after_of": "df.xiaoding.1938.rice"
+    },
+    {
+      "id": "df.xiaoding.1939.still",
+      "type": "dossier_fragment",
+      "person": "xiaoding",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 6,
+      "kind": "said",
+      "brief": "1939年，年关他仍在孙家灶上。来源是本人开口，不写原话。 预留给 K03 人物牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.zhang.1939.after_sulfa",
+      "type": "dossier_fragment",
+      "person": "zhang",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 5,
+      "kind": "year_after",
+      "brief": "一年后：隔年那板药的当票是否被人赎走。只有拿到了前一年那块才会补这一块。跳年时补，不另写正文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      },
+      "year_after_of": "df.zhang.1938.sulfa"
+    },
+    {
+      "id": "df.zhang.1939.ward",
+      "type": "dossier_fragment",
+      "person": "zhang",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 6,
+      "kind": "said",
+      "brief": "1939年，她说病房里人多、药更紧。来源是本人开口，不写原话。 消息 nw.1939.zhang_ward 看了补。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.zhang.1939.quiet",
+      "type": "dossier_fragment",
+      "person": "zhang",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 7,
+      "kind": "said",
+      "brief": "1939年，病房的紧还没有被你交出去。来源是本人开口，不写原话。 nw.1939.zhang_ward 交给条子则这块变缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.li.1939.after_books",
+      "type": "dossier_fragment",
+      "person": "li",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 4,
+      "kind": "year_after",
+      "brief": "一年后：旧书隔年是否还在架上。只有拿到了前一年那块才会补这一块。跳年时补，不另写正文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      },
+      "year_after_of": "df.li.1938.books"
+    },
+    {
+      "id": "df.li.1939.gate",
+      "type": "dossier_fragment",
+      "person": "li",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 5,
+      "kind": "heard",
+      "brief": "1939年，城门盘查时有人看见学生模样的人被拦住问证件。来源是别人提起，不写原话。 消息 nw.1939.gate_check 看了补。K04 城门事件也可以补。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.li.1939.school",
+      "type": "dossier_fragment",
+      "person": "li",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 6,
+      "kind": "heard",
+      "brief": "1939年，又有人说学堂的人少了。来源是别人提起，不写原话。 消息 nw.1939.student_gate 看了补。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.li.1939.quiet",
+      "type": "dossier_fragment",
+      "person": "li",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 7,
+      "kind": "said",
+      "brief": "1939年，城门口的事没有被你交出去。来源是本人开口，不写原话。 nw.1939.gate_check 或 nw.1939.student_gate 交给条子则这块变缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.sunyoung.1939.after_deed",
+      "type": "dossier_fragment",
+      "person": "sunyoung",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 5,
+      "kind": "year_after",
+      "brief": "一年后：那张契隔年没有下文，才知道孙家没有来认。只有拿到了前一年那块才会补这一块。跳年时补，不另写正文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      },
+      "year_after_of": "df.sunyoung.1938.deed"
+    },
+    {
+      "id": "df.sunyoung.1939.spend",
+      "type": "dossier_fragment",
+      "person": "sunyoung",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 6,
+      "kind": "heard",
+      "brief": "1939年，年关有人说他还在铺子外头转。来源是别人提起，不写原话。 预留给 K03 人物牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.sunlaoye.1939.after_guild",
+      "type": "dossier_fragment",
+      "person": "sunlaoye",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 4,
+      "kind": "year_after",
+      "brief": "一年后：隔年商会是否还由他出面。只有拿到了前一年那块才会补这一块。跳年时补，不另写正文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      },
+      "year_after_of": "df.sunlaoye.1938.guild"
+    },
+    {
+      "id": "df.sunlaoye.1939.market",
+      "type": "dossier_fragment",
+      "person": "sunlaoye",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 5,
+      "kind": "heard",
+      "brief": "1939年，日商压着茧行和米行的时候，有人说商会不做声。来源是别人提起，不写原话。 消息 nw.1939.cocoon_down 看了补。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.sunlaoye.1939.quiet",
+      "type": "dossier_fragment",
+      "person": "sunlaoye",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 6,
+      "kind": "said",
+      "brief": "1939年，茧和米的行市没有被你拿去交差。来源是本人开口，不写原话。 nw.1939.cocoon_down 交给条子则这块变缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.sunlaoye.1939.quiet_house",
+      "type": "dossier_fragment",
+      "person": "sunlaoye",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 7,
+      "kind": "said",
+      "brief": "1939年，孙府把自己关着这件事还没有被你交出去。来源是本人开口，不写原话。 nw.1939.sun_quiet 交给条子则这块变缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.guanjia.1939.after_errand",
+      "type": "dossier_fragment",
+      "person": "guanjia",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 4,
+      "kind": "year_after",
+      "brief": "一年后：隔年他还否替孙府出门。只有拿到了前一年那块才会补这一块。跳年时补，不另写正文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      },
+      "year_after_of": "df.guanjia.1938.errand"
+    },
+    {
+      "id": "df.guanjia.1939.gate",
+      "type": "dossier_fragment",
+      "person": "guanjia",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 5,
+      "kind": "said",
+      "brief": "1939年，他提起城门设岗，让府里的人少出门。来源是本人开口，不写原话。 消息 nw.1939.sun_quiet 看了补。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.wu.1939.after_quote",
+      "type": "dossier_fragment",
+      "person": "wu",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 5,
+      "kind": "year_after",
+      "brief": "一年后：隔年才对上他那年说的行市和后来的价。只有拿到了前一年那块才会补这一块。跳年时补，不另写正文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      },
+      "year_after_of": "df.wu.1938.rice_quote"
+    },
+    {
+      "id": "df.wu.1939.price",
+      "type": "dossier_fragment",
+      "person": "wu",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 6,
+      "kind": "said",
+      "brief": "1939年，年关他亲自把米价抬上来。来源是本人开口，不写原话。 预留给 K03 金色牌或 K04 事件 s1939.wu_price：选项补这块，人物牌不理则这块变缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.wu.1939.board",
+      "type": "dossier_fragment",
+      "person": "wu",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 7,
+      "kind": "heard",
+      "brief": "1939年，街坊只说米又紧了，还没到他亲口抬价。来源是别人提起，不写原话。 消息 nw.1939.rice_jump 看了补。不是金色牌那块。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.wu.1939.quiet",
+      "type": "dossier_fragment",
+      "person": "wu",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 8,
+      "kind": "said",
+      "brief": "1939年，米紧的消息没有被你拿去交差。来源是本人开口，不写原话。 nw.1939.rice_jump 交给条子则这块变缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.postman.1939.after_route",
+      "type": "dossier_fragment",
+      "person": "postman",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 5,
+      "kind": "year_after",
+      "brief": "一年后：隔年邮路是否还按他说的日子走。只有拿到了前一年那块才会补这一块。跳年时补，不另写正文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      },
+      "year_after_of": "df.postman.1938.route"
+    },
+    {
+      "id": "df.postman.1939.letter_run",
+      "type": "dossier_fragment",
+      "person": "postman",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 6,
+      "kind": "said",
+      "brief": "1939年，他把哥哥的第一封信送到铺子。来源是本人开口，不写原话。 预留给 K03 金色牌 s1939.brother_letter：选项补这块，不理则这块变缺口。信的内容在哥哥那一页。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.postman.1939.rounds",
+      "type": "dossier_fragment",
+      "person": "postman",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 7,
+      "kind": "heard",
+      "brief": "1939年，有人看见他雨天仍出门送信。来源是别人提起，不写原话。 消息 nw.1939.postman_run 看了补。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.postman.1939.quiet",
+      "type": "dossier_fragment",
+      "person": "postman",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 8,
+      "kind": "said",
+      "brief": "1939年，他出门的路线没有被你交出去。来源是本人开口，不写原话。 nw.1939.postman_run 交给条子则这块变缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.nf1938a.1939.after_pawn",
+      "type": "dossier_fragment",
+      "person": "nf1938a",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 3,
+      "kind": "year_after",
+      "brief": "一年后：那件工具隔年还在架上，他是否还在码头。只有拿到了前一年那块才会补这一块。跳年时补，不另写正文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      },
+      "year_after_of": "df.nf1938a.1938.pawn"
+    },
+    {
+      "id": "df.nf1938c.1939.after_ask",
+      "type": "dossier_fragment",
+      "person": "nf1938c",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 3,
+      "kind": "year_after",
+      "brief": "一年后：隔年他没有再来问书。只有拿到了前一年那块才会补这一块。跳年时补，不另写正文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      },
+      "year_after_of": "df.nf1938c.1938.ask"
+    },
+    {
+      "id": "df.nf1939a.1939.coat",
+      "type": "dossier_fragment",
+      "person": "nf1939a",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 1,
+      "kind": "pawn",
+      "brief": "1939年，年关来当冬衣的人，队排到门口。名字由 A 定。来源是当了什么。 K03 persons 写 dossier true。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.nf1939a.1939.heard",
+      "type": "dossier_fragment",
+      "person": "nf1939a",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 2,
+      "kind": "heard",
+      "brief": "1939年，有人说他年后再来赎。来源是别人提起，不写原话。 预留给 K03。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.nf1939b.1939.gate",
+      "type": "dossier_fragment",
+      "person": "nf1939b",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 1,
+      "kind": "heard",
+      "brief": "1939年，城门口岗哨那边的亲戚，带来盘查变紧的消息。名字由 A 定。来源是别人提起，不写原话。 K03 persons 写 dossier true。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.nf1939b.1939.said",
+      "type": "dossier_fragment",
+      "person": "nf1939b",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 2,
+      "kind": "said",
+      "brief": "1939年，他只说证件要带在身上。来源是本人开口，不写原话。 预留给 K03。不写盘问原文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.nf1939c.1939.cocoon",
+      "type": "dossier_fragment",
+      "person": "nf1939c",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 1,
+      "kind": "pawn",
+      "brief": "1939年，茧行被日商压价后，小贩把一包茧当了。名字由 A 定。来源是当了什么。 K03 persons 写 dossier true。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.nf1939c.1939.heard",
+      "type": "dossier_fragment",
+      "person": "nf1939c",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 2,
+      "kind": "heard",
+      "brief": "1939年，有人说茧行的秤不由本地掌柜做主。来源是别人提起，不写原话。 预留给 K03 或 K04。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.nf1939d.1939.word",
+      "type": "dossier_fragment",
+      "person": "nf1939d",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 1,
+      "kind": "letter",
+      "brief": "1939年，乡下捎口信的人，信不是他的。名字由 A 定。来源是信，不写信上的句子。 K03 persons 写 dossier true。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.nf1939d.1939.road",
+      "type": "dossier_fragment",
+      "person": "nf1939d",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 2,
+      "kind": "heard",
+      "brief": "1939年，有人说他走小路是为了躲开城门。来源是别人提起，不写原话。 预留给 K03。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.brother.1939.letter",
+      "type": "dossier_fragment",
+      "person": "brother",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 13,
+      "kind": "letter",
+      "brief": "1939年，金色节点：哥哥的第一封家书。来源是信，不写信上的句子。补它的牌：K03 的 p.postman.1939.brother_letter 选项 read。让它成缺口的牌：K03 的 p.postman.1939.brother_letter on_leave；K03 的 p.postman.1939.brother_letter on_expire。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.brother.1939.letter_argue",
+      "type": "dossier_fragment",
+      "person": "brother",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 14,
+      "kind": "letter",
+      "brief": "1939年，金色节点：哥哥的第一封家书。来源是信，不写信上的句子。补它的牌：K03 的 p.postman.1939.brother_letter 选项 read。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.brother.1939.letter_listen",
+      "type": "dossier_fragment",
+      "person": "brother",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 15,
+      "kind": "letter",
+      "brief": "1939年，金色节点：哥哥的第一封家书。来源是信，不写信上的句子。补它的牌：K03 的 p.postman.1939.brother_letter 选项 read。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.brother.1939.letter_note",
+      "type": "dossier_fragment",
+      "person": "brother",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 16,
+      "kind": "letter",
+      "brief": "1939年，金色节点：哥哥的第一封家书。来源是信，不写信上的句子。补它的牌：K03 的 p.postman.1939.brother_letter 选项 read。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.chen.1939.clock",
+      "type": "dossier_fragment",
+      "person": "chen",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 16,
+      "kind": "pawn",
+      "brief": "1939年，父母的旧交，跳过一年后更见老。来源是当了什么。补它的牌：K03 的 p.chen.1939.pawn_clock on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.chen.1939.letter_route",
+      "type": "dossier_fragment",
+      "person": "chen",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 17,
+      "kind": "letter",
+      "brief": "1939年，家书节点之后，旧交来问远方的信走不走得通。来源是信，不写信上的句子。补它的牌：K03 的 p.chen.1939.ask_letter 选项 tell。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.chen.1939.letter_unread",
+      "type": "dossier_fragment",
+      "person": "chen",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 18,
+      "kind": "letter",
+      "brief": "1939年，家书节点之后，旧交来问远方的信走不走得通。来源是信，不写信上的句子。补它的牌：K03 的 p.chen.1939.ask_letter 选项 tell。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.chen.1939.redeem",
+      "type": "dossier_fragment",
+      "person": "chen",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 19,
+      "kind": "ticket",
+      "brief": "1939年，旧交来赎自己没到期的当。来源是当票或单据上的一栏，不写票面全文。补它的牌：K03 的 p.chen.1939.redeem on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.guanjia.1939.bangle",
+      "type": "dossier_fragment",
+      "person": "guanjia",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 11,
+      "kind": "said",
+      "brief": "1939年，孙府管家代当家出来办年货，来买一件首饰。来源是本人开口，不写原话。补它的牌：K03 的 p.guanjia.1939.buy_bangle on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.guanjia.1939.ledger",
+      "type": "dossier_fragment",
+      "person": "guanjia",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 12,
+      "kind": "said",
+      "brief": "1939年，管家来打听年关谁来过柜台，替府里记账。来源是本人开口，不写原话。补它的牌：K03 的 p.guanjia.1939.ask_ledger 选项 tell。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.hu2.1939.coat",
+      "type": "dossier_fragment",
+      "person": "hu2",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 13,
+      "kind": "pawn",
+      "brief": "1939年，替保长跑腿的人。来源是当了什么。补它的牌：K03 的 p.hu2.1939.pawn_coat on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.hu2.1939.redeem",
+      "type": "dossier_fragment",
+      "person": "hu2",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 14,
+      "kind": "ticket",
+      "brief": "1939年，跑腿的来赎自己的当。来源是当票或单据上的一栏，不写票面全文。补它的牌：K03 的 p.hu2.1939.redeem on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.li.1939.redeem",
+      "type": "dossier_fragment",
+      "person": "li",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 13,
+      "kind": "ticket",
+      "brief": "1939年，学生来赎袍子。来源是当票或单据上的一栏，不写票面全文。补它的牌：K03 的 p.li.1939.redeem on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.li.1939.robe",
+      "type": "dossier_fragment",
+      "person": "li",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 14,
+      "kind": "pawn",
+      "brief": "1939年，县立中学的学生。来源是当了什么。补它的牌：K03 的 p.li.1939.pawn_robe on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.linsao.1939.winter_coat",
+      "type": "dossier_fragment",
+      "person": "linsao",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 13,
+      "kind": "pawn",
+      "brief": "1939年，船工的妻子。来源是当了什么。补它的牌：K03 的 p.linsao.1939.pawn_coat on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.linsao.1939.winter_redeem",
+      "type": "dossier_fragment",
+      "person": "linsao",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 14,
+      "kind": "ticket",
+      "brief": "1939年，她有未赎的当才来赎。来源是当票或单据上的一栏，不写票面全文。补它的牌：K03 的 p.linsao.1939.redeem on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.linsao.1939.year_end",
+      "type": "dossier_fragment",
+      "person": "linsao",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 15,
+      "kind": "said",
+      "brief": "1939年，金色节点：年关当衣过年。来源是本人开口，不写原话。补它的牌：K03 的 p.linsao.1939.year_end on_accept。让它成缺口的牌：K03 的 p.linsao.1939.year_end on_leave；K03 的 p.linsao.1939.year_end on_expire。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.ma.1939.office_hard",
+      "type": "dossier_fragment",
+      "person": "ma",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 14,
+      "kind": "said",
+      "brief": "1939年，同一位保长。来源是本人开口，不写原话。补它的牌：K03 的 p.ma.1939.ask_hard 选项 comply。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.ma.1939.office_soft",
+      "type": "dossier_fragment",
+      "person": "ma",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 15,
+      "kind": "said",
+      "brief": "1939年，原由伪维持会任命的保长。来源是本人开口，不写原话。补它的牌：K03 的 p.ma.1939.ask_soft 选项 comply。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.ma.1939.refused_hard",
+      "type": "dossier_fragment",
+      "person": "ma",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 16,
+      "kind": "said",
+      "brief": "1939年，同一位保长。来源是本人开口，不写原话。补它的牌：K03 的 p.ma.1939.ask_hard 选项 refuse。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.ma.1939.refused_soft",
+      "type": "dossier_fragment",
+      "person": "ma",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 17,
+      "kind": "said",
+      "brief": "1939年，原由伪维持会任命的保长。来源是本人开口，不写原话。补它的牌：K03 的 p.ma.1939.ask_soft 选项 refuse。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.nf1939b.1939.cocoon",
+      "type": "dossier_fragment",
+      "person": "nf1939b",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 3,
+      "kind": "said",
+      "brief": "1939年，新面孔。来源是本人开口，不写原话。补它的牌：K03 的 p.nf1939b.1939.ask_cocoon 选项 answer。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.nf1939c.1939.scarf",
+      "type": "dossier_fragment",
+      "person": "nf1939c",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 4,
+      "kind": "pawn",
+      "brief": "1939年，新面孔。来源是当了什么。补它的牌：K03 的 p.nf1939c.1939.pawn_scarf on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.nf1939d.1939.office",
+      "type": "dossier_fragment",
+      "person": "nf1939d",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 3,
+      "kind": "said",
+      "brief": "1939年，新面孔。来源是本人开口，不写原话。补它的牌：K03 的 p.nf1939d.1939.ask_office 选项 show。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.postman.1939.held",
+      "type": "dossier_fragment",
+      "person": "postman",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 15,
+      "kind": "said",
+      "brief": "1939年，金色节点：哥哥的第一封家书。来源是本人开口，不写原话。补它的牌：K03 的 p.postman.1939.brother_letter 选项 hold。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.postman.1939.mail",
+      "type": "dossier_fragment",
+      "person": "postman",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 16,
+      "kind": "letter",
+      "brief": "1939年，邮电代办在家书那天之后，还来讲别的信和电报底。来源是信，不写信上的句子。补它的牌：K03 的 p.postman.1939.ask_mail 选项 take_news。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.sunlaoye.1939.ask",
+      "type": "dossier_fragment",
+      "person": "sunlaoye",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 13,
+      "kind": "said",
+      "brief": "1939年，同一次年关，他可能不买东西，只问铺子还押着谁的地契。来源是本人开口，不写原话。补它的牌：K03 的 p.sunlaoye.1939.ask_year 选项 hear。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.sunlaoye.1939.deed",
+      "type": "dossier_fragment",
+      "person": "sunlaoye",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 14,
+      "kind": "said",
+      "brief": "1939年，孙府当家平日不到柜台。来源是本人开口，不写原话。补它的牌：K03 的 p.sunlaoye.1939.buy_deed on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.sunyoung.1939.qipao",
+      "type": "dossier_fragment",
+      "person": "sunyoung",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 8,
+      "kind": "pawn",
+      "brief": "1939年，他把一匹旗袍料拿来当，不想让府里看见。来源是当了什么。补它的牌：K03 的 p.sunyoung.1939.pawn_qipao on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.sunyoung.1939.redeem",
+      "type": "dossier_fragment",
+      "person": "sunyoung",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 9,
+      "kind": "ticket",
+      "brief": "1939年，他有未赎的当才来赎，多半是要把那匹料子在被人问起之前取走。来源是当票或单据上的一栏，不写票面全文。补它的牌：K03 的 p.sunyoung.1939.redeem on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.sunyoung.1939.scroll",
+      "type": "dossier_fragment",
+      "person": "sunyoung",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 10,
+      "kind": "said",
+      "brief": "1939年，孙家独子。来源是本人开口，不写原话。补它的牌：K03 的 p.sunyoung.1939.buy_scroll on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.wangshan.1939.redeem",
+      "type": "dossier_fragment",
+      "person": "wangshan",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 13,
+      "kind": "ticket",
+      "brief": "1939年，他有未赎的当才来赎。来源是当票或单据上的一栏，不写票面全文。补它的牌：K03 的 p.wangshan.1939.redeem on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.wangshan.1939.ring",
+      "type": "dossier_fragment",
+      "person": "wangshan",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 14,
+      "kind": "pawn",
+      "brief": "1939年，便衣青年。来源是当了什么。补它的牌：K03 的 p.wangshan.1939.pawn_ring on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.wangshan.1939.sent_off",
+      "type": "dossier_fragment",
+      "person": "wangshan",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 15,
+      "kind": "said",
+      "brief": "1939年，金色节点：王山的下落。来源是本人开口，不写原话。补它的牌：K03 的 p.wangshan.1939.whereabouts 选项 send_off。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.wangshan.1939.sheltered",
+      "type": "dossier_fragment",
+      "person": "wangshan",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 16,
+      "kind": "said",
+      "brief": "1939年，金色节点：王山的下落。来源是本人开口，不写原话。补它的牌：K03 的 p.wangshan.1939.whereabouts 选项 shelter。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.wangshan.1939.wary",
+      "type": "dossier_fragment",
+      "person": "wangshan",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 17,
+      "kind": "said",
+      "brief": "1939年，1938 没理过他，或那场见面没有记下见过面的走向时，他只来打听，不把东西押下。来源是本人开口，不写原话。补它的牌：K03 的 p.wangshan.1939.ask_wary 选项 hear。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.wu.1939.rice_bought",
+      "type": "dossier_fragment",
+      "person": "wu",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 14,
+      "kind": "said",
+      "brief": "1939年，同一个掌柜反过来收货架上的米。来源是本人开口，不写原话。补它的牌：K03 的 p.wu.1939.buy_rice on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.wu.1939.rice_sold",
+      "type": "dossier_fragment",
+      "person": "wu",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 15,
+      "kind": "pawn",
+      "brief": "1939年，裕丰米行掌柜。来源是当了什么。补它的牌：K03 的 p.wu.1939.sell_rice on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.wu.1939.supply",
+      "type": "dossier_fragment",
+      "person": "wu",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 16,
+      "kind": "said",
+      "brief": "1939年，他来说明收粮为什么紧：日商控制米行，乡下的米船不准一次说完。来源是本人开口，不写原话。补它的牌：K03 的 p.wu.1939.ask_supply 选项 listen。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.xiaoding.1939.redeem",
+      "type": "dossier_fragment",
+      "person": "xiaoding",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 10,
+      "kind": "ticket",
+      "brief": "1939年，伙夫来赎自己的当。来源是当票或单据上的一栏，不写票面全文。补它的牌：K03 的 p.xiaoding.1939.redeem on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.xiaoding.1939.scarf_cold",
+      "type": "dossier_fragment",
+      "person": "xiaoding",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 11,
+      "kind": "pawn",
+      "brief": "1939年，同一个伙夫，还不是人脉时的另一张。来源是当了什么。补它的牌：K03 的 p.xiaoding.1939.pawn_scarf_cold on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.xiaoding.1939.scarf_known",
+      "type": "dossier_fragment",
+      "person": "xiaoding",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 12,
+      "kind": "pawn",
+      "brief": "1939年，孙家的年轻伙夫。来源是当了什么。补它的牌：K03 的 p.xiaoding.1939.pawn_scarf_known on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.zhang.1939.coat",
+      "type": "dossier_fragment",
+      "person": "zhang",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 12,
+      "kind": "pawn",
+      "brief": "1939年，同一位护士另来当一件冬衣。来源是当了什么。补它的牌：K03 的 p.zhang.1939.pawn_coat on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.zhang.1939.medicine",
+      "type": "dossier_fragment",
+      "person": "zhang",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 13,
+      "kind": "pawn",
+      "brief": "1939年，县城医院的护士。来源是当了什么。补它的牌：K03 的 p.zhang.1939.sell_medicine on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.zhang.1939.redeem",
+      "type": "dossier_fragment",
+      "person": "zhang",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 14,
+      "kind": "ticket",
+      "brief": "1939年，护士来赎自己的当，好把冬衣或别的东西取回去过年。来源是当票或单据上的一栏，不写票面全文。补它的牌：K03 的 p.zhang.1939.redeem on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.zhao.1939.coat",
+      "type": "dossier_fragment",
+      "person": "zhao",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 16,
+      "kind": "pawn",
+      "brief": "1939年，佃户。来源是当了什么。补它的牌：K03 的 p.zhao.1939.pawn_coat on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.zhao.1939.redeem",
+      "type": "dossier_fragment",
+      "person": "zhao",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 17,
+      "kind": "ticket",
+      "brief": "1939年，佃户来赎自己的当。来源是当票或单据上的一栏，不写票面全文。补它的牌：K03 的 p.zhao.1939.redeem on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.zhao.1939.repay",
+      "type": "dossier_fragment",
+      "person": "zhao",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 18,
+      "kind": "said",
+      "brief": "1939年，1938 若把钱借给他，1939 腊月他来还一小笔。来源是本人开口，不写原话。补它的牌：K03 的 p.zhao.1939.repay 选项 take。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.zhao.1939.waived",
+      "type": "dossier_fragment",
+      "person": "zhao",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 19,
+      "kind": "said",
+      "brief": "1939年，1938 若把钱借给他，1939 腊月他来还一小笔。来源是本人开口，不写原话。补它的牌：K03 的 p.zhao.1939.repay 选项 waive。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.zhouma.1939.redeem",
+      "type": "dossier_fragment",
+      "person": "zhouma",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 15,
+      "kind": "ticket",
+      "brief": "1939年，厨娘来赎自己的当。来源是当票或单据上的一栏，不写票面全文。补它的牌：K03 的 p.zhouma.1939.redeem on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.zhouma.1939.rumor",
+      "type": "dossier_fragment",
+      "person": "zhouma",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 16,
+      "kind": "said",
+      "brief": "1939年，她来传口风：码头、米价、有没有人打听王山。来源是本人开口，不写原话。补它的牌：K03 的 p.zhouma.1939.ask_rumor 选项 listen。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.zhouma.1939.scarf",
+      "type": "dossier_fragment",
+      "person": "zhouma",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 17,
+      "kind": "pawn",
+      "brief": "1939年，桥头茶馆的厨娘，跳过一年仍是消息最杂的人。来源是当了什么。补它的牌：K03 的 p.zhouma.1939.pawn_scarf on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.guanjia.1939.snub",
+      "type": "dossier_fragment",
+      "person": "guanjia",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 16,
+      "kind": "said",
+      "brief": "1939年，孙府当家打烊没被接过之后，管家来问为什么关门；铺子说明了缘由。来源是管家上门盘问，不写原话。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "id": "df.ma.1939.grudge",
+      "type": "dossier_fragment",
+      "person": "ma",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 23,
+      "kind": "said",
+      "brief": "1939年，马保长记下打烊没接的仇，摊派时应下了这笔记仇。来源是本人开口，不写原话。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "id": "df.ma.1939.grudge_refused",
+      "type": "dossier_fragment",
+      "person": "ma",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 24,
+      "kind": "said",
+      "brief": "1939年，马保长记仇之后来摊派，铺子没有应下。来源是本人开口，不写原话。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "id": "df.nf1939d.1939.return",
+      "type": "dossier_fragment",
+      "person": "nf1939d",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 4,
+      "kind": "said",
+      "brief": "1939年，伪区公所的抄写冷落之后再来，铺子还是让他看了未赎的当。来源是本人上门，不写原话。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "id": "df.wu.1939.cold",
+      "type": "dossier_fragment",
+      "person": "wu",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 19,
+      "kind": "said",
+      "brief": "1939年，米行掌柜记仇之后放冷话，让铺子别跟他抢米。来源是本人开口，不写原话。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-15"
+      }
+    }
+  ]
+}

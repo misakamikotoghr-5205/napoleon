@@ -1,0 +1,56 @@
+{
+  "_meta": {
+    "owner": "K01",
+    "schema": 1,
+    "brief": "META-BRIEF"
+  },
+  "_doc": [
+    "doc"
+  ],
+  "_test": {
+    "d": 1
+  },
+  "cards": [
+    {
+      "id": "p.a",
+      "brief": "CARD-BRIEF",
+      "_provenance": {
+        "by": "ai"
+      },
+      "art": "portrait.a",
+      "stage": {
+        "brief": "STAGE-BRIEF",
+        "cast": [
+          {
+            "who": "brother",
+            "at": "door",
+            "brief": "CAST-BRIEF"
+          }
+        ],
+        "props": [
+          {
+            "art": "prop.trunk",
+            "at": "door_side",
+            "brief": "PROP-BRIEF"
+          }
+        ],
+        "intro": [
+          {
+            "who": "",
+            "ref": "body",
+            "brief": "INTRO-BRIEF"
+          }
+        ],
+        "after": {
+          "listen": [
+            {
+              "who": "me",
+              "ref": "lines.me",
+              "brief": "AFTER-BRIEF"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

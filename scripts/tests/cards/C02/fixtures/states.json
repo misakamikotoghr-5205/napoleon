@@ -1,0 +1,469 @@
+{
+  "_meta": {
+    "_provenance": {
+      "by": "ai",
+      "date": "2026-10-13",
+      "task": "C02"
+    },
+    "brief": "One card in draft, used, away, expiry, gold, must-resolve, keep",
+    "owner": "C02",
+    "schema": 1
+  },
+  "states": {
+    "away_days": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "refuse",
+          "reason_key": ""
+        }
+      ],
+      "art": "portrait.linsao",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 4,
+      "can_appraise": false,
+      "days_left": -1,
+      "def": "p.linsao.1938.pawn_hairpin",
+      "expires_in": -1,
+      "gold": false,
+      "intent": "pawn",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "counter",
+      "person": "linsao",
+      "status": "open",
+      "type": "person",
+      "uid": "cst01",
+      "used_today": false,
+      "zone": "hand"
+    },
+    "draft": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "refuse",
+          "reason_key": ""
+        }
+      ],
+      "art": "portrait.linsao",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "days_left": -1,
+      "def": "p.linsao.1938.pawn_hairpin",
+      "expires_in": -1,
+      "gold": false,
+      "intent": "pawn",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "counter",
+      "person": "linsao",
+      "status": "open",
+      "type": "person",
+      "uid": "cst01",
+      "used_today": false,
+      "zone": "hand"
+    },
+    "expires_1": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "refuse",
+          "reason_key": ""
+        }
+      ],
+      "art": "portrait.linsao",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "days_left": -1,
+      "def": "p.linsao.1938.pawn_hairpin",
+      "expires_in": 1,
+      "gold": false,
+      "intent": "pawn",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "counter",
+      "person": "linsao",
+      "status": "open",
+      "type": "person",
+      "uid": "cst01",
+      "used_today": false,
+      "zone": "hand"
+    },
+    "expires_none": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "refuse",
+          "reason_key": ""
+        }
+      ],
+      "art": "portrait.linsao",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "days_left": -1,
+      "def": "p.linsao.1938.pawn_hairpin",
+      "expires_in": -1,
+      "gold": false,
+      "intent": "pawn",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "counter",
+      "person": "linsao",
+      "status": "open",
+      "type": "person",
+      "uid": "cst01",
+      "used_today": false,
+      "zone": "hand"
+    },
+    "gold": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "keep",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        }
+      ],
+      "art": "portrait.linsao",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "days_left": -1,
+      "def": "p.linsao.1938.pawn_hairpin",
+      "expires_in": -1,
+      "gold": true,
+      "intent": "pawn",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "counter",
+      "person": "linsao",
+      "status": "open",
+      "type": "person",
+      "uid": "cst01",
+      "used_today": false,
+      "zone": "hand"
+    },
+    "keep_off": {
+      "actions": [
+        {
+          "enabled": false,
+          "id": "keep",
+          "reason_key": "g01.reason.no"
+        }
+      ],
+      "art": "portrait.linsao",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "days_left": -1,
+      "def": "p.linsao.1938.pawn_hairpin",
+      "expires_in": -1,
+      "gold": false,
+      "intent": "pawn",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "counter",
+      "person": "linsao",
+      "status": "open",
+      "type": "person",
+      "uid": "cst01",
+      "used_today": false,
+      "zone": "hand"
+    },
+    "keep_on": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "keep",
+          "reason_key": ""
+        }
+      ],
+      "art": "portrait.linsao",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "days_left": -1,
+      "def": "p.linsao.1938.pawn_hairpin",
+      "expires_in": -1,
+      "gold": false,
+      "intent": "pawn",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "counter",
+      "person": "linsao",
+      "status": "open",
+      "type": "person",
+      "uid": "cst01",
+      "used_today": false,
+      "zone": "hand"
+    },
+    "life": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "choose:buy",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "choose:endure",
+          "reason_key": ""
+        }
+      ],
+      "art": "illus.lf.any.coal_out",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "days_left": 3,
+      "def": "lf.any.coal_out",
+      "expires_in": -1,
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": false,
+      "must_resolve": false,
+      "observations": [],
+      "panel": "slots",
+      "person": "",
+      "status": "open",
+      "type": "life",
+      "uid": "cst02",
+      "used_today": false,
+      "zone": "hand"
+    },
+    "life_offhand": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "choose:buy",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "choose:endure",
+          "reason_key": ""
+        }
+      ],
+      "art": "illus.lf.any.coal_out",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "days_left": 3,
+      "def": "lf.any.coal_out",
+      "expires_in": -1,
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": false,
+      "must_resolve": false,
+      "observations": [],
+      "panel": "slots",
+      "person": "",
+      "status": "open",
+      "type": "life",
+      "uid": "cst02",
+      "used_today": false,
+      "zone": "kept"
+    },
+    "must_hand": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "refuse",
+          "reason_key": ""
+        }
+      ],
+      "art": "portrait.linsao",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "days_left": -1,
+      "def": "p.linsao.1938.pawn_hairpin",
+      "expires_in": -1,
+      "gold": false,
+      "intent": "pawn",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "counter",
+      "person": "linsao",
+      "status": "open",
+      "type": "person",
+      "uid": "cst01",
+      "used_today": false,
+      "zone": "hand"
+    },
+    "must_other": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "refuse",
+          "reason_key": ""
+        }
+      ],
+      "art": "portrait.linsao",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "days_left": -1,
+      "def": "p.linsao.1938.pawn_hairpin",
+      "expires_in": -1,
+      "gold": false,
+      "intent": "pawn",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "counter",
+      "person": "linsao",
+      "status": "open",
+      "type": "person",
+      "uid": "cst01",
+      "used_today": false,
+      "zone": "kept"
+    },
+    "plain": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "refuse",
+          "reason_key": ""
+        }
+      ],
+      "art": "portrait.linsao",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "days_left": -1,
+      "def": "p.linsao.1938.pawn_hairpin",
+      "expires_in": -1,
+      "gold": false,
+      "intent": "pawn",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "counter",
+      "person": "linsao",
+      "status": "open",
+      "type": "person",
+      "uid": "cst01",
+      "used_today": false,
+      "zone": "hand"
+    },
+    "used_today": {
+      "actions": [
+        {
+          "enabled": true,
+          "id": "open",
+          "reason_key": ""
+        },
+        {
+          "enabled": true,
+          "id": "refuse",
+          "reason_key": ""
+        }
+      ],
+      "art": "portrait.linsao",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "days_left": -1,
+      "def": "p.linsao.1938.pawn_hairpin",
+      "expires_in": -1,
+      "gold": false,
+      "intent": "pawn",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "counter",
+      "person": "linsao",
+      "status": "open",
+      "type": "person",
+      "uid": "cst01",
+      "used_today": true,
+      "zone": "hand"
+    }
+  }
+}

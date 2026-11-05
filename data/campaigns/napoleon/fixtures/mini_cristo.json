@@ -1,0 +1,408 @@
+{
+ "id": "mini_cristo",
+ "version": 2,
+ "title": "迷你伊夫堡",
+ "initial": {
+  "treasury": 1000,
+  "morale": 60,
+  "heat": 10,
+  "vitality": 70,
+  "construction": 0,
+  "exploration": 0
+ },
+ "chapters": [
+  {
+   "id": "mc_one",
+   "title": "马赛",
+   "currency": "franc",
+   "currency_name": "法郎",
+   "treasury_start": 1800,
+   "scene_ids": [
+    "mc_arrive",
+    "mc_letter",
+    "mc_boss",
+    "mc_escape"
+   ]
+  },
+  {
+   "id": "mc_two",
+   "title": "巴黎",
+   "currency": "franc",
+   "currency_name": "法郎",
+   "treasury_start": 1800,
+   "scene_ids": [
+    "mc_paris"
+   ],
+   "volume": 2
+  }
+ ],
+ "characters": [
+  {
+   "id": "hero",
+   "name": "维尔福",
+   "role": "军需官"
+  }
+ ],
+ "items": [
+  {
+   "id": "mini_watch",
+   "name": "怀表",
+   "chapter": "mc_one",
+   "description": "一块旧怀表。"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "mc_arrive",
+   "chapter": "mc_one",
+   "date": "1800-01-01",
+   "title": "进港",
+   "location": "进港",
+   "speaker": "hero",
+   "body": [
+    "进港。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "mc_go",
+     "label": "上岸"
+    }
+   ]
+  },
+  {
+   "id": "mc_letter",
+   "chapter": "mc_one",
+   "date": "1800-01-01",
+   "title": "誓言旧事",
+   "location": "誓言旧事",
+   "speaker": "hero",
+   "body": [
+    "誓言旧事。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "mc_remember",
+     "label": "想起誓言",
+     "effects": {
+      "morale": 3
+     }
+    }
+   ],
+   "when": {
+    "flags": [
+     "t_mini_oath"
+    ]
+   }
+  },
+  {
+   "id": "mc_boss",
+   "chapter": "mc_one",
+   "date": "1800-01-01",
+   "title": "街巷",
+   "location": "街巷",
+   "speaker": "hero",
+   "body": [
+    "街巷。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "mc_after",
+     "label": "脱身"
+    }
+   ]
+  },
+  {
+   "id": "mc_escape",
+   "chapter": "mc_one",
+   "date": "1800-01-01",
+   "title": "出逃",
+   "location": "出逃",
+   "speaker": "hero",
+   "body": [
+    "出逃。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "mc_flee",
+     "label": "下水"
+    }
+   ]
+  },
+  {
+   "id": "mc_paris",
+   "chapter": "mc_two",
+   "date": "1800-01-01",
+   "title": "巴黎",
+   "location": "巴黎",
+   "speaker": "hero",
+   "body": [
+    "巴黎。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "mc_paris_go",
+     "label": "进城"
+    }
+   ]
+  }
+ ],
+ "endings": [
+  {
+   "id": "bankruptcy",
+   "kind": "failure",
+   "title": "军费告罄",
+   "body": [
+    "钱袋见底。"
+   ]
+  },
+  {
+   "id": "loss",
+   "kind": "failure",
+   "title": "大军溃散",
+   "body": [
+    "人困马乏。"
+   ]
+  },
+  {
+   "id": "blockade",
+   "kind": "failure",
+   "title": "全区起义",
+   "body": [
+    "四处都是追兵。"
+   ]
+  },
+  {
+   "id": "m_mini_vol_free",
+   "kind": "volume",
+   "title": "出逃（卷终）",
+   "body": [
+    "逃出来了。"
+   ]
+  },
+  {
+   "id": "m_mini_vol_wait",
+   "kind": "volume",
+   "title": "等待（卷终）",
+   "body": [
+    "还在等。"
+   ]
+  }
+ ],
+ "tuning": {},
+ "rules": {
+  "failures": [
+   {
+    "ending": "bankruptcy",
+    "reason": "treasury",
+    "when": {
+     "metric": {
+      "treasury": [
+       "<=",
+       0
+      ]
+     }
+    }
+   },
+   {
+    "ending": "loss",
+    "reason": "vitality",
+    "when": {
+     "metric": {
+      "vitality": [
+       "<=",
+       0
+      ]
+     }
+    }
+   },
+   {
+    "ending": "blockade",
+    "reason": "heat",
+    "when": {
+     "metric": {
+      "heat": [
+       ">=",
+       100
+      ]
+     }
+    }
+   }
+  ],
+  "endings": [],
+  "default_ending": "m_mini_vol_wait",
+  "exclusive_flags": [],
+  "actions": {
+   "build": {
+    "metric": "construction",
+    "chapters": [],
+    "cost": 200,
+    "gain": 25
+   },
+   "explore": {
+    "metric": "exploration",
+    "chapters": [],
+    "cost": 200,
+    "gain": 25
+   },
+   "fund": {
+    "chapters": [],
+    "yes": {
+     "cost": 1000,
+     "effects": {
+      "morale": 15
+     },
+     "flags": []
+    },
+    "no": {
+     "flags": []
+    }
+   }
+  },
+  "signs": {
+   "white": {
+    "daily": {},
+    "map": {}
+   },
+   "red": {
+    "daily": {
+     "heat": 10
+    },
+    "map": {
+     "pass_supply": 1
+    }
+   },
+   "black": {
+    "daily": {
+     "treasury": -10,
+     "heat": -10
+    },
+    "map": {
+     "mp": -1
+    }
+   }
+  },
+  "volume_endings": [
+   {
+    "id": "m_mini_vol_free",
+    "when": {
+     "flags": [
+      "m_mini_order"
+     ]
+    }
+   }
+  ],
+  "default_volume_ending": "m_mini_vol_wait"
+ },
+ "events": [
+  {
+   "id": "ev_mc_council",
+   "pool": "fixed",
+   "council": true,
+   "title": "军议",
+   "location": "营帐",
+   "speaker": "hero",
+   "body": [
+    "三条方略。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "cp",
+     "label": "多带军令",
+     "boss_mod": {
+      "cp_bonus": 2
+     }
+    },
+    {
+     "id": "morale",
+     "label": "先挫敌锐气",
+     "boss_mod": {
+      "enemy_morale": -2
+     }
+    },
+    {
+     "id": "prep",
+     "label": "多一回合布阵",
+     "boss_mod": {
+      "prep_turn": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_mc_pool",
+   "pool": "mc_one",
+   "weight": 2,
+   "once": true,
+   "title": "渔夫",
+   "location": "码头",
+   "speaker": "hero",
+   "body": [
+    "渔夫想搭话。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "talk",
+     "label": "搭话",
+     "effects": {
+      "morale": 1
+     }
+    },
+    {
+     "id": "go",
+     "label": "走开"
+    }
+   ]
+  },
+  {
+   "id": "ev_mc_weigh",
+   "interlude": "minigame:weigh",
+   "chapters": [
+    "mc_one"
+   ],
+   "title": "过秤",
+   "location": "仓库",
+   "speaker": "hero",
+   "body": [
+    "一袋金币。"
+   ],
+   "appraisals": [
+    {
+     "id": "mc_scale",
+     "kind": "weigh",
+     "label": "过秤",
+     "observation": "少了两枚。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "expose",
+     "label": "揭穿",
+     "requires_clues": [
+      "mc_scale"
+     ],
+     "rogue": {
+      "coins": {
+       "gold": 1
+      }
+     }
+    },
+    {
+     "id": "pocket",
+     "label": "认了"
+    }
+   ]
+  }
+ ]
+}

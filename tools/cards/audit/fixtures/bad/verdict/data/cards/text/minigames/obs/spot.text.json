@@ -1,0 +1,10 @@
+{
+  "_meta": {
+    "owner": "A",
+    "schema": 1
+  },
+  "obs.spot.ok": {
+    "t": "看起来是赝品",
+    "_provenance": "human:A:2026-01-15"
+  }
+}

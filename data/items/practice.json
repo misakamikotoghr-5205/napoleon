@@ -1,0 +1,204 @@
+{
+  "items": {
+    "coin": {
+      "name": "铜板（当十铜元）",
+      "cat": "practice",
+      "cat_cn": "练习",
+      "market": 1,
+      "claimed": 0,
+      "fake": false,
+      "grade": "",
+      "origin": "normal",
+      "contraband": false,
+      "est": [0, 2],
+      "suggest": 0,
+      "ask_w": 0.0,
+      "weight": "",
+      "tags": [],
+      "sprite": "art/items/coin.png",
+      "ticket_condition": "",
+      "parts": [
+        {
+          "id": "face",
+          "label": "看正面",
+          "text": "光绪年间的当十铜元，边上磨得发亮。",
+          "tool": "magnifier",
+          "rect": [10, 10, 44, 44],
+          "est": [0, 2]
+        },
+        {
+          "id": "back",
+          "label": "看背面",
+          "text": "背面的字已经磨平了大半，只剩一圈细纹。",
+          "tool": "magnifier",
+          "rect": [10, 10, 44, 44]
+        },
+        {
+          "id": "weigh",
+          "label": "掂一掂",
+          "text": "分量很轻，是铜的。",
+          "tool": "hand",
+          "rect": [10, 10, 44, 44]
+        }
+      ],
+      "ref": "coin"
+    },
+    "handwarmer": {
+      "name": "铜手炉（练习用）",
+      "cat": "practice",
+      "cat_cn": "练习",
+      "market": 40,
+      "claimed": 0,
+      "fake": false,
+      "grade": "",
+      "origin": "normal",
+      "contraband": false,
+      "est": [25, 60],
+      "suggest": 40,
+      "ask_w": 1.0,
+      "weight": "",
+      "tags": [],
+      "sprite": "art/items/handwarmer.png",
+      "ticket_condition": "铜，盖有磨损",
+      "parts": [
+        {
+          "id": "lid",
+          "label": "看炉盖",
+          "text": "镂空的炉盖，花纹磨平了一半，盖沿有磨损。",
+          "tool": "hand",
+          "rect": [12, 24, 40, 13],
+          "est": [30, 50]
+        },
+        {
+          "id": "base",
+          "label": "看炉底",
+          "text": "炉底是铜的，烧过炭，有一层黑印。",
+          "tool": "magnifier",
+          "rect": [14, 50, 36, 12]
+        },
+        {
+          "id": "bail",
+          "label": "看提梁",
+          "text": "提梁是铁的，有点松，不影响使用。",
+          "tool": "hand",
+          "rect": [20, 15, 24, 9]
+        }
+      ],
+      "ref": "handwarmer",
+      "flaws": [
+        {
+          "part": "lid",
+          "kind": "shine",
+          "benign": true,
+          "note": "盖沿磨得发亮，花纹磨平了一半"
+        }
+      ]
+    },
+    "silver_keepsake": {
+      "name": "爸的小银元",
+      "cat": "keepsake",
+      "cat_cn": "纪念物",
+      "market": 30,
+      "claimed": 0,
+      "fake": false,
+      "grade": "",
+      "origin": "normal",
+      "contraband": false,
+      "est": [20, 40],
+      "suggest": 0,
+      "ask_w": 1.0,
+      "weight": "",
+      "tags": ["爸的遗物"],
+      "sprite": "art/items/silver_keepsake.png",
+      "ticket_condition": "",
+      "parts": [
+        {
+          "id": "edge",
+          "label": "看边齿",
+          "text": "边齿磨得很匀。爸从前说，银元吹一口放在耳边，真的会“嗡”地响很久。怎么分真假，我在第一封信里教你。",
+          "tool": "magnifier",
+          "rect": [6, 6, 52, 52]
+        },
+        {
+          "id": "ring",
+          "label": "吹一吹听响",
+          "text": "现在还听不出什么。哥哥说，吹银元听响的法子，要等第一封信才能学会。",
+          "tool": "nose",
+          "rect": [6, 6, 52, 52]
+        }
+      ],
+      "ref": "silver_coin"
+    },
+    "coin_fake": {
+      "name": "私铸铜板（练习用）",
+      "cat": "practice",
+      "cat_cn": "练习",
+      "market": 0,
+      "claimed": 1,
+      "fake": true,
+      "grade": "",
+      "origin": "normal",
+      "contraband": false,
+      "est": [0, 1],
+      "suggest": 0,
+      "ask_w": 0.0,
+      "weight": "",
+      "tags": [],
+      "sprite": "art/items/coin.png",
+      "ref": "coin",
+      "ticket_condition": "",
+      "_note": "序章哥哥教找不同用。图是 coin.png 加上运行时画的破绽（flaws），不另画一张假图。",
+      "parts": [
+        {
+          "id": "inscription",
+          "label": "看字口",
+          "text": "孔上方那个字缺了半边，笔画发软——私铸的模子不精。",
+          "tool": "magnifier",
+          "rect": [27, 14, 10, 10],
+          "tell": true
+        },
+        {
+          "id": "rim",
+          "label": "摸边道",
+          "text": "右边边道缺了一块，摸着有毛刺，是浇铸后没锉干净。",
+          "tool": "hand",
+          "rect": [49, 24, 10, 16],
+          "tell": true
+        },
+        {
+          "id": "face",
+          "label": "看正面",
+          "text": "左下这片磨得发亮，是在人手里过多了。",
+          "tool": "hand",
+          "rect": [12, 36, 14, 12]
+        }
+      ],
+      "flaws": [
+        {
+          "part": "inscription",
+          "kind": "erase"
+        },
+        {
+          "part": "rim",
+          "kind": "notch"
+        },
+        {
+          "part": "face",
+          "kind": "shine",
+          "benign": true,
+          "note": "左下这片磨得发亮"
+        }
+      ],
+      "coach": {
+        "open": "哥哥：先把图鉴翻开。左边画的，是真铜板该有的样子。",
+        "tool": "哥哥：两边对着看。字口那么细，肉眼看不真切——拿起放大镜。",
+        "circle": "哥哥：哪儿和图鉴不一样，就拿朱笔把那儿圈起来。圈小些，圈准了。墨只够三笔。",
+        "hit": "哥哥：对，就是这儿。再看看，还有没有别处不对。",
+        "miss": "哥哥：这儿没毛病。别急，一处一处对着比。",
+        "benign": "哥哥：磨亮的地方，用旧的铜板都这样。图鉴上说了，不一定是毛病——你自己拿主意。",
+        "tool_wrong": "哥哥：看对地方了，可这一处得换样家伙看。",
+        "done": "哥哥：看出来了，就记下。看完了，放下。"
+      }
+    }
+  }
+}

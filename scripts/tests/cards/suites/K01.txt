@@ -1,0 +1,5 @@
+# K01 1938 人物牌、主线节点、过路客（docs/handoff_cards/K01_data-1938-people.md）
+K01_validate|res://scripts/cards/core/validate_main.gd|120|--only=data/cards/era/1938/people.json,data/cards/era/1938/story.json,data/cards/era/common/passersby.json,data/cards/tags/K01.json,data/cards/ui_keys/K01.json --name=K01_validate
+K01_data|res://scripts/tests/cards/K01/test_data.gd|120|
+K01_guide_support|res://scripts/tests/cards/K01/test_guide_support.gd|120|
+K01_silver_pawn|res://scripts/tests/cards/K01/test_silver_pawn.gd|120|--name=K01_silver_pawn

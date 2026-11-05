@@ -1,0 +1,374 @@
+{
+  "_meta": {
+    "owner": "C03",
+    "schema": 1,
+    "brief": "掷铜钱失败：两个反面，要 2 个正面"
+  },
+  "view": {
+    "v": 1,
+    "phase": "day",
+    "mode": "shop",
+    "busy": false,
+    "date": {
+      "stage": 0,
+      "era": "1938",
+      "y": 1938,
+      "m": 3,
+      "d": 9,
+      "weekday": 2,
+      "stage_day": 9,
+      "stage_days": 30,
+      "abs_day": 9,
+      "minute": 540
+    },
+    "notice": {
+      "weather": "clear",
+      "market_day": false,
+      "news": [],
+      "almanac": {
+        "id": "alm.shoudang",
+        "yi": [],
+        "ji": [],
+        "done": []
+      },
+      "fortune": ""
+    },
+    "money": {
+      "amount": 340,
+      "currency": "fabi"
+    },
+    "rep_tier": 1,
+    "heat_tier": 0,
+    "self": {
+      "uid": "c0001",
+      "def": "self.ruhua",
+      "type": "self",
+      "zone": "self",
+      "art": "portrait.ruhua",
+      "gold": false,
+      "must_resolve": false,
+      "keepable": false,
+      "expires_in": -1,
+      "status": "open",
+      "person": "",
+      "intent": "",
+      "item": null,
+      "asking": -1,
+      "observations": [],
+      "days_left": -1,
+      "attrs": {
+        "eye": 2,
+        "tongue": 1,
+        "pull": 1,
+        "nerve": 1
+      },
+      "used_today": false,
+      "away_days": 0,
+      "can_appraise": false,
+      "panel": "none",
+      "actions": [
+        {
+          "id": "open",
+          "enabled": true,
+          "reason_key": ""
+        }
+      ]
+    },
+    "hand": [
+      {
+        "uid": "c0003",
+        "def": "ev.1938.police_check",
+        "type": "event",
+        "zone": "hand",
+        "art": "illus.ev.1938.police_check",
+        "gold": false,
+        "must_resolve": true,
+        "keepable": false,
+        "expires_in": -1,
+        "status": "open",
+        "person": "",
+        "intent": "",
+        "item": null,
+        "asking": -1,
+        "observations": [],
+        "days_left": -1,
+        "attrs": {},
+        "used_today": false,
+        "away_days": 0,
+        "can_appraise": false,
+        "panel": "slots",
+        "actions": [
+          {
+            "id": "open",
+            "enabled": true,
+            "reason_key": ""
+          }
+        ],
+        "choices": [],
+        "slots": [
+          {
+            "id": "paper",
+            "accepts": [
+              "kept"
+            ],
+            "attr": "",
+            "wants": [
+              "papers"
+            ],
+            "required": false,
+            "max": 1,
+            "placed": [],
+            "coins": 0
+          },
+          {
+            "id": "cash",
+            "accepts": [
+              "money"
+            ],
+            "attr": "",
+            "wants": [
+              "official"
+            ],
+            "required": false,
+            "max": 1,
+            "placed": [],
+            "coins": 0
+          },
+          {
+            "id": "man",
+            "accepts": [
+              "self",
+              "contact"
+            ],
+            "attr": "nerve",
+            "wants": [],
+            "required": false,
+            "max": 1,
+            "placed": [],
+            "coins": 0
+          }
+        ]
+      }
+    ],
+    "kept": [],
+    "contacts": [
+      {
+        "uid": "c0012",
+        "def": "ct.ma",
+        "type": "contact",
+        "zone": "contacts",
+        "art": "portrait.ma",
+        "gold": false,
+        "must_resolve": false,
+        "keepable": false,
+        "expires_in": -1,
+        "status": "open",
+        "person": "",
+        "intent": "",
+        "item": null,
+        "asking": -1,
+        "observations": [],
+        "days_left": -1,
+        "attrs": {
+          "eye": 1,
+          "tongue": 2,
+          "pull": 3,
+          "nerve": 1
+        },
+        "used_today": false,
+        "away_days": 0,
+        "can_appraise": false,
+        "panel": "none",
+        "actions": [
+          {
+            "id": "open",
+            "enabled": true,
+            "reason_key": ""
+          }
+        ]
+      }
+    ],
+    "pending": [],
+    "demands": [],
+    "caps": {
+      "kept": 5,
+      "contacts": 3,
+      "shelf": 12
+    },
+    "shelf_count": 1,
+    "tickets": [],
+    "estates": [],
+    "goals": [],
+    "night_offers": [],
+    "open_panel": {
+      "kind": "",
+      "args": {}
+    },
+    "lots": [],
+    "dossier_new": 0
+  },
+  "queries": {
+    "card|{\"uid\":\"c0003\"}": {
+      "uid": "c0003",
+      "def": "ev.1938.police_check",
+      "type": "event",
+      "zone": "hand",
+      "art": "illus.ev.1938.police_check",
+      "gold": false,
+      "must_resolve": true,
+      "keepable": false,
+      "expires_in": -1,
+      "status": "open",
+      "person": "",
+      "intent": "",
+      "item": null,
+      "asking": -1,
+      "observations": [],
+      "days_left": -1,
+      "attrs": {},
+      "used_today": false,
+      "away_days": 0,
+      "can_appraise": false,
+      "panel": "slots",
+      "actions": [
+        {
+          "id": "open",
+          "enabled": true,
+          "reason_key": ""
+        }
+      ],
+      "choices": [],
+      "slots": [
+        {
+          "id": "paper",
+          "accepts": [
+            "kept"
+          ],
+          "attr": "",
+          "wants": [
+            "papers"
+          ],
+          "required": false,
+          "max": 1,
+          "placed": [],
+          "coins": 0
+        },
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "attr": "",
+          "wants": [
+            "official"
+          ],
+          "required": false,
+          "max": 1,
+          "placed": [],
+          "coins": 0
+        },
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "attr": "nerve",
+          "wants": [],
+          "required": false,
+          "max": 1,
+          "placed": [],
+          "coins": 0
+        }
+      ]
+    },
+    "slots|{\"uid\":\"c0003\"}": {
+      "slots": [
+        {
+          "id": "paper",
+          "accepts": [
+            "kept"
+          ],
+          "attr": "",
+          "wants": [
+            "papers"
+          ],
+          "required": false,
+          "max": 1,
+          "placed": [],
+          "coins": 0
+        },
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "attr": "",
+          "wants": [
+            "official"
+          ],
+          "required": false,
+          "max": 1,
+          "placed": [],
+          "coins": 0
+        },
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "attr": "nerve",
+          "wants": [],
+          "required": false,
+          "max": 1,
+          "placed": [],
+          "coins": 0
+        }
+      ],
+      "coins": 2,
+      "auto_heads": 0,
+      "need": 2,
+      "auto_pass": false,
+      "ready": true
+    },
+    "stock|{}": {
+      "items": []
+    }
+  },
+  "responses": [
+    {
+      "cmd": "slot.roll",
+      "result": {
+        "ok": true,
+        "err": "",
+        "faces": [
+          false,
+          false
+        ],
+        "heads": 0,
+        "need": 2,
+        "success": false
+      },
+      "events": [
+        [
+          "coins_tossed",
+          "c0003",
+          [
+            false,
+            false
+          ],
+          2,
+          false
+        ]
+      ]
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "ok": true,
+        "err": ""
+      }
+    }
+  ]
+}

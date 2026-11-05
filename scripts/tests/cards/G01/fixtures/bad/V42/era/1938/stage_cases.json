@@ -1,0 +1,9 @@
+{
+  "_meta": {"owner": "K02", "schema": 1, "brief": "V42"},
+  "cards": [{
+    "id": "ev.stage.valid", "type": "event", "era": ["1938"], "weight": 10,
+    "must_resolve": false, "tags": ["omen_official"],
+    "stage": {"set": "counter", "props": [{"art": "prop.missing", "at": "counter_mid", "brief": "MISSING_ART"}], "brief": "V42"},
+    "brief": "V42", "_provenance": {"by": "ai", "task": "G01", "date": "2026-10-14"}
+  }]
+}

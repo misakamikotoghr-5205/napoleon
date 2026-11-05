@@ -1,0 +1,790 @@
+{
+  "_meta": {
+    "owner": "K06",
+    "schema": 1,
+    "brief": "全年代通用生活牌。每周由日程插入，这里不排 stage_day。"
+  },
+  "cards": [
+    {
+      "id": "lf.any.rice_low",
+      "type": "life",
+      "era": [
+        "*"
+      ],
+      "weight": 9,
+      "tags": [
+        "home",
+        "rice",
+        "omen_wealth",
+        "omen_family"
+      ],
+      "season": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "due_days": 3,
+      "waivable": true,
+      "must_resolve": false,
+      "choices": [
+        {
+          "id": "buy",
+          "brief": "买米",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 18,
+              "payee": "rice_shop",
+              "reason": "k06.reason.rice",
+              "short": "ladder"
+            }
+          ]
+        },
+        {
+          "id": "endure",
+          "brief": "先挨着",
+          "effects": [
+            {
+              "op": "person_state",
+              "person": "ruhua",
+              "state": "hurt",
+              "days": 2
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "person_state",
+            "person": "ruhua",
+            "state": "hurt",
+            "days": 2
+          }
+        ]
+      },
+      "art": "illus.lf.any.rice_low",
+      "brief": "米缸见底。付钱买米，或者先挨着（如花这几天身子不适）。拖到期限按挨着处理；回家吃饭能免掉坏处。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lf.any.coal_out",
+      "type": "life",
+      "era": [
+        "*"
+      ],
+      "weight": 8,
+      "tags": [
+        "home",
+        "fuel",
+        "omen_family"
+      ],
+      "season": [
+        3,
+        0
+      ],
+      "due_days": 3,
+      "waivable": true,
+      "must_resolve": false,
+      "choices": [
+        {
+          "id": "buy",
+          "brief": "买煤",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 12,
+              "payee": "coal_shop",
+              "reason": "k06.reason.coal",
+              "short": "ladder"
+            }
+          ]
+        },
+        {
+          "id": "endure",
+          "brief": "挨冻",
+          "effects": [
+            {
+              "op": "attr",
+              "who": "ruhua",
+              "attr": "nerve",
+              "delta": -1,
+              "days": 3
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "attr",
+            "who": "ruhua",
+            "attr": "nerve",
+            "delta": -1,
+            "days": 3
+          }
+        ]
+      },
+      "art": "illus.lf.any.coal_out",
+      "brief": "煤用完了。买煤，或者挨冻（几天里胆量少一点）。拖到期限当挨冻处理；回家吃饭能免掉坏处。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lf.any.see_doctor",
+      "type": "life",
+      "era": [
+        "*"
+      ],
+      "weight": 8,
+      "tags": [
+        "home",
+        "illness",
+        "omen_illness"
+      ],
+      "season": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "due_days": 2,
+      "waivable": true,
+      "must_resolve": false,
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "去看病",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 16,
+              "payee": "doctor",
+              "reason": "k06.reason.doctor",
+              "short": "ladder"
+            }
+          ]
+        },
+        {
+          "id": "endure",
+          "brief": "拖着",
+          "effects": [
+            {
+              "op": "person_state",
+              "person": "ruhua",
+              "state": "hurt",
+              "days": 3
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "person_state",
+            "person": "ruhua",
+            "state": "hurt",
+            "days": 3
+          }
+        ]
+      },
+      "art": "illus.lf.any.see_doctor",
+      "brief": "家里有人病了，得去看。付钱看病，或者拖着（如花这几天不能做事）。拖到期限按拖着处理；回家吃饭能免掉坏处。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lf.any.school_fee",
+      "type": "life",
+      "era": [
+        "*"
+      ],
+      "weight": 7,
+      "tags": [
+        "home",
+        "school",
+        "omen_family"
+      ],
+      "season": [
+        0,
+        2
+      ],
+      "due_days": 5,
+      "waivable": true,
+      "must_resolve": false,
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "交束脩",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 20,
+              "payee": "school",
+              "reason": "k06.reason.school",
+              "short": "ladder"
+            }
+          ]
+        },
+        {
+          "id": "endure",
+          "brief": "这个学期不去",
+          "effects": [
+            {
+              "op": "rep",
+              "tier": -1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "rep",
+            "tier": -1
+          }
+        ]
+      },
+      "art": "illus.lf.any.school_fee",
+      "brief": "学堂催束脩。付钱，或者这个学期先不去（口碑掉一档）。拖到期限按不去处理；回家吃饭能免掉坏处。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lf.any.wedding_gift",
+      "type": "life",
+      "era": [
+        "*"
+      ],
+      "weight": 6,
+      "tags": [
+        "home",
+        "rite",
+        "omen_family"
+      ],
+      "season": [
+        0,
+        2
+      ],
+      "due_days": 4,
+      "waivable": false,
+      "must_resolve": false,
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "随礼",
+          "almanac": [
+            "wed"
+          ],
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 10,
+              "payee": "wedding",
+              "reason": "k06.reason.wedding",
+              "short": "ladder"
+            }
+          ]
+        },
+        {
+          "id": "endure",
+          "brief": "不去",
+          "effects": [
+            {
+              "op": "rep",
+              "tier": -1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "rep",
+            "tier": -1
+          }
+        ]
+      },
+      "art": "illus.lf.any.wedding_gift",
+      "brief": "喜帖上门，要随一份礼。出礼，或者不去（口碑掉一档）。拖到期限当不去。这张的坏处回家吃饭免不掉。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lf.any.funeral",
+      "type": "life",
+      "era": [
+        "*"
+      ],
+      "weight": 6,
+      "tags": [
+        "home",
+        "rite",
+        "omen_family"
+      ],
+      "season": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "due_days": 3,
+      "waivable": false,
+      "must_resolve": false,
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "去祭",
+          "almanac": [
+            "pray"
+          ],
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 14,
+              "payee": "funeral",
+              "reason": "k06.reason.funeral",
+              "short": "ladder"
+            }
+          ]
+        },
+        {
+          "id": "endure",
+          "brief": "不去",
+          "effects": [
+            {
+              "op": "rep",
+              "tier": -1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "rep",
+            "tier": -1
+          }
+        ]
+      },
+      "art": "illus.lf.any.funeral",
+      "brief": "街坊办丧事，要去祭一份。出一份，或者不去（口碑掉一档）。拖到期限当不去。这张的坏处回家吃饭免不掉。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lf.any.new_year",
+      "type": "life",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "home",
+        "year_end",
+        "omen_family",
+        "omen_wealth"
+      ],
+      "season": [
+        3
+      ],
+      "due_days": 6,
+      "waivable": true,
+      "must_resolve": false,
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "备年",
+          "almanac": [
+            "pray"
+          ],
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 24,
+              "payee": "new_year",
+              "reason": "k06.reason.new_year",
+              "short": "ladder"
+            }
+          ]
+        },
+        {
+          "id": "endure",
+          "brief": "从简",
+          "effects": [
+            {
+              "op": "rep",
+              "tier": -1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "rep",
+            "tier": -1
+          }
+        ]
+      },
+      "art": "illus.lf.any.new_year",
+      "brief": "过年了，灶上和人情都要备。备一份，或者从简（口碑掉一档）。拖到期限当从简；回家吃饭能免掉坏处。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lf.any.rent",
+      "type": "life",
+      "era": [
+        "*"
+      ],
+      "weight": 8,
+      "tags": [
+        "home",
+        "rent",
+        "omen_wealth"
+      ],
+      "season": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "due_days": 5,
+      "waivable": true,
+      "must_resolve": false,
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "交租",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 15,
+              "payee": "landlord",
+              "reason": "k06.reason.rent",
+              "short": "ladder"
+            }
+          ]
+        },
+        {
+          "id": "endure",
+          "brief": "欠着",
+          "effects": [
+            {
+              "op": "rep",
+              "tier": -1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "rep",
+            "tier": -1
+          }
+        ]
+      },
+      "art": "illus.lf.any.rent",
+      "brief": "房租到期。付钱，或者欠着（口碑掉一档）。拖到期限按欠着处理；回家吃饭能免掉坏处。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lf.any.repair_house",
+      "type": "life",
+      "era": [
+        "*"
+      ],
+      "weight": 7,
+      "tags": [
+        "home",
+        "repair",
+        "omen_family"
+      ],
+      "season": [
+        0,
+        2
+      ],
+      "due_days": 4,
+      "waivable": true,
+      "must_resolve": false,
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "修一修",
+          "almanac": [
+            "repair"
+          ],
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 18,
+              "payee": "carpenter",
+              "reason": "k06.reason.repair",
+              "short": "ladder"
+            }
+          ]
+        },
+        {
+          "id": "endure",
+          "brief": "先凑合",
+          "effects": [
+            {
+              "op": "item_lose",
+              "match": {
+                "pick": "any"
+              },
+              "n": 1,
+              "reason": "k06.reason.repair"
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "item_lose",
+            "match": {
+              "pick": "any"
+            },
+            "n": 1,
+            "reason": "k06.reason.repair"
+          }
+        ]
+      },
+      "art": "illus.lf.any.repair_house",
+      "brief": "屋子漏了或门坏了。花钱修，或者先凑合（货架上随便少一件）。拖到期限按凑合处理；回家吃饭能免掉坏处。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lf.any.debt_due",
+      "type": "life",
+      "era": [
+        "*"
+      ],
+      "weight": 6,
+      "tags": [
+        "debt",
+        "omen_wealth",
+        "omen_dispute"
+      ],
+      "season": [
+        0,
+        3
+      ],
+      "due_days": 5,
+      "waivable": true,
+      "must_resolve": false,
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "还上",
+          "almanac": [
+            "lend"
+          ],
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 30,
+              "payee": "lender",
+              "reason": "k06.reason.debt",
+              "short": "ladder"
+            }
+          ]
+        },
+        {
+          "id": "endure",
+          "brief": "再拖",
+          "effects": [
+            {
+              "op": "heat",
+              "tier": 1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "heat",
+            "tier": 1
+          }
+        ]
+      },
+      "art": "illus.lf.any.debt_due",
+      "brief": "先前借的钱到期。还上，或者再拖（风声上一档）。拖到期限按再拖处理；回家吃饭能免掉坏处。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lf.any.mother_cough",
+      "type": "life",
+      "era": [
+        "*"
+      ],
+      "weight": 8,
+      "tags": [
+        "home",
+        "illness",
+        "omen_illness",
+        "omen_family"
+      ],
+      "season": [
+        3,
+        0
+      ],
+      "due_days": 2,
+      "waivable": true,
+      "must_resolve": false,
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "买药",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 14,
+              "payee": "doctor",
+              "reason": "k06.reason.medicine",
+              "short": "ladder"
+            }
+          ]
+        },
+        {
+          "id": "endure",
+          "brief": "再挨几天",
+          "effects": [
+            {
+              "op": "attr",
+              "who": "ruhua",
+              "attr": "nerve",
+              "delta": -1,
+              "days": 4
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "attr",
+            "who": "ruhua",
+            "attr": "nerve",
+            "delta": -1,
+            "days": 4
+          }
+        ]
+      },
+      "art": "illus.lf.any.mother_cough",
+      "brief": "母亲咳嗽，药不能断。买药，或者再挨几天（你这几天胆量少一点）。拖到期限按再挨处理；回家吃饭能免掉坏处。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lf.any.lamp_oil",
+      "type": "life",
+      "era": [
+        "*"
+      ],
+      "weight": 5,
+      "tags": [
+        "home",
+        "fuel",
+        "omen_wealth"
+      ],
+      "season": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "due_days": 4,
+      "waivable": true,
+      "must_resolve": false,
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "买油",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 6,
+              "payee": "lamp_shop",
+              "reason": "k06.reason.lamp",
+              "short": "ladder"
+            }
+          ]
+        },
+        {
+          "id": "endure",
+          "brief": "摸黑",
+          "effects": [
+            {
+              "op": "attr",
+              "who": "ruhua",
+              "attr": "eye",
+              "delta": -1,
+              "days": 3
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "attr",
+            "who": "ruhua",
+            "attr": "eye",
+            "delta": -1,
+            "days": 3
+          }
+        ]
+      },
+      "art": "illus.lf.any.lamp_oil",
+      "brief": "灯油快没了。买一点，或者摸黑（几天里眼力少一点）。拖到期限按摸黑处理；回家吃饭能免掉坏处。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

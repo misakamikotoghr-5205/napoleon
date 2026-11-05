@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-3940"
+  },
+  "fa.1939.charcoal_wind": {
+    "title": "柴价又动了",
+    "body": "这几天柴价一阵涨一阵落，眼下又贵了些。",
+    "choices": {
+      "buy": "现在买",
+      "wait": "再等等"
+    },
+    "outcomes": {
+      "ignored": "柴没买上，屋里冷，这两天你提不起胆气。"
+    }
+  },
+  "fa.1939.district_fine": {
+    "title": "伪区公所罚款",
+    "body": "伪区公所派人来，说铺子坏了规矩，要罚一笔钱。",
+    "choices": {
+      "pay": "交罚款",
+      "refuse": "不交"
+    },
+    "outcomes": {
+      "ignored": "罚款没交，伪区公所那边记了一笔，风声紧了。"
+    }
+  },
+  "fa.1939.gate_wink": {
+    "title": "城门通融",
+    "body": "守城门的有人递话，说塞点钱，往后进出能通融一回。",
+    "choices": {
+      "pay": "塞钱",
+      "refuse": "不塞"
+    },
+    "outcomes": {
+      "ignored": "这句话没人理会，守门的人记住了你，风声紧了些。"
+    }
+  },
+  "fa.1939.year_remittance": {
+    "title": "远亲汇钱",
+    "body": "远方的亲戚汇来一笔钱，让家里好好过个年。",
+    "choices": {
+      "accept": "收下",
+      "send_back": "退回去"
+    }
+  }
+}

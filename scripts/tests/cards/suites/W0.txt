@@ -1,0 +1,11 @@
+# W0（Claude）骨架自测。格式：名字|脚本|超时秒|参数（docs/cards/CARDS_INTERFACES.md §12.1）
+W0_validate_examples|res://scripts/cards/core/validate_main.gd|120|--examples --name=W0_validate_examples
+W0_fixtures_up_to_date|res://scripts/cards/mock/build_fixtures.gd|120|--check
+W0_skeleton|res://scripts/tests/cards/W0/test_skeleton.gd|180|
+W0_engine|res://scripts/tests/cards/W0/test_engine.gd|120|
+W0_validator|res://scripts/tests/cards/W0/test_validator.gd|120|
+W0_mock|res://scripts/tests/cards/W0/test_mock.gd|120|
+W0_table_3days|res://scripts/tests/cards/W0/test_table_3days.gd|240|
+W0_next_day|res://scripts/tests/cards/W0/test_next_day.gd|300|
+W0_stage|res://scripts/tests/cards/W0/test_stage.gd|180|
+W0_mg_ops|res://scripts/tests/cards/W0/test_mg_ops.gd|180|

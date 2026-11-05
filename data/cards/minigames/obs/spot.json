@@ -1,0 +1,151 @@
+{
+  "_meta": {
+    "owner": "C12",
+    "schema": 1,
+    "kind": "spot",
+    "brief": "找不同观察键：玩家自己点出的那一处、自己说的旧痕/不一样（对错不在这里）。各部位 differs、wear（清楚；口气不够时 hedge 到 _maybe 或 unclear）、differs_maybe、wear_maybe（一半）、unclear（含糊）、plain（兼容旧版，不再发）；nothing_found（翻了图鉴、一处没钉）",
+    "_provenance": {
+      "by": "ai",
+      "task": "C12",
+      "date": "2026-10-13"
+    }
+  },
+  "obs": {
+    "obs.spot.authenticity.differs": {
+      "fidelity": "clear",
+      "hedge": {
+        "partial": "obs.spot.authenticity.differs_maybe",
+        "vague": "obs.spot.authenticity.unclear"
+      },
+      "brief": "authenticity：玩家说这一处和图鉴不一样"
+    },
+    "obs.spot.authenticity.wear": {
+      "fidelity": "clear",
+      "hedge": {
+        "partial": "obs.spot.authenticity.wear_maybe",
+        "vague": "obs.spot.authenticity.unclear"
+      },
+      "brief": "authenticity：玩家说这一处是旧痕"
+    },
+    "obs.spot.authenticity.differs_maybe": {
+      "fidelity": "partial",
+      "brief": "authenticity：玩家说这一处好像和图鉴不太一样（没先翻图鉴、或没用放大镜，口气软）"
+    },
+    "obs.spot.authenticity.wear_maybe": {
+      "fidelity": "partial",
+      "brief": "authenticity：玩家说这一处好像是旧痕（口气软）"
+    },
+    "obs.spot.authenticity.plain": {
+      "fidelity": "clear",
+      "brief": "authenticity：这一处看不出特别的痕迹（旧版留着兼容，新版不再发）"
+    },
+    "obs.spot.authenticity.unclear": {
+      "fidelity": "vague",
+      "brief": "authenticity：这一处没看清"
+    },
+    "obs.spot.condition.differs": {
+      "fidelity": "clear",
+      "hedge": {
+        "partial": "obs.spot.condition.differs_maybe",
+        "vague": "obs.spot.condition.unclear"
+      },
+      "brief": "condition：玩家说这一处和图鉴不一样"
+    },
+    "obs.spot.condition.wear": {
+      "fidelity": "clear",
+      "hedge": {
+        "partial": "obs.spot.condition.wear_maybe",
+        "vague": "obs.spot.condition.unclear"
+      },
+      "brief": "condition：玩家说这一处是旧痕"
+    },
+    "obs.spot.condition.differs_maybe": {
+      "fidelity": "partial",
+      "brief": "condition：玩家说这一处好像和图鉴不太一样（没先翻图鉴、或没用放大镜，口气软）"
+    },
+    "obs.spot.condition.wear_maybe": {
+      "fidelity": "partial",
+      "brief": "condition：玩家说这一处好像是旧痕（口气软）"
+    },
+    "obs.spot.condition.plain": {
+      "fidelity": "clear",
+      "brief": "condition：这一处看不出特别的痕迹（旧版留着兼容，新版不再发）"
+    },
+    "obs.spot.condition.unclear": {
+      "fidelity": "vague",
+      "brief": "condition：这一处没看清"
+    },
+    "obs.spot.material.differs": {
+      "fidelity": "clear",
+      "hedge": {
+        "partial": "obs.spot.material.differs_maybe",
+        "vague": "obs.spot.material.unclear"
+      },
+      "brief": "material：玩家说这一处和图鉴不一样"
+    },
+    "obs.spot.material.wear": {
+      "fidelity": "clear",
+      "hedge": {
+        "partial": "obs.spot.material.wear_maybe",
+        "vague": "obs.spot.material.unclear"
+      },
+      "brief": "material：玩家说这一处是旧痕"
+    },
+    "obs.spot.material.differs_maybe": {
+      "fidelity": "partial",
+      "brief": "material：玩家说这一处好像和图鉴不太一样（没先翻图鉴、或没用放大镜，口气软）"
+    },
+    "obs.spot.material.wear_maybe": {
+      "fidelity": "partial",
+      "brief": "material：玩家说这一处好像是旧痕（口气软）"
+    },
+    "obs.spot.material.plain": {
+      "fidelity": "clear",
+      "brief": "material：这一处看不出特别的痕迹（旧版留着兼容，新版不再发）"
+    },
+    "obs.spot.material.unclear": {
+      "fidelity": "vague",
+      "brief": "material：这一处没看清"
+    },
+    "obs.spot.provenance.differs": {
+      "fidelity": "clear",
+      "hedge": {
+        "partial": "obs.spot.provenance.differs_maybe",
+        "vague": "obs.spot.provenance.unclear"
+      },
+      "brief": "provenance：玩家说这一处和图鉴不一样"
+    },
+    "obs.spot.provenance.wear": {
+      "fidelity": "clear",
+      "hedge": {
+        "partial": "obs.spot.provenance.wear_maybe",
+        "vague": "obs.spot.provenance.unclear"
+      },
+      "brief": "provenance：玩家说这一处是旧痕"
+    },
+    "obs.spot.provenance.differs_maybe": {
+      "fidelity": "partial",
+      "brief": "provenance：玩家说这一处好像和图鉴不太一样（没先翻图鉴、或没用放大镜，口气软）"
+    },
+    "obs.spot.provenance.wear_maybe": {
+      "fidelity": "partial",
+      "brief": "provenance：玩家说这一处好像是旧痕（口气软）"
+    },
+    "obs.spot.provenance.plain": {
+      "fidelity": "clear",
+      "brief": "provenance：这一处看不出特别的痕迹（旧版留着兼容，新版不再发）"
+    },
+    "obs.spot.provenance.unclear": {
+      "fidelity": "vague",
+      "brief": "provenance：这一处没看清"
+    },
+    "obs.spot.nothing_found": {
+      "fidelity": "clear",
+      "hedge": {
+        "partial": "obs.spot.nothing_found",
+        "vague": "obs.spot.nothing_found"
+      },
+      "brief": "翻着图鉴看了一遍，一处也没钉：没找出什么不一样。哪一档都照记（合同的 fidelity any 进校验器以后可改成 any）"
+    }
+  }
+}

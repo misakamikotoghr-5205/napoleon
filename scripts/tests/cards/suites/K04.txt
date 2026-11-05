@@ -1,0 +1,4 @@
+# K04 1939 世界牌 + 通用命运（docs/handoff_cards/K04_data-1939-world.md）
+K04_validate|res://scripts/cards/core/validate_main.gd|120|--only=data/cards/era/1939/events.json,data/cards/era/1939/fate.json,data/cards/era/1939/big_fate.json,data/cards/era/1939/life.json,data/cards/era/1939/goals.json,data/cards/era/1939/stage.json,data/cards/era/common/fate.json,data/cards/tags/K04.json,data/cards/ui_keys/K04.json --name=K04_validate
+K04_data|res://scripts/tests/cards/K04/test_data.gd|120|
+K04_guide_support|res://scripts/tests/cards/K04/test_guide_support.gd|120|

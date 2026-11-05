@@ -1,0 +1,82 @@
+{
+  "cards": [
+    {
+      "id": "ev.1938.weichi",
+      "type": "event",
+      "era": [
+        "1938"
+      ],
+      "brief": "维持会摊派，七天内交钱。"
+    },
+    {
+      "id": "ev.1939.xian",
+      "type": "event",
+      "era": [
+        "1939"
+      ],
+      "brief": "县政府换了章。"
+    },
+    {
+      "id": "ev.1939.qu",
+      "type": "event",
+      "era": [
+        "1939"
+      ],
+      "brief": "区公所贴出告示。"
+    },
+    {
+      "id": "ev.1940.guomin",
+      "type": "event",
+      "era": [
+        "1940"
+      ],
+      "brief": "国民政府在南京成立。"
+    },
+    {
+      "id": "ev.1941.qing",
+      "type": "event",
+      "era": [
+        "1941"
+      ],
+      "brief": "清乡委员会发证。"
+    },
+    {
+      "id": "ev.1942.quan",
+      "type": "event",
+      "era": [
+        "1942"
+      ],
+      "brief": "手里还有中储券。"
+    },
+    {
+      "id": "ev.1943.shang",
+      "type": "event",
+      "era": [
+        "1943"
+      ],
+      "brief": "商统会统制米布。"
+    },
+    {
+      "id": "ev.1938.weixin",
+      "type": "event",
+      "era": [
+        "1938"
+      ],
+      "brief": "维新政府在南京开会。"
+    },
+    {
+      "id": "ev.1938.choice",
+      "type": "event",
+      "era": [
+        "1938"
+      ],
+      "brief": "伪维持会上门。",
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "交给维持会的人。"
+        }
+      ]
+    }
+  ]
+}

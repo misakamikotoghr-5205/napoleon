@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-1938"
+  },
+  "ev.1938.cat_arrive": {
+    "title": "进店的猫",
+    "body": "一只猫溜进铺子，蹲在柜台边不肯走。",
+    "choices": {
+      "keep": "留下它",
+      "shoo": "赶走"
+    },
+    "outcomes": {
+      "ignored": "没人理它，猫自己走了。"
+    }
+  },
+  "ev.1938.find_cat": {
+    "title": "猫不见了",
+    "body": "铺里的猫好几天没回来了。",
+    "choices": {
+      "search": "出去找找",
+      "leave_it": "先不管"
+    },
+    "outcomes": {
+      "ignored": "没去找，猫还是不见踪影。"
+    }
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "_meta": {
+    "owner": "K10",
+    "schema": 1,
+    "brief": "1939 本月运势扇区，以及该年大轮盘的翻身、平安、坠底各一段。"
+  },
+  "cards": [
+    {
+      "id": "ws.1939.month.nianhuo",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "arc": 3,
+      "valence": "good",
+      "month_mods": [
+        {
+          "pool": "person",
+          "tags_any": [
+            "buyer"
+          ],
+          "pct": 125
+        }
+      ],
+      "effects": [],
+      "art": "icon.ws.nianhuo",
+      "brief": "1939 腊月本月运势好段。valence 为 good。month_mods 把带 buyer 的人物牌权重抬高，年货来买的人多一些。扇区名由 A 定。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1939.month.qingzhang",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "arc": 1,
+      "valence": "good",
+      "month_mods": [
+        {
+          "pool": "fate",
+          "valence": "good",
+          "pct": 120
+        }
+      ],
+      "effects": [],
+      "art": "icon.ws.qingzhang",
+      "brief": "1939 腊月本月运势另一段好段，弧较窄。valence 为 good。month_mods 把命运牌池 good 的权重抬高。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1939.month.nianwei",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "arc": 7,
+      "valence": "bad",
+      "month_mods": [
+        {
+          "pool": "fate",
+          "valence": "bad",
+          "pct": 150
+        }
+      ],
+      "effects": [],
+      "art": "icon.ws.nianwei",
+      "brief": "1939 腊月本月运势坏段，弧比春关的坏段更宽。valence 为 bad。month_mods 把命运牌池 bad 的权重抬高，年关坏命运多一些。不写暴力细节。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1939.month.micang",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "arc": 6,
+      "valence": "neutral",
+      "month_mods": [
+        {
+          "pool": "life",
+          "tags_any": [
+            "omen_family"
+          ],
+          "pct": 115
+        }
+      ],
+      "effects": [],
+      "art": "icon.ws.micang",
+      "brief": "1939 腊月本月运势平常段。valence 为 neutral。month_mods 把生活牌池里带 omen_family 的权重略抬。机制注记：伪县政府管事、米价上涨，只作背景，不写成告示。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1939.month.chengmen",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "arc": 5,
+      "valence": "neutral",
+      "month_mods": [
+        {
+          "pool": "event",
+          "tags_any": [
+            "omen_official"
+          ],
+          "pct": 120
+        }
+      ],
+      "effects": [],
+      "art": "icon.ws.chengmen",
+      "brief": "1939 腊月本月运势平常段。valence 为 neutral。month_mods 把事件牌池里带 omen_official 的权重略抬。机制注记：城门盘查、伪县政府设岗。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1939.month.pingan",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "arc": 5,
+      "valence": "neutral",
+      "month_mods": [],
+      "effects": [],
+      "art": "icon.ws.pingan",
+      "brief": "1939 腊月本月运势平常段。valence 为 neutral。month_mods 为空。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1939.month.jiashu",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "arc": 5,
+      "valence": "neutral",
+      "month_mods": [
+        {
+          "pool": "news",
+          "tags_any": [
+            "omen_far"
+          ],
+          "pct": 115
+        }
+      ],
+      "effects": [],
+      "art": "icon.ws.jiashu",
+      "brief": "1939 腊月本月运势平常段。valence 为 neutral。month_mods 把消息牌池里带 omen_far 的权重略抬，远方来信一类略多。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1939.big.fanshen_letter",
+      "type": "wheel_segment",
+      "wheel": "wh.big",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "arc": 2,
+      "valence": "good",
+      "conditions": {
+        "conscience_gte": -20
+      },
+      "effects": [
+        {
+          "op": "heat",
+          "delta": -8
+        },
+        {
+          "op": "add_card",
+          "card": "bf.1939.gate_passage",
+          "to": "hand"
+        }
+      ],
+      "art": "icon.ws.fanshen",
+      "brief": "1939 大轮盘翻身段。valence 为 good。本心低于阈值不上盘。效果：风声下降一点。机制注记：远方有接应，不写成信的正文。V36：此段发大赌 bf.1939.gate_passage 到手上（#146）。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1939.big.pingan_year",
+      "type": "wheel_segment",
+      "wheel": "wh.big",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "arc": 3,
+      "valence": "neutral",
+      "effects": [
+        {
+          "op": "heat",
+          "delta": -4
+        }
+      ],
+      "art": "icon.ws.pingan",
+      "brief": "1939 腊月大轮盘平安段。valence 为 neutral。效果：风声下降一点，年关先挺过去。不发大赌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1939.big.zhuidi_gate",
+      "type": "wheel_segment",
+      "wheel": "wh.big",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "arc": 3,
+      "valence": "bad",
+      "effects": [
+        {
+          "op": "heat",
+          "delta": 8
+        },
+        {
+          "op": "add_card",
+          "card": "bf.1939.rice_hoard",
+          "to": "hand"
+        }
+      ],
+      "art": "icon.ws.zhuidi",
+      "brief": "1939 大轮盘坠底段。valence 为 bad。效果：风声抬一截。机制注记：城门盘查更紧。不写暴力细节。 V36：此段另发大赌 bf.1939.rice_hoard 到手上（#146）。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

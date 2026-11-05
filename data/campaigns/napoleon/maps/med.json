@@ -1,0 +1,3816 @@
+{
+ "id": "med",
+ "version": 1,
+ "segment": "cristo",
+ "_doc": "Normalized authored map. Source: docs/cards/world/drafts/cristo/data/campaigns/napoleon/maps/med.json",
+ "views": {
+  "med": {
+   "proj": "mercator",
+   "base": "med",
+   "bg": "map_med"
+  },
+  "marseille_1815": {
+   "proj": "canvas",
+   "bg": "map_marseille_1815"
+  },
+  "if_fortress": {
+   "proj": "canvas",
+   "bg": "map_if_fortress"
+  },
+  "paris_1838": {
+   "proj": "canvas",
+   "bg": "map_paris"
+  }
+ },
+ "sheets": [
+  {
+   "chapter": "marseille",
+   "view": "marseille_1815",
+   "start": "quay",
+   "days_max": 20,
+   "stamps_need": 2,
+   "muster": "panier",
+   "boss": "warehouse",
+   "interlude": "bond",
+   "sets": [
+    {
+     "id": "old_port",
+     "nodes": [
+      "fort_post",
+      "catalans"
+     ],
+     "bonus": {
+      "pass_supply": 1
+     }
+    }
+   ],
+   "rivals": [
+    {
+     "id": "gendarme_patrol",
+     "label": "宪兵巡逻队",
+     "path": [
+      "canebiere",
+      "grand_cours",
+      "belsunce",
+      "grand_cours"
+     ],
+     "speed": 1,
+     "start": 0,
+     "meet": {
+      "battle": {
+       "template": "alley_ambush",
+       "level": 12
+      },
+      "toll": {
+       "gold": 1
+      }
+     },
+     "burns_depots": true
+    }
+   ],
+   "nodes": [
+    {
+     "id": "quay",
+     "type": "story",
+     "label": "旧港码头·圣让堡下",
+     "xy": [
+      764,
+      523
+     ],
+     "date": "1815-02-28",
+     "scene": "c_landfall",
+     "fog": "open",
+     "fixed": true,
+     "_draft_xy": [
+      760,
+      470
+     ]
+    },
+    {
+     "id": "fort_post",
+     "type": "supply",
+     "label": "圣让堡哨口",
+     "xy": [
+      588,
+      438
+     ],
+     "role": "post",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "fog": "open",
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "intel": 1
+      }
+     },
+     "_draft_xy": [
+      600,
+      420
+     ]
+    },
+    {
+     "id": "lazaret",
+     "type": "slot",
+     "label": "阿朗克检疫站",
+     "xy": [
+      518,
+      249
+     ],
+     "slot": {
+      "pool": "marseille",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "_draft_xy": [
+      520,
+      250
+     ]
+    },
+    {
+     "id": "estaque",
+     "type": "slot",
+     "label": "莱斯塔克的渔村",
+     "xy": [
+      360,
+      150
+     ],
+     "slot": {
+      "pool": "marseille",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 12
+     },
+     "fog": "type",
+     "fixed": false
+    },
+    {
+     "id": "saint_nicolas",
+     "type": "slot",
+     "label": "圣尼古拉堡下的渡口",
+     "xy": [
+      629,
+      578
+     ],
+     "slot": {
+      "pool": "marseille",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "_draft_xy": [
+      640,
+      570
+     ]
+    },
+    {
+     "id": "rive_neuve",
+     "type": "camp",
+     "label": "新岸的船坞",
+     "xy": [
+      880,
+      610
+     ],
+     "actions": [
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "activity:rest"
+     ],
+     "fog": "open",
+     "once": false
+    },
+    {
+     "id": "catalans",
+     "type": "supply",
+     "label": "加泰罗尼亚人村",
+     "xy": [
+      557,
+      706
+     ],
+     "role": "intel",
+     "actions": [
+      "visit:backdoor",
+      "build_depot"
+     ],
+     "fog": "open",
+     "once": false,
+     "_draft_xy": [
+      560,
+      700
+     ]
+    },
+    {
+     "id": "reserve",
+     "type": "story",
+     "label": "雷瑟夫酒家",
+     "xy": [
+      430,
+      790
+     ],
+     "date": "1815-02-28",
+     "scene": "c_reserve",
+     "fog": "open",
+     "fixed": true
+    },
+    {
+     "id": "corniche",
+     "type": "slot",
+     "label": "海边的悬崖小路",
+     "xy": [
+      620,
+      920
+     ],
+     "slot": {
+      "pool": "marseille",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 12
+     },
+     "fog": "type",
+     "fixed": false
+    },
+    {
+     "id": "garde_post",
+     "type": "supply",
+     "label": "守护圣母山信号站",
+     "xy": [
+      1000,
+      840
+     ],
+     "role": "post",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "fog": "open",
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     }
+    },
+    {
+     "id": "arsenal",
+     "type": "slot",
+     "label": "旧军械库",
+     "xy": [
+      1060,
+      650
+     ],
+     "slot": {
+      "pool": "marseille",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false
+    },
+    {
+     "id": "canebiere",
+     "type": "slot",
+     "label": "卡讷比耶尔大街",
+     "xy": [
+      1120,
+      510
+     ],
+     "slot": {
+      "pool": "marseille",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false
+    },
+    {
+     "id": "grand_cours",
+     "type": "story",
+     "label": "大库尔街·杰拉尔的宅子",
+     "xy": [
+      1200,
+      380
+     ],
+     "date": "1815-02-28",
+     "scene": "c_gerard",
+     "fog": "open",
+     "fixed": true
+    },
+    {
+     "id": "belsunce",
+     "type": "supply",
+     "label": "贝尔桑斯林荫道的集市",
+     "xy": [
+      1330,
+      280
+     ],
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "fog": "open",
+     "once": false
+    },
+    {
+     "id": "meilhan",
+     "type": "story",
+     "label": "梅朗林荫道·莫雷尔商行",
+     "xy": [
+      1500,
+      430
+     ],
+     "date": "1815-04-12",
+     "scene": "c_petition",
+     "fog": "open",
+     "fixed": true
+    },
+    {
+     "id": "caderousse_shop",
+     "type": "shop",
+     "label": "卡德鲁斯的裁缝铺",
+     "xy": [
+      1600,
+      300
+     ],
+     "actions": [
+      "activity:merchant",
+      "recruit:troop"
+     ],
+     "fog": "open",
+     "once": false
+    },
+    {
+     "id": "aix_road",
+     "type": "slot",
+     "label": "去艾克斯的大路",
+     "xy": [
+      1720,
+      160
+     ],
+     "slot": {
+      "pool": "marseille",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 12
+     },
+     "fog": "type",
+     "fixed": false
+    },
+    {
+     "id": "old_dantes",
+     "type": "slot",
+     "label": "梅朗林荫道的阁楼",
+     "xy": [
+      1680,
+      520
+     ],
+     "slot": {
+      "pool": "marseille",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false
+    },
+    {
+     "id": "panier",
+     "type": "camp",
+     "label": "勒潘尼耶的地窖（集结）",
+     "xy": [
+      811,
+      235
+     ],
+     "role": "muster",
+     "date": "1815-06-24",
+     "actions": [
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "activity:rest",
+      "muster"
+     ],
+     "fog": "open",
+     "once": false,
+     "phase": "accumulate",
+     "_draft_xy": [
+      800,
+      290
+     ]
+    },
+    {
+     "id": "saint_laurent",
+     "type": "event",
+     "label": "圣洛朗教堂",
+     "xy": [
+      652,
+      307
+     ],
+     "role": "council",
+     "event": "ev_c1_council",
+     "fixed": true,
+     "phase": "campaign",
+     "date": "1815-06-24",
+     "fog": "open",
+     "_draft_xy": [
+      640,
+      330
+     ]
+    },
+    {
+     "id": "catalans_cove",
+     "type": "elite",
+     "label": "加泰罗尼亚人的海湾",
+     "xy": [
+      330,
+      900
+     ],
+     "template": "catalans_cove",
+     "level": 13,
+     "weather": [
+      "night"
+     ],
+     "reward": {
+      "coins": {
+       "gold": 2
+      },
+      "props": [
+       "prop_bribe_pouch"
+      ]
+     },
+     "phase": "campaign",
+     "date": "1815-06-24",
+     "fog": "open"
+    },
+    {
+     "id": "cellar",
+     "type": "camp",
+     "label": "圣让堡的暗道",
+     "xy": [
+      780,
+      378
+     ],
+     "actions": [
+      "activity:rest",
+      "schedule:bond_story"
+     ],
+     "phase": "campaign",
+     "date": "1815-06-24",
+     "fog": "open",
+     "once": false,
+     "_draft_xy": [
+      780,
+      385
+     ]
+    },
+    {
+     "id": "warehouse",
+     "type": "boss",
+     "label": "旧港北岸·莫雷尔的货栈",
+     "xy": [
+      921,
+      420
+     ],
+     "scene": "c_white_june",
+     "phase": "campaign",
+     "weather": [
+      "clear"
+     ],
+     "date": "1815-06-25",
+     "fog": "open",
+     "fixed": true,
+     "_draft_xy": [
+      920,
+      420
+     ]
+    }
+   ],
+   "links": [
+    {
+     "a": "quay",
+     "b": "fort_post",
+     "legs": 1
+    },
+    {
+     "a": "quay",
+     "b": "saint_nicolas",
+     "legs": 1,
+     "supply": 1
+    },
+    {
+     "a": "quay",
+     "b": "canebiere",
+     "legs": 2
+    },
+    {
+     "a": "fort_post",
+     "b": "lazaret",
+     "legs": 2
+    },
+    {
+     "a": "lazaret",
+     "b": "estaque",
+     "legs": 2
+    },
+    {
+     "a": "fort_post",
+     "b": "panier",
+     "legs": 2
+    },
+    {
+     "a": "belsunce",
+     "b": "panier",
+     "legs": 3
+    },
+    {
+     "a": "saint_nicolas",
+     "b": "catalans",
+     "legs": 1
+    },
+    {
+     "a": "saint_nicolas",
+     "b": "rive_neuve",
+     "legs": 1
+    },
+    {
+     "a": "catalans",
+     "b": "reserve",
+     "legs": 1
+    },
+    {
+     "a": "reserve",
+     "b": "corniche",
+     "legs": 2
+    },
+    {
+     "a": "corniche",
+     "b": "garde_post",
+     "legs": 2
+    },
+    {
+     "a": "garde_post",
+     "b": "arsenal",
+     "legs": 2
+    },
+    {
+     "a": "arsenal",
+     "b": "rive_neuve",
+     "legs": 1
+    },
+    {
+     "a": "arsenal",
+     "b": "canebiere",
+     "legs": 2
+    },
+    {
+     "a": "canebiere",
+     "b": "grand_cours",
+     "legs": 1
+    },
+    {
+     "a": "grand_cours",
+     "b": "belsunce",
+     "legs": 2
+    },
+    {
+     "a": "canebiere",
+     "b": "meilhan",
+     "legs": 2
+    },
+    {
+     "a": "belsunce",
+     "b": "meilhan",
+     "legs": 2
+    },
+    {
+     "a": "meilhan",
+     "b": "caderousse_shop",
+     "legs": 1
+    },
+    {
+     "a": "caderousse_shop",
+     "b": "aix_road",
+     "legs": 2
+    },
+    {
+     "a": "meilhan",
+     "b": "old_dantes",
+     "legs": 1
+    },
+    {
+     "a": "belsunce",
+     "b": "aix_road",
+     "legs": 3,
+     "toll": {
+      "gold": 1
+     }
+    },
+    {
+     "a": "rive_neuve",
+     "b": "catalans",
+     "legs": 2,
+     "route": "smuggle_route"
+    },
+    {
+     "a": "panier",
+     "b": "saint_laurent",
+     "legs": 1
+    },
+    {
+     "a": "saint_laurent",
+     "b": "cellar",
+     "legs": 1
+    },
+    {
+     "a": "saint_laurent",
+     "b": "catalans_cove",
+     "voyage_days": 1
+    },
+    {
+     "a": "catalans_cove",
+     "b": "cellar",
+     "voyage_days": 1
+    },
+    {
+     "a": "cellar",
+     "b": "warehouse",
+     "legs": 1
+    }
+   ],
+   "_draft_days_max": 18,
+   "templates_needed": [],
+   "_marker_layout": "Authored geo retained; transaction markers separated for readable selection."
+  },
+  {
+   "chapter": "if_years",
+   "view": "if_fortress",
+   "start": "gov_office",
+   "days_max": 22,
+   "stamps_need": 2,
+   "muster": "bread_wharf_1829",
+   "boss": "sea_gate",
+   "interlude": "minigame:decode",
+   "years": {
+    "_doc": "这一章一张图跨十三年：锚点上写年份，界面在顶栏显示“1816 → 1829”的刻度。天数照常计（一天=一段日子）。",
+    "marks": [
+     [
+      "gov_office",
+      1816
+     ],
+     [
+      "if_kitchen",
+      1817
+     ],
+     [
+      "cell_27",
+      1818
+     ],
+     [
+      "morgiou",
+      1822
+     ],
+     [
+      "cell_27_1829",
+      1829
+     ]
+    ]
+   },
+   "sets": [
+    {
+     "id": "bread_route",
+     "nodes": [
+      "bread_wharf",
+      "if_landing"
+     ],
+     "bonus": {
+      "pass_supply": 1
+     }
+    }
+   ],
+   "rivals": [
+    {
+     "id": "customs_cutter",
+     "label": "海关缉私快艇",
+     "path": [
+      "sormiou",
+      "morgiou",
+      "calanques",
+      "morgiou"
+     ],
+     "speed": 1,
+     "start": 1,
+     "meet": {
+      "battle": {
+       "template": "coast_road",
+       "level": 14
+      },
+      "toll": {
+       "gold": 1
+      }
+     },
+     "burns_depots": false
+    }
+   ],
+   "nodes": [
+    {
+     "id": "gov_office",
+     "type": "story",
+     "label": "伊夫堡·典狱长的办公室",
+     "xy": [
+      419,
+      361
+     ],
+     "date": "1816-03-12",
+     "scene": "c_if_contract",
+     "fog": "open",
+     "fixed": true,
+     "_draft_xy": [
+      420,
+      360
+     ]
+    },
+    {
+     "id": "if_landing",
+     "type": "supply",
+     "label": "伊夫堡码头",
+     "xy": [
+      600,
+      520
+     ],
+     "role": "post",
+     "actions": [
+      "visit:town",
+      "build_depot"
+     ],
+     "fog": "open",
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     }
+    },
+    {
+     "id": "if_kitchen",
+     "type": "story",
+     "label": "地牢的厨房",
+     "xy": [
+      330,
+      560
+     ],
+     "date": "1817-07-20",
+     "scene": "c_bread_34",
+     "fog": "open",
+     "fixed": true
+    },
+    {
+     "id": "if_yard",
+     "type": "slot",
+     "label": "要塞的院子",
+     "xy": [
+      466,
+      696
+     ],
+     "slot": {
+      "pool": "if_years",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "_draft_xy": [
+      470,
+      700
+     ]
+    },
+    {
+     "id": "cell_27",
+     "type": "story",
+     "label": "27 号牢房",
+     "xy": [
+      220,
+      450
+     ],
+     "date": "1818-12-03",
+     "scene": "c_faria_27",
+     "fog": "open",
+     "fixed": true
+    },
+    {
+     "id": "pomegues",
+     "type": "camp",
+     "label": "波梅格岛的检疫站",
+     "xy": [
+      642,
+      210
+     ],
+     "actions": [
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "activity:rest"
+     ],
+     "fog": "open",
+     "once": false,
+     "_draft_xy": [
+      640,
+      210
+     ]
+    },
+    {
+     "id": "ratonneau",
+     "type": "slot",
+     "label": "拉托诺岛",
+     "xy": [
+      800,
+      330
+     ],
+     "slot": {
+      "pool": "if_years",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 14
+     },
+     "fog": "type",
+     "fixed": false
+    },
+    {
+     "id": "bread_wharf",
+     "type": "supply",
+     "label": "马赛的面包码头",
+     "xy": [
+      1140,
+      430
+     ],
+     "role": "post",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "fog": "open",
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "intel": 1
+      }
+     }
+    },
+    {
+     "id": "morrel_house",
+     "type": "supply",
+     "label": "梅朗林荫道·莫雷尔家",
+     "xy": [
+      1320,
+      320
+     ],
+     "role": "intel",
+     "actions": [
+      "visit:backdoor"
+     ],
+     "fog": "open",
+     "once": false
+    },
+    {
+     "id": "bakery",
+     "type": "supply",
+     "label": "面包房的地窖",
+     "xy": [
+      1250,
+      580
+     ],
+     "role": "project",
+     "actions": [
+      "build"
+     ],
+     "_doc": "build = 地道（工事）：给伊夫堡里的地道送工具",
+     "fog": "open",
+     "once": false
+    },
+    {
+     "id": "old_town",
+     "type": "slot",
+     "label": "老城",
+     "xy": [
+      1449,
+      431
+     ],
+     "slot": {
+      "pool": "if_years",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "_draft_xy": [
+      1460,
+      460
+     ]
+    },
+    {
+     "id": "cassis",
+     "type": "shop",
+     "label": "卡西斯的走私贩酒馆",
+     "xy": [
+      1599,
+      669
+     ],
+     "actions": [
+      "activity:merchant",
+      "recruit:troop"
+     ],
+     "fog": "open",
+     "once": false,
+     "_draft_xy": [
+      1580,
+      650
+     ]
+    },
+    {
+     "id": "morgiou",
+     "type": "elite",
+     "label": "莫尔吉乌小湾",
+     "xy": [
+      1400,
+      780
+     ],
+     "date": "1822-08-14",
+     "scene": "c_morgiou",
+     "fog": "open",
+     "fixed": true
+    },
+    {
+     "id": "sormiou",
+     "type": "slot",
+     "label": "索尔米乌",
+     "xy": [
+      1240,
+      860
+     ],
+     "slot": {
+      "pool": "if_years",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false
+    },
+    {
+     "id": "calanques",
+     "type": "slot",
+     "label": "峡湾群",
+     "xy": [
+      1700,
+      820
+     ],
+     "slot": {
+      "pool": "if_years",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false
+    },
+    {
+     "id": "la_ciotat",
+     "type": "slot",
+     "label": "拉西奥塔",
+     "xy": [
+      1830,
+      620
+     ],
+     "slot": {
+      "pool": "if_years",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 14
+     },
+     "fog": "type",
+     "fixed": false
+    },
+    {
+     "id": "if_chapel",
+     "type": "slot",
+     "label": "要塞的小教堂",
+     "xy": [
+      499,
+      239
+     ],
+     "slot": {
+      "pool": "if_years",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "_draft_xy": [
+      500,
+      240
+     ]
+    },
+    {
+     "id": "pointe_rouge",
+     "type": "slot",
+     "label": "红角的渔村",
+     "xy": [
+      1120,
+      720
+     ],
+     "slot": {
+      "pool": "if_years",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false
+    },
+    {
+     "id": "janina",
+     "type": "event",
+     "label": "远方·约阿尼纳（1822）",
+     "xy": [
+      1801,
+      150
+     ],
+     "event": "ev_janina_1822",
+     "fixed": true,
+     "date": "1822-01-20",
+     "fog": "open",
+     "_draft_xy": [
+      1800,
+      150
+     ]
+    },
+    {
+     "id": "janina_lake",
+     "type": "elite",
+     "label": "约阿尼纳湖·湖心岛",
+     "xy": [
+      1659,
+      120
+     ],
+     "template": "janina_lake",
+     "level": 15,
+     "weather": [
+      "fog"
+     ],
+     "reward": {
+      "coins": {
+       "gold": 2,
+       "medal": 1
+      }
+     },
+     "date": "1822-01-22",
+     "_planned": true,
+     "fog": "open",
+     "fallback": "elite_a",
+     "_draft_xy": [
+      1660,
+      120
+     ]
+    },
+    {
+     "id": "cell_27_1829",
+     "type": "story",
+     "label": "27 号牢房（1829）",
+     "xy": [
+      250,
+      300
+     ],
+     "date": "1829-02-14",
+     "scene": "c_faria_dies",
+     "fog": "open",
+     "fixed": true
+    },
+    {
+     "id": "bread_wharf_1829",
+     "type": "camp",
+     "label": "面包码头（1829，集结）",
+     "xy": [
+      1060,
+      300
+     ],
+     "role": "muster",
+     "date": "1829-02-26",
+     "actions": [
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "activity:rest",
+      "muster"
+     ],
+     "fog": "open",
+     "once": false,
+     "phase": "accumulate"
+    },
+    {
+     "id": "cassis_backroom",
+     "type": "event",
+     "label": "卡西斯·酒馆后屋",
+     "xy": [
+      1491,
+      570
+     ],
+     "role": "council",
+     "event": "ev_c2_council",
+     "fixed": true,
+     "phase": "campaign",
+     "date": "1829-02-27",
+     "fog": "open",
+     "_draft_xy": [
+      1500,
+      560
+     ]
+    },
+    {
+     "id": "frioul_night",
+     "type": "camp",
+     "label": "弗里乌尔礁石后的小船",
+     "xy": [
+      760,
+      640
+     ],
+     "actions": [
+      "activity:rest",
+      "schedule:bond_story"
+     ],
+     "phase": "campaign",
+     "date": "1829-02-28",
+     "fog": "open",
+     "once": false
+    },
+    {
+     "id": "sea_gate",
+     "type": "boss",
+     "label": "伊夫堡·海门",
+     "xy": [
+      564,
+      804
+     ],
+     "scene": "c_if_night",
+     "phase": "campaign",
+     "weather": [
+      "night"
+     ],
+     "date": "1829-02-28",
+     "fog": "open",
+     "fixed": true,
+     "_draft_xy": [
+      560,
+      800
+     ]
+    }
+   ],
+   "links": [
+    {
+     "a": "gov_office",
+     "b": "if_landing",
+     "legs": 1
+    },
+    {
+     "a": "gov_office",
+     "b": "cell_27",
+     "legs": 2
+    },
+    {
+     "a": "gov_office",
+     "b": "if_kitchen",
+     "legs": 2
+    },
+    {
+     "a": "if_kitchen",
+     "b": "cell_27",
+     "legs": 1
+    },
+    {
+     "a": "if_kitchen",
+     "b": "if_yard",
+     "legs": 1
+    },
+    {
+     "a": "if_yard",
+     "b": "if_landing",
+     "legs": 1
+    },
+    {
+     "a": "cell_27",
+     "b": "cell_27_1829",
+     "legs": 1,
+     "requires": {
+      "scene_done": "c_morgiou"
+     }
+    },
+    {
+     "a": "if_landing",
+     "b": "pomegues",
+     "legs": 2,
+     "supply": 1
+    },
+    {
+     "a": "pomegues",
+     "b": "ratonneau",
+     "legs": 1
+    },
+    {
+     "a": "ratonneau",
+     "b": "bread_wharf",
+     "legs": 2,
+     "supply": 1
+    },
+    {
+     "a": "if_landing",
+     "b": "bread_wharf",
+     "legs": 3,
+     "supply": 1
+    },
+    {
+     "a": "bread_wharf",
+     "b": "morrel_house",
+     "legs": 1
+    },
+    {
+     "a": "bread_wharf",
+     "b": "bakery",
+     "legs": 1
+    },
+    {
+     "a": "bakery",
+     "b": "old_town",
+     "legs": 1
+    },
+    {
+     "a": "morrel_house",
+     "b": "old_town",
+     "legs": 1
+    },
+    {
+     "a": "old_town",
+     "b": "cassis",
+     "legs": 2
+    },
+    {
+     "a": "bakery",
+     "b": "sormiou",
+     "legs": 2
+    },
+    {
+     "a": "sormiou",
+     "b": "morgiou",
+     "legs": 1
+    },
+    {
+     "a": "morgiou",
+     "b": "cassis",
+     "legs": 2
+    },
+    {
+     "a": "morgiou",
+     "b": "calanques",
+     "legs": 2
+    },
+    {
+     "a": "calanques",
+     "b": "la_ciotat",
+     "legs": 1
+    },
+    {
+     "a": "cassis",
+     "b": "la_ciotat",
+     "legs": 1
+    },
+    {
+     "a": "gov_office",
+     "b": "if_chapel",
+     "legs": 1
+    },
+    {
+     "a": "if_chapel",
+     "b": "if_landing",
+     "legs": 1
+    },
+    {
+     "a": "bakery",
+     "b": "pointe_rouge",
+     "legs": 1
+    },
+    {
+     "a": "pointe_rouge",
+     "b": "sormiou",
+     "legs": 1
+    },
+    {
+     "a": "bread_wharf",
+     "b": "janina",
+     "voyage_days": 6
+    },
+    {
+     "a": "janina",
+     "b": "janina_lake",
+     "legs": 1
+    },
+    {
+     "a": "bread_wharf",
+     "b": "bread_wharf_1829",
+     "legs": 1
+    },
+    {
+     "a": "morrel_house",
+     "b": "bread_wharf_1829",
+     "legs": 1
+    },
+    {
+     "a": "bread_wharf_1829",
+     "b": "cassis_backroom",
+     "legs": 3
+    },
+    {
+     "a": "cassis_backroom",
+     "b": "frioul_night",
+     "voyage_days": 1
+    },
+    {
+     "a": "frioul_night",
+     "b": "sea_gate",
+     "legs": 1
+    }
+   ],
+   "_draft_days_max": 22,
+   "templates_needed": [],
+   "_marker_layout": "Authored geo retained; transaction markers separated for readable selection."
+  },
+  {
+   "chapter": "montecristo",
+   "view": "med",
+   "start": "tiboulen",
+   "days_max": 20,
+   "stamps_need": 2,
+   "muster": "pianosa",
+   "boss": "montecristo_cave",
+   "interlude": "camp_night",
+   "frames": [
+    {
+     "id": "ligurian_coast",
+     "when": {},
+     "zoom": 100,
+     "center": [
+      740,
+      4360
+     ],
+     "_draft_bounds": {
+      "lon": [
+       480,
+       1000
+      ],
+      "lat": [
+       4250,
+       4470
+      ]
+     }
+    },
+    {
+     "id": "tuscan_isles",
+     "when": {
+      "scene_done": "c_livorno"
+     },
+     "zoom": 100,
+     "center": [
+      1040,
+      4285
+     ],
+     "_draft_bounds": {
+      "lon": [
+       880,
+       1200
+      ],
+      "lat": [
+       4200,
+       4370
+      ]
+     }
+    },
+    {
+     "id": "montecristo_isle",
+     "when": {
+      "mustered": true
+     },
+     "zoom": 100,
+     "center": [
+      1032,
+      4235
+     ],
+     "_draft_bounds": {
+      "lon": [
+       1018,
+       1046
+      ],
+      "lat": [
+       4226,
+       4244
+      ]
+     }
+    }
+   ],
+   "sets": [
+    {
+     "id": "tuscan_ports",
+     "nodes": [
+      "livorno_post",
+      "portoferraio"
+     ],
+     "bonus": {
+      "pass_supply": 1
+     }
+    }
+   ],
+   "rivals": [
+    {
+     "id": "genoese_rivals",
+     "label": "热那亚帮的三桅船",
+     "path": [
+      "capraia",
+      "gorgona",
+      "capraia",
+      "corsica_cape"
+     ],
+     "speed": 1,
+     "start": 0,
+     "meet": {
+      "battle": {
+       "template": "coast_road",
+       "level": 16
+      },
+      "toll": {
+       "gold": 1
+      }
+     },
+     "burns_depots": true
+    }
+   ],
+   "nodes": [
+    {
+     "id": "tiboulen",
+     "type": "elite",
+     "label": "蒂布朗岛",
+     "geo": [
+      529,
+      4328
+     ],
+     "date": "1829-03-01",
+     "scene": "c_tiboulen",
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      618,
+      868
+     ]
+    },
+    {
+     "id": "planier",
+     "type": "slot",
+     "label": "普拉尼耶灯塔",
+     "geo": [
+      523,
+      4320
+     ],
+     "slot": {
+      "pool": "montecristo",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      703,
+      651
+     ]
+    },
+    {
+     "id": "toulon_post",
+     "type": "supply",
+     "label": "土伦港外的锚地",
+     "geo": [
+      593,
+      4312
+     ],
+     "role": "post",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "fog": "open",
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     },
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      696,
+      1002
+     ]
+    },
+    {
+     "id": "hyeres",
+     "type": "slot",
+     "label": "耶尔群岛",
+     "geo": [
+      640,
+      4301
+     ],
+     "slot": {
+      "pool": "montecristo",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 16
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      756,
+      797
+     ]
+    },
+    {
+     "id": "nice",
+     "type": "supply",
+     "label": "尼斯",
+     "geo": [
+      726,
+      4371
+     ],
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      854,
+      618
+     ]
+    },
+    {
+     "id": "genoa",
+     "type": "shop",
+     "label": "热那亚的船坞与银行",
+     "geo": [
+      895,
+      4441
+     ],
+     "actions": [
+      "activity:merchant",
+      "recruit:troop"
+     ],
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1004,
+      525
+     ]
+    },
+    {
+     "id": "corsica_cape",
+     "type": "slot",
+     "label": "科西嘉角",
+     "geo": [
+      940,
+      4300
+     ],
+     "slot": {
+      "pool": "montecristo",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      836,
+      1068
+     ]
+    },
+    {
+     "id": "capraia",
+     "type": "slot",
+     "label": "卡普拉亚岛",
+     "geo": [
+      983,
+      4305
+     ],
+     "slot": {
+      "pool": "montecristo",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1347,
+      651
+     ]
+    },
+    {
+     "id": "gorgona",
+     "type": "slot",
+     "label": "戈尔戈纳岛",
+     "geo": [
+      990,
+      4343
+     ],
+     "slot": {
+      "pool": "montecristo",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 16
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      857,
+      914
+     ]
+    },
+    {
+     "id": "livorno",
+     "type": "story",
+     "label": "里窝那·理发店",
+     "geo": [
+      1031,
+      4355
+     ],
+     "date": "1829-03-09",
+     "scene": "c_livorno",
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1192,
+      633
+     ]
+    },
+    {
+     "id": "livorno_post",
+     "type": "supply",
+     "label": "里窝那港务处",
+     "geo": [
+      1031,
+      4355
+     ],
+     "role": "post",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "fog": "open",
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "intel": 1
+      }
+     },
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1113,
+      1131
+     ]
+    },
+    {
+     "id": "bastia",
+     "type": "supply",
+     "label": "巴斯蒂亚的走私贩",
+     "geo": [
+      945,
+      4270
+     ],
+     "role": "intel",
+     "actions": [
+      "visit:backdoor",
+      "build_depot"
+     ],
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1138,
+      796
+     ]
+    },
+    {
+     "id": "ajaccio",
+     "type": "slot",
+     "label": "阿雅克肖",
+     "geo": [
+      874,
+      4192
+     ],
+     "slot": {
+      "pool": "montecristo",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      988,
+      1036
+     ]
+    },
+    {
+     "id": "piombino",
+     "type": "slot",
+     "label": "皮翁比诺",
+     "geo": [
+      1053,
+      4293
+     ],
+     "slot": {
+      "pool": "montecristo",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1266,
+      1105
+     ]
+    },
+    {
+     "id": "portoferraio",
+     "type": "supply",
+     "label": "费拉约港（厄尔巴）",
+     "geo": [
+      1033,
+      4281
+     ],
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1041,
+      675
+     ]
+    },
+    {
+     "id": "civitavecchia",
+     "type": "slot",
+     "label": "奇维塔韦基亚",
+     "geo": [
+      1180,
+      4209
+     ],
+     "slot": {
+      "pool": "montecristo",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1293,
+      796
+     ]
+    },
+    {
+     "id": "pianosa",
+     "type": "camp",
+     "label": "皮亚诺萨岛（集结）",
+     "geo": [
+      1008,
+      4259
+     ],
+     "role": "muster",
+     "date": "1829-05-20",
+     "actions": [
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "activity:rest",
+      "muster"
+     ],
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "phase": "accumulate",
+     "xy": [
+      1284,
+      951
+     ]
+    },
+    {
+     "id": "amelie_deck",
+     "type": "event",
+     "label": "少年阿梅莉号的甲板",
+     "geo": [
+      1018,
+      4247
+     ],
+     "role": "council",
+     "event": "ev_c3_council",
+     "fixed": true,
+     "date": "1829-05-22",
+     "fog": "open",
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "xy": [
+      912,
+      761
+     ]
+    },
+    {
+     "id": "goat_beach",
+     "type": "camp",
+     "label": "基督山岛的山羊滩",
+     "geo": [
+      1029,
+      4234
+     ],
+     "actions": [
+      "activity:rest",
+      "schedule:bond_story"
+     ],
+     "date": "1829-05-23",
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "xy": [
+      1131,
+      977
+     ]
+    },
+    {
+     "id": "montecristo_cave",
+     "type": "boss",
+     "label": "基督山岛·第二个小湾往东",
+     "geo": [
+      1032,
+      4232
+     ],
+     "scene": "c_montecristo",
+     "weather": [
+      "clear",
+      "storm"
+     ],
+     "date": "1829-05-24",
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "xy": [
+      1009,
+      882
+     ]
+    }
+   ],
+   "links": [
+    {
+     "a": "tiboulen",
+     "b": "planier",
+     "legs": 1
+    },
+    {
+     "a": "tiboulen",
+     "b": "toulon_post",
+     "legs": 2
+    },
+    {
+     "a": "planier",
+     "b": "toulon_post",
+     "legs": 2
+    },
+    {
+     "a": "toulon_post",
+     "b": "hyeres",
+     "legs": 1
+    },
+    {
+     "a": "hyeres",
+     "b": "nice",
+     "legs": 3,
+     "supply": 1
+    },
+    {
+     "a": "nice",
+     "b": "genoa",
+     "legs": 3,
+     "supply": 1
+    },
+    {
+     "a": "genoa",
+     "b": "corsica_cape",
+     "legs": 2
+    },
+    {
+     "a": "genoa",
+     "b": "gorgona",
+     "legs": 3
+    },
+    {
+     "a": "corsica_cape",
+     "b": "capraia",
+     "legs": 1
+    },
+    {
+     "a": "capraia",
+     "b": "gorgona",
+     "legs": 1
+    },
+    {
+     "a": "gorgona",
+     "b": "livorno",
+     "legs": 1
+    },
+    {
+     "a": "capraia",
+     "b": "livorno",
+     "legs": 2
+    },
+    {
+     "a": "livorno",
+     "b": "livorno_post",
+     "legs": 1
+    },
+    {
+     "a": "livorno_post",
+     "b": "piombino",
+     "legs": 2
+    },
+    {
+     "a": "livorno",
+     "b": "portoferraio",
+     "voyage_days": 1
+    },
+    {
+     "a": "corsica_cape",
+     "b": "bastia",
+     "legs": 1
+    },
+    {
+     "a": "bastia",
+     "b": "ajaccio",
+     "legs": 3
+    },
+    {
+     "a": "bastia",
+     "b": "portoferraio",
+     "legs": 2,
+     "supply": 1
+    },
+    {
+     "a": "piombino",
+     "b": "portoferraio",
+     "legs": 1
+    },
+    {
+     "a": "portoferraio",
+     "b": "civitavecchia",
+     "legs": 3
+    },
+    {
+     "a": "ajaccio",
+     "b": "pianosa",
+     "voyage_days": 2
+    },
+    {
+     "a": "portoferraio",
+     "b": "pianosa",
+     "legs": 1
+    },
+    {
+     "a": "civitavecchia",
+     "b": "pianosa",
+     "legs": 3
+    },
+    {
+     "a": "toulon_post",
+     "b": "ajaccio",
+     "voyage_days": 3
+    },
+    {
+     "a": "pianosa",
+     "b": "amelie_deck",
+     "legs": 1
+    },
+    {
+     "a": "amelie_deck",
+     "b": "goat_beach",
+     "legs": 1
+    },
+    {
+     "a": "goat_beach",
+     "b": "montecristo_cave",
+     "legs": 1
+    }
+   ],
+   "_draft_days_max": 20,
+   "templates_needed": [],
+   "_marker_layout": "Authored geo retained; transaction markers separated for readable selection."
+  },
+  {
+   "chapter": "mediterranean",
+   "view": "med",
+   "start": "caderousse_inn",
+   "days_max": 20,
+   "stamps_need": 2,
+   "muster": "hotel_londres",
+   "boss": "san_sebastiano",
+   "interlude": "audience",
+   "frames": [
+    {
+     "id": "provence",
+     "when": {},
+     "zoom": 100,
+     "center": [
+      510,
+      4355
+     ],
+     "_draft_bounds": {
+      "lon": [
+       400,
+       620
+      ],
+      "lat": [
+       4290,
+       4420
+      ]
+     }
+    },
+    {
+     "id": "tyrrhenian",
+     "when": {
+      "scene_done": "c_morrel_rescue"
+     },
+     "zoom": 100,
+     "center": [
+      1150,
+      4255
+     ],
+     "_draft_bounds": {
+      "lon": [
+       850,
+       1450
+      ],
+      "lat": [
+       4050,
+       4460
+      ]
+     }
+    },
+    {
+     "id": "levant",
+     "when": {
+      "scene_done": "c_morrel_rescue"
+     },
+     "zoom": 100,
+     "center": [
+      1950,
+      4050
+     ],
+     "_draft_bounds": {
+      "lon": [
+       900,
+       3000
+      ],
+      "lat": [
+       3600,
+       4500
+      ]
+     }
+    },
+    {
+     "id": "rome_city",
+     "when": {
+      "scene_done": "c_carnival"
+     },
+     "zoom": 100,
+     "center": [
+      1250,
+      4188
+     ],
+     "_draft_bounds": {
+      "lon": [
+       1238,
+       1262
+      ],
+      "lat": [
+       4180,
+       4196
+      ]
+     }
+    }
+   ],
+   "sets": [
+    {
+     "id": "count_houses",
+     "nodes": [
+      "genoa_1830",
+      "civitavecchia_post"
+     ],
+     "bonus": {
+      "pass_supply": 1
+     }
+    }
+   ],
+   "rivals": [
+    {
+     "id": "papal_patrol",
+     "label": "教皇宪兵的巡逻队",
+     "path": [
+      "civitavecchia_post",
+      "rome",
+      "tivoli",
+      "frascati",
+      "tivoli",
+      "rome"
+     ],
+     "speed": 1,
+     "start": 1,
+     "meet": {
+      "battle": {
+       "template": "coast_road",
+       "level": 19
+      },
+      "toll": {
+       "gold": 1
+      }
+     },
+     "burns_depots": true
+    }
+   ],
+   "nodes": [
+    {
+     "id": "caderousse_inn",
+     "type": "story",
+     "label": "加尔桥客栈",
+     "geo": [
+      458,
+      4378
+     ],
+     "date": "1829-06-03",
+     "scene": "c_caderousse",
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      708,
+      1005
+     ]
+    },
+    {
+     "id": "pont_du_gard",
+     "type": "slot",
+     "label": "加尔桥",
+     "geo": [
+      454,
+      4395
+     ],
+     "slot": {
+      "pool": "mediterranean",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      684,
+      558
+     ]
+    },
+    {
+     "id": "nimes",
+     "type": "supply",
+     "label": "尼姆",
+     "geo": [
+      436,
+      4384
+     ],
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      595,
+      791
+     ]
+    },
+    {
+     "id": "arles",
+     "type": "slot",
+     "label": "阿尔勒",
+     "geo": [
+      463,
+      4368
+     ],
+     "slot": {
+      "pool": "mediterranean",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 19
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      749,
+      698
+     ]
+    },
+    {
+     "id": "marseille_1829",
+     "type": "story",
+     "label": "马赛·梅朗林荫道",
+     "geo": [
+      537,
+      4330
+     ],
+     "date": "1829-09-05",
+     "scene": "c_morrel_rescue",
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      737,
+      853
+     ]
+    },
+    {
+     "id": "toulon_bagne",
+     "type": "slot",
+     "label": "土伦苦役场",
+     "geo": [
+      593,
+      4312
+     ],
+     "slot": {
+      "pool": "mediterranean",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      878,
+      787
+     ]
+    },
+    {
+     "id": "genoa_1830",
+     "type": "supply",
+     "label": "热那亚",
+     "geo": [
+      895,
+      4441
+     ],
+     "role": "post",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "fog": "open",
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     },
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      954,
+      627
+     ]
+    },
+    {
+     "id": "livorno_1830",
+     "type": "supply",
+     "label": "里窝那的账房",
+     "geo": [
+      1031,
+      4355
+     ],
+     "role": "project",
+     "actions": [
+      "explore"
+     ],
+     "_doc": "explore = 卷宗（测绘）：收集莫尔塞夫、唐格拉尔、维尔福的证据",
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1037,
+      758
+     ]
+    },
+    {
+     "id": "florence",
+     "type": "slot",
+     "label": "佛罗伦萨",
+     "geo": [
+      1126,
+      4377
+     ],
+     "slot": {
+      "pool": "mediterranean",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1136,
+      614
+     ]
+    },
+    {
+     "id": "montecristo_grotto",
+     "type": "camp",
+     "label": "基督山岛·伯爵的地下宫殿",
+     "geo": [
+      1031,
+      4233
+     ],
+     "actions": [
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "activity:rest"
+     ],
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      910,
+      1023
+     ]
+    },
+    {
+     "id": "civitavecchia_post",
+     "type": "supply",
+     "label": "奇维塔韦基亚港",
+     "geo": [
+      1180,
+      4209
+     ],
+     "role": "post",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "fog": "open",
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "intel": 1
+      }
+     },
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1497,
+      791
+     ]
+    },
+    {
+     "id": "rome",
+     "type": "story",
+     "label": "罗马·人民广场",
+     "geo": [
+      1248,
+      4191
+     ],
+     "date": "1838-02-20",
+     "scene": "c_carnival",
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1192,
+      758
+     ]
+    },
+    {
+     "id": "thomson_french",
+     "type": "shop",
+     "label": "罗马·汤姆森与弗伦奇银行",
+     "geo": [
+      1248,
+      4190
+     ],
+     "actions": [
+      "activity:merchant",
+      "recruit:troop"
+     ],
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1179,
+      1209
+     ]
+    },
+    {
+     "id": "tivoli",
+     "type": "slot",
+     "label": "蒂沃利",
+     "geo": [
+      1280,
+      4196
+     ],
+     "slot": {
+      "pool": "mediterranean",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1347,
+      752
+     ]
+    },
+    {
+     "id": "frascati",
+     "type": "slot",
+     "label": "弗拉斯卡蒂",
+     "geo": [
+      1268,
+      4181
+     ],
+     "slot": {
+      "pool": "mediterranean",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 19
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1131,
+      1061
+     ]
+    },
+    {
+     "id": "naples",
+     "type": "slot",
+     "label": "那不勒斯",
+     "geo": [
+      1427,
+      4085
+     ],
+     "slot": {
+      "pool": "mediterranean",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1334,
+      1165
+     ]
+    },
+    {
+     "id": "tunis",
+     "type": "slot",
+     "label": "突尼斯",
+     "geo": [
+      1018,
+      3681
+     ],
+     "slot": {
+      "pool": "mediterranean",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1079,
+      1376
+     ]
+    },
+    {
+     "id": "constantinople",
+     "type": "event",
+     "label": "君士坦丁堡·奴隶市场",
+     "geo": [
+      2898,
+      4101
+     ],
+     "event": "ev_haydee_constantinople",
+     "fixed": true,
+     "date": "1834-04-01",
+     "fog": "open",
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      2332,
+      1016
+     ]
+    },
+    {
+     "id": "hotel_londres",
+     "type": "camp",
+     "label": "伦敦饭店（集结）",
+     "geo": [
+      1248,
+      4191
+     ],
+     "role": "muster",
+     "date": "1838-02-21",
+     "actions": [
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "activity:rest",
+      "muster"
+     ],
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "phase": "accumulate",
+     "xy": [
+      1388,
+      902
+     ]
+    },
+    {
+     "id": "vampa_note",
+     "type": "event",
+     "label": "万帕的信使",
+     "geo": [
+      1250,
+      4189
+     ],
+     "role": "council",
+     "event": "ev_c4_council",
+     "fixed": true,
+     "date": "1838-02-21",
+     "fog": "open",
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "xy": [
+      1018,
+      912
+     ]
+    },
+    {
+     "id": "appian_way",
+     "type": "elite",
+     "label": "亚壁古道",
+     "geo": [
+      1253,
+      4184
+     ],
+     "template": "appian_way",
+     "level": 20,
+     "weather": [
+      "night"
+     ],
+     "reward": {
+      "coins": {
+       "gold": 2
+      },
+      "props": [
+       "prop_spyglass"
+      ]
+     },
+     "date": "1838-02-21",
+     "_planned": true,
+     "fog": "open",
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "xy": [
+      1442,
+      1048
+     ]
+    },
+    {
+     "id": "caracalla",
+     "type": "camp",
+     "label": "卡拉卡拉浴场的废墟",
+     "geo": [
+      1249,
+      4188
+     ],
+     "actions": [
+      "activity:rest",
+      "schedule:bond_story"
+     ],
+     "date": "1838-02-22",
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "xy": [
+      1173,
+      912
+     ]
+    },
+    {
+     "id": "san_sebastiano",
+     "type": "boss",
+     "label": "圣塞巴斯蒂安墓窟",
+     "geo": [
+      1252,
+      4186
+     ],
+     "scene": "c_san_sebastiano",
+     "weather": [
+      "night"
+     ],
+     "date": "1838-02-22",
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "xy": [
+      1286,
+      1018
+     ]
+    }
+   ],
+   "links": [
+    {
+     "a": "caderousse_inn",
+     "b": "pont_du_gard",
+     "legs": 1
+    },
+    {
+     "a": "caderousse_inn",
+     "b": "nimes",
+     "legs": 1
+    },
+    {
+     "a": "caderousse_inn",
+     "b": "arles",
+     "legs": 1
+    },
+    {
+     "a": "pont_du_gard",
+     "b": "nimes",
+     "legs": 1
+    },
+    {
+     "a": "arles",
+     "b": "marseille_1829",
+     "legs": 2
+    },
+    {
+     "a": "nimes",
+     "b": "marseille_1829",
+     "legs": 3,
+     "supply": 1
+    },
+    {
+     "a": "marseille_1829",
+     "b": "toulon_bagne",
+     "legs": 1
+    },
+    {
+     "a": "marseille_1829",
+     "b": "genoa_1830",
+     "voyage_days": 2
+    },
+    {
+     "a": "toulon_bagne",
+     "b": "genoa_1830",
+     "legs": 3,
+     "supply": 1
+    },
+    {
+     "a": "genoa_1830",
+     "b": "livorno_1830",
+     "legs": 2
+    },
+    {
+     "a": "livorno_1830",
+     "b": "florence",
+     "legs": 2
+    },
+    {
+     "a": "livorno_1830",
+     "b": "montecristo_grotto",
+     "voyage_days": 1
+    },
+    {
+     "a": "livorno_1830",
+     "b": "civitavecchia_post",
+     "legs": 3,
+     "supply": 1
+    },
+    {
+     "a": "montecristo_grotto",
+     "b": "civitavecchia_post",
+     "voyage_days": 1
+    },
+    {
+     "a": "florence",
+     "b": "rome",
+     "legs": 4,
+     "supply": 1
+    },
+    {
+     "a": "civitavecchia_post",
+     "b": "rome",
+     "legs": 2
+    },
+    {
+     "a": "rome",
+     "b": "thomson_french",
+     "legs": 1
+    },
+    {
+     "a": "rome",
+     "b": "tivoli",
+     "legs": 2
+    },
+    {
+     "a": "tivoli",
+     "b": "frascati",
+     "legs": 1
+    },
+    {
+     "a": "rome",
+     "b": "naples",
+     "voyage_days": 2
+    },
+    {
+     "a": "montecristo_grotto",
+     "b": "tunis",
+     "voyage_days": 3
+    },
+    {
+     "a": "naples",
+     "b": "constantinople",
+     "voyage_days": 7
+    },
+    {
+     "a": "thomson_french",
+     "b": "hotel_londres",
+     "legs": 1
+    },
+    {
+     "a": "rome",
+     "b": "hotel_londres",
+     "legs": 1
+    },
+    {
+     "a": "frascati",
+     "b": "hotel_londres",
+     "legs": 2
+    },
+    {
+     "a": "hotel_londres",
+     "b": "vampa_note",
+     "legs": 1
+    },
+    {
+     "a": "vampa_note",
+     "b": "appian_way",
+     "legs": 2
+    },
+    {
+     "a": "vampa_note",
+     "b": "caracalla",
+     "legs": 1
+    },
+    {
+     "a": "appian_way",
+     "b": "caracalla",
+     "legs": 1
+    },
+    {
+     "a": "caracalla",
+     "b": "san_sebastiano",
+     "legs": 1
+    }
+   ],
+   "_draft_days_max": 22,
+   "templates_needed": [
+    "appian_way"
+   ],
+   "_marker_layout": "Authored geo retained; transaction markers separated for readable selection."
+  },
+  {
+   "chapter": "paris_1838",
+   "view": "paris_1838",
+   "start": "champs",
+   "days_max": 22,
+   "stamps_need": 2,
+   "muster": "ile_saint_louis",
+   "boss": "palais_justice",
+   "interlude": "minigame:weigh",
+   "sets": [
+    {
+     "id": "right_bank",
+     "nodes": [
+      "tuileries_post",
+      "palais_royal_post"
+     ],
+     "bonus": {
+      "pass_supply": 1
+     }
+    }
+   ],
+   "rivals": [
+    {
+     "id": "police_watch",
+     "label": "警察厅的便衣",
+     "path": [
+      "saint_germain",
+      "luxembourg",
+      "latin_quarter",
+      "bastille",
+      "marais",
+      "bastille",
+      "ile_saint_louis",
+      "latin_quarter",
+      "luxembourg"
+     ],
+     "speed": 1,
+     "start": 0,
+     "meet": {
+      "battle": {
+       "template": "alley_ambush",
+       "level": 22
+      },
+      "toll": {
+       "gold": 1
+      }
+     },
+     "burns_depots": true
+    }
+   ],
+   "nodes": [
+    {
+     "id": "champs",
+     "type": "story",
+     "label": "香榭丽舍大街 30 号",
+     "xy": [
+      620,
+      380
+     ],
+     "date": "1838-05-21",
+     "scene": "c_champs_elysees",
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     }
+    },
+    {
+     "id": "bois",
+     "type": "slot",
+     "label": "布洛涅树林",
+     "xy": [
+      270,
+      470
+     ],
+     "slot": {
+      "pool": "paris_1838",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     }
+    },
+    {
+     "id": "auteuil",
+     "type": "elite",
+     "label": "奥特伊·方丹街 28 号",
+     "xy": [
+      150,
+      660
+     ],
+     "date": "1838-06-20",
+     "scene": "c_auteuil",
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     }
+    },
+    {
+     "id": "passy",
+     "type": "slot",
+     "label": "帕西",
+     "xy": [
+      360,
+      740
+     ],
+     "slot": {
+      "pool": "paris_1838",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     }
+    },
+    {
+     "id": "st_honore",
+     "type": "supply",
+     "label": "圣奥诺雷区·维尔福府后门",
+     "xy": [
+      860,
+      320
+     ],
+     "role": "intel",
+     "actions": [
+      "visit:backdoor"
+     ],
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     }
+    },
+    {
+     "id": "helder",
+     "type": "supply",
+     "label": "赫尔德街·莫尔塞夫府",
+     "xy": [
+      1029,
+      234
+     ],
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "_draft_xy": [
+      1040,
+      250
+     ]
+    },
+    {
+     "id": "montmartre",
+     "type": "slot",
+     "label": "蒙马特",
+     "xy": [
+      1020,
+      80
+     ],
+     "slot": {
+      "pool": "paris_1838",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     }
+    },
+    {
+     "id": "telegraph",
+     "type": "event",
+     "label": "蒙莫朗西的电报站",
+     "xy": [
+      1320,
+      60
+     ],
+     "event": "ev_telegraph",
+     "fixed": true,
+     "date": "1838-08-29",
+     "fog": "open",
+     "requires": {
+      "volume": 2
+     }
+    },
+    {
+     "id": "tuileries_post",
+     "type": "supply",
+     "label": "杜伊勒里宫的驿站",
+     "xy": [
+      878,
+      470
+     ],
+     "role": "post",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "fog": "open",
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "intel": 1
+      }
+     },
+     "requires": {
+      "volume": 2
+     },
+     "_draft_xy": [
+      880,
+      470
+     ]
+    },
+    {
+     "id": "palais_royal_post",
+     "type": "supply",
+     "label": "王宫的拱廊",
+     "xy": [
+      1021,
+      439
+     ],
+     "role": "post",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "fog": "open",
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     },
+     "requires": {
+      "volume": 2
+     },
+     "_draft_xy": [
+      1040,
+      420
+     ]
+    },
+    {
+     "id": "palais_royal_shop",
+     "type": "shop",
+     "label": "王宫市场",
+     "xy": [
+      1130,
+      342
+     ],
+     "actions": [
+      "activity:merchant",
+      "recruit:troop",
+      "recruit:maximilien"
+     ],
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "_draft_xy": [
+      1100,
+      340
+     ]
+    },
+    {
+     "id": "saint_germain",
+     "type": "slot",
+     "label": "圣日耳曼区",
+     "xy": [
+      820,
+      690
+     ],
+     "slot": {
+      "pool": "paris_1838",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     }
+    },
+    {
+     "id": "luxembourg",
+     "type": "story",
+     "label": "卢森堡宫·贵族院",
+     "xy": [
+      960,
+      850
+     ],
+     "date": "1838-07-10",
+     "scene": "c_peers",
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     }
+    },
+    {
+     "id": "antin",
+     "type": "story",
+     "label": "昂坦街·唐格拉尔银行",
+     "xy": [
+      1182,
+      205
+     ],
+     "date": "1838-08-30",
+     "scene": "c_danglars",
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "_draft_xy": [
+      1180,
+      210
+     ]
+    },
+    {
+     "id": "latin_quarter",
+     "type": "slot",
+     "label": "拉丁区",
+     "xy": [
+      1159,
+      787
+     ],
+     "slot": {
+      "pool": "paris_1838",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 22
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     },
+     "_draft_xy": [
+      1160,
+      780
+     ]
+    },
+    {
+     "id": "marais",
+     "type": "slot",
+     "label": "马莱区",
+     "xy": [
+      1460,
+      470
+     ],
+     "slot": {
+      "pool": "paris_1838",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 22
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     }
+    },
+    {
+     "id": "pere_lachaise",
+     "type": "camp",
+     "label": "拉雪兹神父公墓",
+     "xy": [
+      1720,
+      520
+     ],
+     "actions": [
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "activity:rest"
+     ],
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     }
+    },
+    {
+     "id": "bastille",
+     "type": "slot",
+     "label": "巴士底广场",
+     "xy": [
+      1600,
+      650
+     ],
+     "slot": {
+      "pool": "paris_1838",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "fog": "type",
+     "fixed": false,
+     "requires": {
+      "volume": 2
+     }
+    },
+    {
+     "id": "ile_saint_louis",
+     "type": "camp",
+     "label": "圣路易岛（集结）",
+     "xy": [
+      1460,
+      708
+     ],
+     "role": "muster",
+     "date": "1838-10-14",
+     "actions": [
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "activity:rest",
+      "muster"
+     ],
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "phase": "accumulate",
+     "_draft_xy": [
+      1420,
+      690
+     ]
+    },
+    {
+     "id": "notre_dame",
+     "type": "event",
+     "label": "圣母院的钟楼",
+     "xy": [
+      1328,
+      645
+     ],
+     "role": "council",
+     "event": "ev_c5_council",
+     "fixed": true,
+     "date": "1838-10-14",
+     "fog": "open",
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "_draft_xy": [
+      1320,
+      640
+     ]
+    },
+    {
+     "id": "rooftops",
+     "type": "elite",
+     "label": "西岱岛的屋顶",
+     "xy": [
+      1252,
+      515
+     ],
+     "template": "paris_rooftops",
+     "level": 23,
+     "weather": [
+      "rain"
+     ],
+     "reward": {
+      "coins": {
+       "gold": 2,
+       "intel": 2
+      }
+     },
+     "date": "1838-10-14",
+     "_planned": true,
+     "fog": "open",
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "_draft_xy": [
+      1260,
+      540
+     ]
+    },
+    {
+     "id": "quai_horloge",
+     "type": "camp",
+     "label": "钟楼码头的小酒馆",
+     "xy": [
+      1182,
+      643
+     ],
+     "actions": [
+      "activity:rest",
+      "schedule:bond_story"
+     ],
+     "date": "1838-10-15",
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "_draft_xy": [
+      1180,
+      640
+     ]
+    },
+    {
+     "id": "palais_justice",
+     "type": "boss",
+     "label": "西岱岛·司法宫",
+     "xy": [
+      1040,
+      611
+     ],
+     "scene": "c_trial",
+     "weather": [
+      "night"
+     ],
+     "date": "1838-10-15",
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "_draft_xy": [
+      1080,
+      620
+     ]
+    }
+   ],
+   "links": [
+    {
+     "a": "champs",
+     "b": "bois",
+     "legs": 2
+    },
+    {
+     "a": "bois",
+     "b": "auteuil",
+     "legs": 2
+    },
+    {
+     "a": "auteuil",
+     "b": "passy",
+     "legs": 1
+    },
+    {
+     "a": "passy",
+     "b": "champs",
+     "legs": 2
+    },
+    {
+     "a": "champs",
+     "b": "st_honore",
+     "legs": 2
+    },
+    {
+     "a": "champs",
+     "b": "tuileries_post",
+     "legs": 2
+    },
+    {
+     "a": "st_honore",
+     "b": "helder",
+     "legs": 1
+    },
+    {
+     "a": "helder",
+     "b": "antin",
+     "legs": 1
+    },
+    {
+     "a": "helder",
+     "b": "montmartre",
+     "legs": 2
+    },
+    {
+     "a": "montmartre",
+     "b": "telegraph",
+     "legs": 2,
+     "supply": 1
+    },
+    {
+     "a": "telegraph",
+     "b": "antin",
+     "legs": 2
+    },
+    {
+     "a": "tuileries_post",
+     "b": "palais_royal_post",
+     "legs": 1
+    },
+    {
+     "a": "palais_royal_post",
+     "b": "palais_royal_shop",
+     "legs": 1
+    },
+    {
+     "a": "palais_royal_shop",
+     "b": "antin",
+     "legs": 1
+    },
+    {
+     "a": "tuileries_post",
+     "b": "saint_germain",
+     "legs": 2
+    },
+    {
+     "a": "saint_germain",
+     "b": "luxembourg",
+     "legs": 1
+    },
+    {
+     "a": "luxembourg",
+     "b": "latin_quarter",
+     "legs": 1
+    },
+    {
+     "a": "latin_quarter",
+     "b": "bastille",
+     "legs": 3
+    },
+    {
+     "a": "palais_royal_post",
+     "b": "marais",
+     "legs": 3
+    },
+    {
+     "a": "marais",
+     "b": "pere_lachaise",
+     "legs": 2
+    },
+    {
+     "a": "marais",
+     "b": "bastille",
+     "legs": 1
+    },
+    {
+     "a": "bastille",
+     "b": "pere_lachaise",
+     "legs": 1
+    },
+    {
+     "a": "bastille",
+     "b": "ile_saint_louis",
+     "legs": 1
+    },
+    {
+     "a": "latin_quarter",
+     "b": "ile_saint_louis",
+     "legs": 2
+    },
+    {
+     "a": "marais",
+     "b": "ile_saint_louis",
+     "legs": 2
+    },
+    {
+     "a": "ile_saint_louis",
+     "b": "notre_dame",
+     "legs": 1
+    },
+    {
+     "a": "notre_dame",
+     "b": "rooftops",
+     "legs": 1
+    },
+    {
+     "a": "notre_dame",
+     "b": "quai_horloge",
+     "legs": 1
+    },
+    {
+     "a": "rooftops",
+     "b": "quai_horloge",
+     "legs": 1,
+     "rush": false
+    },
+    {
+     "a": "quai_horloge",
+     "b": "palais_justice",
+     "legs": 1
+    }
+   ],
+   "_draft_days_max": 22,
+   "templates_needed": [
+    "paris_rooftops"
+   ],
+   "_marker_layout": "Authored geo retained; transaction markers separated for readable selection."
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+  "_meta": {
+    "owner": "K01",
+    "schema": 1,
+    "brief": "K01 效果里的原因键和告示键。",
+    "_provenance": {
+      "by": "ai",
+      "task": "K01",
+      "date": "2026-10-13"
+    }
+  },
+  "keys": {
+    "k01.notice.brother_ignored": {
+      "brief": "哥哥告别那天没人理他"
+    },
+    "k01.notice.levy_paid": {
+      "brief": "伪维持会的摊派交过了"
+    },
+    "k01.notice.linsao_ignored": {
+      "brief": "船户家眷来谈当期那天没人理她"
+    },
+    "k01.notice.ma_ignored": {
+      "brief": "伪维持会保长来摊派那天没人理他"
+    },
+    "k01.notice.ticket_pieced": {
+      "brief": "德字第一九六号拼了回去"
+    },
+    "k01.notice.waixiang_alms": {
+      "brief": "白给了外乡人几个钱"
+    },
+    "k01.notice.wangshan_ignored": {
+      "brief": "过路青年那天没人理他"
+    },
+    "k01.notice.xiaoding_rice": {
+      "brief": "孙府伙夫的米进了货架"
+    },
+    "k01.notice.zhao_ignored": {
+      "brief": "佃户来借钱那天没人理他"
+    },
+    "k01.reason.ma_levy": {
+      "brief": "交伪维持会摊派的钱"
+    },
+    "k01.reason.wangshan_food": {
+      "brief": "给定过路青年垫一顿饭的钱"
+    },
+    "k01.reason.widow_help": {
+      "brief": "接济过路守寡人的钱"
+    },
+    "k01.reason.xiaoding_med": {
+      "brief": "给定伙夫家里买药的钱"
+    },
+    "k01.reason.zhang_road": {
+      "brief": "给定护士凑去上海的路费"
+    },
+    "k01.reason.zhao_lend": {
+      "brief": "借给佃户赎回家人的三百"
+    },
+    "k01.reason.zhao_part": {
+      "brief": "先付给佃户的一百"
+    }
+  }
+}

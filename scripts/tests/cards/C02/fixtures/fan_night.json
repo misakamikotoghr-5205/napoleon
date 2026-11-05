@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "owner": "C02",
+    "schema": 1,
+    "brief": "Three night offers, one with choices, plus the sleep card the fan adds",
+    "_provenance": {
+      "by": "ai",
+      "task": "C02",
+      "date": "2026-10-14"
+    }
+  },
+  "phase": "night",
+  "night_offers": [
+    {
+      "def": "nw.a",
+      "art": "illus.night",
+      "choices": []
+    },
+    {
+      "def": "nw.b",
+      "art": "illus.night",
+      "choices": [
+        "stay",
+        "go"
+      ]
+    },
+    "nw.c"
+  ]
+}

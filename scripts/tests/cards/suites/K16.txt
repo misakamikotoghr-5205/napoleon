@@ -1,0 +1,6 @@
+# K16 新手指引步骤与规矩页、教学日的牌（docs/handoff_cards/K16_guide-data-post1949.md）
+K16_validate|res://scripts/cards/core/validate_main.gd|120|--only=data/cards/guide/steps.json,data/cards/guide/rule_pages.json,data/cards/era/1938/tutorial.json,data/cards/tags/K16.json,data/cards/ui_keys/K16.json --name=K16_validate
+K16_validate_strict|res://scripts/cards/core/validate_main.gd|120|--mode=strict --only=data/cards/guide/steps.json,data/cards/guide/rule_pages.json --name=K16_validate_strict
+K16_guide_coverage|res://scripts/tests/cards/K16/test_guide_coverage.gd|120|
+K16_tutorial|res://scripts/tests/cards/K16/test_tutorial.gd|120|
+K16_d1_3_mock|res://scripts/tests/cards/K16/test_d1_3_mock.gd|300|

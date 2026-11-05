@@ -1,0 +1,247 @@
+{
+  "_meta": {
+    "owner": "K13",
+    "schema": 1,
+    "brief": "史实与敏感措辞规则。中文词表只在下划线键里。发行包不带这个文件。"
+  },
+  "_doc": [
+    "依据 docs/town/cards/src/era.json 的 notes 与 sources，以及 DESIGN_cards.md 附录措辞要求、第五节年代表、第六节解放后。",
+    "level 只用 must / should / hint。scope 只用 brief / text / guide_brief / docs。kind 用 ASCII。",
+    "中文只放在下划线开头的键里，给校验器 V05 放过。",
+    "K15 调用保持：wording_lint.py <暂存目录>/data/cards/text --scope=text --fail-on=must"
+  ],
+  "rules": [
+    {
+      "id": "puppet_prefix",
+      "level": "must",
+      "scope": [
+        "brief",
+        "text",
+        "guide_brief",
+        "docs"
+      ],
+      "kind": "require_prefix",
+      "_prefixes": [
+        "汪伪",
+        "伪"
+      ],
+      "_message": "日方扶植的政权前面要有“伪”或“汪伪”",
+      "_groups": [
+        {
+          "_terms": [
+            "维持会",
+            "维新政府",
+            "中储券",
+            "商统会",
+            "清乡委员会"
+          ]
+        },
+        {
+          "_terms": [
+            "县政府",
+            "区公所"
+          ],
+          "_era_from": 1938,
+          "_era_to": 1945
+        },
+        {
+          "_terms": [
+            "国民政府"
+          ],
+          "_era_from": 1940,
+          "_era_to": 1945
+        }
+      ],
+      "_doc": "era.json notes 第一条：日方扶植的政权一律加“伪”（伪维持会、伪维新政府、汪伪国民政府、伪中储券）。年表：1938–1945 的县政府、区公所是伪政权；1940-03-30 起南京政权是汪伪国民政府。1938–1939 的重庆国民政府、1946 年起复员后的国民政府、1949 年后的县政府不加伪。来源：chinanews.com.cn/cul/2012/01-17/3610875；en.wikipedia.org/wiki/Reformed_Government_of_the_Republic_of_China；en.wikipedia.org/wiki/Central_Reserve_Bank_of_China；news.sina.cn/gn/2015-07-05/detail-ifxesfty0278822.d.html；chinanews.com/cul/news/2010/06-07/2328120.shtml。"
+    },
+    {
+      "id": "year_1945",
+      "level": "must",
+      "scope": [
+        "brief",
+        "text",
+        "guide_brief",
+        "docs"
+      ],
+      "kind": "require_phrase",
+      "_years": [
+        1945
+      ],
+      "_triggers": [
+        "光复",
+        "日本战败",
+        "抗战结束",
+        "日寇投降",
+        "日本投降",
+        "受降",
+        "胜利"
+      ],
+      "_require": "抗战胜利",
+      "_doc": "era.json notes 第一条与 stage 8（1945 九月）：8 月 15 日日本投降，胜利要写“抗战胜利”。光复、日本战败等替代写法标出来。同一段里已经写了抗战胜利则放过。来源：history.state.gov/historicaldocuments/frus1945v07/d882。"
+    },
+    {
+      "id": "year_1949",
+      "level": "must",
+      "scope": [
+        "brief",
+        "text",
+        "guide_brief",
+        "docs"
+      ],
+      "kind": "require_phrase",
+      "_years": [
+        1949
+      ],
+      "_triggers": [
+        "建国",
+        "新中国成立",
+        "易帜",
+        "换旗",
+        "改朝换代",
+        "光复",
+        "陷落"
+      ],
+      "_require": "解放",
+      "_doc": "era.json notes 第一条与 stage 12（1949 四月）：大陆版写“解放”。常州、无锡、苏州 4 月 23–27 日解放，上海 5 月 27 日解放。来源：wj.gov.cn/html/czwj/2024/BEAHQHIP_0429/486751.html；thepaper.cn/newsDetail_forward_3540591。没写这些替代词的 1949 牌（例如只写银元）不报，留给人工通读。"
+    },
+    {
+      "id": "war_length",
+      "level": "must",
+      "scope": [
+        "brief",
+        "text",
+        "guide_brief",
+        "docs"
+      ],
+      "kind": "forbid_terms",
+      "_terms": [
+        "八年抗战",
+        "抗战八年"
+      ],
+      "_instead": "十四年抗战",
+      "_doc": "era.json notes 第一条：抗战时长按“十四年抗战”（1931–1945），不写八年抗战。"
+    },
+    {
+      "id": "fifties_no_punish",
+      "level": "must",
+      "scope": [
+        "brief",
+        "text",
+        "guide_brief",
+        "docs"
+      ],
+      "kind": "fifties_no_punish",
+      "_terms": [
+        "斗争会",
+        "批斗会",
+        "批斗",
+        "戴高帽",
+        "游街示众",
+        "游街",
+        "武斗",
+        "揪斗"
+      ],
+      "_bad_types": [
+        "fate",
+        "big_fate",
+        "event"
+      ],
+      "_bad_valence": "bad",
+      "_bad_tag": "bad_omen",
+      "_era_from": 1950,
+      "_era_to": 1959,
+      "_message": "1950 年代不写斗争会和运动场面",
+      "_struct_message": "1950 年代不做随机惩罚牌（weight>0 且是坏的命运或事件）",
+      "_doc": "era.json notes 第二条与 branch_end：1950–1953 的土改、五反、统购统销只作政策和经济事件，不描写斗争会和暴力，不做成惩罚玩家的随机命运牌。1956 公私合营收尾不作褒贬。DESIGN 第六节。判定：era 含 1950–1959，或路径在 docs/cards/post1949，或正文里写了 195x。命运/大命运看 valence=bad 且 weight>0；事件还要 bad_omen 或 valence=bad。era 为 * 且不在 post1949 的通用坏牌不报。否定窗口（不写、不描写、禁止）里提到这些词不报。来源：paper.people.com.cn/zgjjzk/html/2009-09/28/content_355698.htm；commonprogram.science/meetings/1953/16-10-1953.pdf。"
+    },
+    {
+      "id": "no_violence_detail",
+      "level": "must",
+      "scope": [
+        "brief",
+        "text",
+        "guide_brief",
+        "docs"
+      ],
+      "kind": "forbid_terms",
+      "_terms": [
+        "血淋淋",
+        "血肉模糊",
+        "开膛",
+        "凌迟",
+        "酷刑",
+        "活埋",
+        "碎尸",
+        "砍头",
+        "斩首",
+        "屠城",
+        "奸杀",
+        "强奸",
+        "轮奸",
+        "虐杀",
+        "扒皮",
+        "点天灯",
+        "五马分尸",
+        "刺刀挑",
+        "毒打",
+        "拷打"
+      ],
+      "_message": "不写暴力细节",
+      "_doc": "era.json notes 第二条：不描写暴力。任何年代的 brief、正文和 post1949 设计都不写这些细节。斗争会、批斗归 fifties_no_punish，只在 1950 年代语境里报。"
+    },
+    {
+      "id": "brief_no_dialogue",
+      "level": "must",
+      "scope": [
+        "brief",
+        "guide_brief"
+      ],
+      "kind": "no_dialogue",
+      "_max_chars": 12,
+      "_punct": "。！？",
+      "_pairs": [
+        "“”",
+        "‘’",
+        "「」",
+        "『』"
+      ],
+      "_message": "引号内超过 12 个字或含。！？，像能直接拿去用的对白",
+      "_doc": "合同 11.2：brief 是干巴巴的说明，不写成能直接用的台词，不写引号里的对白。短标签如良民证、办这件事放过。正文里的对白是人写的，这条不查 text。"
+    },
+    {
+      "id": "guide_no_hidden",
+      "level": "must",
+      "scope": [
+        "guide_brief"
+      ],
+      "kind": "forbid_terms",
+      "_terms": [
+        "概率",
+        "几率",
+        "机率",
+        "百分比",
+        "权重",
+        "本心",
+        "底价",
+        "真假",
+        "点数",
+        "%"
+      ],
+      "_message": "指引不提概率、点数、本心、权重或百分号",
+      "_doc": "红线 3、合同 7.10.1 第 8 条：指引步骤和规矩页的 brief，以及 W3 起它们的 say、bubble、title、body，不提概率、几率、百分比、点数、权重、本心、底价、真假，不出现百分号。普通 brief（例如标签说明）可以写本心。DESIGN 第九节第四条。"
+    },
+    {
+      "id": "no_percent",
+      "level": "must",
+      "scope": [
+        "text"
+      ],
+      "kind": "forbid_terms",
+      "_terms": [
+        "%"
+      ],
+      "_message": "正文里不许有百分号",
+      "_doc": "合同 11.4 第 6 项与 V27：正文（含指引步骤、规矩页、帮助）里没有百分号。K15 用 --scope=text 调用。brief 里的百分号不归这条（指引 brief 归 guide_no_hidden）。"
+    }
+  ]
+}

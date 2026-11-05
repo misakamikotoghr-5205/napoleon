@@ -1,0 +1,323 @@
+{
+  "_meta": {
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-misc"
+  },
+  "df.brother.1940.after_letter": {
+    "body": "第一封信之后又隔了一年，你还在打听那条信路通不通。"
+  },
+  "df.brother.1940.road": {
+    "body": "有人说，哥哥那封信走过的路，如今还走得通。"
+  },
+  "df.zhouma.1940.after_dock": {
+    "body": "隔了一年，茶馆里还在传水边那个人的去向。"
+  },
+  "df.zhouma.1940.teahouse_word": {
+    "body": "周妈提起，铺子往后也许得换个活法，话只说到嘴边。"
+  },
+  "df.zhouma.1940.hook": {
+    "body": "周妈把往后的去向跟你说完整了。"
+  },
+  "df.zhouma.1940.quiet": {
+    "body": "周妈还只把茶馆里的话告诉你，你没往外传。"
+  },
+  "df.linsao.1940.after_child": {
+    "body": "又隔一年，你还惦记着林嫂的孩子。"
+  },
+  "df.wangshan.1940.after_where": {
+    "body": "知道下落后又隔一年，你还在打听王山走不走得动。"
+  },
+  "df.zhao.1940.after_year_end": {
+    "body": "隔了一年，你又翻到赵老三那件冬衣的当票。"
+  },
+  "df.ma.1940.after_post": {
+    "body": "又隔一年，你留意新官上任后马保长的位子还在不在。"
+  },
+  "df.ma.1940.levy_word": {
+    "body": "有人说摊派换了名目，数目还是从马保长嘴里报出来。"
+  },
+  "df.ma.1940.new_post": {
+    "body": "新官上任后，马保长亲口把自己的去留说清楚了。"
+  },
+  "df.ma.1940.quiet": {
+    "body": "换了名目的摊派，你没拿去交差。"
+  },
+  "df.hu2.1940.after_rounds": {
+    "body": "又隔一年，你留意胡二是否改跟了新官的人。"
+  },
+  "df.hu2.1940.regime": {
+    "body": "剪报：三月三十日，汪伪国民政府在南京成立，伪维新政府并了进去。"
+  },
+  "df.hu2.1940.clerk": {
+    "body": "衙门里新来了跑腿的，有人拿他和胡二比。"
+  },
+  "df.chen.1940.after_code": {
+    "body": "又隔一年，那封短笺才和另一封信对上了。"
+  },
+  "df.chen.1940.plain": {
+    "body": "那封电报译开了，说的是码头、平安和动身的事，末尾署着一个称呼。"
+  },
+  "df.chen.1940.scrap": {
+    "body": "收旧报的人说，有一张报纸上印着和陈叔叔对得上的名字。"
+  },
+  "df.chen.1940.link": {
+    "body": "陈叔叔把几页碎片串成了一条线，摊在你面前。"
+  },
+  "df.chen.1940.exposed": {
+    "body": "电报译出的意思，你一直没交出去。"
+  },
+  "df.xiaoding.1940.after_still": {
+    "body": "又隔一年，你留意小丁是否还留在孙家灶上。"
+  },
+  "df.xiaoding.1940.stay": {
+    "body": "孙福提起小丁还在，去留却没说死。"
+  },
+  "df.xiaoding.1940.quiet": {
+    "body": "小丁还在灶上这件事，你没交出去。"
+  },
+  "df.zhang.1940.after_ward": {
+    "body": "又隔一年，你留意医院还收不收得下人。"
+  },
+  "df.zhang.1940.short": {
+    "body": "有人说，纱布和药又短了一截。"
+  },
+  "df.zhang.1940.quiet": {
+    "body": "药短的事，你没交出去。"
+  },
+  "df.li.1940.after_gate": {
+    "body": "又隔一年，你留意城门口还盘不盘查学生。"
+  },
+  "df.li.1940.gate": {
+    "body": "新官上任后，城门的问法换了，还是有人提起学生。"
+  },
+  "df.li.1940.quiet": {
+    "body": "这一年城门的事，你没交出去。"
+  },
+  "df.sunlaoye.1940.after_quiet": {
+    "body": "又隔一年，你留意孙老爷是否重新出门走动。"
+  },
+  "df.sunlaoye.1940.stance": {
+    "body": "孙老爷要你表态，把话说得明明白白。"
+  },
+  "df.sunlaoye.1940.quiet": {
+    "body": "孙府来探问的事，你没交出去。"
+  },
+  "df.guanjia.1940.after_gate": {
+    "body": "又隔一年，你留意孙福是否还拦着府里的人。"
+  },
+  "df.guanjia.1940.stance_echo": {
+    "body": "孙福先来探过口风，那还不是孙老爷本人的意思。"
+  },
+  "df.wu.1940.after_price": {
+    "body": "抬价之后又隔一年，你留意裕丰米行是否还是吴掌柜的。"
+  },
+  "df.wu.1940.board": {
+    "body": "新官上任后米价还是紧，有人说米行没换掌柜。"
+  },
+  "df.wu.1940.quiet": {
+    "body": "这一年的米价，你没拿去交差。"
+  },
+  "df.postman.1940.after_run": {
+    "body": "送过那封信又隔一年，你又问起何启明跑的邮路。"
+  },
+  "df.postman.1940.code_book": {
+    "body": "何启明认得电码本上的词，能教人一个个查。"
+  },
+  "df.postman.1940.quiet": {
+    "body": "他又送过一封远信，这件事你没交出去。"
+  },
+  "df.nf1939a.1940.after_coat": {
+    "body": "隔了一年，你又翻到柴佬那件冬衣的当票。"
+  },
+  "df.nf1939c.1940.after_cocoon": {
+    "body": "隔了一年，那包茧还在，茧行开不开门却没人说得准。"
+  },
+  "df.nf1940a.1940.seal": {
+    "body": "顾承年带来的单子上，盖着一颗新印。"
+  },
+  "df.nf1940a.1940.said": {
+    "body": "顾承年只说名目换了，旧账一句不提。"
+  },
+  "df.nf1940b.1940.visit": {
+    "body": "齐路生来铺子里坐了坐，话里话外在探口风。"
+  },
+  "df.nf1940b.1940.ask": {
+    "body": "齐路生问铺子站哪一边，问完就走了。"
+  },
+  "df.nf1940c.1940.clip": {
+    "body": "蔡布成拿来一张旧报纸，上面有个名字和旧识对得上。"
+  },
+  "df.nf1940c.1940.said": {
+    "body": "蔡布成把报纸留下，没说是从哪里收来的。"
+  },
+  "df.nf1940d.1940.letter": {
+    "body": "方晚晴带着一封没拆的信，事情还没有了结。"
+  },
+  "df.nf1940d.1940.road": {
+    "body": "有人说，方晚晴下一站不在青溪。"
+  },
+  "df.brother.1940.letter": {
+    "body": "开春又来了哥哥的信，人还不在镇上。"
+  },
+  "df.brother.1940.letter_cold": {
+    "body": "哥哥的信越写越短，后来就断了。"
+  },
+  "df.brother.1940.link_from_chen": {
+    "body": "陈叔叔把几页碎片串起来时说，哥哥那边的事也连在这条线上。"
+  },
+  "df.chen.1940.link_one": {
+    "body": "陈叔叔只把其中一页碎片的来龙去脉讲给你听。"
+  },
+  "df.chen.1940.quinine": {
+    "body": "开春，陈叔叔拿一瓶奎宁来当，当期不长。"
+  },
+  "df.chen.1940.redeemed": {
+    "body": "陈叔叔亲自来，把开春当出的药赎了回去。"
+  },
+  "df.guanjia.1940.intro": {
+    "body": "孙福把一封介绍信放到了你手里。"
+  },
+  "df.guanjia.1940.pledge": {
+    "body": "孙福上门，要铺子替孙府作保。"
+  },
+  "df.guanjia.1940.scroll": {
+    "body": "孙福来替孙府挑走了货架上的一件书画。"
+  },
+  "df.hu2.1940.gone": {
+    "body": "开春，胡二来说他要改跟新官了。"
+  },
+  "df.hu2.1940.slip_new": {
+    "body": "胡二递来的条子上，名目已经换成新官的了。"
+  },
+  "df.hu2.1940.slip_old": {
+    "body": "胡二递来的条子上，还是伪维持会的旧名目。"
+  },
+  "df.hu2.1940.title_new": {
+    "body": "胡二来说，往后他替新官传话。"
+  },
+  "df.li.1940.calligraphy": {
+    "body": "开春，李敬之来卖一幅旧字。"
+  },
+  "df.li.1940.school": {
+    "body": "李敬之来问铺子肯不肯在新名册上替同学作个人保，你听他说完了。"
+  },
+  "df.linsao.1940.coat": {
+    "body": "开春，林嫂又来当一件冬衣，当期不长。"
+  },
+  "df.linsao.1940.gone_word": {
+    "body": "林嫂好些日子没来柜台，你在这一页记下了。"
+  },
+  "df.linsao.1940.redeemed": {
+    "body": "林嫂来把冬衣赎了回去。"
+  },
+  "df.ma.1940.levy_harsh": {
+    "body": "开春，马保长还挂着伪维持会的名目来，说话比从前更紧。"
+  },
+  "df.ma.1940.levy_new": {
+    "body": "马保长换了身份，又上门来收钱。"
+  },
+  "df.ma.1940.levy_old": {
+    "body": "马保长还用伪维持会时的名目来打招呼。"
+  },
+  "df.ma.1940.title_kept": {
+    "body": "马保长来说名目要换，你仍按旧的称呼他。"
+  },
+  "df.ma.1940.title_new": {
+    "body": "马保长来说名目要换，你认了他的新名目。"
+  },
+  "df.nf1940a.1940.register": {
+    "body": "开春，顾承年随新官先到，来给当铺换名册，你照办了。"
+  },
+  "df.nf1940b.1940.rumor": {
+    "body": "齐路生从南京方向一路走来卖报，你留下了他的一张报纸。"
+  },
+  "df.nf1940c.1940.redeemed": {
+    "body": "蔡布成来赎回了他的袍子。"
+  },
+  "df.nf1940c.1940.robe": {
+    "body": "开春，蔡布成来当一件袍子。"
+  },
+  "df.nf1940d.1940.half_ticket": {
+    "body": "方晚晴拿着半张旧当票来寻人，你替她抄下了票上的字号。"
+  },
+  "df.postman.1940.hook_letter": {
+    "body": "何启明送来一封远信，你决定照信上说的去找。"
+  },
+  "df.postman.1940.hook_sealed": {
+    "body": "何启明送来一封远信，你把它封好收了起来。"
+  },
+  "df.postman.1940.mail": {
+    "body": "何启明送来一封寻常的信。"
+  },
+  "df.sunlaoye.1940.favor": {
+    "body": "孙老爷来讨人情，要铺子出面替一户人家说项，你应了。"
+  },
+  "df.sunlaoye.1940.pressure": {
+    "body": "孙老爷上门施压，你让了一步。"
+  },
+  "df.sunlaoye.1940.stance_apart": {
+    "body": "孙老爷要你表态，你说铺子不站哪一边。"
+  },
+  "df.sunlaoye.1940.stance_hedge": {
+    "body": "孙老爷要你表态，你含糊着没说死。"
+  },
+  "df.sunlaoye.1940.stance_with": {
+    "body": "孙老爷要你表态，你说铺子跟孙府站在一起。"
+  },
+  "df.sunyoung.1940.borrow": {
+    "body": "开春，孙少爷来借钱，说要应付新官那边的礼数，你借给了他。"
+  },
+  "df.sunyoung.1940.redeemed": {
+    "body": "孙少爷来把戒指赎了回去。"
+  },
+  "df.sunyoung.1940.ring": {
+    "body": "开春，孙少爷来当一枚戒指，当期不长。"
+  },
+  "df.wangshan.1940.link_from_chen": {
+    "body": "陈叔叔串起碎片时说，王山的事也连在这条线上。"
+  },
+  "df.wangshan.1940.lost": {
+    "body": "王山没再露面，你在这一页记下了。"
+  },
+  "df.wangshan.1940.shelter": {
+    "body": "开春，王山来求助，你收留了他。"
+  },
+  "df.wangshan.1940.turned": {
+    "body": "开春，王山来求助，你没让他进门。"
+  },
+  "df.wu.1940.rice": {
+    "body": "开春，吴掌柜来卖一小袋粳米。"
+  },
+  "df.wu.1940.stock": {
+    "body": "吴掌柜劝你趁新摊派换名目之前先囤一点米，你照做了。"
+  },
+  "df.xiaoding.1940.redeemed": {
+    "body": "小丁来把当出的米赎了回去。"
+  },
+  "df.xiaoding.1940.rice": {
+    "body": "开春，小丁来当一小袋粳米，袋口是重新缝过的。"
+  },
+  "df.zhang.1940.sulfa": {
+    "body": "开春，张护士来卖一瓶磺胺。"
+  },
+  "df.zhang.1940.ward": {
+    "body": "张护士来问，铺子肯不肯把药先留给医院，你答应了。"
+  },
+  "df.zhao.1940.field": {
+    "body": "开春，赵老三来当一份田契。"
+  },
+  "df.zhao.1940.lent_again": {
+    "body": "那年借钱你没理他，开春赵老三又来求，这回你借了。"
+  },
+  "df.zhao.1940.redeemed": {
+    "body": "赵老三来把田契赎了回去。"
+  },
+  "df.zhouma.1940.scarf": {
+    "body": "开春，周妈来卖一条旧围巾。"
+  },
+  "df.zhouma.1940.tea": {
+    "body": "周妈来说新官和孙府的闲话。"
+  },
+  "df.zhouma.1940.tea_cold": {
+    "body": "年关那回没理她，周妈今年说话冷了些。"
+  }
+}

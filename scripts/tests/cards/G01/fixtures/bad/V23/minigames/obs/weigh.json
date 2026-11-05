@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "owner": "C14",
+    "schema": 1,
+    "kind": "weigh"
+  },
+  "obs": {
+    "obs.weigh.match": {
+      "fidelity": "clear",
+      "brief": "称出来和客人说的分量对得上"
+    },
+    "obs.weigh.light_small": {
+      "fidelity": "clear",
+      "brief": "比说的轻一点点（一钱上下）"
+    },
+    "obs.weigh.light_much": {
+      "fidelity": "clear",
+      "brief": "比说的轻不少"
+    },
+    "obs.weigh.heavy": {
+      "fidelity": "clear",
+      "brief": "比说的重"
+    },
+    "obs.weigh.light_vague": {
+      "fidelity": "partial",
+      "brief": "好像轻一些，戥子没压稳"
+    },
+    "obs.weigh.unsure": {
+      "fidelity": "vague",
+      "brief": "没称准，说不好"
+    },
+    "obs.weigh.fake": {
+      "fidelity": "clear",
+      "brief": "TEST"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "owner": "K10",
+    "schema": 1,
+    "brief": "例子集：黄历（§4.7.18）"
+  },
+  "cards": [
+    {
+      "id": "alm.shoudang",
+      "type": "almanac_day",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "season": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "yi": [
+        "pawn_in",
+        "meet"
+      ],
+      "ji": [
+        "travel"
+      ],
+      "reward": [
+        {
+          "op": "rep",
+          "delta": 1
+        }
+      ],
+      "brief": "宜收当、会友；忌出行。照着做（做了宜的、没做忌的）：口碑涨一点。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-14"
+      }
+    }
+  ]
+}

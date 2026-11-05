@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "owner": "K16",
+    "schema": 1,
+    "brief": "教学牌效果上的原因键。只有说明，没有玩家正文。"
+  },
+  "keys": {
+    "k16.reason.tut_sell": {
+      "brief": "教学：来卖成交时记账用的原因，数额由柜台另算"
+    },
+    "k16.reason.tut_slots_ok": {
+      "brief": "教学格子牌过了，进一小笔钱"
+    },
+    "k16.reason.tut_slots_fail": {
+      "brief": "教学格子牌没过时的原因说明；效果本身只记标记，不扣钱"
+    },
+    "k16.reason.tut_contact": {
+      "brief": "教学：把周妈记成人脉时的原因"
+    },
+    "k16.notice.tut_day1": {
+      "brief": "教学第 1 天可以贴的告示键，正文留给 A"
+    }
+  }
+}

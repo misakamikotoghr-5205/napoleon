@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "owner": "G06",
+    "schema": 1
+  },
+  "_doc": [
+    "W2-5 #198：真 CardEngine / data/cards 同种子七策略三关，依据见 docs/cards/balance/report_2026-10-18_w2_198.md。",
+    "收货价 kind 95→85，缓解善意接客的首关现金与抵押压力；fair 75→70 的试调恶化结果，已撤回。"
+  ],
+  "economy": {
+    "tiers": {
+      "pay": {
+        "kind": 85
+      }
+    }
+  }
+}

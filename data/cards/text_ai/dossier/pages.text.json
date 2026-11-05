@@ -1,0 +1,113 @@
+{
+  "_meta": {
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-misc"
+  },
+  "dp.brother": {
+    "title": "沈如松（哥哥）"
+  },
+  "dp.chen": {
+    "title": "陈文庭（陈叔叔）"
+  },
+  "dp.xiaoding": {
+    "title": "小丁"
+  },
+  "dp.zhang": {
+    "title": "张慧娟（张护士）"
+  },
+  "dp.wangshan": {
+    "title": "王山"
+  },
+  "dp.li": {
+    "title": "李敬之"
+  },
+  "dp.linsao": {
+    "title": "林嫂"
+  },
+  "dp.zhouma": {
+    "title": "周妈"
+  },
+  "dp.zhao": {
+    "title": "赵老三"
+  },
+  "dp.sunyoung": {
+    "title": "孙富贵（孙少爷）"
+  },
+  "dp.ma": {
+    "title": "马万利（马保长）"
+  },
+  "dp.hu2": {
+    "title": "胡二"
+  },
+  "dp.sunlaoye": {
+    "title": "孙德昌（孙老爷）"
+  },
+  "dp.guanjia": {
+    "title": "孙福（孙府管家）"
+  },
+  "dp.wu": {
+    "title": "吴长发（米行掌柜）"
+  },
+  "dp.postman": {
+    "title": "何启明（邮差）"
+  },
+  "dp.nf1938a": {
+    "title": "钱阿根（米行脚夫）"
+  },
+  "dp.nf1938b": {
+    "title": "周阿绣（原茧行女工）"
+  },
+  "dp.nf1938c": {
+    "title": "方小安（济生堂学徒）"
+  },
+  "dp.nf1938d": {
+    "title": "崔老奎（更夫）"
+  },
+  "dp.nf1939a": {
+    "title": "柴佬"
+  },
+  "dp.nf1939b": {
+    "title": "茧账"
+  },
+  "dp.nf1939c": {
+    "title": "乡嫂"
+  },
+  "dp.nf1939d": {
+    "title": "区抄"
+  },
+  "dp.nf1940a": {
+    "title": "顾承年"
+  },
+  "dp.nf1940b": {
+    "title": "齐路生"
+  },
+  "dp.nf1940c": {
+    "title": "蔡布成"
+  },
+  "dp.nf1940d": {
+    "title": "方晚晴"
+  },
+  "dp.stranger_refugee": {
+    "title": "逃难的人"
+  },
+  "dp.stranger_peddler": {
+    "title": "货郎"
+  },
+  "dp.stranger_collector": {
+    "title": "上门收货的"
+  },
+  "dp.stranger_fence": {
+    "title": "销赃的"
+  },
+  "dp.stranger_waixiang": {
+    "title": "外乡人"
+  },
+  "dp.stranger_boatman": {
+    "title": "船工"
+  },
+  "dp.stranger_student": {
+    "title": "赶路的学生"
+  },
+  "dp.stranger_widow": {
+    "title": "守寡的过路人"
+  }
+}

@@ -1,0 +1,2936 @@
+{
+ "_doc": "Normalized authored map. Source: docs/cards/world/drafts/ocean/maps/world.json",
+ "id": "world",
+ "version": 1,
+ "segment": "ocean",
+ "views": {
+  "biscay": {
+   "proj": "canvas",
+   "bg": "map_biscay",
+   "size": [
+    1920,
+    1080
+   ],
+   "_note": "示意图，不是严格投影：巴黎在右上、英格兰西南角在左上、夏朗德海岸放大到左下半幅（罗什福尔、富拉、艾克斯岛真实相距只有十几公里，按比例画会挤成一团）。节点同时写了 geo 供参考，xy 优先（ARCH §2.2）。"
+  },
+  "longwood": {
+   "proj": "canvas",
+   "bg": "map_st_helena",
+   "size": [
+    1920,
+    1080
+   ],
+   "_note": "圣赫勒拿全岛局部图，北在上；节点按实测位置摆开、为了好点而放大了间距"
+  },
+  "new_elba": {
+   "proj": "canvas",
+   "bg": "map_new_elba",
+   "size": [
+    1920,
+    1080
+   ],
+   "_note": "虚构火山岛（南纬 39.5°、西经 118.5°），北在上"
+  },
+  "world": {
+   "proj": "miller",
+   "base": "world",
+   "bg": "map_world",
+   "_note": "沿用 wm/geo/world.json 的米勒投影全图（ARCH 原写 −180…60；锡兰和阿拉伯隧道在东经 30–80°，所以用全图）"
+  }
+ },
+ "sheets": [
+  {
+   "chapter": "prologue",
+   "view": "biscay",
+   "start": "malmaison",
+   "days_max": 9,
+   "stamps_need": 2,
+   "muster": "ile_d_aix",
+   "boss": "plymouth",
+   "interlude": "audience",
+   "sets": [
+    {
+     "id": "loire_road",
+     "label": "卢瓦尔驿道",
+     "nodes": [
+      "rambouillet",
+      "poitiers"
+     ],
+     "bonus": {
+      "pass_supply": 1
+     }
+    }
+   ],
+   "rivals": [
+    {
+     "id": "vendee_band",
+     "label": "旺代保王军的游击队",
+     "path": [
+      "la_rochelle",
+      "niort",
+      "saintes",
+      "niort"
+     ],
+     "speed": 1,
+     "start": 0,
+     "meet": {
+      "toll": {
+       "gold": 1
+      }
+     },
+     "burns_depots": true,
+     "note": "本图不能有战斗（L13 的序曲 Boss 之前不能再有更低等级的仗，主干又止于 L12），所以对手只收过路费，或用道具闪开"
+    }
+   ],
+   "nodes": [
+    {
+     "id": "malmaison",
+     "type": "event",
+     "label": "马尔梅松",
+     "xy": [
+      1800,
+      140
+     ],
+     "date": "1815-06-29",
+     "fixed": true,
+     "fog": "open",
+     "event": "ev_o_malmaison",
+     "geo": [
+      217,
+      4887
+     ]
+    },
+    {
+     "id": "rambouillet",
+     "type": "supply",
+     "label": "朗布依埃驿站",
+     "xy": [
+      1664,
+      206
+     ],
+     "role": "post",
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "build_depot"
+     ],
+     "geo": [
+      183,
+      4864
+     ],
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     },
+     "_draft_xy": [
+      1660,
+      210
+     ]
+    },
+    {
+     "id": "chartres",
+     "type": "slot",
+     "label": "沙特尔",
+     "xy": [
+      1556,
+      304
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "biscay_1815",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 13
+     },
+     "geo": [
+      149,
+      4845
+     ],
+     "_draft_xy": [
+      1560,
+      300
+     ]
+    },
+    {
+     "id": "blois",
+     "type": "slot",
+     "label": "布卢瓦",
+     "xy": [
+      1440,
+      400
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "biscay_1815",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 13
+     },
+     "geo": [
+      133,
+      4759
+     ]
+    },
+    {
+     "id": "tours",
+     "type": "shop",
+     "label": "图尔",
+     "xy": [
+      1290,
+      460
+     ],
+     "fog": "type",
+     "date": "1815-06-30",
+     "actions": [
+      "activity:merchant",
+      "recruit:troop:line",
+      "recruit:troop:grenadier",
+      "recruit:troop:jager",
+      "recruit:troop:hussar",
+      "recruit:troop:artillery"
+     ],
+     "geo": [
+      69,
+      4739
+     ]
+    },
+    {
+     "id": "poitiers",
+     "type": "supply",
+     "label": "普瓦捷驿站",
+     "xy": [
+      1130,
+      590
+     ],
+     "role": "post",
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "build_depot"
+     ],
+     "geo": [
+      34,
+      4658
+     ],
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "intel": 1
+      }
+     }
+    },
+    {
+     "id": "niort",
+     "type": "camp",
+     "label": "尼奥尔",
+     "xy": [
+      900,
+      560
+     ],
+     "date": "1815-07-02",
+     "fog": "type",
+     "actions": [
+      "activity:rest",
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "schedule:diplomacy",
+      "schedule:festival",
+      "schedule:smuggle"
+     ],
+     "geo": [
+      -46,
+      4632
+     ]
+    },
+    {
+     "id": "saintes",
+     "type": "slot",
+     "label": "桑特",
+     "xy": [
+      890,
+      860
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "biscay_1815",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 13
+     },
+     "geo": [
+      -63,
+      4575
+     ]
+    },
+    {
+     "id": "la_rochelle",
+     "type": "slot",
+     "label": "拉罗谢尔",
+     "xy": [
+      625,
+      510
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "biscay_1815",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 13
+     },
+     "geo": [
+      -115,
+      4616
+     ],
+     "_draft_xy": [
+      620,
+      520
+     ]
+    },
+    {
+     "id": "rochefort",
+     "type": "supply",
+     "label": "罗什福尔军港",
+     "xy": [
+      805,
+      738
+     ],
+     "role": "port",
+     "date": "1815-07-03",
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "visit:backdoor",
+      "trade:fair",
+      "trade:counterfeit",
+      "recruit:dantes",
+      "recruit:faria"
+     ],
+     "geo": [
+      -96,
+      4594
+     ],
+     "_draft_xy": [
+      770,
+      730
+     ]
+    },
+    {
+     "id": "fouras",
+     "type": "shop",
+     "label": "富拉",
+     "xy": [
+      661,
+      714
+     ],
+     "fog": "type",
+     "actions": [
+      "activity:merchant",
+      "recruit:troop:line",
+      "recruit:troop:grenadier",
+      "recruit:troop:jager",
+      "recruit:troop:hussar",
+      "recruit:troop:artillery",
+      "recruit:gourgaud",
+      "tile:smuggle"
+     ],
+     "geo": [
+      -109,
+      4598
+     ],
+     "_draft_xy": [
+      660,
+      700
+     ]
+    },
+    {
+     "id": "royan",
+     "type": "slot",
+     "label": "鲁瓦扬",
+     "xy": [
+      660,
+      940
+     ],
+     "fog": "hidden",
+     "slot": {
+      "pool": "biscay_1815",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 13
+     },
+     "geo": [
+      -103,
+      4562
+     ]
+    },
+    {
+     "id": "oleron",
+     "type": "slot",
+     "label": "奥莱龙岛",
+     "xy": [
+      500,
+      800
+     ],
+     "fog": "hidden",
+     "slot": {
+      "pool": "biscay_1815",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 13
+     },
+     "geo": [
+      -130,
+      4593
+     ]
+    },
+    {
+     "id": "ile_d_aix",
+     "type": "camp",
+     "label": "艾克斯岛",
+     "xy": [
+      542,
+      630
+     ],
+     "role": "muster",
+     "date": "1815-07-12",
+     "fog": "open",
+     "actions": [
+      "activity:rest",
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "schedule:diplomacy",
+      "schedule:festival",
+      "schedule:smuggle"
+     ],
+     "geo": [
+      -117,
+      4601
+     ],
+     "phase": "accumulate",
+     "_draft_xy": [
+      560,
+      640
+     ]
+    },
+    {
+     "id": "basque_roads",
+     "type": "event",
+     "label": "巴斯克锚地",
+     "xy": [
+      396,
+      617
+     ],
+     "phase": "campaign",
+     "date": "1815-07-14",
+     "fixed": true,
+     "fog": "open",
+     "event": "ev_o_council_basque",
+     "geo": [
+      -142,
+      4606
+     ],
+     "role": "council",
+     "_draft_xy": [
+      420,
+      620
+     ]
+    },
+    {
+     "id": "torbay",
+     "type": "camp",
+     "label": "托贝湾",
+     "xy": [
+      430,
+      150
+     ],
+     "phase": "campaign",
+     "date": "1815-07-24",
+     "fog": "open",
+     "actions": [
+      "activity:rest",
+      "schedule:bond_story"
+     ],
+     "geo": [
+      -352,
+      5045
+     ]
+    },
+    {
+     "id": "plymouth",
+     "type": "boss",
+     "label": "普利茅斯湾·贝勒罗丰号",
+     "xy": [
+      250,
+      180
+     ],
+     "scene": "prologue",
+     "phase": "campaign",
+     "date": "1815-08-04",
+     "fixed": true,
+     "fog": "open",
+     "geo": [
+      -414,
+      5033
+     ]
+    }
+   ],
+   "links": [
+    {
+     "a": "malmaison",
+     "b": "rambouillet",
+     "legs": 2
+    },
+    {
+     "a": "rambouillet",
+     "b": "chartres",
+     "legs": 1
+    },
+    {
+     "a": "chartres",
+     "b": "blois",
+     "legs": 2
+    },
+    {
+     "a": "blois",
+     "b": "tours",
+     "legs": 1
+    },
+    {
+     "a": "rambouillet",
+     "b": "tours",
+     "legs": 3
+    },
+    {
+     "a": "tours",
+     "b": "poitiers",
+     "legs": 2
+    },
+    {
+     "a": "poitiers",
+     "b": "niort",
+     "legs": 2
+    },
+    {
+     "a": "niort",
+     "b": "la_rochelle",
+     "legs": 2
+    },
+    {
+     "a": "niort",
+     "b": "saintes",
+     "legs": 2
+    },
+    {
+     "a": "niort",
+     "b": "rochefort",
+     "legs": 2
+    },
+    {
+     "a": "saintes",
+     "b": "rochefort",
+     "legs": 1
+    },
+    {
+     "a": "saintes",
+     "b": "royan",
+     "legs": 1
+    },
+    {
+     "a": "royan",
+     "b": "rochefort",
+     "legs": 2,
+     "toll": {
+      "gold": 1
+     }
+    },
+    {
+     "a": "la_rochelle",
+     "b": "rochefort",
+     "legs": 1,
+     "toll": {
+      "gold": 1
+     }
+    },
+    {
+     "a": "rochefort",
+     "b": "fouras",
+     "legs": 1
+    },
+    {
+     "a": "fouras",
+     "b": "ile_d_aix",
+     "legs": 1,
+     "route": "smuggle_route"
+    },
+    {
+     "a": "fouras",
+     "b": "oleron",
+     "legs": 1
+    },
+    {
+     "a": "oleron",
+     "b": "ile_d_aix",
+     "legs": 1
+    },
+    {
+     "a": "la_rochelle",
+     "b": "ile_d_aix",
+     "legs": 2,
+     "route": "salon_route"
+    },
+    {
+     "a": "ile_d_aix",
+     "b": "basque_roads",
+     "legs": 1
+    },
+    {
+     "a": "basque_roads",
+     "b": "torbay",
+     "voyage_days": 2
+    },
+    {
+     "a": "torbay",
+     "b": "plymouth",
+     "legs": 1
+    }
+   ],
+   "_draft_days_max": 9,
+   "templates_needed": [],
+   "_marker_layout": "Authored geo retained; transaction markers separated for readable selection."
+  },
+  {
+   "chapter": "st_helena",
+   "view": "longwood",
+   "start": "jamestown",
+   "days_max": 14,
+   "stamps_need": 2,
+   "muster": "muster_longwood",
+   "boss": "longwood",
+   "interlude": "camp_night",
+   "sets": [
+    {
+     "id": "south_coast",
+     "label": "南岸接应线",
+     "nodes": [
+      "rupert_bay",
+      "lots_wife"
+     ],
+     "bonus": {
+      "pass_supply": 1
+     }
+    }
+   ],
+   "rivals": [
+    {
+     "id": "lowe_patrol",
+     "label": "总督巡逻队",
+     "path": [
+      "briars",
+      "alarm_house",
+      "hutts_gate",
+      "alarm_house"
+     ],
+     "speed": 1,
+     "start": 0,
+     "meet": {
+      "battle": {
+       "template": "signal_hill",
+       "level": 14
+      },
+      "toll": {
+       "gold": 1
+      }
+     },
+     "burns_depots": true
+    }
+   ],
+   "nodes": [
+    {
+     "id": "jamestown",
+     "type": "story",
+     "label": "詹姆斯敦·海鸥号补给栈",
+     "xy": [
+      425,
+      305
+     ],
+     "scene": "scene01",
+     "date": "1817-11-01",
+     "fixed": true,
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit"
+     ],
+     "_draft_xy": [
+      430,
+      300
+     ]
+    },
+    {
+     "id": "wharf",
+     "type": "battle",
+     "label": "詹姆斯敦码头",
+     "xy": [
+      300,
+      220
+     ],
+     "scene": "scene02",
+     "date": "1818-06-01",
+     "fixed": true,
+     "fog": "open"
+    },
+    {
+     "id": "royal_oak",
+     "type": "story",
+     "label": "皇家橡树酒馆",
+     "xy": [
+      521,
+      195
+     ],
+     "scene": "scene03",
+     "date": "1819-09-01",
+     "fixed": true,
+     "fog": "open",
+     "_draft_xy": [
+      520,
+      215
+     ]
+    },
+    {
+     "id": "company_store",
+     "type": "shop",
+     "label": "东印度公司货栈",
+     "xy": [
+      607,
+      312
+     ],
+     "fog": "open",
+     "actions": [
+      "activity:merchant",
+      "recruit:troop:line",
+      "recruit:troop:grenadier",
+      "recruit:troop:jager",
+      "recruit:troop:hussar",
+      "recruit:troop:artillery",
+      "recruit:marie",
+      "recruit:morel",
+      "recruit:dantes",
+      "recruit:faria"
+     ],
+     "_draft_xy": [
+      600,
+      330
+     ]
+    },
+    {
+     "id": "mundens_point",
+     "type": "slot",
+     "label": "芒登炮台",
+     "xy": [
+      655,
+      137
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "st_helena",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 14
+     },
+     "_draft_xy": [
+      650,
+      140
+     ]
+    },
+    {
+     "id": "rupert_bay",
+     "type": "supply",
+     "label": "鲁珀特湾",
+     "xy": [
+      800,
+      170
+     ],
+     "role": "depot",
+     "fog": "type",
+     "actions": [
+      "build_depot",
+      "trade:fair",
+      "tile:smuggle"
+     ]
+    },
+    {
+     "id": "ladder_hill",
+     "type": "supply",
+     "label": "梯子山信号站",
+     "xy": [
+      322,
+      408
+     ],
+     "role": "post",
+     "fog": "open",
+     "actions": [
+      "visit:town"
+     ],
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "intel": 1
+      }
+     },
+     "_draft_xy": [
+      330,
+      400
+     ]
+    },
+    {
+     "id": "high_knoll",
+     "type": "slot",
+     "label": "高丘堡",
+     "xy": [
+      400,
+      540
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "st_helena",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 14
+     }
+    },
+    {
+     "id": "lemon_valley",
+     "type": "slot",
+     "label": "柠檬谷",
+     "xy": [
+      190,
+      500
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "st_helena",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 14
+     }
+    },
+    {
+     "id": "thompson_valley",
+     "type": "slot",
+     "label": "汤普森谷",
+     "xy": [
+      240,
+      720
+     ],
+     "fog": "hidden",
+     "slot": {
+      "pool": "st_helena",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 14
+     }
+    },
+    {
+     "id": "plantation",
+     "type": "supply",
+     "label": "种植园宅邸（总督府）",
+     "xy": [
+      500,
+      690
+     ],
+     "role": "intel",
+     "fog": "open",
+     "demands": [
+      "bond"
+     ],
+     "actions": [
+      "visit:backdoor"
+     ]
+    },
+    {
+     "id": "briars",
+     "type": "camp",
+     "label": "荆棘园",
+     "xy": [
+      600,
+      458
+     ],
+     "fog": "open",
+     "actions": [
+      "activity:rest",
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "schedule:diplomacy",
+      "schedule:festival",
+      "schedule:smuggle"
+     ],
+     "_draft_xy": [
+      600,
+      430
+     ]
+    },
+    {
+     "id": "alarm_house",
+     "type": "supply",
+     "label": "警报屋信号站",
+     "xy": [
+      758,
+      460
+     ],
+     "role": "post",
+     "fog": "open",
+     "actions": [
+      "visit:town"
+     ],
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     },
+     "_draft_xy": [
+      760,
+      460
+     ]
+    },
+    {
+     "id": "hutts_gate",
+     "type": "supply",
+     "label": "哈茨门·贝特朗小屋",
+     "xy": [
+      899,
+      499
+     ],
+     "role": "intel",
+     "fog": "open",
+     "demands": [
+      "medicine"
+     ],
+     "actions": [
+      "visit:backdoor",
+      "trade:fair"
+     ],
+     "_draft_xy": [
+      900,
+      500
+     ]
+    },
+    {
+     "id": "diana_peak",
+     "type": "slot",
+     "label": "戴安娜峰",
+     "xy": [
+      780,
+      640
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "st_helena",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 14
+     }
+    },
+    {
+     "id": "sandy_bay",
+     "type": "slot",
+     "label": "桑迪湾",
+     "xy": [
+      720,
+      880
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "st_helena",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 14
+     }
+    },
+    {
+     "id": "lots_wife",
+     "type": "supply",
+     "label": "罗得之妻岩下的小码头",
+     "xy": [
+      560,
+      960
+     ],
+     "role": "depot",
+     "fog": "type",
+     "actions": [
+      "build_depot",
+      "trade:fair",
+      "tile:smuggle"
+     ]
+    },
+    {
+     "id": "sea_cave",
+     "type": "elite",
+     "label": "南岸海蚀洞",
+     "xy": [
+      900,
+      990
+     ],
+     "scene": "scene04",
+     "date": "1821-04-28",
+     "fixed": true,
+     "fog": "type"
+    },
+    {
+     "id": "flagstaff",
+     "type": "supply",
+     "label": "旗杆山信号站",
+     "xy": [
+      1010,
+      230
+     ],
+     "role": "post",
+     "fog": "type",
+     "actions": [
+      "visit:town"
+     ],
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "gold": 1
+      }
+     }
+    },
+    {
+     "id": "the_barn",
+     "type": "slot",
+     "label": "巴恩岩",
+     "xy": [
+      1250,
+      270
+     ],
+     "fog": "hidden",
+     "slot": {
+      "pool": "st_helena",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 14
+     }
+    },
+    {
+     "id": "turks_cap",
+     "type": "slot",
+     "label": "土耳其帽峰",
+     "xy": [
+      1480,
+      470
+     ],
+     "fog": "hidden",
+     "slot": {
+      "pool": "st_helena",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 14
+     }
+    },
+    {
+     "id": "prosperous_bay",
+     "type": "slot",
+     "label": "繁荣湾",
+     "xy": [
+      1428,
+      737
+     ],
+     "fog": "hidden",
+     "slot": {
+      "pool": "st_helena",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 14
+     },
+     "_draft_xy": [
+      1400,
+      720
+     ]
+    },
+    {
+     "id": "muster_longwood",
+     "type": "camp",
+     "label": "朗伍德外的桉树林",
+     "xy": [
+      1035,
+      552
+     ],
+     "role": "muster",
+     "fog": "open",
+     "requires": {
+      "scene_done": "scene04"
+     },
+     "actions": [
+      "activity:rest",
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "schedule:diplomacy",
+      "schedule:festival",
+      "schedule:smuggle"
+     ],
+     "phase": "accumulate",
+     "_draft_xy": [
+      1060,
+      560
+     ]
+    },
+    {
+     "id": "longwood_council",
+     "type": "event",
+     "label": "朗伍德·台球室（军议）",
+     "xy": [
+      1175,
+      592
+     ],
+     "phase": "campaign",
+     "date": "1821-05-03",
+     "fixed": true,
+     "fog": "open",
+     "event": "ev_o_council_billiard",
+     "role": "council",
+     "_draft_xy": [
+      1180,
+      600
+     ]
+    },
+    {
+     "id": "deadwood_raid",
+     "type": "elite",
+     "label": "死木平原驻军营地",
+     "xy": [
+      1150,
+      400
+     ],
+     "phase": "campaign",
+     "template": "deadwood_camp",
+     "level": 15,
+     "weather": [
+      "night"
+     ],
+     "date": "1821-05-04",
+     "fog": "open",
+     "reward": {
+      "props": [
+       "prop_smoke_bomb"
+      ],
+      "coins": {
+       "medal": 1
+      }
+     }
+    },
+    {
+     "id": "geranium_spring",
+     "type": "camp",
+     "label": "天竺葵谷泉边",
+     "xy": [
+      1305,
+      659
+     ],
+     "phase": "campaign",
+     "date": "1821-05-04",
+     "fog": "open",
+     "actions": [
+      "activity:rest",
+      "schedule:bond_story"
+     ],
+     "_draft_xy": [
+      1300,
+      660
+     ]
+    },
+    {
+     "id": "longwood",
+     "type": "boss",
+     "label": "朗伍德庄园",
+     "xy": [
+      1320,
+      510
+     ],
+     "scene": "scene05",
+     "phase": "campaign",
+     "date": "1821-05-05",
+     "fixed": true,
+     "fog": "open"
+    }
+   ],
+   "links": [
+    {
+     "a": "jamestown",
+     "b": "wharf",
+     "legs": 1
+    },
+    {
+     "a": "jamestown",
+     "b": "royal_oak",
+     "legs": 1
+    },
+    {
+     "a": "jamestown",
+     "b": "company_store",
+     "legs": 1
+    },
+    {
+     "a": "royal_oak",
+     "b": "mundens_point",
+     "legs": 1
+    },
+    {
+     "a": "mundens_point",
+     "b": "rupert_bay",
+     "legs": 1
+    },
+    {
+     "a": "company_store",
+     "b": "briars",
+     "legs": 1
+    },
+    {
+     "a": "jamestown",
+     "b": "ladder_hill",
+     "legs": 1
+    },
+    {
+     "a": "wharf",
+     "b": "ladder_hill",
+     "legs": 1
+    },
+    {
+     "a": "ladder_hill",
+     "b": "lemon_valley",
+     "legs": 2
+    },
+    {
+     "a": "ladder_hill",
+     "b": "high_knoll",
+     "legs": 1
+    },
+    {
+     "a": "lemon_valley",
+     "b": "thompson_valley",
+     "legs": 1
+    },
+    {
+     "a": "high_knoll",
+     "b": "plantation",
+     "legs": 1
+    },
+    {
+     "a": "thompson_valley",
+     "b": "plantation",
+     "legs": 1
+    },
+    {
+     "a": "briars",
+     "b": "alarm_house",
+     "legs": 1
+    },
+    {
+     "a": "briars",
+     "b": "plantation",
+     "legs": 2
+    },
+    {
+     "a": "alarm_house",
+     "b": "hutts_gate",
+     "legs": 1
+    },
+    {
+     "a": "hutts_gate",
+     "b": "diana_peak",
+     "legs": 1
+    },
+    {
+     "a": "diana_peak",
+     "b": "plantation",
+     "legs": 2
+    },
+    {
+     "a": "diana_peak",
+     "b": "sandy_bay",
+     "legs": 2
+    },
+    {
+     "a": "sandy_bay",
+     "b": "lots_wife",
+     "legs": 1
+    },
+    {
+     "a": "lots_wife",
+     "b": "sea_cave",
+     "legs": 1,
+     "route": "smuggle_route"
+    },
+    {
+     "a": "thompson_valley",
+     "b": "lots_wife",
+     "legs": 2,
+     "supply": 1
+    },
+    {
+     "a": "rupert_bay",
+     "b": "flagstaff",
+     "legs": 2
+    },
+    {
+     "a": "alarm_house",
+     "b": "flagstaff",
+     "legs": 2
+    },
+    {
+     "a": "flagstaff",
+     "b": "the_barn",
+     "legs": 1
+    },
+    {
+     "a": "the_barn",
+     "b": "turks_cap",
+     "legs": 1
+    },
+    {
+     "a": "turks_cap",
+     "b": "prosperous_bay",
+     "legs": 1
+    },
+    {
+     "a": "prosperous_bay",
+     "b": "sea_cave",
+     "legs": 2,
+     "supply": 1,
+     "route": "duel_route"
+    },
+    {
+     "a": "hutts_gate",
+     "b": "muster_longwood",
+     "legs": 1
+    },
+    {
+     "a": "prosperous_bay",
+     "b": "muster_longwood",
+     "legs": 2
+    },
+    {
+     "a": "sea_cave",
+     "b": "muster_longwood",
+     "legs": 2,
+     "requires": {
+      "scene_done": "scene04"
+     }
+    },
+    {
+     "a": "muster_longwood",
+     "b": "longwood_council",
+     "legs": 1
+    },
+    {
+     "a": "longwood_council",
+     "b": "deadwood_raid",
+     "legs": 1
+    },
+    {
+     "a": "deadwood_raid",
+     "b": "geranium_spring",
+     "legs": 2
+    },
+    {
+     "a": "longwood_council",
+     "b": "geranium_spring",
+     "legs": 1
+    },
+    {
+     "a": "geranium_spring",
+     "b": "longwood",
+     "legs": 1
+    }
+   ],
+   "_draft_days_max": 12,
+   "templates_needed": [],
+   "_marker_layout": "Authored geo retained; transaction markers separated for readable selection."
+  },
+  {
+   "chapter": "new_elba",
+   "view": "new_elba",
+   "start": "wreck_shoal",
+   "days_max": 16,
+   "stamps_need": 2,
+   "muster": "muster_east",
+   "boss": "skull_reef",
+   "interlude": "bond",
+   "sets": [
+    {
+     "id": "west_works",
+     "label": "西岸工场",
+     "nodes": [
+      "salt_flats",
+      "tide_pools"
+     ],
+     "bonus": {
+      "pass_supply": 1
+     }
+    }
+   ],
+   "rivals": [
+    {
+     "id": "viper_longboat",
+     "label": "毒蛇号的小艇",
+     "path": [
+      "lookout_n",
+      "whale_bay",
+      "salt_flats",
+      "whale_bay"
+     ],
+     "speed": 1,
+     "start": 0,
+     "meet": {
+      "battle": {
+       "template": "beach_landing",
+       "level": 17
+      },
+      "toll": {
+       "gold": 1
+      }
+     },
+     "burns_depots": true
+    }
+   ],
+   "nodes": [
+    {
+     "id": "wreck_shoal",
+     "type": "battle",
+     "label": "信天翁号沉船浅滩",
+     "xy": [
+      380,
+      770
+     ],
+     "scene": "scene06",
+     "date": "1822-03-14",
+     "fixed": true,
+     "fog": "open"
+    },
+    {
+     "id": "landing_camp",
+     "type": "camp",
+     "label": "登陆海滩营地",
+     "xy": [
+      540,
+      860
+     ],
+     "fog": "open",
+     "actions": [
+      "activity:rest",
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "schedule:diplomacy",
+      "schedule:festival",
+      "schedule:smuggle"
+     ]
+    },
+    {
+     "id": "tide_pools",
+     "type": "supply",
+     "label": "潮池",
+     "xy": [
+      250,
+      600
+     ],
+     "role": "depot",
+     "fog": "type",
+     "actions": [
+      "build_depot",
+      "trade:fair"
+     ]
+    },
+    {
+     "id": "west_cliffs",
+     "type": "slot",
+     "label": "西岸断崖",
+     "xy": [
+      230,
+      400
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "new_elba",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 18
+     }
+    },
+    {
+     "id": "freshwater_spring",
+     "type": "supply",
+     "label": "泉眼",
+     "xy": [
+      688,
+      620
+     ],
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit"
+     ],
+     "_draft_xy": [
+      690,
+      620
+     ]
+    },
+    {
+     "id": "brick_kiln",
+     "type": "supply",
+     "label": "砖窑",
+     "xy": [
+      600,
+      470
+     ],
+     "role": "project",
+     "fog": "open",
+     "actions": [
+      "build"
+     ]
+    },
+    {
+     "id": "granite_exchange",
+     "type": "story",
+     "label": "花岗岩宫·鲸骨交易所",
+     "xy": [
+      471,
+      343
+     ],
+     "scene": "scene07",
+     "date": "1824-09-13",
+     "fixed": true,
+     "fog": "open",
+     "_draft_xy": [
+      470,
+      340
+     ]
+    },
+    {
+     "id": "granite_workshop",
+     "type": "elite",
+     "label": "花岗岩宫·后堂工坊",
+     "xy": [
+      419,
+      207
+     ],
+     "scene": "scene08",
+     "date": "1824-09-14",
+     "fixed": true,
+     "fog": "open",
+     "_draft_xy": [
+      420,
+      210
+     ]
+    },
+    {
+     "id": "water_forge",
+     "type": "supply",
+     "label": "水力锻炉",
+     "xy": [
+      832,
+      640
+     ],
+     "role": "project",
+     "fog": "type",
+     "actions": [
+      "build",
+      "recruit:baptiste"
+     ],
+     "_draft_xy": [
+      830,
+      640
+     ]
+    },
+    {
+     "id": "friday_village",
+     "type": "shop",
+     "label": "星期五的村子",
+     "xy": [
+      780,
+      900
+     ],
+     "fog": "type",
+     "actions": [
+      "activity:merchant",
+      "recruit:troop:line",
+      "recruit:troop:grenadier",
+      "recruit:troop:jager",
+      "recruit:troop:hussar",
+      "recruit:troop:artillery",
+      "recruit:friday",
+      "recruit:corso",
+      "tile:festival"
+     ]
+    },
+    {
+     "id": "palm_grove",
+     "type": "slot",
+     "label": "棕榈林",
+     "xy": [
+      1080,
+      760
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "new_elba",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 18
+     }
+    },
+    {
+     "id": "volcano",
+     "type": "slot",
+     "label": "火山口",
+     "xy": [
+      980,
+      450
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "new_elba",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 18
+     }
+    },
+    {
+     "id": "bat_cave",
+     "type": "slot",
+     "label": "蝙蝠洞",
+     "xy": [
+      760,
+      300
+     ],
+     "fog": "hidden",
+     "slot": {
+      "pool": "new_elba",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 18
+     }
+    },
+    {
+     "id": "lookout_n",
+     "type": "supply",
+     "label": "北岬瞭望火堆",
+     "xy": [
+      990,
+      150
+     ],
+     "role": "post",
+     "fog": "open",
+     "actions": [
+      "visit:town"
+     ],
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "intel": 1
+      }
+     }
+    },
+    {
+     "id": "lookout_s",
+     "type": "supply",
+     "label": "南岬瞭望火堆",
+     "xy": [
+      930,
+      990
+     ],
+     "role": "post",
+     "fog": "open",
+     "actions": [
+      "visit:town"
+     ],
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     }
+    },
+    {
+     "id": "whale_bay",
+     "type": "slot",
+     "label": "鲸湾",
+     "xy": [
+      1330,
+      210
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "new_elba",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 18
+     }
+    },
+    {
+     "id": "salt_flats",
+     "type": "supply",
+     "label": "盐滩",
+     "xy": [
+      1300,
+      380
+     ],
+     "role": "depot",
+     "fog": "type",
+     "actions": [
+      "build_depot",
+      "trade:fair"
+     ]
+    },
+    {
+     "id": "lagoon",
+     "type": "slot",
+     "label": "礁湖",
+     "xy": [
+      1250,
+      860
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "new_elba",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 18
+     }
+    },
+    {
+     "id": "reef_pass",
+     "type": "slot",
+     "label": "礁口水道",
+     "xy": [
+      1500,
+      780
+     ],
+     "fog": "hidden",
+     "slot": {
+      "pool": "new_elba",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 18
+     }
+    },
+    {
+     "id": "muster_east",
+     "type": "camp",
+     "label": "东岸营地",
+     "xy": [
+      1450,
+      540
+     ],
+     "role": "muster",
+     "fog": "open",
+     "requires": {
+      "scene_done": "scene08"
+     },
+     "actions": [
+      "activity:rest",
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "schedule:diplomacy",
+      "schedule:festival",
+      "schedule:smuggle"
+     ],
+     "phase": "accumulate"
+    },
+    {
+     "id": "east_rocks",
+     "type": "event",
+     "label": "东岸礁石（军议）",
+     "xy": [
+      1560,
+      420
+     ],
+     "phase": "campaign",
+     "date": "1824-09-15",
+     "fixed": true,
+     "fog": "open",
+     "event": "ev_o_council_reef",
+     "role": "council"
+    },
+    {
+     "id": "reef_fire",
+     "type": "camp",
+     "label": "骷髅礁前的篝火",
+     "xy": [
+      1580,
+      640
+     ],
+     "phase": "campaign",
+     "date": "1824-09-15",
+     "fog": "open",
+     "actions": [
+      "activity:rest",
+      "schedule:bond_story"
+     ]
+    },
+    {
+     "id": "skull_reef",
+     "type": "boss",
+     "label": "东岸·骷髅礁",
+     "xy": [
+      1720,
+      520
+     ],
+     "scene": "scene09",
+     "phase": "campaign",
+     "date": "1824-09-15",
+     "fixed": true,
+     "fog": "open"
+    }
+   ],
+   "links": [
+    {
+     "a": "wreck_shoal",
+     "b": "landing_camp",
+     "legs": 1
+    },
+    {
+     "a": "wreck_shoal",
+     "b": "tide_pools",
+     "legs": 2
+    },
+    {
+     "a": "landing_camp",
+     "b": "freshwater_spring",
+     "legs": 1
+    },
+    {
+     "a": "landing_camp",
+     "b": "friday_village",
+     "legs": 2
+    },
+    {
+     "a": "tide_pools",
+     "b": "granite_exchange",
+     "legs": 2
+    },
+    {
+     "a": "tide_pools",
+     "b": "west_cliffs",
+     "legs": 1
+    },
+    {
+     "a": "west_cliffs",
+     "b": "granite_exchange",
+     "legs": 1
+    },
+    {
+     "a": "freshwater_spring",
+     "b": "brick_kiln",
+     "legs": 1
+    },
+    {
+     "a": "brick_kiln",
+     "b": "granite_exchange",
+     "legs": 1
+    },
+    {
+     "a": "granite_exchange",
+     "b": "granite_workshop",
+     "legs": 1,
+     "rush": false
+    },
+    {
+     "a": "freshwater_spring",
+     "b": "water_forge",
+     "legs": 1
+    },
+    {
+     "a": "granite_exchange",
+     "b": "bat_cave",
+     "legs": 2
+    },
+    {
+     "a": "bat_cave",
+     "b": "lookout_n",
+     "legs": 2
+    },
+    {
+     "a": "bat_cave",
+     "b": "volcano",
+     "legs": 1
+    },
+    {
+     "a": "water_forge",
+     "b": "volcano",
+     "legs": 2
+    },
+    {
+     "a": "water_forge",
+     "b": "palm_grove",
+     "legs": 2
+    },
+    {
+     "a": "friday_village",
+     "b": "lookout_s",
+     "legs": 1
+    },
+    {
+     "a": "lookout_s",
+     "b": "lagoon",
+     "legs": 2
+    },
+    {
+     "a": "palm_grove",
+     "b": "lagoon",
+     "legs": 1
+    },
+    {
+     "a": "lookout_n",
+     "b": "whale_bay",
+     "legs": 2
+    },
+    {
+     "a": "whale_bay",
+     "b": "salt_flats",
+     "legs": 1
+    },
+    {
+     "a": "volcano",
+     "b": "salt_flats",
+     "legs": 2
+    },
+    {
+     "a": "lagoon",
+     "b": "reef_pass",
+     "legs": 1
+    },
+    {
+     "a": "salt_flats",
+     "b": "muster_east",
+     "legs": 1
+    },
+    {
+     "a": "reef_pass",
+     "b": "muster_east",
+     "legs": 2
+    },
+    {
+     "a": "palm_grove",
+     "b": "muster_east",
+     "legs": 3,
+     "supply": 1
+    },
+    {
+     "a": "muster_east",
+     "b": "east_rocks",
+     "legs": 1
+    },
+    {
+     "a": "east_rocks",
+     "b": "reef_fire",
+     "legs": 1
+    },
+    {
+     "a": "reef_fire",
+     "b": "skull_reef",
+     "legs": 1
+    }
+   ],
+   "_draft_days_max": 12,
+   "templates_needed": [],
+   "_marker_layout": "Authored geo retained; transaction markers separated for readable selection."
+  },
+  {
+   "chapter": "nautilus",
+   "view": "world",
+   "start": "new_elba_port",
+   "days_max": 19,
+   "stamps_need": 2,
+   "muster": "sargasso",
+   "boss": "thames",
+   "interlude": "minigame:ring",
+   "sets": [
+    {
+     "id": "south_atlantic",
+     "label": "南大西洋补给链",
+     "nodes": [
+      "juan_fernandez",
+      "tristan"
+     ],
+     "bonus": {
+      "pass_supply": 1
+     }
+    }
+   ],
+   "rivals": [
+    {
+     "id": "admiralty_squadron",
+     "label": "海军部猎潜分舰队",
+     "path": [
+      "madeira",
+      "gibraltar",
+      "madeira",
+      "canaries"
+     ],
+     "speed": 1,
+     "start": 0,
+     "meet": {
+      "battle": {
+       "template": "nautilus_deck_raid",
+       "level": 21
+      },
+      "toll": {
+       "gold": 2
+      }
+     },
+     "burns_depots": true
+    }
+   ],
+   "nodes": [
+    {
+     "id": "new_elba_port",
+     "type": "story",
+     "label": "新厄尔巴自由港外海",
+     "geo": [
+      -11850,
+      -3950
+     ],
+     "scene": "scene10",
+     "date": "1829-11-02",
+     "fixed": true,
+     "fog": "open",
+     "actions": [
+      "recruit:nemo",
+      "trade:fair"
+     ],
+     "xy": [
+      398,
+      1028
+     ]
+    },
+    {
+     "id": "lincoln_island",
+     "type": "slot",
+     "label": "林肯岛",
+     "geo": [
+      -15050,
+      -3495
+     ],
+     "fog": "hidden",
+     "slot": {
+      "pool": "nautilus",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 22
+     },
+     "xy": [
+      197,
+      974
+     ]
+    },
+    {
+     "id": "easter_island",
+     "type": "slot",
+     "label": "复活节岛",
+     "geo": [
+      -10935,
+      -2711
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "nautilus",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 22
+     },
+     "xy": [
+      483,
+      898
+     ]
+    },
+    {
+     "id": "juan_fernandez",
+     "type": "supply",
+     "label": "胡安·费尔南德斯群岛",
+     "geo": [
+      -7883,
+      -3364
+     ],
+     "role": "depot",
+     "fog": "type",
+     "actions": [
+      "build_depot",
+      "trade:fair"
+     ],
+     "xy": [
+      674,
+      964
+     ]
+    },
+    {
+     "id": "cape_horn",
+     "type": "slot",
+     "label": "合恩角",
+     "geo": [
+      -6727,
+      -5598
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "nautilus",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 22
+     },
+     "xy": [
+      704,
+      1157
+     ]
+    },
+    {
+     "id": "ice_barrier",
+     "type": "battle",
+     "label": "南极冰障",
+     "geo": [
+      -6000,
+      -6760
+     ],
+     "template": "ice_shelf",
+     "level": 21,
+     "weather": [
+      "snow",
+      "storm"
+     ],
+     "fog": "hidden",
+     "reward": {
+      "coins": {
+       "medal": 1,
+       "intel": 1
+      },
+      "metrics": {
+       "exploration": 10
+      }
+     },
+     "xy": [
+      805,
+      1281
+     ]
+    },
+    {
+     "id": "rio",
+     "type": "shop",
+     "label": "里约热内卢",
+     "geo": [
+      -4317,
+      -2291
+     ],
+     "fog": "type",
+     "actions": [
+      "activity:merchant",
+      "recruit:troop:line",
+      "recruit:troop:grenadier",
+      "recruit:troop:jager",
+      "recruit:troop:hussar",
+      "recruit:troop:artillery",
+      "recruit:nemo",
+      "recruit:morel",
+      "tile:festival",
+      "tile:gamble"
+     ],
+     "xy": [
+      860,
+      897
+     ]
+    },
+    {
+     "id": "tristan",
+     "type": "supply",
+     "label": "特里斯坦-达库尼亚",
+     "geo": [
+      -1228,
+      -3711
+     ],
+     "role": "depot",
+     "fog": "hidden",
+     "actions": [
+      "build_depot"
+     ],
+     "xy": [
+      1125,
+      1012
+     ]
+    },
+    {
+     "id": "cape_town",
+     "type": "supply",
+     "label": "开普敦",
+     "geo": [
+      1842,
+      -3392
+     ],
+     "role": "post",
+     "fog": "type",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit"
+     ],
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "gold": 1
+      }
+     },
+     "xy": [
+      1338,
+      978
+     ]
+    },
+    {
+     "id": "st_helena_view",
+     "type": "event",
+     "label": "圣赫勒拿（远望）",
+     "geo": [
+      -570,
+      -1597
+     ],
+     "fixed": true,
+     "fog": "open",
+     "event": "ev_o_st_helena_view",
+     "xy": [
+      1214,
+      885
+     ]
+    },
+    {
+     "id": "ascension",
+     "type": "supply",
+     "label": "阿森松岛",
+     "geo": [
+      -1441,
+      -793
+     ],
+     "role": "post",
+     "fog": "open",
+     "actions": [
+      "visit:town"
+     ],
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     },
+     "xy": [
+      1105,
+      776
+     ]
+    },
+    {
+     "id": "ceylon",
+     "type": "event",
+     "label": "锡兰·马纳尔珍珠场",
+     "geo": [
+      7980,
+      870
+     ],
+     "fixed": true,
+     "fog": "hidden",
+     "event": "ev_o_pearl_bank",
+     "xy": [
+      1732,
+      673
+     ]
+    },
+    {
+     "id": "falklands",
+     "type": "slot",
+     "label": "福克兰群岛",
+     "geo": [
+      -5950,
+      -5170
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "nautilus",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 22
+     },
+     "xy": [
+      846,
+      1090
+     ]
+    },
+    {
+     "id": "arabian_tunnel",
+     "type": "slot",
+     "label": "阿拉伯隧道",
+     "geo": [
+      3245,
+      3050
+     ],
+     "fog": "hidden",
+     "slot": {
+      "pool": "nautilus",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 22
+     },
+     "xy": [
+      1466,
+      563
+     ]
+    },
+    {
+     "id": "crete",
+     "type": "supply",
+     "label": "克里特岛",
+     "geo": [
+      2490,
+      3525
+     ],
+     "role": "project",
+     "fog": "type",
+     "actions": [
+      "fund",
+      "visit:backdoor",
+      "tile:diplomacy"
+     ],
+     "xy": [
+      1397,
+      424
+     ]
+    },
+    {
+     "id": "gibraltar",
+     "type": "slot",
+     "label": "直布罗陀海峡",
+     "geo": [
+      -535,
+      3614
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "nautilus",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 22
+     },
+     "xy": [
+      1263,
+      503
+     ]
+    },
+    {
+     "id": "noronha",
+     "type": "slot",
+     "label": "费尔南多-迪诺罗尼亚",
+     "geo": [
+      -3240,
+      -385
+     ],
+     "fog": "hidden",
+     "slot": {
+      "pool": "nautilus",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 22
+     },
+     "xy": [
+      948,
+      745
+     ]
+    },
+    {
+     "id": "trindade",
+     "type": "slot",
+     "label": "特林达德岛",
+     "geo": [
+      -2930,
+      -2050
+     ],
+     "fog": "hidden",
+     "slot": {
+      "pool": "nautilus",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 22
+     },
+     "xy": [
+      1015,
+      902
+     ]
+    },
+    {
+     "id": "canaries",
+     "type": "slot",
+     "label": "加那利群岛",
+     "geo": [
+      -1560,
+      2830
+     ],
+     "fog": "type",
+     "slot": {
+      "pool": "nautilus",
+      "kinds": {
+       "event": 6,
+       "supply": 2,
+       "camp": 1,
+       "shop": 1
+      },
+      "level": 22
+     },
+     "xy": [
+      1143,
+      626
+     ]
+    },
+    {
+     "id": "madeira",
+     "type": "supply",
+     "label": "马德拉岛",
+     "geo": [
+      -1690,
+      3265
+     ],
+     "role": "post",
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "trade:fair"
+     ],
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "intel": 1
+      }
+     },
+     "xy": [
+      984,
+      578
+     ]
+    },
+    {
+     "id": "vigo",
+     "type": "elite",
+     "label": "维哥湾",
+     "geo": [
+      -872,
+      4226
+     ],
+     "scene": "scene11",
+     "date": "1831-04-01",
+     "fixed": true,
+     "fog": "open",
+     "xy": [
+      1119,
+      295
+     ]
+    },
+    {
+     "id": "lofoten",
+     "type": "supply",
+     "label": "罗弗敦·大漩涡",
+     "geo": [
+      1280,
+      6780
+     ],
+     "role": "project",
+     "fog": "hidden",
+     "actions": [
+      "explore"
+     ],
+     "xy": [
+      1287,
+      182
+     ]
+    },
+    {
+     "id": "atlantis",
+     "type": "battle",
+     "label": "亚特兰蒂斯",
+     "geo": [
+      -2000,
+      3500
+     ],
+     "scene": "scene12",
+     "date": "1834-12-01",
+     "fixed": true,
+     "fog": "type",
+     "xy": [
+      1111,
+      474
+     ]
+    },
+    {
+     "id": "deep_trench",
+     "type": "supply",
+     "label": "大西洋海沟",
+     "geo": [
+      -3600,
+      3100
+     ],
+     "role": "project",
+     "fog": "type",
+     "actions": [
+      "explore"
+     ],
+     "xy": [
+      868,
+      476
+     ]
+    },
+    {
+     "id": "sargasso",
+     "type": "camp",
+     "label": "马尾藻海（藏船）",
+     "geo": [
+      -5500,
+      2900
+     ],
+     "role": "muster",
+     "fog": "type",
+     "requires": {
+      "scene_done": "scene12"
+     },
+     "actions": [
+      "activity:rest",
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "schedule:diplomacy",
+      "schedule:festival",
+      "schedule:smuggle"
+     ],
+     "phase": "accumulate",
+     "xy": [
+      823,
+      624
+     ]
+    },
+    {
+     "id": "bermuda",
+     "type": "event",
+     "label": "百慕大外海（军议）",
+     "geo": [
+      -6470,
+      3230
+     ],
+     "phase": "campaign",
+     "fixed": true,
+     "fog": "open",
+     "event": "ev_o_council_bermuda",
+     "role": "council",
+     "xy": [
+      719,
+      433
+     ]
+    },
+    {
+     "id": "bahamas_squid",
+     "type": "elite",
+     "label": "巴哈马浅海",
+     "geo": [
+      -7700,
+      2600
+     ],
+     "phase": "campaign",
+     "template": "squid_platform",
+     "level": 23,
+     "weather": [
+      "clear"
+     ],
+     "date": "1835-04-20",
+     "fog": "open",
+     "reward": {
+      "coins": {
+       "medal": 2
+      },
+      "props": [
+       "prop_imperial_decree"
+      ]
+     },
+     "xy": [
+      667,
+      579
+     ]
+    },
+    {
+     "id": "azores",
+     "type": "camp",
+     "label": "亚速尔群岛",
+     "geo": [
+      -2567,
+      3774
+     ],
+     "phase": "campaign",
+     "fog": "open",
+     "actions": [
+      "activity:rest",
+      "schedule:bond_story"
+     ],
+     "xy": [
+      989,
+      379
+     ]
+    },
+    {
+     "id": "thames",
+     "type": "boss",
+     "label": "泰晤士河口·格林威治",
+     "geo": [
+      -1,
+      5148
+     ],
+     "scene": "finale",
+     "phase": "campaign",
+     "date": "1835-11-09",
+     "fixed": true,
+     "fog": "open",
+     "xy": [
+      1269,
+      336
+     ]
+    }
+   ],
+   "links": [
+    {
+     "a": "new_elba_port",
+     "b": "lincoln_island",
+     "legs": 2
+    },
+    {
+     "a": "new_elba_port",
+     "b": "easter_island",
+     "legs": 2
+    },
+    {
+     "a": "easter_island",
+     "b": "juan_fernandez",
+     "legs": 3
+    },
+    {
+     "a": "lincoln_island",
+     "b": "cape_horn",
+     "voyage_days": 2
+    },
+    {
+     "a": "juan_fernandez",
+     "b": "cape_horn",
+     "legs": 3
+    },
+    {
+     "a": "cape_horn",
+     "b": "ice_barrier",
+     "voyage_days": 2
+    },
+    {
+     "a": "ice_barrier",
+     "b": "tristan",
+     "voyage_days": 2
+    },
+    {
+     "a": "cape_horn",
+     "b": "rio",
+     "voyage_days": 2
+    },
+    {
+     "a": "cape_horn",
+     "b": "falklands",
+     "legs": 1
+    },
+    {
+     "a": "falklands",
+     "b": "tristan",
+     "voyage_days": 2
+    },
+    {
+     "a": "falklands",
+     "b": "rio",
+     "legs": 4
+    },
+    {
+     "a": "tristan",
+     "b": "cape_town",
+     "legs": 3
+    },
+    {
+     "a": "rio",
+     "b": "trindade",
+     "legs": 2
+    },
+    {
+     "a": "trindade",
+     "b": "st_helena_view",
+     "legs": 2
+    },
+    {
+     "a": "tristan",
+     "b": "st_helena_view",
+     "legs": 3
+    },
+    {
+     "a": "cape_town",
+     "b": "st_helena_view",
+     "legs": 3
+    },
+    {
+     "a": "st_helena_view",
+     "b": "ascension",
+     "legs": 2
+    },
+    {
+     "a": "cape_town",
+     "b": "ceylon",
+     "voyage_days": 3
+    },
+    {
+     "a": "ceylon",
+     "b": "arabian_tunnel",
+     "voyage_days": 2
+    },
+    {
+     "a": "arabian_tunnel",
+     "b": "crete",
+     "legs": 2
+    },
+    {
+     "a": "crete",
+     "b": "gibraltar",
+     "voyage_days": 2
+    },
+    {
+     "a": "ascension",
+     "b": "canaries",
+     "legs": 4
+    },
+    {
+     "a": "ascension",
+     "b": "madeira",
+     "voyage_days": 2
+    },
+    {
+     "a": "canaries",
+     "b": "madeira",
+     "legs": 1
+    },
+    {
+     "a": "madeira",
+     "b": "gibraltar",
+     "legs": 2
+    },
+    {
+     "a": "madeira",
+     "b": "vigo",
+     "legs": 3
+    },
+    {
+     "a": "gibraltar",
+     "b": "vigo",
+     "legs": 2
+    },
+    {
+     "a": "vigo",
+     "b": "lofoten",
+     "voyage_days": 2
+    },
+    {
+     "a": "rio",
+     "b": "noronha",
+     "legs": 3
+    },
+    {
+     "a": "noronha",
+     "b": "ascension",
+     "legs": 3
+    },
+    {
+     "a": "madeira",
+     "b": "atlantis",
+     "legs": 2
+    },
+    {
+     "a": "canaries",
+     "b": "atlantis",
+     "legs": 3
+    },
+    {
+     "a": "atlantis",
+     "b": "deep_trench",
+     "legs": 2
+    },
+    {
+     "a": "deep_trench",
+     "b": "sargasso",
+     "legs": 3
+    },
+    {
+     "a": "atlantis",
+     "b": "sargasso",
+     "voyage_days": 2
+    },
+    {
+     "a": "sargasso",
+     "b": "bermuda",
+     "legs": 2
+    },
+    {
+     "a": "bermuda",
+     "b": "bahamas_squid",
+     "legs": 2
+    },
+    {
+     "a": "bahamas_squid",
+     "b": "azores",
+     "voyage_days": 2
+    },
+    {
+     "a": "bermuda",
+     "b": "azores",
+     "voyage_days": 2
+    },
+    {
+     "a": "azores",
+     "b": "thames",
+     "voyage_days": 2
+    }
+   ],
+   "_draft_days_max": 16,
+   "templates_needed": [],
+   "_marker_layout": "Authored geo retained; transaction markers separated for readable selection."
+  }
+ ]
+}

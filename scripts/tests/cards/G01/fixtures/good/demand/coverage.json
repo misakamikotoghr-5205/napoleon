@@ -1,0 +1,844 @@
+{
+  "_meta": {
+    "owner": "K07",
+    "schema": 1
+  },
+  "cards": [
+    {
+      "id": "dm.1938.money.t0",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "money",
+      "tier": 0,
+      "resolve": {
+        "money": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.money.t2",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "money",
+      "tier": 2,
+      "resolve": {
+        "money": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.money.t3",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "money",
+      "tier": 3,
+      "resolve": {
+        "money": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.goods.t1",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "goods",
+      "tier": 1,
+      "resolve": {
+        "goods": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.goods.t2",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "goods",
+      "tier": 2,
+      "resolve": {
+        "goods": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.goods.t3",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "goods",
+      "tier": 3,
+      "resolve": {
+        "goods": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.people.t0",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "people",
+      "tier": 0,
+      "resolve": {
+        "people": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.people.t1",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "people",
+      "tier": 1,
+      "resolve": {
+        "people": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.people.t3",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "people",
+      "tier": 3,
+      "resolve": {
+        "people": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.info.t0",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "info",
+      "tier": 0,
+      "resolve": {
+        "info": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.info.t1",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "info",
+      "tier": 1,
+      "resolve": {
+        "info": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.info.t2",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "info",
+      "tier": 2,
+      "resolve": {
+        "info": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1939.money.t0",
+      "type": "demand",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "kind": "money",
+      "tier": 0,
+      "resolve": {
+        "money": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1939.money.t1",
+      "type": "demand",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "kind": "money",
+      "tier": 1,
+      "resolve": {
+        "money": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1939.money.t2",
+      "type": "demand",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "kind": "money",
+      "tier": 2,
+      "resolve": {
+        "money": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1939.money.t3",
+      "type": "demand",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "kind": "money",
+      "tier": 3,
+      "resolve": {
+        "money": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1939.goods.t0",
+      "type": "demand",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "kind": "goods",
+      "tier": 0,
+      "resolve": {
+        "goods": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1939.goods.t1",
+      "type": "demand",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "kind": "goods",
+      "tier": 1,
+      "resolve": {
+        "goods": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1939.goods.t2",
+      "type": "demand",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "kind": "goods",
+      "tier": 2,
+      "resolve": {
+        "goods": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1939.goods.t3",
+      "type": "demand",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "kind": "goods",
+      "tier": 3,
+      "resolve": {
+        "goods": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1939.people.t0",
+      "type": "demand",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "kind": "people",
+      "tier": 0,
+      "resolve": {
+        "people": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1939.people.t1",
+      "type": "demand",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "kind": "people",
+      "tier": 1,
+      "resolve": {
+        "people": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1939.people.t2",
+      "type": "demand",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "kind": "people",
+      "tier": 2,
+      "resolve": {
+        "people": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1939.people.t3",
+      "type": "demand",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "kind": "people",
+      "tier": 3,
+      "resolve": {
+        "people": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1939.info.t0",
+      "type": "demand",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "kind": "info",
+      "tier": 0,
+      "resolve": {
+        "info": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1939.info.t1",
+      "type": "demand",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "kind": "info",
+      "tier": 1,
+      "resolve": {
+        "info": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1939.info.t2",
+      "type": "demand",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "kind": "info",
+      "tier": 2,
+      "resolve": {
+        "info": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1939.info.t3",
+      "type": "demand",
+      "era": [
+        "1939"
+      ],
+      "weight": 10,
+      "kind": "info",
+      "tier": 3,
+      "resolve": {
+        "info": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.money.t0",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "money",
+      "tier": 0,
+      "resolve": {
+        "money": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.money.t1",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "money",
+      "tier": 1,
+      "resolve": {
+        "money": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.money.t2",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "money",
+      "tier": 2,
+      "resolve": {
+        "money": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.money.t3",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "money",
+      "tier": 3,
+      "resolve": {
+        "money": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.goods.t0",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "goods",
+      "tier": 0,
+      "resolve": {
+        "goods": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.goods.t1",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "goods",
+      "tier": 1,
+      "resolve": {
+        "goods": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.goods.t2",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "goods",
+      "tier": 2,
+      "resolve": {
+        "goods": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.goods.t3",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "goods",
+      "tier": 3,
+      "resolve": {
+        "goods": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.people.t0",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "people",
+      "tier": 0,
+      "resolve": {
+        "people": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.people.t1",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "people",
+      "tier": 1,
+      "resolve": {
+        "people": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.people.t2",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "people",
+      "tier": 2,
+      "resolve": {
+        "people": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.people.t3",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "people",
+      "tier": 3,
+      "resolve": {
+        "people": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.info.t0",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "info",
+      "tier": 0,
+      "resolve": {
+        "info": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.info.t1",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "info",
+      "tier": 1,
+      "resolve": {
+        "info": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.info.t2",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "info",
+      "tier": 2,
+      "resolve": {
+        "info": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.info.t3",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "info",
+      "tier": 3,
+      "resolve": {
+        "info": {}
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

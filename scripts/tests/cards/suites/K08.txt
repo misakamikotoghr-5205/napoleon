@@ -1,0 +1,4 @@
+# K08 消息牌、档案簿（docs/handoff_cards/K08_data-news-dossier.md）
+K08_validate|res://scripts/cards/core/validate_main.gd|120|--only=data/cards/news/**,data/cards/dossier/**,data/cards/tags/K08.json,data/cards/ui_keys/K08.json --name=K08_validate
+K08_data|res://scripts/tests/cards/K08/test_data.gd|120|
+K08_guide_support|res://scripts/tests/cards/K08/test_guide_support.gd|120|

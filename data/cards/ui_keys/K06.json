@@ -1,0 +1,119 @@
+{
+  "_meta": {
+    "owner": "K06",
+    "schema": 1
+  },
+  "keys": {
+    "k06.reason.rice": {
+      "brief": "买米"
+    },
+    "k06.reason.coal": {
+      "brief": "买煤"
+    },
+    "k06.reason.doctor": {
+      "brief": "看病"
+    },
+    "k06.reason.school": {
+      "brief": "束脩"
+    },
+    "k06.reason.wedding": {
+      "brief": "喜帖随礼"
+    },
+    "k06.reason.funeral": {
+      "brief": "丧事"
+    },
+    "k06.reason.new_year": {
+      "brief": "过年置备"
+    },
+    "k06.reason.rent": {
+      "brief": "房租"
+    },
+    "k06.reason.repair": {
+      "brief": "修屋或雨里损失"
+    },
+    "k06.reason.debt": {
+      "brief": "还债"
+    },
+    "k06.reason.medicine": {
+      "brief": "买药"
+    },
+    "k06.reason.lamp": {
+      "brief": "灯油"
+    },
+    "k06.reason.census": {
+      "brief": "户口纸墨"
+    },
+    "k06.reason.door_slip": {
+      "brief": "门上那张纸"
+    },
+    "k06.reason.levy": {
+      "brief": "新名目的摊派"
+    },
+    "k06.reason.register": {
+      "brief": "到衙门报备"
+    },
+    "k06.reason.gift": {
+      "brief": "给新官的礼"
+    },
+    "k06.reason.signboard": {
+      "brief": "换门脸"
+    },
+    "k06.reason.bribe": {
+      "brief": "城门塞一笔"
+    },
+    "k06.reason.papers": {
+      "brief": "办一张纸"
+    },
+    "k06.reason.rice_sell": {
+      "brief": "米出手或损耗"
+    },
+    "k06.reason.rain_loss": {
+      "brief": "春雨里损失的货"
+    },
+    "k06.reason.hush": {
+      "brief": "把话压下去"
+    },
+    "k06.reason.buyer": {
+      "brief": "旧主顾的买卖"
+    },
+    "k06.reason.crate": {
+      "brief": "那箱文书进出的钱"
+    },
+    "k06.reason.night_road": {
+      "brief": "卖掉夜路路条"
+    },
+    "k06.reason.curfew": {
+      "brief": "留门做的一笔"
+    },
+    "k06.notice.wang_regime": {
+      "brief": "告示：汪伪国民政府成立，伪维新政府并入"
+    },
+    "k06.notice.new_official": {
+      "brief": "告示：新官到任"
+    },
+    "k06.notice.levy_rename": {
+      "brief": "告示：摊派换了名目"
+    },
+    "k06.notice.census_ok": {
+      "brief": "户口清点过了"
+    },
+    "k06.notice.census_fail": {
+      "brief": "户口没清成"
+    },
+    "k06.notice.papers": {
+      "brief": "纸办过了"
+    },
+    "k06.notice.signboard": {
+      "brief": "门脸换过了"
+    },
+    "k06.notice.search": {
+      "brief": "查铺"
+    },
+    "k06.notice.rice": {
+      "brief": "米价告示"
+    },
+    "k06.notice.crate": {
+      "brief": "收下或转手那箱文书"
+    }
+  }
+}

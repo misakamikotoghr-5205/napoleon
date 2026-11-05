@@ -1,0 +1,1284 @@
+{
+  "npcs": {
+    "brother": {
+      "name": "沈如松",
+      "label": "哥哥",
+      "age": 19,
+      "identity": "德厚当少东家",
+      "look": "短发，藏青长衫，左眉一道旧疤。",
+      "personality": "稳重、护妹妹、话不多，爱讲规矩",
+      "secret": "之后只通过家书出现",
+      "portrait": "art/portraits/brother.png",
+      "color": "#2f4670",
+      "voice_pitch": 0.9,
+      "mbti": "ISTJ",
+      "ennea": [
+        1,
+        9
+      ],
+      "instincts": [
+        0.6,
+        0.75,
+        0.55
+      ],
+      "traits": {
+        "openness": 0.45,
+        "conscientiousness": 0.85,
+        "sociability": 0.35,
+        "compassion": 0.75,
+        "emotional_reactivity": 0.3,
+        "honesty": 0.85,
+        "assertiveness": 0.6,
+        "impulsivity": 0.2,
+        "patience": 0.75,
+        "risk_tolerance": 0.55,
+        "attachment_security": 0.6,
+        "adaptability": 0.55
+      },
+      "values": {
+        "autonomy": 0.5,
+        "fairness": 0.8,
+        "loyalty": 0.95,
+        "achievement": 0.4,
+        "security": 0.6,
+        "benevolence": 0.75,
+        "order": 0.85,
+        "novelty": 0.2
+      },
+      "cash": 20,
+      "sched": {
+        "default": [
+          "铺子",
+          "铺子",
+          "铺子",
+          "铺子",
+          "铺子",
+          "铺子"
+        ]
+      },
+      "lines": {
+        "accept_happy": "好，就按这个价。",
+        "accept": "嗯，就这么办。",
+        "counter": "规矩是规矩，%d 不能再少了。",
+        "counter_sell": "这个价最多 %d，不能再高了。",
+        "plead": "妹妹，你看着办，我不多说。",
+        "leave": "罢了，按规矩来。"
+      }
+    },
+    "chen": {
+      "name": "陈文庭",
+      "label": "陈叔叔",
+      "age": 50,
+      "identity": "济生堂（具体职业不详），父母多年好友",
+      "look": "灰白头发，圆眼镜，深褐长衫。",
+      "personality": "和气、谨慎，说话留半句",
+      "secret": "年轻时做过邮电局报务员；他为什么有电台、替谁做事，是长线悬念",
+      "portrait": "art/portraits/chen.png",
+      "color": "#5a3f2a",
+      "voice_pitch": 0.8,
+      "mbti": "INFJ",
+      "ennea": [
+        5,
+        6
+      ],
+      "instincts": [
+        0.4,
+        0.65,
+        0.6
+      ],
+      "traits": {
+        "openness": 0.7,
+        "conscientiousness": 0.8,
+        "sociability": 0.45,
+        "compassion": 0.65,
+        "emotional_reactivity": 0.25,
+        "honesty": 0.6,
+        "assertiveness": 0.4,
+        "impulsivity": 0.15,
+        "patience": 0.85,
+        "risk_tolerance": 0.6,
+        "attachment_security": 0.6,
+        "adaptability": 0.7
+      },
+      "values": {
+        "autonomy": 0.6,
+        "fairness": 0.7,
+        "loyalty": 0.8,
+        "achievement": 0.35,
+        "security": 0.5,
+        "benevolence": 0.7,
+        "order": 0.6,
+        "novelty": 0.4
+      },
+      "cash": 300,
+      "sched": {
+        "default": [
+          "济生堂",
+          "济生堂",
+          "济生堂",
+          "济生堂",
+          "济生堂",
+          "济生堂"
+        ]
+      },
+      "lines": {
+        "accept_happy": "好，好。这样就很好。",
+        "accept": "嗯，可以。",
+        "counter": "这个价，我看还可以再想想，%d。",
+        "counter_sell": "最多……%d，再往上我不能应了。",
+        "plead": "我也是没法子，求你通融一下。",
+        "leave": "也好，你自己再想想。"
+      },
+      "roles": [
+        "中间人"
+      ]
+    },
+    "xiaoding": {
+      "name": "小丁",
+      "label": "小丁",
+      "age": 17,
+      "identity": "孙家的伙夫",
+      "look": "瘦高，灰布短褂，围裙上油渍斑斑，颈上搭着毛巾。",
+      "personality": "胆小、老实、说话结巴",
+      "secret": "米是从孙家库房偷的，家里老娘病了",
+      "portrait": "art/portraits/xiaoding.png",
+      "color": "#8a6448",
+      "voice_pitch": 1.35,
+      "mbti": "ISFP",
+      "ennea": [
+        6,
+        5
+      ],
+      "instincts": [
+        0.15,
+        0.7,
+        0.25
+      ],
+      "traits": {
+        "openness": 0.35,
+        "conscientiousness": 0.55,
+        "sociability": 0.3,
+        "compassion": 0.7,
+        "emotional_reactivity": 0.7,
+        "honesty": 0.7,
+        "assertiveness": 0.15,
+        "impulsivity": 0.35,
+        "patience": 0.35,
+        "risk_tolerance": 0.25,
+        "attachment_security": 0.35,
+        "adaptability": 0.4
+      },
+      "values": {
+        "autonomy": 0.3,
+        "fairness": 0.6,
+        "loyalty": 0.8,
+        "achievement": 0.25,
+        "security": 0.85,
+        "benevolence": 0.7,
+        "order": 0.5,
+        "novelty": 0.15
+      },
+      "needs": {
+        "resources": 0.85,
+        "safety": 0.6
+      },
+      "emotions": {
+        "fear": 0.45
+      },
+      "cash": 0,
+      "sched": {
+        "default": [
+          "孙府厨房",
+          "孙府厨房",
+          "孙府厨房",
+          "孙府厨房",
+          "家",
+          "家"
+        ],
+        "1": [
+          "孙府厨房",
+          "桥头街",
+          "孙府厨房",
+          "济生堂",
+          "家",
+          "家"
+        ]
+      },
+      "lines": {
+        "accept_happy": "够、够了……多谢小掌柜！",
+        "accept": "那、那就这样吧……",
+        "counter": "能、能不能……%d？",
+        "counter_sell": "最、最多 %d……",
+        "plead": "我娘……我娘还躺着呢……",
+        "leave": "……那、那我再想想办法。"
+      }
+    },
+    "zhang": {
+      "name": "张慧娟",
+      "label": "张护士",
+      "age": 26,
+      "identity": "县城教会医院护士",
+      "look": "白帽已经摘了，藏蓝旗袍外面罩着发灰的白衣，提一只篮子。",
+      "personality": "干练、说话快，不轻易示弱",
+      "secret": "医院被征用，药品是拖欠的工钱；她想用钱带弟弟去上海",
+      "portrait": "art/portraits/zhang.png",
+      "color": "#2f4670",
+      "voice_pitch": 1.2,
+      "mbti": "ESTJ",
+      "ennea": [
+        3,
+        2
+      ],
+      "instincts": [
+        0.75,
+        0.6,
+        0.55
+      ],
+      "traits": {
+        "openness": 0.55,
+        "conscientiousness": 0.8,
+        "sociability": 0.55,
+        "compassion": 0.6,
+        "emotional_reactivity": 0.4,
+        "honesty": 0.75,
+        "assertiveness": 0.75,
+        "impulsivity": 0.3,
+        "patience": 0.4,
+        "risk_tolerance": 0.55,
+        "attachment_security": 0.5,
+        "adaptability": 0.75
+      },
+      "values": {
+        "autonomy": 0.75,
+        "fairness": 0.7,
+        "loyalty": 0.7,
+        "achievement": 0.65,
+        "security": 0.7,
+        "benevolence": 0.6,
+        "order": 0.6,
+        "novelty": 0.5
+      },
+      "needs": {
+        "resources": 0.7,
+        "safety": 0.6
+      },
+      "goals": {
+        "avoid_loss": 0.5,
+        "fulfill_duty": 0.6
+      },
+      "cash": 20,
+      "sched": {
+        "default": [
+          "码头",
+          "码头",
+          "码头",
+          "码头",
+          "码头",
+          "码头"
+        ],
+        "1": [
+          "县城路上",
+          "桥头街",
+          "茶馆",
+          "茶馆",
+          "码头",
+          "客栈"
+        ]
+      },
+      "lines": {
+        "accept_happy": "爽快。",
+        "accept": "行吧，我赶时间。",
+        "counter": "%d，不能再少了。",
+        "counter_sell": "%d。别磨蹭，我赶时间。",
+        "plead": "……我不爱求人，可这回是真没办法。",
+        "leave": "算了，我去别家。"
+      }
+    },
+    "wangshan": {
+      "name": "王山",
+      "label": "王山（过路的）",
+      "age": 22,
+      "identity": "便衣青年，自称“过路的”",
+      "look": "旧蓑衣，布鞋下露出绑腿，左手缠着渗血的纱布。",
+      "personality": "少言、站姿笔直、眼神警觉",
+      "secret": "游击队的人，本稿不说明哪一方",
+      "portrait": "art/portraits/wangshan.png",
+      "color": "#4a6a3a",
+      "voice_pitch": 0.7,
+      "mbti": "ISTP",
+      "ennea": [
+        8,
+        9
+      ],
+      "instincts": [
+        0.7,
+        0.55,
+        0.8
+      ],
+      "traits": {
+        "openness": 0.4,
+        "conscientiousness": 0.75,
+        "sociability": 0.2,
+        "compassion": 0.55,
+        "emotional_reactivity": 0.3,
+        "honesty": 0.65,
+        "assertiveness": 0.7,
+        "impulsivity": 0.25,
+        "patience": 0.55,
+        "risk_tolerance": 0.8,
+        "attachment_security": 0.55,
+        "adaptability": 0.7
+      },
+      "values": {
+        "autonomy": 0.5,
+        "fairness": 0.7,
+        "loyalty": 0.95,
+        "achievement": 0.4,
+        "security": 0.3,
+        "benevolence": 0.6,
+        "order": 0.6,
+        "novelty": 0.3
+      },
+      "cash": 200,
+      "sched": {
+        "default": [
+          "镇外",
+          "镇外",
+          "镇外",
+          "镇外",
+          "镇外",
+          "镇外"
+        ],
+        "1": [
+          "镇外",
+          "镇外",
+          "镇外",
+          "桥头街",
+          "镇外",
+          "镇外"
+        ]
+      },
+      "lines": {
+        "accept_happy": "成。",
+        "accept": "行。",
+        "counter": "%d。",
+        "counter_sell": "%d。",
+        "plead": "……我得拿药。",
+        "leave": "不卖就算了。"
+      },
+      "roles": [
+        "双面",
+        "黑市"
+      ]
+    },
+    "li": {
+      "name": "李敬之",
+      "label": "李敬之",
+      "age": 18,
+      "identity": "县立中学学生",
+      "look": "学生装，学生帽压得很低，裤腿短了一截。",
+      "personality": "热血、自尊心强、说话带书卷气",
+      "secret": "在给秘密抗敌小报写稿",
+      "portrait": "art/portraits/li.png",
+      "color": "#2b3138",
+      "voice_pitch": 1.2,
+      "mbti": "ENFP",
+      "ennea": [
+        4,
+        3
+      ],
+      "instincts": [
+        0.6,
+        0.7,
+        0.75
+      ],
+      "traits": {
+        "openness": 0.9,
+        "conscientiousness": 0.5,
+        "sociability": 0.6,
+        "compassion": 0.7,
+        "emotional_reactivity": 0.7,
+        "honesty": 0.7,
+        "assertiveness": 0.6,
+        "impulsivity": 0.6,
+        "patience": 0.35,
+        "risk_tolerance": 0.75,
+        "attachment_security": 0.45,
+        "adaptability": 0.6
+      },
+      "values": {
+        "autonomy": 0.85,
+        "fairness": 0.9,
+        "loyalty": 0.7,
+        "achievement": 0.7,
+        "security": 0.3,
+        "benevolence": 0.75,
+        "order": 0.3,
+        "novelty": 0.8
+      },
+      "cash": 5,
+      "sched": {
+        "default": [
+          "县立中学",
+          "县立中学",
+          "县立中学",
+          "县立中学",
+          "家",
+          "家"
+        ],
+        "1": [
+          "县立中学",
+          "县立中学",
+          "县立中学",
+          "家",
+          "桥头街",
+          "家"
+        ]
+      },
+      "lines": {
+        "accept_happy": "……谢谢掌柜。",
+        "accept": "好吧，够买几刀纸了。",
+        "counter": "%d 吧，笔墨也贵。",
+        "counter_sell": "最多 %d。这个价，我还是觉得……算了。",
+        "plead": "掌柜的，稿费还没到手，您通融通融。",
+        "leave": "……打扰了。"
+      }
+    },
+    "linsao": {
+      "name": "林嫂",
+      "label": "林嫂",
+      "age": 24,
+      "identity": "船工的妻子，怀孕八个月",
+      "look": "挽着发髻，素色大襟衣，一手扶着腰，怀孕八个月了。",
+      "personality": "温和、爱笑、有点爱面子",
+      "secret": "丈夫去上海跑船三个月没汇钱回来",
+      "portrait": "art/portraits/linsao.png",
+      "color": "#8a6448",
+      "voice_pitch": 1.1,
+      "mbti": "ESFJ",
+      "ennea": [
+        2,
+        3
+      ],
+      "instincts": [
+        0.35,
+        0.8,
+        0.25
+      ],
+      "traits": {
+        "openness": 0.45,
+        "conscientiousness": 0.65,
+        "sociability": 0.75,
+        "compassion": 0.8,
+        "emotional_reactivity": 0.5,
+        "honesty": 0.75,
+        "assertiveness": 0.35,
+        "impulsivity": 0.3,
+        "patience": 0.6,
+        "risk_tolerance": 0.25,
+        "attachment_security": 0.6,
+        "adaptability": 0.55
+      },
+      "values": {
+        "autonomy": 0.35,
+        "fairness": 0.6,
+        "loyalty": 0.85,
+        "achievement": 0.4,
+        "security": 0.8,
+        "benevolence": 0.8,
+        "order": 0.65,
+        "novelty": 0.25
+      },
+      "needs": {
+        "resources": 0.6,
+        "status": 0.5
+      },
+      "emotions": {
+        "hope": 0.6
+      },
+      "cash": 30,
+      "sched": {
+        "default": [
+          "家",
+          "家",
+          "家",
+          "家",
+          "家",
+          "家"
+        ],
+        "2": [
+          "家",
+          "桥头街",
+          "家",
+          "银楼",
+          "家",
+          "家"
+        ]
+      },
+      "lines": {
+        "accept_happy": "哎呦，你这孩子，这么爽快。",
+        "accept": "唉，也行，先顾眼前。",
+        "counter": "如花，%d 行不行？婶子也难。",
+        "counter_sell": "%d，再多婶子可不敢要了。",
+        "plead": "孩子他爹的钱一到我就来赎，真的。",
+        "leave": "那……婶子再想想别的法子。"
+      }
+    },
+    "zhouma": {
+      "name": "周妈",
+      "label": "周妈",
+      "age": 45,
+      "identity": "桥头茶馆的厨娘",
+      "look": "白头巾，红脸膛，袖子卷到胳膊肘。",
+      "personality": "嘴碎、热心、爱打听",
+      "secret": "镇上的消息中心",
+      "portrait": "art/portraits/zhouma.png",
+      "color": "#8a6448",
+      "voice_pitch": 1.0,
+      "mbti": "ESFP",
+      "ennea": [
+        2,
+        3
+      ],
+      "instincts": [
+        0.6,
+        0.7,
+        0.4
+      ],
+      "traits": {
+        "openness": 0.6,
+        "conscientiousness": 0.5,
+        "sociability": 0.95,
+        "compassion": 0.7,
+        "emotional_reactivity": 0.6,
+        "honesty": 0.6,
+        "assertiveness": 0.6,
+        "impulsivity": 0.6,
+        "patience": 0.4,
+        "risk_tolerance": 0.4,
+        "attachment_security": 0.7,
+        "adaptability": 0.7
+      },
+      "values": {
+        "autonomy": 0.45,
+        "fairness": 0.6,
+        "loyalty": 0.6,
+        "achievement": 0.4,
+        "security": 0.6,
+        "benevolence": 0.7,
+        "order": 0.45,
+        "novelty": 0.7
+      },
+      "cash": 80,
+      "sched": {
+        "default": [
+          "茶馆",
+          "茶馆",
+          "茶馆",
+          "茶馆",
+          "茶馆",
+          "家"
+        ],
+        "2": [
+          "茶馆",
+          "桥头街",
+          "茶馆",
+          "茶馆",
+          "茶馆",
+          "家"
+        ]
+      },
+      "lines": {
+        "accept_happy": "这价公道！",
+        "accept": "得，算你会做生意。",
+        "counter": "%d 吧，你哪天缺米，我给你留着。",
+        "counter_sell": "%d，再多我回米行排队去。",
+        "plead": "哎哟，好妹子，你就通融通融，这一片谁不知道我们家的难处。",
+        "leave": "这么贵？我还是回米行排队吧。"
+      },
+      "roles": [
+        "中间人",
+        "口舌"
+      ]
+    },
+    "zhao": {
+      "name": "赵老三",
+      "label": "赵老三",
+      "age": 40,
+      "identity": "佃农",
+      "look": "黑瘦，短褂上打着补丁，腰里别一杆烟杆。",
+      "personality": "沉默、硬气",
+      "secret": "儿子被伪军抓了壮丁，要钱赎人",
+      "portrait": "art/portraits/zhao.png",
+      "color": "#5a3f2a",
+      "voice_pitch": 0.65,
+      "mbti": "ISTJ",
+      "ennea": [
+        8,
+        9
+      ],
+      "instincts": [
+        0.6,
+        0.6,
+        0.35
+      ],
+      "traits": {
+        "openness": 0.25,
+        "conscientiousness": 0.75,
+        "sociability": 0.2,
+        "compassion": 0.6,
+        "emotional_reactivity": 0.35,
+        "honesty": 0.85,
+        "assertiveness": 0.6,
+        "impulsivity": 0.2,
+        "patience": 0.6,
+        "risk_tolerance": 0.35,
+        "attachment_security": 0.5,
+        "adaptability": 0.35
+      },
+      "values": {
+        "autonomy": 0.65,
+        "fairness": 0.8,
+        "loyalty": 0.9,
+        "achievement": 0.3,
+        "security": 0.75,
+        "benevolence": 0.55,
+        "order": 0.6,
+        "novelty": 0.1
+      },
+      "needs": {
+        "resources": 0.95,
+        "safety": 0.7
+      },
+      "emotions": {
+        "fear": 0.4,
+        "sadness": 0.5
+      },
+      "goals": {
+        "fulfill_duty": 0.95
+      },
+      "cash": 0,
+      "sched": {
+        "default": [
+          "田里",
+          "田里",
+          "家",
+          "田里",
+          "家",
+          "家"
+        ],
+        "2": [
+          "家",
+          "桥头街",
+          "孙府",
+          "保安队",
+          "桥头街",
+          "家"
+        ]
+      },
+      "lines": {
+        "accept_happy": "……行。",
+        "accept": "……成。",
+        "counter": "%d。少一个也不行。",
+        "counter_sell": "%d。",
+        "plead": "我儿子还在他们手里。",
+        "leave": "……不当了。"
+      }
+    },
+    "sunyoung": {
+      "name": "孙富贵",
+      "label": "孙少爷",
+      "age": 22,
+      "identity": "镇上大地主孙家的独子",
+      "look": "油头，西装配一条长围巾，手里一只金怀表开了又合。",
+      "personality": "体面",
+      "secret": "理由不详，这里是伏笔",
+      "portrait": "art/portraits/sunyoung.png",
+      "color": "#555555",
+      "voice_pitch": 0.85,
+      "mbti": "ESTP",
+      "ennea": [
+        3,
+        4
+      ],
+      "instincts": [
+        0.8,
+        0.3,
+        0.75
+      ],
+      "traits": {
+        "openness": 0.5,
+        "conscientiousness": 0.25,
+        "sociability": 0.7,
+        "compassion": 0.3,
+        "emotional_reactivity": 0.65,
+        "honesty": 0.3,
+        "assertiveness": 0.8,
+        "impulsivity": 0.7,
+        "patience": 0.25,
+        "risk_tolerance": 0.75,
+        "attachment_security": 0.4,
+        "adaptability": 0.6
+      },
+      "values": {
+        "autonomy": 0.8,
+        "fairness": 0.3,
+        "loyalty": 0.35,
+        "achievement": 0.75,
+        "security": 0.4,
+        "benevolence": 0.25,
+        "order": 0.3,
+        "novelty": 0.7
+      },
+      "cash": 300,
+      "sched": {
+        "default": [
+          "孙府",
+          "茶馆",
+          "孙府",
+          "赌坊",
+          "茶馆",
+          "孙府"
+        ],
+        "2": [
+          "孙府",
+          "孙府",
+          "茶馆",
+          "桥头街",
+          "维持会",
+          "孙府"
+        ]
+      },
+      "lines": {
+        "accept_happy": "哼，这还差不多。",
+        "accept": "行吧，本少爷今天大方。",
+        "counter": "%d。别跟我磨。",
+        "counter_sell": "%d。本少爷给你面子。",
+        "plead": "你知道我是谁吗？这点面子都不给？",
+        "leave": "哼，穷酸铺子，不做也罢。"
+      },
+      "roles": [
+        "双面"
+      ]
+    },
+    "ma": {
+      "name": "马万利",
+      "label": "马保长",
+      "age": 38,
+      "identity": "维持会任命的保长",
+      "look": "礼帽，小胡子，左臂缠着白布臂章，大衣里揣着账本。",
+      "personality": "笑里藏刀、善于记仇",
+      "secret": "伪政权",
+      "portrait": "art/portraits/ma.png",
+      "color": "#2b3138",
+      "voice_pitch": 0.7,
+      "mbti": "ENTJ",
+      "ennea": [
+        8,
+        7
+      ],
+      "instincts": [
+        0.85,
+        0.15,
+        0.5
+      ],
+      "traits": {
+        "openness": 0.4,
+        "conscientiousness": 0.6,
+        "sociability": 0.7,
+        "compassion": 0.15,
+        "emotional_reactivity": 0.4,
+        "honesty": 0.25,
+        "assertiveness": 0.85,
+        "impulsivity": 0.3,
+        "patience": 0.55,
+        "risk_tolerance": 0.5,
+        "attachment_security": 0.4,
+        "adaptability": 0.85
+      },
+      "values": {
+        "autonomy": 0.6,
+        "fairness": 0.2,
+        "loyalty": 0.3,
+        "achievement": 0.8,
+        "security": 0.75,
+        "benevolence": 0.1,
+        "order": 0.7,
+        "novelty": 0.2
+      },
+      "cash": 500,
+      "sched": {
+        "default": [
+          "维持会",
+          "街上",
+          "茶馆",
+          "街上",
+          "街上",
+          "维持会"
+        ],
+        "2": [
+          "维持会",
+          "街上",
+          "茶馆",
+          "维持会",
+          "桥头街",
+          "维持会"
+        ]
+      },
+      "lines": {
+        "accept_happy": "哈哈，马某就喜欢和痛快人打交道。",
+        "accept": "好，好，就这个数。记上账。",
+        "counter": "小沈掌柜，%d，咱们都是街坊，好商量。",
+        "counter_sell": "%d。这个价，您觉得公道吗？",
+        "plead": "沈掌柜，您这是不给维持会面子啊。",
+        "leave": "沈掌柜慢走，账本我先记着。"
+      },
+      "roles": [
+        "维持会"
+      ]
+    },
+    "hu2": {
+      "name": "胡二",
+      "label": "胡二",
+      "age": 31,
+      "identity": "维持会的跑腿，替马保长挨家收钱",
+      "look": "灰布短褂，臂上缠着白布，帽檐压得低，腰里别着一本小折子，见人先笑。",
+      "personality": "笑里带刺、爱拿腔、记账也记仇",
+      "secret": "替马保长收钱，自己也要抽一份",
+      "portrait": "art/portraits/hu2.png",
+      "color": "#4a4036",
+      "voice_pitch": 0.78,
+      "mbti": "ESTP",
+      "ennea": [
+        3,
+        8
+      ],
+      "instincts": [
+        0.8,
+        0.2,
+        0.5
+      ],
+      "traits": {
+        "openness": 0.35,
+        "conscientiousness": 0.55,
+        "sociability": 0.75,
+        "compassion": 0.15,
+        "emotional_reactivity": 0.45,
+        "honesty": 0.3,
+        "assertiveness": 0.8,
+        "impulsivity": 0.4,
+        "patience": 0.35,
+        "risk_tolerance": 0.5,
+        "attachment_security": 0.4,
+        "adaptability": 0.7
+      },
+      "values": {
+        "autonomy": 0.5,
+        "fairness": 0.2,
+        "loyalty": 0.5,
+        "achievement": 0.7,
+        "security": 0.7,
+        "benevolence": 0.1,
+        "order": 0.6,
+        "novelty": 0.2
+      },
+      "cash": 8,
+      "sched": {
+        "default": [
+          "维持会",
+          "街上",
+          "街上",
+          "街上",
+          "街上",
+          "维持会"
+        ]
+      },
+      "lines": {
+        "accept_happy": "好说好说，沈姑娘痛快！这个数，我给您记上。",
+        "accept": "行吧，看在姑娘年纪轻的份上，这回就这个数。下不为例。",
+        "counter": "沈姑娘，%d。再少，我回去没法同马保长交代。",
+        "counter_sell": "%d。",
+        "plead": "沈姑娘，您这是为难我这跑腿的。我也是吃这碗饭的。",
+        "leave": "话不投机。这笔账我记着，您自个儿掂量。"
+      },
+      "roles": [
+        "维持会"
+      ]
+    },
+    "sunlaoye": {
+      "name": "孙德昌",
+      "label": "孙老爷",
+      "age": 55,
+      "identity": "孙府当家、商会会长（人物表未列，暂定）",
+      "look": "（不在柜台前出现）",
+      "personality": "精明、沉稳、不轻易露面（暂定）",
+      "secret": "（暂定：孙家保住家产、低价收地的主意多半出自他；游戏里不直接显示）",
+      "portrait": "art/portraits/sunlaoye.png",
+      "color": "#5a3f2a",
+      "voice_pitch": 0.6,
+      "mbti": "INTJ",
+      "ennea": [
+        6,
+        5
+      ],
+      "instincts": [
+        0.7,
+        0.25,
+        0.3
+      ],
+      "traits": {
+        "openness": 0.4,
+        "conscientiousness": 0.75,
+        "sociability": 0.45,
+        "compassion": 0.25,
+        "emotional_reactivity": 0.3,
+        "honesty": 0.45,
+        "assertiveness": 0.7,
+        "impulsivity": 0.15,
+        "patience": 0.85,
+        "risk_tolerance": 0.3,
+        "attachment_security": 0.5,
+        "adaptability": 0.8
+      },
+      "values": {
+        "autonomy": 0.6,
+        "fairness": 0.35,
+        "loyalty": 0.3,
+        "achievement": 0.7,
+        "security": 0.95,
+        "benevolence": 0.25,
+        "order": 0.65,
+        "novelty": 0.2
+      },
+      "cash": 5000,
+      "sched": {
+        "default": [
+          "孙府",
+          "孙府",
+          "孙府",
+          "商会",
+          "孙府",
+          "孙府"
+        ]
+      },
+      "lines": {
+        "accept_happy": "嗯，知道了。",
+        "accept": "就这样。",
+        "counter": "%d。",
+        "counter_sell": "%d。",
+        "plead": "这事，你不必多问。",
+        "leave": "不必多说。"
+      }
+    },
+    "guanjia": {
+      "name": "孙福",
+      "label": "孙府管家",
+      "age": 52,
+      "identity": "孙府老管家",
+      "look": "灰长衫，瓜皮帽，手里捻着一串算盘珠似的念珠。",
+      "personality": "圆滑、客气里带刺、记账精",
+      "secret": "替孙老爷盯着镇上每一笔进出",
+      "portrait": "art/portraits/guanjia.png",
+      "color": "#9aa4aa",
+      "voice_pitch": 0.85,
+      "mbti": "ISTJ",
+      "ennea": [
+        6,
+        1
+      ],
+      "instincts": [
+        0.6,
+        0.5,
+        0.4
+      ],
+      "traits": {
+        "openness": 0.4,
+        "conscientiousness": 0.9,
+        "sociability": 0.5,
+        "compassion": 0.3,
+        "emotional_reactivity": 0.2,
+        "honesty": 0.35,
+        "assertiveness": 0.6,
+        "impulsivity": 0.1,
+        "patience": 0.7,
+        "risk_tolerance": 0.3,
+        "attachment_security": 0.5,
+        "adaptability": 0.6
+      },
+      "values": {
+        "autonomy": 0.3,
+        "fairness": 0.4,
+        "loyalty": 0.95,
+        "achievement": 0.6,
+        "security": 0.75,
+        "benevolence": 0.2,
+        "order": 0.9,
+        "novelty": 0.1
+      },
+      "cash": 300,
+      "sched": {
+        "default": [
+          "孙府",
+          "孙府",
+          "孙府",
+          "桥头街",
+          "孙府",
+          "孙府"
+        ]
+      },
+      "lines": {
+        "accept_happy": "算你识相，这价我记下了。",
+        "accept": "好，就这么办。",
+        "counter": "%d 吧，老爷那边我好交代。",
+        "counter_sell": "%d，再多老爷不许。",
+        "plead": "小掌柜，我也是替人办事，您体谅体谅。",
+        "leave": "不急，账是跑不掉的。"
+      },
+      "roles": [
+        "孙府"
+      ]
+    },
+    "wu": {
+      "name": "吴长发",
+      "label": "吴掌柜",
+      "age": 45,
+      "identity": "裕丰米行掌柜",
+      "look": "褐长衫，袖口卷着，指甲缝里有米糠。",
+      "personality": "实在、认价、话短",
+      "secret": "米船的期和城里收粮有关，他不肯一次说完",
+      "portrait": "art/portraits/wu.png",
+      "color": "#7a5f43",
+      "voice_pitch": 0.85,
+      "mbti": "ISTJ",
+      "ennea": [
+        6,
+        1
+      ],
+      "instincts": [
+        0.55,
+        0.7,
+        0.4
+      ],
+      "traits": {
+        "openness": 0.3,
+        "conscientiousness": 0.88,
+        "sociability": 0.28,
+        "compassion": 0.45,
+        "emotional_reactivity": 0.22,
+        "honesty": 0.82,
+        "assertiveness": 0.55,
+        "impulsivity": 0.12,
+        "patience": 0.7,
+        "risk_tolerance": 0.25,
+        "attachment_security": 0.62,
+        "adaptability": 0.35
+      },
+      "values": {
+        "autonomy": 0.4,
+        "fairness": 0.85,
+        "loyalty": 0.7,
+        "achievement": 0.45,
+        "security": 0.8,
+        "benevolence": 0.4,
+        "order": 0.9,
+        "novelty": 0.15
+      },
+      "cash": 800,
+      "sched": {
+        "default": [
+          "米行",
+          "米行",
+          "米行",
+          "码头",
+          "米行",
+          "家"
+        ]
+      },
+      "lines": {
+        "accept_happy": "这价实在。米我收了。",
+        "accept": "行。按牌价来。",
+        "counter": "粳米这个成色，%d 一斗，不能再少。",
+        "counter_sell": "我出到 %d，再高就亏了。",
+        "plead": "牌上写多少，就是多少。我不能改。",
+        "leave": "不卖也行。米还在仓里。"
+      }
+    },
+    "postman": {
+      "name": "何启明",
+      "label": "何先生",
+      "age": 38,
+      "identity": "青溪镇邮电代办",
+      "look": "绿制服，袖口磨白，皮包夹在腋下。",
+      "personality": "谨慎、按章程",
+      "secret": "他留着每封明码电报的底稿",
+      "portrait": "art/portraits/postman.png",
+      "color": "#3d5c48",
+      "voice_pitch": 0.95,
+      "mbti": "ISFJ",
+      "ennea": [
+        6,
+        1
+      ],
+      "instincts": [
+        0.4,
+        0.65,
+        0.35
+      ],
+      "traits": {
+        "openness": 0.32,
+        "conscientiousness": 0.9,
+        "sociability": 0.38,
+        "compassion": 0.5,
+        "emotional_reactivity": 0.2,
+        "honesty": 0.78,
+        "assertiveness": 0.32,
+        "impulsivity": 0.1,
+        "patience": 0.82,
+        "risk_tolerance": 0.18,
+        "attachment_security": 0.58,
+        "adaptability": 0.36
+      },
+      "values": {
+        "autonomy": 0.35,
+        "fairness": 0.75,
+        "loyalty": 0.72,
+        "achievement": 0.4,
+        "security": 0.88,
+        "benevolence": 0.48,
+        "order": 0.92,
+        "novelty": 0.12
+      },
+      "cash": 60,
+      "sched": {
+        "default": [
+          "邮电局",
+          "邮电局",
+          "桥头街",
+          "邮电局",
+          "桥头街",
+          "家"
+        ]
+      },
+      "lines": {
+        "accept_happy": "手续齐了。我这就给你办。",
+        "accept": "可以。按章程办。",
+        "counter": "汇水按章程是 %d，改不了。",
+        "counter_sell": "这个我只能收到 %d，再多不合规矩。",
+        "plead": "章程印在纸上，我也改不了。",
+        "leave": "你再想想。信和电报，我按规矩收。"
+      }
+    }
+  },
+  "edges": [
+    [
+      "zhouma",
+      "xiaoding",
+      0.5
+    ],
+    [
+      "zhouma",
+      "linsao",
+      0.7
+    ],
+    [
+      "zhouma",
+      "ma",
+      0.6
+    ],
+    [
+      "zhouma",
+      "sunlaoye",
+      0.45
+    ],
+    [
+      "zhouma",
+      "zhao",
+      0.3
+    ],
+    [
+      "zhouma",
+      "zhang",
+      0.3
+    ],
+    [
+      "sunyoung",
+      "ma",
+      0.7
+    ],
+    [
+      "sunyoung",
+      "sunlaoye",
+      0.6
+    ],
+    [
+      "xiaoding",
+      "sunlaoye",
+      0.35
+    ],
+    [
+      "wangshan",
+      "chen",
+      0.6
+    ],
+    [
+      "li",
+      "chen",
+      0.3
+    ],
+    [
+      "zhang",
+      "chen",
+      0.4
+    ],
+    [
+      "linsao",
+      "zhao",
+      0.3
+    ],
+    [
+      "ma",
+      "sunlaoye",
+      0.5
+    ],
+    [
+      "guanjia",
+      "sunlaoye",
+      0.9
+    ],
+    [
+      "guanjia",
+      "zhouma",
+      0.4
+    ],
+    [
+      "wu",
+      "zhouma",
+      0.55
+    ],
+    [
+      "wu",
+      "chen",
+      0.35
+    ],
+    [
+      "postman",
+      "chen",
+      0.4
+    ],
+    [
+      "postman",
+      "brother",
+      0.5
+    ]
+  ],
+  "outside_accounts": {
+    "米行": 2000,
+    "济生堂柜": 500,
+    "废品摊": 300,
+    "保安队": 0,
+    "银楼": 500,
+    "维持会公账": 1000,
+    "市场": 3000,
+    "船行": 800
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "spot",
+  "seed": 501,
+  "item": "I-fine",
+  "art": "item.jewelry.jade",
+  "atlas_art": "item.jewelry.jade",
+  "atlas_open": true,
+  "ink": 2,
+  "minutes_per_step": 1,
+  "max_minutes": 30,
+  "tools": ["eye", "lens", "atlas"],
+  "parts": [
+    {
+      "id": "authenticity",
+      "rect": [24, 24, 12, 12],
+      "tool": "lens"
+    }
+  ],
+  "marks": [
+    {
+      "part": "authenticity",
+      "kind": "differs",
+      "fine": 900,
+      "seed": 99
+    }
+  ]
+}

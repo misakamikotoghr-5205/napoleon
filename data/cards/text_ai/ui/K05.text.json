@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "k05.reason.sun_borrow": {
+    "t": "借给孙少爷"
+  },
+  "k05.reason.wu_rice": {
+    "t": "向吴长发进米"
+  },
+  "k05.reason.zhao_lend": {
+    "t": "再借赵老三"
+  },
+  "k05.notice.sunfu_with": {
+    "t": "你答应跟孙府站在一边。"
+  },
+  "k05.notice.sunfu_apart": {
+    "t": "你没跟孙府站在一边。"
+  },
+  "k05.notice.sunfu_hedge": {
+    "t": "孙府要你表态，你含糊过去了。"
+  },
+  "k05.notice.ma_changed": {
+    "t": "马保长换了名目，改替伪国民政府的人办事。"
+  },
+  "k05.notice.ma_kept": {
+    "t": "街上还照旧叫他马保长。"
+  },
+  "k05.notice.hu2_changed": {
+    "t": "胡二改替新来的伪官跑腿了。"
+  },
+  "k05.notice.dossier_linked": {
+    "t": "几块碎片串到了一起。"
+  },
+  "k05.notice.registered": {
+    "t": "德厚当被写进了新造的名册。"
+  }
+}

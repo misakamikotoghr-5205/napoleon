@@ -1,0 +1,17 @@
+First before wrapper (exit 2)
+/tmp/dh198/before/report_2026-10-18.md
+BALANCE RESULT passed=140 failed=0
+tools/cards/balance/w2_run.sh: line 34: unexpected EOF while looking for matching `''
+
+First candidate wrapper (exit 2)
+/tmp/dh198/after/report_2026-10-18.md
+BALANCE RESULT passed=140 failed=0
+tools/cards/balance/w2_run.sh: line 34: unexpected EOF while looking for matching `''
+
+Fixed wrapper smoke before (exit 0)
+/tmp/dh198/repro-before/report_2026-10-18.md
+BALANCE RESULT passed=7 failed=0
+
+Fixed wrapper smoke after (exit 0)
+/tmp/dh198/repro-after/report_2026-10-18.md
+BALANCE RESULT passed=7 failed=0

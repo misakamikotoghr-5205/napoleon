@@ -1,0 +1,286 @@
+{
+  "_meta": {
+    "owner": "K10",
+    "schema": 1,
+    "brief": "1938 本月运势扇区，以及该年大轮盘的翻身、平安、坠底各一段。"
+  },
+  "cards": [
+    {
+      "id": "ws.1938.month.caixing",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "arc": 3,
+      "valence": "good",
+      "month_mods": [
+        {
+          "pool": "person",
+          "tags_any": [
+            "buyer"
+          ],
+          "pct": 130
+        }
+      ],
+      "effects": [],
+      "art": "icon.ws.caixing",
+      "brief": "1938 春本月运势好段，设计上对应财星高照，扇区名由 A 定。valence 为 good，香案加宽只作用在 good 上。month_mods 把人物牌池里带 buyer 标签的牌用整数百分比抬高权重，这个月买家多一些。效果为空，整关影响只走 month_mods。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1938.month.wenxing",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "arc": 1,
+      "valence": "good",
+      "month_mods": [
+        {
+          "pool": "fate",
+          "valence": "good",
+          "pct": 120
+        }
+      ],
+      "effects": [],
+      "art": "icon.ws.wenxing",
+      "brief": "1938 春本月运势另一段好段，弧比财星窄，方便开局对照香案把好段撑开。valence 为 good。month_mods 把命运牌池里 valence 为 good 的权重抬高。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1938.month.liunian",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "arc": 6,
+      "valence": "bad",
+      "month_mods": [
+        {
+          "pool": "fate",
+          "valence": "bad",
+          "pct": 140
+        }
+      ],
+      "effects": [],
+      "art": "icon.ws.liunian",
+      "brief": "1938 春本月运势坏段，设计上对应流年不利，扇区名由 A 定。valence 为 bad，香案不加宽这一段。month_mods 把命运牌池里 valence 为 bad 的权重抬高，坏命运多一些。不写暴力细节。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1938.month.guanmian",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "arc": 6,
+      "valence": "neutral",
+      "month_mods": [
+        {
+          "pool": "event",
+          "tags_any": [
+            "omen_official"
+          ],
+          "pct": 115
+        }
+      ],
+      "effects": [],
+      "art": "icon.ws.guanmian",
+      "brief": "1938 春本月运势平常段。valence 为 neutral，不加宽。month_mods 把事件牌池里带 omen_official 的权重略抬。机制注记：伪维持会查验，月底伪维新政府成立前后官面的事多一点。不是给玩家看的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1938.month.pingan",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "arc": 5,
+      "valence": "neutral",
+      "month_mods": [],
+      "effects": [],
+      "art": "icon.ws.pingan",
+      "brief": "1938 春本月运势平常段。valence 为 neutral。month_mods 为空，落到它这个月不改牌库。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1938.month.koushe",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "arc": 5,
+      "valence": "neutral",
+      "month_mods": [
+        {
+          "pool": "event",
+          "tags_any": [
+            "omen_dispute"
+          ],
+          "pct": 110
+        }
+      ],
+      "effects": [],
+      "art": "icon.ws.koushe",
+      "brief": "1938 春本月运势平常段。valence 为 neutral。month_mods 把事件牌池里带 omen_dispute 的权重略抬，口舌一类略多。不算坏段，不额外惩罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1938.month.shunshui",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "arc": 6,
+      "valence": "neutral",
+      "month_mods": [
+        {
+          "pool": "news",
+          "tags_any": [
+            "omen_water"
+          ],
+          "pct": 110
+        }
+      ],
+      "effects": [],
+      "art": "icon.ws.shunshui",
+      "brief": "1938 春本月运势平常段。valence 为 neutral。month_mods 把消息牌池里带 omen_water 的权重略抬，水边码头的消息略多。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1938.big.fanshen_pass",
+      "type": "wheel_segment",
+      "wheel": "wh.big",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "arc": 2,
+      "valence": "good",
+      "conditions": {
+        "conscience_gte": -20
+      },
+      "effects": [
+        {
+          "op": "heat",
+          "delta": -8
+        },
+        {
+          "op": "add_card",
+          "card": "bf.1938.night_cargo",
+          "to": "hand"
+        }
+      ],
+      "art": "icon.ws.fanshen",
+      "brief": "1938 大轮盘翻身段。valence 为 good。本心低于阈值不上盘，阈值与通用翻身段相同，待调。效果只把风声压下一截，不发 bf.wheel。 V36：此段另发大赌 bf.1938.night_cargo 到手上（#146）。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1938.big.pingan_shop",
+      "type": "wheel_segment",
+      "wheel": "wh.big",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "arc": 3,
+      "valence": "neutral",
+      "effects": [
+        {
+          "op": "rep",
+          "delta": 1
+        }
+      ],
+      "art": "icon.ws.pingan",
+      "brief": "1938 大轮盘平安段。valence 为 neutral。效果：口碑加一点。不发大赌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.1938.big.zhuidi_levy",
+      "type": "wheel_segment",
+      "wheel": "wh.big",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "arc": 3,
+      "valence": "bad",
+      "effects": [
+        {
+          "op": "heat",
+          "delta": 6
+        },
+        {
+          "op": "if",
+          "cond": {
+            "day_gte": 28
+          },
+          "then": [
+            {
+              "op": "add_card",
+              "card": "bf.1938.bail_shop",
+              "to": "hand"
+            }
+          ]
+        }
+      ],
+      "art": "icon.ws.zhuidi",
+      "brief": "1938 大轮盘坠底段。valence 为 bad。效果：风声抬一截。机制注记：伪维持会摊派压上来。不写暴力细节。 V36：此段另发大赌 bf.1938.bail_shop 到手上（#146）。V36 补丁：add_card bf.1938.bail_shop 包在 day_gte:28 里，第 27 天及以前只走热量/其他效果，不提前发牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

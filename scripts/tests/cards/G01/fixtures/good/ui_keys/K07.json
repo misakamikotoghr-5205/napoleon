@@ -1,0 +1,11 @@
+{
+  "_meta": {
+    "owner": "K07",
+    "schema": 1
+  },
+  "keys": {
+    "k07.notice.not_back": {
+      "brief": "派出去的人没回来"
+    }
+  }
+}

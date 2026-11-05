@@ -1,0 +1,249 @@
+{
+  "_meta": {
+    "owner": "K10",
+    "schema": 1,
+    "brief": "测字。id 用拼音，字由 A 定。has 与 none 的提示句不在这里。"
+  },
+  "cards": [
+    {
+      "id": "cz.shui",
+      "type": "cezi",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "omen_water"
+      ],
+      "brief": "测字骨架。拼音 id 为 shui，建议字「水」，由 A 定字。tags 为 omen_water。有的方向：窗口里带这些征兆的牌被钉住并点出，水边、船、码头有事会被点出。无的方向：给窗口每一天加禁签，这几天随机发牌避开水边。has 与 none 的句子由 A 写，这里不提供可直接展示的提示。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "cz.chuan",
+      "type": "cezi",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "omen_water"
+      ],
+      "brief": "测字骨架。拼音 id 为 chuan，建议字「船」，由 A 定字。tags 为 omen_water。有的方向：窗口里带这些征兆的牌被钉住并点出，船与码头一类会被点出。无的方向：给窗口每一天加禁签，这几天随机发牌避开船与码头。has 与 none 的句子由 A 写，这里不提供可直接展示的提示。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "cz.guan",
+      "type": "cezi",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "omen_official"
+      ],
+      "brief": "测字骨架。拼音 id 为 guan，建议字「官」，由 A 定字。tags 为 omen_official。有的方向：窗口里带这些征兆的牌被钉住并点出，官面、纸上的事会被点出。无的方向：给窗口每一天加禁签，这几天随机发牌避开官面。has 与 none 的句子由 A 写，这里不提供可直接展示的提示。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "cz.zhi",
+      "type": "cezi",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "omen_official"
+      ],
+      "brief": "测字骨架。拼音 id 为 zhi，建议字「纸」，由 A 定字。tags 为 omen_official。有的方向：窗口里带这些征兆的牌被钉住并点出，文书纸契一类会被点出。无的方向：给窗口每一天加禁签，这几天随机发牌避开文书。has 与 none 的句子由 A 写，这里不提供可直接展示的提示。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "cz.xin",
+      "type": "cezi",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "omen_far",
+        "omen_family"
+      ],
+      "brief": "测字骨架。拼音 id 为 xin，建议字「信」，由 A 定字。tags 为 omen_far、omen_family。有的方向：窗口里带这些征兆的牌被钉住并点出，远方与家宅两边的征兆都会被点出。无的方向：给窗口每一天加禁签，这几天随机发牌避开远方与家宅这两类。has 与 none 的句子由 A 写，这里不提供可直接展示的提示。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "cz.yuan",
+      "type": "cezi",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "omen_far"
+      ],
+      "brief": "测字骨架。拼音 id 为 yuan，建议字「远」，由 A 定字。tags 为 omen_far。有的方向：窗口里带这些征兆的牌被钉住并点出，远方来信一类会被点出。无的方向：给窗口每一天加禁签，这几天随机发牌避开远方。has 与 none 的句子由 A 写，这里不提供可直接展示的提示。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "cz.cai",
+      "type": "cezi",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "omen_wealth"
+      ],
+      "brief": "测字骨架。拼音 id 为 cai，建议字「财」，由 A 定字。tags 为 omen_wealth。有的方向：窗口里带这些征兆的牌被钉住并点出，财物进出一类会被点出。无的方向：给窗口每一天加禁签，这几天随机发牌避开财物。has 与 none 的句子由 A 写，这里不提供可直接展示的提示。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "cz.bing",
+      "type": "cezi",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "omen_illness"
+      ],
+      "brief": "测字骨架。拼音 id 为 bing，建议字「病」，由 A 定字。tags 为 omen_illness。有的方向：窗口里带这些征兆的牌被钉住并点出，病痛一类会被点出。无的方向：给窗口每一天加禁签，这几天随机发牌避开病痛。has 与 none 的句子由 A 写，这里不提供可直接展示的提示。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "cz.huo",
+      "type": "cezi",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "omen_fire"
+      ],
+      "brief": "测字骨架。拼音 id 为 huo，建议字「火」，由 A 定字。tags 为 omen_fire。有的方向：窗口里带这些征兆的牌被钉住并点出，火光一类会被点出。无的方向：给窗口每一天加禁签，这几天随机发牌避开火光。has 与 none 的句子由 A 写，这里不提供可直接展示的提示。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "cz.jia",
+      "type": "cezi",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "omen_family"
+      ],
+      "brief": "测字骨架。拼音 id 为 jia，建议字「家」，由 A 定字。tags 为 omen_family。有的方向：窗口里带这些征兆的牌被钉住并点出，家宅一类会被点出。无的方向：给窗口每一天加禁签，这几天随机发牌避开家宅。has 与 none 的句子由 A 写，这里不提供可直接展示的提示。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "cz.sheng",
+      "type": "cezi",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "omen_stranger"
+      ],
+      "brief": "测字骨架。拼音 id 为 sheng，建议字「生」，由 A 定字。tags 为 omen_stranger。有的方向：窗口里带这些征兆的牌被钉住并点出，生人一类会被点出。无的方向：给窗口每一天加禁签，这几天随机发牌避开生人。has 与 none 的句子由 A 写，这里不提供可直接展示的提示。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "cz.song",
+      "type": "cezi",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "omen_dispute"
+      ],
+      "brief": "测字骨架。拼音 id 为 song，建议字「讼」，由 A 定字。tags 为 omen_dispute。有的方向：窗口里带这些征兆的牌被钉住并点出，口舌官司一类会被点出。无的方向：给窗口每一天加禁签，这几天随机发牌避开口舌。has 与 none 的句子由 A 写，这里不提供可直接展示的提示。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "cz.lu",
+      "type": "cezi",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "omen_road"
+      ],
+      "brief": "测字骨架。拼音 id 为 lu，建议字「路」，由 A 定字。tags 为 omen_road。有的方向：窗口里带这些征兆的牌被钉住并点出，出行道路一类会被点出。无的方向：给窗口每一天加禁签，这几天随机发牌避开道路。has 与 none 的句子由 A 写，这里不提供可直接展示的提示。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "cz.men",
+      "type": "cezi",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "omen_family",
+        "omen_stranger"
+      ],
+      "brief": "测字骨架。拼音 id 为 men，建议字「门」，由 A 定字。tags 为 omen_family、omen_stranger。有的方向：窗口里带这些征兆的牌被钉住并点出，家宅与生人两类都会被点出。无的方向：给窗口每一天加禁签，这几天随机发牌避开家宅与生人。has 与 none 的句子由 A 写，这里不提供可直接展示的提示。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

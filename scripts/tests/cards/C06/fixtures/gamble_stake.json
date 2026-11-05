@@ -1,0 +1,198 @@
+{
+  "_meta": {
+    "owner": "C06",
+    "schema": 1,
+    "wheel": "wh.gamble",
+    "uid": "c0102",
+    "required": false,
+    "brief": "赌摊：先没押会拒，押上一张留着的牌再转。",
+    "_provenance": {
+      "by": "ai",
+      "task": "C06",
+      "date": "2026-10-13"
+    }
+  },
+  "view": {
+    "v": 1,
+    "phase": "day",
+    "mode": "shop",
+    "busy": false,
+    "money": {
+      "amount": 340,
+      "currency": "fabi"
+    },
+    "hand": [],
+    "kept": [
+      {
+        "uid": "c0020",
+        "def": "kp.liangmin",
+        "type": "kept",
+        "zone": "kept",
+        "art": "illus.kp.liangmin",
+        "expires_in": -1,
+        "gold": false,
+        "keepable": true
+      }
+    ],
+    "contacts": [],
+    "date": {
+      "abs_day": 1,
+      "stage": 0,
+      "stage_day": 1,
+      "era": "1938"
+    },
+    "open_panel": {
+      "kind": "wheel",
+      "args": {
+        "wheel": "wh.gamble",
+        "uid": "c0102",
+        "required": false
+      }
+    }
+  },
+  "queries": {
+    "wheel|{\"uid\":\"c0102\",\"wheel\":\"wh.gamble\"}": {
+      "wheel": "wh.gamble",
+      "uid": "c0102",
+      "kind": "gamble",
+      "art": "wheel.gamble",
+      "segments": [
+        {
+          "id": "ws.gamble.cup",
+          "arc_deg": 60.0,
+          "art": "icon.ws.caixing"
+        },
+        {
+          "id": "ws.gamble.dice",
+          "arc_deg": 60.0,
+          "art": "icon.ws.liunian"
+        },
+        {
+          "id": "ws.gamble.card",
+          "arc_deg": 60.0,
+          "art": "icon.ws.pingan"
+        },
+        {
+          "id": "ws.gamble.token",
+          "arc_deg": 60.0,
+          "art": "icon.ws.fanshen"
+        },
+        {
+          "id": "ws.gamble.bowl",
+          "arc_deg": 60.0,
+          "art": "icon.ws.zhuidi"
+        },
+        {
+          "id": "ws.gamble.fan",
+          "arc_deg": 60.0,
+          "art": "icon.ws.pingan"
+        }
+      ],
+      "incense": {
+        "accepts": [
+          "money",
+          "kept"
+        ],
+        "placed": [],
+        "full": false
+      },
+      "cost": {
+        "money": 0,
+        "stake": true
+      },
+      "staked": "",
+      "spun": false,
+      "result": {
+        "segment": "",
+        "stop_deg": 0.0
+      }
+    }
+  },
+  "responses": [
+    {
+      "cmd": "wheel.offer",
+      "match": {
+        "uid": "c0102",
+        "wheel": "wh.gamble",
+        "source": {
+          "kind": "money",
+          "amount": 10
+        }
+      },
+      "result": {
+        "ok": true,
+        "err": ""
+      },
+      "events": []
+    },
+    {
+      "cmd": "wheel.withdraw",
+      "match": {
+        "uid": "c0102",
+        "wheel": "wh.gamble",
+        "index": 0
+      },
+      "result": {
+        "ok": true,
+        "err": ""
+      },
+      "events": []
+    },
+    {
+      "cmd": "wheel.stake",
+      "match": {
+        "uid": "c0102",
+        "wheel": "wh.gamble",
+        "kept_uid": "c0020"
+      },
+      "result": {
+        "ok": true,
+        "err": ""
+      },
+      "events": []
+    },
+    {
+      "cmd": "wheel.spin",
+      "match": {
+        "uid": "c0102",
+        "wheel": "wh.gamble"
+      },
+      "result": {
+        "ok": false,
+        "err": "stake_required",
+        "segment": "ws.gamble.cup",
+        "stop_deg": 12.0
+      },
+      "events": [],
+      "once": true
+    },
+    {
+      "cmd": "wheel.spin",
+      "match": {
+        "uid": "c0102",
+        "wheel": "wh.gamble"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "segment": "ws.gamble.dice",
+        "stop_deg": 88.0
+      },
+      "events": [
+        [
+          "wheel_spun",
+          "wh.gamble",
+          "ws.gamble.dice",
+          88.0
+        ]
+      ]
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "ok": true,
+        "err": ""
+      }
+    }
+  ]
+}

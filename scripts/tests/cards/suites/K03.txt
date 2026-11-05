@@ -1,0 +1,4 @@
+# K03 1939 腊月人物牌、主线节点（docs/handoff_cards/K03_data-1939-people.md）
+K03_validate|res://scripts/cards/core/validate_main.gd|120|--only=data/cards/era/1939/people.json,data/cards/era/1939/story.json,data/cards/tags/K03.json,data/cards/ui_keys/K03.json --name=K03_validate
+K03_data|res://scripts/tests/cards/K03/test_data.gd|120|
+K03_guide_support|res://scripts/tests/cards/K03/test_guide_support.gd|120|

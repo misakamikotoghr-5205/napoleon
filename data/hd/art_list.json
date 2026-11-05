@@ -1,0 +1,1216 @@
+{
+ "version": 1,
+ "_doc": "高清美术清单（剧情立绘、背景、战场）。规则见 docs/cards/art/hd/HD_ART_RULES.md。kinds 定义每类图的路径、尺寸和格式；assets 是要做的每一项。tools/hd_art/check_art.py 按这个文件验收；游戏按 kinds.path 去找图，找不到就用占位。desc 是给美术操作方看的说明，由 Claude 撰写。",
+ "kinds": {
+  "bg": {
+   "path": "art/hd/bg/{id}.jpg",
+   "alt_ext": [
+    "png"
+   ],
+   "size": [
+    1920,
+    1080
+   ],
+   "alpha": false,
+   "max_kb": 1500,
+   "doc": "全屏背景。不透明，JPG（质量 88–92）或 PNG。画面里不要有人物和文字。"
+  },
+  "cg": {
+   "path": "art/hd/cg/{id}.jpg",
+   "alt_ext": [
+    "png"
+   ],
+   "size": [
+    1920,
+    1080
+   ],
+   "alpha": false,
+   "max_kb": 1500,
+   "doc": "事件插图（结局等）。不透明，可以有人物，不要有文字。"
+  },
+  "chara": {
+   "path": "art/hd/chara/{id}/{expr}.png",
+   "size": [
+    1200,
+    1800
+   ],
+   "alpha": true,
+   "max_kb": 2500,
+   "exprs": [
+    "normal",
+    "smile",
+    "angry",
+    "sad",
+    "surprise"
+   ],
+   "required_exprs": [
+    "normal"
+   ],
+   "doc": "剧情立绘。透明底，头顶到大腿中部，画面下边缘切在大腿上。同一角色的各表情除脸部以外逐像素一致。"
+  },
+  "face": {
+   "path": "art/hd/face/{id}.png",
+   "size": [
+    512,
+    512
+   ],
+   "alpha": true,
+   "max_kb": 600,
+   "doc": "头像（部署卡、名册、战报用）。透明底，头和肩，脸在画面中央。"
+  },
+  "unit": {
+   "path": "art/hd/unit/{id}/{state}_{nn}.png",
+   "size": [
+    384,
+    384
+   ],
+   "alpha": true,
+   "max_kb": 220,
+   "anchor": [
+    192,
+    336
+   ],
+   "states": [
+    "idle",
+    "attack",
+    "hit",
+    "down",
+    "dying"
+   ],
+   "required_states": [
+    "idle",
+    "attack",
+    "hit",
+    "down",
+    "dying"
+   ],
+   "doc": "战场小人逐帧图。透明底，朝屏幕右侧（游戏里镜像得到朝左）。双脚中点落在锚点 (192, 336)。每个状态至少 1 帧，帧号从 01 连续。"
+  },
+  "tex": {
+   "path": "art/hd/tile/{id}.png",
+   "size": [
+    512,
+    512
+   ],
+   "alpha": false,
+   "seamless": "xy",
+   "max_kb": 900,
+   "doc": "地块顶面贴图。不透明，正上方俯视，四边无缝可平铺，不带方向性（没有车辙、箭头、阴影方向）。"
+  },
+  "side": {
+   "path": "art/hd/tile/{id}.png",
+   "size": [
+    512,
+    256
+   ],
+   "alpha": false,
+   "seamless": "x",
+   "max_kb": 600,
+   "doc": "地块侧面贴图。不透明，左右无缝，上边缘是地表、往下是土或岩。"
+  },
+  "prop": {
+   "path": "art/hd/prop/{id}.glb",
+   "max_tris": 5000,
+   "max_tex": 1024,
+   "max_kb": 3000,
+   "doc": "地图摆件，GLB（glTF 二进制，贴图内嵌）。1 个 Blender 单位 = 1 格；原点在底面中心；不带灯光和相机。"
+  }
+ },
+ "assets": [
+  {
+   "kind": "bg",
+   "id": "bellerophon_hold",
+   "name": "贝勒罗丰号底舱",
+   "priority": "P0",
+   "desc": "1815 年英国 74 炮战列舰贝勒罗丰号的底舱，夜里。弧形船肋和木梁、成排的酒桶和板条箱、挂着的油灯。画面中下方一只包铁角的军需箱，箱盖上摊着一本账簿、一只表盘碎裂的金怀表。昏暗、潮湿、暖黄灯光。",
+   "used_in": [
+    "prologue"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "jamestown_shop",
+   "name": "詹姆斯敦·海鸥号补给栈",
+   "priority": "P0",
+   "desc": "1817 年圣赫勒拿岛詹姆斯敦，一个法国人开的船具补给栈前堂：木地板、粗木案桌、一盏油灯；墙上挂着缆绳卷、滑轮组、提灯，地上摞着淡水桶、腌肉桶和饼干箱，门边一块写着“海鸥号”的小招牌（字由代码画也可以，图里只画空招牌）。窗外是陡坡街道和雨。油灯暖光，雨天冷光从窗户进来。不要画货架上一件件待售的旧物件。",
+   "used_in": [
+    "scene01",
+    "scene02"
+   ],
+   "variants": [
+    "night"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "royal_oak_tavern",
+   "name": "皇家橡树酒馆",
+   "priority": "P1",
+   "desc": "詹姆斯敦一家英式小酒馆：低矮木梁、壁炉、吧台和酒桶、墙上挂着航海图和英国国旗。没有人。",
+   "used_in": [
+    "scene03"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "shop_back_room",
+   "name": "海鸥号补给栈·后间密室",
+   "priority": "P1",
+   "desc": "补给栈后间的密室：书桌上摊着军需账簿和圣赫勒拿岛地图，一只包铁的钱箱、蜡烛，一面书架后面露出通往海蚀洞的暗门。",
+   "used_in": [
+    "scene03",
+    "scene04"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "sea_cave",
+   "name": "南岸海蚀洞",
+   "priority": "P1",
+   "desc": "圣赫勒拿南岸的海蚀洞，夜里。黑色玄武岩、潮水潭、一条藏着的小艇、石阶，提灯照亮一角；洞里堆着用油布盖的木箱。",
+   "used_in": [
+    "scene04",
+    "scene05"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "longwood_house",
+   "name": "朗伍德庄园",
+   "priority": "P1",
+   "desc": "1821 年朗伍德庄园里拿破仑的书房兼台球室：褪色的绿色墙纸、潮湿的墙角、墙上的地图、摊开的书和行军床。昔日帝王的落魄。",
+   "used_in": [
+    "scene05"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "new_elba_shoal",
+   "name": "新厄尔巴岛浅滩",
+   "priority": "P1",
+   "desc": "南太平洋火山岛的浅滩：白沙、青绿海水、搁浅的帆船残骸、远处的火山和棕榈。白天。夜景变体 __night：同一机位的午夜，月光照着海面（第十场开头鹦鹉螺号浮出水面）。",
+   "used_in": [
+    "scene06",
+    "scene10"
+   ],
+   "variants": [
+    "night"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "granite_palace_exchange",
+   "name": "花岗岩宫·鲸骨交易所",
+   "priority": "P1",
+   "desc": "在花岗岩山体里凿出的大厅，鲸骨做成的拱门和交易台，岛上殖民者的交易所：秤、货箱、海图、贝壳货币和一摞鹰徽代用币。",
+   "used_in": [
+    "scene07"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "granite_palace_workshop",
+   "name": "花岗岩宫·后堂工坊",
+   "priority": "P1",
+   "desc": "花岗岩宫的后堂工坊：锻炉、工作台、工具墙、拆开的船用零件和图纸。",
+   "used_in": [
+    "scene08"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "skull_reef",
+   "name": "东岸骷髅礁",
+   "priority": "P1",
+   "desc": "火山岛东岸像骷髅的黑色礁石，黄昏起风暴，礁石后停着一艘挂黑旗的海盗船。",
+   "used_in": [
+    "scene09"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "nautilus_cabin",
+   "name": "鹦鹉螺号密务舱",
+   "priority": "P1",
+   "desc": "潜艇鹦鹉螺号里的密务舱：铆钉黄铜墙、巨大圆形舷窗外是深海、管风琴、书柜、海图桌；幽绿的磷光和暖色灯。1830 年代的复古科幻。",
+   "used_in": [
+    "scene10",
+    "scene11",
+    "scene12",
+    "finale"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "vigo_seabed",
+   "name": "维哥湾海床",
+   "priority": "P1",
+   "desc": "西班牙维哥湾海底：沉没的西班牙大帆船残骸、散落的银元、潜水灯光束、深蓝的水。",
+   "used_in": [
+    "scene11"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "atlantis_ruins",
+   "name": "亚特兰蒂斯遗址",
+   "priority": "P1",
+   "desc": "海底的亚特兰蒂斯遗址：倒塌的柱廊、神庙台阶上一座波塞冬祭坛，祭坛上放着一块赤金色的八面体矿石（山铜），光从水面射下来。",
+   "used_in": [
+    "scene12"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "thames_estuary",
+   "name": "泰晤士河口·格林威治外",
+   "priority": "P1",
+   "desc": "1835 年夜里的泰晤士河口，雾，远处格林威治皇家海军医院的穹顶轮廓和岸上灯火，水面上露出一段潜艇的黑色艇身。",
+   "used_in": [
+    "finale"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "camp_tent",
+   "name": "大营帐篷",
+   "priority": "P1",
+   "desc": "1796 年法军意大利方面军的野战指挥帐篷内部：铺着地图的行军桌、蜡烛、行军箱、挂着的军刀和三色旗。出征名单界面的背景。",
+   "used_in": [
+    "battle_lineup"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "battle_backdrop",
+   "name": "战场远景",
+   "priority": "P1",
+   "desc": "意大利北部阿尔卑斯山麓的远景：天空、远山、硝烟。放在战场地图后面当远景，不需要细节，中央下方三分之二会被地图挡住。",
+   "used_in": [
+    "battle"
+   ]
+  },
+  {
+   "kind": "bg",
+   "id": "title",
+   "name": "标题画面",
+   "priority": "P1",
+   "desc": "标题主视觉：一面法军鹰旗压在一张展开的航海图上，图上一只黄铜罗盘，三条航路从罗盘向外分开（一条往北方的战场，一条往南方的大洋，一条往一座海上的城堡）；背景是黄昏的海和帆船。画面左侧三分之一留给游戏标题（标题字由代码画，图里不要有字）。",
+   "used_in": [
+    "title"
+   ]
+  },
+  {
+   "kind": "cg",
+   "id": "ending_alliance",
+   "name": "结局插图·四海同盟",
+   "priority": "P2",
+   "desc": "拿破仑、尼摩与唐泰斯在鹦鹉螺号的客厅里签约，桌上摊着一本厚厚的军需账簿和一张世界海图，舷窗外是深海。",
+   "used_in": [
+    "ending:alliance"
+   ]
+  },
+  {
+   "kind": "cg",
+   "id": "ending_ghost",
+   "name": "结局插图·幽灵舰队",
+   "priority": "P2",
+   "desc": "鹦鹉螺号与一艘挂黑帆的快船（闪电号）向南极冰盖驶去，极光。",
+   "used_in": [
+    "ending:ghost"
+   ]
+  },
+  {
+   "kind": "cg",
+   "id": "ending_dark",
+   "name": "结局插图·深海金库",
+   "priority": "P2",
+   "desc": "阴暗的深海金库里堆满金币、金砖和一摞摞借据，一盏冷光灯照着一张空椅子。",
+   "used_in": [
+    "ending:dark"
+   ]
+  },
+  {
+   "kind": "cg",
+   "id": "ending_tragedy",
+   "name": "结局插图·大漩涡",
+   "priority": "P2",
+   "desc": "挪威外海的大漩涡，潜艇被卷入，一只樟木箱漂向远方。",
+   "used_in": [
+    "ending:tragedy"
+   ]
+  },
+  {
+   "kind": "chara",
+   "id": "villefort",
+   "name": "埃德蒙·德·维尔福（主角）",
+   "priority": "P1",
+   "desc": "35 岁上下的法国男人，帝国老近卫军的军需官兼司库，随皇帝流亡。瘦高、深色短发、鬓角、眼神锐利。深蓝色旧军需官外套（银扣）、马甲、一条金怀表链，表链上挂一枚小小的鹰徽表坠。正经、精明、带点疲惫。"
+  },
+  {
+   "kind": "face",
+   "id": "villefort",
+   "name": "埃德蒙·德·维尔福（主角）",
+   "priority": "P0",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "marie",
+   "name": "玛丽·朗热夫人",
+   "priority": "P0",
+   "desc": "30 岁上下的女人，朗伍德庄园的洗衣妇，也是密使。赤褐色头发挽在亚麻头巾里，朴素的长裙和围裙，挎一只柳条篮。战场上是军医：多一个装器械的皮挎包。不要画红十字标志（受法律保护的标志）。"
+  },
+  {
+   "kind": "face",
+   "id": "marie",
+   "name": "玛丽·朗热夫人",
+   "priority": "P0",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "montholon",
+   "name": "蒙托隆将军",
+   "priority": "P0",
+   "desc": "32 岁的法国将军，拿破仑的侍从。深蓝色将军礼服、金色肩章和刺绣、白色马裤、马靴。体面、谨慎。"
+  },
+  {
+   "kind": "face",
+   "id": "montholon",
+   "name": "蒙托隆将军",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "napoleon",
+   "name": "拿破仑·波拿巴",
+   "priority": "P1",
+   "desc": "流亡中的拿破仑，46–51 岁，略胖。灰色大衣下是绿色近卫猎骑兵上校制服，双角帽（横戴）。按公认的历史形象画。"
+  },
+  {
+   "kind": "face",
+   "id": "napoleon",
+   "name": "拿破仑·波拿巴",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "dantes",
+   "name": "埃德蒙·唐泰斯（基督山伯爵）",
+   "priority": "P1",
+   "desc": "30 岁上下，长黑发、苍白、目光冷峻。黑色礼服大衣、白领巾、手杖或佩剑。战场上是骠骑兵：加一件挂在肩上的毛边短外套（佩利斯），佩马刀。"
+  },
+  {
+   "kind": "face",
+   "id": "dantes",
+   "name": "埃德蒙·唐泰斯（基督山伯爵）",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "gourgaud",
+   "name": "古尔戈将军",
+   "priority": "P1",
+   "desc": "32 岁的老近卫军将军，魁梧、八字胡。熊皮高帽、深蓝色近卫掷弹兵制服、红色肩章。"
+  },
+  {
+   "kind": "face",
+   "id": "gourgaud",
+   "name": "古尔戈将军",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "faria",
+   "name": "法利亚神甫",
+   "priority": "P1",
+   "desc": "年迈的意大利神甫，长白胡子、消瘦、目光清亮。旧黑色教士袍。战场上是工兵：拿一把短镐和一盏提灯。"
+  },
+  {
+   "kind": "face",
+   "id": "faria",
+   "name": "法利亚神甫",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "friday",
+   "name": "星期五",
+   "priority": "P1",
+   "desc": "20 岁上下的波利尼西亚青年，健壮、黑发。按真实的人画，不要夸张或丑化外貌。穿水手衬衫和帆布裤，戴贝壳项链。战场上是鼓手：挎一面黄铜边的法军军鼓。"
+  },
+  {
+   "kind": "face",
+   "id": "friday",
+   "name": "星期五",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "nemo",
+   "name": "尼摩船长（达卡王子）",
+   "priority": "P1",
+   "desc": "50 岁上下的印度王子，黑胡子、深邃的眼睛。按真实的人画，不要夸张或丑化外貌。深色海军式长外套、高领。战场上是炮兵：身边一门带黄铜线圈的电弧炮（在小人图里画）。"
+  },
+  {
+   "kind": "face",
+   "id": "nemo",
+   "name": "尼摩船长（达卡王子）",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "morel",
+   "name": "莫雷尔船长",
+   "priority": "P1",
+   "desc": "40 岁上下的马赛船长，宽肩、络腮短胡、为人厚道。商船船长外套、三角帽。战场上是战列步兵：持带刺刀的火枪。"
+  },
+  {
+   "kind": "face",
+   "id": "morel",
+   "name": "莫雷尔船长",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "corso",
+   "name": "科尔索",
+   "priority": "P1",
+   "desc": "30 岁上下的科西嘉水手头目，粗犷、晒黑、扎头巾、络腮胡。皮背心、宽腰带、一支长管猎枪。"
+  },
+  {
+   "kind": "face",
+   "id": "corso",
+   "name": "科尔索",
+   "priority": "P1",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "one_eyed_jack",
+   "name": "独眼杰克",
+   "priority": "P1",
+   "desc": "伪装成水手的伦敦弓街侦探，40 岁上下，左眼戴眼罩，水手短外套，眼神狡猾。"
+  },
+  {
+   "kind": "face",
+   "id": "one_eyed_jack",
+   "name": "独眼杰克",
+   "priority": "P2",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "omeara",
+   "name": "奥米拉医生",
+   "priority": "P1",
+   "desc": "30 多岁的爱尔兰军医，皇家海军军医制服（深蓝），拿一只药箱。正直。"
+  },
+  {
+   "kind": "face",
+   "id": "omeara",
+   "name": "奥米拉医生",
+   "priority": "P2",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "baptiste",
+   "name": "巴蒂斯特中士",
+   "priority": "P1",
+   "desc": "50 岁上下的老近卫军工兵中士，按工兵传统留大胡子，白色皮围裙，扛斧子。"
+  },
+  {
+   "kind": "face",
+   "id": "baptiste",
+   "name": "巴蒂斯特中士",
+   "priority": "P2",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "roberts",
+   "name": "罗伯茨舰长（红胡子摩根）",
+   "priority": "P1",
+   "desc": "伪装成海盗的英国特务舰长，红色大胡子，海盗打扮下面露出英国海军军官的衬衫领子。"
+  },
+  {
+   "kind": "face",
+   "id": "roberts",
+   "name": "罗伯茨舰长（红胡子摩根）",
+   "priority": "P2",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "oconnell",
+   "name": "奥康奈尔",
+   "priority": "P1",
+   "desc": "爱尔兰起义军特使，30 岁上下，深绿色外套、围巾，坚毅。"
+  },
+  {
+   "kind": "face",
+   "id": "oconnell",
+   "name": "奥康奈尔",
+   "priority": "P2",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "hudson_lowe",
+   "name": "哈德森·洛总督",
+   "priority": "P2",
+   "desc": "46 岁的英国将军，圣赫勒拿总督。红色英军将军制服、瘦削、表情刻板。"
+  },
+  {
+   "kind": "face",
+   "id": "hudson_lowe",
+   "name": "哈德森·洛总督",
+   "priority": "P2",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "pierre",
+   "name": "小皮埃尔",
+   "priority": "P2",
+   "desc": "二十出头的年轻勤务兵（1812 年别列津纳桥头被捡回来的鼓手），机灵、瘦小，旧军装改的便服、帽子，腰上还挂着一面旧军鼓的鼓槌。"
+  },
+  {
+   "kind": "face",
+   "id": "pierre",
+   "name": "小皮埃尔",
+   "priority": "P2",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "crawford",
+   "name": "克劳福德上尉",
+   "priority": "P2",
+   "desc": "驻岛宪兵队长，英军红色军服，中年。"
+  },
+  {
+   "kind": "face",
+   "id": "crawford",
+   "name": "克劳福德上尉",
+   "priority": "P2",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "howard",
+   "name": "霍华德中尉",
+   "priority": "P2",
+   "desc": "英军年轻军需官，红色军服，拿着通行证和文件夹。"
+  },
+  {
+   "kind": "face",
+   "id": "howard",
+   "name": "霍华德中尉",
+   "priority": "P2",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "david_moses",
+   "name": "大卫·摩西",
+   "priority": "P2",
+   "desc": "好望角的汇票经纪人，中年，深色礼服、夹鼻眼镜。"
+  },
+  {
+   "kind": "face",
+   "id": "david_moses",
+   "name": "大卫·摩西",
+   "priority": "P2",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "palmerston",
+   "name": "帕默斯顿勋爵",
+   "priority": "P2",
+   "desc": "1835 年的英国外交大臣，50 岁上下，深色礼服。"
+  },
+  {
+   "kind": "face",
+   "id": "palmerston",
+   "name": "帕默斯顿勋爵",
+   "priority": "P2",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "chara",
+   "id": "rothschild",
+   "name": "内森·罗斯柴尔德",
+   "priority": "P2",
+   "desc": "伦敦银行家，50 多岁，深色礼服，圆脸。"
+  },
+  {
+   "kind": "face",
+   "id": "rothschild",
+   "name": "内森·罗斯柴尔德",
+   "priority": "P2",
+   "desc": "同一人物的头像，和立绘用同一个模型。"
+  },
+  {
+   "kind": "face",
+   "id": "troop_line",
+   "name": "战列步兵（部队头像）",
+   "priority": "P1",
+   "desc": "部署卡上的部队头像：一名该兵种士兵的头和肩。1796 年法军战列步兵：双角帽、深蓝色上衣配白色翻领和红色领口袖口、白马甲白马裤、黑绑腿、白色交叉背带，持带刺刀的火枪。"
+  },
+  {
+   "kind": "face",
+   "id": "troop_grenadier",
+   "name": "掷弹兵（部队头像）",
+   "priority": "P1",
+   "desc": "部署卡上的部队头像：一名该兵种士兵的头和肩。法军掷弹兵：熊皮高帽配红色羽饰、红色肩章，其余同战列步兵，更高大。"
+  },
+  {
+   "kind": "face",
+   "id": "troop_jager",
+   "name": "猎兵（部队头像）",
+   "priority": "P1",
+   "desc": "部署卡上的部队头像：一名该兵种士兵的头和肩。法军轻步兵（猎兵）：深蓝色上衣、筒帽配绿黄羽饰，持短一些的火枪，姿态灵活。"
+  },
+  {
+   "kind": "face",
+   "id": "troop_hussar",
+   "name": "骠骑兵（部队头像）",
+   "priority": "P1",
+   "desc": "部署卡上的部队头像：一名该兵种士兵的头和肩。法军骠骑兵，骑马：带横向盘扣的短上衣（多尔曼）、挂在左肩的毛边短外套（佩利斯）、高筒帽、马刀。颜色用天蓝配红。"
+  },
+  {
+   "kind": "face",
+   "id": "troop_artillery",
+   "name": "炮兵（部队头像）",
+   "priority": "P1",
+   "desc": "部署卡上的部队头像：一名该兵种士兵的头和肩。法军步炮兵：深蓝制服配红色饰边，一门 8 磅格里博瓦尔野战炮（橄榄绿炮架）加两名炮手。"
+  },
+  {
+   "kind": "face",
+   "id": "troop_medic",
+   "name": "军医（部队头像）",
+   "priority": "P1",
+   "desc": "部署卡上的部队头像：一名该兵种士兵的头和肩。法军军医：深蓝外衣配深红饰边，挎器械包。不要画红十字标志。"
+  },
+  {
+   "kind": "face",
+   "id": "troop_engineer",
+   "name": "工兵（部队头像）",
+   "priority": "P1",
+   "desc": "部署卡上的部队头像：一名该兵种士兵的头和肩。法军工兵：熊皮帽、大胡子、白色皮围裙、斧子。"
+  },
+  {
+   "kind": "face",
+   "id": "troop_drummer",
+   "name": "鼓手（部队头像）",
+   "priority": "P1",
+   "desc": "部署卡上的部队头像：一名该兵种士兵的头和肩。法军鼓手：上衣镶三色饰带，挎黄铜边军鼓。"
+  },
+  {
+   "kind": "face",
+   "id": "enemy_whitecoat",
+   "name": "白衣步兵（敌人头像）",
+   "priority": "P2",
+   "desc": "敌人信息栏的头像。奥地利战列步兵：白色上衣配彩色翻领、黑色皮头盔带冠饰、白马裤黑绑腿，持火枪。单人。"
+  },
+  {
+   "kind": "face",
+   "id": "enemy_grenz",
+   "name": "格伦茨猎兵（敌人头像）",
+   "priority": "P2",
+   "desc": "敌人信息栏的头像。奥地利边境猎兵（格伦茨）：褐色上衣、浅蓝色匈牙利式紧身裤、筒帽，持线膛枪。单人。"
+  },
+  {
+   "kind": "face",
+   "id": "enemy_dragoon",
+   "name": "龙骑兵（敌人头像）",
+   "priority": "P2",
+   "desc": "敌人信息栏的头像。奥地利龙骑兵，骑马：白色上衣、黑色皮头盔带冠饰、重马刀。"
+  },
+  {
+   "kind": "face",
+   "id": "enemy_hungarian",
+   "name": "匈牙利掷弹兵（敌人头像）",
+   "priority": "P2",
+   "desc": "敌人信息栏的头像。匈牙利掷弹兵：白色上衣、带铜牌的熊皮高帽、浅蓝色紧身裤配黄黑饰绳、八字胡，高大。"
+  },
+  {
+   "kind": "face",
+   "id": "enemy_leader",
+   "name": "纵队长（敌人头像）",
+   "priority": "P2",
+   "desc": "敌人信息栏的头像。奥地利军官：白色上衣、黄黑两色腰带、双角帽、举着军刀指挥。"
+  },
+  {
+   "kind": "face",
+   "id": "enemy_wagon",
+   "name": "弹药车（敌人头像）",
+   "priority": "P2",
+   "desc": "敌人信息栏的头像。奥军弹药车：木制两轮车，土黄色漆，一匹马拉，车上盖帆布。没有攻击动作。"
+  },
+  {
+   "kind": "face",
+   "id": "enemy_gun",
+   "name": "奥军炮（敌人头像）",
+   "priority": "P2",
+   "desc": "敌人信息栏的头像。奥军 6 磅野战炮：炮架漆成土黄色（奥军传统），两名穿褐色上衣的炮手。"
+  },
+  {
+   "kind": "unit",
+   "id": "villefort",
+   "name": "维尔福（主角）",
+   "priority": "P0",
+   "desc": "主角上阵的样子：在上面的人物描述基础上，戴双角帽、佩军刀，一手拿一卷调拨凭单。单人。",
+   "role": "hero"
+  },
+  {
+   "kind": "unit",
+   "id": "dantes",
+   "name": "埃德蒙·唐泰斯（基督山伯爵）",
+   "priority": "P1",
+   "desc": "伙伴上阵的样子（兵种：骠骑兵），按上面的人物描述，换成战场装备。单人（骠骑兵连马、炮兵连炮）。",
+   "role": "companion",
+   "cls": "hussar"
+  },
+  {
+   "kind": "unit",
+   "id": "gourgaud",
+   "name": "古尔戈将军",
+   "priority": "P1",
+   "desc": "伙伴上阵的样子（兵种：掷弹兵），按上面的人物描述，换成战场装备。单人（骠骑兵连马、炮兵连炮）。",
+   "role": "companion",
+   "cls": "grenadier"
+  },
+  {
+   "kind": "unit",
+   "id": "faria",
+   "name": "法利亚神甫",
+   "priority": "P1",
+   "desc": "伙伴上阵的样子（兵种：工兵），按上面的人物描述，换成战场装备。单人（骠骑兵连马、炮兵连炮）。",
+   "role": "companion",
+   "cls": "engineer"
+  },
+  {
+   "kind": "unit",
+   "id": "friday",
+   "name": "星期五",
+   "priority": "P1",
+   "desc": "伙伴上阵的样子（兵种：鼓手），按上面的人物描述，换成战场装备。单人（骠骑兵连马、炮兵连炮）。",
+   "role": "companion",
+   "cls": "drummer"
+  },
+  {
+   "kind": "unit",
+   "id": "nemo",
+   "name": "尼摩船长（达卡王子）",
+   "priority": "P1",
+   "desc": "伙伴上阵的样子（兵种：炮兵），按上面的人物描述，换成战场装备。单人（骠骑兵连马、炮兵连炮）。",
+   "role": "companion",
+   "cls": "artillery"
+  },
+  {
+   "kind": "unit",
+   "id": "morel",
+   "name": "莫雷尔船长",
+   "priority": "P1",
+   "desc": "伙伴上阵的样子（兵种：战列步兵），按上面的人物描述，换成战场装备。单人（骠骑兵连马、炮兵连炮）。",
+   "role": "companion",
+   "cls": "line"
+  },
+  {
+   "kind": "unit",
+   "id": "marie",
+   "name": "玛丽·朗热夫人",
+   "priority": "P0",
+   "desc": "伙伴上阵的样子（兵种：军医），按上面的人物描述，换成战场装备。单人（骠骑兵连马、炮兵连炮）。",
+   "role": "companion",
+   "cls": "medic"
+  },
+  {
+   "kind": "unit",
+   "id": "corso",
+   "name": "科尔索",
+   "priority": "P1",
+   "desc": "伙伴上阵的样子（兵种：猎兵），按上面的人物描述，换成战场装备。单人（骠骑兵连马、炮兵连炮）。",
+   "role": "companion",
+   "cls": "jager"
+  },
+  {
+   "kind": "unit",
+   "id": "troop_line",
+   "name": "战列步兵（部队）",
+   "priority": "P0",
+   "desc": "一个营的部队：画 3 名士兵前后错开站成小队形（骠骑兵画 2 骑，炮兵画 1 门炮 + 2 名炮手），整体仍按锚点站在格子中央。1796 年法军战列步兵：双角帽、深蓝色上衣配白色翻领和红色领口袖口、白马甲白马裤、黑绑腿、白色交叉背带，持带刺刀的火枪。",
+   "role": "troop",
+   "cls": "line"
+  },
+  {
+   "kind": "unit",
+   "id": "troop_grenadier",
+   "name": "掷弹兵（部队）",
+   "priority": "P1",
+   "desc": "一个营的部队：画 3 名士兵前后错开站成小队形（骠骑兵画 2 骑，炮兵画 1 门炮 + 2 名炮手），整体仍按锚点站在格子中央。法军掷弹兵：熊皮高帽配红色羽饰、红色肩章，其余同战列步兵，更高大。",
+   "role": "troop",
+   "cls": "grenadier"
+  },
+  {
+   "kind": "unit",
+   "id": "troop_jager",
+   "name": "猎兵（部队）",
+   "priority": "P1",
+   "desc": "一个营的部队：画 3 名士兵前后错开站成小队形（骠骑兵画 2 骑，炮兵画 1 门炮 + 2 名炮手），整体仍按锚点站在格子中央。法军轻步兵（猎兵）：深蓝色上衣、筒帽配绿黄羽饰，持短一些的火枪，姿态灵活。",
+   "role": "troop",
+   "cls": "jager"
+  },
+  {
+   "kind": "unit",
+   "id": "troop_hussar",
+   "name": "骠骑兵（部队）",
+   "priority": "P1",
+   "desc": "一个营的部队：画 3 名士兵前后错开站成小队形（骠骑兵画 2 骑，炮兵画 1 门炮 + 2 名炮手），整体仍按锚点站在格子中央。法军骠骑兵，骑马：带横向盘扣的短上衣（多尔曼）、挂在左肩的毛边短外套（佩利斯）、高筒帽、马刀。颜色用天蓝配红。",
+   "role": "troop",
+   "cls": "hussar"
+  },
+  {
+   "kind": "unit",
+   "id": "troop_artillery",
+   "name": "炮兵（部队）",
+   "priority": "P1",
+   "desc": "一个营的部队：画 3 名士兵前后错开站成小队形（骠骑兵画 2 骑，炮兵画 1 门炮 + 2 名炮手），整体仍按锚点站在格子中央。法军步炮兵：深蓝制服配红色饰边，一门 8 磅格里博瓦尔野战炮（橄榄绿炮架）加两名炮手。",
+   "role": "troop",
+   "cls": "artillery"
+  },
+  {
+   "kind": "unit",
+   "id": "troop_medic",
+   "name": "军医（部队）",
+   "priority": "P1",
+   "desc": "一个营的部队：画 3 名士兵前后错开站成小队形（骠骑兵画 2 骑，炮兵画 1 门炮 + 2 名炮手），整体仍按锚点站在格子中央。法军军医：深蓝外衣配深红饰边，挎器械包。不要画红十字标志。",
+   "role": "troop",
+   "cls": "medic"
+  },
+  {
+   "kind": "unit",
+   "id": "troop_engineer",
+   "name": "工兵（部队）",
+   "priority": "P1",
+   "desc": "一个营的部队：画 3 名士兵前后错开站成小队形（骠骑兵画 2 骑，炮兵画 1 门炮 + 2 名炮手），整体仍按锚点站在格子中央。法军工兵：熊皮帽、大胡子、白色皮围裙、斧子。",
+   "role": "troop",
+   "cls": "engineer"
+  },
+  {
+   "kind": "unit",
+   "id": "troop_drummer",
+   "name": "鼓手（部队）",
+   "priority": "P1",
+   "desc": "一个营的部队：画 3 名士兵前后错开站成小队形（骠骑兵画 2 骑，炮兵画 1 门炮 + 2 名炮手），整体仍按锚点站在格子中央。法军鼓手：上衣镶三色饰带，挎黄铜边军鼓。",
+   "role": "troop",
+   "cls": "drummer"
+  },
+  {
+   "kind": "unit",
+   "id": "enemy_whitecoat",
+   "name": "白衣步兵",
+   "priority": "P0",
+   "desc": "奥地利战列步兵：白色上衣配彩色翻领、黑色皮头盔带冠饰、白马裤黑绑腿，持火枪。单人。",
+   "role": "enemy"
+  },
+  {
+   "kind": "unit",
+   "id": "enemy_grenz",
+   "name": "格伦茨猎兵",
+   "priority": "P1",
+   "desc": "奥地利边境猎兵（格伦茨）：褐色上衣、浅蓝色匈牙利式紧身裤、筒帽，持线膛枪。单人。",
+   "role": "enemy"
+  },
+  {
+   "kind": "unit",
+   "id": "enemy_dragoon",
+   "name": "龙骑兵",
+   "priority": "P1",
+   "desc": "奥地利龙骑兵，骑马：白色上衣、黑色皮头盔带冠饰、重马刀。",
+   "role": "enemy"
+  },
+  {
+   "kind": "unit",
+   "id": "enemy_hungarian",
+   "name": "匈牙利掷弹兵",
+   "priority": "P1",
+   "desc": "匈牙利掷弹兵：白色上衣、带铜牌的熊皮高帽、浅蓝色紧身裤配黄黑饰绳、八字胡，高大。",
+   "role": "enemy"
+  },
+  {
+   "kind": "unit",
+   "id": "enemy_leader",
+   "name": "纵队长",
+   "priority": "P1",
+   "desc": "奥地利军官：白色上衣、黄黑两色腰带、双角帽、举着军刀指挥。",
+   "role": "enemy"
+  },
+  {
+   "kind": "unit",
+   "id": "enemy_wagon",
+   "name": "弹药车",
+   "priority": "P1",
+   "desc": "奥军弹药车：木制两轮车，土黄色漆，一匹马拉，车上盖帆布。没有攻击动作。",
+   "role": "enemy",
+   "required_states": [
+    "idle",
+    "hit",
+    "down"
+   ]
+  },
+  {
+   "kind": "unit",
+   "id": "enemy_gun",
+   "name": "奥军炮",
+   "priority": "P1",
+   "desc": "奥军 6 磅野战炮：炮架漆成土黄色（奥军传统），两名穿褐色上衣的炮手。",
+   "role": "enemy",
+   "note": "attack = 开炮（炮口火光和白烟）；down = 炮被打翻、炮手倒地。"
+  },
+  {
+   "kind": "tex",
+   "id": "grass",
+   "name": "草地",
+   "priority": "P0",
+   "desc": "短草地，夹杂少量小石子和泥土。北意大利夏末的黄绿色。",
+   "terrain": "plain, gate, eagle"
+  },
+  {
+   "kind": "tex",
+   "id": "road",
+   "name": "土路",
+   "priority": "P0",
+   "desc": "压实的黄褐色土路，有碎石，但不要车辙或任何方向性的纹理。",
+   "terrain": "road, gate"
+  },
+  {
+   "kind": "tex",
+   "id": "rock",
+   "name": "高地岩顶",
+   "priority": "P0",
+   "desc": "高地顶面：灰褐色岩石和稀疏的草，比草地明显偏灰偏亮，一眼能和平地区分。",
+   "terrain": "high"
+  },
+  {
+   "kind": "tex",
+   "id": "village_ground",
+   "name": "村庄地面",
+   "priority": "P1",
+   "desc": "乡村石板和泥土混合的地面。",
+   "terrain": "village"
+  },
+  {
+   "kind": "tex",
+   "id": "forest_floor",
+   "name": "林地",
+   "priority": "P1",
+   "desc": "林下地面：落叶、苔藓、树根。",
+   "terrain": "woods"
+  },
+  {
+   "kind": "tex",
+   "id": "water",
+   "name": "河水",
+   "priority": "P1",
+   "desc": "从正上方看的河水：深青绿色，有细小波纹，不要白色浪花。",
+   "terrain": "river"
+  },
+  {
+   "kind": "tex",
+   "id": "ford",
+   "name": "浅滩",
+   "priority": "P1",
+   "desc": "浅水下面能看到卵石和沙，水色比河水浅很多。",
+   "terrain": "ford"
+  },
+  {
+   "kind": "tex",
+   "id": "marsh",
+   "name": "沼泽",
+   "priority": "P1",
+   "desc": "烂泥、积水洼和枯草，暗褐绿色。",
+   "terrain": "marsh"
+  },
+  {
+   "kind": "tex",
+   "id": "earthwork_top",
+   "name": "胸墙顶",
+   "priority": "P2",
+   "desc": "夯实的土顶，夹杂柳条筐（填土筐）的边。",
+   "terrain": "earthwork"
+  },
+  {
+   "kind": "side",
+   "id": "side_earth",
+   "name": "土层侧面",
+   "priority": "P0",
+   "desc": "地块侧面：上边缘一条草皮，往下是褐色土层夹石子。"
+  },
+  {
+   "kind": "side",
+   "id": "side_rock",
+   "name": "岩层侧面",
+   "priority": "P0",
+   "desc": "高地侧面：灰褐色分层岩石。"
+  },
+  {
+   "kind": "prop",
+   "id": "tree_a",
+   "name": "树 A",
+   "priority": "P0",
+   "desc": "北意大利的阔叶树（橡树或栗树），圆冠。",
+   "max_size": [
+    0.6,
+    0.9,
+    0.6
+   ]
+  },
+  {
+   "kind": "prop",
+   "id": "tree_b",
+   "name": "树 B",
+   "priority": "P1",
+   "desc": "细高的意大利柏树。",
+   "max_size": [
+    0.4,
+    1.0,
+    0.4
+   ]
+  },
+  {
+   "kind": "prop",
+   "id": "tree_c",
+   "name": "灌木丛",
+   "priority": "P1",
+   "desc": "低矮的灌木丛。",
+   "max_size": [
+    0.6,
+    0.4,
+    0.6
+   ]
+  },
+  {
+   "kind": "prop",
+   "id": "house_a",
+   "name": "农舍 A",
+   "priority": "P0",
+   "desc": "意大利乡村农舍：石墙、红瓦坡顶、木窗板。",
+   "max_size": [
+    0.85,
+    1.0,
+    0.85
+   ]
+  },
+  {
+   "kind": "prop",
+   "id": "house_b",
+   "name": "农舍 B",
+   "priority": "P1",
+   "desc": "带矮石墙院子的小谷仓。",
+   "max_size": [
+    0.85,
+    0.9,
+    0.85
+   ]
+  },
+  {
+   "kind": "prop",
+   "id": "gate",
+   "name": "红门",
+   "priority": "P0",
+   "desc": "敌人进场的门：一座刷成暗红色的木制营门或关卡拱门，两侧有短木栅。门洞朝 ±X 方向（敌人从 +X 方向走向 -X）。",
+   "max_size": [
+    0.95,
+    1.2,
+    0.95
+   ]
+  },
+  {
+   "kind": "prop",
+   "id": "eagle",
+   "name": "鹰旗",
+   "priority": "P0",
+   "desc": "我方要守的点：一根旗杆，杆顶是金色法兰西鹰徽，下挂三色旗，杆脚围一圈沙袋或石块。",
+   "max_size": [
+    0.6,
+    1.3,
+    0.6
+   ]
+  },
+  {
+   "kind": "prop",
+   "id": "earthwork",
+   "name": "胸墙",
+   "priority": "P1",
+   "desc": "土木胸墙：填土的柳条筐排成一道矮墙，横跨整格，沿 X 方向。",
+   "max_size": [
+    1.0,
+    0.4,
+    0.5
+   ]
+  },
+  {
+   "kind": "prop",
+   "id": "bridge",
+   "name": "石桥",
+   "priority": "P1",
+   "desc": "一段石拱桥，桥面沿 X 方向，长 1 格、宽 0.7 格；桥面顶在高度 0.15，桥墩向下伸到 -0.35（下面是河）。",
+   "max_size": [
+    1.0,
+    0.5,
+    0.7
+   ],
+   "min_y": -0.4
+  },
+  {
+   "kind": "prop",
+   "id": "cheval",
+   "name": "拒马",
+   "priority": "P1",
+   "desc": "工兵放下的拒马：交叉削尖的木桩。",
+   "max_size": [
+    0.9,
+    0.5,
+    0.4
+   ]
+  },
+  {
+   "kind": "prop",
+   "id": "reeds",
+   "name": "芦苇",
+   "priority": "P1",
+   "desc": "沼泽里的一丛芦苇。",
+   "max_size": [
+    0.5,
+    0.6,
+    0.5
+   ]
+  },
+  {
+   "kind": "prop",
+   "id": "rocks",
+   "name": "乱石",
+   "priority": "P2",
+   "desc": "高地上点缀的几块石头。",
+   "max_size": [
+    0.6,
+    0.3,
+    0.6
+   ]
+  }
+ ]
+}

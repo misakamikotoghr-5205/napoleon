@@ -1,0 +1,57 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-25:rogue-v1"
+  },
+  "rg5.notice.shanghai": {
+    "t": "她在上海银楼学过三年徒。哥哥临走只交代了几句，柜上的规矩不用再一样样教了。"
+  },
+  "rg5.opening.default": {
+    "t": "哥哥的铺子：从头学起"
+  },
+  "rg5.opening.shanghai": {
+    "t": "上海学过徒：不用教，直接开张"
+  },
+  "rg5.chronicle.ending.kind": {
+    "t": "三年熬过来了，街坊说德厚当的柜台还是热的。"
+  },
+  "rg5.chronicle.ending.plain": {
+    "t": "三年熬过来了，铺子还开着。"
+  },
+  "rg5.chronicle.ending.hard": {
+    "t": "三年熬过来了，铺子还开着，只是没人再提德厚当的“厚”字。"
+  },
+  "rg5.chronicle.prison.1938": {
+    "t": "民国二十七年三月第{d}天，人被带走，铺子落了锁。"
+  },
+  "rg5.chronicle.prison.1939": {
+    "t": "腊月第{d}天被带走，没能出来过年。"
+  },
+  "rg5.chronicle.prison.1940": {
+    "t": "民国二十九年三月第{d}天，人被带走，这本账停在那一页。"
+  },
+  "rg5.chronicle.abandoned.1938": {
+    "t": "民国二十七年三月第{d}天，账本合上了，没再往下记。"
+  },
+  "rg5.chronicle.abandoned.1939": {
+    "t": "腊月第{d}天，账本合上了，没再往下记。"
+  },
+  "rg5.chronicle.abandoned.1940": {
+    "t": "民国二十九年三月第{d}天，账本合上了，没再往下记。"
+  },
+  "rg5.chronicle.other": {
+    "t": "这本账在第{d}天合上了。"
+  },
+  "rg5.toast.closed": {
+    "t": "这本账合上了，放上了书架。"
+  },
+  "rg5.toast.profile_reset": {
+    "t": "旧账读不出来，另起了一本旧账簿。"
+  },
+  "rg5.dossier.old_ink": {
+    "t": "旧账"
+  },
+  "rg5.dossier.old_ink_hint": {
+    "t": "淡墨的是旧账上见过的；这一本还得自己问出来。"
+  }
+}

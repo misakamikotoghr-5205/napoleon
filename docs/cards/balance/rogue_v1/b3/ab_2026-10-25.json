@@ -1,0 +1,297 @@
+{
+  "schema": 1,
+  "cells": {
+    "on": {
+      "fair": {
+        "0": {
+          "cleared": 20,
+          "runs": 20,
+          "median": 197,
+          "samples": 20
+        },
+        "1": {
+          "cleared": 16,
+          "runs": 20,
+          "median": 85,
+          "samples": 16
+        },
+        "2": {
+          "cleared": 8,
+          "runs": 20,
+          "median": 0,
+          "samples": 8
+        }
+      },
+      "idle": {
+        "0": {
+          "cleared": 20,
+          "runs": 20,
+          "median": 220,
+          "samples": 20
+        },
+        "1": {
+          "cleared": 20,
+          "runs": 20,
+          "median": 142,
+          "samples": 20
+        },
+        "2": {
+          "cleared": 12,
+          "runs": 20,
+          "median": 16,
+          "samples": 12
+        }
+      },
+      "random": {
+        "0": {
+          "cleared": 20,
+          "runs": 20,
+          "median": 62,
+          "samples": 20
+        },
+        "1": {
+          "cleared": 20,
+          "runs": 20,
+          "median": 148,
+          "samples": 20
+        },
+        "2": {
+          "cleared": 14,
+          "runs": 20,
+          "median": 244,
+          "samples": 14
+        }
+      },
+      "refuser": {
+        "0": {
+          "cleared": 20,
+          "runs": 20,
+          "median": 220,
+          "samples": 20
+        },
+        "1": {
+          "cleared": 20,
+          "runs": 20,
+          "median": 142,
+          "samples": 20
+        },
+        "2": {
+          "cleared": 20,
+          "runs": 20,
+          "median": 84,
+          "samples": 20
+        }
+      },
+      "trader": {
+        "0": {
+          "cleared": 20,
+          "runs": 20,
+          "median": 41,
+          "samples": 20
+        },
+        "1": {
+          "cleared": 18,
+          "runs": 20,
+          "median": 45,
+          "samples": 18
+        },
+        "2": {
+          "cleared": 12,
+          "runs": 20,
+          "median": 45,
+          "samples": 12
+        }
+      }
+    },
+    "off": {
+      "fair": {
+        "0": {
+          "cleared": 19,
+          "runs": 20,
+          "median": 148,
+          "samples": 19
+        },
+        "1": {
+          "cleared": 15,
+          "runs": 20,
+          "median": 68,
+          "samples": 15
+        },
+        "2": {
+          "cleared": 9,
+          "runs": 20,
+          "median": 62,
+          "samples": 9
+        }
+      },
+      "idle": {
+        "0": {
+          "cleared": 20,
+          "runs": 20,
+          "median": 220,
+          "samples": 20
+        },
+        "1": {
+          "cleared": 20,
+          "runs": 20,
+          "median": 142,
+          "samples": 20
+        },
+        "2": {
+          "cleared": 20,
+          "runs": 20,
+          "median": 84,
+          "samples": 20
+        }
+      },
+      "refuser": {
+        "0": {
+          "cleared": 20,
+          "runs": 20,
+          "median": 220,
+          "samples": 20
+        },
+        "1": {
+          "cleared": 20,
+          "runs": 20,
+          "median": 142,
+          "samples": 20
+        },
+        "2": {
+          "cleared": 20,
+          "runs": 20,
+          "median": 84,
+          "samples": 20
+        }
+      },
+      "trader": {
+        "0": {
+          "cleared": 20,
+          "runs": 20,
+          "median": 49,
+          "samples": 20
+        },
+        "1": {
+          "cleared": 15,
+          "runs": 20,
+          "median": 14,
+          "samples": 15
+        },
+        "2": {
+          "cleared": 9,
+          "runs": 20,
+          "median": 32,
+          "samples": 9
+        }
+      }
+    }
+  },
+  "checks": {
+    "A1": {
+      "pass": true,
+      "rule": "refuser on/off: clears differ <= 1 and month cash medians differ <= 5% in each of the three stages"
+    },
+    "A2": {
+      "pass": true,
+      "rule": "trader: on clears >= off clears in each stage; stage 2 and 3 month cash median on >= off x 1.10"
+    },
+    "A3": {
+      "pass": true,
+      "rule": "fair: on clears >= off clears - 1 in each stage"
+    },
+    "A4": {
+      "pass": true,
+      "rule": "stage 3 month cash median: (trader on - refuser on) > (trader off - refuser off)",
+      "gap_on": -39,
+      "gap_off": -52
+    },
+    "A5": {
+      "pass": true,
+      "rule": "sum over the three stages of the month cash median gain (on - off): idle < trader",
+      "idle_gain": [
+        0,
+        0,
+        -68
+      ],
+      "trader_gain": [
+        -8,
+        31,
+        13
+      ],
+      "idle_total": -68,
+      "trader_total": 36
+    },
+    "A6": {
+      "pass": true,
+      "rule": "weekly stocktakes offering 3 items (on): trader >= 60%, idle <= 10%",
+      "trader": {
+        "full": 156,
+        "weeks": 192,
+        "rate": 0.8125
+      },
+      "idle": {
+        "full": 0,
+        "weeks": 223,
+        "rate": 0.0
+      }
+    },
+    "A7": {
+      "pass": true,
+      "rule": "every relic and source offered somewhere (on); trader or random picked every relic",
+      "relics": 12,
+      "sources": 6,
+      "never_offered": [],
+      "never_picked_by_trader_or_random": [],
+      "random_ran": true,
+      "offered": {
+        "ky.dockhands": 181,
+        "ky.junk_runners": 208,
+        "ky.needy_neighbors": 229,
+        "ky.old_customers": 196,
+        "rl.cat_bowl": 66,
+        "rl.chen_mortar": 90,
+        "rl.oilpaper_umbrella": 151,
+        "rl.old_almanac": 151,
+        "rl.stub_box": 147,
+        "rl.sun_inkpad": 95,
+        "ky.big_households": 153,
+        "ky.traveling_buyers": 196,
+        "rl.blue_curtain": 156,
+        "rl.camphor_chest": 95,
+        "rl.hu2_pipe": 89,
+        "rl.master_steelyard": 100,
+        "rl.rosewood_abacus": 61,
+        "rl.old_signboard": 69
+      },
+      "picked_trader_random": {
+        "ky.junk_runners": 18,
+        "rl.cat_bowl": 17,
+        "rl.chen_mortar": 20,
+        "rl.old_almanac": 22,
+        "rl.stub_box": 22,
+        "ky.needy_neighbors": 15,
+        "rl.camphor_chest": 23,
+        "rl.sun_inkpad": 16,
+        "ky.traveling_buyers": 17,
+        "rl.hu2_pipe": 21,
+        "ky.dockhands": 12,
+        "rl.oilpaper_umbrella": 19,
+        "rl.blue_curtain": 25,
+        "rl.master_steelyard": 24,
+        "rl.old_signboard": 16,
+        "rl.rosewood_abacus": 20,
+        "ky.big_households": 6,
+        "ky.old_customers": 8
+      }
+    }
+  },
+  "db_hashes": {
+    "on": [
+      "40bd996f6a6b67ef5defa62f479080152d0dcda924a2d2c8c527adcfd2d9c913"
+    ],
+    "off": [
+      "27ef25dd7e2f61c31273f37642c51fbd2d3e38b0a6d899af99eed0791b927020"
+    ]
+  },
+  "date": "2026-10-25"
+}

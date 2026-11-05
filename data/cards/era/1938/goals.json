@@ -1,0 +1,182 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1,
+    "brief": "1938 年三月的目标：一条主线，其余可选"
+  },
+  "cards": [
+    {
+      "id": "gl.1938.keep_shop",
+      "type": "goal",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "shop"
+      ],
+      "main": true,
+      "done_when": {
+        "estate_status": [
+          "es.shopfront",
+          "held"
+        ]
+      },
+      "eval": "month_close",
+      "effects": {
+        "on_done": [],
+        "on_fail": []
+      },
+      "art": "illus.gl.1938.keep_shop",
+      "brief": "主线。撑过 1938 年三月这一个月，月底铺面还在自己名下。月底才算，不是当场掷铜钱。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gl.1938.redeem_cabinet",
+      "type": "goal",
+      "era": [
+        "1938"
+      ],
+      "weight": 8,
+      "tags": [
+        "shop"
+      ],
+      "main": false,
+      "done_when": {
+        "estate_status": [
+          "es.jewel_cabinet",
+          "held"
+        ]
+      },
+      "eval": "month_close",
+      "effects": {
+        "on_done": [],
+        "on_fail": []
+      },
+      "art": "illus.gl.1938.redeem_cabinet",
+      "brief": "可选。月底首饰柜还在自己名下。押出去的，要在月底前赎回来才算。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gl.1938.zhouma_page",
+      "type": "goal",
+      "era": [
+        "1938"
+      ],
+      "weight": 6,
+      "tags": [
+        "dossier"
+      ],
+      "main": false,
+      "done_when": {
+        "dossier_page_complete": "zhouma"
+      },
+      "eval": "month_close",
+      "effects": {
+        "on_done": [],
+        "on_fail": []
+      },
+      "art": "illus.gl.1938.zhouma_page",
+      "brief": "可选。周妈那一页档案补齐。碎片由别人的牌发，这里只写完成条件。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gl.1938.low_heat",
+      "type": "goal",
+      "era": [
+        "1938"
+      ],
+      "weight": 7,
+      "tags": [
+        "rumor"
+      ],
+      "main": false,
+      "done_when": {
+        "heat_tier_lte": 1
+      },
+      "eval": "month_close",
+      "effects": {
+        "on_done": [],
+        "on_fail": []
+      },
+      "art": "illus.gl.1938.low_heat",
+      "brief": "可选。月底风声停在较低的两档里。按月底结算。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gl.1938.levy_clear",
+      "type": "goal",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "levy"
+      ],
+      "main": false,
+      "done_when": {
+        "not": {
+          "demand_open": "money"
+        }
+      },
+      "eval": "month_close",
+      "effects": {
+        "on_done": [],
+        "on_fail": []
+      },
+      "art": "illus.gl.1938.levy_clear",
+      "brief": "可选。月底手上没有没办完的要钱条子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gl.1938.storeroom",
+      "type": "goal",
+      "era": [
+        "1938"
+      ],
+      "weight": 4,
+      "tags": [
+        "shop"
+      ],
+      "main": false,
+      "done_when": {
+        "estate_status": [
+          "es.storeroom",
+          "held"
+        ]
+      },
+      "eval": "month_close",
+      "effects": {
+        "on_done": [],
+        "on_fail": []
+      },
+      "art": "illus.gl.1938.storeroom",
+      "brief": "可选。月底库房还在自己名下，没有押丢。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

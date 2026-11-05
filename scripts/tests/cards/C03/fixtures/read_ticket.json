@@ -1,0 +1,184 @@
+{
+  "_meta": {
+    "owner": "C03",
+    "schema": 1,
+    "brief": "当票 tk.1938.de196 只读，带小游戏，能留"
+  },
+  "view": {
+    "v": 1,
+    "phase": "day",
+    "mode": "shop",
+    "busy": false,
+    "date": {
+      "stage": 0,
+      "era": "1938",
+      "y": 1938,
+      "m": 3,
+      "d": 9,
+      "weekday": 2,
+      "stage_day": 9,
+      "stage_days": 30,
+      "abs_day": 9,
+      "minute": 540
+    },
+    "notice": {
+      "weather": "clear",
+      "market_day": false,
+      "news": [],
+      "almanac": {
+        "id": "alm.shoudang",
+        "yi": [],
+        "ji": [],
+        "done": []
+      },
+      "fortune": ""
+    },
+    "money": {
+      "amount": 340,
+      "currency": "fabi"
+    },
+    "rep_tier": 1,
+    "heat_tier": 0,
+    "self": {
+      "uid": "c0001",
+      "def": "self.ruhua",
+      "type": "self",
+      "zone": "self",
+      "art": "portrait.ruhua",
+      "gold": false,
+      "must_resolve": false,
+      "keepable": false,
+      "expires_in": -1,
+      "status": "open",
+      "person": "",
+      "intent": "",
+      "item": null,
+      "asking": -1,
+      "observations": [],
+      "days_left": -1,
+      "attrs": {
+        "eye": 2,
+        "tongue": 1,
+        "pull": 1,
+        "nerve": 1
+      },
+      "used_today": false,
+      "away_days": 0,
+      "can_appraise": false,
+      "panel": "none",
+      "actions": [
+        {
+          "id": "open",
+          "enabled": true,
+          "reason_key": ""
+        }
+      ]
+    },
+    "hand": [
+      {
+        "uid": "c0032",
+        "def": "tk.1938.de196",
+        "type": "pawn_ticket",
+        "zone": "hand",
+        "art": "illus.tk.de196",
+        "gold": false,
+        "must_resolve": false,
+        "keepable": true,
+        "expires_in": -1,
+        "status": "open",
+        "person": "",
+        "intent": "",
+        "item": null,
+        "asking": -1,
+        "observations": [],
+        "days_left": -1,
+        "attrs": {},
+        "used_today": false,
+        "away_days": 0,
+        "can_appraise": false,
+        "panel": "read",
+        "actions": [
+          {
+            "id": "open",
+            "enabled": true,
+            "reason_key": ""
+          }
+        ],
+        "minigame": "fragments"
+      }
+    ],
+    "kept": [],
+    "contacts": [],
+    "pending": [],
+    "demands": [],
+    "caps": {
+      "kept": 5,
+      "contacts": 3,
+      "shelf": 12
+    },
+    "shelf_count": 1,
+    "tickets": [],
+    "estates": [],
+    "goals": [],
+    "night_offers": [],
+    "open_panel": {
+      "kind": "",
+      "args": {}
+    },
+    "lots": [],
+    "dossier_new": 0
+  },
+  "queries": {
+    "card|{\"uid\":\"c0032\"}": {
+      "uid": "c0032",
+      "def": "tk.1938.de196",
+      "type": "pawn_ticket",
+      "zone": "hand",
+      "art": "illus.tk.de196",
+      "gold": false,
+      "must_resolve": false,
+      "keepable": true,
+      "expires_in": -1,
+      "status": "open",
+      "person": "",
+      "intent": "",
+      "item": null,
+      "asking": -1,
+      "observations": [],
+      "days_left": -1,
+      "attrs": {},
+      "used_today": false,
+      "away_days": 0,
+      "can_appraise": false,
+      "panel": "read",
+      "actions": [
+        {
+          "id": "open",
+          "enabled": true,
+          "reason_key": ""
+        }
+      ],
+      "minigame": "fragments"
+    },
+    "slots|{\"uid\":\"c0032\"}": {
+      "slots": [],
+      "coins": 0,
+      "auto_heads": 0,
+      "need": 0,
+      "auto_pass": false,
+      "ready": true
+    },
+    "stock|{}": {
+      "items": []
+    }
+  },
+  "responses": [
+    {
+      "cmd": "*",
+      "result": {
+        "ok": true,
+        "err": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "k02.notice.curfew": {
+    "t": "宵禁时出门，被拦了下来。"
+  },
+  "k02.notice.fine": {
+    "t": "门上贴了罚单，没有交。"
+  },
+  "k02.notice.kin": {
+    "t": "远房亲戚寄的钱到了。"
+  },
+  "k02.notice.levy": {
+    "t": "伪维持会的摊派单贴在门上，没理。"
+  },
+  "k02.notice.patrol": {
+    "t": "夜里巡查，没能过关。"
+  },
+  "k02.notice.police_fail": {
+    "t": "查良民证，没过关。"
+  },
+  "k02.notice.police_open": {
+    "t": "告示说，月底伪县警察所在镇上开门。"
+  },
+  "k02.notice.police_pass": {
+    "t": "查良民证，这一关过去了。"
+  },
+  "k02.notice.requisition": {
+    "t": "藏的货没藏住，被征走了。"
+  },
+  "k02.notice.rice": {
+    "t": "在米行排了半天队，总算买上了米。"
+  },
+  "k02.notice.road": {
+    "t": "出镇的路条放行了。"
+  },
+  "k02.reason.bail": {
+    "t": "保人钱"
+  },
+  "k02.reason.bigfate": {
+    "t": "大赌"
+  },
+  "k02.reason.dock": {
+    "t": "码头工钱"
+  },
+  "k02.reason.fine": {
+    "t": "伪维持会罚款"
+  },
+  "k02.reason.kin": {
+    "t": "亲戚寄钱"
+  },
+  "k02.reason.levy": {
+    "t": "伪维持会摊派"
+  },
+  "k02.reason.market": {
+    "t": "集市讲价"
+  },
+  "k02.reason.medicine": {
+    "t": "抓药"
+  },
+  "k02.reason.qingming": {
+    "t": "清明祭扫"
+  },
+  "k02.reason.quiet": {
+    "t": "压风声"
+  },
+  "k02.reason.refugee": {
+    "t": "接济逃难的人"
+  },
+  "k02.reason.repair": {
+    "t": "漏雨损货"
+  },
+  "k02.reason.requisition": {
+    "t": "征用"
+  },
+  "k02.reason.rice": {
+    "t": "买米"
+  },
+  "k02.reason.roof": {
+    "t": "修瓦"
+  },
+  "k02.reason.wharf": {
+    "t": "码头捐"
+  }
+}

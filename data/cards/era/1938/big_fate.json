@@ -1,0 +1,122 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1,
+    "brief": "1938 年三月的大赌，只由大轮盘扇区发出"
+  },
+  "cards": [
+    {
+      "id": "bf.1938.bail_shop",
+      "type": "big_fate",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "official",
+        "police"
+      ],
+      "crisis": [
+        "arrested"
+      ],
+      "valence": "mixed",
+      "conditions": {
+        "day_gte": 28
+      },
+      "choices": [
+        {
+          "id": "pledge",
+          "brief": "交保",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 70,
+              "payee": "bail_desk",
+              "reason": "k02.reason.bail",
+              "short": "ladder"
+            },
+            {
+              "op": "heat",
+              "tier": -1
+            },
+            {
+              "op": "flag",
+              "key": "bail_pledged"
+            },
+            {
+              "op": "rep",
+              "delta": -2
+            }
+          ]
+        },
+        {
+          "id": "decline",
+          "brief": "不交",
+          "effects": []
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.bf.1938.bail_shop",
+      "brief": "1938 年 3 月 28 日伪维新政府在南京成立，本关月底警察所开门之后，才有人说能用铺面的面子把人领出来。交一笔保钱，风声降一档，口碑也会掉。不交就作罢。第 28 天之前不发。不进随机牌库，只由大轮盘的扇区发到手上。没理会当不交。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "bf.1938.night_cargo",
+      "type": "big_fate",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "contraband",
+        "water"
+      ],
+      "crisis": [
+        "cash_short"
+      ],
+      "valence": "mixed",
+      "choices": [
+        {
+          "id": "take",
+          "brief": "收下",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 220,
+              "reason": "k02.reason.bigfate"
+            },
+            {
+              "op": "heat",
+              "delta": 8
+            },
+            {
+              "op": "flag",
+              "key": "night_cargo"
+            }
+          ]
+        },
+        {
+          "id": "decline",
+          "brief": "不收",
+          "effects": []
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.bf.1938.night_cargo",
+      "brief": "码头夜船先付一笔定钱，货在你这儿过几天。收下则钱进账，风声跟着涨。不收拉倒。1938 年三月的码头货，不是后年的统制收购。不进随机牌库，只由大轮盘的扇区发到手上。没理会当不收。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

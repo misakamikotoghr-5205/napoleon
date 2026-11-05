@@ -1,0 +1,190 @@
+{
+  "_meta": {
+    "owner": "K01",
+    "schema": 1,
+    "brief": "\u4f8b\u5b50\u96c6\uff1a1938 \u4eba\u7269\u724c\uff08\u00a74.7.1\uff09"
+  },
+  "cards": [
+    {
+      "id": "p.linsao.1938.pawn_hairpin",
+      "type": "person",
+      "person": "linsao",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "tags": [
+        "woman",
+        "boat",
+        "poor",
+        "omen_water"
+      ],
+      "intent": "pawn",
+      "item": {
+        "template": "jewelry.hairpin"
+      },
+      "asking": {
+        "pct": [
+          90,
+          120
+        ]
+      },
+      "floor": {
+        "pct": [
+          55,
+          75
+        ]
+      },
+      "patience_min": [
+        60,
+        120
+      ],
+      "impatience": "\u6d4b\u8bd5",
+      "term_days": 15,
+      "conditions": {
+        "not": {
+          "person_state": [
+            "linsao",
+            "gone"
+          ]
+        }
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.linsao.1938.hairpin"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.linsao",
+      "brief": "\u8239\u5de5\u7684\u59bb\u5b50\uff0c\u6000\u5b55\u516b\u4e2a\u6708\uff0c\u6765\u5f53\u4e00\u652f\u91d1\u7c2a\uff1b\u7c2a\u5b50\u5206\u91cf\u7565\u8f7b\uff0c\u50cf\u8865\u8fc7\u3002\u6765\u5f53\u540e\u5f97\u5f53\u7968\uff0c15 \u5929\u5230\u671f\u3002",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "id": "p.brother.1938.farewell",
+      "type": "person",
+      "person": "brother",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "family",
+        "story",
+        "omen_far",
+        "omen_family"
+      ],
+      "gold": true,
+      "story_node": "s1938.brother_farewell",
+      "intent": "story",
+      "schedule": {
+        "stage_day": 2,
+        "order": 1
+      },
+      "choices": [
+        {
+          "id": "listen",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1938.brother_farewell",
+              "outcome": "listened"
+            },
+            {
+              "op": "add_card",
+              "card": "kp.brother_note",
+              "to": "kept"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.brother.1938.farewell"
+            }
+          ],
+          "brief": "\u542c\u4ed6\u4ea4\u4ee3\u5b8c"
+        },
+        {
+          "id": "argue",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1938.brother_farewell",
+              "outcome": "argued"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.brother.1938.farewell_cold"
+            }
+          ],
+          "brief": "\u548c\u4ed6\u4e89"
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "story",
+            "node": "s1938.brother_farewell",
+            "outcome": "ignored"
+          },
+          {
+            "op": "dossier_gap",
+            "frag": "df.brother.1938.farewell"
+          }
+        ]
+      },
+      "art": "portrait.brother",
+      "brief": "\u7b2c\u4e8c\u5929\u54e5\u54e5\u79bb\u5bb6\uff0c\u628a\u94fa\u5b50\u4ea4\u7ed9\u4f60\u5e76\u7559\u4e00\u53e5\u4ea4\u4ee3\u3002\u6ca1\u7406\u4ed6\uff1a\u4ed6\u7559\u4e0b\u5b57\u6761\u8d70\u4e86\uff0c\u4ea4\u4ee3\u6ca1\u542c\u5168\uff0c\u6863\u6848\u9875\u7f3a\u8fd9\u4e00\u5757\u3002",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "id": "p.chen.1938.buy_scroll",
+      "type": "person",
+      "person": "chen",
+      "era": [
+        "1938"
+      ],
+      "weight": 6,
+      "tags": [
+        "buyer",
+        "art",
+        "omen_stranger"
+      ],
+      "intent": "buy",
+      "want": {
+        "cats": [
+          "art"
+        ],
+        "budget_pct": [
+          80,
+          130
+        ]
+      },
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "leave",
+      "art": "portrait.chen",
+      "brief": "\uff08W0 \u4f8b\u5b50\uff0c\u8865\u5168\u6765\u4e70\u7684\u6837\u5b50\uff09\u9648\u6587\u5ead\u6765\u94fa\u5b50\u91cc\u770b\u5b57\u753b\uff0c\u60f3\u6311\u4e00\u4ef6\u8d27\u67b6\u4e0a\u7684\u4e66\u753b\uff1b\u9884\u7b97\u76f8\u5bf9\u7269\u54c1\u771f\u503c\uff0c\u9690\u85cf\u3002",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

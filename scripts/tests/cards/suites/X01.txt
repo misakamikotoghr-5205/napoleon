@@ -1,0 +1,10 @@
+X01_boot|res://scripts/tests/cards/X01/test_boot.gd|120|--cards
+X01_boot_ship|res://scripts/tests/cards/X01/test_boot_ship.gd|120|
+X01_boot_main_cards|res://scripts/tests/cards/X01/test_boot_ship.gd|120|--cards --name=X01_boot_main_cards
+X01_boot_mock_flag|res://scripts/tests/cards/X01/test_boot_ship.gd|120|--cards-mock --name=X01_boot_mock_flag
+X01_campaign|res://scripts/tests/cards/X01/test_campaign.gd|300|
+X01_ui_campaign|res://scripts/tests/cards/X01/test_ui_campaign.gd|600|
+X01_continue|res://scripts/tests/cards/X01/test_continue.gd|120|
+X01_slot_choice|res://scripts/tests/cards/X01/test_slot_choice.gd|120|
+X01_guide_formal_d1_3|res://scripts/tests/cards/X01/test_guide_formal_d1_3.gd|300|
+X01_click_smoke|res://scripts/tests/cards/X01/test_click_smoke.gd|180|

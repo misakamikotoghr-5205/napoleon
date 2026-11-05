@@ -1,0 +1,132 @@
+{
+  "_meta": {
+    "owner": "K09",
+    "schema": 1,
+    "brief": "例子集：家当（§4.7.11）"
+  },
+  "cards": [
+    {
+      "id": "es.jewel_cabinet",
+      "type": "estate",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 1,
+      "mortgage_value": 80,
+      "interest_pct_month": 5,
+      "while_mortgaged": [
+        {
+          "mod": "no_intake_cat",
+          "cat": "jewelry"
+        }
+      ],
+      "lose_if_unredeemed": false,
+      "art": "illus.es.jewel_cabinet",
+      "brief": "首饰柜：押出去换现钱，每月付利息；押着的时候不能收首饰。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "id": "es.storeroom",
+      "type": "estate",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 2,
+      "mortgage_value": 120,
+      "interest_pct_month": 5,
+      "while_mortgaged": [
+        {
+          "mod": "shelf_cap",
+          "delta": -4
+        }
+      ],
+      "lose_if_unredeemed": false,
+      "art": "illus.es.storeroom",
+      "brief": "（W0 例子）库房：押着时货架少四格。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "es.counter",
+      "type": "estate",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 3,
+      "mortgage_value": 150,
+      "interest_pct_month": 5,
+      "while_mortgaged": [
+        {
+          "mod": "deal_count",
+          "type": "person",
+          "delta": -1
+        }
+      ],
+      "lose_if_unredeemed": false,
+      "art": "illus.es.counter",
+      "brief": "（W0 例子）柜台：押着时每天少来一位客人。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "es.old_house",
+      "type": "estate",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 4,
+      "mortgage_value": 260,
+      "interest_pct_month": 4,
+      "while_mortgaged": [
+        {
+          "mod": "pool_weight",
+          "pool": "life",
+          "tags_any": [],
+          "pct": 150
+        }
+      ],
+      "lose_if_unredeemed": false,
+      "art": "illus.es.old_house",
+      "brief": "（W0 例子）老宅：押着时生活牌变多。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "es.shopfront",
+      "type": "estate",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 5,
+      "mortgage_value": 400,
+      "interest_pct_month": 4,
+      "while_mortgaged": [],
+      "lose_if_unredeemed": true,
+      "art": "illus.es.shopfront",
+      "brief": "（W0 例子）铺面：押出去的那个月照开，月底赎不回就流落街头。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

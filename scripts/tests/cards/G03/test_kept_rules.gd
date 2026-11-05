@@ -1,0 +1,20 @@
+extends SceneTree
+const T = preload("res://scripts/tests/cards/lib/card_t.gd")
+const S = preload("res://scripts/tests/cards/G03/test_support.gd")
+func _initialize() -> void:
+	var t := T.new(self, "G03_kept_rules")
+	var e := S.engine()
+	var ctx := e.ctx
+	var uid := CardPiles.spawn(ctx, "kp.ma_owes", &"kept")
+	t.eq(CardKeptRules.bonus(ctx, uid, {"tags": ["official"]}), {"coins": 0, "heads": 3, "auto_pass": false}, "heads bonus")
+	t.eq(CardKeptRules.bonus(ctx, uid, {"tags": ["missing"]})["heads"], 0, "mismatch")
+	var token := CardPiles.spawn(ctx, "kp.brother_note", &"kept")
+	t.eq(CardKeptRules.bonus(ctx, token, {"tags": ["family"]})["coins"], 1, "coin bonus")
+	CardPiles.spawn(ctx, "kp.mystery_box", &"kept")
+	CardKeptRules.run_risk(ctx, ["missing"], "test")
+	t.ok(not ctx.state.ns("rules").has("test_effects"), "risk tags mismatch")
+	CardKeptRules.run_risk(ctx, ["contraband"], "test")
+	t.eq(ctx.state.ns("rules")["test_effects"].size(), 1, "risk matched")
+	ctx.hooks.fire(ctx, &"deal_composed", {"uids": []})
+	t.ok(CardFirsts.all(ctx).has("kept_risk"), "risk first at rule hook")
+	t.finish()

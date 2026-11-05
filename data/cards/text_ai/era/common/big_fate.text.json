@@ -1,0 +1,58 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-1938"
+  },
+  "bf.any.house_offer": {
+    "title": "有人买老宅",
+    "body": "有人出高价，想买下沈家的老宅。",
+    "choices": {
+      "sell": "卖掉",
+      "keep": "不卖"
+    }
+  },
+  "bf.any.mystery_box": {
+    "title": "来路不明的箱子",
+    "body": "一个陌生人出大价钱，请你替他保管一只箱子，过几天来取。",
+    "choices": {
+      "take": "收下",
+      "decline": "不收"
+    }
+  },
+  "bf.any.quiet_fee": {
+    "title": "花钱消灾",
+    "body": "有人带话：交一笔钱，能把官面上的风声压下去一些。",
+    "choices": {
+      "pay": "付钱",
+      "decline": "不付"
+    }
+  },
+  "bf.any.ship_ticket": {
+    "title": "一张船票",
+    "body": "手上有一张去上海的船票。可以去外头躲一阵，也可以卖掉换钱。",
+    "choices": {
+      "go": "去躲一阵",
+      "sell": "卖掉"
+    }
+  },
+  "bf.any.street_bed": {
+    "title": "有人留宿",
+    "body": "在街头过了好几天，有人肯留你住几晚。",
+    "choices": {
+      "accept": "住下",
+      "decline": "不去"
+    }
+  },
+  "bf.any.sun_guarantee": {
+    "title": "孙老爷要人作保",
+    "body": "孙老爷肯先支一笔钱给你，条件是你出面替孙家作保。",
+    "choices": {
+      "stand": "作保",
+      "decline": "不作"
+    }
+  },
+  "bf.wheel": {
+    "title": "大轮盘",
+    "body": "到了要紧的关头。转一次大轮盘，可能翻身，也可能更糟。转之前，可以往香案上放些东西。"
+  }
+}

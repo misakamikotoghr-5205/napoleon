@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1,
+    "brief": "合同 1.3 演出块校验正例"
+  },
+  "cards": [
+    {
+      "id": "ev.stage.valid",
+      "type": "event",
+      "era": ["1938"],
+      "weight": 10,
+      "must_resolve": false,
+      "tags": ["omen_official"],
+      "stage": {
+        "set": "counter",
+        "cast": [
+          {"who": "linsao", "at": "customer", "brief": "REGISTERED_CAST"}
+        ],
+        "intro": [
+          {"who": "linsao", "ref": "lines.scene", "brief": "VALID_BEAT"}
+        ],
+        "brief": "VALID_STAGE"
+      },
+      "brief": "VALID_STAGE_CARD",
+      "_provenance": {"by": "ai", "task": "G01", "date": "2026-10-14"}
+    }
+  ]
+}

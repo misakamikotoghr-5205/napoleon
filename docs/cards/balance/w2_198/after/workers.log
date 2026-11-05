@@ -1,0 +1,169 @@
+worker_0.log
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+BALANCE PROGRESS seed=1 policy=fair ok=true reason=prison steps=2092 error=not_allowed
+BALANCE PROGRESS seed=1 policy=greedy ok=true reason=ending steps=2255 error=pick_stock
+BALANCE PROGRESS seed=1 policy=kind ok=true reason=prison steps=2089 error=not_allowed
+BALANCE PROGRESS seed=1 policy=random ok=true reason=ending steps=504 error=person_busy
+BALANCE PROGRESS seed=1 policy=refuser ok=true reason=ending steps=368 error=
+BALANCE PROGRESS seed=1 policy=wheel ok=true reason=prison steps=931 error=money_short
+BALANCE PROGRESS seed=1 policy=hoarder ok=true reason=prison steps=1364 error=already_resolved
+BALANCE PROGRESS seed=2 policy=fair ok=true reason=ending steps=2928 error=not_allowed
+BALANCE PROGRESS seed=2 policy=greedy ok=true reason=ending steps=2518 error=already_resolved
+BALANCE PROGRESS seed=2 policy=kind ok=true reason=ending steps=2918 error=not_allowed
+BALANCE PROGRESS seed=2 policy=random ok=true reason=ending steps=548 error=not_allowed
+BALANCE PROGRESS seed=2 policy=refuser ok=true reason=ending steps=368 error=
+BALANCE PROGRESS seed=2 policy=wheel ok=true reason=prison steps=2191 error=not_allowed
+BALANCE PROGRESS seed=2 policy=hoarder ok=true reason=prison steps=1383 error=already_resolved
+BALANCE PROGRESS seed=3 policy=fair ok=true reason=ending steps=2468 error=not_allowed
+BALANCE PROGRESS seed=3 policy=greedy ok=true reason=ending steps=2023 error=not_allowed
+BALANCE PROGRESS seed=3 policy=kind ok=true reason=ending steps=2414 error=not_allowed
+BALANCE PROGRESS seed=3 policy=random ok=true reason=ending steps=510 error=not_allowed
+BALANCE PROGRESS seed=3 policy=refuser ok=true reason=ending steps=368 error=
+BALANCE PROGRESS seed=3 policy=wheel ok=true reason=ending steps=2440 error=not_allowed
+BALANCE PROGRESS seed=3 policy=hoarder ok=true reason=prison steps=959 error=not_allowed
+BALANCE PROGRESS seed=4 policy=fair ok=true reason=prison steps=1266 error=pick_stock
+BALANCE PROGRESS seed=4 policy=greedy ok=true reason=prison steps=1268 error=not_allowed
+BALANCE PROGRESS seed=4 policy=kind ok=true reason=prison steps=1649 error=not_allowed
+BALANCE PROGRESS seed=4 policy=random ok=true reason=ending steps=531 error=stake_required
+BALANCE PROGRESS seed=4 policy=refuser ok=true reason=ending steps=368 error=
+BALANCE PROGRESS seed=4 policy=wheel ok=true reason=prison steps=1019 error=not_allowed
+BALANCE PROGRESS seed=4 policy=hoarder ok=true reason=prison steps=774 error=already_resolved
+BALANCE RUNS 28
+BALANCE RESULT passed=28 failed=0
+
+worker_1.log
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+BALANCE PROGRESS seed=5 policy=fair ok=true reason=prison steps=57 error=pick_stock
+BALANCE PROGRESS seed=5 policy=greedy ok=true reason=prison steps=60 error=pick_stock
+BALANCE PROGRESS seed=5 policy=kind ok=true reason=prison steps=57 error=pick_stock
+BALANCE PROGRESS seed=5 policy=random ok=true reason=ending steps=542 error=not_allowed
+BALANCE PROGRESS seed=5 policy=refuser ok=true reason=ending steps=368 error=
+BALANCE PROGRESS seed=5 policy=wheel ok=true reason=prison steps=61 error=pick_stock
+BALANCE PROGRESS seed=5 policy=hoarder ok=true reason=prison steps=47 error=intake_blocked
+BALANCE PROGRESS seed=6 policy=fair ok=true reason=prison steps=1015 error=not_allowed
+BALANCE PROGRESS seed=6 policy=greedy ok=true reason=prison steps=1141 error=not_allowed
+BALANCE PROGRESS seed=6 policy=kind ok=true reason=prison steps=1078 error=not_allowed
+BALANCE PROGRESS seed=6 policy=random ok=true reason=ending steps=534 error=not_allowed
+BALANCE PROGRESS seed=6 policy=refuser ok=true reason=ending steps=368 error=
+BALANCE PROGRESS seed=6 policy=wheel ok=true reason=prison steps=1081 error=not_allowed
+BALANCE PROGRESS seed=6 policy=hoarder ok=true reason=prison steps=182 error=already_resolved
+BALANCE PROGRESS seed=7 policy=fair ok=true reason=ending steps=2458 error=cond_failed
+BALANCE PROGRESS seed=7 policy=greedy ok=true reason=ending steps=2218 error=no_ticket
+BALANCE PROGRESS seed=7 policy=kind ok=true reason=ending steps=2536 error=cond_failed
+BALANCE PROGRESS seed=7 policy=random ok=true reason=ending steps=542 error=not_allowed
+BALANCE PROGRESS seed=7 policy=refuser ok=true reason=ending steps=368 error=
+BALANCE PROGRESS seed=7 policy=wheel ok=true reason=ending steps=2508 error=stake_required
+BALANCE PROGRESS seed=7 policy=hoarder ok=true reason=ending steps=1701 error=already_resolved
+BALANCE PROGRESS seed=8 policy=fair ok=true reason=ending steps=2540 error=not_allowed
+BALANCE PROGRESS seed=8 policy=greedy ok=true reason=ending steps=2306 error=already_resolved
+BALANCE PROGRESS seed=8 policy=kind ok=true reason=ending steps=2396 error=not_allowed
+BALANCE PROGRESS seed=8 policy=random ok=true reason=prison steps=40 error=
+BALANCE PROGRESS seed=8 policy=refuser ok=true reason=ending steps=368 error=
+BALANCE PROGRESS seed=8 policy=wheel ok=true reason=ending steps=2493 error=not_allowed
+BALANCE PROGRESS seed=8 policy=hoarder ok=true reason=ending steps=1631 error=cond_failed
+BALANCE RUNS 28
+BALANCE RESULT passed=28 failed=0
+
+worker_2.log
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+BALANCE PROGRESS seed=9 policy=fair ok=true reason=prison steps=1239 error=money_short
+BALANCE PROGRESS seed=9 policy=greedy ok=true reason=prison steps=1146 error=not_allowed
+BALANCE PROGRESS seed=9 policy=kind ok=true reason=prison steps=1374 error=not_allowed
+BALANCE PROGRESS seed=9 policy=random ok=true reason=ending steps=538 error=not_allowed
+BALANCE PROGRESS seed=9 policy=refuser ok=true reason=ending steps=368 error=
+BALANCE PROGRESS seed=9 policy=wheel ok=true reason=prison steps=1219 error=not_allowed
+BALANCE PROGRESS seed=9 policy=hoarder ok=true reason=prison steps=778 error=already_resolved
+BALANCE PROGRESS seed=10 policy=fair ok=true reason=ending steps=3105 error=not_allowed
+BALANCE PROGRESS seed=10 policy=greedy ok=true reason=prison steps=1409 error=not_allowed
+BALANCE PROGRESS seed=10 policy=kind ok=true reason=prison steps=1161 error=not_allowed
+BALANCE PROGRESS seed=10 policy=random ok=true reason=ending steps=536 error=not_allowed
+BALANCE PROGRESS seed=10 policy=refuser ok=true reason=ending steps=368 error=
+BALANCE PROGRESS seed=10 policy=wheel ok=true reason=prison steps=1485 error=money_short
+BALANCE PROGRESS seed=10 policy=hoarder ok=true reason=prison steps=405 error=already_resolved
+BALANCE PROGRESS seed=11 policy=fair ok=true reason=ending steps=2739 error=not_allowed
+BALANCE PROGRESS seed=11 policy=greedy ok=true reason=prison steps=1757 error=not_allowed
+BALANCE PROGRESS seed=11 policy=kind ok=true reason=ending steps=3111 error=not_allowed
+BALANCE PROGRESS seed=11 policy=random ok=true reason=ending steps=512 error=not_allowed
+BALANCE PROGRESS seed=11 policy=refuser ok=true reason=ending steps=368 error=
+BALANCE PROGRESS seed=11 policy=wheel ok=true reason=prison steps=2182 error=not_allowed
+BALANCE PROGRESS seed=11 policy=hoarder ok=true reason=prison steps=211 error=already_resolved
+BALANCE PROGRESS seed=12 policy=fair ok=true reason=prison steps=2136 error=not_allowed
+BALANCE PROGRESS seed=12 policy=greedy ok=true reason=ending steps=2105 error=slot_reject
+BALANCE PROGRESS seed=12 policy=kind ok=true reason=prison steps=2119 error=not_allowed
+BALANCE PROGRESS seed=12 policy=random ok=true reason=ending steps=556 error=not_allowed
+BALANCE PROGRESS seed=12 policy=refuser ok=true reason=ending steps=368 error=
+BALANCE PROGRESS seed=12 policy=wheel ok=true reason=prison steps=1957 error=stake_required
+BALANCE PROGRESS seed=12 policy=hoarder ok=true reason=prison steps=900 error=not_allowed
+BALANCE RUNS 28
+BALANCE RESULT passed=28 failed=0
+
+worker_3.log
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+BALANCE PROGRESS seed=13 policy=fair ok=true reason=ending steps=2350 error=not_allowed
+BALANCE PROGRESS seed=13 policy=greedy ok=true reason=ending steps=2111 error=pick_stock
+BALANCE PROGRESS seed=13 policy=kind ok=true reason=ending steps=2311 error=cond_failed
+BALANCE PROGRESS seed=13 policy=random ok=true reason=ending steps=522 error=not_allowed
+BALANCE PROGRESS seed=13 policy=refuser ok=true reason=ending steps=368 error=
+BALANCE PROGRESS seed=13 policy=wheel ok=true reason=ending steps=2379 error=not_allowed
+BALANCE PROGRESS seed=13 policy=hoarder ok=true reason=ending steps=1554 error=not_allowed
+BALANCE PROGRESS seed=14 policy=fair ok=true reason=ending steps=2531 error=not_allowed
+BALANCE PROGRESS seed=14 policy=greedy ok=true reason=ending steps=2449 error=not_allowed
+BALANCE PROGRESS seed=14 policy=kind ok=true reason=prison steps=1975 error=not_allowed
+BALANCE PROGRESS seed=14 policy=random ok=true reason=prison steps=516 error=not_allowed
+BALANCE PROGRESS seed=14 policy=refuser ok=true reason=ending steps=368 error=
+BALANCE PROGRESS seed=14 policy=wheel ok=true reason=prison steps=1651 error=not_allowed
+BALANCE PROGRESS seed=14 policy=hoarder ok=true reason=prison steps=1400 error=not_allowed
+BALANCE PROGRESS seed=15 policy=fair ok=true reason=ending steps=2742 error=not_allowed
+BALANCE PROGRESS seed=15 policy=greedy ok=true reason=prison steps=1984 error=no_ticket
+BALANCE PROGRESS seed=15 policy=kind ok=true reason=ending steps=2723 error=not_allowed
+BALANCE PROGRESS seed=15 policy=random ok=true reason=ending steps=547 error=not_allowed
+BALANCE PROGRESS seed=15 policy=refuser ok=true reason=ending steps=368 error=
+BALANCE PROGRESS seed=15 policy=wheel ok=true reason=prison steps=2005 error=not_allowed
+BALANCE PROGRESS seed=15 policy=hoarder ok=true reason=prison steps=1366 error=already_resolved
+BALANCE PROGRESS seed=16 policy=fair ok=true reason=ending steps=2710 error=not_allowed
+BALANCE PROGRESS seed=16 policy=greedy ok=true reason=prison steps=2192 error=not_allowed
+BALANCE PROGRESS seed=16 policy=kind ok=true reason=prison steps=2204 error=not_allowed
+BALANCE PROGRESS seed=16 policy=random ok=true reason=ending steps=535 error=not_allowed
+BALANCE PROGRESS seed=16 policy=refuser ok=true reason=ending steps=368 error=
+BALANCE PROGRESS seed=16 policy=wheel ok=true reason=prison steps=2105 error=not_allowed
+BALANCE PROGRESS seed=16 policy=hoarder ok=true reason=prison steps=130 error=already_resolved
+BALANCE RUNS 28
+BALANCE RESULT passed=28 failed=0
+
+worker_4.log
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+BALANCE PROGRESS seed=17 policy=fair ok=true reason=prison steps=2090 error=not_allowed
+BALANCE PROGRESS seed=17 policy=greedy ok=true reason=prison steps=1592 error=not_allowed
+BALANCE PROGRESS seed=17 policy=kind ok=true reason=prison steps=1639 error=not_allowed
+BALANCE PROGRESS seed=17 policy=random ok=true reason=prison steps=537 error=not_allowed
+BALANCE PROGRESS seed=17 policy=refuser ok=true reason=ending steps=368 error=
+BALANCE PROGRESS seed=17 policy=wheel ok=true reason=prison steps=2115 error=not_allowed
+BALANCE PROGRESS seed=17 policy=hoarder ok=true reason=prison steps=1419 error=already_resolved
+BALANCE PROGRESS seed=18 policy=fair ok=true reason=ending steps=2627 error=not_allowed
+BALANCE PROGRESS seed=18 policy=greedy ok=true reason=ending steps=2670 error=not_allowed
+BALANCE PROGRESS seed=18 policy=kind ok=true reason=ending steps=3001 error=not_allowed
+BALANCE PROGRESS seed=18 policy=random ok=true reason=prison steps=499 error=not_allowed
+BALANCE PROGRESS seed=18 policy=refuser ok=true reason=ending steps=368 error=
+BALANCE PROGRESS seed=18 policy=wheel ok=true reason=prison steps=2009 error=not_allowed
+BALANCE PROGRESS seed=18 policy=hoarder ok=true reason=prison steps=1402 error=not_allowed
+BALANCE PROGRESS seed=19 policy=fair ok=true reason=prison steps=1393 error=not_allowed
+BALANCE PROGRESS seed=19 policy=greedy ok=true reason=prison steps=1092 error=money_short
+BALANCE PROGRESS seed=19 policy=kind ok=true reason=prison steps=1296 error=not_allowed
+BALANCE PROGRESS seed=19 policy=random ok=true reason=prison steps=399 error=not_allowed
+BALANCE PROGRESS seed=19 policy=refuser ok=true reason=ending steps=368 error=
+BALANCE PROGRESS seed=19 policy=wheel ok=true reason=prison steps=1085 error=not_allowed
+BALANCE PROGRESS seed=19 policy=hoarder ok=true reason=prison steps=1080 error=already_resolved
+BALANCE PROGRESS seed=20 policy=fair ok=true reason=ending steps=3158 error=not_allowed
+BALANCE PROGRESS seed=20 policy=greedy ok=true reason=ending steps=3019 error=not_allowed
+BALANCE PROGRESS seed=20 policy=kind ok=true reason=ending steps=3043 error=not_allowed
+BALANCE PROGRESS seed=20 policy=random ok=true reason=prison steps=503 error=not_allowed
+BALANCE PROGRESS seed=20 policy=refuser ok=true reason=ending steps=368 error=
+BALANCE PROGRESS seed=20 policy=wheel ok=true reason=prison steps=1240 error=not_allowed
+BALANCE PROGRESS seed=20 policy=hoarder ok=true reason=prison steps=770 error=not_allowed
+BALANCE RUNS 28
+BALANCE RESULT passed=28 failed=0

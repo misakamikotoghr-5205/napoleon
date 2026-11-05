@@ -1,0 +1,190 @@
+{
+  "_meta": {
+    "owner": "K01",
+    "schema": 1,
+    "brief": "例子集：1938 人物牌（§4.7.1）"
+  },
+  "cards": [
+    {
+      "id": "p.linsao.1938.pawn_hairpin",
+      "type": "person",
+      "person": "linsao",
+      "era": [
+        "1999"
+      ],
+      "weight": 10,
+      "tags": [
+        "woman",
+        "boat",
+        "poor",
+        "omen_water"
+      ],
+      "intent": "pawn",
+      "item": {
+        "template": "jewelry.hairpin"
+      },
+      "asking": {
+        "pct": [
+          90,
+          120
+        ]
+      },
+      "floor": {
+        "pct": [
+          55,
+          75
+        ]
+      },
+      "patience_min": [
+        60,
+        120
+      ],
+      "impatience": "leave",
+      "term_days": 15,
+      "conditions": {
+        "not": {
+          "person_state": [
+            "linsao",
+            "gone"
+          ]
+        }
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.linsao.1938.hairpin"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.linsao",
+      "brief": "船工的妻子，怀孕八个月，来当一支金簪；簪子分量略轻，像补过。来当后得当票，15 天到期。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "id": "p.brother.1938.farewell",
+      "type": "person",
+      "person": "brother",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "family",
+        "story",
+        "omen_far",
+        "omen_family"
+      ],
+      "gold": true,
+      "story_node": "s1938.brother_farewell",
+      "intent": "story",
+      "schedule": {
+        "stage_day": 2,
+        "order": 1
+      },
+      "choices": [
+        {
+          "id": "listen",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1938.brother_farewell",
+              "outcome": "listened"
+            },
+            {
+              "op": "add_card",
+              "card": "kp.brother_note",
+              "to": "kept"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.brother.1938.farewell"
+            }
+          ],
+          "brief": "听他交代完"
+        },
+        {
+          "id": "argue",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1938.brother_farewell",
+              "outcome": "argued"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.brother.1938.farewell_cold"
+            }
+          ],
+          "brief": "和他争"
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "story",
+            "node": "s1938.brother_farewell",
+            "outcome": "ignored"
+          },
+          {
+            "op": "dossier_gap",
+            "frag": "df.brother.1938.farewell"
+          }
+        ]
+      },
+      "art": "portrait.brother",
+      "brief": "第二天哥哥离家，把铺子交给你并留一句交代。没理他：他留下字条走了，交代没听全，档案页缺这一块。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "id": "p.chen.1938.buy_scroll",
+      "type": "person",
+      "person": "chen",
+      "era": [
+        "1938"
+      ],
+      "weight": 6,
+      "tags": [
+        "buyer",
+        "art",
+        "omen_stranger"
+      ],
+      "intent": "buy",
+      "want": {
+        "cats": [
+          "art"
+        ],
+        "budget_pct": [
+          80,
+          130
+        ]
+      },
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "leave",
+      "art": "portrait.chen",
+      "brief": "（W0 例子，补全来买的样子）陈文庭来铺子里看字画，想挑一件货架上的书画；预算相对物品真值，隐藏。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

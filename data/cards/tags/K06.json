@@ -1,0 +1,86 @@
+{
+  "_meta": {
+    "owner": "K06",
+    "schema": 1
+  },
+  "tags": {
+    "home": {
+      "brief": "家宅、过日子"
+    },
+    "fuel": {
+      "brief": "煤、灯油"
+    },
+    "rice": {
+      "brief": "米"
+    },
+    "illness": {
+      "brief": "病、药"
+    },
+    "school": {
+      "brief": "学堂、束脩"
+    },
+    "rite": {
+      "brief": "婚丧人情"
+    },
+    "year_end": {
+      "brief": "过年"
+    },
+    "rent": {
+      "brief": "房租"
+    },
+    "repair": {
+      "brief": "修屋"
+    },
+    "debt": {
+      "brief": "借贷"
+    },
+    "official": {
+      "brief": "官面、衙门"
+    },
+    "levy": {
+      "brief": "摊派"
+    },
+    "census": {
+      "brief": "户口"
+    },
+    "papers": {
+      "brief": "证件、纸"
+    },
+    "search": {
+      "brief": "搜查"
+    },
+    "police": {
+      "brief": "警察、查铺"
+    },
+    "price": {
+      "brief": "物价"
+    },
+    "gate": {
+      "brief": "城门"
+    },
+    "curfew": {
+      "brief": "净街、打烊"
+    },
+    "rain": {
+      "brief": "雨"
+    },
+    "informer": {
+      "brief": "有人在官面前提你"
+    },
+    "buyer": {
+      "brief": "来买的人"
+    },
+    "crate": {
+      "brief": "一箱文书"
+    },
+    "contraband": {
+      "brief": "来路不明、被查会出事"
+    },
+    "road": {
+      "brief": "出城、路"
+    },
+    "goal": {
+      "brief": "本关目标，不进手牌"
+    }
+  }
+}

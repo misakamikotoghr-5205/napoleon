@@ -1,0 +1,638 @@
+{
+  "_meta": {
+    "owner": "K01",
+    "schema": 1,
+    "brief": "过路客八种原型、算命先生登记，以及系统牌 p.any.redeem。"
+  },
+  "persons": {
+    "stranger_refugee": {
+      "portrait": "portrait.stranger_refugee",
+      "dossier": false,
+      "brief": "过路客原型：逃难的人。没有单独档案页。名字由 A 定。"
+    },
+    "stranger_peddler": {
+      "portrait": "portrait.stranger_peddler",
+      "dossier": false,
+      "brief": "过路客原型：货郎。没有单独档案页。名字由 A 定。"
+    },
+    "stranger_collector": {
+      "portrait": "portrait.stranger_collector",
+      "dossier": false,
+      "brief": "过路客原型：上门收货的人。没有单独档案页。名字由 A 定。"
+    },
+    "stranger_fence": {
+      "portrait": "portrait.stranger_fence",
+      "dossier": false,
+      "brief": "过路客原型：销赃的人。没有单独档案页。名字由 A 定。"
+    },
+    "stranger_waixiang": {
+      "portrait": "portrait.stranger_waixiang",
+      "dossier": false,
+      "brief": "过路客原型：外乡人。没有单独档案页。名字由 A 定。可以在柜台上白给几个钱。"
+    },
+    "stranger_boatman": {
+      "portrait": "portrait.stranger_boatman",
+      "dossier": false,
+      "brief": "过路客原型：船工。没有单独档案页。名字由 A 定。头像由 K12 出占位。"
+    },
+    "stranger_student": {
+      "portrait": "portrait.stranger_student",
+      "dossier": false,
+      "brief": "过路客原型：赶路的学生。没有单独档案页。名字由 A 定。头像由 K12 出占位。"
+    },
+    "stranger_widow": {
+      "portrait": "portrait.stranger_widow",
+      "dossier": false,
+      "brief": "过路客原型：守寡的过路人。没有单独档案页。名字由 A 定。头像由 K12 出占位。"
+    },
+    "suanming": {
+      "portrait": "portrait.suanming",
+      "dossier": false,
+      "brief": "算命先生。新手指引里教求签和测字的人。不进档案簿。名字由 A 定。头像 id 为 portrait.suanming，由 K12 出占位。"
+    }
+  },
+  "cards": [
+    {
+      "id": "p.stranger_refugee.any.pawn_coat",
+      "type": "person",
+      "person": "stranger_refugee",
+      "era": [
+        "*"
+      ],
+      "weight": 8,
+      "tags": [
+        "refugee",
+        "poor",
+        "omen_road"
+      ],
+      "intent": "pawn",
+      "item": {
+        "template": "clothing.coat"
+      },
+      "asking": {
+        "pct": [
+          80,
+          110
+        ]
+      },
+      "floor": {
+        "pct": [
+          45,
+          65
+        ]
+      },
+      "patience_min": [
+        30,
+        70
+      ],
+      "impatience": "leave",
+      "term_days": 12,
+      "minigame_hint": "spot",
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.stranger_refugee.any.coat"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          },
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.stranger_refugee",
+      "brief": "逃难的过路人来当一件旧衣。1938 年起各年都能抽到。成交补一块档案；拒绝伤交情；等不及就走。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.stranger_coindealer.any.pawn_silver",
+      "type": "person",
+      "person": "stranger_refugee",
+      "era": [
+        "*"
+      ],
+      "weight": 7,
+      "tags": [
+        "refugee",
+        "poor",
+        "omen_road"
+      ],
+      "intent": "pawn",
+      "item": {
+        "template": "silver.yuan_a"
+      },
+      "asking": {
+        "pct": [
+          80,
+          110
+        ]
+      },
+      "floor": {
+        "pct": [
+          45,
+          65
+        ]
+      },
+      "patience_min": [
+        30,
+        70
+      ],
+      "impatience": "leave",
+      "term_days": 12,
+      "minigame_hint": "coin_ring",
+      "effects": {
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          },
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.stranger_refugee",
+      "brief": "过路客来当一枚银元甲种。各年都能抽到。鉴定只走吹听，不称。拒绝伤交情；等不及就走。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "id": "p.stranger_peddler.any.sell_bowl",
+      "type": "person",
+      "person": "stranger_peddler",
+      "era": [
+        "*"
+      ],
+      "weight": 8,
+      "tags": [
+        "peddler",
+        "omen_road"
+      ],
+      "intent": "sell",
+      "item": {
+        "template": "utensils.bowl"
+      },
+      "asking": {
+        "pct": [
+          100,
+          140
+        ]
+      },
+      "floor": {
+        "pct": [
+          65,
+          90
+        ]
+      },
+      "patience_min": [
+        30,
+        80
+      ],
+      "impatience": "raise",
+      "minigame_hint": "spot",
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.stranger_peddler.any.bowl"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "flag",
+            "key": "k01_peddler_left",
+            "value": true
+          }
+        ]
+      },
+      "art": "portrait.stranger_peddler",
+      "brief": "货郎来卖一件旧碗。各年都能抽到。成交进货架并补档案；谈不拢他会抬价。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.stranger_collector.any.buy_art",
+      "type": "person",
+      "person": "stranger_collector",
+      "era": [
+        "*"
+      ],
+      "weight": 6,
+      "tags": [
+        "collector",
+        "buyer",
+        "omen_wealth"
+      ],
+      "intent": "buy",
+      "patience_min": [
+        40,
+        100
+      ],
+      "impatience": "leave",
+      "want": {
+        "cats": [
+          "art"
+        ],
+        "budget_pct": [
+          80,
+          140
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.stranger_collector.any.art"
+          },
+          {
+            "op": "rep",
+            "delta": 1
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.stranger_collector",
+      "brief": "收货的人来看字画，想买走一件。各年都能抽到。成交补档案。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.stranger_fence.any.sell_ring",
+      "type": "person",
+      "person": "stranger_fence",
+      "era": [
+        "*"
+      ],
+      "weight": 5,
+      "tags": [
+        "fence",
+        "omen_dispute"
+      ],
+      "intent": "sell",
+      "item": {
+        "template": "jewelry.ring"
+      },
+      "asking": {
+        "pct": [
+          70,
+          100
+        ]
+      },
+      "floor": {
+        "pct": [
+          40,
+          60
+        ]
+      },
+      "patience_min": [
+        20,
+        50
+      ],
+      "impatience": "leave",
+      "minigame_hint": "weigh",
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.stranger_fence.any.ring"
+          },
+          {
+            "op": "heat",
+            "delta": 2
+          },
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": 1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "heat",
+            "delta": 1
+          }
+        ]
+      },
+      "art": "portrait.stranger_fence",
+      "brief": "销赃的人来卖一枚戒指，来路说不清。收下会让风声紧一紧。各年都能抽到。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.stranger_waixiang.any.pawn_scarf",
+      "type": "person",
+      "person": "stranger_waixiang",
+      "era": [
+        "*"
+      ],
+      "weight": 7,
+      "tags": [
+        "waixiang",
+        "poor",
+        "omen_stranger"
+      ],
+      "intent": "pawn",
+      "item": {
+        "template": "clothing.scarf"
+      },
+      "asking": {
+        "pct": [
+          75,
+          105
+        ]
+      },
+      "floor": {
+        "pct": [
+          40,
+          60
+        ]
+      },
+      "patience_min": [
+        25,
+        60
+      ],
+      "impatience": "leave",
+      "term_days": 10,
+      "minigame_hint": "spot",
+      "choices": [
+        {
+          "id": "alms",
+          "brief": "不收东西，白给几个钱",
+          "cost": {
+            "money": 4
+          },
+          "effects": [
+            {
+              "op": "rep",
+              "delta": 1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.stranger_waixiang.any.alms"
+            },
+            {
+              "op": "notice",
+              "key": "k01.notice.waixiang_alms"
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.stranger_waixiang.any.scarf"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.stranger_waixiang",
+      "brief": "外乡人来当一条围巾。柜台上另有一个选择：不收东西，白给他几个钱让他走。各年都能抽到。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.stranger_boatman.any.ask_dock",
+      "type": "person",
+      "person": "stranger_boatman",
+      "era": [
+        "*"
+      ],
+      "weight": 6,
+      "tags": [
+        "dock",
+        "boat",
+        "omen_water"
+      ],
+      "intent": "ask",
+      "choices": [
+        {
+          "id": "tell",
+          "brief": "把码头上听到的告诉他",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.stranger_boatman.any.dock"
+            },
+            {
+              "op": "flag",
+              "key": "k01_dock_told",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "dodge",
+          "brief": "岔开不说",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.stranger_boatman",
+      "brief": "船工来打听码头上谁还收货、谁家有人在上海的船上。说了补档案；岔开伤交情。各年都能抽到。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.stranger_student.any.ask_road",
+      "type": "person",
+      "person": "stranger_student",
+      "era": [
+        "*"
+      ],
+      "weight": 6,
+      "tags": [
+        "student",
+        "omen_road"
+      ],
+      "intent": "ask",
+      "choices": [
+        {
+          "id": "tell",
+          "brief": "告诉他怎么出镇",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.stranger_student.any.road"
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "id": "dodge",
+          "brief": "说不知道",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.stranger_student",
+      "brief": "过路的学生来问出镇的路，还想打听铺子收不收信件。指了路补档案；不理他伤交情。各年都能抽到。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.stranger_widow.any.help_cold",
+      "type": "person",
+      "person": "stranger_widow",
+      "era": [
+        "*"
+      ],
+      "weight": 6,
+      "tags": [
+        "widow",
+        "woman",
+        "poor",
+        "omen_family",
+        "omen_illness"
+      ],
+      "intent": "help",
+      "choices": [
+        {
+          "id": "give",
+          "brief": "给几个钱",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 6,
+              "payee": "stranger_widow",
+              "reason": "k01.reason.widow_help",
+              "short": "ladder"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.stranger_widow.any.help"
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "不给",
+          "effects": [
+            {
+              "op": "conscience",
+              "delta": -1
+            },
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.stranger_widow",
+      "brief": "守寡的过路人来求几个钱熬过去。给钱走接济；拒绝伤交情。各年都能抽到。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.any.redeem",
+      "type": "person",
+      "person": "stranger_refugee",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "tags": [
+        "redeem",
+        "omen_road"
+      ],
+      "intent": "redeem",
+      "art": "portrait.stranger_refugee",
+      "brief": "系统牌。过路人来赎当，由柜台按当票生成，不进随机牌库。主要人物用自己的赎当牌，不走这张。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "_meta": {
+    "owner": "K10",
+    "schema": 1,
+    "brief": "例子集：1938 扇区与通用大轮盘扇区（§4.7.17）"
+  },
+  "cards": [
+    {
+      "id": "ws.1938.month.caixing",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 3,
+      "valence": "good",
+      "month_mods": [
+        {
+          "pool": "person",
+          "tags_any": [
+            "buyer"
+          ],
+          "pct": 130
+        }
+      ],
+      "effects": [],
+      "art": "icon.ws.caixing",
+      "brief": "财星高照：这个月来买东西的人多一些。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "id": "ws.1938.month.liunian",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 3,
+      "valence": "bad",
+      "month_mods": [
+        {
+          "pool": "fate",
+          "valence": "bad",
+          "pct": 140
+        }
+      ],
+      "effects": [],
+      "art": "icon.ws.liunian",
+      "brief": "流年不利：这个月命运牌坏的多。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "id": "ws.1938.month.pingan",
+      "type": "wheel_segment",
+      "wheel": "wh.month",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 4,
+      "valence": "neutral",
+      "month_mods": [],
+      "effects": [],
+      "art": "icon.ws.pingan",
+      "brief": "（W0 例子）平平：这个月没什么特别。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.any.big.fanshen_ship",
+      "type": "wheel_segment",
+      "wheel": "wh.big",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 2,
+      "valence": "good",
+      "conditions": {
+        "conscience_gte": -20
+      },
+      "effects": [
+        {
+          "op": "add_card",
+          "card": "bf.any.ship_ticket",
+          "to": "hand"
+        }
+      ],
+      "art": "icon.ws.fanshen",
+      "brief": "翻身：手上来了一张去上海的船票（大赌，见 bf.any.ship_ticket）。本心太低时这一段不上盘（例，阈值待调）。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "id": "ws.any.big.pingan",
+      "type": "wheel_segment",
+      "wheel": "wh.big",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 3,
+      "valence": "neutral",
+      "effects": [
+        {
+          "op": "heat",
+          "delta": -10
+        }
+      ],
+      "art": "icon.ws.pingan",
+      "brief": "（W0 例子）平安：什么也没发生，挺过去了。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.any.big.zhuidi",
+      "type": "wheel_segment",
+      "wheel": "wh.big",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 3,
+      "valence": "bad",
+      "effects": [
+        {
+          "op": "add_card",
+          "card": "bf.any.mystery_box",
+          "to": "hand"
+        }
+      ],
+      "art": "icon.ws.zhuidi",
+      "brief": "（W0 例子）坠底：陌生人找上门要你保管一箱东西（大赌，见 bf.any.mystery_box）。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

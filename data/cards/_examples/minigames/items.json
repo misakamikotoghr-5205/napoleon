@@ -1,0 +1,84 @@
+{
+  "_meta": {
+    "owner": "W0",
+    "schema": 1,
+    "brief": "例子集：物品 → 小游戏参数（§4.7.15）"
+  },
+  "cards": [
+    {
+      "id": "it.jewelry.hairpin",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "jewelry.hairpin",
+      "minigames": [
+        "weigh",
+        "spot"
+      ],
+      "weigh": {
+        "tool": "dengzi",
+        "claimed_fen": [
+          280,
+          320
+        ],
+        "dev_bad_pct": [
+          3,
+          8
+        ],
+        "dev_worn_pct": [
+          0,
+          2
+        ]
+      },
+      "spot": {},
+      "brief": "金簪：戥子称分量或对图鉴找不同。补过、掺假的分量轻 3%–8%，旧的轻 0%–2%。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "id": "it.silver.yuan_a",
+      "type": "item",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "template": "silver.yuan_a",
+      "minigames": [
+        "coin_ring"
+      ],
+      "coin_ring": {
+        "ring_ms_good": [
+          1200,
+          1600
+        ],
+        "ring_ms_bad": [
+          300,
+          700
+        ],
+        "buzz_good": [
+          0,
+          15
+        ],
+        "buzz_bad": [
+          40,
+          90
+        ],
+        "pitch_cents_bad": [
+          -300,
+          -80
+        ]
+      },
+      "brief": "银元一种（具体版别由 A 定）。按枚计价、一般不称；吹一下贴耳听余音：足银余音细长，掺铜的短、闷、有杂音。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K11",
+        "date": "2026-10-14"
+      }
+    }
+  ]
+}

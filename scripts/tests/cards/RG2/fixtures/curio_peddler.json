@@ -1,0 +1,58 @@
+{
+  "_meta": {
+    "owner": "RG3",
+    "schema": 1,
+    "brief": "肉鸽 v1：1938 第 8 天货郎头一回上门，二选一老物件，兼引子。复用已登记的过路客 stranger_peddler。"
+  },
+  "cards": [
+    {
+      "id": "p.stranger_peddler.1938.curios",
+      "type": "person",
+      "person": "stranger_peddler",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "peddler",
+        "omen_wealth"
+      ],
+      "intent": "story",
+      "schedule": {
+        "stage_day": 8,
+        "order": 50
+      },
+      "choices": [
+        {
+          "id": "look",
+          "effects": [
+            {
+              "op": "stock_offer",
+              "n": 2,
+              "kinds": [
+                "relic"
+              ],
+              "depths": [
+                "plain"
+              ],
+              "from": "peddler"
+            }
+          ],
+          "brief": "看看担子里的：摊开两样旧东西，挑一样摆上博古格"
+        },
+        {
+          "id": "send_off",
+          "effects": [],
+          "brief": "不看了，送他出门"
+        }
+      ],
+      "art": "portrait.stranger_peddler",
+      "brief": "挑担收旧货也卖旧货的货郎，说铺子新换了掌柜，担子里有两样当年从德厚当收走的老东西，拿回来镇店。看了就开盘账叠层（只出寻常家什，二选一，白给）；不看就走。没理他，打烊时他挑担走了，没有别的后果。",
+      "_provenance": {
+        "by": "ai",
+        "task": "RG3",
+        "date": "2026-10-25"
+      }
+    }
+  ]
+}

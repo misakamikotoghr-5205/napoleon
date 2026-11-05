@@ -1,0 +1,166 @@
+{
+  "settings": {
+    "max_new_per_day": 32,
+    "gap_ms": 0,
+    "default_seconds": 30,
+    "bubble_max_w": 320
+  },
+  "steps": [
+    {
+      "id": "gd.d1.person",
+      "teaches": ["person"],
+      "trigger": {"first": "person"},
+      "teacher": "brother",
+      "anchor": "a.card@{uid}",
+      "anchor_fallback": "a.hand",
+      "done_when": ["ui:card_zoomed"],
+      "priority": 60,
+      "max_shows": 2,
+      "seconds": 30
+    },
+    {
+      "id": "gd.d2.gold",
+      "teaches": ["gold"],
+      "trigger": {"first": "gold"},
+      "teacher": "brother",
+      "anchor": "a.card.gold@{uid}",
+      "anchor_fallback": "a.hand.gold",
+      "done_when": ["ui:card_zoomed"],
+      "priority": 80,
+      "max_shows": 2,
+      "seconds": 30
+    },
+    {
+      "id": "gd.d2.keep",
+      "teaches": ["keep"],
+      "trigger": {"first": "keep"},
+      "teacher": "brother",
+      "anchor": "a.card.keep@{uid}",
+      "anchor_fallback": "a.hand.kept",
+      "done_when": ["ui:card_zoomed"],
+      "priority": 70,
+      "max_shows": 2,
+      "seconds": 30
+    },
+    {
+      "id": "gd.kept_expire",
+      "teaches": ["kept_expire"],
+      "trigger": {"first": "kept_expire"},
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.hand.kept",
+      "anchor_fallback": "",
+      "done_when": ["ui:card_zoomed"],
+      "priority": 70,
+      "max_shows": 2,
+      "seconds": 30
+    },
+    {
+      "id": "gd.life",
+      "teaches": ["life"],
+      "trigger": {"first": "life"},
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.card.days@{uid}",
+      "anchor_fallback": "a.card@{uid}",
+      "done_when": ["ui:card_zoomed"],
+      "priority": 70,
+      "max_shows": 2,
+      "seconds": 30
+    },
+    {
+      "id": "gd.news",
+      "teaches": ["news"],
+      "trigger": {"first": "news"},
+      "teacher": "zhouma",
+      "anchor": "a.card@{uid}",
+      "anchor_fallback": "a.hand",
+      "done_when": ["ui:card_zoomed"],
+      "priority": 70,
+      "max_shows": 2,
+      "seconds": 30
+    },
+    {
+      "id": "gd.fate",
+      "teaches": ["fate"],
+      "trigger": {"first": "fate"},
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.card@{uid}",
+      "anchor_fallback": "a.hand",
+      "done_when": ["ui:card_zoomed"],
+      "priority": 70,
+      "max_shows": 2,
+      "seconds": 30
+    },
+    {
+      "id": "gd.demand_people",
+      "teaches": ["demand_people_return"],
+      "trigger": {"first": "demand_people_return"},
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.card@{uid}",
+      "anchor_fallback": "",
+      "done_when": ["ui:card_zoomed"],
+      "priority": 70,
+      "max_shows": 2,
+      "seconds": 30
+    },
+    {
+      "id": "gd.d1.deal",
+      "teaches": ["deal"],
+      "trigger": {"first": "deal"},
+      "teacher": "brother",
+      "anchor": "a.hand",
+      "anchor_fallback": "",
+      "done_when": ["ui:card_zoomed"],
+      "priority": 60,
+      "max_shows": 2,
+      "seconds": 30
+    },
+    {
+      "id": "gd.contact",
+      "teaches": ["contact"],
+      "trigger": {"first": "contact"},
+      "teacher": "brother",
+      "anchor": "a.contacts",
+      "anchor_fallback": "a.hero",
+      "done_when": ["ui:card_zoomed"],
+      "priority": 60,
+      "max_shows": 2,
+      "seconds": 30
+    },
+    {
+      "id": "gd.kept_risk",
+      "teaches": ["kept_risk"],
+      "trigger": {"first": "kept_risk"},
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.hand.kept",
+      "anchor_fallback": "",
+      "done_when": ["ui:card_zoomed"],
+      "priority": 70,
+      "max_shows": 2,
+      "seconds": 30
+    },
+    {
+      "id": "gd.person_state",
+      "teaches": ["person_state"],
+      "trigger": {"first": "person_state"},
+      "teacher": "brother",
+      "anchor": "a.contacts",
+      "anchor_fallback": "a.hero",
+      "done_when": ["ui:card_zoomed"],
+      "priority": 70,
+      "max_shows": 2,
+      "seconds": 30
+    },
+    {
+      "id": "gd.big_wheel",
+      "teaches": ["big_wheel"],
+      "trigger": {"first": "big_wheel"},
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.card@{uid}",
+      "anchor_fallback": "a.wheel.face",
+      "done_when": ["ui:card_zoomed"],
+      "priority": 70,
+      "max_shows": 2,
+      "seconds": 30
+    }
+  ]
+}

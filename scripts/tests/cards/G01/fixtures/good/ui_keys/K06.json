@@ -1,0 +1,11 @@
+{
+  "_meta": {
+    "owner": "K06",
+    "schema": 1
+  },
+  "keys": {
+    "k06.reason.coal": {
+      "brief": "买煤"
+    }
+  }
+}

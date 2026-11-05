@@ -1,0 +1,12 @@
+{
+  "kind": "decode",
+  "seed": 41,
+  "item": "",
+  "art": "illus.nw.rumor",
+  "minutes_per_step": 1,
+  "max_minutes": 30,
+  "cipher": "telegraph",
+  "message": "nw.ex.telegram",
+  "codes": ["5101", "5102"],
+  "book_words": ["cb.word.5101", "cb.word.5102", "cb.word.5122"]
+}

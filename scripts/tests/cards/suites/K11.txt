@@ -1,0 +1,4 @@
+# K11 物品 → 小游戏参数、首发物品表、新模板、电码本（docs/handoff_cards/K11_data-items-mg.md）
+K11_validate|res://scripts/cards/core/validate_main.gd|120|--only=data/cards/minigames/items.json,data/cards/minigames/codebook.json,data/cards/items/**,data/cards/tags/K11.json,data/cards/ui_keys/K11.json --name=K11_validate
+K11_data|res://scripts/tests/cards/K11/test_data.gd|120|
+K11_guide_support|res://scripts/tests/cards/K11/test_guide_support.gd|120|

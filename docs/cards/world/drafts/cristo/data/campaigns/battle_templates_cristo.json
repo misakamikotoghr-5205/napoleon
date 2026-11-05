@@ -1,0 +1,3343 @@
+{
+ "_doc": "草稿（标签 cristo）：伊夫堡分支的战斗。templates 是 battle_templates.json 的形状加 ARCH §3/§4 的扩展（size、level / base_level + pad、weather、新地形字符、spawns、events.on_kill、lv_min），外加本稿提议的三种命令 escape / extract / protect，每种都带 order_fallback（内核没有时退回 hold / no_leak）。planned 是 B2 要画的模板规格。evidence 是 tools/battle_sim.py（battle_rules.gd 的简化 Python 版，比真人弱：没有军令牌的“佯攻 / 齐射 / 后撤”、没有方阵和撤退）跑出来的：什么都不做必输、只放主角必输、参考打法能赢。",
+ "enemies": {
+  "gendarme": {
+   "name": "宪兵",
+   "hp": 7,
+   "atk": 3,
+   "def": 2,
+   "spd": 1,
+   "type": "infantry",
+   "range": 0,
+   "tags": [
+    "arrest"
+   ]
+  },
+  "mounted_gendarme": {
+   "name": "骑宪兵",
+   "hp": 9,
+   "atk": 4,
+   "def": 1,
+   "spd": 2,
+   "type": "cavalry",
+   "range": 0,
+   "tags": [
+    "arrest",
+    "hunter"
+   ]
+  },
+  "prison_guard": {
+   "name": "狱卒",
+   "hp": 8,
+   "atk": 3,
+   "def": 1,
+   "spd": 1,
+   "type": "infantry",
+   "range": 0,
+   "tags": []
+  },
+  "turnkey_chief": {
+   "name": "典狱长",
+   "hp": 11,
+   "atk": 3,
+   "def": 2,
+   "spd": 1,
+   "type": "leader",
+   "range": 0,
+   "tags": [
+    "officer"
+   ]
+  },
+  "customs": {
+   "name": "海关缉私兵",
+   "hp": 6,
+   "atk": 3,
+   "def": 1,
+   "spd": 1,
+   "type": "infantry",
+   "range": 2,
+   "tags": []
+  },
+  "smuggler": {
+   "name": "走私贩",
+   "hp": 6,
+   "atk": 3,
+   "def": 0,
+   "spd": 2,
+   "type": "infantry",
+   "range": 0,
+   "tags": [
+    "stealth"
+   ]
+  },
+  "bandit": {
+   "name": "罗马强盗",
+   "hp": 6,
+   "atk": 4,
+   "def": 0,
+   "spd": 1,
+   "type": "infantry",
+   "range": 0,
+   "tags": [
+    "ambush",
+    "ransom"
+   ]
+  },
+  "bandit_marksman": {
+   "name": "强盗枪手",
+   "hp": 4,
+   "atk": 4,
+   "def": 0,
+   "spd": 0,
+   "type": "infantry",
+   "range": 3,
+   "tags": [
+    "post",
+    "stealth"
+   ],
+   "at_terrain": [
+    "high",
+    "rooftop",
+    "woods"
+   ]
+  },
+  "vampa": {
+   "name": "路易吉·万帕",
+   "hp": 14,
+   "atk": 5,
+   "def": 2,
+   "spd": 1,
+   "type": "leader",
+   "range": 0,
+   "tags": [
+    "officer",
+    "ransom"
+   ]
+  },
+  "assassin": {
+   "name": "刺客",
+   "hp": 8,
+   "atk": 7,
+   "def": 1,
+   "spd": 2,
+   "type": "elite",
+   "range": 0,
+   "tags": [
+    "hunter",
+    "execute",
+    "stealth"
+   ]
+  },
+  "benedetto": {
+   "name": "贝内代托",
+   "hp": 13,
+   "atk": 6,
+   "def": 1,
+   "spd": 2,
+   "type": "elite",
+   "range": 0,
+   "tags": [
+    "hunter",
+    "execute"
+   ]
+  },
+  "national_guard": {
+   "name": "国民自卫军",
+   "hp": 7,
+   "atk": 3,
+   "def": 1,
+   "spd": 1,
+   "type": "infantry",
+   "range": 0,
+   "tags": []
+  },
+  "royalist_bravo": {
+   "name": "保王党刺客",
+   "hp": 6,
+   "atk": 4,
+   "def": 0,
+   "spd": 1,
+   "type": "infantry",
+   "range": 0,
+   "tags": [
+    "boarder"
+   ]
+  },
+  "royalist_marksman": {
+   "name": "保王党枪手",
+   "hp": 5,
+   "atk": 4,
+   "def": 0,
+   "spd": 1,
+   "type": "infantry",
+   "range": 2,
+   "tags": [
+    "sniper",
+    "boarder"
+   ]
+  },
+  "royalist_chief": {
+   "name": "保王党头目",
+   "hp": 10,
+   "atk": 4,
+   "def": 1,
+   "spd": 1,
+   "type": "leader",
+   "range": 0,
+   "tags": [
+    "officer",
+    "boarder"
+   ]
+  },
+  "gunboat": {
+   "name": "炮艇",
+   "hp": 10,
+   "atk": 6,
+   "def": 2,
+   "spd": 0,
+   "type": "gun",
+   "range": 99,
+   "tags": [
+    "boat"
+   ],
+   "at_terrain": [
+    "sea"
+   ],
+   "move": "boat"
+  },
+  "nizam": {
+   "name": "奥斯曼步兵",
+   "hp": 6,
+   "atk": 3,
+   "def": 0,
+   "spd": 1,
+   "type": "infantry",
+   "range": 0,
+   "tags": []
+  },
+  "bey": {
+   "name": "贝伊",
+   "hp": 11,
+   "atk": 4,
+   "def": 2,
+   "spd": 1,
+   "type": "leader",
+   "range": 0,
+   "tags": [
+    "officer"
+   ]
+  },
+  "ottoman_gun": {
+   "name": "奥斯曼炮",
+   "hp": 8,
+   "atk": 6,
+   "def": 0,
+   "spd": 0,
+   "type": "gun",
+   "range": 99,
+   "tags": []
+  },
+  "verdet": {
+   "name": "绿衫志愿兵",
+   "hp": 6,
+   "atk": 3,
+   "def": 0,
+   "spd": 1,
+   "type": "infantry",
+   "range": 0,
+   "tags": []
+  },
+  "ng_grenadier": {
+   "name": "国民自卫军掷弹兵",
+   "hp": 12,
+   "atk": 4,
+   "def": 2,
+   "spd": 1,
+   "type": "elite",
+   "range": 0,
+   "tags": [
+    "heavy"
+   ]
+  },
+  "customs_officer": {
+   "name": "海关稽查官",
+   "hp": 10,
+   "atk": 3,
+   "def": 2,
+   "spd": 1,
+   "type": "leader",
+   "range": 0,
+   "tags": [
+    "officer"
+   ]
+  },
+  "revenue_cutter": {
+   "name": "缉私快艇",
+   "hp": 9,
+   "atk": 5,
+   "def": 1,
+   "spd": 0,
+   "type": "gun",
+   "range": 99,
+   "tags": [
+    "boat",
+    "short"
+   ],
+   "at_terrain": [
+    "sea"
+   ],
+   "move": "boat"
+  },
+  "if_soldier": {
+   "name": "伊夫堡守军",
+   "hp": 7,
+   "atk": 3,
+   "def": 1,
+   "spd": 1,
+   "type": "infantry",
+   "range": 0,
+   "tags": []
+  },
+  "if_veteran": {
+   "name": "守军老军士",
+   "hp": 12,
+   "atk": 4,
+   "def": 2,
+   "spd": 1,
+   "type": "elite",
+   "range": 0,
+   "tags": [
+    "heavy"
+   ]
+  },
+  "wall_sentry": {
+   "name": "墙头哨兵",
+   "hp": 4,
+   "atk": 4,
+   "def": 0,
+   "spd": 0,
+   "type": "infantry",
+   "range": 3,
+   "tags": [
+    "post",
+    "sniper"
+   ],
+   "at_terrain": [
+    "high"
+   ]
+  },
+  "fort_gun": {
+   "name": "伊夫堡炮台",
+   "hp": 10,
+   "atk": 6,
+   "def": 1,
+   "spd": 0,
+   "type": "gun",
+   "range": 99,
+   "tags": [],
+   "at_terrain": [
+    "high"
+   ]
+  },
+  "thug": {
+   "name": "码头打手",
+   "hp": 7,
+   "atk": 4,
+   "def": 0,
+   "spd": 1,
+   "type": "infantry",
+   "range": 0,
+   "tags": []
+  },
+  "thug_marksman": {
+   "name": "黑枪手",
+   "hp": 4,
+   "atk": 4,
+   "def": 0,
+   "spd": 0,
+   "type": "infantry",
+   "range": 3,
+   "tags": [
+    "post",
+    "stealth",
+    "sniper"
+   ],
+   "at_terrain": [
+    "rooftop",
+    "high"
+   ]
+  },
+  "thug_boss": {
+   "name": "打手头子",
+   "hp": 11,
+   "atk": 4,
+   "def": 1,
+   "spd": 1,
+   "type": "leader",
+   "range": 0,
+   "tags": [
+    "officer"
+   ]
+  },
+  "rival_smuggler_boss": {
+   "name": "对头帮的船老大",
+   "hp": 12,
+   "atk": 5,
+   "def": 1,
+   "spd": 1,
+   "type": "leader",
+   "range": 0,
+   "tags": [
+    "officer",
+    "stealth"
+   ]
+  },
+  "papal_carabinier": {
+   "name": "教皇宪兵",
+   "hp": 8,
+   "atk": 4,
+   "def": 2,
+   "spd": 1,
+   "type": "infantry",
+   "range": 0,
+   "tags": [
+    "arrest"
+   ]
+  },
+  "papal_dragoon": {
+   "name": "教皇龙骑兵",
+   "hp": 10,
+   "atk": 5,
+   "def": 1,
+   "spd": 2,
+   "type": "cavalry",
+   "range": 0,
+   "tags": [
+    "hunter"
+   ]
+  },
+  "sbirro": {
+   "name": "教廷密探",
+   "hp": 6,
+   "atk": 3,
+   "def": 1,
+   "spd": 1,
+   "type": "infantry",
+   "range": 0,
+   "tags": [
+    "stealth",
+    "arrest"
+   ]
+  },
+  "arnaut": {
+   "name": "阿尔瑙特枪手",
+   "hp": 6,
+   "atk": 4,
+   "def": 0,
+   "spd": 1,
+   "type": "infantry",
+   "range": 2,
+   "tags": [
+    "skirmisher"
+   ]
+  },
+  "municipal_guard": {
+   "name": "巴黎市政卫队",
+   "hp": 12,
+   "atk": 4,
+   "def": 3,
+   "spd": 1,
+   "type": "elite",
+   "range": 0,
+   "tags": [
+    "heavy"
+   ]
+  },
+  "convict": {
+   "name": "土伦苦役犯",
+   "hp": 7,
+   "atk": 4,
+   "def": 0,
+   "spd": 1,
+   "type": "infantry",
+   "range": 0,
+   "tags": [
+    "loot"
+   ]
+  },
+  "police_agent": {
+   "name": "治安密探",
+   "hp": 6,
+   "atk": 3,
+   "def": 1,
+   "spd": 1,
+   "type": "infantry",
+   "range": 0,
+   "tags": [
+    "stealth",
+    "arrest"
+   ]
+  }
+ },
+ "enemy_notes": {
+  "gendarme": {
+   "src": "arch",
+   "note": "王家宪兵。主角在他的白刃下倒下就直接被捕（不掷铜钱），战役层转入大命运「被捕」。"
+  },
+  "mounted_gendarme": {
+   "src": "arch",
+   "note": "骑马的宪兵：猎官，冲着主角来，而且会把他带走。"
+  },
+  "prison_guard": {
+   "src": "arch",
+   "note": ""
+  },
+  "turnkey_chief": {
+   "src": "arch",
+   "note": "伊夫堡的看守长，腰上挂着整串钥匙。模板用 on_kill 锁门（if_corridors）。"
+  },
+  "customs": {
+   "src": "arch",
+   "note": ""
+  },
+  "smuggler": {
+   "src": "arch",
+   "note": "对手帮派的走私贩：离我方单位 2 格以外时看不清是谁。"
+  },
+  "bandit": {
+   "src": "arch",
+   "note": ""
+  },
+  "bandit_marksman": {
+   "src": "arch",
+   "note": ""
+  },
+  "vampa": {
+   "src": "arch",
+   "note": "第四章之前是敌人（亚壁古道伏击）；打退他以后可以招为伙伴（companions_cristo.json）。"
+  },
+  "assassin": {
+   "src": "arch",
+   "note": ""
+  },
+  "benedetto": {
+   "src": "arch",
+   "note": "杰拉尔·德·维尔福的私生子，土伦苦役犯，后来的“安德烈亚·卡瓦尔康蒂子爵”。"
+  },
+  "national_guard": {
+   "src": "arch",
+   "note": ""
+  },
+  "royalist_bravo": {
+   "src": "ocean",
+   "note": "1815 年的白色恐怖。远洋稿定义；这里用在马赛六月。"
+  },
+  "royalist_marksman": {
+   "src": "ocean",
+   "note": ""
+  },
+  "royalist_chief": {
+   "src": "ocean",
+   "note": ""
+  },
+  "gunboat": {
+   "src": "ocean",
+   "note": ""
+  },
+  "nizam": {
+   "src": "trunk",
+   "note": ""
+  },
+  "bey": {
+   "src": "trunk",
+   "note": ""
+  },
+  "ottoman_gun": {
+   "src": "trunk",
+   "note": ""
+  },
+  "verdet": {
+   "src": "new",
+   "note": "1815 年夏天南方白色恐怖里的保王党志愿兵，穿阿图瓦伯爵的绿色（史实 verdets）。比保王党刺客弱一档，是马赛六月的大多数。"
+  },
+  "ng_grenadier": {
+   "src": "new",
+   "note": "1815 年 6 月倒向国王的马赛国民自卫军掷弹兵连：重型，挡住他要 2 点阻挡。"
+  },
+  "customs_officer": {
+   "src": "new",
+   "note": "缉私队的头目。打死他，这一队后退一格、攻 −1。"
+  },
+  "revenue_cutter": {
+   "src": "new",
+   "note": "海关的小快艇，船头一门回旋炮：只能停在海格，只打与自己列差 ≤4 的格子。比远洋的炮艇弱一档。"
+  },
+  "if_soldier": {
+   "src": "new",
+   "note": "要塞的驻军，大多是上了年纪的老兵。"
+  },
+  "if_veteran": {
+   "src": "new",
+   "note": "要塞驻军里的老军士：重型，挡住他要 2 点阻挡。"
+  },
+  "wall_sentry": {
+   "src": "new",
+   "note": "站在城墙上的哨兵：定点不动，射程 3，先打主角和伙伴。打死以后那一格空出来，我方炮兵、猎兵可以接手。"
+  },
+  "fort_gun": {
+   "src": "new",
+   "note": "要塞的报警炮。逃狱那一夜它会开火。"
+  },
+  "thug": {
+   "src": "new",
+   "note": "通用遭遇战的街头打手：马赛的、罗马的、巴黎的都一样。补兵（pad）用它。"
+  },
+  "thug_marksman": {
+   "src": "new",
+   "note": "躲在屋顶或窗后的黑枪：定点、射程 3、先打主角和伙伴。"
+  },
+  "thug_boss": {
+   "src": "new",
+   "note": ""
+  },
+  "rival_smuggler_boss": {
+   "src": "new",
+   "note": "热那亚帮的船老大，和雅科波的人抢同一条水道。"
+  },
+  "papal_carabinier": {
+   "src": "new",
+   "note": "罗马的教皇宪兵（第四章）。"
+  },
+  "papal_dragoon": {
+   "src": "new",
+   "note": ""
+  },
+  "sbirro": {
+   "src": "new",
+   "note": ""
+  },
+  "arnaut": {
+   "src": "new",
+   "note": "约阿尼纳的阿尔巴尼亚雇佣兵（第四章）。"
+  },
+  "municipal_guard": {
+   "src": "new",
+   "note": "七月王朝的巴黎市政卫队（第五章）。"
+  },
+  "convict": {
+   "src": "new",
+   "note": "贝内代托从土伦苦役场带出来的人（第五章）。"
+  },
+  "police_agent": {
+   "src": "new",
+   "note": "巴黎警察厅的便衣（第五章）。"
+  }
+ },
+ "new_tags_used": [
+  "ambush",
+  "arrest",
+  "boarder",
+  "boat",
+  "execute",
+  "heavy",
+  "hunter",
+  "loot",
+  "officer",
+  "post",
+  "ransom",
+  "short",
+  "skirmisher",
+  "sniper",
+  "stealth"
+ ],
+ "orders_proposed": {
+  "escape": "命令 {type:escape, unit, cells, turn}：第 turn 回合结束时，指定伙伴站在 cells 里任一格。没上场或倒下就算没完成。",
+  "extract": "命令 {type:extract, cell, turns}：我方有人站在 cell 上的回合累计满 turns 个（不必连续）。",
+  "protect": "命令 {type:protect, unit} 或 {type:protect, npc:{…}}：指定伙伴（或场上的一个不可控 NPC）上场并且打完都没有倒下。"
+ },
+ "templates": {
+  "catalans_cove": {
+   "template": {
+    "name": "加泰罗尼亚人的海湾",
+    "date": "1815-06-24",
+    "scale": "elite",
+    "size": [
+     9,
+     5
+    ],
+    "level": 13,
+    "node": "elite",
+    "turn_limit": 9,
+    "enemy_morale": 13,
+    "weather": "night",
+    "map": [
+     "GBRB^w^.G",
+     "SSSSSSSSG",
+     "^,v,,;,,G",
+     "WW-EE-,WW",
+     "WWWWWWWWW"
+    ],
+    "routes": {
+     "village": [
+      "A1",
+      "A2",
+      "B2",
+      "C2",
+      "C3",
+      "D3",
+      "D4"
+     ],
+     "road": [
+      "I2",
+      "H2",
+      "G2",
+      "F2",
+      "E2",
+      "E3",
+      "E4"
+     ],
+     "cliff": [
+      "I1",
+      "H1",
+      "H2",
+      "G2",
+      "F2",
+      "E2",
+      "E3",
+      "E4"
+     ],
+     "beach": [
+      "I3",
+      "H3",
+      "G3",
+      "G4",
+      "F4",
+      "E4"
+     ]
+    },
+    "waves": [
+     {
+      "turn": 1,
+      "route": "road",
+      "units": [
+       "customs",
+       "verdet",
+       "verdet"
+      ]
+     },
+     {
+      "turn": 1,
+      "route": "village",
+      "units": [
+       "verdet",
+       "verdet",
+       "verdet"
+      ]
+     },
+     {
+      "turn": 2,
+      "at": "H5",
+      "units": [
+       "revenue_cutter"
+      ],
+      "first_fire": 4
+     },
+     {
+      "turn": 2,
+      "route": "beach",
+      "units": [
+       "customs",
+       "verdet"
+      ]
+     },
+     {
+      "turn": 2,
+      "route": "village",
+      "units": [
+       "verdet",
+       "gendarme"
+      ]
+     },
+     {
+      "turn": 3,
+      "route": "road",
+      "units": [
+       "mounted_gendarme",
+       "customs"
+      ]
+     },
+     {
+      "turn": 3,
+      "route": "village",
+      "units": [
+       "gendarme",
+       "verdet"
+      ]
+     },
+     {
+      "turn": 4,
+      "route": "cliff",
+      "units": [
+       "customs",
+       "verdet"
+      ],
+      "alt": [
+       [
+        "customs",
+        "customs"
+       ]
+      ]
+     },
+     {
+      "turn": 5,
+      "route": "road",
+      "units": [
+       "customs_officer",
+       "verdet"
+      ]
+     },
+     {
+      "turn": 5,
+      "route": "beach",
+      "units": [
+       "verdet",
+       {
+        "kind": "customs",
+        "lv_min": 14
+       }
+      ]
+     },
+     {
+      "turn": 6,
+      "route": "village",
+      "units": [
+       "verdet",
+       "gendarme",
+       {
+        "kind": "mounted_gendarme",
+        "lv_min": 15
+       }
+      ]
+     }
+    ],
+    "order": {
+     "type": "extract",
+     "cell": "E3",
+     "turns": 4,
+     "desc": "百日的军费：四箱金币要从 E3 的沙滩搬上 E4 的渔船。有 4 个回合结束时我方有人站在 E3（每满一回合上船一箱）。"
+    },
+    "order_fallback": {
+     "type": "hold",
+     "cell": "E3",
+     "turn": 9,
+     "desc": "（内核没有 extract 时）第 9 回合结束时，我方有人守在 E3。"
+    },
+    "notes": "1815 年 6 月 24 日夜里，滑铁卢的消息到了，加泰罗尼亚人村下面的小海湾。百日期间存在马赛的军费要赶在保王党动手以前运走，两条渔船等在湾里（D4、E4 是鹰旗：船被缴就完了），两头同时有人来：宪兵从村子那头下来（A1 教堂后的小路，经 A2–C2 石板巷、C3 晾网棚、D3 沙滩到 D4），海关从马赛那头来（I2 大路、I1 崖上小路在 H2 并进来，都经 E2、E3 到 E4；I3 沿沙滩经 G4 蹚 F4 浅水到 E4）。B1、D1 是渔民的石屋（我方可以进驻，防 +2，挡视线，敌人不进屋），C1 是屋顶（只有猎兵能上，射程 +1），E1、G1、A3 是礁石（高地），F1 是松林。C3 晾网棚是村庄（双方防 +2），F3 是礁石滩（瓦砾：步耗 2，防 +1），C4、F4 是浅水（能走不能站）。H5 海面上第 2 回合来一条缉私快艇（第 4 回合起每 2 回合一炮，只打与它列差 ≤4 的格子，也就是 D–I 列）。夜里我方小火器射程 −1。左右两头要分兵：村子那头的路短、人少，海关那头三条路都压到 E3。"
+   },
+   "uses": [
+    {
+     "node": "m_catalans_cove",
+     "sheet": "marseille",
+     "level": 13
+    }
+   ],
+   "plan": {
+    "roster": "ch1",
+    "deploy": [
+     {
+      "t": 1,
+      "deploy": "caderousse",
+      "at": "C3",
+      "face": "up"
+     },
+     {
+      "t": 1,
+      "deploy": "morel",
+      "at": "E3",
+      "face": "up"
+     },
+     {
+      "t": 2,
+      "deploy": "hero",
+      "at": "D1",
+      "face": "down"
+     },
+     {
+      "t": 2,
+      "deploy": "corso",
+      "at": "C1",
+      "face": "down"
+     },
+     {
+      "t": 3,
+      "deploy": "line_1",
+      "at": "D2",
+      "face": "right"
+     },
+     {
+      "t": 4,
+      "deploy": "line_6",
+      "at": "D3",
+      "face": "up"
+     },
+     {
+      "t": 5,
+      "deploy": "jager_4",
+      "at": "E1",
+      "face": "down"
+     },
+     {
+      "slots": [
+       [
+        "E3",
+        "up",
+        [
+         "grenadier",
+         "line"
+        ]
+       ],
+       [
+        "C3",
+        "up",
+        [
+         "line",
+         "grenadier"
+        ]
+       ],
+       [
+        "G1",
+        "down",
+        [
+         "artillery",
+         "jager"
+        ]
+       ]
+      ]
+     }
+    ],
+    "text": "两头分兵：卡德鲁斯守 C3 晾网棚（村庄防 +2），科尔索上 C1 屋顶朝下打石板巷；莫雷尔守 E3（海关三条路的汇合口，也是搬箱子的格子），第 2 回合主角进 D1 石屋（不挨任何一条路，猎官够不着），横队进 D2 朝右打 E2–F2，D3 再放一队横队兼当抬人的。第 5 回合起 E1 上猎兵，G1 上炮朝下：同时打得到沙滩和 H5 的缉私快艇。"
+   },
+   "evidence": {
+    "validate": "ok",
+    "warnings": [],
+    "rows": [
+     {
+      "L": 13,
+      "idle": "defeat t6",
+      "hero_only": "defeat t7 (B1:right)",
+      "plan": {
+       "outcome": "victory",
+       "turn": 9,
+       "morale": 11,
+       "leaks": 3,
+       "kills": 10,
+       "fallen": [
+        "morel"
+       ],
+       "order_done": true
+      },
+      "counts": {
+       "enemy_hp_total": 268,
+       "enemies": 22,
+       "hunters": 1,
+       "elites": 0,
+       "leaders": 1,
+       "kill_value": 27,
+       "power": 242
+      }
+     }
+    ]
+   }
+  },
+  "marseille_arrest": {
+   "template": {
+    "name": "旧港·六月的白帽徽",
+    "date": "1815-06-25",
+    "scale": "grand",
+    "size": [
+     10,
+     6
+    ],
+    "level": 14,
+    "node": "boss",
+    "turn_limit": 13,
+    "enemy_morale": 24,
+    "weather": "clear",
+    "map": [
+     "WkBRBB^RBG",
+     "EkSSSSSSSS",
+     "WkB.v.BRSB",
+     "EkSSSSSSSS",
+     "WkBB^BRBSG",
+     "WWWWWW#W^_"
+    ],
+    "spawns": [
+     "E3"
+    ],
+    "routes": {
+     "loge": [
+      "J1",
+      "J2",
+      "I2",
+      "H2",
+      "G2",
+      "F2",
+      "E2",
+      "D2",
+      "C2",
+      "B2",
+      "A2"
+     ],
+     "cross_dn": [
+      "J1",
+      "J2",
+      "I2",
+      "I3",
+      "I4",
+      "H4",
+      "G4",
+      "F4",
+      "E4",
+      "D4",
+      "C4",
+      "B4",
+      "A4"
+     ],
+     "quay": [
+      "J5",
+      "I5",
+      "I4",
+      "H4",
+      "G4",
+      "F4",
+      "E4",
+      "D4",
+      "C4",
+      "B4",
+      "A4"
+     ],
+     "cross_up": [
+      "J5",
+      "I5",
+      "I4",
+      "I3",
+      "I2",
+      "H2",
+      "G2",
+      "F2",
+      "E2",
+      "D2",
+      "C2",
+      "B2",
+      "A2"
+     ],
+     "church_n": [
+      "E3",
+      "E2",
+      "D2",
+      "C2",
+      "B2",
+      "A2"
+     ],
+     "church_s": [
+      "E3",
+      "E4",
+      "D4",
+      "C4",
+      "B4",
+      "A4"
+     ]
+    },
+    "waves": [
+     {
+      "turn": 1,
+      "route": "loge",
+      "units": [
+       "verdet",
+       "verdet",
+       "royalist_marksman"
+      ]
+     },
+     {
+      "turn": 1,
+      "route": "quay",
+      "units": [
+       "national_guard",
+       "national_guard"
+      ]
+     },
+     {
+      "turn": 2,
+      "at": "I6",
+      "units": [
+       "fort_gun"
+      ],
+      "first_fire": 4
+     },
+     {
+      "turn": 3,
+      "route": "church_n",
+      "units": [
+       {
+        "kind": "verdet",
+        "tags": [
+         "ambush"
+        ]
+       },
+       {
+        "kind": "verdet",
+        "tags": [
+         "ambush"
+        ]
+       },
+       {
+        "kind": "royalist_marksman",
+        "tags": [
+         "ambush"
+        ]
+       }
+      ]
+     },
+     {
+      "turn": 3,
+      "route": "cross_up",
+      "units": [
+       "mounted_gendarme"
+      ]
+     },
+     {
+      "turn": 4,
+      "route": "loge",
+      "units": [
+       "ng_grenadier",
+       "verdet",
+       "verdet"
+      ],
+      "alt": [
+       [
+        "ng_grenadier",
+        "verdet",
+        "royalist_marksman"
+       ]
+      ]
+     },
+     {
+      "turn": 5,
+      "route": "quay",
+      "units": [
+       "royalist_chief",
+       "national_guard",
+       "national_guard",
+       "royalist_marksman",
+       "royalist_marksman"
+      ]
+     },
+     {
+      "turn": 6,
+      "route": "church_s",
+      "units": [
+       {
+        "kind": "royalist_bravo",
+        "tags": [
+         "ambush",
+         "hunter"
+        ]
+       },
+       {
+        "kind": "verdet",
+        "tags": [
+         "ambush"
+        ]
+       }
+      ]
+     },
+     {
+      "turn": 7,
+      "route": "cross_dn",
+      "units": [
+       "mounted_gendarme",
+       "ng_grenadier"
+      ]
+     },
+     {
+      "turn": 8,
+      "route": "loge",
+      "units": [
+       "royalist_chief",
+       "ng_grenadier",
+       "verdet",
+       {
+        "kind": "royalist_marksman",
+        "lv_min": 15
+       }
+      ]
+     },
+     {
+      "turn": 9,
+      "route": "quay",
+      "units": [
+       "ng_grenadier",
+       "national_guard",
+       "gendarme",
+       "gendarme"
+      ]
+     },
+     {
+      "turn": 10,
+      "route": "church_n",
+      "units": [
+       {
+        "kind": "verdet",
+        "tags": [
+         "ambush"
+        ]
+       },
+       {
+        "kind": "royalist_marksman",
+        "tags": [
+         "ambush"
+        ]
+       },
+       {
+        "kind": "verdet",
+        "tags": [
+         "ambush"
+        ],
+        "lv_min": 16
+       }
+      ]
+     },
+     {
+      "turn": 11,
+      "route": "cross_dn",
+      "units": [
+       "ng_grenadier",
+       "royalist_marksman",
+       "verdet",
+       "verdet"
+      ]
+     },
+     {
+      "turn": 12,
+      "route": "church_s",
+      "units": [
+       {
+        "kind": "royalist_bravo",
+        "tags": [
+         "ambush"
+        ]
+       },
+       {
+        "kind": "royalist_bravo",
+        "tags": [
+         "ambush"
+        ]
+       },
+       {
+        "kind": "verdet",
+        "tags": [
+         "ambush"
+        ]
+       }
+      ]
+     }
+    ],
+    "order": {
+     "type": "protect",
+     "unit": "morel",
+     "desc": "莫雷尔先生的请求：他要亲手守自己的货栈。莫雷尔上场，并且打完都没有倒下。"
+    },
+    "order_fallback": {
+     "type": "no_leak",
+     "desc": "（内核没有 protect 时）没有一个暴徒走到码头的小船边。"
+    },
+    "notes": "1815 年 6 月 25 日，滑铁卢的消息到了马赛，城里的保王党起事（史实：马赛这几天杀了不少波拿巴分子和埃及难民）。旧港北岸：左边 B 列是码头石阶，A2、A4 是等着把人送去加泰罗尼亚人村的小船（鹰旗）。两条大街从勒潘尼耶的坡上冲下来：第 2 行洛日街（J1 红门是刀剪街口，绕进 J2），第 4 行港口大道（J5 红门是大街口，经 I5 拐进来）；I 列的小巷把两条街连起来，所以每一路都能拐到另一条街上。E3 是圣洛朗教堂前的小广场（村庄），第 3、6、10 回合有暴徒从广场上冒出来（伏兵，出生格 E3），离小船只有 4 步。房屋 B 我方可以进驻（防 +2，挡视线），C3 是莫雷尔父子商行的货栈；屋顶 D1、H1、H3、G5 只有猎兵能上；G1 教堂台阶、E5 是高地（炮兵、猎兵）。I6 是圣让堡的炮台（第 2 回合起，第 4 回合开第一炮，打离它最近的我方地面单位），G6 是堡墙。来敌：绿衫志愿兵、保王党枪手（专打主角和伙伴）、倒向国王的国民自卫军和掷弹兵连（重型），两名骑宪兵（猎官、逮捕：主角在他们刀下倒下就直接被捕），第 6 回合广场上冒出一个盯着“另一个埃德蒙”的保王党刺客（猎官）。"
+   },
+   "uses": [
+    {
+     "scene": "c_white_june",
+     "template": "marseille_arrest",
+     "level": 14,
+     "order_flag": "m_morrel_kept"
+    }
+   ],
+   "plan": {
+    "roster": "ch1",
+    "deploy": [
+     {
+      "t": 1,
+      "deploy": "hero",
+      "at": "C1",
+      "face": "down"
+     },
+     {
+      "t": 1,
+      "deploy": "morel",
+      "at": "C3",
+      "face": "up"
+     },
+     {
+      "t": 1,
+      "deploy": "corso",
+      "at": "D1",
+      "face": "down"
+     },
+     {
+      "slots": [
+       [
+        "C2",
+        "right",
+        [
+         "caderousse",
+         "grenadier",
+         "line"
+        ]
+       ],
+       [
+        "E5",
+        "up",
+        [
+         "artillery"
+        ]
+       ],
+       [
+        "C4",
+        "right",
+        [
+         "line",
+         "grenadier"
+        ]
+       ],
+       [
+        "D3",
+        "right",
+        [
+         "marie"
+        ]
+       ],
+       [
+        "B4",
+        "right",
+        [
+         "grenadier",
+         "line"
+        ]
+       ],
+       [
+        "B2",
+        "right",
+        [
+         "line",
+         "grenadier"
+        ]
+       ],
+       [
+        "H3",
+        "down",
+        [
+         "jager"
+        ]
+       ],
+       [
+        "B3",
+        "right",
+        [
+         "baptiste",
+         "line"
+        ]
+       ],
+       [
+        "G1",
+        "down",
+        [
+         "artillery",
+         "jager"
+        ]
+       ],
+       [
+        "D4",
+        "right",
+        [
+         "hussar"
+        ],
+        9
+       ]
+      ]
+     }
+    ],
+    "text": "莫雷尔守自己的货栈 C3（房屋，防 +2，敌人进不来），朝上打洛日街；玛丽在 D3 广场边给他回血。主角在 C1 石屋里（C2 有人挡着，猎官就停在 D2 够不着他）。C2、C4 两个街口各一道阻挡，B2、B4 码头再一道。E5 高台上的炮朝上，同时打洛日街和教堂广场冒出来的伏兵；G1 教堂台阶再上一门炮朝下打港口大道。H3 屋顶的猎兵专打头目。圣让堡的炮只打离它最近的地面单位，所以别让人站在 G4–I4 太久。"
+   },
+   "evidence": {
+    "validate": "ok",
+    "warnings": [],
+    "rows": [
+     {
+      "L": 14,
+      "idle": "defeat t10",
+      "hero_only": "defeat t10 (J3:right)",
+      "plan": {
+       "outcome": "victory",
+       "turn": 13,
+       "morale": 15,
+       "leaks": 0,
+       "kills": 15,
+       "fallen": [
+        "marie"
+       ],
+       "order_done": true
+      },
+      "counts": {
+       "enemy_hp_total": 554,
+       "enemies": 38,
+       "hunters": 3,
+       "elites": 5,
+       "leaders": 2,
+       "kill_value": 57,
+       "power": 530
+      }
+     }
+    ]
+   }
+  },
+  "morgiou_cove": {
+   "template": {
+    "name": "莫尔吉乌的走私湾",
+    "date": "1822-08-14",
+    "scale": "elite",
+    "size": [
+     9,
+     5
+    ],
+    "level": 15,
+    "node": "elite",
+    "turn_limit": 9,
+    "enemy_morale": 14,
+    "weather": "night",
+    "map": [
+     "^^#G^^#G_",
+     "Ekc,,;,,G",
+     "EkWWpWWWW",
+     "_kc,,;,.G",
+     "__^^#^^^_"
+    ],
+    "routes": {
+     "west_cliff": [
+      "D1",
+      "D2",
+      "C2",
+      "B2",
+      "A2"
+     ],
+     "east_cliff": [
+      "H1",
+      "H2",
+      "G2",
+      "F2",
+      "E2",
+      "D2",
+      "C2",
+      "B2",
+      "A2"
+     ],
+     "shore": [
+      "I2",
+      "H2",
+      "G2",
+      "F2",
+      "E2",
+      "D2",
+      "C2",
+      "B2",
+      "A2"
+     ],
+     "south": [
+      "I4",
+      "H4",
+      "G4",
+      "F4",
+      "E4",
+      "D4",
+      "C4",
+      "B4",
+      "B3",
+      "A3"
+     ],
+     "rival_n": [
+      "E3",
+      "E2",
+      "D2",
+      "C2",
+      "B2",
+      "A2"
+     ],
+     "rival_s": [
+      "E3",
+      "E4",
+      "D4",
+      "C4",
+      "B4",
+      "B3",
+      "A3"
+     ]
+    },
+    "waves": [
+     {
+      "turn": 1,
+      "route": "west_cliff",
+      "units": [
+       "customs",
+       "customs"
+      ]
+     },
+     {
+      "turn": 1,
+      "route": "shore",
+      "units": [
+       "gendarme",
+       "customs"
+      ]
+     },
+     {
+      "turn": 2,
+      "at": "H3",
+      "units": [
+       "revenue_cutter"
+      ],
+      "first_fire": 4
+     },
+     {
+      "turn": 3,
+      "route": "rival_n",
+      "units": [
+       {
+        "kind": "smuggler",
+        "tags": [
+         "boarder"
+        ]
+       },
+       {
+        "kind": "smuggler",
+        "tags": [
+         "boarder"
+        ]
+       }
+      ]
+     },
+     {
+      "turn": 3,
+      "route": "south",
+      "units": [
+       "customs",
+       "customs"
+      ]
+     },
+     {
+      "turn": 4,
+      "route": "east_cliff",
+      "units": [
+       "gendarme",
+       {
+        "kind": "customs",
+        "tags": [
+         "hunter"
+        ]
+       }
+      ]
+     },
+     {
+      "turn": 5,
+      "route": "west_cliff",
+      "units": [
+       "customs_officer",
+       "customs"
+      ]
+     },
+     {
+      "turn": 6,
+      "route": "rival_s",
+      "units": [
+       {
+        "kind": "rival_smuggler_boss",
+        "tags": [
+         "boarder"
+        ]
+       },
+       {
+        "kind": "smuggler",
+        "tags": [
+         "boarder"
+        ]
+       }
+      ]
+     },
+     {
+      "turn": 6,
+      "route": "south",
+      "units": [
+       "gendarme",
+       "customs",
+       {
+        "kind": "customs",
+        "lv_min": 17
+       }
+      ]
+     },
+     {
+      "turn": 7,
+      "route": "shore",
+      "units": [
+       "customs",
+       {
+        "kind": "gendarme",
+        "lv_min": 16
+       }
+      ]
+     }
+    ],
+    "order": {
+     "type": "hold",
+     "cell": "C2",
+     "turn": 9,
+     "desc": "雅科波的话：“货在洞里。”第 9 回合结束时，我方有人守在 C2 的洞口。"
+    },
+    "notes": "1822 年夏天，卡西斯路边的莫尔吉乌小湾（马赛南边的一道石灰岩峡湾）。少年阿梅莉号的长艇（A2、A3 是鹰旗）靠在 B 列的小码头上，货藏在 C2、C4 两个海蚀洞里。海关从三个方向下来：西崖小路（D1，4 步就到船边，最快）、东崖小路（H1）、北岸小路（I2）、南岸小路（I4）。第 3、6 回合，热那亚对头帮的船靠上峡湾中间 E3 的跳板（接舷：从跳板出发），往两岸冲。A1、B1、E1、F1 和 C5、D5、F5–H5 是崖顶（高地）；C1、G1、E5 是崖壁（墙，挡视线）。F2、F4 是碎石滩（步耗 2，防 +1）。海蚀洞：敌炮不瞄准洞里的人，洞里挨远程防 +2，但洞穴挡视线。H3 海面上是海关的缉私快艇（只打与它列差 ≤4 的格子，B 列打不到）。夜里我方小火器射程 −1。走私贩带“隐身”：离我方单位 2 格以外时只看得见一个问号。"
+   },
+   "uses": [
+    {
+     "scene": "c_morgiou",
+     "template": "morgiou_cove",
+     "level": 15,
+     "order_flag": "m_cargo_saved"
+    }
+   ],
+   "plan": {
+    "roster": "ch2",
+    "deploy": [
+     {
+      "t": 1,
+      "deploy": "caderousse",
+      "at": "C2",
+      "face": "right"
+     },
+     {
+      "t": 1,
+      "deploy": "hero",
+      "at": "A1",
+      "face": "right"
+     },
+     {
+      "slots": [
+       [
+        "C2",
+        "right",
+        [
+         "caderousse",
+         "grenadier",
+         "line"
+        ]
+       ],
+       [
+        "F1",
+        "down",
+        [
+         "jacopo",
+         "artillery"
+        ]
+       ],
+       [
+        "C4",
+        "right",
+        [
+         "bertuccio",
+         "line",
+         "grenadier"
+        ]
+       ],
+       [
+        "B2",
+        "right",
+        [
+         "grenadier",
+         "line"
+        ]
+       ],
+       [
+        "E1",
+        "down",
+        [
+         "jager"
+        ]
+       ],
+       [
+        "B4",
+        "right",
+        [
+         "line",
+         "grenadier"
+        ]
+       ],
+       [
+        "B1",
+        "right",
+        [
+         "artillery",
+         "jager"
+        ]
+       ],
+       [
+        "B3",
+        "right",
+        [
+         "marie",
+         "line"
+        ]
+       ]
+      ]
+     }
+    ],
+    "text": "两个海蚀洞是天然的堡垒：C2、C4 各放一道阻挡（洞里挨远程防 +2，缉私快艇也不瞄洞里的人）。雅科波的回旋炮上 F1 崖顶朝下，一炮同时罩住 E3 跳板（对头帮上岸的地方）和南岸；E1 再放猎兵朝下打跳板。主角在 A1 崖角（谁的路都不挨着）。西崖小路最短（4 步），第一回合就要有人在 C2。"
+   },
+   "evidence": {
+    "validate": "ok",
+    "warnings": [],
+    "rows": [
+     {
+      "L": 15,
+      "idle": "defeat t8",
+      "hero_only": "defeat t9 (B4:right)",
+      "plan": {
+       "outcome": "victory",
+       "turn": 9,
+       "morale": 14,
+       "leaks": 0,
+       "kills": 8,
+       "fallen": [
+        "caderousse"
+       ],
+       "order_done": false
+      },
+      "counts": {
+       "enemy_hp_total": 251,
+       "enemies": 18,
+       "hunters": 1,
+       "elites": 0,
+       "leaders": 2,
+       "kill_value": 25,
+       "power": 282
+      }
+     }
+    ]
+   }
+  },
+  "if_corridors": {
+   "template": {
+    "name": "伊夫堡的那一夜",
+    "date": "1829-02-28",
+    "scale": "grand",
+    "size": [
+     10,
+     6
+    ],
+    "level": 16,
+    "node": "boss",
+    "turn_limit": 13,
+    "enemy_morale": 24,
+    "weather": "night",
+    "map": [
+     "__^^#^^#__",
+     "_kCCCCCCD_",
+     "EkL#D#L##_",
+     "EkCCCCCCCD",
+     "_,;..v..G_",
+     "_WWW^^WW__"
+    ],
+    "routes": {
+     "guard": [
+      "I2",
+      "H2",
+      "G2",
+      "F2",
+      "E2",
+      "D2",
+      "C2",
+      "B2",
+      "B3",
+      "A3"
+     ],
+     "dungeon": [
+      "J4",
+      "I4",
+      "H4",
+      "G4",
+      "F4",
+      "E4",
+      "D4",
+      "C4",
+      "B4",
+      "A4"
+     ],
+     "yard": [
+      "I5",
+      "H5",
+      "G5",
+      "F5",
+      "E5",
+      "D5",
+      "C5",
+      "B5",
+      "B4",
+      "A4"
+     ],
+     "stair_up": [
+      "E3",
+      "E2",
+      "D2",
+      "C2",
+      "B2",
+      "B3",
+      "A3"
+     ],
+     "stair_dn": [
+      "E3",
+      "E4",
+      "D4",
+      "C4",
+      "B4",
+      "A4"
+     ]
+    },
+    "events": [
+     {
+      "on_kill": "turnkey_chief",
+      "cell": "E3",
+      "terrain": "wall"
+     }
+    ],
+    "waves": [
+     {
+      "turn": 1,
+      "route": "guard",
+      "units": [
+       "prison_guard",
+       "prison_guard"
+      ]
+     },
+     {
+      "turn": 1,
+      "route": "dungeon",
+      "units": [
+       "if_soldier",
+       "if_soldier",
+       {
+        "kind": "prison_guard",
+        "tags": [
+         "hunter"
+        ]
+       }
+      ]
+     },
+     {
+      "turn": 1,
+      "at": "F1",
+      "units": [
+       "wall_sentry"
+      ]
+     },
+     {
+      "turn": 2,
+      "route": "stair_up",
+      "units": [
+       "prison_guard",
+       {
+        "kind": "prison_guard",
+        "tags": [
+         "hunter"
+        ]
+       }
+      ]
+     },
+     {
+      "turn": 2,
+      "at": "F6",
+      "units": [
+       "fort_gun"
+      ],
+      "first_fire": 4
+     },
+     {
+      "turn": 3,
+      "route": "guard",
+      "units": [
+       "turnkey_chief",
+       "prison_guard",
+       "if_soldier"
+      ]
+     },
+     {
+      "turn": 3,
+      "route": "yard",
+      "units": [
+       "if_soldier",
+       "if_veteran"
+      ]
+     },
+     {
+      "turn": 4,
+      "route": "stair_dn",
+      "units": [
+       "if_veteran",
+       "prison_guard"
+      ]
+     },
+     {
+      "turn": 5,
+      "route": "dungeon",
+      "units": [
+       "if_soldier",
+       "if_soldier",
+       {
+        "kind": "if_veteran",
+        "tags": [
+         "hunter"
+        ]
+       }
+      ]
+     },
+     {
+      "turn": 6,
+      "route": "stair_up",
+      "units": [
+       "if_veteran",
+       "prison_guard",
+       "prison_guard"
+      ]
+     },
+     {
+      "turn": 6,
+      "at": "D1",
+      "units": [
+       {
+        "kind": "wall_sentry",
+        "lv_min": 17
+       }
+      ]
+     },
+     {
+      "turn": 7,
+      "route": "yard",
+      "units": [
+       "if_soldier",
+       "if_soldier",
+       "if_veteran"
+      ]
+     },
+     {
+      "turn": 8,
+      "route": "guard",
+      "units": [
+       "if_soldier",
+       "prison_guard",
+       {
+        "kind": "if_soldier",
+        "lv_min": 18
+       }
+      ]
+     },
+     {
+      "turn": 9,
+      "route": "stair_dn",
+      "units": [
+       "if_veteran",
+       "prison_guard",
+       {
+        "kind": "prison_guard",
+        "tags": [
+         "hunter"
+        ]
+       }
+      ]
+     },
+     {
+      "turn": 10,
+      "route": "dungeon",
+      "units": [
+       "if_soldier",
+       "if_soldier",
+       "if_soldier"
+      ]
+     }
+    ],
+    "order": {
+     "type": "escape",
+     "unit": "dantes",
+     "cells": [
+      "B2",
+      "B3",
+      "B4"
+     ],
+     "turn": 13,
+     "desc": "法利亚的遗愿：第 13 回合结束时，唐泰斯站在 B 列的海门石阶上（B2、B3、B4 任一格）。"
+    },
+    "order_fallback": {
+     "type": "hold",
+     "cell": "B3",
+     "turn": 13,
+     "desc": "（内核没有 escape 时）第 13 回合结束时，我方有人守在 B3 海门。"
+    },
+    "notes": "1829 年 2 月的夜里，伊夫堡。法利亚神甫死了（或者，你的药让他撑过了第三次发作），唐泰斯缝进了运尸的麻袋——今夜的运尸工是你的人。可是警钟还是响了。左边 B 列是通往海门的石阶（码头），A3、A4 是靠在礁石下的小艇（鹰旗）。三条路从要塞里面压过来：第 2 行是卫兵室走廊（I2 门），第 4 行是地牢走廊（J4 是从下层牢房上来的楼梯门），第 5 行是院子（I5 是要塞正门，C5 是瓦砾，步耗 2）。E3 是正中间的地牢楼梯门：第 2、4、6、9 回合有人从这里钻出来，往上下两条走廊分头冲（离小艇只有 5–6 步）。**打死典狱长（第 3 回合从卫兵室出来），就拿到了他的钥匙：E3 那扇门立刻锁死（变成墙），之后从 E3 出发的波次不再出现。**走廊（C）是暗的：站在走廊里的射手射程 −1；今夜又是夜战，射程再 −1。C3、G3 是牢房（34 号和 27 号）：我方可以进去（防 +1），敌人不走；牢房夹在两条走廊之间，横队朝上能打卫兵室走廊、朝下能打地牢走廊。D3、F3、H3、I3 和 E1、H1 是墙（挡视线）。C1、D1、F1、G1 是城墙（高地）：F1 一开场就站着一名墙头哨兵（射程 3，先打主角和伙伴），第 17 级起 D1 也会来一名；打死以后那一格可以换我方的人上去。E6、F6 是海边礁岩：F6 第 2 回合起是要塞的报警炮（第 4 回合起每 2 回合一炮），E6 留给我方。B5 是石阶下的小滩。来敌：狱卒、守军、老军士（重型精英）、典狱长；第 1、2、5、9 回合各有一名认得你的人（猎官）。"
+   },
+   "uses": [
+    {
+     "scene": "c_if_night",
+     "template": "if_corridors",
+     "level": 16,
+     "order_flag": "m_escape_clean"
+    }
+   ],
+   "plan": {
+    "roster": "ch2_boss",
+    "deploy": [
+     {
+      "t": 1,
+      "deploy": "hero",
+      "at": "C1",
+      "face": "down"
+     },
+     {
+      "slots": [
+       [
+        "C2",
+        "right",
+        [
+         "morel",
+         "grenadier",
+         "line"
+        ]
+       ],
+       [
+        "C4",
+        "right",
+        [
+         "grenadier",
+         "line"
+        ]
+       ],
+       [
+        "D1",
+        "down",
+        [
+         "jacopo",
+         "artillery"
+        ]
+       ],
+       [
+        "C5",
+        "right",
+        [
+         "bertuccio",
+         "faria",
+         "line"
+        ]
+       ],
+       [
+        "E6",
+        "up",
+        [
+         "artillery"
+        ]
+       ],
+       [
+        "B3",
+        "right",
+        [
+         "marie"
+        ]
+       ],
+       [
+        "G3",
+        "down",
+        [
+         "line"
+        ]
+       ],
+       [
+        "B4",
+        "right",
+        [
+         "line",
+         "grenadier"
+        ]
+       ],
+       [
+        "B2",
+        "right",
+        [
+         "dantes"
+        ],
+        9
+       ],
+       [
+        "G1",
+        "down",
+        [
+         "jager"
+        ]
+       ]
+      ]
+     }
+    ],
+    "text": "两条走廊在 C 列各放一道阻挡（C2、C4），院子那一路在 C5 瓦砾上挡（贝尔图乔的筑垒顺手在 B5、D5 放拒马）。D1 城墙上的炮朝下，正好罩住 E3 地牢门和两条走廊；E6 礁岩上再一门朝上。G3 是 27 号牢房：横队进去朝下打地牢走廊和院子。主角在 C1 城墙上：C2 守住，猎官就停在 D2 打不着他。唐泰斯留到最后几回合再上 B2 海门（骠骑兵一上场就冲锋），撑到第 13 回合结束就完成法利亚的遗愿。更好的打法是第 4–6 回合集中火力打死典狱长：E3 的门一锁，第 6、9 回合那两波就不会来了。"
+   },
+   "evidence": {
+    "validate": "ok",
+    "warnings": [],
+    "rows": [
+     {
+      "L": 16,
+      "idle": "defeat t9",
+      "hero_only": "defeat t9 (C1:right)",
+      "plan": {
+       "outcome": "victory",
+       "turn": 13,
+       "morale": 5,
+       "leaks": 5,
+       "kills": 14,
+       "fallen": [
+        "morel"
+       ],
+       "order_done": true
+      },
+      "counts": {
+       "enemy_hp_total": 594,
+       "enemies": 33,
+       "hunters": 4,
+       "elites": 6,
+       "leaders": 1,
+       "kill_value": 49,
+       "power": 631
+      }
+     }
+    ]
+   }
+  },
+  "alley_ambush": {
+   "template": {
+    "name": "小巷伏击",
+    "scale": "skirmish",
+    "size": [
+     8,
+     4
+    ],
+    "base_level": 12,
+    "pad": {
+     "kind": "thug",
+     "every": 5
+    },
+    "node": "battle",
+    "turn_limit": 7,
+    "enemy_morale": 10,
+    "weather": "clear",
+    "map": [
+     "BRBB#BRB",
+     "ESSSSSSG",
+     "ESvSSSSG",
+     "BBRBB#BB"
+    ],
+    "spawns": [
+     "E2",
+     "F3"
+    ],
+    "routes": {
+     "upper": [
+      "H2",
+      "G2",
+      "F2",
+      "E2",
+      "D2",
+      "C2",
+      "B2",
+      "A2"
+     ],
+     "lower": [
+      "H3",
+      "G3",
+      "F3",
+      "E3",
+      "D3",
+      "C3",
+      "B3",
+      "A3"
+     ],
+     "door_n": [
+      "E2",
+      "D2",
+      "C2",
+      "B2",
+      "A2"
+     ],
+     "door_s": [
+      "F3",
+      "E3",
+      "D3",
+      "C3",
+      "B3",
+      "A3"
+     ]
+    },
+    "waves": [
+     {
+      "turn": 1,
+      "route": "upper",
+      "units": [
+       "thug",
+       "thug"
+      ]
+     },
+     {
+      "turn": 1,
+      "route": "lower",
+      "units": [
+       "thug",
+       "thug_boss"
+      ],
+      "alt": [
+       [
+        "thug",
+        "thug",
+        "thug"
+       ]
+      ]
+     },
+     {
+      "turn": 1,
+      "at": "G1",
+      "units": [
+       "thug_marksman"
+      ]
+     },
+     {
+      "turn": 2,
+      "route": "door_n",
+      "units": [
+       {
+        "kind": "thug",
+        "tags": [
+         "ambush"
+        ]
+       },
+       {
+        "kind": "thug",
+        "tags": [
+         "ambush",
+         "hunter"
+        ]
+       }
+      ]
+     },
+     {
+      "turn": 3,
+      "route": "door_s",
+      "units": [
+       {
+        "kind": "thug",
+        "tags": [
+         "ambush"
+        ]
+       },
+       {
+        "kind": "thug",
+        "tags": [
+         "ambush"
+        ]
+       }
+      ]
+     },
+     {
+      "turn": 3,
+      "route": "upper",
+      "units": [
+       "gendarme",
+       {
+        "kind": "thug",
+        "lv_min": 17
+       }
+      ]
+     },
+     {
+      "turn": 4,
+      "route": "lower",
+      "units": [
+       "thug",
+       {
+        "kind": "gendarme",
+        "lv_min": 17
+       },
+       {
+        "kind": "thug",
+        "tags": [
+         "hunter"
+        ],
+        "lv_min": 21
+       }
+      ]
+     }
+    ],
+    "order": {
+     "type": "no_leak",
+     "desc": "没有一个打手摸到马车边（A2、A3）。"
+    },
+    "notes": "通用遭遇战（马赛、罗马、巴黎的老城都用它）：一条两边是房子的窄巷，马车（A2、A3 鹰旗）停在巷尾。上下两条路：第 2 行从 H2 的侧巷口来，第 3 行从 H3 正面来；C3 是小喷泉广场（村庄，双方防 +2）。第 2、4 回合有人从 E2、F3 的门洞里冲出来（伏兵），离马车只有 3–4 步。G1 窗后有一个黑枪（定点、射程 3、隐身）。屋顶 B1、G1……C4 只有猎兵能上；E1、F4 是拱门（墙，挡视线）。打手头子打死以后，他那一队后退一格、攻 −1。补兵：每一波按 (L−12)/5 补码头打手（L17 起每波 +1，L22 起 +2）；L17 起上路多一名宪兵，L21 起第 4 回合多一名猎官。"
+   },
+   "uses": [
+    {
+     "pool": "cristo",
+     "levels": [
+      12,
+      14,
+      16,
+      19,
+      22
+     ]
+    }
+   ],
+   "plan": {
+    "roster": "generic",
+    "deploy": [
+     {
+      "t": 1,
+      "deploy": "morel",
+      "at": "B3",
+      "face": "right"
+     },
+     {
+      "t": 1,
+      "deploy": "caderousse",
+      "at": "B2",
+      "face": "right"
+     },
+     {
+      "t": 2,
+      "deploy": "hero",
+      "at": "B4",
+      "face": "up"
+     },
+     {
+      "slots": [
+       [
+        "C4",
+        "up",
+        [
+         "jager"
+        ]
+       ],
+       [
+        "C1",
+        "down",
+        [
+         "line"
+        ]
+       ],
+       [
+        "D4",
+        "up",
+        [
+         "line"
+        ]
+       ],
+       [
+        "B2",
+        "right",
+        [
+         "grenadier",
+         "line"
+        ]
+       ],
+       [
+        "B3",
+        "right",
+        [
+         "line",
+         "grenadier"
+        ]
+       ]
+      ]
+     }
+    ],
+    "text": "巷尾 B2、B3 各一道阻挡；房子 C1、D4 里各放一队横队（C1 朝下、D4 朝上都能同时打两条巷子），C4 屋顶上猎兵朝上。主角进 B4 房子（猎官打不进屋，只会被黑枪惦记）。"
+   },
+   "evidence": {
+    "validate": "ok",
+    "warnings": [],
+    "rows": [
+     {
+      "L": 12,
+      "idle": "defeat t7",
+      "hero_only": "defeat t7 (A1:right)",
+      "plan": {
+       "outcome": "victory",
+       "turn": 7,
+       "morale": 14,
+       "leaks": 0,
+       "kills": 4,
+       "fallen": [],
+       "order_done": true
+      },
+      "counts": {
+       "enemy_hp_total": 144,
+       "enemies": 11,
+       "hunters": 1,
+       "elites": 0,
+       "leaders": 1,
+       "kill_value": 14,
+       "power": 114
+      }
+     },
+     {
+      "L": 14,
+      "idle": "defeat t7",
+      "hero_only": "defeat t7 (A1:right)",
+      "plan": {
+       "outcome": "victory",
+       "turn": 7,
+       "morale": 10,
+       "leaks": 1,
+       "kills": 4,
+       "fallen": [
+        "morel"
+       ],
+       "order_done": false
+      },
+      "counts": {
+       "enemy_hp_total": 156,
+       "enemies": 11,
+       "hunters": 1,
+       "elites": 0,
+       "leaders": 1,
+       "kill_value": 14,
+       "power": 139
+      }
+     },
+     {
+      "L": 16,
+      "idle": "defeat t7",
+      "hero_only": "defeat t7 (A1:right)",
+      "plan": {
+       "outcome": "victory",
+       "turn": 7,
+       "morale": 14,
+       "leaks": 0,
+       "kills": 4,
+       "fallen": [],
+       "order_done": true
+      },
+      "counts": {
+       "enemy_hp_total": 167,
+       "enemies": 11,
+       "hunters": 1,
+       "elites": 0,
+       "leaders": 1,
+       "kill_value": 14,
+       "power": 153
+      }
+     },
+     {
+      "L": 19,
+      "idle": "defeat t7",
+      "hero_only": "defeat t7 (A1:right)",
+      "plan": {
+       "outcome": "victory",
+       "turn": 7,
+       "morale": 5,
+       "leaks": 3,
+       "kills": 2,
+       "fallen": [
+        "morel"
+       ],
+       "order_done": false
+      },
+      "counts": {
+       "enemy_hp_total": 324,
+       "enemies": 19,
+       "hunters": 1,
+       "elites": 0,
+       "leaders": 1,
+       "kill_value": 22,
+       "power": 335
+      }
+     },
+     {
+      "L": 22,
+      "idle": "defeat t7",
+      "hero_only": "defeat t7 (A1:right)",
+      "plan": {
+       "outcome": "victory",
+       "turn": 7,
+       "morale": 12,
+       "leaks": 0,
+       "kills": 4,
+       "fallen": [
+        "caderousse"
+       ],
+       "order_done": true
+      },
+      "counts": {
+       "enemy_hp_total": 471,
+       "enemies": 26,
+       "hunters": 2,
+       "elites": 0,
+       "leaders": 1,
+       "kill_value": 29,
+       "power": 519
+      }
+     }
+    ]
+   }
+  },
+  "coast_road": {
+   "template": {
+    "name": "海岸小路",
+    "scale": "skirmish",
+    "size": [
+     8,
+     4
+    ],
+    "base_level": 12,
+    "pad": {
+     "kind": "customs",
+     "every": 5
+    },
+    "node": "battle",
+    "turn_limit": 7,
+    "enemy_morale": 10,
+    "weather": "clear",
+    "map": [
+     "^ww.^wwG",
+     "E======G",
+     "_,,,_,..",
+     "__WpWWW_"
+    ],
+    "routes": {
+     "road": [
+      "H2",
+      "G2",
+      "F2",
+      "E2",
+      "D2",
+      "C2",
+      "B2",
+      "A2"
+     ],
+     "hill": [
+      "H1",
+      "G1",
+      "G2",
+      "F2",
+      "E2",
+      "D2",
+      "C2",
+      "B2",
+      "A2"
+     ],
+     "cove": [
+      "D4",
+      "D3",
+      "D2",
+      "C2",
+      "B2",
+      "A2"
+     ]
+    },
+    "waves": [
+     {
+      "turn": 1,
+      "route": "road",
+      "units": [
+       "customs",
+       "customs",
+       "gendarme"
+      ]
+     },
+     {
+      "turn": 2,
+      "route": "hill",
+      "units": [
+       "mounted_gendarme"
+      ]
+     },
+     {
+      "turn": 2,
+      "route": "cove",
+      "units": [
+       {
+        "kind": "smuggler",
+        "tags": [
+         "boarder"
+        ]
+       },
+       {
+        "kind": "smuggler",
+        "tags": [
+         "boarder"
+        ]
+       },
+       {
+        "kind": "smuggler",
+        "tags": [
+         "boarder"
+        ]
+       }
+      ]
+     },
+     {
+      "turn": 3,
+      "route": "road",
+      "units": [
+       "customs",
+       "customs_officer"
+      ],
+      "alt": [
+       [
+        "customs",
+        "gendarme"
+       ]
+      ]
+     },
+     {
+      "turn": 4,
+      "route": "cove",
+      "units": [
+       {
+        "kind": "smuggler",
+        "tags": [
+         "boarder"
+        ]
+       },
+       {
+        "kind": "smuggler",
+        "tags": [
+         "boarder"
+        ],
+        "lv_min": 16
+       }
+      ]
+     },
+     {
+      "turn": 4,
+      "route": "hill",
+      "units": [
+       "gendarme",
+       {
+        "kind": "mounted_gendarme",
+        "lv_min": 21
+       }
+      ]
+     }
+    ],
+    "order": {
+     "type": "hold",
+     "cell": "C2",
+     "turn": 7,
+     "desc": "第 7 回合结束时，我方有人守在 C2 的拐弯（骡队要从这里过）。"
+    },
+    "notes": "通用遭遇战（普罗旺斯、托斯卡纳、科西嘉的海岸都用它）：一条贴着悬崖的海岸小路（第 2 行），骡队（A2 鹰旗）在左边。海关和宪兵从 H2 大路、H1 山上的小路来；走私贩从 D4 的跳板上岸（接舷），经 D3 沙滩爬上大路，离骡队只有 4 步。A1、E1 是岩石（高地），B1、C1、F1、G1 是灌木林（挨远程防 +2）；E3 是塌掉的路基（虚空：不属于战场，射程跳过），B3–D3 是下面的小沙滩。骑宪兵是猎官，也会逮捕主角。补兵：每一波按 (L−12)/5 补海关缉私兵（L17 起每波 +1，L22 起 +2）。"
+   },
+   "uses": [
+    {
+     "pool": "cristo",
+     "levels": [
+      12,
+      14,
+      16,
+      19,
+      22
+     ]
+    }
+   ],
+   "plan": {
+    "roster": "generic",
+    "deploy": [
+     {
+      "t": 1,
+      "deploy": "hero",
+      "at": "A1",
+      "face": "right"
+     },
+     {
+      "slots": [
+       [
+        "C2",
+        "right",
+        [
+         "morel",
+         "grenadier",
+         "line"
+        ]
+       ],
+       [
+        "B2",
+        "right",
+        [
+         "caderousse",
+         "line",
+         "grenadier"
+        ]
+       ],
+       [
+        "C1",
+        "down",
+        [
+         "line"
+        ]
+       ],
+       [
+        "B1",
+        "down",
+        [
+         "line"
+        ]
+       ],
+       [
+        "D3",
+        "up",
+        [
+         "line",
+         "grenadier"
+        ]
+       ],
+       [
+        "E1",
+        "down",
+        [
+         "jager",
+         "artillery"
+        ]
+       ],
+       [
+        "F1",
+        "down",
+        [
+         "line"
+        ]
+       ]
+      ]
+     }
+    ],
+    "text": "三条路最后都并到海岸路上：C2 拐弯和 B2 各一道阻挡，D3 小沙滩再挡一道（走私贩从这里爬上来）。灌木林 B1、C1、F1 里的横队朝下打路面（林子里挨远程防 +2），E1 岩石上放猎兵或炮。主角在 A1 岩石上。"
+   },
+   "evidence": {
+    "validate": "ok",
+    "warnings": [],
+    "rows": [
+     {
+      "L": 12,
+      "idle": "defeat t6",
+      "hero_only": "defeat t7 (A1:right)",
+      "plan": {
+       "outcome": "victory",
+       "turn": 7,
+       "morale": 12,
+       "leaks": 0,
+       "kills": 5,
+       "fallen": [
+        "morel"
+       ],
+       "order_done": false
+      },
+      "counts": {
+       "enemy_hp_total": 137,
+       "enemies": 11,
+       "hunters": 1,
+       "elites": 0,
+       "leaders": 1,
+       "kill_value": 15,
+       "power": 124
+      }
+     },
+     {
+      "L": 14,
+      "idle": "defeat t6",
+      "hero_only": "defeat t7 (A1:right)",
+      "plan": {
+       "outcome": "victory",
+       "turn": 7,
+       "morale": 13,
+       "leaks": 0,
+       "kills": 5,
+       "fallen": [],
+       "order_done": true
+      },
+      "counts": {
+       "enemy_hp_total": 150,
+       "enemies": 11,
+       "hunters": 1,
+       "elites": 0,
+       "leaders": 1,
+       "kill_value": 15,
+       "power": 156
+      }
+     },
+     {
+      "L": 16,
+      "idle": "defeat t6",
+      "hero_only": "defeat t7 (A1:right)",
+      "plan": {
+       "outcome": "victory",
+       "turn": 7,
+       "morale": 8,
+       "leaks": 0,
+       "kills": 4,
+       "fallen": [
+        "morel",
+        "caderousse"
+       ],
+       "order_done": false
+      },
+      "counts": {
+       "enemy_hp_total": 175,
+       "enemies": 12,
+       "hunters": 1,
+       "elites": 0,
+       "leaders": 1,
+       "kill_value": 16,
+       "power": 190
+      }
+     },
+     {
+      "L": 19,
+      "idle": "defeat t6",
+      "hero_only": "defeat t6 (A1:right)",
+      "plan": {
+       "outcome": "victory",
+       "turn": 7,
+       "morale": 6,
+       "leaks": 1,
+       "kills": 4,
+       "fallen": [
+        "morel",
+        "caderousse"
+       ],
+       "order_done": false
+      },
+      "counts": {
+       "enemy_hp_total": 275,
+       "enemies": 18,
+       "hunters": 1,
+       "elites": 0,
+       "leaders": 1,
+       "kill_value": 22,
+       "power": 334
+      }
+     },
+     {
+      "L": 22,
+      "idle": "defeat t6",
+      "hero_only": "defeat t6 (A1:right)",
+      "plan": {
+       "outcome": "victory",
+       "turn": 7,
+       "morale": 1,
+       "leaks": 3,
+       "kills": 3,
+       "fallen": [
+        "morel",
+        "caderousse"
+       ],
+       "order_done": false
+      },
+      "counts": {
+       "enemy_hp_total": 431,
+       "enemies": 25,
+       "hunters": 2,
+       "elites": 0,
+       "leaders": 1,
+       "kill_value": 30,
+       "power": 618
+      }
+     }
+    ]
+   }
+  }
+ },
+ "planned": {
+  "janina_lake": {
+   "name": "约阿尼纳湖·湖心岛",
+   "date": "1822-01-22",
+   "node": "elite",
+   "chapter": "if_years",
+   "scale": "elite",
+   "size": [
+    9,
+    5
+   ],
+   "level": 15,
+   "turn_limit": 9,
+   "weather": "fog",
+   "terrain": [
+    "W 湖面（敌方小船只能停在湖格）",
+    "k 码头",
+    "# 修道院墙",
+    "B 修道院房屋",
+    "R 屋顶",
+    "C 回廊",
+    ", 湖滩",
+    "- 浅水"
+   ],
+   "objective": {
+    "type": "extract",
+    "cell": "B3",
+    "turns": 3,
+    "desc": "把总督的妻女和三桶火药搬上小船（B3 码头站满 3 个回合）。",
+    "fallback": {
+     "type": "hold",
+     "cell": "B3",
+     "turn": 9
+    }
+   },
+   "enemies": [
+    "nizam",
+    "arnaut",
+    "bey",
+    "ottoman_gun",
+    "gunboat(湖上炮船)"
+   ],
+   "plan": "苏丹的军队从对岸坐船来，三条小船停在湖格上分别从 3 个跳板登岸；阿尔瑙特枪手（skirmisher）打一枪退一格；雾天来敌只提前 1 回合公开。费尔南（不上阵）开门放进来的一队从修道院的门（D 格）里冒出来。",
+   "power_target": null
+  },
+  "tiboulen_swim": {
+   "name": "蒂布朗岛·暴风雨的黎明",
+   "date": "1829-03-01",
+   "node": "anchor",
+   "chapter": "montecristo",
+   "scale": "elite",
+   "size": [
+    9,
+    5
+   ],
+   "level": 17,
+   "turn_limit": 9,
+   "weather": "storm",
+   "terrain": [
+    "W 海",
+    "* 暗礁",
+    "- 浅水（能走不能站）",
+    ", 礁岛的小滩",
+    "^ 礁石",
+    "p 少年阿梅莉号的跳板",
+    "d 甲板",
+    "t 桅盘"
+   ],
+   "objective": {
+    "type": "escape",
+    "unit": "dantes",
+    "cells": [
+     "B2",
+     "B3"
+    ],
+    "turn": 9,
+    "desc": "唐泰斯第 9 回合结束时站在少年阿梅莉号的甲板上。",
+    "fallback": {
+     "type": "hold",
+     "cell": "B3",
+     "turn": 9
+    }
+   },
+   "enemies": [
+    "revenue_cutter",
+    "gunboat",
+    "customs",
+    "gendarme(boarder)",
+    "wall_sentry(伊夫堡方向的岸上哨兵)"
+   ],
+   "plan": "我方在左边的帆船甲板上（A–C 列），唐泰斯从右边的礁岛出发（骠骑兵，开场在 H3），每回合只能沿浅水走 1 格（步耗 2）。两条缉私快艇从上下两侧的海格开炮，海关的长艇从跳板接舷。暴风雨：桅盘上的我方单位每回合 −1。",
+   "power_target": null
+  },
+  "monte_cristo_cave": {
+   "name": "基督山岛·斯帕达的洞",
+   "date": "1829-05-24",
+   "node": "boss",
+   "chapter": "montecristo",
+   "scale": "grand",
+   "size": [
+    10,
+    6
+   ],
+   "level": 18,
+   "turn_limit": 13,
+   "weather": "clear",
+   "terrain": [
+    "c 洞穴（敌炮不瞄，挨远程防 +2，挡视线）",
+    "_ 虚空（悬崖外）",
+    "^ 岩顶",
+    ", 沙滩",
+    "- 浅水",
+    "W 海",
+    "p 跳板",
+    "; 炸开的碎石"
+   ],
+   "objective": {
+    "type": "extract",
+    "cell": "C3",
+    "turns": 4,
+    "desc": "三只箱子：C3 洞口我方有人站满 4 个回合（每满一回合搬出一箱，第 4 回合起每回合金币 +1）。",
+    "fallback": {
+     "type": "hold",
+     "cell": "C3",
+     "turn": 13
+    }
+   },
+   "enemies": [
+    "rival_smuggler_boss",
+    "smuggler(stealth)",
+    "pirate(loot)",
+    "pirate_captain",
+    "customs",
+    "revenue_cutter",
+    "gunboat"
+   ],
+   "plan": "不规则地图：左上是藏宝洞（3×2 洞穴格，我方的鹰旗是洞口内侧的两格，箱子被抢就扣军心），右边是海湾。热那亚帮从岛顶的山羊小路下来（G 在岩顶，路线经过碎石，步耗 2），海盗从两个跳板接舷（loot：每个走进鹰旗的海盗战后法郎 −15%），第 6 回合海关的炮艇进湾。洞穴挡视线：洞里的横队只能打洞口一条直线。",
+   "power_target": 710
+  },
+  "appian_way": {
+   "name": "亚壁古道",
+   "date": "1838-02-21",
+   "node": "elite",
+   "chapter": "mediterranean",
+   "scale": "elite",
+   "size": [
+    10,
+    5
+   ],
+   "level": 20,
+   "turn_limit": 9,
+   "weather": "night",
+   "terrain": [
+    "= 古道",
+    "B 墓碑与陵墓（我方可进驻）",
+    "K 墓穴入口（伏兵出生格）",
+    "w 柏树林",
+    "^ 引水渠的残墙",
+    "_ 虚空"
+   ],
+   "objective": {
+    "type": "no_leak",
+    "desc": "伯爵的马车（A3 鹰旗）不被拦下。"
+   },
+   "enemies": [
+    "bandit(ambush)",
+    "bandit_marksman(post, stealth)",
+    "papal_carabinier(arrest)",
+    "papal_dragoon(hunter)"
+   ],
+   "plan": "一条笔直的古道（第 3 行），两边是陵墓和柏树；第 2、4、6 回合有伏兵从墓穴入口里出来，离马车 4 步。夜里射程 −1，隐身的强盗枪手只在 2 格内才看得清。",
+   "power_target": null
+  },
+  "san_sebastiano": {
+   "name": "圣塞巴斯蒂安墓窟",
+   "date": "1838-02-22",
+   "node": "boss",
+   "chapter": "mediterranean",
+   "scale": "grand",
+   "size": [
+    11,
+    6
+   ],
+   "level": 21,
+   "turn_limit": 14,
+   "weather": "night",
+   "terrain": [
+    "K 墓穴（黑暗：站在这里射程 −1）",
+    "C 石廊",
+    "# 墙（挡视线）",
+    "D 门（出生格；事件可锁成墙）",
+    "_ 虚空（塌方）",
+    "B 壁龛（我方可进驻，防 +2）",
+    "^ 圆厅的祭台（高地）"
+   ],
+   "objective": {
+    "type": "extract",
+    "cell": "F3",
+    "turns": 2,
+    "then": "escape",
+    "desc": "先在 F3 圆厅站满 2 个回合找到阿尔贝，再让他走到 A 列的出口（protect：阿尔贝不倒下）。",
+    "fallback": {
+     "type": "hold",
+     "cell": "F3",
+     "turn": 14
+    }
+   },
+   "enemies": [
+    "bandit(ambush, ransom)",
+    "bandit_marksman(post, stealth)",
+    "vampa(leader, ransom)",
+    "assassin(stealth)",
+    "sbirro(arrest)"
+   ],
+   "plan": "三层墓窟用墙和虚空隔成三条石廊，中间一个圆厅。万帕的人从四扇门里出来（多门），伏兵从墓穴格里冒出来。军议选“伯爵的名片”时敌军心 −2；打死万帕不扣军心，而是“万帕投降”：剩下的强盗全体后退一格。完成命令以后才能招万帕。",
+   "power_target": 830
+  },
+  "auteuil_garden": {
+   "name": "奥特伊的花园之夜",
+   "date": "1838-06-20",
+   "node": "anchor",
+   "chapter": "paris_1838",
+   "scale": "elite",
+   "size": [
+    10,
+    5
+   ],
+   "level": 22,
+   "turn_limit": 9,
+   "weather": "night",
+   "terrain": [
+    "w 花园的树丛",
+    "B 宅子（我方可进驻）",
+    "# 花园围墙",
+    "; 翻过的泥土（那棵树下）",
+    "S 方丹街",
+    "G 墙上的小门"
+   ],
+   "objective": {
+    "type": "hold",
+    "cell": "E3",
+    "turn": 9,
+    "desc": "第 9 回合结束时我方有人守在那棵梧桐树下（E3）：木匣不能被挖走。"
+   },
+   "enemies": [
+    "convict(loot)",
+    "benedetto(hunter, execute)",
+    "police_agent(stealth, arrest)",
+    "thug_marksman"
+   ],
+   "plan": "贝内代托带着两个苦役场的同伙翻墙进来要挖木匣（他要证据去勒索杰拉尔），警察厅的便衣在街上等着抓人。墙挡视线；树丛里挨远程防 +2。贝尔图乔在场时攻 +2（羁绊“仇人的姓”）。",
+   "power_target": null
+  },
+  "paris_rooftops": {
+   "name": "西岱岛的屋顶",
+   "date": "1838-10-14",
+   "node": "elite",
+   "chapter": "paris_1838",
+   "scale": "elite",
+   "size": [
+    10,
+    5
+   ],
+   "level": 23,
+   "turn_limit": 9,
+   "weather": "rain",
+   "terrain": [
+    "R 屋顶（只有猎兵类能上，射程 +1）",
+    "B 房屋",
+    "S 小巷",
+    "_ 虚空（屋顶之间的缝）",
+    "# 烟囱（挡视线）"
+   ],
+   "objective": {
+    "type": "no_leak",
+    "desc": "没有一个刺客摸到附属监狱的天窗（A 列鹰旗）。"
+   },
+   "enemies": [
+    "assassin(stealth)",
+    "thug_marksman(post)",
+    "municipal_guard(heavy)",
+    "police_agent(arrest)"
+   ],
+   "plan": "雨夜：小火器攻 −1。屋顶连成两条路（第 1、2 行），小巷在下面（第 4、5 行），中间隔着虚空。猎兵和万帕是主力；骠骑兵冲锋碰到虚空就停。",
+   "power_target": null
+  },
+  "cristo_final": {
+   "name": "司法宫之夜",
+   "date": "1838-10-15",
+   "node": "boss",
+   "chapter": "paris_1838",
+   "scale": "epic",
+   "size": [
+    12,
+    7
+   ],
+   "level": 24,
+   "turn_limit": 14,
+   "weather": "night",
+   "terrain": [
+    "C 附属监狱的牢廊（黑暗）",
+    "L 牢房（我方可进，防 +1）",
+    "D 牢门（出生格）",
+    "S 钟楼码头",
+    "b 兑换桥",
+    "~ 塞纳河",
+    "B 司法宫的房屋",
+    "R 屋顶",
+    "# 墙",
+    "_ 虚空"
+   ],
+   "objective": {
+    "type": "protect",
+    "npc": {
+     "id": "benedetto_witness",
+     "name": "贝内代托（证人）",
+     "hp": 12,
+     "cell": "B4",
+     "place": "cell"
+    },
+    "desc": "证人贝内代托活到天亮（第 14 回合结束）。他关在 B4 的牢房里，不能移动；任何敌人走进他的牢房就算失败。",
+    "fallback": {
+     "type": "hold",
+     "cell": "B4",
+     "turn": 14
+    }
+   },
+   "enemies": [
+    "convict(loot)",
+    "assassin(stealth, hunter, execute)",
+    "police_agent(arrest)",
+    "municipal_guard(heavy)",
+    "national_guard",
+    "thug_marksman(post)",
+    "mounted_gendarme"
+   ],
+   "plan": "12×7 的不规则大图（右下角是河，虚空切掉左上角）。三拨人：①苦役场的同伙从河上的小船经码头上岸（想劫走他）；②杰拉尔派来的检察署的人从司法宫正门进来（想“依法”把他转走，arrest：主角在他们刀下倒下就直接被捕）；③不知替谁办事的刺客从屋顶下来（stealth + execute，想让他闭嘴）。第 7 回合起骑宪兵从兑换桥冲过来。军议三选一修正 Boss。",
+   "power_target": 960
+  }
+ },
+ "scene_battles": {
+  "c_white_june": {
+   "template": "marseille_arrest",
+   "level": 14,
+   "order_flag": "m_morrel_kept"
+  },
+  "c_morgiou": {
+   "template": "morgiou_cove",
+   "level": 15,
+   "order_flag": "m_cargo_saved"
+  },
+  "c_if_night": {
+   "template": "if_corridors",
+   "level": 16,
+   "order_flag": "m_escape_clean"
+  },
+  "c_tiboulen": {
+   "template": "tiboulen_swim",
+   "level": 17,
+   "order_flag": "m_tiboulen_clean",
+   "planned": true
+  },
+  "c_montecristo": {
+   "template": "monte_cristo_cave",
+   "level": 18,
+   "order_flag": "m_all_chests",
+   "planned": true
+  },
+  "c_san_sebastiano": {
+   "template": "san_sebastiano",
+   "level": 21,
+   "order_flag": "m_albert_unharmed",
+   "planned": true
+  },
+  "c_auteuil": {
+   "template": "auteuil_garden",
+   "level": 22,
+   "order_flag": "m_box_kept",
+   "planned": true
+  },
+  "c_trial": {
+   "template": "cristo_final",
+   "level": 24,
+   "order_flag": "m_witness_alive",
+   "planned": true
+  }
+ },
+ "map_battles": {
+  "catalans_cove": {
+   "sheet": "marseille",
+   "node": "m_catalans_cove",
+   "level": 13,
+   "order_flag": "m_gold_landed"
+  },
+  "janina_lake": {
+   "sheet": "if_years",
+   "node": "janina_lake",
+   "level": 15,
+   "planned": true
+  },
+  "appian_way": {
+   "sheet": "mediterranean",
+   "node": "appian_way",
+   "level": 20,
+   "planned": true
+  },
+  "paris_rooftops": {
+   "sheet": "paris_1838",
+   "node": "rooftops",
+   "level": 23,
+   "planned": true
+  }
+ },
+ "battle_pool": {
+  "cristo": {
+   "12-17": [
+    "alley_ambush",
+    "coast_road"
+   ],
+   "18-23": [
+    "alley_ambush",
+    "coast_road"
+   ]
+  }
+ },
+ "generic_levels": {
+  "marseille": 12,
+  "if_years": 14,
+  "montecristo": 16,
+  "mediterranean": 19,
+  "paris_1838": 22
+ },
+ "chapter_boss_levels": {
+  "marseille": 14,
+  "if_years": 16,
+  "montecristo": 18,
+  "mediterranean": 21,
+  "paris_1838": 24
+ },
+ "boss_curve": [
+  {
+   "chapter": "marseille",
+   "template": "marseille_arrest",
+   "L": 14,
+   "power": 530
+  },
+  {
+   "chapter": "if_years",
+   "template": "if_corridors",
+   "L": 16,
+   "power": 631
+  },
+  {
+   "chapter": "montecristo",
+   "template": "monte_cristo_cave",
+   "L": 18,
+   "power": 710,
+   "planned": true
+  },
+  {
+   "chapter": "mediterranean",
+   "template": "san_sebastiano",
+   "L": 21,
+   "power": 830,
+   "planned": true
+  },
+  {
+   "chapter": "paris_1838",
+   "template": "cristo_final",
+   "L": 24,
+   "power": 960,
+   "planned": true
+  }
+ ],
+ "sim_notes": [
+  "skills fire automatically when charged (mark_target 8 dmg, bayonet_charge 5 + knockback, raise_flag +2 row, fortify = barricade, pay_chest +3 CP +1 morale)",
+  "cards: a fixed cycle of the default deck, 3 in hand; requisition, volley, bayonet, bugler and the emperor's order are auto-played; feint / barrage / fallback never",
+  "no square / formations / withdraws / bonds",
+  "enemy ranged targets are chosen at step d instead of locked at turn start",
+  "alt wave compositions: always the first option (seed-independent)",
+  "decapitation order only when the hero is on the field (L>=7, not skirmish)"
+ ]
+}

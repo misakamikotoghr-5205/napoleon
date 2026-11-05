@@ -1,0 +1,138 @@
+{
+  "_meta": {
+    "owner": "C04",
+    "schema": 1,
+    "brief": "person card choices shown as extra counter buttons",
+    "_provenance": {
+      "by": "ai",
+      "task": "C04",
+      "date": "2026-10-13"
+    }
+  },
+  "guide_progress": {},
+  "view": {
+    "phase": "day",
+    "mode": "shop",
+    "date": {
+      "abs_day": 1,
+      "stage": 0,
+      "stage_day": 1,
+      "y": 1938,
+      "m": 3,
+      "d": 2,
+      "weekday": 2
+    },
+    "money": {
+      "amount": 340,
+      "currency": "fabi"
+    },
+    "hand": [],
+    "tickets": [],
+    "notice": {
+      "weather": "clear",
+      "news": []
+    }
+  },
+  "queries": {
+    "counter|{\"uid\":\"c0010\"}": {
+      "uid": "c0010",
+      "person": "brother",
+      "intent": "pawn",
+      "item": {
+        "item": "I001",
+        "template": "jewelry.hairpin",
+        "cat": "jewelry",
+        "art": "item.jewelry.hairpin",
+        "condition_word": 2,
+        "observations": [],
+        "on_shelf_since": -1
+      },
+      "asking": 294,
+      "tiers": {
+        "harsh": 161,
+        "fair": 220,
+        "kind": 279
+      },
+      "direction": "pay",
+      "round": 0,
+      "last_reply": "",
+      "last_price": 0,
+      "line_key": "p.brother.1938.farewell#lines.greet",
+      "can_appraise": false,
+      "stock": [],
+      "ticket": null
+    },
+    "card|{\"uid\":\"c0010\"}": {
+      "uid": "c0010",
+      "def": "p.brother.1938.farewell",
+      "type": "person",
+      "person": "brother",
+      "intent": "pawn",
+      "art": "portrait.brother",
+      "panel": "counter",
+      "choices": [
+        {
+          "id": "listen",
+          "enabled": true,
+          "reason_key": "",
+          "has_check": false
+        },
+        {
+          "id": "gift",
+          "enabled": false,
+          "reason_key": "g03.reason.money",
+          "has_check": false
+        }
+      ],
+      "zone": "hand",
+      "status": "open"
+    },
+    "stock|{}": {
+      "items": []
+    },
+    "tickets|{}": {
+      "tickets": []
+    }
+  },
+  "responses": [
+    {
+      "cmd": "card.choose",
+      "match": {
+        "uid": "c0010",
+        "choice": "listen"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "needs_slots": false
+      },
+      "events": [
+        [
+          "card_left",
+          "c0010",
+          "resolved"
+        ]
+      ]
+    },
+    {
+      "cmd": "card.choose",
+      "match": {
+        "uid": "c0010",
+        "choice": "gift"
+      },
+      "result": {
+        "ok": false,
+        "err": "bad_args"
+      },
+      "events": []
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "ok": true,
+        "err": ""
+      },
+      "events": []
+    }
+  ]
+}

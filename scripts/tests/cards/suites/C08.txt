@@ -1,0 +1,8 @@
+# C08 打烊、夜牌、日结（docs/handoff_cards/C08_night-settle.md）
+C08_end_day|res://scripts/tests/cards/C08/test_end_day.gd|120|
+C08_night|res://scripts/tests/cards/C08/test_night.gd|120|
+C08_settle|res://scripts/tests/cards/C08/test_settle.gd|120|
+C08_flow|res://scripts/tests/cards/C08/test_flow.gd|240|
+C08_guide|res://scripts/tests/cards/C08/test_guide.gd|180|
+C08_guide_k16|res://scripts/tests/cards/C08/test_guide.gd|180|--steps=k16 --name=C08_guide_k16
+C08_real_engine|res://scripts/tests/cards/C08/test_real_engine.gd|180|

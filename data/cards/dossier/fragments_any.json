@@ -1,0 +1,456 @@
+{
+  "_meta": {
+    "owner": "K08",
+    "schema": 1,
+    "brief": "不限年份的档案碎片，含过路客与家人捎话。",
+    "_provenance": {
+      "by": "ai",
+      "task": "K08",
+      "date": "2026-10-13"
+    }
+  },
+  "cards": [
+    {
+      "id": "df.brother.any.family_word",
+      "type": "dossier_fragment",
+      "person": "brother",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 10,
+      "kind": "letter",
+      "brief": "各年都可能出现，回家吃饭后第二天拿到的家人捎话，多半仍是哥哥那边。来源是信，不写信上的句子。 系统牌 nw.any.family_word 看了补。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.brother.any.trust",
+      "type": "dossier_fragment",
+      "person": "brother",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 11,
+      "kind": "said",
+      "brief": "各年都可能出现，家人的话还只留在家里、没有拿出去的那一层。来源是本人开口，不写原话。 nw.any.family_word 交给条子则这块变缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_refugee.any.bundle",
+      "type": "dossier_fragment",
+      "person": "stranger_refugee",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 1,
+      "kind": "pawn",
+      "brief": "各年都可能出现，路过、逃难的人来当一口袋旧衣。名字由 A 定。来源是当了什么。 过路客原型。K01 若写 dossier true，这一页已经在。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_refugee.any.kin",
+      "type": "dossier_fragment",
+      "person": "stranger_refugee",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 2,
+      "kind": "heard",
+      "brief": "各年都可能出现，有人说他家里有病人。来源是别人提起，不写原话。 预留给 K01 过路客牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_peddler.any.tray",
+      "type": "dossier_fragment",
+      "person": "stranger_peddler",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 1,
+      "kind": "pawn",
+      "brief": "各年都可能出现，小贩把货筐里一件零碎当了。名字由 A 定。来源是当了什么。 过路客原型。K01 若写 dossier true，这一页已经在。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_peddler.any.route",
+      "type": "dossier_fragment",
+      "person": "stranger_peddler",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 2,
+      "kind": "said",
+      "brief": "各年都可能出现，他说下一集还来。来源是本人开口，不写原话。 预留给 K01 过路客牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_collector.any.ask",
+      "type": "dossier_fragment",
+      "person": "stranger_collector",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 1,
+      "kind": "said",
+      "brief": "各年都可能出现，收古玩的人问架上有没有旧物。名字由 A 定。来源是本人开口，不写原话。 过路客原型。K01 若写 dossier true，这一页已经在。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_collector.any.shop",
+      "type": "dossier_fragment",
+      "person": "stranger_collector",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 2,
+      "kind": "heard",
+      "brief": "各年都可能出现，有人说他专挑字画和铜器。来源是别人提起，不写原话。 预留给 K01 过路客牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_fence.any.box",
+      "type": "dossier_fragment",
+      "person": "stranger_fence",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 1,
+      "kind": "pawn",
+      "brief": "各年都可能出现，来路说不清的一匣东西。收不收由柜台决定，不写如何转手。名字由 A 定。来源是当了什么。 过路客原型。K01 若写 dossier true，这一页已经在。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_fence.any.lane",
+      "type": "dossier_fragment",
+      "person": "stranger_fence",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 2,
+      "kind": "heard",
+      "brief": "各年都可能出现，有人说他夜里才出现。来源是别人提起，不写原话。 预留给 K01 过路客牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_waixiang.any.coat",
+      "type": "dossier_fragment",
+      "person": "stranger_waixiang",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 1,
+      "kind": "pawn",
+      "brief": "各年都可能出现，外乡人来当一件棉袄，说家里有孩子病了。白给几个钱也会记上这一页。名字由 A 定。来源是当了什么。 过路客原型。K01 若写 dossier true，这一页已经在。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_waixiang.any.thanks",
+      "type": "dossier_fragment",
+      "person": "stranger_waixiang",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 2,
+      "kind": "said",
+      "brief": "各年都可能出现，他是否把难处再说一遍，由柜台选项决定。来源是本人开口，不写原话。 预留给 K01 过路客牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_boatman.any.boat",
+      "type": "dossier_fragment",
+      "person": "stranger_boatman",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 1,
+      "kind": "heard",
+      "brief": "各年都可能出现，船上来的人在码头歇脚。名字由 A 定。来源是别人提起，不写原话。 过路客原型。K01 若写 dossier true，这一页已经在。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_boatman.any.net",
+      "type": "dossier_fragment",
+      "person": "stranger_boatman",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 2,
+      "kind": "pawn",
+      "brief": "各年都可能出现，他把一张旧网当了。来源是当了什么。 预留给 K01 过路客牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_student.any.book",
+      "type": "dossier_fragment",
+      "person": "stranger_student",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 1,
+      "kind": "pawn",
+      "brief": "各年都可能出现，过路的学生当一本旧书，不是本镇学堂的人。名字由 A 定。来源是当了什么。 过路客原型。K01 若写 dossier true，这一页已经在。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_student.any.road",
+      "type": "dossier_fragment",
+      "person": "stranger_student",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 2,
+      "kind": "said",
+      "brief": "各年都可能出现，他问去县城的路。来源是本人开口，不写原话。 预留给 K01 过路客牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_widow.any.pin",
+      "type": "dossier_fragment",
+      "person": "stranger_widow",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 1,
+      "kind": "pawn",
+      "brief": "各年都可能出现，过路的寡妇当一支旧簪。名字由 A 定。来源是当了什么。 过路客原型。K01 若写 dossier true，这一页已经在。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_widow.any.well",
+      "type": "dossier_fragment",
+      "person": "stranger_widow",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 2,
+      "kind": "heard",
+      "brief": "各年都可能出现，井边有人见过她。来源是别人提起，不写原话。 预留给 K01 过路客牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_boatman.any.dock",
+      "type": "dossier_fragment",
+      "person": "stranger_boatman",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 3,
+      "kind": "said",
+      "brief": "各年都可能出现，船工来打听码头上谁还收货、谁家有人在上海的船上。来源是本人开口，不写原话。补它的牌：K01 的 p.stranger_boatman.any.ask_dock 选项 tell。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_collector.any.art",
+      "type": "dossier_fragment",
+      "person": "stranger_collector",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 3,
+      "kind": "said",
+      "brief": "各年都可能出现，收货的人来看字画，想买走一件。来源是本人开口，不写原话。补它的牌：K01 的 p.stranger_collector.any.buy_art on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_fence.any.ring",
+      "type": "dossier_fragment",
+      "person": "stranger_fence",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 3,
+      "kind": "pawn",
+      "brief": "各年都可能出现，销赃的人来卖一枚戒指，来路说不清。来源是当了什么。补它的牌：K01 的 p.stranger_fence.any.sell_ring on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_peddler.any.bowl",
+      "type": "dossier_fragment",
+      "person": "stranger_peddler",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 3,
+      "kind": "pawn",
+      "brief": "各年都可能出现，货郎来卖一件旧碗。来源是当了什么。补它的牌：K01 的 p.stranger_peddler.any.sell_bowl on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_refugee.any.coat",
+      "type": "dossier_fragment",
+      "person": "stranger_refugee",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 3,
+      "kind": "pawn",
+      "brief": "各年都可能出现，逃难的过路人来当一件旧衣。来源是当了什么。补它的牌：K01 的 p.stranger_refugee.any.pawn_coat on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_waixiang.any.alms",
+      "type": "dossier_fragment",
+      "person": "stranger_waixiang",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 3,
+      "kind": "pawn",
+      "brief": "各年都可能出现，外乡人来当一条围巾。来源是当了什么。补它的牌：K01 的 p.stranger_waixiang.any.pawn_scarf 选项 alms。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_waixiang.any.scarf",
+      "type": "dossier_fragment",
+      "person": "stranger_waixiang",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 4,
+      "kind": "pawn",
+      "brief": "各年都可能出现，外乡人来当一条围巾。来源是当了什么。补它的牌：K01 的 p.stranger_waixiang.any.pawn_scarf on_accept。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.stranger_widow.any.help",
+      "type": "dossier_fragment",
+      "person": "stranger_widow",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "order": 3,
+      "kind": "said",
+      "brief": "各年都可能出现，守寡的过路人来求几个钱熬过去。来源是本人开口，不写原话。补它的牌：K01 的 p.stranger_widow.any.help_cold 选项 give。这些引用不把这块做成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

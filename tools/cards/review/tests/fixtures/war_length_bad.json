@@ -1,0 +1,12 @@
+{
+  "cards": [
+    {
+      "id": "ev.any.eight",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "brief": "有人还在说八年抗战。"
+    }
+  ]
+}

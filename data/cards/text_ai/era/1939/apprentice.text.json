@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-3940"
+  },
+  "ct.tudi": {
+    "title": "学徒",
+    "body": "铺里新收的学徒，跟着你学看货、记账、站柜台，本事一天天长。"
+  },
+  "df.tudi.1939.take": {
+    "body": "他留了下来，头一天就把柜台擦得干干净净。"
+  },
+  "df.tudi.1939.harsh": {
+    "body": "你把规矩说得很硬，他低着头应下了。"
+  },
+  "dp.tudi": {
+    "title": "学徒"
+  },
+  "ev.any.apprentice_audit": {
+    "title": "月底翻账",
+    "body": "月底了，你把学徒经手的账本翻出来，一笔一笔地对。",
+    "choices": {
+      "forgive": "认了",
+      "scold": "当面算清",
+      "dismiss": "让他走"
+    },
+    "outcomes": {
+      "ignored": "账没顾上细说，就照着当面算的办了，学徒心里有些不痛快。"
+    }
+  },
+  "ev.any.apprentice_steal": {
+    "title": "当品短了",
+    "body": "柜里的当品少了一截，经手的只有学徒。",
+    "choices": {
+      "catch": "当场抓住",
+      "overlook": "认了",
+      "dismiss": "让他走"
+    },
+    "outcomes": {
+      "ignored": "这事没追究，短的那截从钱里扣了。"
+    }
+  },
+  "ev.any.apprentice_succeed": {
+    "title": "学徒接班",
+    "body": "学徒跟了你好些日子，已经能独当一面了，他问能不能接着看这间铺子。",
+    "choices": {
+      "accept": "让他接班",
+      "later": "先不交"
+    },
+    "outcomes": {
+      "ignored": "这事先放下了，往后再说。"
+    }
+  },
+  "ev.any.apprentice_tip": {
+    "title": "学徒漏了嘴",
+    "body": "学徒把铺里的事说给了胡二听。",
+    "choices": {
+      "cover": "花钱按下",
+      "let": "由他说去",
+      "dismiss": "让他走"
+    },
+    "outcomes": {
+      "ignored": "没人去管，铺里的事很快传开了，风声紧了。"
+    }
+  },
+  "p.tudi.1939.ask": {
+    "title": "来求学徒",
+    "body": "一个半大的孩子站在柜台前，想留在铺里当学徒。",
+    "lines": {
+      "greet": "掌柜的，收下我吧，什么活我都肯干。"
+    },
+    "choices": {
+      "take": "留下他",
+      "take_harsh": "留下，立规矩",
+      "refuse": "不收"
+    },
+    "outcomes": {
+      "ignored": "那孩子在门口站了半天，没人理他，只好走了。"
+    }
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1,
+    "brief": "1938 年三月的生活牌，春天"
+  },
+  "cards": [
+    {
+      "id": "lf.1938.qingming_prep",
+      "type": "life",
+      "era": [
+        "1938"
+      ],
+      "weight": 6,
+      "tags": [
+        "ritual",
+        "home",
+        "spring",
+        "omen_family"
+      ],
+      "season": [
+        0
+      ],
+      "due_days": 5,
+      "waivable": true,
+      "must_resolve": false,
+      "choices": [
+        {
+          "id": "buy",
+          "brief": "去备",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 8,
+              "payee": "paper_shop",
+              "reason": "k02.reason.qingming",
+              "short": "ladder"
+            },
+            {
+              "op": "flag",
+              "key": "qingming_ready"
+            }
+          ],
+          "almanac": [
+            "pray"
+          ]
+        },
+        {
+          "id": "skip",
+          "brief": "先不办",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -2
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "rep",
+            "delta": -2
+          }
+        ]
+      },
+      "art": "illus.lf.1938.qingming_prep",
+      "brief": "清明要备纸锭和一桌饭。1938 年清明在公历 4 月 5 日，本关只到 3 月 30 日，家里在三月底就开始备。可以去买，也可以先不办。拖过期限按没办算，口碑掉。回家吃饭能免掉这个坏处。只在春天。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lf.1938.spring_chill",
+      "type": "life",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "medicine",
+        "home",
+        "spring",
+        "omen_illness"
+      ],
+      "season": [
+        0
+      ],
+      "due_days": 4,
+      "waivable": true,
+      "must_resolve": false,
+      "choices": [
+        {
+          "id": "buy",
+          "brief": "抓药",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 14,
+              "payee": "herb_shop",
+              "reason": "k02.reason.medicine",
+              "short": "ladder"
+            },
+            {
+              "op": "flag",
+              "key": "chill_med"
+            }
+          ]
+        },
+        {
+          "id": "endure",
+          "brief": "硬挨",
+          "effects": [
+            {
+              "op": "attr",
+              "who": "ruhua",
+              "attr": "nerve",
+              "delta": -1,
+              "days": 4
+            }
+          ],
+          "almanac": [
+            "rest"
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "attr",
+            "who": "ruhua",
+            "attr": "nerve",
+            "delta": -1,
+            "days": 4
+          }
+        ]
+      },
+      "art": "illus.lf.1938.spring_chill",
+      "brief": "春寒，家里有人咳嗽。可以花钱抓一副药，也可以硬挨。硬挨则这几天胆量差一截。拖过期限按硬挨算。回家吃饭能免掉这个坏处。只在春天。1938 年三月还是春寒。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lf.1938.spring_roof",
+      "type": "life",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "roof",
+        "home",
+        "spring",
+        "omen_water"
+      ],
+      "season": [
+        0
+      ],
+      "due_days": 6,
+      "waivable": false,
+      "must_resolve": false,
+      "choices": [
+        {
+          "id": "fix",
+          "brief": "修",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 22,
+              "payee": "mason",
+              "reason": "k02.reason.roof",
+              "short": "ladder"
+            },
+            {
+              "op": "flag",
+              "key": "roof_patched"
+            }
+          ],
+          "almanac": [
+            "repair"
+          ]
+        },
+        {
+          "id": "wait",
+          "brief": "先拖",
+          "effects": [
+            {
+              "op": "flag",
+              "key": "roof_leaking"
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "item_lose",
+            "match": {
+              "pick": "any"
+            },
+            "n": 1,
+            "reason": "k02.reason.roof"
+          }
+        ]
+      },
+      "art": "illus.lf.1938.spring_roof",
+      "brief": "春雨渗瓦。可以花钱修，也可以先拖。拖过期限，货架上损失一件。回家吃饭免不掉屋漏。只在春天。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

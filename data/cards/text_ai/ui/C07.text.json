@@ -1,0 +1,60 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "c07.btn.lot": {
+    "t": "求一支签"
+  },
+  "c07.btn.cezi": {
+    "t": "测个字"
+  },
+  "c07.btn.pass": {
+    "t": "不算了"
+  },
+  "c07.btn.ok": {
+    "t": "知道了"
+  },
+  "c07.cost": {
+    "t": "算一回 {n} 蚨"
+  },
+  "c07.grade.0": {
+    "t": "下下签"
+  },
+  "c07.grade.1": {
+    "t": "下签"
+  },
+  "c07.grade.2": {
+    "t": "中签"
+  },
+  "c07.grade.3": {
+    "t": "上签"
+  },
+  "c07.grade.4": {
+    "t": "上上签"
+  },
+  "c07.cezi.pick": {
+    "t": "挑一个字。"
+  },
+  "c07.strip.yi": {
+    "t": "宜"
+  },
+  "c07.strip.ji": {
+    "t": "忌"
+  },
+  "c07.err.money": {
+    "t": "钱不够，算不了。"
+  },
+  "c07.drawer.title": {
+    "t": "今日宜忌"
+  },
+  "c07.drawer.fortune": {
+    "t": "本月运势"
+  },
+  "c07.drawer.lots": {
+    "t": "求过的签、测过的字"
+  },
+  "c07.drawer.none": {
+    "t": "还没有。"
+  }
+}

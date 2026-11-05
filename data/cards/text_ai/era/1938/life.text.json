@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-1938"
+  },
+  "lf.1938.qingming_prep": {
+    "title": "备清明",
+    "body": "清明快到了，家里要备纸锭和一桌饭。",
+    "choices": {
+      "buy": "去备齐",
+      "skip": "先不办"
+    },
+    "outcomes": {
+      "ignored": "清明没备，街坊会说闲话。"
+    }
+  },
+  "lf.1938.spring_chill": {
+    "title": "春寒",
+    "body": "倒春寒，家里有人咳嗽起来。",
+    "choices": {
+      "buy": "抓副药",
+      "endure": "硬挨着"
+    },
+    "outcomes": {
+      "ignored": "没抓药，硬挨过去，这几天你提不起胆气。"
+    }
+  },
+  "lf.1938.spring_roof": {
+    "title": "春雨漏屋",
+    "body": "春雨下个不停，屋瓦开始渗水。",
+    "choices": {
+      "fix": "请人修",
+      "wait": "先拖着"
+    },
+    "outcomes": {
+      "ignored": "屋漏没修，货架上会泡坏一件东西。"
+    }
+  }
+}

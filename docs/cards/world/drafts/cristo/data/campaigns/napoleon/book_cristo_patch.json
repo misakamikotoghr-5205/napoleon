@@ -1,0 +1,165 @@
+{
+ "_doc": "草稿（标签 cristo）：给 data/campaigns/napoleon/book.json 的补丁，只含伊夫堡段的内容字段（ARCH §8.4：结构字段归 A）。level 一律是全局等级 L（绝对值）。",
+ "segments": {
+  "cristo": {
+   "file": "res://data/campaigns/napoleon/cristo.json",
+   "map": "res://data/campaigns/napoleon/maps/med.json",
+   "kind": "branch",
+   "brand": "伊夫堡",
+   "scene_battles": {
+    "c_white_june": {
+     "template": "marseille_arrest",
+     "level": 14
+    },
+    "c_morgiou": {
+     "template": "morgiou_cove",
+     "level": 15
+    },
+    "c_if_night": {
+     "template": "if_corridors",
+     "level": 16
+    },
+    "c_tiboulen": {
+     "template": "tiboulen_swim",
+     "level": 17
+    },
+    "c_montecristo": {
+     "template": "monte_cristo_cave",
+     "level": 18
+    },
+    "c_san_sebastiano": {
+     "template": "san_sebastiano",
+     "level": 21
+    },
+    "c_auteuil": {
+     "template": "auteuil_garden",
+     "level": 22
+    },
+    "c_trial": {
+     "template": "cristo_final",
+     "level": 24
+    }
+   },
+   "order_flags": {
+    "c_white_june": "m_morrel_kept",
+    "c_morgiou": "m_cargo_saved",
+    "c_if_night": "m_escape_clean",
+    "c_tiboulen": "m_tiboulen_clean",
+    "c_montecristo": "m_all_chests",
+    "c_san_sebastiano": "m_albert_unharmed",
+    "c_auteuil": "m_box_kept",
+    "c_trial": "m_witness_alive"
+   }
+  }
+ },
+ "branches": {
+  "cristo": {
+   "from": "trunk",
+   "scene": "elba_1815",
+   "level_offset": 12,
+   "entry": "",
+   "requires": {
+    "any": [
+     {
+      "flags": [
+       "faria_half_letter"
+      ]
+     },
+     {
+      "flags": [
+       "t_pharaon_known"
+      ]
+     }
+    ]
+   },
+   "reasons": {
+    "any": "你和马赛没有交集：没拿到法利亚的半封信，也没见过莫雷尔或法老号"
+   },
+   "offer_text": {
+    "ok": "伊夫堡 · 奉命携密信去马赛：法老号、雷瑟夫酒家、王家检察官的书房。",
+    "locked": "伊夫堡（未开放）"
+   },
+   "soft_hooks": {
+    "t_dantes_letter": "开场多一行旁白：唐泰斯身上那封信，是你在费拉约港亲手交给他的（人心 −3，第一章唐泰斯信赖 +1）。",
+    "t_morrel_credit": "莫雷尔记得土伦围城那年的担保：c_landfall 起手金币 +1。",
+    "t_went_home": "你 1814 年回过马赛：第一章地图雾少一圈（开局揭开 fort_post、catalans）。",
+    "faria_half_letter": "c_faria_27 的“拼上那半封信”可选（藏宝的位置）。"
+   }
+  }
+ },
+ "shared_flags_add": [
+  "t_dantes_letter",
+  "t_morrel_credit",
+  "t_went_home"
+ ],
+ "carry_items_note": "book.carry.items 已含 elba_watch、faria_half（ARCH §1.4）；伊夫堡段第一场还要发一件 emperor_letter（皇帝的第二封信），由 elba_1815 的 carry_the_letter 抉择的 items 发出，或由 c_landfall 的 item_ids 展示。",
+ "battle_pool": {
+  "cristo": {
+   "12-17": [
+    "alley_ambush",
+    "coast_road"
+   ],
+   "18-23": [
+    "alley_ambush",
+    "coast_road"
+   ]
+  }
+ },
+ "debug_carry": {
+  "cristo": {
+   "from": "branch_point",
+   "flags_add": [
+    "faria_half_letter",
+    "t_pharaon_known",
+    "m_letter_carried"
+   ],
+   "stage_overrides": {
+    "2": {
+     "flags_add": [
+      "m_denunciation",
+      "m_bargain",
+      "m_stay_marseille"
+     ],
+     "companions_add": {
+      "morel": 1,
+      "caderousse": 1
+     }
+    },
+    "3": {
+     "flags_add": [
+      "m_faria_lives",
+      "m_escape_clean",
+      "m_jeune_amelie"
+     ],
+     "companions_add": {
+      "dantes": 2,
+      "faria": 1,
+      "jacopo": 1
+     }
+    },
+    "4": {
+     "flags_add": [
+      "m_treasure_taken",
+      "m_spada_known"
+     ],
+     "coins": {
+      "gold": 8
+     }
+    },
+    "5": {
+     "flags_add": [
+      "m_albert_freed",
+      "m_haydee_count"
+     ],
+     "companions_add": {
+      "haydee": 1,
+      "ali": 1,
+      "vampa": 1,
+      "bertuccio": 1
+     }
+    }
+   }
+  }
+ },
+ "rogue_note": "第二章唐泰斯与法利亚还在牢里：名册里有他们，但只能在 if_corridors 上阵（第 9 回合起）；A 在 Battle2.lineup 里按 companions.json 的 available_from 判断（本稿提议的字段，见 CRISTO.md §5）。"
+}

@@ -1,0 +1,2390 @@
+{
+  "_meta": {
+    "owner": "K16",
+    "schema": 1,
+    "brief": "新手指引步骤。cards 是全部 70 步（1.4 gd.office + K18 gd.pet + K18 gd.apprentice + K18 gd.scare）：校验器只索引 cards，不读下划线键。主创 10-22 照网页原型：一次一个气泡，点“知道了”或做了那件事才收，seconds 全是 0（不按时间收）；跨阶段的 after 去掉了，只留同一面板里的先后（轮盘→香案、细看→三档价、格子→铜钱）。第1天早上照原型连着讲：手里的牌、金框的牌（第1天哥哥的交代）、来的人、打烊（打烊排在当天别的指引后面）。_test.d1_3 是新存档第 1 到 3 天照原型的玩法（先听哥哥交代，再接客）应当按顺序亮的 21 步。"
+  },
+  "_test": {
+    "d1_3": [
+      "gd.m.open",
+      "gd.m.wheel",
+      "gd.m.incense",
+      "gd.d1.notice",
+      "gd.d1.deal",
+      "gd.d2.gold",
+      "gd.d1.person",
+      "gd.d1.close",
+      "gd.choice",
+      "gd.d1.look",
+      "gd.d1.spot",
+      "gd.d1.tiers",
+      "gd.d1.ticket",
+      "gd.d1.shelf",
+      "gd.d1.buyer",
+      "gd.d1.night",
+      "gd.d1.settle",
+      "gd.d2.rules",
+      "gd.d2.keep",
+      "gd.slots",
+      "gd.coins"
+    ]
+  },
+  "cards": [
+    {
+      "id": "gd.m.open",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "month_open"
+      ],
+      "trigger": {
+        "first": "month_open",
+        "phase": "month_open"
+      },
+      "teacher": "brother",
+      "anchor": "a.month.goals",
+      "anchor_fallback": "",
+      "done_when": [
+        "panel:wheel",
+        "timeout"
+      ],
+      "rule_page": "rule.month",
+      "priority": 400,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "开局过场亮出本关目标时，哥哥指着目标那一栏，讲清这一关要盯住的事。玩家看完就可以离开过场。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "gd.m.wheel",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "month_wheel"
+      ],
+      "trigger": {
+        "first": "month_wheel",
+        "phase": "month_open",
+        "panel": "wheel"
+      },
+      "teacher": "brother",
+      "anchor": "a.wheel.face",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:wheel.offer",
+        "cmd:wheel.spin",
+        "timeout"
+      ],
+      "rule_page": "rule.wheel",
+      "priority": 399,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "香案轮盘打开时，哥哥指着盘面，讲清进这个月之前要转一次本月运势。本月运势在进第1天之前就要转，开局由哥哥讲轮盘和香案。玩家放了香火或直接转了，这一步就算讲过。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "gd.m.incense",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "incense"
+      ],
+      "trigger": {
+        "phase": "month_open",
+        "after": [
+          "gd.m.wheel"
+        ],
+        "panel": "wheel"
+      },
+      "teacher": "brother",
+      "anchor": "a.wheel.incense",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:wheel.offer",
+        "cmd:wheel.spin",
+        "timeout"
+      ],
+      "rule_page": "rule.wheel",
+      "priority": 398,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "轮盘还没转、也还没往香案上放东西时，哥哥指着香案，讲清可以先放上香火再转。玩家已经放过或已经转了，就不再讲。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "gd.d1.notice",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "notice"
+      ],
+      "trigger": {
+        "first": "notice",
+        "phase": "morning"
+      },
+      "teacher": "brother",
+      "anchor": "a.scene.notice",
+      "anchor_fallback": "a.top.date",
+      "done_when": [
+        "cmd:day.begin",
+        "ui:hotspot_pressed",
+        "ui:dialog_advanced",
+        "timeout"
+      ],
+      "rule_page": "rule.day",
+      "priority": 397,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第1天早上告示出来时，哥哥指着顶上的告示，讲清先看今天贴出来的事，再开始一天。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "gd.d1.deal",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "deal"
+      ],
+      "trigger": {
+        "first": "deal",
+        "phase": "day",
+        "mode": "shop"
+      },
+      "teacher": "brother",
+      "anchor": "a.hand",
+      "anchor_fallback": "",
+      "done_when": [
+        "ui:hand_selected",
+        "ui:hand_played",
+        "panel:counter",
+        "timeout"
+      ],
+      "rule_page": "rule.day",
+      "priority": 396,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第1天发牌之后，哥哥指着手上的一排牌，讲清进门的人、街上的事都在这里，一张一张处理，先后随你。照网页原型，这是第1天早上连着讲的三句里的头一句。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "gd.d1.person",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "person"
+      ],
+      "trigger": {
+        "first": "person",
+        "phase": "day",
+        "mode": "shop"
+      },
+      "teacher": "brother",
+      "anchor": "a.card@{uid}",
+      "anchor_fallback": "a.hand",
+      "done_when": [
+        "ui:hand_played",
+        "cmd:counter.open",
+        "panel:counter",
+        "timeout"
+      ],
+      "rule_page": "rule.person",
+      "priority": 394,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第1天第一位客人的牌还在手上时，哥哥指着这张牌，讲清来的人点开就知道是来当、来卖还是来买，打出去就是请他进门。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "gd.d1.look",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "counter"
+      ],
+      "trigger": {
+        "panel": "counter"
+      },
+      "teacher": "brother",
+      "anchor": "a.counter.look",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:mg.request",
+        "cmd:counter.offer",
+        "timeout"
+      ],
+      "rule_page": "rule.counter",
+      "priority": 391,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "柜台开着、东西还没看时，哥哥指着看货的那句回话，讲清来当或来卖要先看过这件东西，再谈价钱。玩家已经出了价，这一步就算讲过。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "gd.d1.spot",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "mg.spot"
+      ],
+      "trigger": {
+        "first": "mg.spot"
+      },
+      "teacher": "brother",
+      "anchor": "a.mg.spot.atlas",
+      "anchor_fallback": "a.mg.spot.main",
+      "done_when": [
+        "cmd:mg.report",
+        "ui:mg_tool",
+        "timeout"
+      ],
+      "rule_page": "rule.appraise",
+      "priority": 390,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次找不同时，哥哥指着对照的位置，讲清：左边柜上这件、右边图鉴，自己在东西上点出不一样的那一处，再说它是旧痕还是不一样。点错了、说错了也照记，后果到谈价时才显出来（主创 10-25：要玩家看出来才算数）。看完把结果交回去。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "gd.d1.tiers",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "counter"
+      ],
+      "trigger": {
+        "after": [
+          "gd.d1.look"
+        ],
+        "panel": "counter"
+      },
+      "teacher": "brother",
+      "anchor": "a.counter.tier.fair",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:counter.offer",
+        "timeout"
+      ],
+      "rule_page": "rule.counter",
+      "priority": 389,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "看过东西、柜台还开着时，哥哥指着中间那一档，讲清可以按这三档出价，头一回先出中间这一档。玩家已经出了价，就不再讲。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "gd.d1.ticket",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "ticket"
+      ],
+      "trigger": {
+        "first": "ticket"
+      },
+      "teacher": "brother",
+      "anchor": "a.scene.ledger",
+      "anchor_fallback": "a.tab.tickets",
+      "done_when": [
+        "ui:hand_selected",
+        "panel:counter",
+        "cmd:day.end",
+        "timeout"
+      ],
+      "rule_page": "rule.ticket",
+      "priority": 388,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一张当票记上之后，哥哥指着右边的当票栏，讲清当出去的东西会在这里留着，到期之前人可以来赎。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "gd.d1.shelf",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "shelf"
+      ],
+      "trigger": {
+        "first": "shelf"
+      },
+      "teacher": "brother",
+      "anchor": "a.tab.shelf",
+      "anchor_fallback": "",
+      "done_when": [
+        "ui:hand_selected",
+        "panel:counter",
+        "panel:shelf",
+        "cmd:day.end",
+        "timeout"
+      ],
+      "rule_page": "rule.shelf",
+      "priority": 387,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一件买进来的东西上了货架时，哥哥指着货架，讲清买下的东西放在这里，等有人来买。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "gd.d1.buyer",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "buyer"
+      ],
+      "trigger": {
+        "first": "buyer",
+        "panel": "counter"
+      },
+      "teacher": "brother",
+      "anchor": "a.counter.stock",
+      "anchor_fallback": "a.tab.shelf",
+      "done_when": [
+        "cmd:counter.pick_stock",
+        "cmd:counter.offer",
+        "cmd:counter.refuse",
+        "timeout"
+      ],
+      "rule_page": "rule.shelf",
+      "priority": 386,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "来买的客人打开柜台、货架上有东西时，哥哥指着可卖的货物，讲清从货架上挑一件卖给他。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "gd.d1.close",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [],
+      "trigger": {
+        "first": "deal",
+        "phase": "day",
+        "mode": "shop"
+      },
+      "teacher": "brother",
+      "anchor": "a.btn.close_day",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:day.end",
+        "timeout"
+      ],
+      "rule_page": "rule.day",
+      "priority": 379,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第1天发牌之后，哥哥指着打烊，讲清处理完了就打烊；没处理完也能按，会先列出会怎样，点头才关门。照网页原型在第1天早上讲，不等手上清空；排在当天别的指引后面，眼前的事先讲。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "gd.d1.night",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "night"
+      ],
+      "trigger": {
+        "first": "night",
+        "phase": "night"
+      },
+      "teacher": "brother",
+      "anchor": "a.night.offers",
+      "anchor_fallback": "",
+      "done_when": [
+        "ui:hand_played",
+        "cmd:night.choose",
+        "timeout"
+      ],
+      "rule_page": "rule.night",
+      "priority": 385,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第1天进夜里、夜牌摊开时，哥哥指着今夜可以做的几件事，讲清挑一件做，不想做就睡。夜牌在第1天晚上就要选，所以由哥哥在第1天晚上讲。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "gd.d1.settle",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "settle"
+      ],
+      "trigger": {
+        "first": "settle",
+        "phase": "settle"
+      },
+      "teacher": "brother",
+      "anchor": "a.settle.lines",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:settle.next",
+        "timeout"
+      ],
+      "rule_page": "rule.day",
+      "priority": 384,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第1天日结列出今天的账时，哥哥指着那几行，讲清看完今天进出，再进下一天早上。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "gd.d2.rules",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [],
+      "trigger": {
+        "phase": "morning",
+        "stage_day_gte": 2
+      },
+      "teacher": "brother",
+      "anchor": "a.tab.rules",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:day.begin",
+        "panel:dossier",
+        "panel:help",
+        "timeout"
+      ],
+      "rule_page": "rule.day",
+      "priority": 383,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第2天早上，哥哥指着档案簿，讲清教过的规矩都收在规矩栏里，也可以按帮助键再看。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "gd.d2.gold",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "gold"
+      ],
+      "trigger": {
+        "first": "gold",
+        "phase": "day"
+      },
+      "teacher": "brother",
+      "anchor": "a.card.gold@{uid}",
+      "anchor_fallback": "a.hand.gold",
+      "done_when": [
+        "ui:hand_selected",
+        "panel:slots",
+        "timeout"
+      ],
+      "rule_page": "rule.gold",
+      "priority": 395,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一张金色牌进手时（第1天哥哥的交代），哥哥指着这张牌，讲清金框的当天必须处理，不理他，打烊时他就走了，补不回来。照网页原型，这是第1天早上连着讲的第二句。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "gd.choice",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "choice"
+      ],
+      "trigger": {
+        "first": "choice",
+        "panel": "slots"
+      },
+      "teacher": "brother",
+      "anchor": "a.slots.choices",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:card.choose",
+        "timeout"
+      ],
+      "rule_page": "rule.person",
+      "priority": 392,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次打开带选项的牌时（第1天哥哥的交代），哥哥指着选项，讲清挑一个做法，这张牌才算处理过。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "gd.d2.keep",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "keep"
+      ],
+      "trigger": {
+        "first": "keep"
+      },
+      "teacher": "brother",
+      "anchor": "a.card.keep@{uid}",
+      "anchor_fallback": "a.hand.kept",
+      "done_when": [
+        "ui:hand_selected",
+        "panel:counter",
+        "cmd:day.end",
+        "timeout"
+      ],
+      "rule_page": "rule.kept",
+      "priority": 382,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次有牌可以留、或已经留进左边时，哥哥指着留着的位置，讲清有的牌可以留着以后再用。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "gd.slots",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "slots"
+      ],
+      "trigger": {
+        "first": "slots",
+        "phase": "day",
+        "stage_day_gte": 3
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.slots.first",
+      "anchor_fallback": "a.card@{uid}",
+      "done_when": [
+        "panel:slots",
+        "cmd:slot.place",
+        "timeout"
+      ],
+      "rule_page": "rule.slots",
+      "priority": 381,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第3天第一张带格子的牌进手时，账簿批注指着格子，讲清往格子里放人或放钱，凑够要求再掷铜钱。哥哥走后、节奏表没点名的机制，默认由他留下的账簿批注来讲。【待主创确认】为了第1到3天的指引顺序不跟发牌随机走，第3天也做成脚本日。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "gd.coins",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "coins"
+      ],
+      "trigger": {
+        "first": "coins",
+        "after": [
+          "gd.slots"
+        ],
+        "panel": "slots"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.slots.coins",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:slot.roll",
+        "timeout"
+      ],
+      "rule_page": "rule.slots",
+      "priority": 380,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次看见要几个正面时，账簿批注指着铜钱那一栏，讲清放进去的人或钱换成铜钱，掷出的正面够了这张牌才过。哥哥走后、节奏表没点名的机制，默认由他留下的账簿批注来讲。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "gd.almanac",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "almanac"
+      ],
+      "trigger": {
+        "first": "almanac",
+        "phase": "day",
+        "stage_day_gte": 4
+      },
+      "teacher": "obj.almanac",
+      "anchor": "a.almanac",
+      "anchor_fallback": "a.scene.calendar",
+      "done_when": [
+        "cmd:day.end",
+        "timeout"
+      ],
+      "rule_page": "rule.almanac",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第4天及以后的白天，黄历指着自己那一条，讲清宜做什么、忌做什么，今天已经做过的会划掉。黄历由谁讲没有写明。默认由黄历自己讲。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.lot",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "lot"
+      ],
+      "trigger": {
+        "first": "lot",
+        "phase": "day",
+        "stage_day_gte": 5
+      },
+      "teacher": "suanming",
+      "anchor": "a.fortune.lot",
+      "anchor_fallback": "a.card@{uid}",
+      "done_when": [
+        "cmd:fortune.lot",
+        "panel:fortune",
+        "timeout"
+      ],
+      "rule_page": "rule.fortune",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第5天能求签的牌进手时，算命先生指着求签，讲清花一笔钱求一支签。人物登记等 K01 的 suanming 合入后再进会被校验的牌列表。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.cezi",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "cezi"
+      ],
+      "trigger": {
+        "first": "cezi",
+        "phase": "day",
+        "stage_day_gte": 5
+      },
+      "teacher": "suanming",
+      "anchor": "a.fortune.cezi",
+      "anchor_fallback": "a.card@{uid}",
+      "done_when": [
+        "cmd:fortune.cezi",
+        "panel:fortune",
+        "timeout"
+      ],
+      "rule_page": "rule.fortune",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第5天能测字的牌进手时，算命先生指着测字，讲清报一个字让他拆。人物登记等 K01 的 suanming。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.news",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "news"
+      ],
+      "trigger": {
+        "first": "news",
+        "phase": "day",
+        "stage_day_gte": 6
+      },
+      "teacher": "zhouma",
+      "anchor": "a.card@{uid}",
+      "anchor_fallback": "a.hand",
+      "done_when": [
+        "ui:hand_selected",
+        "panel:read",
+        "timeout"
+      ],
+      "rule_page": "rule.news",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第6天及以后，第一张消息牌进手时，周妈指着这张牌，讲清街上的话可以看、也可以留着。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.dossier",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "dossier"
+      ],
+      "trigger": {
+        "first": "dossier",
+        "phase": "day",
+        "stage_day_gte": 6
+      },
+      "teacher": "zhouma",
+      "anchor": "a.scene.notebook",
+      "anchor_fallback": "a.tab.dossier",
+      "done_when": [
+        "panel:dossier",
+        "cmd:day.end",
+        "timeout"
+      ],
+      "rule_page": "rule.dossier",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第6天及以后的白天，周妈指着档案簿，讲清听来的事会收成一块碎片，缺的地方以后还能补。第1天当出金簪也可能先拿到碎片，所以这一步排到第6天才亮。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.contact",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "contact"
+      ],
+      "trigger": {
+        "first": "contact",
+        "phase": "day",
+        "stage_day_gte": 7
+      },
+      "teacher": "zhouma",
+      "anchor": "a.contacts",
+      "anchor_fallback": "a.tab.contacts",
+      "done_when": [
+        "cmd:day.end",
+        "timeout"
+      ],
+      "rule_page": "rule.contact",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第7天第一次得到人脉时，周妈指着左边的人脉，讲清成了人脉的人会留在这里，以后格子里用得上。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.tiers",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "tier_rep",
+        "tier_heat"
+      ],
+      "trigger": {
+        "phase": "day",
+        "stage_day_gte": 7
+      },
+      "teacher": "zhouma",
+      "anchor": "a.top.rep",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:day.end",
+        "timeout"
+      ],
+      "rule_page": "rule.tiers",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第7天白天，周妈指着顶上的口碑，讲清口碑和风声各有几档，换档之后街上的事会不一样。不等真的换档才讲。口碑与风声的换档不一定落在第7天。默认第7天讲，不等到换档。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.demand",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "demand"
+      ],
+      "trigger": {
+        "first": "demand",
+        "phase": "day",
+        "stage_day_gte": 7
+      },
+      "teacher": "hu2",
+      "anchor": "a.scene.notewall",
+      "anchor_fallback": "a.tab.demands",
+      "done_when": [
+        "panel:demands",
+        "panel:demand",
+        "cmd:demand.submit",
+        "timeout"
+      ],
+      "rule_page": "rule.demand",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一张条子发下来时，胡二指着条子板，讲清条子要在期限内办，办不了会有后果。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.demand_delay",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "demand_delay"
+      ],
+      "trigger": {
+        "first": "demand_delay",
+        "panel": "demand"
+      },
+      "teacher": "hu2",
+      "anchor": "a.demand.delay",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:demand.delay",
+        "timeout"
+      ],
+      "rule_page": "rule.demand",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次打开条子面板时，胡二指着延期，讲清来不及可以押后再办，期限会改。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.demand_people",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "demand_people_return"
+      ],
+      "trigger": {
+        "first": "demand_people_return",
+        "phase": "day"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.card@{uid}",
+      "anchor_fallback": "",
+      "done_when": [
+        "ui:hand_selected",
+        "timeout"
+      ],
+      "rule_page": "rule.demand",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一张问人回来没有的牌进手时，账簿批注指着这张牌，讲清这是条子的后续，要给出一个人的下落。哥哥走后、节奏表没点名的机制，默认由他留下的账簿批注来讲。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.demand_inform",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "demand_inform",
+        "demand_fabricate"
+      ],
+      "trigger": {
+        "first": "demand_inform",
+        "panel": "demand"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.demand.modes",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:demand.submit",
+        "timeout"
+      ],
+      "rule_page": "rule.demand",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次打开要消息的条子时，账簿批注指着几种做法，讲清可以交差、也可以另想办法，两种做法后果不同。哥哥走后、节奏表没点名的机制，默认由他留下的账簿批注来讲。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.demand_fail",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "demand_fail"
+      ],
+      "trigger": {
+        "first": "demand_fail"
+      },
+      "teacher": "hu2",
+      "anchor": "a.demand.tier",
+      "anchor_fallback": "a.scene.notice",
+      "done_when": [
+        "panel:demand",
+        "timeout"
+      ],
+      "rule_page": "rule.demand",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次条子到期没办成时，胡二指着条子的档，讲清没办成会升档，告示上也会有反映。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.shop_closed",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "shop_closed"
+      ],
+      "trigger": {
+        "first": "shop_closed"
+      },
+      "teacher": "obj.notice",
+      "anchor": "a.scene.notice",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:day.begin",
+        "timeout"
+      ],
+      "rule_page": "rule.demand",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次被查封时，告示指着顶上的告示，讲清铺子被封上的这段时间不能正常营业。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.must",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "must_resolve"
+      ],
+      "trigger": {
+        "first": "must_resolve",
+        "panel": "end_day"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.endday.blocked",
+      "anchor_fallback": "a.btn.close_day",
+      "done_when": [
+        "cmd:day.end",
+        "ui:panel_closed",
+        "timeout"
+      ],
+      "rule_page": "rule.day",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次打烊还有没处理的牌、确认面板开着时，账簿批注指着清单，讲清没理会会怎样：客人走、个别人记仇、事件按没理会、条子接着算、牢房多待一晚，确认了才进入下一天。主创已确认 10-13。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.gold_leave",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "gold_leave"
+      ],
+      "trigger": {
+        "first": "gold_leave",
+        "panel": "end_day"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.endday.gold_leave",
+      "anchor_fallback": "a.endday.blocked",
+      "done_when": [
+        "cmd:day.end",
+        "timeout"
+      ],
+      "rule_page": "rule.gold",
+      "priority": 41,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次打烊清单里有金色牌时，账簿批注指着那一行，讲清不理他就走了。它和没处理的那一步同时能亮时，先讲这一步。主创已确认 10-13。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.fate",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "fate"
+      ],
+      "trigger": {
+        "first": "fate",
+        "phase": "day"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.card@{uid}",
+      "anchor_fallback": "",
+      "done_when": [
+        "ui:hand_selected",
+        "panel:slots",
+        "timeout"
+      ],
+      "rule_page": "rule.fate",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一张命运牌进手时，账簿批注指着这张牌，讲清这是已经发生的事，要处理，不能当没看见。哥哥走后、节奏表没点名的机制，默认由他留下的账簿批注来讲。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.life",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "life"
+      ],
+      "trigger": {
+        "first": "life",
+        "phase": "day"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.card.days@{uid}",
+      "anchor_fallback": "a.card@{uid}",
+      "done_when": [
+        "ui:hand_selected",
+        "timeout"
+      ],
+      "rule_page": "rule.life",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一张生活牌进手时，账簿批注指着剩下的天数，讲清几天之内要处理，回家吃饭可以免掉坏处。哥哥走后、节奏表没点名的机制，默认由他留下的账簿批注来讲。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.kept_expire",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "kept_expire"
+      ],
+      "trigger": {
+        "first": "kept_expire",
+        "phase": "morning"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.hand.kept",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:day.begin",
+        "timeout"
+      ],
+      "rule_page": "rule.kept",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次有留着的牌过期时，账簿批注指着左边留着的牌，讲清过了日子这张牌就不在了。哥哥走后、节奏表没点名的机制，默认由他留下的账簿批注来讲。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.kept_full",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "kept_full"
+      ],
+      "trigger": {
+        "first": "kept_full",
+        "panel": "kept_full"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.slots.discard",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:card.discard",
+        "timeout"
+      ],
+      "rule_page": "rule.kept",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次留牌满了还要再进一张时，账簿批注指着要丢掉的位置，讲清满了就得腾出一个位置。哥哥走后、节奏表没点名的机制，默认由他留下的账簿批注来讲。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.kept_risk",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "kept_risk"
+      ],
+      "trigger": {
+        "first": "kept_risk",
+        "phase": "day"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.hand.kept",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:day.end",
+        "timeout"
+      ],
+      "rule_page": "rule.kept",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次手上有带风险的留牌时，账簿批注指着左边留着的牌，讲清这种牌留着可能被翻出来。哥哥走后、节奏表没点名的机制，默认由他留下的账簿批注来讲。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.contacts_full",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "contacts_full"
+      ],
+      "trigger": {
+        "first": "contacts_full",
+        "panel": "contacts_full"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.slots.release",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:contact.release",
+        "timeout"
+      ],
+      "rule_page": "rule.contact",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次人脉满了时，账簿批注指着要松开的人，讲清人脉满了就得松开一个，才能再留新人。哥哥走后、节奏表没点名的机制，默认由他留下的账簿批注来讲。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.person_state",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "person_state"
+      ],
+      "trigger": {
+        "first": "person_state"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.contacts",
+      "anchor_fallback": "a.hero",
+      "done_when": [
+        "cmd:day.end",
+        "timeout"
+      ],
+      "rule_page": "rule.contact",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次有人受伤、被扣或走了时，账簿批注指着人脉，讲清这个人暂时不能照旧来往。哥哥走后、节奏表没点名的机制，默认由他留下的账簿批注来讲。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.redeem",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "redeem"
+      ],
+      "trigger": {
+        "first": "redeem",
+        "panel": "counter"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.counter.redeem",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:counter.redeem",
+        "timeout"
+      ],
+      "rule_page": "rule.ticket",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次有人来赎时，账簿批注指着赎当的位置，讲清按当票把东西赎回去；东西不在了要另算。哥哥走后、节奏表没点名的机制，默认由他留下的账簿批注来讲。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.mg.coin_ring",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "mg.coin_ring"
+      ],
+      "trigger": {
+        "first": "mg.coin_ring",
+        "stage_day_gte": 4
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.mg.coin_ring.blow",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:mg.report",
+        "ui:mg_tool",
+        "timeout"
+      ],
+      "rule_page": "rule.appraise",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次听银元时，账簿批注指着吹气的位置，讲清：先吹铺子里的两枚样洋（足银的、哑板），再吹客人这一枚，自己说像哪一枚；一摞的一枚一枚标响还是哑（主创 10-25）。第1到3天不排这一步。哥哥走后、节奏表没点名的机制，默认由他留下的账簿批注来讲。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.mg.weigh",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "mg.weigh"
+      ],
+      "trigger": {
+        "first": "mg.weigh",
+        "stage_day_gte": 4
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.mg.weigh.weights",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:mg.report",
+        "ui:mg_tool",
+        "timeout"
+      ],
+      "rule_page": "rule.appraise",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次称分量时，账簿批注指着砝码，讲清：拨砝码、拖秤砣，自己看定盘针正了再看星，自己数星读出分量，再跟客人说的比（主创 10-25：游戏不替你读、不替你比）。第1天来卖的碗可能称分量，这一步排到第4天才允许亮。哥哥走后、节奏表没点名的机制，默认由他留下的账簿批注来讲。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.mg.fragments",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "mg.fragments"
+      ],
+      "trigger": {
+        "first": "mg.fragments",
+        "stage_day_gte": 4
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.mg.fragments.board",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:mg.report",
+        "ui:mg_tool",
+        "timeout"
+      ],
+      "rule_page": "rule.appraise",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次拼碎片时，账簿批注指着拼的板，讲清：把碎片拼回原样，自己看骑缝印两半对不对得上，哪道缝两边的墨接不上就在缝上打叉（主创 10-25）。教学日不排这一步。哥哥走后、节奏表没点名的机制，默认由他留下的账簿批注来讲。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.mg.decode",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "mg.decode"
+      ],
+      "trigger": {
+        "first": "mg.decode",
+        "stage_day_gte": 4
+      },
+      "teacher": "postman",
+      "anchor": "a.mg.decode.book",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:mg.report",
+        "ui:mg_tool",
+        "timeout"
+      ],
+      "rule_page": "rule.appraise",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次对密码时，邮差指着电码本，讲清：照着本子自己翻页、自己找码，洇了的字两种读法都查一查，挑说得通的；抄错了也照记（主创 10-25）。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.market_day",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "market_day"
+      ],
+      "trigger": {
+        "first": "market_day",
+        "phase": "day",
+        "stage_day_gte": 4
+      },
+      "teacher": "obj.notice",
+      "anchor": "a.top.weather",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:day.end",
+        "timeout"
+      ],
+      "rule_page": "rule.day",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第4天以后的白天，遇到集市日时，告示指着顶上的天气旁边，讲清今天是集，来的人会多些。第3天也可能已经是集，所以排到第4天才讲。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.weather",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "weather"
+      ],
+      "trigger": {
+        "first": "weather",
+        "phase": "day",
+        "stage_day_gte": 4
+      },
+      "teacher": "obj.notice",
+      "anchor": "a.top.weather",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:day.end",
+        "timeout"
+      ],
+      "rule_page": "rule.day",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第4天以后的白天，遇到不是晴天的日子，告示指着天气，讲清下雨、起雾这些会影响到今天怎么过。第2天就可能下雨，所以排到第4天才讲。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.money_short",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "money_short"
+      ],
+      "trigger": {
+        "first": "money_short",
+        "panel": "short"
+      },
+      "teacher": "",
+      "anchor": "a.short.options",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:short.resolve",
+        "timeout"
+      ],
+      "rule_page": "rule.ladder",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次钱不够付时，不借任何人口吻，只指着能周转的几种办法，讲清现在付不出，要另想办法。抵押、钱不够、街头、牢房的教的人未定。默认不借任何人口吻。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.mortgage",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "mortgage"
+      ],
+      "trigger": {
+        "first": "mortgage",
+        "panel": "estates"
+      },
+      "teacher": "",
+      "anchor": "a.estate.mortgage",
+      "anchor_fallback": "a.tab.estates",
+      "done_when": [
+        "cmd:estate.mortgage",
+        "timeout"
+      ],
+      "rule_page": "rule.ladder",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次打开家当时，不借任何人口吻，只指着可押的家当，讲清房子柜柜可以押出去周转。抵押、钱不够、街头、牢房的教的人未定。默认不借任何人口吻。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.big_wheel",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "big_wheel"
+      ],
+      "trigger": {
+        "first": "big_wheel",
+        "phase": "day"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.card@{uid}",
+      "anchor_fallback": "a.wheel.face",
+      "done_when": [
+        "panel:wheel",
+        "cmd:wheel.spin",
+        "timeout"
+      ],
+      "rule_page": "rule.wheel",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一张大命运轮盘进手时，账簿批注指着这张牌，讲清这是快撑不住时才出现的盘，转之前看清代价。哥哥走后、节奏表没点名的机制，默认由他留下的账簿批注来讲。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.fair_wheel",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "fair_wheel",
+        "wheel_stake"
+      ],
+      "trigger": {
+        "first": "fair_wheel",
+        "panel": "wheel"
+      },
+      "teacher": "obj.notice",
+      "anchor": "a.wheel.cost",
+      "anchor_fallback": "a.card@{uid}",
+      "done_when": [
+        "cmd:wheel.stake",
+        "cmd:wheel.spin",
+        "timeout"
+      ],
+      "rule_page": "rule.wheel",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一张庙会牌进手、或第一次看见要押一张留着的牌时，告示指着代价，讲清庙会上转盘要先看清押上什么。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.gamble_wheel",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "gamble_wheel"
+      ],
+      "trigger": {
+        "first": "gamble_wheel",
+        "panel": "wheel"
+      },
+      "teacher": "",
+      "anchor": "a.wheel.cost",
+      "anchor_fallback": "a.card@{uid}",
+      "done_when": [
+        "cmd:wheel.spin",
+        "timeout"
+      ],
+      "rule_page": "rule.wheel",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一张赌摊牌进手时，不借任何人口吻，只指着代价，讲清赌摊要先看清押上什么。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.street",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "street"
+      ],
+      "trigger": {
+        "first": "street"
+      },
+      "teacher": "",
+      "anchor": "a.street.redeem",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:street.redeem_shop",
+        "timeout"
+      ],
+      "rule_page": "rule.ladder",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次流落街头时，不借任何人口吻，只指着怎么把铺子赎回来，讲清铺子不在了，人在街上过。抵押、钱不够、街头、牢房的教的人未定。默认不借任何人口吻。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.prison",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "prison"
+      ],
+      "trigger": {
+        "first": "prison",
+        "panel": "prison"
+      },
+      "teacher": "",
+      "anchor": "a.prison.slots",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:slot.roll",
+        "timeout"
+      ],
+      "rule_page": "rule.prison",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次进牢房时，不借任何人口吻，只指着牢房里的格子，讲清打点、作保或掷铜钱，是现在能做的事。没处理就在牢里多待一晚，几晚没出来就结束。抵押、钱不够、街头、牢房的教的人未定。默认不借任何人口吻。主创已确认 10-13。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.game_over",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "game_over"
+      ],
+      "trigger": {
+        "first": "game_over",
+        "phase": "game_over"
+      },
+      "teacher": "",
+      "anchor": "a.over.retry",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:game.retry_stage",
+        "timeout"
+      ],
+      "rule_page": "rule.retry",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次这一关结束时，不借任何人口吻，只指着重来，讲清这一关到这里为止，可以重来。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.retry",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "retry"
+      ],
+      "trigger": {
+        "first": "retry"
+      },
+      "teacher": "",
+      "anchor": "a.top.date",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:day.begin",
+        "timeout"
+      ],
+      "rule_page": "rule.retry",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次重来本关时，不借任何人口吻，只指着顶上的日期，讲清日子回到这一关的开头。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.resume",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "resume"
+      ],
+      "trigger": {
+        "first": "resume"
+      },
+      "teacher": "",
+      "anchor": "a.top.date",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:day.begin",
+        "timeout"
+      ],
+      "rule_page": "rule.retry",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次从续玩的地方接着时，不借任何人口吻，只指着顶上的日期，讲清从停下的那天继续。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.month_close",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "month_close"
+      ],
+      "trigger": {
+        "first": "month_close",
+        "phase": "month_close"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.mclose.accounts",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:month.next",
+        "timeout"
+      ],
+      "rule_page": "rule.month",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次月底结账时，账簿批注指着账，讲清这个月的进出在这里结清，再进下一个月。哥哥走后、节奏表没点名的机制，默认由他留下的账簿批注来讲。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.year_jump",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "year_jump"
+      ],
+      "trigger": {
+        "first": "year_jump",
+        "phase": "year_jump"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.year.forfeit",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:year.next",
+        "timeout"
+      ],
+      "rule_page": "rule.year",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次跳一年时，账簿批注指着满当，讲清过了一年，到期没赎的当要处理。哥哥走后、节奏表没点名的机制，默认由他留下的账簿批注来讲。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.year_after",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "year_after"
+      ],
+      "trigger": {
+        "first": "year_after",
+        "phase": "year_jump"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.year.after",
+      "anchor_fallback": "a.dossier.page",
+      "done_when": [
+        "cmd:year.next",
+        "timeout"
+      ],
+      "rule_page": "rule.dossier",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次出现一年后的碎片时，账簿批注指着一年后那一栏，讲清有些事要等一年才对得上。哥哥走后、节奏表没点名的机制，默认由他留下的账簿批注来讲。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.dossier_gap",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "dossier_gap"
+      ],
+      "trigger": {
+        "first": "dossier_gap"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.dossier.gap",
+      "anchor_fallback": "a.scene.notebook",
+      "done_when": [
+        "panel:dossier",
+        "timeout"
+      ],
+      "rule_page": "rule.dossier",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次在档案上留缺口时，账簿批注指着缺口，讲清这段没听到，以后也许还能补。哥哥走后、节奏表没点名的机制，默认由他留下的账簿批注来讲。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.currency",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "currency"
+      ],
+      "trigger": {
+        "first": "currency"
+      },
+      "teacher": "obj.notice",
+      "anchor": "a.top.money",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:day.end",
+        "timeout"
+      ],
+      "rule_page": "rule.year",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次换一种钱时，告示指着顶上的钱数，讲清手里的钱换成了另一种。首发三关不换，这一步先留着。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.branch_pick",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "branch_pick"
+      ],
+      "trigger": {
+        "first": "branch_pick",
+        "phase": "branch_pick"
+      },
+      "teacher": "",
+      "anchor": "a.branch.list",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:month.begin",
+        "timeout"
+      ],
+      "rule_page": "rule.branch",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "解放后第一次选新行当时，不借任何人口吻，只指着行当列表，讲清当铺这一段结束了，要选接下来做什么。新行当的牌等选中之后再教。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gd.office",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "office"
+      ],
+      "trigger": {
+        "first": "office",
+        "phase": "day"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.card.gold@{uid}",
+      "anchor_fallback": "a.hand.gold",
+      "done_when": [
+        "cmd:card.choose",
+        "timeout"
+      ],
+      "rule_page": "rule.gold",
+      "priority": 60,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次有官面上的人来逼你接差事时，账簿批注指着这张牌，讲清这一步会记进往后的账：接、挂名、打点、回绝各有后果，日后有人翻旧账。不说数字。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K17",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "id": "gd.apprentice",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "apprentice"
+      ],
+      "trigger": {
+        "first": "apprentice",
+        "phase": "day"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.contacts",
+      "anchor_fallback": "a.tab.contacts",
+      "done_when": [
+        "cmd:card.choose",
+        "timeout"
+      ],
+      "rule_page": "rule.contact",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次有人愿意留下看铺时，账簿批注指着左边的人脉，讲清他会替你看柜台，本事过一阵会长。你不在铺里时他照旧看铺。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K18",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "id": "gd.scare",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "scare"
+      ],
+      "trigger": {
+        "first": "scare",
+        "phase": "day"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.card@{uid}",
+      "anchor_fallback": "a.hand",
+      "done_when": [
+        "cmd:card.choose",
+        "timeout"
+      ],
+      "rule_page": "rule.kept",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "第一次留着枪、又发到普通客人时，账簿批注指着这张牌，讲清回话里多了吓唬：吓住了对方让开，吓不住对方去报官。哥哥走后、节奏表没点名的机制，默认由他留下的账簿批注来讲。【待主创确认】",
+      "_provenance": {
+        "by": "ai",
+        "task": "K18",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "id": "gd.pet",
+      "type": "guide_step",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "teaches": [
+        "pet"
+      ],
+      "trigger": {
+        "first": "pet",
+        "phase": "day"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.pet",
+      "anchor_fallback": "a.contacts",
+      "done_when": [
+        "cmd:day.end",
+        "timeout"
+      ],
+      "rule_page": "rule.contact",
+      "priority": 40,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 0,
+      "brief": "账簿批注指着人脉旁边的小牌位，讲清店里留了猫：每天能多看一眼，夜里看着米货，也会走丢。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K18",
+        "date": "2026-10-15"
+      }
+    }
+  ]
+}

@@ -1,0 +1,748 @@
+{
+ "version": 1,
+ "_doc": "草稿（标签 conquest）：全书通用事件池（ARCH §2.6 第三层）与幕间插曲（§2.8 R6）。interlude:<类型> 只在 year_jump 阶段抽；chapters 限定能出现在哪几章（进入这一章时播）。形状同场景事件，禁止 branch/advance/ending。",
+ "events": [
+  {
+   "id": "ia_carnot",
+   "pool": "interlude:audience",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "卡尔诺的办公室",
+   "location": "巴黎·卢森堡宫",
+   "speaker": "villefort",
+   "body": [
+    "1796 年 2 月，巴黎，卢森堡宫。督政卡尔诺的桌上摊着意大利军团的军需报表，每一页都是红字。",
+    "卡尔诺：“有人推荐你去意大利，说你在土伦数过火药桶。我只问一句：那支军团缺的是钱，还是将军？”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "needs_money",
+     "label": "“钱。将军有了，钱没有。”",
+     "effects": {
+      "treasury": 300
+     },
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "gold": 1
+      }
+     }
+    },
+    {
+     "id": "needs_general",
+     "label": "“将军。有了对的将军，钱会自己来。”",
+     "effects": {
+      "morale": 3
+     },
+     "flags": [
+      "t_carnot_general"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     }
+    }
+   ],
+   "chapters": [
+    "italy"
+   ]
+  },
+  {
+   "id": "ia_berthier",
+   "pool": "interlude:audience",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "贝尔蒂埃的两个问题",
+   "location": "巴黎·战争部",
+   "speaker": "napoleon",
+   "body": [
+    "1808 年春，战争部。参谋长贝尔蒂埃一边写字一边问话，从来不抬头。",
+    "贝尔蒂埃：“第一，从巴约讷到马德里要几天？第二，路上的井，有几口是我们的？”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "days_answer",
+     "label": "“十九天。井，一口也不是。”",
+     "effects": {
+      "morale": -1
+     },
+     "flags": [
+      "t_berthier_truth"
+     ],
+     "rogue": {
+      "coins": {
+       "intel": 2
+      }
+     }
+    },
+    {
+     "id": "optimist_answer",
+     "label": "“十二天。到处都有水。”",
+     "effects": {
+      "morale": 2,
+      "heat": 3
+     },
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     }
+    }
+   ],
+   "chapters": [
+    "iberia_danube"
+   ]
+  },
+  {
+   "id": "ia_inconstant",
+   "pool": "interlude:audience",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "不屈号的甲板",
+   "location": "地中海·不屈号",
+   "speaker": "napoleon",
+   "body": [
+    "1815 年 2 月 27 日，海上。一条法国巡航舰从旁边驶过，船上的人隔着海喊：“皇帝身体好吗？”",
+    "皇帝自己回答：“很好。”他转过身问你：“到了巴黎，第一笔钱花在哪里？”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "pay_the_army",
+     "label": "“发饷。”",
+     "effects": {
+      "morale": 3
+     },
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "gold": 1
+      }
+     }
+    },
+    {
+     "id": "pay_the_debts",
+     "label": "“还债。先把厄尔巴欠的账还清。”",
+     "effects": {
+      "heat": -5
+     },
+     "flags": [
+      "k_elba_debts"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     }
+    }
+   ],
+   "chapters": [
+    "hundred_days"
+   ]
+  },
+  {
+   "id": "ia_boulogne_1817",
+   "pool": "interlude:audience",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "皇帝的木屋",
+   "location": "布洛涅·海边的木屋",
+   "speaker": "napoleon",
+   "body": [
+    "1817 年冬，布洛涅。木屋里只有一张桌子、一只火炉和一张英格兰地图。",
+    "拿破仑：“维尔福，你恨英国人吗？”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "no_hate",
+     "label": "“我只恨他们的封锁。”",
+     "effects": {
+      "heat": -3
+     },
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "intel": 1
+      }
+     }
+    },
+    {
+     "id": "yes_hate",
+     "label": "“他们烧过土伦的船。”",
+     "effects": {
+      "morale": 3
+     },
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     }
+    }
+   ],
+   "chapters": [
+    "iberia_channel"
+   ]
+  },
+  {
+   "id": "ib_fireside",
+   "pool": "interlude:bond",
+   "weight": 3,
+   "once": false,
+   "requires": {},
+   "title": "营火夜话",
+   "location": "宿营地",
+   "speaker": "villefort",
+   "body": [
+    "夜里，营火旁边只剩几个人。有人在补靴子，有人在擦枪，有人在说家乡的事。",
+    "你把账簿合上，坐了过去。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "listen",
+     "label": "听他们说",
+     "effects": {
+      "morale": 2
+     },
+     "flags": [],
+     "rogue": {
+      "trust": {
+       "pick": 2,
+       "gain": 1
+      }
+     }
+    },
+    {
+     "id": "tell_a_story",
+     "label": "讲土伦那一夜",
+     "effects": {
+      "morale": 3
+     },
+     "flags": [],
+     "rogue": {
+      "trust": {
+       "pick": 2,
+       "gain": 1
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "ib_baptiste_marie",
+   "pool": "interlude:bond",
+   "weight": 3,
+   "once": true,
+   "requires": {
+    "alive": [
+     "baptiste",
+     "marie"
+    ]
+   },
+   "title": "工兵和女商贩",
+   "location": "宿营地·玛丽的酒桶车",
+   "speaker": "marie",
+   "body": [
+    "巴蒂斯特在修玛丽的酒桶车，修了一个晚上，车轮早就修好了，他还在修。",
+    "玛丽：“维尔福，你是管账的。你说，一个工兵中士，养得起一辆酒桶车吗？”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "yes_he_can",
+     "label": "“养得起。我替他做保。”",
+     "effects": {
+      "morale": 4
+     },
+     "flags": [
+      "t_baptiste_marie"
+     ],
+     "rogue": {
+      "trust": {
+       "pair": [
+        "baptiste",
+        "marie"
+       ],
+       "gain": 1
+      }
+     }
+    },
+    {
+     "id": "ask_him",
+     "label": "“你该去问他。”",
+     "effects": {
+      "morale": 2
+     },
+     "flags": [],
+     "rogue": {
+      "trust": {
+       "pair": [
+        "baptiste",
+        "marie"
+       ],
+       "gain": 1
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "ib_lannes_murat",
+   "pool": "interlude:bond",
+   "weight": 3,
+   "once": true,
+   "requires": {
+    "alive": [
+     "lannes",
+     "murat"
+    ]
+   },
+   "title": "两个人的功劳",
+   "location": "司令部门外",
+   "speaker": "lannes",
+   "body": [
+    "拉纳和缪拉在司令部门口吵起来了，为的是谁先冲进了哪个村子。",
+    "拉纳：“维尔福，你的账簿上写的是谁？”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "write_both",
+     "label": "两个人的名字都写上",
+     "effects": {
+      "morale": 2
+     },
+     "flags": [],
+     "rogue": {
+      "trust": {
+       "pair": [
+        "lannes",
+        "murat"
+       ],
+       "gain": 1
+      }
+     }
+    },
+    {
+     "id": "write_the_dead",
+     "label": "“写的是死在村口的那些人。”",
+     "effects": {
+      "morale": -1,
+      "heat": -3
+     },
+     "flags": [
+      "t_ledger_dead"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     }
+    }
+   ],
+   "chapters": [
+    "orient_alps",
+    "austerlitz_jena",
+    "iberia_danube"
+   ]
+  },
+  {
+   "id": "ic_rain_bivouac",
+   "pool": "interlude:camp_night",
+   "weight": 3,
+   "once": false,
+   "requires": {},
+   "title": "雨夜宿营",
+   "location": "路边的树林",
+   "speaker": "villefort",
+   "body": [
+    "雨下了一整天。帐篷不够，大半的人睡在大车底下。",
+    "天亮以前，你只能做一件事。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "dry_powder",
+     "label": "把火药搬进教堂，弹药不受潮",
+     "effects": {},
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "supply": 2
+      }
+     }
+    },
+    {
+     "id": "hot_soup",
+     "label": "烧热汤，挨个发",
+     "effects": {
+      "vitality": 6,
+      "treasury": -60
+     },
+     "flags": [],
+     "rogue": {}
+    },
+    {
+     "id": "tend_wounded",
+     "label": "陪军医看伤员",
+     "effects": {
+      "morale": 2
+     },
+     "flags": [],
+     "rogue": {
+      "heal": 20
+     }
+    }
+   ]
+  },
+  {
+   "id": "ic_snow_bivouac",
+   "pool": "interlude:camp_night",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "雪夜",
+   "location": "雪地里的宿营地",
+   "speaker": "villefort",
+   "body": [
+    "夜里零下二十度。有人把马鞍烧了取暖，有人把枪托烧了。",
+    "到早上，总有几堆营火旁边的人没有再起来。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "keep_fires",
+     "label": "一整夜挨个营火去看，把睡着的人叫醒",
+     "effects": {
+      "vitality": 4,
+      "morale": -1
+     },
+     "flags": [],
+     "rogue": {}
+    },
+    {
+     "id": "burn_wagons",
+     "label": "烧两辆空车",
+     "effects": {
+      "vitality": 6
+     },
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "supply": -1
+      }
+     }
+    },
+    {
+     "id": "count_names",
+     "label": "把名字记下来",
+     "effects": {
+      "morale": 2
+     },
+     "flags": [
+      "t_snow_names"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     }
+    }
+   ],
+   "chapters": [
+    "russia",
+    "niemen"
+   ]
+  },
+  {
+   "id": "ic_harbour_night",
+   "pool": "interlude:camp_night",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "最后一夜的营地",
+   "location": "宿营地",
+   "speaker": "villefort",
+   "body": [
+    "明天就要开拔。营里很静，只有马在嚼草料。",
+    "小皮埃尔的鼓放在你的帐篷门口。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "write_letters",
+     "label": "替不识字的兵写家信",
+     "effects": {
+      "morale": 3
+     },
+     "flags": [],
+     "rogue": {}
+    },
+    {
+     "id": "inspect_wagons",
+     "label": "最后查一遍车队",
+     "effects": {},
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "supply": 2
+      }
+     }
+    },
+    {
+     "id": "sleep",
+     "label": "睡一觉",
+     "effects": {
+      "vitality": 6
+     },
+     "flags": [],
+     "rogue": {}
+    }
+   ],
+   "chapters": [
+    "rhine",
+    "last_coalition"
+   ]
+  },
+  {
+   "id": "im_cipher_dispatch",
+   "pool": "interlude:minigame:decode",
+   "weight": 3,
+   "once": false,
+   "requires": {},
+   "title": "截获的密信",
+   "location": "司令部",
+   "speaker": "gourgaud",
+   "body": [
+    "前哨截住了一个信使，身上缝着一封用数字写的信。",
+    "古尔戈：“参谋部的人都去前线了。你会解这种东西吗？”"
+   ],
+   "appraisals": [
+    {
+     "id": "number_key",
+     "kind": "decode",
+     "label": "破译数字",
+     "observation": "每个数字是同一本祈祷书的页码和行数。信里说的是下一批援军的路线。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "read_it",
+     "label": "照解出来的内容报告",
+     "requires_clues": [
+      "number_key"
+     ],
+     "effects": {},
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "intel": 3
+      }
+     }
+    },
+    {
+     "id": "send_it_on",
+     "label": "原样送去参谋部",
+     "effects": {},
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "intel": 1
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "im_tsar_letter",
+   "pool": "interlude:minigame:decode",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "沙皇的回信",
+   "location": "华沙·王宫",
+   "speaker": "napoleon",
+   "body": [
+    "亚历山大沙皇回信了。法文写得很漂亮，可最后一段是另一个人的笔迹。",
+    "拿破仑：“维尔福，你看看，这一段是谁加的？”"
+   ],
+   "appraisals": [
+    {
+     "id": "second_hand",
+     "kind": "decode",
+     "label": "对比两段笔迹",
+     "observation": "最后一段的 t 横得很长，是英国学校教出来的写法。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "found_hand",
+     "label": "“是英国使馆的人加的。”",
+     "requires_clues": [
+      "second_hand"
+     ],
+     "effects": {
+      "heat": -4
+     },
+     "flags": [
+      "k_tsar_forgery"
+     ],
+     "rogue": {
+      "coins": {
+       "intel": 2
+      }
+     }
+    },
+    {
+     "id": "no_idea",
+     "label": "“看不出来，陛下。”",
+     "effects": {},
+     "flags": [],
+     "rogue": {}
+    }
+   ],
+   "chapters": [
+    "niemen"
+   ]
+  },
+  {
+   "id": "iw_elba_iron",
+   "pool": "interlude:minigame:weigh",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "铁矿石",
+   "location": "里奥铁矿的码头",
+   "speaker": "drouot",
+   "body": [
+    "里奥铁矿的船要装去热那亚。码头上堆着一千担矿石，每一担都要过秤。",
+    "德鲁奥：“去年的账上，这个码头每年少三成。”"
+   ],
+   "appraisals": [
+    {
+     "id": "ore_weight",
+     "kind": "weigh",
+     "label": "过秤一担矿石",
+     "observation": "秤砣被锉过，每担轻了二十斤。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "weigh_all",
+     "label": "照实过秤，按实数收税",
+     "requires_clues": [
+      "ore_weight"
+     ],
+     "effects": {
+      "treasury": 200,
+      "heat": 3
+     },
+     "flags": [],
+     "rogue": {}
+    },
+    {
+     "id": "sample_only",
+     "label": "抽十担称一称",
+     "effects": {
+      "treasury": 80
+     },
+     "flags": [],
+     "rogue": {}
+    }
+   ],
+   "chapters": [
+    "elba"
+   ]
+  },
+  {
+   "id": "ev_deserter_pardon",
+   "pool": "common",
+   "weight": 2,
+   "once": false,
+   "requires": {},
+   "title": "逃兵的母亲",
+   "location": "路边的村子",
+   "speaker": "villefort",
+   "body": [
+    "一个老妇人拦住车队，手里拿着儿子的军帽：“他回家看我，才算逃兵的。”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "pardon",
+     "label": "替他写一张归队证明",
+     "effects": {
+      "morale": 2,
+      "heat": -2
+     },
+     "flags": [],
+     "rogue": {}
+    },
+    {
+     "id": "report",
+     "label": "照章上报",
+     "effects": {},
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_counterfeit_assignats",
+   "pool": "common",
+   "weight": 2,
+   "once": true,
+   "requires": {},
+   "title": "假钞",
+   "location": "集市",
+   "speaker": "corso",
+   "body": [
+    "集市上流着一种新钞票，印得太好了，比真的还好。",
+    "科尔索：“英国人印的。他们印假钞，比造船还勤快。”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "burn_them",
+     "label": "收上来烧掉",
+     "effects": {
+      "treasury": -100,
+      "heat": -4
+     },
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "intel": 1
+      }
+     }
+    },
+    {
+     "id": "spend_abroad",
+     "label": "带到边境外面去花",
+     "effects": {
+      "treasury": 200,
+      "heat": 4
+     },
+     "flags": [
+      "t_spent_fakes"
+     ],
+     "rogue": {}
+    }
+   ]
+  }
+ ]
+}

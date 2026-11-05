@@ -1,0 +1,18 @@
+{
+  "kind": "fragments",
+  "seed": 808,
+  "item": "",
+  "art": "",
+  "minutes_per_step": 1,
+  "max_minutes": 30,
+  "doc": "scroll",
+  "pieces": 8,
+  "seal_offset_px": 4,
+  "ink_mismatch": [5],
+  "dangzi_marks": 0,
+  "missing_piece": -1,
+  "stain": 0,
+  "rotate": true,
+  "lens_px": 88,
+  "backlight": true
+}

@@ -1,0 +1,966 @@
+{
+  "_meta": {
+    "_provenance": "ai_placeholder",
+    "brief": "肉鸽 v1：周末盘账，这周只做成 1 笔，只翻出两样（一件物件、一种客源）",
+    "generated_by": "hand edit of scripts/cards/mock/fixtures/settle.json (ROGUE_V1.md section 13)",
+    "owner": "RG4",
+    "schema": 1
+  },
+  "guide_progress": {},
+  "queries": {
+    "almanac|{}": {
+      "done": [
+        "pawn_in",
+        "buy_in",
+        "sell_out"
+      ],
+      "id": "alm.shoudang",
+      "ji": [
+        "travel"
+      ],
+      "yi": [
+        "pawn_in",
+        "meet"
+      ]
+    },
+    "day.end_preview|{}": {
+      "items": [],
+      "needs_confirm": false,
+      "step": "next_day"
+    },
+    "dossier|{}": {
+      "pages": [
+        {
+          "complete": false,
+          "fragments": [
+            {
+              "era": "1938",
+              "id": "df.linsao.1938.hairpin",
+              "kind": "pawn",
+              "new": true,
+              "order": 1,
+              "state": "have"
+            }
+          ],
+          "new": 1,
+          "person": "linsao"
+        }
+      ]
+    },
+    "estates|{}": {
+      "estates": [
+        {
+          "id": "es.jewel_cabinet",
+          "interest_money": 4,
+          "money": 80,
+          "status": "held"
+        },
+        {
+          "id": "es.storeroom",
+          "interest_money": 6,
+          "money": 120,
+          "status": "held"
+        },
+        {
+          "id": "es.counter",
+          "interest_money": 7,
+          "money": 150,
+          "status": "held"
+        },
+        {
+          "id": "es.old_house",
+          "interest_money": 10,
+          "money": 260,
+          "status": "held"
+        },
+        {
+          "id": "es.shopfront",
+          "interest_money": 16,
+          "money": 400,
+          "status": "held"
+        }
+      ]
+    },
+    "firsts|{}": {
+      "firsts": {
+        "almanac": 1,
+        "buyer": 1,
+        "counter": 1,
+        "deal": 1,
+        "dossier": 1,
+        "incense": 0,
+        "month_open": 0,
+        "month_wheel": 0,
+        "night": 1,
+        "notice": 1,
+        "person": 1,
+        "settle": 1,
+        "shelf": 1,
+        "ticket": 1
+      }
+    },
+    "month_report|{}": {
+      "lines": [
+        {
+          "args": {
+            "money": 118
+          },
+          "key": "g02.settle.money"
+        },
+        {
+          "args": {
+            "def": "nt.tidy"
+          },
+          "key": "g02.settle.night"
+        },
+        {
+          "args": {
+            "days": 15,
+            "no": 1
+          },
+          "key": "g02.settle.ticket"
+        }
+      ]
+    },
+    "relics|{}": {
+      "cap": 6,
+      "count": 2,
+      "dormant": false,
+      "err": "",
+      "held": [
+        {
+          "art": "prop.relic.stub_box",
+          "depth": "plain",
+          "id": "rl.stub_box",
+          "since": 8
+        },
+        {
+          "art": "prop.relic.oilpaper_umbrella",
+          "depth": "plain",
+          "id": "rl.oilpaper_umbrella",
+          "since": 10
+        }
+      ],
+      "ok": true
+    },
+    "settle_report|{}": {
+      "lines": [
+        {
+          "args": {
+            "money": 118
+          },
+          "key": "g02.settle.money"
+        },
+        {
+          "args": {
+            "def": "nt.tidy"
+          },
+          "key": "g02.settle.night"
+        },
+        {
+          "args": {
+            "days": 15,
+            "no": 1
+          },
+          "key": "g02.settle.ticket"
+        }
+      ]
+    },
+    "short|{}": {
+      "amount": 20,
+      "estates": [
+        {
+          "id": "es.jewel_cabinet",
+          "interest_money": 4,
+          "money": 80,
+          "status": "held"
+        },
+        {
+          "id": "es.storeroom",
+          "interest_money": 6,
+          "money": 120,
+          "status": "held"
+        },
+        {
+          "id": "es.counter",
+          "interest_money": 7,
+          "money": 150,
+          "status": "held"
+        },
+        {
+          "id": "es.old_house",
+          "interest_money": 10,
+          "money": 260,
+          "status": "held"
+        },
+        {
+          "id": "es.shopfront",
+          "interest_money": 16,
+          "money": 400,
+          "status": "held"
+        }
+      ],
+      "goods": [],
+      "options": [
+        "goods",
+        "estate",
+        "default"
+      ],
+      "payee": "w0.mock.payee",
+      "source": ""
+    },
+    "stocktake|{\"offer\":\"w0.1\"}": {
+      "cap": 6,
+      "deals": 1,
+      "err": "",
+      "from": "week",
+      "full": false,
+      "held": [
+        {
+          "art": "prop.relic.stub_box",
+          "depth": "plain",
+          "id": "rl.stub_box"
+        },
+        {
+          "art": "prop.relic.oilpaper_umbrella",
+          "depth": "plain",
+          "id": "rl.oilpaper_umbrella"
+        }
+      ],
+      "items": [
+        {
+          "art": "prop.relic.chen_mortar",
+          "depth": "storied",
+          "id": "rl.chen_mortar",
+          "kind": "relic"
+        },
+        {
+          "art": "illus.ky.traveling_buyers",
+          "depth": "",
+          "id": "ky.traveling_buyers",
+          "kind": "source"
+        }
+      ],
+      "offer": "w0.1",
+      "ok": true,
+      "picked": "",
+      "stage": 0,
+      "status": "open",
+      "week": 1
+    },
+    "stocktake|{}": {
+      "cap": 6,
+      "deals": 1,
+      "err": "",
+      "from": "week",
+      "full": false,
+      "held": [
+        {
+          "art": "prop.relic.stub_box",
+          "depth": "plain",
+          "id": "rl.stub_box"
+        },
+        {
+          "art": "prop.relic.oilpaper_umbrella",
+          "depth": "plain",
+          "id": "rl.oilpaper_umbrella"
+        }
+      ],
+      "items": [
+        {
+          "art": "prop.relic.chen_mortar",
+          "depth": "storied",
+          "id": "rl.chen_mortar",
+          "kind": "relic"
+        },
+        {
+          "art": "illus.ky.traveling_buyers",
+          "depth": "",
+          "id": "ky.traveling_buyers",
+          "kind": "source"
+        }
+      ],
+      "offer": "w0.1",
+      "ok": true,
+      "picked": "",
+      "stage": 0,
+      "status": "open",
+      "week": 1
+    },
+    "stock|{}": {
+      "items": []
+    },
+    "tickets|{}": {
+      "tickets": [
+        {
+          "days_left": 15,
+          "foreign": false,
+          "item": "I001",
+          "no": 1,
+          "person": "linsao",
+          "principal": 220,
+          "status": "open"
+        }
+      ]
+    },
+    "wheel|{\"uid\":\"\",\"wheel\":\"wh.month\"}": {
+      "art": "wheel.month",
+      "cost": {
+        "money": 0,
+        "stake": false
+      },
+      "incense": {
+        "accepts": [
+          "money",
+          "kept",
+          "contact"
+        ],
+        "full": false,
+        "placed": [
+          {
+            "amount": 10,
+            "kind": "money"
+          }
+        ]
+      },
+      "kind": "month",
+      "result": {
+        "segment": "ws.1938.month.caixing",
+        "stop_deg": 13.185
+      },
+      "segments": [
+        {
+          "arc_deg": 128.807339449541,
+          "art": "icon.ws.caixing",
+          "id": "ws.1938.month.caixing"
+        },
+        {
+          "arc_deg": 99.0825688073395,
+          "art": "icon.ws.liunian",
+          "id": "ws.1938.month.liunian"
+        },
+        {
+          "arc_deg": 132.110091743119,
+          "art": "icon.ws.pingan",
+          "id": "ws.1938.month.pingan"
+        }
+      ],
+      "spun": true,
+      "staked": "",
+      "uid": "",
+      "wheel": "wh.month"
+    },
+    "year_report|{}": {
+      "lines": [
+        {
+          "args": {
+            "money": 118
+          },
+          "key": "g02.settle.money"
+        },
+        {
+          "args": {
+            "def": "nt.tidy"
+          },
+          "key": "g02.settle.night"
+        },
+        {
+          "args": {
+            "days": 15,
+            "no": 1
+          },
+          "key": "g02.settle.ticket"
+        }
+      ]
+    }
+  },
+  "responses": [
+    {
+      "cmd": "stock.pick",
+      "events": [
+        [
+          "notice",
+          "rl.chen_mortar#lines.gain",
+          {}
+        ]
+      ],
+      "match": {
+        "offer": "w0.1",
+        "pick": "rl.chen_mortar"
+      },
+      "patch": [
+        {
+          "op": "append",
+          "path": "relics.held",
+          "value": {
+            "art": "prop.relic.chen_mortar",
+            "depth": "storied",
+            "id": "rl.chen_mortar",
+            "since": 14
+          }
+        },
+        {
+          "op": "set",
+          "path": "relics.count",
+          "value": 3
+        },
+        {
+          "op": "set",
+          "path": "stock.open",
+          "value": ""
+        },
+        {
+          "op": "set",
+          "path": "open_panel",
+          "value": {
+            "args": {},
+            "kind": ""
+          }
+        }
+      ],
+      "result": {
+        "err": "",
+        "kind": "relic",
+        "offer": "w0.1",
+        "ok": true,
+        "picked": "rl.chen_mortar",
+        "released": ""
+      }
+    },
+    {
+      "cmd": "stock.pick",
+      "events": [
+        [
+          "notice",
+          "rg2.notice.passed",
+          {}
+        ]
+      ],
+      "match": {
+        "offer": "w0.1",
+        "pick": ""
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "stock.open",
+          "value": ""
+        },
+        {
+          "op": "set",
+          "path": "open_panel",
+          "value": {
+            "args": {},
+            "kind": ""
+          }
+        }
+      ],
+      "result": {
+        "err": "",
+        "kind": "",
+        "offer": "w0.1",
+        "ok": true,
+        "picked": "",
+        "released": ""
+      }
+    },
+    {
+      "cmd": "stock.pick",
+      "match": {
+        "offer": "w0.1"
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "stock.open",
+          "value": ""
+        },
+        {
+          "op": "set",
+          "path": "open_panel",
+          "value": {
+            "args": {},
+            "kind": ""
+          }
+        }
+      ],
+      "result": {
+        "err": "",
+        "kind": "",
+        "offer": "w0.1",
+        "ok": true,
+        "picked": "",
+        "released": ""
+      }
+    },
+    {
+      "cmd": "settle.next",
+      "events": [
+        [
+          "phase_changed",
+          "settle",
+          "morning"
+        ],
+        [
+          "first_time",
+          "weather",
+          {}
+        ]
+      ],
+      "match": {},
+      "patch": [
+        {
+          "op": "set",
+          "path": "date",
+          "value": {
+            "abs_day": 15,
+            "d": 15,
+            "era": "1938",
+            "m": 3,
+            "minute": 480,
+            "stage": 0,
+            "stage_day": 15,
+            "stage_days": 30,
+            "weekday": 1,
+            "y": 1938
+          }
+        },
+        {
+          "op": "set",
+          "path": "notice",
+          "value": {
+            "almanac": {
+              "done": [],
+              "id": "alm.shoudang",
+              "ji": [
+                "travel"
+              ],
+              "yi": [
+                "pawn_in",
+                "meet"
+              ]
+            },
+            "fortune": "ws.1938.month.caixing",
+            "market_day": false,
+            "news": [
+              "w0.mock.notice"
+            ],
+            "weather": "rain"
+          }
+        },
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "morning"
+        },
+        {
+          "op": "set",
+          "path": "stage",
+          "value": {
+            "sealed": false,
+            "set": "counter",
+            "time": "day"
+          }
+        },
+        {
+          "op": "set",
+          "path": "tickets",
+          "value": [
+            {
+              "days_left": 14,
+              "foreign": false,
+              "item": "I001",
+              "no": 1,
+              "person": "linsao",
+              "principal": 220,
+              "status": "open"
+            }
+          ]
+        }
+      ],
+      "result": {
+        "err": "",
+        "next_phase": "morning",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "day.end",
+      "events": [
+        [
+          "phase_changed",
+          "settle",
+          "morning"
+        ],
+        [
+          "first_time",
+          "weather",
+          {}
+        ]
+      ],
+      "match": {
+        "confirm": false
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "date",
+          "value": {
+            "abs_day": 15,
+            "d": 15,
+            "era": "1938",
+            "m": 3,
+            "minute": 480,
+            "stage": 0,
+            "stage_day": 15,
+            "stage_days": 30,
+            "weekday": 1,
+            "y": 1938
+          }
+        },
+        {
+          "op": "set",
+          "path": "notice",
+          "value": {
+            "almanac": {
+              "done": [],
+              "id": "alm.shoudang",
+              "ji": [
+                "travel"
+              ],
+              "yi": [
+                "pawn_in",
+                "meet"
+              ]
+            },
+            "fortune": "ws.1938.month.caixing",
+            "market_day": false,
+            "news": [
+              "w0.mock.notice"
+            ],
+            "weather": "rain"
+          }
+        },
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "morning"
+        },
+        {
+          "op": "set",
+          "path": "stage",
+          "value": {
+            "sealed": false,
+            "set": "counter",
+            "time": "day"
+          }
+        },
+        {
+          "op": "set",
+          "path": "tickets",
+          "value": [
+            {
+              "days_left": 14,
+              "foreign": false,
+              "item": "I001",
+              "no": 1,
+              "person": "linsao",
+              "principal": 220,
+              "status": "open"
+            }
+          ]
+        }
+      ],
+      "result": {
+        "err": "",
+        "items": [],
+        "next_phase": "morning",
+        "ok": true,
+        "step": "next_day"
+      }
+    },
+    {
+      "cmd": "day.end",
+      "events": [
+        [
+          "phase_changed",
+          "settle",
+          "morning"
+        ],
+        [
+          "first_time",
+          "weather",
+          {}
+        ]
+      ],
+      "match": {
+        "confirm": true
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "date",
+          "value": {
+            "abs_day": 15,
+            "d": 15,
+            "era": "1938",
+            "m": 3,
+            "minute": 480,
+            "stage": 0,
+            "stage_day": 15,
+            "stage_days": 30,
+            "weekday": 1,
+            "y": 1938
+          }
+        },
+        {
+          "op": "set",
+          "path": "notice",
+          "value": {
+            "almanac": {
+              "done": [],
+              "id": "alm.shoudang",
+              "ji": [
+                "travel"
+              ],
+              "yi": [
+                "pawn_in",
+                "meet"
+              ]
+            },
+            "fortune": "ws.1938.month.caixing",
+            "market_day": false,
+            "news": [
+              "w0.mock.notice"
+            ],
+            "weather": "rain"
+          }
+        },
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "morning"
+        },
+        {
+          "op": "set",
+          "path": "stage",
+          "value": {
+            "sealed": false,
+            "set": "counter",
+            "time": "day"
+          }
+        },
+        {
+          "op": "set",
+          "path": "tickets",
+          "value": [
+            {
+              "days_left": 14,
+              "foreign": false,
+              "item": "I001",
+              "no": 1,
+              "person": "linsao",
+              "principal": 220,
+              "status": "open"
+            }
+          ]
+        }
+      ],
+      "result": {
+        "err": "",
+        "items": [],
+        "next_phase": "morning",
+        "ok": true,
+        "step": "next_day"
+      }
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    }
+  ],
+  "view": {
+    "busy": false,
+    "caps": {
+      "contacts": 3,
+      "kept": 5,
+      "shelf": 12
+    },
+    "contacts": [],
+    "date": {
+      "abs_day": 14,
+      "d": 14,
+      "era": "1938",
+      "m": 3,
+      "minute": 480,
+      "stage": 0,
+      "stage_day": 14,
+      "stage_days": 30,
+      "weekday": 0,
+      "y": 1938
+    },
+    "demands": [],
+    "dossier_new": 1,
+    "estates": [
+      {
+        "id": "es.jewel_cabinet",
+        "interest_money": 4,
+        "money": 80,
+        "status": "held"
+      },
+      {
+        "id": "es.storeroom",
+        "interest_money": 6,
+        "money": 120,
+        "status": "held"
+      },
+      {
+        "id": "es.counter",
+        "interest_money": 7,
+        "money": 150,
+        "status": "held"
+      },
+      {
+        "id": "es.old_house",
+        "interest_money": 10,
+        "money": 260,
+        "status": "held"
+      },
+      {
+        "id": "es.shopfront",
+        "interest_money": 16,
+        "money": 400,
+        "status": "held"
+      }
+    ],
+    "goals": [
+      {
+        "id": "gl.1938.keep_shop",
+        "main": true,
+        "status": "open"
+      }
+    ],
+    "hand": [],
+    "heat_tier": 0,
+    "kept": [],
+    "lots": [],
+    "mode": "shop",
+    "money": {
+      "amount": 118,
+      "currency": "fabi"
+    },
+    "night_offers": [
+      {
+        "art": "illus.nt.tidy",
+        "choices": [],
+        "def": "nt.tidy"
+      },
+      {
+        "art": "illus.nt.family_dinner",
+        "choices": [
+          "waive_life",
+          "family_word"
+        ],
+        "def": "nt.family_dinner"
+      },
+      {
+        "art": "illus.nt.early_sleep",
+        "choices": [],
+        "def": "nt.early_sleep"
+      }
+    ],
+    "notice": {
+      "almanac": {
+        "done": [
+          "pawn_in",
+          "buy_in",
+          "sell_out"
+        ],
+        "id": "alm.shoudang",
+        "ji": [
+          "travel"
+        ],
+        "yi": [
+          "pawn_in",
+          "meet"
+        ]
+      },
+      "fortune": "ws.1938.month.caixing",
+      "market_day": false,
+      "news": [
+        "w0.mock.notice"
+      ],
+      "weather": "clear"
+    },
+    "open_panel": {
+      "args": {
+        "offer": "w0.1"
+      },
+      "kind": "stocktake"
+    },
+    "pending": [],
+    "phase": "settle",
+    "relics": {
+      "cap": 6,
+      "count": 2,
+      "dormant": false,
+      "held": [
+        {
+          "art": "prop.relic.stub_box",
+          "depth": "plain",
+          "id": "rl.stub_box",
+          "since": 8
+        },
+        {
+          "art": "prop.relic.oilpaper_umbrella",
+          "depth": "plain",
+          "id": "rl.oilpaper_umbrella",
+          "since": 10
+        }
+      ]
+    },
+    "rep_tier": 1,
+    "self": {
+      "attrs": {
+        "eye": 2,
+        "nerve": 1,
+        "pull": 1,
+        "tongue": 1
+      },
+      "def": "self.ruhua",
+      "uid": "c0001",
+      "used_today": false
+    },
+    "shelf_count": 0,
+    "stage": {
+      "sealed": false,
+      "set": "counter",
+      "time": "night"
+    },
+    "stock": {
+      "open": "w0.1",
+      "sources": [
+        {
+          "art": "illus.ky.dockhands",
+          "id": "ky.dockhands"
+        }
+      ],
+      "week_deals": 1
+    },
+    "tickets": [
+      {
+        "days_left": 15,
+        "foreign": false,
+        "item": "I001",
+        "no": 1,
+        "person": "linsao",
+        "principal": 220,
+        "status": "open"
+      }
+    ],
+    "v": 1
+  }
+}

@@ -1,0 +1,1016 @@
+{
+  "_meta": {
+    "owner": "K12",
+    "schema": 1,
+    "brief": "美术清单初版（W0 起头，K12 接手）：美术 id → 底图尺寸、正式路径（A 画）、占位路径（K12 生成；legacy 指 v0.4.2 的旧图，按占位对待）"
+  },
+  "missing": "art/_placeholder/cards/missing.png",
+  "art": {
+    "bg.stage.1938": {
+      "base": [
+        320,
+        180
+      ],
+      "human": "art/cards/bg/stage.1938.png",
+      "placeholder": "art/_placeholder/cards/bg/stage.1938.png"
+    },
+    "frame.big_fate": {
+      "base": [
+        36,
+        50
+      ],
+      "nine": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "human": "art/cards/frames/big_fate.png",
+      "placeholder": "art/_placeholder/cards/frames/big_fate.png"
+    },
+    "frame.contact": {
+      "base": [
+        36,
+        50
+      ],
+      "nine": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "human": "art/cards/frames/contact.png",
+      "placeholder": "art/_placeholder/cards/frames/contact.png"
+    },
+    "frame.demand": {
+      "base": [
+        36,
+        50
+      ],
+      "nine": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "human": "art/cards/frames/demand.png",
+      "placeholder": "art/_placeholder/cards/frames/demand.png"
+    },
+    "frame.estate": {
+      "base": [
+        36,
+        50
+      ],
+      "nine": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "human": "art/cards/frames/estate.png",
+      "placeholder": "art/_placeholder/cards/frames/estate.png"
+    },
+    "frame.event": {
+      "base": [
+        36,
+        50
+      ],
+      "nine": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "human": "art/cards/frames/event.png",
+      "placeholder": "art/_placeholder/cards/frames/event.png"
+    },
+    "frame.fate": {
+      "base": [
+        36,
+        50
+      ],
+      "nine": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "human": "art/cards/frames/fate.png",
+      "placeholder": "art/_placeholder/cards/frames/fate.png"
+    },
+    "frame.gold": {
+      "base": [
+        36,
+        50
+      ],
+      "nine": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "human": "art/cards/frames/gold.png",
+      "placeholder": "art/_placeholder/cards/frames/gold.png"
+    },
+    "frame.guide_bubble": {
+      "base": [
+        36,
+        50
+      ],
+      "nine": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "human": "art/cards/frames/guide_bubble.png",
+      "placeholder": "art/_placeholder/cards/frames/guide_bubble.png"
+    },
+    "frame.kept": {
+      "base": [
+        36,
+        50
+      ],
+      "nine": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "human": "art/cards/frames/kept.png",
+      "placeholder": "art/_placeholder/cards/frames/kept.png"
+    },
+    "frame.life": {
+      "base": [
+        36,
+        50
+      ],
+      "nine": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "human": "art/cards/frames/life.png",
+      "placeholder": "art/_placeholder/cards/frames/life.png"
+    },
+    "frame.news": {
+      "base": [
+        36,
+        50
+      ],
+      "nine": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "human": "art/cards/frames/news.png",
+      "placeholder": "art/_placeholder/cards/frames/news.png"
+    },
+    "frame.night": {
+      "base": [
+        36,
+        50
+      ],
+      "nine": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "human": "art/cards/frames/night.png",
+      "placeholder": "art/_placeholder/cards/frames/night.png"
+    },
+    "frame.person": {
+      "base": [
+        36,
+        50
+      ],
+      "nine": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "human": "art/cards/frames/person.png",
+      "placeholder": "art/_placeholder/cards/frames/person.png"
+    },
+    "frame.prison": {
+      "base": [
+        36,
+        50
+      ],
+      "nine": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "human": "art/cards/frames/prison.png",
+      "placeholder": "art/_placeholder/cards/frames/prison.png"
+    },
+    "frame.self": {
+      "base": [
+        36,
+        50
+      ],
+      "nine": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "human": "art/cards/frames/self.png",
+      "placeholder": "art/_placeholder/cards/frames/self.png"
+    },
+    "frame.street": {
+      "base": [
+        36,
+        50
+      ],
+      "nine": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "human": "art/cards/frames/street.png",
+      "placeholder": "art/_placeholder/cards/frames/street.png"
+    },
+    "icon.obj.almanac": {
+      "base": [
+        24,
+        24
+      ],
+      "human": "art/cards/icons/obj.almanac.png",
+      "placeholder": "art/_placeholder/cards/icons/obj.almanac.png"
+    },
+    "icon.obj.brother_ledger": {
+      "base": [
+        24,
+        24
+      ],
+      "human": "art/cards/icons/obj.brother_ledger.png",
+      "placeholder": "art/_placeholder/cards/icons/obj.brother_ledger.png"
+    },
+    "icon.obj.notice": {
+      "base": [
+        24,
+        24
+      ],
+      "human": "art/cards/icons/obj.notice.png",
+      "placeholder": "art/_placeholder/cards/icons/obj.notice.png"
+    },
+    "icon.ws.caixing": {
+      "base": [
+        16,
+        16
+      ],
+      "human": "art/cards/icons/ws.caixing.png",
+      "placeholder": "art/_placeholder/cards/icons/ws.caixing.png"
+    },
+    "icon.ws.fanshen": {
+      "base": [
+        16,
+        16
+      ],
+      "human": "art/cards/icons/ws.fanshen.png",
+      "placeholder": "art/_placeholder/cards/icons/ws.fanshen.png"
+    },
+    "icon.ws.liunian": {
+      "base": [
+        16,
+        16
+      ],
+      "human": "art/cards/icons/ws.liunian.png",
+      "placeholder": "art/_placeholder/cards/icons/ws.liunian.png"
+    },
+    "icon.ws.pingan": {
+      "base": [
+        16,
+        16
+      ],
+      "human": "art/cards/icons/ws.pingan.png",
+      "placeholder": "art/_placeholder/cards/icons/ws.pingan.png"
+    },
+    "icon.ws.zhuidi": {
+      "base": [
+        16,
+        16
+      ],
+      "human": "art/cards/icons/ws.zhuidi.png",
+      "placeholder": "art/_placeholder/cards/icons/ws.zhuidi.png"
+    },
+    "illus.bf.any.mystery_box": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/bf.any.mystery_box.png",
+      "placeholder": "art/_placeholder/cards/illus/bf.any.mystery_box.png"
+    },
+    "illus.bf.any.ship_ticket": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/bf.any.ship_ticket.png",
+      "placeholder": "art/_placeholder/cards/illus/bf.any.ship_ticket.png"
+    },
+    "illus.bf.wheel": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/bf.wheel.png",
+      "placeholder": "art/_placeholder/cards/illus/bf.wheel.png"
+    },
+    "illus.dm.goods": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/dm.goods.png",
+      "placeholder": "art/_placeholder/cards/illus/dm.goods.png"
+    },
+    "illus.dm.info": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/dm.info.png",
+      "placeholder": "art/_placeholder/cards/illus/dm.info.png"
+    },
+    "illus.dm.money": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/dm.money.png",
+      "placeholder": "art/_placeholder/cards/illus/dm.money.png"
+    },
+    "illus.dm.people": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/dm.people.png",
+      "placeholder": "art/_placeholder/cards/illus/dm.people.png"
+    },
+    "illus.es.counter": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/es.counter.png",
+      "placeholder": "art/_placeholder/cards/illus/es.counter.png"
+    },
+    "illus.es.jewel_cabinet": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/es.jewel_cabinet.png",
+      "placeholder": "art/_placeholder/cards/illus/es.jewel_cabinet.png"
+    },
+    "illus.es.old_house": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/es.old_house.png",
+      "placeholder": "art/_placeholder/cards/illus/es.old_house.png"
+    },
+    "illus.es.shopfront": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/es.shopfront.png",
+      "placeholder": "art/_placeholder/cards/illus/es.shopfront.png"
+    },
+    "illus.es.storeroom": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/es.storeroom.png",
+      "placeholder": "art/_placeholder/cards/illus/es.storeroom.png"
+    },
+    "illus.ev.1938.police_check": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/ev.1938.police_check.png",
+      "placeholder": "art/_placeholder/cards/illus/ev.1938.police_check.png"
+    },
+    "illus.ev.any.demand_return": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/ev.any.demand_return.png",
+      "placeholder": "art/_placeholder/cards/illus/ev.any.demand_return.png"
+    },
+    "illus.ev.any.fortune_teller": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/ev.any.fortune_teller.png",
+      "placeholder": "art/_placeholder/cards/illus/ev.any.fortune_teller.png"
+    },
+    "illus.ev.any.wheel_go": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/ev.any.wheel_go.png",
+      "placeholder": "art/_placeholder/cards/illus/ev.any.wheel_go.png"
+    },
+    "illus.fa.any.fire_next_door": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/fa.any.fire_next_door.png",
+      "placeholder": "art/_placeholder/cards/illus/fa.any.fire_next_door.png"
+    },
+    "illus.kp.brother_note": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/kp.brother_note.png",
+      "placeholder": "art/_placeholder/cards/illus/kp.brother_note.png"
+    },
+    "illus.kp.liangmin": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/kp.liangmin.png",
+      "placeholder": "art/_placeholder/cards/illus/kp.liangmin.png"
+    },
+    "illus.kp.ma_owes": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/kp.ma_owes.png",
+      "placeholder": "art/_placeholder/cards/illus/kp.ma_owes.png"
+    },
+    "illus.kp.mystery_box": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/kp.mystery_box.png",
+      "placeholder": "art/_placeholder/cards/illus/kp.mystery_box.png"
+    },
+    "illus.lf.any.coal_out": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/lf.any.coal_out.png",
+      "placeholder": "art/_placeholder/cards/illus/lf.any.coal_out.png"
+    },
+    "illus.nt.early_sleep": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/nt.early_sleep.png",
+      "placeholder": "art/_placeholder/cards/illus/nt.early_sleep.png"
+    },
+    "illus.nt.family_dinner": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/nt.family_dinner.png",
+      "placeholder": "art/_placeholder/cards/illus/nt.family_dinner.png"
+    },
+    "illus.nt.tidy": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/nt.tidy.png",
+      "placeholder": "art/_placeholder/cards/illus/nt.tidy.png"
+    },
+    "illus.nw.letter": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/nw.letter.png",
+      "placeholder": "art/_placeholder/cards/illus/nw.letter.png"
+    },
+    "illus.nw.rumor": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/nw.rumor.png",
+      "placeholder": "art/_placeholder/cards/illus/nw.rumor.png"
+    },
+    "illus.pr.cell": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/pr.cell.png",
+      "placeholder": "art/_placeholder/cards/illus/pr.cell.png"
+    },
+    "illus.st.write_letters": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/st.write_letters.png",
+      "placeholder": "art/_placeholder/cards/illus/st.write_letters.png"
+    },
+    "illus.tk.de196": {
+      "base": [
+        64,
+        48
+      ],
+      "human": "art/cards/illus/tk.de196.png",
+      "placeholder": "art/_placeholder/cards/illus/tk.de196.png"
+    },
+    "item.art.calligraphy": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/_placeholder/cards/items/art.calligraphy.png"
+    },
+    "item.art.flowers": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/items/ciyuan.png",
+      "legacy": true
+    },
+    "item.art.landscape": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/_placeholder/cards/items/art.landscape.png"
+    },
+    "item.art.woodcut": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/items/newspapers.png",
+      "legacy": true
+    },
+    "item.clothing.coat": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/_placeholder/cards/items/clothing.coat.png"
+    },
+    "item.clothing.qipao": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/_placeholder/cards/items/clothing.qipao.png"
+    },
+    "item.clothing.robe": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/_placeholder/cards/items/clothing.robe.png"
+    },
+    "item.clothing.scarf": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/_placeholder/cards/items/clothing.scarf.png"
+    },
+    "item.documents.field": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/items/deed_zhao.png",
+      "legacy": true
+    },
+    "item.documents.house": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/items/deed_sun_real.png",
+      "legacy": true
+    },
+    "item.documents.letter": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/items/deed_zhao.png",
+      "legacy": true
+    },
+    "item.documents.receipt": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/items/newspapers.png",
+      "legacy": true
+    },
+    "item.jewelry.bangle": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/_placeholder/cards/items/jewelry.bangle.png"
+    },
+    "item.jewelry.hairpin": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/items/hairpin.png",
+      "legacy": true
+    },
+    "item.jewelry.jade": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/_placeholder/cards/items/jewelry.jade.png"
+    },
+    "item.jewelry.ring": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/items/silver_keepsake.png",
+      "legacy": true
+    },
+    "item.medicine.aspirin": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/items/aspirin.png",
+      "legacy": true
+    },
+    "item.medicine.iodine": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/items/iodine.png",
+      "legacy": true
+    },
+    "item.medicine.quinine": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/items/quinine.png",
+      "legacy": true
+    },
+    "item.medicine.sulfa": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/items/sulfa.png",
+      "legacy": true
+    },
+    "item.rice.broken": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/items/rice_xian_b.png",
+      "legacy": true
+    },
+    "item.rice.jing": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/items/rice_jing_a.png",
+      "legacy": true
+    },
+    "item.rice.nuo": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/items/rice_nuo_c.png",
+      "legacy": true
+    },
+    "item.rice.xian": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/items/rice_xian_b.png",
+      "legacy": true
+    },
+    "item.utensils.bowl": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/_placeholder/cards/items/utensils.bowl.png"
+    },
+    "item.utensils.clock": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/_placeholder/cards/items/utensils.clock.png"
+    },
+    "item.utensils.tinpot": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/_placeholder/cards/items/utensils.tinpot.png"
+    },
+    "item.utensils.warmer": {
+      "base": [
+        64,
+        64
+      ],
+      "human": "",
+      "placeholder": "art/items/handwarmer.png",
+      "legacy": true
+    },
+    "portrait.brother": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/brother.png",
+      "placeholder": "art/portraits/brother.png",
+      "legacy": true
+    },
+    "portrait.chen": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/chen.png",
+      "placeholder": "art/portraits/chen.png",
+      "legacy": true
+    },
+    "portrait.guanjia": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/guanjia.png",
+      "placeholder": "art/portraits/guanjia.png",
+      "legacy": true
+    },
+    "portrait.hu2": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/hu2.png",
+      "placeholder": "art/portraits/hu2.png",
+      "legacy": true
+    },
+    "portrait.li": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/li.png",
+      "placeholder": "art/portraits/li.png",
+      "legacy": true
+    },
+    "portrait.linsao": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/linsao.png",
+      "placeholder": "art/portraits/linsao.png",
+      "legacy": true
+    },
+    "portrait.ma": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/ma.png",
+      "placeholder": "art/portraits/ma.png",
+      "legacy": true
+    },
+    "portrait.postman": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/postman.png",
+      "placeholder": "art/portraits/postman.png",
+      "legacy": true
+    },
+    "portrait.ruhua": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/ruhua.png",
+      "placeholder": "art/portraits/ruhua.png",
+      "legacy": true
+    },
+    "portrait.stranger_collector": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/stranger_collector.png",
+      "placeholder": "art/portraits/stranger_collector.png",
+      "legacy": true
+    },
+    "portrait.stranger_fence": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/stranger_fence.png",
+      "placeholder": "art/portraits/stranger_fence.png",
+      "legacy": true
+    },
+    "portrait.stranger_peddler": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/stranger_peddler.png",
+      "placeholder": "art/portraits/stranger_peddler.png",
+      "legacy": true
+    },
+    "portrait.stranger_refugee": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/stranger_refugee.png",
+      "placeholder": "art/portraits/stranger_refugee.png",
+      "legacy": true
+    },
+    "portrait.suanming": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/suanming.png",
+      "placeholder": "art/_placeholder/cards/portraits/suanming.png"
+    },
+    "portrait.sunlaoye": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/sunlaoye.png",
+      "placeholder": "art/portraits/sunlaoye.png",
+      "legacy": true
+    },
+    "portrait.sunyoung": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/sunyoung.png",
+      "placeholder": "art/portraits/sunyoung.png",
+      "legacy": true
+    },
+    "portrait.wangshan": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/wangshan.png",
+      "placeholder": "art/portraits/wangshan.png",
+      "legacy": true
+    },
+    "portrait.wu": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/wu.png",
+      "placeholder": "art/portraits/wu.png",
+      "legacy": true
+    },
+    "portrait.xiaoding": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/xiaoding.png",
+      "placeholder": "art/portraits/xiaoding.png",
+      "legacy": true
+    },
+    "portrait.zhang": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/zhang.png",
+      "placeholder": "art/portraits/zhang.png",
+      "legacy": true
+    },
+    "portrait.zhao": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/zhao.png",
+      "placeholder": "art/portraits/zhao.png",
+      "legacy": true
+    },
+    "portrait.zhouma": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portraits/zhouma.png",
+      "placeholder": "art/portraits/zhouma.png",
+      "legacy": true
+    },
+    "wheel.big": {
+      "base": [
+        120,
+        120
+      ],
+      "human": "art/cards/wheels/big.png",
+      "placeholder": "art/_placeholder/cards/wheels/big.png"
+    },
+    "wheel.fair": {
+      "base": [
+        120,
+        120
+      ],
+      "human": "art/cards/wheels/fair.png",
+      "placeholder": "art/_placeholder/cards/wheels/fair.png"
+    },
+    "wheel.gamble": {
+      "base": [
+        120,
+        120
+      ],
+      "human": "art/cards/wheels/gamble.png",
+      "placeholder": "art/_placeholder/cards/wheels/gamble.png"
+    },
+    "wheel.month": {
+      "base": [
+        120,
+        120
+      ],
+      "human": "art/cards/wheels/month.png",
+      "placeholder": "art/_placeholder/cards/wheels/month.png"
+    }
+  }
+}

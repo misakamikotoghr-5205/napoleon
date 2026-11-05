@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-3940"
+  },
+  "gl.1939.cabinet_free": {
+    "title": "保住首饰柜",
+    "done": "首饰柜一直在自己手里，没押出去。",
+    "failed": "首饰柜押了出去，到月底也没赎回来。"
+  },
+  "gl.1939.clear_books": {
+    "title": "过年前结清账",
+    "done": "铺面保住了，手头还有余钱，这个年能过。",
+    "failed": "到了年底，账没能结清。"
+  },
+  "gl.1939.debt_paid": {
+    "title": "还清年关债",
+    "done": "年关的债还上了。",
+    "failed": "年关的债到底没还上。"
+  },
+  "gl.1939.gate_passed": {
+    "title": "过城门盘查",
+    "done": "城门那一关顺顺当当过去了。",
+    "failed": "城门那一关没能过去。"
+  },
+  "gl.1939.quiet_year": {
+    "title": "安稳过个年",
+    "done": "到了月底，风声还算平静。",
+    "failed": "到了月底，风声还是太紧。"
+  },
+  "gl.1939.rice_ready": {
+    "title": "备下过年米",
+    "done": "货架上备足了米，年关不愁。",
+    "failed": "到了月底，货架上的米还是不够。"
+  }
+}

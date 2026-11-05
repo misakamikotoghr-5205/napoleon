@@ -1,0 +1,18 @@
+{
+  "cues": {
+    "coin_ring_clink": {
+      "_provenance": "ai:claude:opus-5.5:2026-10-25:c13-clink-synth",
+      "ai": "audio/ai/sfx/coin_ring_clink.ogg",
+      "dull_permille": 0,
+      "generator": "scripts/tests/cards/C13/make_ai_sfx.gd (coin_ring_voice.gd clink_voice; procedural sines with exponential decay and noise; no recorded source)",
+      "human": "audio/cards/sfx/coin_ring_clink.ogg"
+    },
+    "coin_ring_clink_dull": {
+      "_provenance": "ai:claude:opus-5.5:2026-10-25:c13-clink-synth",
+      "ai": "audio/ai/sfx/coin_ring_clink_dull.ogg",
+      "dull_permille": 900,
+      "generator": "scripts/tests/cards/C13/make_ai_sfx.gd (coin_ring_voice.gd clink_voice; procedural sines with exponential decay and noise; no recorded source)",
+      "human": "audio/cards/sfx/coin_ring_clink_dull.ogg"
+    }
+  }
+}

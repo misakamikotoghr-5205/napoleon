@@ -1,0 +1,107 @@
+{
+  "_meta": {
+    "owner": "W0",
+    "schema": 1,
+    "brief": "例子集：签（§4.7.18）"
+  },
+  "cards": [
+    {
+      "id": "lot.g1.official",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 1,
+      "hint_tags": [
+        "omen_official"
+      ],
+      "brief": "下签，官面家族：征兆是官面上、纸上的事找上门。签诗、解曰由 A 写，要含糊，不点名哪张牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "id": "lot.g1.any",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 1,
+      "hint_tags": [],
+      "brief": "（W0 例子）下签，泛泛的兜底签：不点征兆。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g0.any",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 0,
+      "hint_tags": [],
+      "brief": "例子集下下签，泛泛兜底：hint_tags 为空，不点征兆家族。",
+      "_provenance": {
+        "by": "ai",
+        "task": "C07",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "id": "lot.g2.any",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 2,
+      "hint_tags": [],
+      "brief": "例子集中签，泛泛兜底：hint_tags 为空，不点征兆家族。",
+      "_provenance": {
+        "by": "ai",
+        "task": "C07",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "id": "lot.g3.any",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 3,
+      "hint_tags": [],
+      "brief": "例子集上签，泛泛兜底：hint_tags 为空，不点征兆家族。",
+      "_provenance": {
+        "by": "ai",
+        "task": "C07",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "id": "lot.g4.any",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 4,
+      "hint_tags": [],
+      "brief": "例子集上上签，泛泛兜底：hint_tags 为空，不点征兆家族。",
+      "_provenance": {
+        "by": "ai",
+        "task": "C07",
+        "date": "2026-10-15"
+      }
+    }
+  ]
+}

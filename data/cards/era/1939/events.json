@@ -1,0 +1,1164 @@
+{
+  "_meta": {
+    "owner": "K04",
+    "schema": 1,
+    "brief": "1939 腊月事件。城门盘查、米行涨价、年关讨债、乡下消息。伪县政府与伪区公所已取代伪维持会。"
+  },
+  "cards": [
+    {
+      "id": "ev.1939.gate_check",
+      "type": "event",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "tags": [
+        "official",
+        "police",
+        "search",
+        "gate",
+        "omen_official"
+      ],
+      "story_node": "s1939.gate_check",
+      "schedule": {
+        "stage_day": 9,
+        "order": 2
+      },
+      "slots": [
+        {
+          "id": "paper",
+          "accepts": [
+            "kept"
+          ],
+          "tags": [
+            "papers"
+          ],
+          "brief": "证件"
+        },
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "tags": [
+            "official"
+          ],
+          "money_per_coin": 15,
+          "brief": "钱"
+        },
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "attr": "nerve",
+          "brief": "胆大的人",
+          "tags": [
+            "official"
+          ]
+        }
+      ],
+      "check": {
+        "need": 2,
+        "on_success": [
+          {
+            "op": "story",
+            "node": "s1939.gate_check",
+            "outcome": "passed"
+          },
+          {
+            "op": "notice",
+            "key": "k04.notice.gate_pass"
+          }
+        ],
+        "on_fail": [
+          {
+            "op": "story",
+            "node": "s1939.gate_check",
+            "outcome": "failed"
+          },
+          {
+            "op": "heat",
+            "tier": 1
+          },
+          {
+            "op": "flag",
+            "key": "k04_gate_stopped"
+          },
+          {
+            "op": "kept_risk",
+            "tags_any": [
+              "contraband",
+              "leverage"
+            ]
+          },
+          {
+            "op": "notice",
+            "key": "k04.notice.gate_fail"
+          }
+        ]
+      },
+      "effects": {
+        "on_expire": [
+          {
+            "op": "story",
+            "node": "s1939.gate_check",
+            "outcome": "ignored"
+          },
+          {
+            "op": "notice",
+            "key": "k04.notice.gate_fail"
+          }
+        ]
+      },
+      "art": "illus.ev.1939.gate_check",
+      "brief": "1939 城门设岗盘查。格子收留着的证件、钱、胆大的人，要 2 个正面。过了记主线 s1939.gate_check 走向 passed；没过走向 failed，风声上一档，记下被拦，手上带 contraband 或 leverage 的留牌触发其风险。没理会：主线走向 ignored，不另按格子没过罚。日程第 9 天，weight 0，不进随机库。依据 era.json：1939 年城门设岗。伪县政府已管地面。人物出面的节点不在本张。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1939.wu_price",
+      "type": "event",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "tags": [
+        "rice",
+        "price",
+        "market",
+        "omen_wealth",
+        "bad_omen"
+      ],
+      "story_node": "s1939.wu_price",
+      "schedule": {
+        "stage_day": 18,
+        "order": 2
+      },
+      "choices": [
+        {
+          "id": "buy",
+          "brief": "照新价买",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 96,
+              "payee": "wu_rice",
+              "reason": "k04.reason.rice",
+              "short": "ladder"
+            },
+            {
+              "op": "item_gain",
+              "cat": "rice",
+              "n": 1
+            },
+            {
+              "op": "story",
+              "node": "s1939.wu_price",
+              "outcome": "stocked"
+            },
+            {
+              "op": "notice",
+              "key": "k04.notice.wu_buy"
+            }
+          ],
+          "almanac": [
+            "buy_in"
+          ]
+        },
+        {
+          "id": "haggle",
+          "brief": "讲价",
+          "check": {
+            "slots": [
+              {
+                "id": "talker",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "attr": "tongue",
+                "brief": "会说的人",
+                "max": 2
+              }
+            ],
+            "need": 2,
+            "on_success": [
+              {
+                "op": "pay",
+                "amount": 64,
+                "payee": "wu_rice",
+                "reason": "k04.reason.rice",
+                "short": "ladder"
+              },
+              {
+                "op": "item_gain",
+                "cat": "rice",
+                "n": 1
+              },
+              {
+                "op": "story",
+                "node": "s1939.wu_price",
+                "outcome": "haggled"
+              },
+              {
+                "op": "notice",
+                "key": "k04.notice.wu_haggle"
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "story",
+                "node": "s1939.wu_price",
+                "outcome": "haggle_failed"
+              },
+              {
+                "op": "flag",
+                "key": "k04_rice_dear"
+              },
+              {
+                "op": "notice",
+                "key": "k04.notice.wu_fail"
+              }
+            ]
+          }
+        },
+        {
+          "id": "refuse",
+          "brief": "不买",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1939.wu_price",
+              "outcome": "refused"
+            },
+            {
+              "op": "flag",
+              "key": "k04_rice_dear"
+            },
+            {
+              "op": "notice",
+              "key": "k04.notice.wu_refuse"
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "story",
+            "node": "s1939.wu_price",
+            "outcome": "ignored"
+          },
+          {
+            "op": "flag",
+            "key": "k04_rice_dear"
+          },
+          {
+            "op": "notice",
+            "key": "k04.notice.wu_refuse"
+          }
+        ]
+      },
+      "art": "illus.ev.1939.wu_price",
+      "brief": "1939 日商控制米行，吴长发把米价抬起来。①照新价买一袋（付钱起步 96，货架进米一类一件，主线 s1939.wu_price 走向 stocked）②讲价（掷口才，要 2 个正面；过了少付起步 64，走向 haggled；没过走向 haggle_failed，记米贵）③不买（走向 refused，记米贵）。日程第 18 天，weight 0。年关客人挤柜台归 K03 的 s1939.year_end，本张只做米价。依据 era.json 1939。没理会当不买，主线走向 ignored，并记米贵。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1939.year_debt",
+      "type": "event",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "tags": [
+        "debt",
+        "year_end",
+        "omen_dispute",
+        "bad_omen"
+      ],
+      "schedule": {
+        "stage_day": 26,
+        "order": 2
+      },
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "还上",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 72,
+              "payee": "year_debt",
+              "reason": "k04.reason.debt",
+              "short": "ladder"
+            },
+            {
+              "op": "flag",
+              "key": "k04_year_debt_paid"
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            },
+            {
+              "op": "notice",
+              "key": "k04.notice.debt_paid"
+            }
+          ]
+        },
+        {
+          "id": "plead",
+          "brief": "求宽限",
+          "check": {
+            "slots": [
+              {
+                "id": "talker",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "attr": "tongue",
+                "brief": "会说的人",
+                "max": 2
+              }
+            ],
+            "need": 2,
+            "on_success": [
+              {
+                "op": "pay",
+                "amount": 36,
+                "payee": "year_debt",
+                "reason": "k04.reason.debt",
+                "short": "ladder"
+              },
+              {
+                "op": "flag",
+                "key": "k04_year_debt_paid"
+              },
+              {
+                "op": "notice",
+                "key": "k04.notice.debt_paid"
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "heat",
+                "delta": 6
+              },
+              {
+                "op": "notice",
+                "key": "k04.notice.debt_delay"
+              }
+            ]
+          }
+        },
+        {
+          "id": "hide",
+          "brief": "躲一天",
+          "check": {
+            "slots": [
+              {
+                "id": "man",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "attr": "nerve",
+                "brief": "胆大的人",
+                "max": 2
+              }
+            ],
+            "need": 2,
+            "on_success": [
+              {
+                "op": "flag",
+                "key": "k04_debt_hid"
+              },
+              {
+                "op": "notice",
+                "key": "k04.notice.debt_hide"
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "heat",
+                "tier": 1
+              },
+              {
+                "op": "notice",
+                "key": "k04.notice.debt_delay"
+              }
+            ]
+          }
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "heat",
+            "tier": 1
+          },
+          {
+            "op": "notice",
+            "key": "k04.notice.debt_delay"
+          }
+        ]
+      },
+      "art": "illus.ev.1939.year_debt",
+      "brief": "年关有人上门讨债，不指定某一位主线人物（人物牌归 K03）。①还上（付钱起步 72，记已还）②求宽限（掷口才，要 2 个正面；过了少付起步 36 并记已还；没过风声涨）③躲（掷胆量，要 2 个正面；过了记躲过；没过风声上一档）。日程第 26 天，weight 0。1939 腊月。没理会当躲不成，风声上一档。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1939.countryside_word",
+      "type": "event",
+      "era": [
+        "1939"
+      ],
+      "weight": 8,
+      "tags": [
+        "rumor",
+        "far",
+        "omen_far"
+      ],
+      "choices": [
+        {
+          "id": "listen",
+          "brief": "听完",
+          "effects": [
+            {
+              "op": "counter",
+              "key": "k04_countryside",
+              "delta": 1
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            },
+            {
+              "op": "notice",
+              "key": "k04.notice.countryside"
+            }
+          ],
+          "almanac": [
+            "meet"
+          ]
+        },
+        {
+          "id": "pay_runner",
+          "brief": "花钱把话带全",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 10,
+              "payee": "runner",
+              "reason": "k04.reason.countryside",
+              "short": "ladder"
+            },
+            {
+              "op": "counter",
+              "key": "k04_countryside",
+              "delta": 2
+            },
+            {
+              "op": "notice",
+              "key": "k04.notice.countryside"
+            }
+          ]
+        },
+        {
+          "id": "ignore",
+          "brief": "不听",
+          "effects": []
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.ev.1939.countryside_word",
+      "brief": "乡下传来消息：茧价、米价或当户的事。①听（记一次，口碑升一点）②花几个钱让人把话带全（付钱起步 10，记两次）③不听。随机。1939 乡下与镇上的米、茧都被行口卡住。不写战役，不引用尚未存在的消息牌。没理会当不听，没有别的后果。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1939.cocoon_desk",
+      "type": "event",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "market",
+        "official",
+        "omen_official"
+      ],
+      "choices": [
+        {
+          "id": "register",
+          "brief": "去登记",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": -4
+            },
+            {
+              "op": "conscience",
+              "delta": -2
+            },
+            {
+              "op": "flag",
+              "key": "k04_cocoon_listed"
+            },
+            {
+              "op": "notice",
+              "key": "k04.notice.cocoon"
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "不登",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 6
+            },
+            {
+              "op": "rep",
+              "delta": 2
+            }
+          ]
+        },
+        {
+          "id": "delay",
+          "brief": "找人去挡",
+          "check": {
+            "slots": [
+              {
+                "id": "fixer",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "attr": "pull",
+                "brief": "有门路的人",
+                "max": 2
+              }
+            ],
+            "need": 2,
+            "on_success": [
+              {
+                "op": "flag",
+                "key": "k04_cocoon_delayed"
+              },
+              {
+                "op": "notice",
+                "key": "k04.notice.cocoon"
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "heat",
+                "tier": 1
+              },
+              {
+                "op": "notice",
+                "key": "k04.notice.cocoon"
+              }
+            ]
+          }
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "heat",
+            "delta": 6
+          },
+          {
+            "op": "rep",
+            "delta": 2
+          }
+        ]
+      },
+      "art": "illus.ev.1939.cocoon_desk",
+      "brief": "日商控制的茧行来人核对镇上的丝货账。冬天不是收茧季，对的是下一季的规矩。①登记（风声落一点，本心降一点，记已登记）②不登（风声涨，街坊侧口碑升一点）③找有门路的人去挡（掷门路，要 2 个正面；过了记挡过；没过风声上一档）。随机。1939。没理会当不登，风声涨，街坊侧口碑升一点。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1939.charcoal_spike",
+      "type": "event",
+      "era": [
+        "1939"
+      ],
+      "weight": 8,
+      "tags": [
+        "fuel",
+        "winter",
+        "price",
+        "omen_family",
+        "bad_omen"
+      ],
+      "choices": [
+        {
+          "id": "buy",
+          "brief": "现在买",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 28,
+              "payee": "charcoal",
+              "reason": "k04.reason.charcoal",
+              "short": "ladder"
+            },
+            {
+              "op": "flag",
+              "key": "k04_charcoal_bought"
+            }
+          ],
+          "almanac": [
+            "buy_in"
+          ]
+        },
+        {
+          "id": "endure",
+          "brief": "先挨着",
+          "effects": [
+            {
+              "op": "attr",
+              "who": "ruhua",
+              "attr": "nerve",
+              "delta": -1,
+              "days": 4
+            }
+          ]
+        },
+        {
+          "id": "fetch",
+          "brief": "出城去弄",
+          "check": {
+            "slots": [
+              {
+                "id": "man",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "attr": "nerve",
+                "brief": "胆大的人",
+                "max": 2
+              }
+            ],
+            "need": 2,
+            "on_success": [
+              {
+                "op": "flag",
+                "key": "k04_charcoal_fetched"
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "person_state",
+                "person": "ruhua",
+                "state": "hurt",
+                "days": 2
+              }
+            ]
+          },
+          "almanac": [
+            "travel"
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "attr",
+            "who": "ruhua",
+            "attr": "nerve",
+            "delta": -1,
+            "days": 4
+          }
+        ]
+      },
+      "art": "illus.ev.1939.charcoal_spike",
+      "brief": "1939 柴价涨得凶。①买柴（付钱起步 28）②先挨着（胆量临时少 1，四天）③出城去弄（掷胆量，要 2 个正面；过了记柴够；没过受伤两天）。随机。依据 era.json：米、柴涨得最凶。没理会当先挨着，四天里胆量少 1。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1939.district_levy",
+      "type": "event",
+      "era": [
+        "1939"
+      ],
+      "weight": 7,
+      "tags": [
+        "official",
+        "levy",
+        "omen_official",
+        "bad_omen"
+      ],
+      "choices": [
+        {
+          "id": "give",
+          "brief": "交米",
+          "effects": [
+            {
+              "op": "item_lose",
+              "match": {
+                "cat": "rice"
+              },
+              "n": 1,
+              "reason": "k04.reason.levy"
+            },
+            {
+              "op": "notice",
+              "key": "k04.notice.levy"
+            }
+          ]
+        },
+        {
+          "id": "cash",
+          "brief": "折钱",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 40,
+              "payee": "district",
+              "reason": "k04.reason.levy",
+              "short": "ladder"
+            },
+            {
+              "op": "notice",
+              "key": "k04.notice.levy"
+            }
+          ]
+        },
+        {
+          "id": "hide",
+          "brief": "藏起来",
+          "check": {
+            "slots": [
+              {
+                "id": "man",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "attr": "nerve",
+                "brief": "胆大的人",
+                "max": 2
+              }
+            ],
+            "need": 2,
+            "on_success": [
+              {
+                "op": "flag",
+                "key": "k04_levy_hid"
+              },
+              {
+                "op": "notice",
+                "key": "k04.notice.levy"
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "item_lose",
+                "match": {
+                  "pick": "any"
+                },
+                "n": 2,
+                "reason": "k04.reason.levy"
+              },
+              {
+                "op": "heat",
+                "tier": 1
+              },
+              {
+                "op": "notice",
+                "key": "k04.notice.levy"
+              }
+            ]
+          }
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "item_lose",
+            "match": {
+              "cat": "rice"
+            },
+            "n": 1,
+            "reason": "k04.reason.levy"
+          },
+          {
+            "op": "notice",
+            "key": "k04.notice.levy"
+          }
+        ]
+      },
+      "art": "illus.ev.1939.district_levy",
+      "brief": "伪区公所临时要一笔货，不是每周条子（条子归 K07）。①交米（货架丢掉米一类一件）②折钱（付钱起步 40）③藏（掷胆量，要 2 个正面；过了记藏过；没过丢两件并风声上一档）。随机。1939 伪区公所已取代伪维持会管这类日常摊派。带 bad_omen，因为事件没有 valence。没理会当交米，丢掉米一类一件。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1939.night_market",
+      "type": "event",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "market",
+        "wealth",
+        "year_end",
+        "omen_wealth"
+      ],
+      "choices": [
+        {
+          "id": "stay_open",
+          "brief": "照常开着",
+          "effects": [
+            {
+              "op": "extra_deal",
+              "type": "person",
+              "n": 1,
+              "day": "tomorrow"
+            },
+            {
+              "op": "heat",
+              "delta": 3
+            }
+          ],
+          "almanac": [
+            "trade"
+          ]
+        },
+        {
+          "id": "close_early",
+          "brief": "早收",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "illus.ev.1939.night_market",
+      "brief": "年关夜市，柜台上多一拨人。①照常开着（明天多一张人物牌，风声涨一点）②早收（口碑掉一点）。随机。1939 腊月当铺最忙。没理会当早收，口碑掉一点。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1939.snow_road",
+      "type": "event",
+      "era": [
+        "1939"
+      ],
+      "weight": 5,
+      "tags": [
+        "road",
+        "snow",
+        "winter",
+        "omen_road"
+      ],
+      "choices": [
+        {
+          "id": "clear",
+          "brief": "铲开",
+          "check": {
+            "slots": [
+              {
+                "id": "man",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "attr": "nerve",
+                "brief": "胆大的人"
+              }
+            ],
+            "need": 1,
+            "on_success": [
+              {
+                "op": "flag",
+                "key": "k04_road_open"
+              },
+              {
+                "op": "weather",
+                "value": "clear"
+              },
+              {
+                "op": "notice",
+                "key": "k04.notice.snow"
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "weather",
+                "value": "snow"
+              },
+              {
+                "op": "notice",
+                "key": "k04.notice.snow"
+              }
+            ]
+          },
+          "almanac": [
+            "repair"
+          ]
+        },
+        {
+          "id": "wait",
+          "brief": "等着",
+          "effects": [
+            {
+              "op": "weather",
+              "value": "snow"
+            },
+            {
+              "op": "deck_mod",
+              "pool": "person",
+              "pct": 70,
+              "days": 2
+            },
+            {
+              "op": "notice",
+              "key": "k04.notice.snow"
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "weather",
+            "value": "snow"
+          },
+          {
+            "op": "deck_mod",
+            "pool": "person",
+            "pct": 70,
+            "days": 2
+          },
+          {
+            "op": "notice",
+            "key": "k04.notice.snow"
+          }
+        ]
+      },
+      "art": "illus.ev.1939.snow_road",
+      "brief": "雪封了城外的路。①铲开（掷胆量，要 1 个正面，黄历算修理；过了天气改晴并记路开；没过天气改雪）②等着（天气改雪，接下来两天人物牌变少）。随机。1939 腊月。没理会当等着，路仍被雪封，两天里来的人少。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1939.refugee_cold",
+      "type": "event",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "stranger",
+        "winter",
+        "omen_stranger"
+      ],
+      "choices": [
+        {
+          "id": "give",
+          "brief": "给一点钱",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 12,
+              "payee": "refugee",
+              "reason": "k04.reason.refugee",
+              "short": "ladder"
+            },
+            {
+              "op": "rep",
+              "delta": 3
+            },
+            {
+              "op": "conscience",
+              "delta": 1
+            }
+          ],
+          "almanac": [
+            "lend"
+          ]
+        },
+        {
+          "id": "direct",
+          "brief": "指一条路",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "id": "send_off",
+          "brief": "打发走",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -2
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "rep",
+            "delta": -2
+          },
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "illus.ev.1939.refugee_cold",
+      "brief": "城门口有逃难的人挨冻。不做成新面孔人物牌（新面孔归 K03）。①给一点钱（付钱起步 12，口碑升，本心升一点）②指一条能歇的路（口碑升一点）③打发走（口碑掉，本心降一点）。随机。1939 冬。不写伤亡。没理会当打发走，口碑掉，本心降一点。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1939.patrol",
+      "type": "event",
+      "era": [
+        "1939"
+      ],
+      "weight": 8,
+      "tags": [
+        "official",
+        "police",
+        "search",
+        "omen_official",
+        "bad_omen"
+      ],
+      "slots": [
+        {
+          "id": "paper",
+          "accepts": [
+            "kept"
+          ],
+          "tags": [
+            "papers"
+          ],
+          "brief": "证件"
+        },
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "tags": [
+            "official"
+          ],
+          "money_per_coin": 15,
+          "brief": "钱"
+        },
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "attr": "nerve",
+          "brief": "胆大的人",
+          "tags": [
+            "official"
+          ]
+        }
+      ],
+      "check": {
+        "need": 2,
+        "on_success": [
+          {
+            "op": "notice",
+            "key": "k04.notice.patrol_pass"
+          }
+        ],
+        "on_fail": [
+          {
+            "op": "heat",
+            "delta": 8
+          },
+          {
+            "op": "deck_mod",
+            "pool": "fate",
+            "valence": "bad",
+            "pct": 140,
+            "days": 3
+          },
+          {
+            "op": "notice",
+            "key": "k04.notice.patrol_fail"
+          }
+        ]
+      },
+      "art": "illus.ev.1939.patrol",
+      "brief": "城门之外，街上又加了一道盘查，比主线那张轻，不占 s1939.gate_check。格子收证件、钱、胆大的人，要 2 个正面。没过：风声涨，坏命运牌接下来三天更容易抽到。随机。1939 城门设岗之后的日常。带 bad_omen。没理会当没过，风声涨，坏命运牌三天里更容易抽到。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

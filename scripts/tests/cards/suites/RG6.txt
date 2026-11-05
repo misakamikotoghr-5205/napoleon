@@ -1,0 +1,7 @@
+# RG6（肉鸽 v1，docs/cards/rogue/ROGUE_V1.md §14）第一阶段：自动玩策略、模糊动作、遥测。格式：名字|脚本|超时秒|参数
+RG6_policies|res://scripts/tests/cards/RG6/test_policies.gd|180|
+RG6_fuzz|res://scripts/tests/cards/RG6/test_fuzz.gd|180|
+RG6_telemetry|res://scripts/tests/cards/RG6/test_telemetry.gd|180|
+RG6_sim_zero|res://scripts/tests/cards/RG6/test_sim_zero.gd|300|
+# 第二阶段（集成）：真数据端到端
+RG6_rogue_flow|res://scripts/tests/cards/RG6/test_rogue_flow.gd|300|

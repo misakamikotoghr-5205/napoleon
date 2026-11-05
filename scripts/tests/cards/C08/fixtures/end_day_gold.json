@@ -1,0 +1,112 @@
+{
+  "_meta": {
+    "owner": "C08",
+    "schema": 1,
+    "brief": "只剩一张金色牌；确认打烊以后进夜里，并发 card_left gold_left",
+    "_provenance": {
+      "by": "ai",
+      "task": "C08",
+      "date": "2026-10-14"
+    }
+  },
+  "queries": {
+    "card|{\"uid\":\"c0201\"}": {
+      "actions": [],
+      "art": "portrait.brother",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "days_left": -1,
+      "def": "p.brother.1938.farewell",
+      "expires_in": -1,
+      "gold": true,
+      "intent": "story",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "slots",
+      "person": "brother",
+      "status": "open",
+      "type": "person",
+      "uid": "c0201",
+      "used_today": false,
+      "zone": "hand"
+    },
+    "day.end_preview|{}": {
+      "items": [
+        {
+          "args": {},
+          "consequence_key": "p.brother.1938.farewell#outcomes.ignored",
+          "def": "p.brother.1938.farewell",
+          "kind": "gold_leave",
+          "uid": "c0201"
+        }
+      ],
+      "needs_confirm": true,
+      "step": "end_day"
+    }
+  },
+  "responses": [
+    {
+      "cmd": "day.end",
+      "events": [
+        ["card_left", "c0201", "gold_left"],
+        ["phase_changed", "day", "night"]
+      ],
+      "match": {
+        "confirm": true
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "night"
+        }
+      ],
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    }
+  ],
+  "view": {
+    "busy": false,
+    "date": {
+      "abs_day": 2,
+      "d": 2,
+      "era": "1938",
+      "m": 3,
+      "minute": 600,
+      "stage": 0,
+      "stage_day": 2,
+      "stage_days": 30,
+      "weekday": 2,
+      "y": 1938
+    },
+    "hand": [],
+    "heat_tier": 0,
+    "mode": "shop",
+    "money": {
+      "amount": 200,
+      "currency": "fabi"
+    },
+    "night_offers": [],
+    "phase": "day",
+    "rep_tier": 1,
+    "stage": {
+      "sealed": false,
+      "set": "counter",
+      "time": "day"
+    },
+    "v": 1
+  }
+}

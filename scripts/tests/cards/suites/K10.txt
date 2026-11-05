@@ -1,0 +1,5 @@
+# K10 轮盘、签、测字、黄历（docs/handoff_cards/K10_data-fortune.md）
+K10_validate|res://scripts/cards/core/validate_main.gd|120|--only=data/cards/fortune/**,data/cards/tags/K10.json,data/cards/ui_keys/K10.json --name=K10_validate
+K10_data|res://scripts/tests/cards/K10/test_data.gd|120|
+K10_guide_support|res://scripts/tests/cards/K10/test_guide_support.gd|120|
+K10_bail_day|res://scripts/tests/cards/K10/test_bail_day.gd|120|

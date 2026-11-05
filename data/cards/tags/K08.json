@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "owner": "K08",
+    "schema": 1,
+    "brief": "消息牌用的标签。征兆只用 W0 的 omen。",
+    "_provenance": {
+      "by": "ai",
+      "task": "K08",
+      "date": "2026-10-13"
+    }
+  },
+  "tags": {
+    "info": {
+      "brief": "可以交给要消息的条子"
+    },
+    "market": {
+      "brief": "行情"
+    },
+    "clip": {
+      "brief": "剪报"
+    },
+    "wire": {
+      "brief": "电报或邮电口信"
+    },
+    "torn": {
+      "brief": "撕开、要拼回去的信"
+    },
+    "dock": {
+      "brief": "码头、水边"
+    }
+  }
+}

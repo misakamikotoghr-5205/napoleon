@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "owner": "K10",
+    "schema": 1
+  },
+  "cards": [
+    {
+      "id": "lot.g0.fixture",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 6,
+      "hint_tags": [],
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g1.fixture",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 1,
+      "hint_tags": [],
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g2.fixture",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 2,
+      "hint_tags": [],
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g3.fixture",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 3,
+      "hint_tags": [],
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g4.fixture",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 4,
+      "hint_tags": [],
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "kind": "spot",
+  "seed": 1449328704,
+  "item": "I002",
+  "art": "item.jewelry.hairpin",
+  "atlas_art": "item.jewelry.hairpin",
+  "atlas_open": false,
+  "ink": 4,
+  "lens_px": 72,
+  "blink": false,
+  "minutes_per_step": 1,
+  "max_minutes": 30,
+  "tools": [
+    "eye",
+    "lens",
+    "atlas"
+  ],
+  "parts": [
+    {
+      "id": "material",
+      "rect": [
+        42,
+        8,
+        13,
+        13
+      ],
+      "tool": "eye"
+    },
+    {
+      "id": "condition",
+      "rect": [
+        7,
+        46,
+        10,
+        9
+      ],
+      "tool": "eye"
+    },
+    {
+      "id": "authenticity",
+      "rect": [
+        24,
+        30,
+        10,
+        10
+      ],
+      "tool": "lens"
+    },
+    {
+      "id": "provenance",
+      "rect": [
+        34,
+        20,
+        10,
+        10
+      ],
+      "tool": "eye"
+    }
+  ],
+  "legend": {
+    "wear": [
+      "scuff",
+      "chip",
+      "shine"
+    ],
+    "differs": [
+      "base_metal",
+      "speck",
+      "scrape"
+    ]
+  },
+  "marks": [
+    {
+      "part": "authenticity",
+      "kind": "wear",
+      "look": "shine",
+      "at": [
+        26,
+        33,
+        6,
+        5
+      ],
+      "fine": 700,
+      "seed": 443342557
+    },
+    {
+      "part": "provenance",
+      "kind": "wear",
+      "look": "scuff",
+      "at": [
+        36,
+        22,
+        6,
+        5
+      ],
+      "fine": 200,
+      "seed": 1168446250
+    },
+    {
+      "part": "condition",
+      "kind": "wear",
+      "look": "chip",
+      "at": [
+        9,
+        48,
+        6,
+        6
+      ],
+      "fine": 300,
+      "seed": 77123
+    }
+  ]
+}

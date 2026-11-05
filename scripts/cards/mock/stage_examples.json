@@ -1,0 +1,162 @@
+{
+  "ev.1938.police_check": {
+    "cast": [
+      {
+        "who": "ex_patrol",
+        "at": "door_l",
+        "brief": "巡警甲站门口左边"
+      },
+      {
+        "who": "ex_patrol",
+        "at": "door_r",
+        "brief": "巡警乙站门口右边"
+      }
+    ],
+    "walk": "patrol",
+    "intro": [
+      {
+        "who": "ex_patrol",
+        "ref": "lines.greet",
+        "brief": "巡警拍门，要求开门查良民证，口气是例行公事"
+      },
+      {
+        "who": "",
+        "ref": "body",
+        "brief": "旁白介绍挨家挨户查证件的场面"
+      }
+    ],
+    "after": {
+      "success": [
+        {
+          "who": "ex_patrol",
+          "ref": "lines.pass",
+          "brief": "巡警看过证件，挥手放过"
+        }
+      ],
+      "fail": [
+        {
+          "who": "ex_patrol",
+          "ref": "lines.noted",
+          "brief": "巡警把名字记在本子上"
+        },
+        {
+          "who": "",
+          "ref": "outcomes.fail",
+          "brief": "旁白介绍证件检查没过的后果"
+        }
+      ]
+    }
+  },
+  "p.brother.1938.farewell": {
+    "cast": [
+      {
+        "who": "brother",
+        "at": "door",
+        "brief": "哥哥提着箱子站在门口，没有进柜台"
+      }
+    ],
+    "props": [
+      {
+        "art": "prop.trunk",
+        "at": "door_side",
+        "brief": "哥哥的藤箱"
+      }
+    ],
+    "fx": [
+      "predawn"
+    ],
+    "intro": [
+      {
+        "who": "",
+        "ref": "body",
+        "brief": "旁白介绍天没亮时哥哥要离开的场面"
+      },
+      {
+        "who": "brother",
+        "ref": "lines.greet",
+        "brief": "哥哥说明自己要离开，把铺子交给妹妹"
+      },
+      {
+        "who": "brother",
+        "ref": "lines.charge",
+        "brief": "哥哥开始交代铺子的事情"
+      }
+    ],
+    "after": {
+      "listen": [
+        {
+          "who": "brother",
+          "ref": "lines.after_listen",
+          "brief": "哥哥交代完，把账簿推过来"
+        },
+        {
+          "who": "",
+          "ref": "outcomes.listen",
+          "brief": "旁白说明哥哥已经出门"
+        }
+      ],
+      "argue": [
+        {
+          "who": "me",
+          "ref": "lines.me_argue",
+          "brief": "妹妹表达对哥哥安排的反对"
+        },
+        {
+          "who": "brother",
+          "ref": "lines.after_argue",
+          "brief": "哥哥叹气，不再多说"
+        }
+      ]
+    }
+  },
+  "fa.any.fire_next_door": {
+    "cast": [
+      {
+        "who": "ex_shopboy",
+        "at": "door",
+        "brief": "邻铺伙计赶到门口报信"
+      }
+    ],
+    "fx": [
+      "fire",
+      "smoke"
+    ],
+    "intro": [
+      {
+        "who": "ex_shopboy",
+        "ref": "lines.greet",
+        "brief": "邻铺伙计报告隔壁失火的情况"
+      },
+      {
+        "who": "",
+        "ref": "body",
+        "brief": "旁白介绍邻铺火势和当铺面临的处境"
+      }
+    ]
+  },
+  "nt.family_dinner": {
+    "fx": [
+      "warm"
+    ]
+  },
+  "pr.cell": {
+    "set": "prison"
+  },
+  "st.write_letters": {
+    "set": "market",
+    "cast": [
+      {
+        "who": "ruhua",
+        "at": "door",
+        "brief": "如花在集市替人写信"
+      }
+    ],
+    "props": [
+      {
+        "art": "prop.bench",
+        "at": "counter_mid",
+        "brief": "集市写信摊旁的长凳"
+      }
+    ]
+  }
+}

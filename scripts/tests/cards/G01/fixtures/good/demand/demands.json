@@ -1,0 +1,239 @@
+{
+  "_meta": {
+    "owner": "K07",
+    "schema": 1,
+    "brief": "例子集：条子四类（§4.7.6）与系统牌 ev.any.demand_return"
+  },
+  "cards": [
+    {
+      "id": "dm.1938.money.t1",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "money",
+      "tier": 1,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "money": {
+          "amount": 60,
+          "jitter_pct": 15,
+          "heat_tier_pct": 10
+        },
+        "haggle": {
+          "slots": [
+            {
+              "id": "favor",
+              "accepts": [
+                "kept"
+              ],
+              "tags": [
+                "favor"
+              ]
+            },
+            {
+              "id": "talker",
+              "accepts": [
+                "self",
+                "contact"
+              ],
+              "attr": "tongue"
+            }
+          ],
+          "need": 2,
+          "tier_down": 1
+        }
+      },
+      "slots": [
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "pay": true
+        }
+      ],
+      "art": "illus.dm.money",
+      "brief": "维持会摊派（伪维持会名目），七天内交 60 蚨上下。可以直接交钱；或放人情牌、口才高的人去讲价，成了降一档。办不成按中档吃亏：查封三天。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "id": "dm.1938.goods.t0",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "goods",
+      "tier": 0,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "goods": {
+          "cat": "rice",
+          "n": 1
+        },
+        "substitute": {
+          "money": 50
+        }
+      },
+      "slots": [
+        {
+          "id": "goods",
+          "accepts": [
+            "item"
+          ],
+          "item_match": {
+            "cat": "rice"
+          },
+          "pay": true
+        }
+      ],
+      "art": "illus.dm.goods",
+      "brief": "（W0 例子，§4.7.6 要货的 resolve）伪维持会要一担米；交货架上的米，或交 50 蚨顶替。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.people.t2",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "people",
+      "tier": 2,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "people": {
+          "n": 1,
+          "away_days": 7,
+          "return_check": {
+            "attr": "nerve",
+            "need": 1
+          }
+        },
+        "substitute": {
+          "money": 40
+        }
+      },
+      "slots": [
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "attr": "nerve"
+        }
+      ],
+      "art": "illus.dm.people",
+      "brief": "（W0 例子，§4.7.6 要人的 resolve）要派一个人去修路七天；派出去的人回来那天掷胆量，不成就是没回来；也可以交钱顶替。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.info.t3",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "info",
+      "tier": 3,
+      "tags": [
+        "official",
+        "informer"
+      ],
+      "resolve": {
+        "info": {
+          "n": 1
+        },
+        "fabricate": {
+          "attr": "nerve",
+          "need": 2,
+          "on_fail": [
+            {
+              "op": "heat",
+              "tier": 1
+            }
+          ]
+        }
+      },
+      "slots": [
+        {
+          "id": "news",
+          "accepts": [
+            "news"
+          ]
+        }
+      ],
+      "art": "illus.dm.info",
+      "brief": "（W0 例子，§4.7.6 要消息的 resolve）要你交一条某人的消息；交留着的消息牌会伤到那个人，或者编一个（掷胆量，不成风声上一档）。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.any.demand_return",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "tags": [
+        "levy",
+        "omen_road"
+      ],
+      "slots": [
+        {
+          "id": "who",
+          "accepts": [
+            "contact",
+            "self"
+          ],
+          "attr": "nerve",
+          "brief": "派出去的人"
+        }
+      ],
+      "check": {
+        "need": 1,
+        "on_success": [],
+        "on_fail": [
+          {
+            "op": "notice",
+            "key": "k07.notice.not_back"
+          }
+        ]
+      },
+      "art": "illus.ev.any.demand_return",
+      "brief": "（W0 例子，系统牌）要人条子派出去的人回来那天的“回来了吗”：用他的属性当场掷，不成就是没回来。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

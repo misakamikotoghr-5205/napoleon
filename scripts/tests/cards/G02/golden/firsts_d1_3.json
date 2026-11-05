@@ -1,0 +1,184 @@
+[
+	[
+		0,
+		"game.new",
+		"month_open",
+		{}
+	],
+	[
+		0,
+		"game.new",
+		"month_wheel",
+		{}
+	],
+	[
+		0,
+		"wheel.offer",
+		"incense",
+		{
+			"uid": ""
+		}
+	],
+	[
+		1,
+		"month.begin",
+		"almanac",
+		{}
+	],
+	[
+		1,
+		"month.begin",
+		"notice",
+		{}
+	],
+	[
+		1,
+		"day.begin",
+		"deal",
+		{}
+	],
+	[
+		1,
+		"day.begin",
+		"person",
+		{
+			"def": "p.g02.d1.pawn",
+			"uid": "c0001"
+		}
+	],
+	[
+		1,
+		"counter.open",
+		"counter",
+		{
+			"person": "linsao",
+			"uid": "c0001"
+		}
+	],
+	[
+		1,
+		"mg.request",
+		"mg.spot",
+		{
+			"kind": "spot",
+			"uid": "c0001"
+		}
+	],
+	[
+		1,
+		"counter.offer",
+		"ticket",
+		{
+			"no": 1,
+			"person": "linsao"
+		}
+	],
+	[
+		1,
+		"counter.offer",
+		"dossier",
+		{
+			"person": "linsao"
+		}
+	],
+	[
+		1,
+		"counter.offer",
+		"shelf",
+		{}
+	],
+	[
+		1,
+		"counter.open",
+		"buyer",
+		{
+			"person": "chen",
+			"uid": "c0003"
+		}
+	],
+	[
+		1,
+		"day.end",
+		"night",
+		{}
+	],
+	[
+		1,
+		"night.choose",
+		"settle",
+		{}
+	],
+	[
+		2,
+		"settle.next",
+		"weather",
+		{}
+	],
+	[
+		2,
+		"day.begin",
+		"choice",
+		{
+			"def": "p.brother.1938.farewell",
+			"uid": "c0004"
+		}
+	],
+	[
+		2,
+		"day.begin",
+		"gold",
+		{
+			"def": "p.brother.1938.farewell",
+			"person": "brother",
+			"uid": "c0004"
+		}
+	],
+	[
+		2,
+		"card.choose",
+		"keep",
+		{
+			"def": "kp.brother_note",
+			"uid": "c0005"
+		}
+	],
+	[
+		3,
+		"settle.next",
+		"market_day",
+		{}
+	],
+	[
+		3,
+		"settle.next",
+		"big_wheel",
+		{
+			"uid": "c0006"
+		}
+	],
+	[
+		3,
+		"day.begin",
+		"slots",
+		{
+			"def": "ev.g02.d3.slots",
+			"uid": "c0007"
+		}
+	],
+	[
+		3,
+		"day.begin",
+		"coins",
+		{
+			"uid": "c0007"
+		}
+	],
+	[
+		3,
+		"day.end",
+		"must_resolve",
+		{
+			"uid": "c0006"
+		}
+	]
+]

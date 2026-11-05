@@ -1,0 +1,231 @@
+{
+  "_meta": {
+    "owner": "W0",
+    "schema": 1,
+    "brief": "例子集：档案页与碎片（§4.7.19）"
+  },
+  "cards": [
+    {
+      "id": "dp.linsao",
+      "type": "dossier_page",
+      "person": "linsao",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.linsao.1938.hairpin",
+        "df.linsao.1938.husband",
+        "df.linsao.1938.neighbors",
+        "df.linsao.1939.after_hairpin",
+        "df.linsao.1939.child"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "contact_gain",
+            "person": "linsao"
+          }
+        ]
+      },
+      "brief": "林嫂一页：补齐后林嫂成为人脉。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "id": "df.linsao.1938.hairpin",
+      "type": "dossier_fragment",
+      "person": "linsao",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "order": 1,
+      "kind": "pawn",
+      "brief": "（W0 例子）林嫂当了金簪。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.linsao.1938.husband",
+      "type": "dossier_fragment",
+      "person": "linsao",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "order": 2,
+      "kind": "said",
+      "brief": "（W0 例子）林嫂说起丈夫在船上。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.linsao.1938.neighbors",
+      "type": "dossier_fragment",
+      "person": "linsao",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "order": 3,
+      "kind": "heard",
+      "brief": "（W0 例子）街坊提起林嫂一家。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.linsao.1939.after_hairpin",
+      "type": "dossier_fragment",
+      "person": "linsao",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 4,
+      "kind": "year_after",
+      "year_after_of": "df.linsao.1938.hairpin",
+      "brief": "一年后：金簪一直没人来赎，原因（由 A 写）。只有拿到了 1938 的那块才会补这一块。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "id": "df.linsao.1939.child",
+      "type": "dossier_fragment",
+      "person": "linsao",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "order": 5,
+      "kind": "heard",
+      "brief": "（W0 例子）一年后孩子的消息。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.brother",
+      "type": "dossier_page",
+      "person": "brother",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.brother.1938.farewell",
+        "df.brother.1938.farewell_cold"
+      ],
+      "brief": "（W0 例子）哥哥一页。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.brother.1938.farewell",
+      "type": "dossier_fragment",
+      "person": "brother",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "order": 1,
+      "kind": "said",
+      "brief": "（W0 例子）哥哥临走的交代。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.brother.1938.farewell_cold",
+      "type": "dossier_fragment",
+      "person": "brother",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "order": 2,
+      "kind": "said",
+      "brief": "（W0 例子）和哥哥争了几句，他没说完就走了。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.wangshan",
+      "type": "dossier_page",
+      "person": "wangshan",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.wangshan.1938.dock",
+        "df.wangshan.1938.trust"
+      ],
+      "brief": "（W0 例子）王山一页。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.wangshan.1938.dock",
+      "type": "dossier_fragment",
+      "person": "wangshan",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "order": 1,
+      "kind": "heard",
+      "brief": "（W0 例子）有人在码头见过王山。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "df.wangshan.1938.trust",
+      "type": "dossier_fragment",
+      "person": "wangshan",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "order": 2,
+      "kind": "said",
+      "brief": "（W0 例子）王山信得过你的那一块；交了他的消息就成缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

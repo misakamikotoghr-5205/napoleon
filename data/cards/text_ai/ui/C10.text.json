@@ -1,0 +1,78 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "c10.tab.people": {
+    "t": "人物"
+  },
+  "c10.tab.rules": {
+    "t": "规矩"
+  },
+  "c10.tab.controls": {
+    "t": "怎么玩"
+  },
+  "c10.kind.pawn": {
+    "t": "当出去的东西"
+  },
+  "c10.kind.said": {
+    "t": "本人说的"
+  },
+  "c10.kind.heard": {
+    "t": "听别人提起"
+  },
+  "c10.kind.clipping": {
+    "t": "剪报"
+  },
+  "c10.kind.ticket": {
+    "t": "当票上的字"
+  },
+  "c10.kind.letter": {
+    "t": "信"
+  },
+  "c10.kind.year_after": {
+    "t": "一年以后"
+  },
+  "c10.teacher.notice": {
+    "t": "告示"
+  },
+  "c10.teacher.almanac": {
+    "t": "黄历"
+  },
+  "c10.teacher.brother_ledger": {
+    "t": "哥哥留下的账簿批注"
+  },
+  "c10.help.title": {
+    "t": "帮助"
+  },
+  "c10.help.keys.f1": {
+    "t": "F1：打开或关上帮助"
+  },
+  "c10.help.keys.esc": {
+    "t": "Esc：关掉最上面这一层"
+  },
+  "c10.help.keys.enter": {
+    "t": "Enter：按下选中的按钮"
+  },
+  "c10.help.keys.space": {
+    "t": "空格：按下选中的按钮"
+  },
+  "c10.help.keys.tab": {
+    "t": "Tab：换一栏"
+  },
+  "c10.help.keys.num": {
+    "t": "数字键 1 到 9：挑手里的牌"
+  },
+  "c10.help.day_flow": {
+    "t": "一天这样过：早上发牌，白天一件件处理，打烊，夜里做一件事，日结算账，天亮。“打烊 · 下一天”任何时候都能按，节奏由你。"
+  },
+  "c10.btn.close": {
+    "t": "收起"
+  },
+  "c10.drawer.note": {
+    "t": "每人一页。见一回补一块；那天没理他，就空着一块。"
+  },
+  "c10.drawer.empty": {
+    "t": "还没有人记进档案簿。"
+  }
+}

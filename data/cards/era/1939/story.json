@@ -1,0 +1,425 @@
+{
+  "_meta": {
+    "owner": "K03",
+    "schema": 1,
+    "brief": "1939 人物出面的主线金色牌。城门盘查与米行涨价归 K04。",
+    "_provenance": {
+      "by": "ai",
+      "task": "K03",
+      "date": "2026-10-13"
+    }
+  },
+  "cards": [
+    {
+      "id": "p.linsao.1939.year_end",
+      "type": "person",
+      "person": "linsao",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "tags": [
+        "story",
+        "woman",
+        "year_end",
+        "clothing",
+        "winter",
+        "child",
+        "omen_family",
+        "omen_water"
+      ],
+      "gold": true,
+      "story_node": "s1939.year_end",
+      "intent": "pawn",
+      "schedule": {
+        "stage_day": 8,
+        "order": 1
+      },
+      "conditions": {
+        "not": {
+          "person_state": [
+            "linsao",
+            "gone"
+          ]
+        }
+      },
+      "item": {
+        "template": "clothing.coat"
+      },
+      "asking": {
+        "pct": [
+          100,
+          140
+        ]
+      },
+      "floor": {
+        "pct": [
+          55,
+          80
+        ]
+      },
+      "patience_min": [
+        70,
+        140
+      ],
+      "impatience": "leave",
+      "term_days": 12,
+      "effects": {
+        "on_accept": [
+          {
+            "op": "story",
+            "node": "s1939.year_end",
+            "outcome": "pawned"
+          },
+          {
+            "op": "dossier",
+            "frag": "df.linsao.1939.year_end"
+          },
+          {
+            "op": "dossier",
+            "frag": "df.linsao.1939.child"
+          },
+          {
+            "op": "flag",
+            "key": "k03_year_end_pawn"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "story",
+            "node": "s1939.year_end",
+            "outcome": "refused"
+          },
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "story",
+            "node": "s1939.year_end",
+            "outcome": "left"
+          },
+          {
+            "op": "dossier_gap",
+            "frag": "df.linsao.1939.year_end"
+          }
+        ],
+        "on_expire": [
+          {
+            "op": "story",
+            "node": "s1939.year_end",
+            "outcome": "ignored"
+          },
+          {
+            "op": "dossier_gap",
+            "frag": "df.linsao.1939.year_end"
+          }
+        ]
+      },
+      "art": "portrait.linsao",
+      "brief": "金色节点：年关当衣过年。船工的妻子带着已经会坐的孩子来当冬衣，代表柜台上挤满的那一阵。做成记走向 pawned 和孩子的碎片；拒绝是 refused；耗尽耐心是 left；打烊不理是 ignored，档案留缺口。赎当的人用各自的赎当牌，不挤在这张上。她若已离开则这张不发。数字起步，待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.postman.1939.brother_letter",
+      "type": "person",
+      "person": "postman",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "tags": [
+        "story",
+        "post",
+        "family",
+        "omen_far"
+      ],
+      "gold": true,
+      "story_node": "s1939.brother_letter",
+      "intent": "story",
+      "schedule": {
+        "stage_day": 16,
+        "order": 1
+      },
+      "choices": [
+        {
+          "id": "read",
+          "brief": "把信读开并交到手里",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1939.brother_letter",
+              "outcome": "read"
+            },
+            {
+              "op": "flag",
+              "key": "k03_letter_read"
+            },
+            {
+              "op": "add_card",
+              "card": "nw.1939.brother_letter",
+              "to": "hand"
+            },
+            {
+              "op": "if",
+              "cond": {
+                "story": [
+                  "s1938.brother_farewell",
+                  "listened"
+                ]
+              },
+              "then": [
+                {
+                  "op": "dossier",
+                  "frag": "df.brother.1939.letter_listen"
+                }
+              ],
+              "else": [
+                {
+                  "op": "if",
+                  "cond": {
+                    "story": [
+                      "s1938.brother_farewell",
+                      "argued"
+                    ]
+                  },
+                  "then": [
+                    {
+                      "op": "dossier",
+                      "frag": "df.brother.1939.letter_argue"
+                    }
+                  ],
+                  "else": [
+                    {
+                      "op": "if",
+                      "cond": {
+                        "story": [
+                          "s1938.brother_farewell",
+                          "ignored"
+                        ]
+                      },
+                      "then": [
+                        {
+                          "op": "dossier",
+                          "frag": "df.brother.1939.letter_note"
+                        }
+                      ],
+                      "else": [
+                        {
+                          "op": "dossier",
+                          "frag": "df.brother.1939.letter"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hold",
+          "brief": "先把信压下不拆",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1939.brother_letter",
+              "outcome": "held"
+            },
+            {
+              "op": "flag",
+              "key": "k03_letter_held"
+            },
+            {
+              "op": "notice",
+              "key": "k03.notice.letter_held"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.postman.1939.held"
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_deal": [
+          {
+            "op": "notice",
+            "key": "k03.notice.letter_arrived"
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "story",
+            "node": "s1939.brother_letter",
+            "outcome": "left"
+          },
+          {
+            "op": "dossier_gap",
+            "frag": "df.brother.1939.letter"
+          }
+        ],
+        "on_expire": [
+          {
+            "op": "story",
+            "node": "s1939.brother_letter",
+            "outcome": "ignored"
+          },
+          {
+            "op": "dossier_gap",
+            "frag": "df.brother.1939.letter"
+          }
+        ]
+      },
+      "art": "portrait.postman",
+      "brief": "金色节点：哥哥的第一封家书。送信的是邮电代办，哥哥本人不出现。读开则按 1938 告别的走向分碎片，并把信交给消息牌 nw.1939.brother_letter，那张归 K08，kind 应为 letter。压下先不拆。打烊不理是 ignored，档案留缺口。史实：跳年之后哥哥只通过家书出现。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.wangshan.1939.whereabouts",
+      "type": "person",
+      "person": "wangshan",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "tags": [
+        "story",
+        "dock",
+        "omen_water",
+        "omen_road"
+      ],
+      "gold": true,
+      "story_node": "s1939.wangshan_whereabouts",
+      "intent": "story",
+      "schedule": {
+        "stage_day": 24,
+        "order": 1
+      },
+      "conditions": {
+        "not": {
+          "person_state": [
+            "wangshan",
+            "gone"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "ask_where",
+          "brief": "问他这一年去了哪里",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1939.wangshan_whereabouts",
+              "outcome": "asked"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.wangshan.1939.whereabouts"
+            }
+          ]
+        },
+        {
+          "id": "shelter",
+          "brief": "让他在铺里躲几天",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1939.wangshan_whereabouts",
+              "outcome": "sheltered"
+            },
+            {
+              "op": "flag",
+              "key": "k03_wangshan_sheltered"
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.wangshan.1939.sheltered"
+            }
+          ]
+        },
+        {
+          "id": "send_off",
+          "brief": "让他离开镇子",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1939.wangshan_whereabouts",
+              "outcome": "sent_off"
+            },
+            {
+              "op": "person_state",
+              "person": "wangshan",
+              "state": "away",
+              "days": 15
+            },
+            {
+              "op": "notice",
+              "key": "k03.notice.wangshan_left"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.wangshan.1939.sent_off"
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_leave": [
+          {
+            "op": "story",
+            "node": "s1939.wangshan_whereabouts",
+            "outcome": "left"
+          },
+          {
+            "op": "dossier_gap",
+            "frag": "df.wangshan.1939.whereabouts"
+          }
+        ],
+        "on_expire": [
+          {
+            "op": "story",
+            "node": "s1939.wangshan_whereabouts",
+            "outcome": "ignored"
+          },
+          {
+            "op": "dossier_gap",
+            "frag": "df.wangshan.1939.whereabouts"
+          },
+          {
+            "op": "person_state",
+            "person": "wangshan",
+            "state": "away",
+            "days": 20
+          },
+          {
+            "op": "notice",
+            "key": "k03.notice.wangshan_left"
+          }
+        ]
+      },
+      "art": "portrait.wangshan",
+      "brief": "金色节点：王山的下落。便衣青年自己出现在柜台边。问清这一年去了哪里；让他在铺里躲几天会惹风声；送走则他离开一阵子。打烊不理是 ignored，人走开，档案留缺口。不写他属于哪一方。他若已离开则这张不发。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K03",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "_meta": {
+    "owner": "RG4",
+    "schema": 1,
+    "brief": "肉鸽 v1 界面：周末盘账叠层、博古格抽屉、标题上的种子与旧账书架。计数（第几周、成交笔数、格数、第几本）看得见，效果大小一概不写。",
+    "_provenance": {
+      "by": "ai",
+      "task": "RG4",
+      "date": "2026-10-25"
+    }
+  },
+  "keys": {
+    "rg4.drawer.relics": {
+      "brief": "博古格抽屉标题"
+    },
+    "rg4.depth.plain": {
+      "brief": "来历深浅：寻常"
+    },
+    "rg4.depth.storied": {
+      "brief": "来历深浅：有来历"
+    },
+    "rg4.depth.treasure": {
+      "brief": "来历深浅：镇店"
+    },
+    "rg4.kind.source": {
+      "brief": "客源卡左上角"
+    },
+    "rg4.stock.title.week": {
+      "brief": "盘账叠层标题（参数 n = 第几周）"
+    },
+    "rg4.stock.title.peddler": {
+      "brief": "货郎报价标题"
+    },
+    "rg4.stock.peddler_sub": {
+      "brief": "货郎报价副行"
+    },
+    "rg4.stock.deals": {
+      "brief": "这周成交笔数（参数 deals）"
+    },
+    "rg4.stock.few": {
+      "brief": "只给两样时的说明"
+    },
+    "rg4.stock.take_relic": {
+      "brief": "物件卡按钮"
+    },
+    "rg4.stock.take_source": {
+      "brief": "客源卡按钮"
+    },
+    "rg4.stock.pass": {
+      "brief": "都不要"
+    },
+    "rg4.stock.later": {
+      "brief": "只关"
+    },
+    "rg4.stock.use": {
+      "brief": "好处小标签"
+    },
+    "rg4.stock.flaw": {
+      "brief": "毛病小标签"
+    },
+    "rg4.stock.source_until": {
+      "brief": "客源管多久"
+    },
+    "rg4.stock.full": {
+      "brief": "满了要让出一件的说明"
+    },
+    "rg4.stock.replace_ok": {
+      "brief": "确认让出"
+    },
+    "rg4.stock.replace_cancel": {
+      "brief": "不换了"
+    },
+    "rg4.relics.count": {
+      "brief": "抽屉顶行（参数 n、cap）"
+    },
+    "rg4.relics.empty": {
+      "brief": "抽屉空状态"
+    },
+    "rg4.relics.dormant": {
+      "brief": "流落街头 / 在牢里时"
+    },
+    "rg4.relics.sources": {
+      "brief": "客源一节标题"
+    },
+    "rg4.relics.sources_empty": {
+      "brief": "没有客源"
+    },
+    "rg4.relics.pending": {
+      "brief": "还有一份没挑的按钮"
+    },
+    "rg4.title.run_no": {
+      "brief": "标题盒顶行（参数 n）"
+    },
+    "rg4.title.seed": {
+      "brief": "种子标签"
+    },
+    "rg4.title.reseed": {
+      "brief": "换一个种子"
+    },
+    "rg4.title.opening": {
+      "brief": "开头标签"
+    },
+    "rg4.title.shelf": {
+      "brief": "书架标签"
+    },
+    "rg4.title.book_no": {
+      "brief": "书脊（参数 n）"
+    },
+    "rg4.stock.how": {
+      "brief": "盘账叠层副行：这一回挑一样；客源管到月底，老物件摆上博古格（第一次见盘账的人也看得懂）"
+    },
+    "rg4.title.run_open": {
+      "brief": "标题盒子首行，上一本账还开着时（参数 open = 还没合上的那本，n = 按开张会另起的那本）"
+    },
+    "rg4.title.confirm_new": {
+      "brief": "标题上还有一本账没合上时按开张，按钮那一行换成这句问话（参数 open = 还没合上的那本，n = 会另起的那本）；说清楚合上以后“接着做生意”就接不上它了"
+    },
+    "rg4.title.confirm_yes": {
+      "brief": "上一句问话下面的确认按钮：合上旧账、另起一本（警示色）"
+    },
+    "rg4.title.confirm_no": {
+      "brief": "上一句问话下面的取消按钮，回到标题四颗按钮（默认焦点）"
+    },
+    "rg4.title.shelf_empty": {
+      "brief": "标题盒子旧账书架还空着时的一句"
+    },
+    "rg4.title.seed_tip": {
+      "brief": "标题种子框的悬停提示：种子是什么"
+    },
+    "rg4.relics.away": {
+      "brief": "街头 / 牢里：博古格不在眼前，物件都不顶用（街头提示条、牢里的系统行）"
+    }
+  }
+}

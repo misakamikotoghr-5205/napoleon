@@ -1,0 +1,77 @@
+{
+  "_meta": {
+    "owner": "C11",
+    "schema": 1,
+    "brief": "破产阶梯界面键：家当状态、钱数、钱不够三条路、街头、牢房。正文由人写。",
+    "_provenance": {
+      "by": "ai",
+      "task": "C11",
+      "date": "2026-10-13"
+    }
+  },
+  "keys": {
+    "c11.status.held": {
+      "brief": "家当状态：还在手里"
+    },
+    "c11.status.mortgaged": {
+      "brief": "家当状态：已经押出去"
+    },
+    "c11.status.lost": {
+      "brief": "家当状态：没了"
+    },
+    "c11.money": {
+      "brief": "押出去能换到的钱数，参数 n"
+    },
+    "c11.interest": {
+      "brief": "每月要付的利息钱数，参数 n，只写钱数"
+    },
+    "c11.btn.mortgage": {
+      "brief": "家当面板按钮：押出去"
+    },
+    "c11.btn.redeem": {
+      "brief": "家当面板按钮：赎回来"
+    },
+    "c11.short.amount": {
+      "brief": "钱不够：还差的钱数，参数 n"
+    },
+    "c11.short.goods": {
+      "brief": "钱不够：拿货抵这一路"
+    },
+    "c11.short.estate": {
+      "brief": "钱不够：押家当这一路"
+    },
+    "c11.short.default": {
+      "brief": "钱不够：认了这一路"
+    },
+    "c11.short.default_note": {
+      "brief": "钱不够：认了旁边的后果说法，正文由人写"
+    },
+    "c11.street.hint": {
+      "brief": "流落街头时按钮上方的一句提示，正文由人写"
+    },
+    "c11.street.redeem": {
+      "brief": "街头按钮：赎回铺面"
+    },
+    "c11.prison.try": {
+      "brief": "牢房里掷铜钱之前的旧按钮字，1.3 起回话用 c11.reply.try"
+    },
+    "c11.prison.days": {
+      "brief": "牢房里还能再待的晚上数，参数 n"
+    },
+    "c11.reply.try": {
+      "brief": "牢房回话：托人疏通，然后把格子摆上柜台"
+    },
+    "c11.reply.later": {
+      "brief": "牢房回话：先放一放，关掉这一出，不发指令"
+    },
+    "c11.btn.close": {
+      "brief": "关掉家当面板或牢房面板"
+    },
+    "c11.drawer.estates": {
+      "brief": "家当抽屉里“家当”小节标题（钱匣下面）"
+    },
+    "c11.drawer.estates_note": {
+      "brief": "家当小节标题后的一句小字：押出去换钱，押着每月付利息"
+    }
+  }
+}

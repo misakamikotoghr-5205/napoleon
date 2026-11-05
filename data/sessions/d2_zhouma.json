@@ -1,0 +1,163 @@
+{
+  "id": "d2_zhouma",
+  "npc": "zhouma",
+  "mode": "sell",
+  "stock": [
+    "rice_sunji",
+    "rice_jing_a",
+    "rice_xian_b",
+    "rice_nuo_c"
+  ],
+  "buyer_prices": {
+    "rice_sunji": {
+      "offer": 55,
+      "max": 75
+    },
+    "rice_jing_a": {
+      "offer": 73,
+      "max": 99
+    },
+    "rice_xian_b": {
+      "offer": 43,
+      "max": 58
+    },
+    "rice_nuo_c": {
+      "offer": 32,
+      "max": 44
+    }
+  },
+  "pre": [
+    {
+      "op": "narr",
+      "text": "桥头茶馆的厨娘拎着空篮子进来，人还没到声音先到。"
+    }
+  ],
+  "intro": [
+    {
+      "op": "say",
+      "who": "zhouma",
+      "text": "如花！听说你这儿收米？米行的米一天一个价，还要排队。你这儿有的话，匀我一袋。"
+    },
+    {
+      "op": "if",
+      "cond": "not (stock_has('rice_sunji') or stock_has('rice_jing_a') or stock_has('rice_xian_b') or stock_has('rice_nuo_c'))",
+      "then": [
+        {
+          "op": "say",
+          "who": "zhouma",
+          "text": "哎哟，没有就算了。我回米行排队去。"
+        },
+        {
+          "op": "end",
+          "result": "chat"
+        }
+      ]
+    }
+  ],
+  "deals": [
+    {
+      "id": "gift",
+      "label": "白送一袋米",
+      "when": "stock_has('rice_sunji') or stock_has('rice_jing_a') or stock_has('rice_xian_b') or stock_has('rice_nuo_c')",
+      "steps": [
+        {
+          "op": "call",
+          "fn": "give_item",
+          "args": {
+            "to": "zhouma",
+            "cat": "rice",
+            "pick": true,
+            "reason": "白送周妈一袋米"
+          }
+        },
+        {
+          "op": "if",
+          "cond": "var('gave') == true",
+          "then": [
+            {
+              "op": "stat",
+              "stat": "favor:zhouma",
+              "delta": 5,
+              "why": "白送周妈一袋米"
+            }
+          ]
+        },
+        {
+          "op": "set",
+          "flag": "zhouma_news",
+          "value": true
+        }
+      ]
+    }
+  ],
+  "on_accept": [
+    {
+      "op": "if",
+      "cond": "selected('rice_sunji') and not is('rice_bag_swapped')",
+      "then": [
+        {
+          "op": "say",
+          "who": "zhouma",
+          "text": "哟，这袋子……孙家的？孙家也往当铺里卖米了？"
+        },
+        {
+          "op": "set",
+          "flag": "sun_rice_rumor",
+          "value": true
+        },
+        {
+          "op": "rumor",
+          "key": "sunji_rice",
+          "origin": "zhouma",
+          "told": true
+        }
+      ]
+    },
+    {
+      "op": "if",
+      "cond": "price() < 55",
+      "then": [
+        {
+          "op": "stat",
+          "stat": "favor:zhouma",
+          "delta": 5,
+          "why": "便宜卖米给周妈"
+        },
+        {
+          "op": "set",
+          "flag": "zhouma_news",
+          "value": true
+        }
+      ]
+    }
+  ],
+  "outro": [
+    {
+      "op": "say",
+      "who": "zhouma",
+      "text": "对了，对面墙上贴的告示你看了么？说是全镇的人都要去维持会办良民证，一个人三十蚨。还说每家铺子要交什么……维持费。马保长这两天挨家走，你当心点。"
+    },
+    {
+      "op": "note",
+      "kind": "消息",
+      "text": "告示：全镇的人都要去维持会办良民证，一人三十蚨；每家铺子要交维持费。马保长这两天挨家走。",
+      "source": "heard",
+      "via": "zhouma"
+    },
+    {
+      "op": "rumor",
+      "key": "liangmin_notice",
+      "origin": "ma",
+      "told": true
+    },
+    {
+      "op": "call",
+      "fn": "share_rumors",
+      "args": {
+        "who": "zhouma"
+      }
+    }
+  ],
+  "on_leave": [],
+  "post": []
+}

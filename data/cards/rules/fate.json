@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "owner": "G05",
+    "schema": 1
+  },
+  "_doc": [
+    "命运牌频率与大命运（大轮盘）的危机触发（§4.6、§9.2）。"
+  ],
+  "fate": {
+    "min_gap": 3,
+    "max_gap": 4,
+    "num": 1,
+    "den": 2,
+    "heat_tier_bonus": [
+      0,
+      0,
+      1,
+      1,
+      2
+    ]
+  },
+  "big": {
+    "max_per_stage": 2,
+    "once_per_crisis": true,
+    "crisis": {
+      "cash_short": {
+        "estates_left_lte": 1
+      },
+      "arrested": {},
+      "heat_max": {},
+      "street_long": {
+        "days_gte": 3
+      }
+    }
+  }
+}

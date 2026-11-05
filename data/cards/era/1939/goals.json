@@ -1,0 +1,202 @@
+{
+  "_meta": {
+    "owner": "K04",
+    "schema": 1,
+    "brief": "1939 目标。主线是过年前把账结清。"
+  },
+  "cards": [
+    {
+      "id": "gl.1939.clear_books",
+      "type": "goal",
+      "era": [
+        "1939"
+      ],
+      "weight": 0,
+      "tags": [
+        "year_end"
+      ],
+      "main": true,
+      "done_when": {
+        "all": [
+          {
+            "estate_status": [
+              "es.shopfront",
+              "held"
+            ]
+          },
+          {
+            "money_gte": 40
+          }
+        ]
+      },
+      "eval": "month_close",
+      "effects": {
+        "on_done": [
+          {
+            "op": "notice",
+            "key": "k04.notice.books_done"
+          }
+        ],
+        "on_fail": [
+          {
+            "op": "notice",
+            "key": "k04.notice.books_fail"
+          }
+        ]
+      },
+      "art": "illus.gl.1939.clear_books",
+      "brief": "主线目标：过年前把账结清。月底结算时铺面仍在自己手里，且手头至少 40（起步值，待调）。1939 腊月。家当 id 归 K09，此处只引用。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gl.1939.cabinet_free",
+      "type": "goal",
+      "era": [
+        "1939"
+      ],
+      "weight": 8,
+      "tags": [
+        "year_end"
+      ],
+      "main": false,
+      "done_when": {
+        "estate_status": [
+          "es.jewel_cabinet",
+          "held"
+        ]
+      },
+      "eval": "month_close",
+      "effects": {
+        "on_done": [],
+        "on_fail": []
+      },
+      "art": "illus.gl.1939.cabinet_free",
+      "brief": "可选：月底首饰柜没有押出去。家当 id es.jewel_cabinet 归 K09。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gl.1939.rice_ready",
+      "type": "goal",
+      "era": [
+        "1939"
+      ],
+      "weight": 8,
+      "tags": [
+        "rice",
+        "year_end"
+      ],
+      "main": false,
+      "done_when": {
+        "stock_cat_gte": [
+          "rice",
+          2
+        ]
+      },
+      "eval": "month_close",
+      "effects": {
+        "on_done": [],
+        "on_fail": []
+      },
+      "art": "illus.gl.1939.rice_ready",
+      "brief": "可选：月底货架上至少两件米。年关米紧，1939。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gl.1939.gate_passed",
+      "type": "goal",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "gate"
+      ],
+      "main": false,
+      "done_when": {
+        "story": [
+          "s1939.gate_check",
+          "passed"
+        ]
+      },
+      "eval": "any_time",
+      "effects": {
+        "on_done": [],
+        "on_fail": []
+      },
+      "art": "illus.gl.1939.gate_passed",
+      "brief": "可选：城门盘查那张事件检定过了。节点 s1939.gate_check 在本任务的事件上。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gl.1939.quiet_year",
+      "type": "goal",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "year_end"
+      ],
+      "main": false,
+      "done_when": {
+        "heat_tier_lte": 1
+      },
+      "eval": "month_close",
+      "effects": {
+        "on_done": [],
+        "on_fail": []
+      },
+      "art": "illus.gl.1939.quiet_year",
+      "brief": "可选：月底风声档不超过 1。完成条件用档位，不写到玩家能看见的正文里。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "gl.1939.debt_paid",
+      "type": "goal",
+      "era": [
+        "1939"
+      ],
+      "weight": 7,
+      "tags": [
+        "debt",
+        "year_end"
+      ],
+      "main": false,
+      "done_when": {
+        "flag": "k04_year_debt_paid"
+      },
+      "eval": "any_time",
+      "effects": {
+        "on_done": [],
+        "on_fail": []
+      },
+      "art": "illus.gl.1939.debt_paid",
+      "brief": "可选：年关讨债那张事件里把账还上了（含讲价讲成的少付）。旗标 k04_year_debt_paid。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

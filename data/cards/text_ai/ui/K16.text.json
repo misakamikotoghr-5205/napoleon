@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "k16.reason.tut_sell": {
+    "t": "卖货"
+  },
+  "k16.reason.tut_slots_ok": {
+    "t": "谢礼"
+  },
+  "k16.reason.tut_slots_fail": {
+    "t": "没办成"
+  },
+  "k16.reason.tut_contact": {
+    "t": "结识周妈"
+  },
+  "k16.notice.tut_day1": {
+    "t": "今天哥哥在柜台上教你看铺子。"
+  }
+}

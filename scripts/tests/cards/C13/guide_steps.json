@@ -1,0 +1,23 @@
+{
+  "settings": {
+    "gap_ms": 0,
+    "max_new_per_day": 16,
+    "default_seconds": 16,
+    "bubble_max_w": 360
+  },
+  "steps": [
+    {
+      "id": "gd.mg.coin_ring",
+      "teaches": ["mg.coin_ring"],
+      "trigger": {"first": "mg.coin_ring"},
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.mg.coin_ring.blow",
+      "anchor_fallback": "a.mg.coin_ring.main",
+      "done_when": ["ui:mg_tool"],
+      "rule_page": "rule.appraise",
+      "priority": 80,
+      "max_shows": 2,
+      "seconds": 16
+    }
+  ]
+}

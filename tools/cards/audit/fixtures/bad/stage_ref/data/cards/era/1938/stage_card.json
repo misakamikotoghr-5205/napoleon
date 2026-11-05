@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1
+  },
+  "cards": [
+    {
+      "id": "ev.stage.miss",
+      "type": "event",
+      "era": ["*"],
+      "effects": {"on_expire": []},
+      "stage": {
+        "intro": [
+          {"who": "", "ref": "body"}
+        ],
+        "after": {
+          "hide": [
+            {"who": "me", "ref": "lines.unwritten"}
+          ]
+        }
+      }
+    }
+  ]
+}

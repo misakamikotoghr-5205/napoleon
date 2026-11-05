@@ -1,0 +1,310 @@
+{
+ "id": "mini_cristo_map",
+ "version": 1,
+ "segment": "cristo",
+ "views": {
+  "port": {
+   "proj": "canvas",
+   "bg": "map_mini_port"
+  }
+ },
+ "sheets": [
+  {
+   "chapter": "mc_one",
+   "view": "port",
+   "start": "c_arrive",
+   "days_max": 10,
+   "stamps_need": 1,
+   "muster": "c_muster",
+   "boss": "c_boss",
+   "interlude": "minigame:weigh",
+   "frames": [
+    {
+     "id": "all",
+     "when": {},
+     "center": [
+      960,
+      540
+     ],
+     "zoom": 100
+    }
+   ],
+   "rivals": [
+    {
+     "id": "c_gendarmes",
+     "label": "宪兵",
+     "path": [
+      "c_slot2",
+      "c_slot4"
+     ],
+     "speed": 1,
+     "start": 0,
+     "meet": {
+      "battle": {
+       "template": "skirmish_a",
+       "level": 4
+      },
+      "toll": {
+       "gold": 1
+      }
+     },
+     "boss_waves_minus": 1
+    }
+   ],
+   "nodes": [
+    {
+     "id": "c_arrive",
+     "type": "story",
+     "label": "c_arrive",
+     "xy": [
+      150,
+      400
+     ],
+     "scene": "mc_arrive",
+     "fixed": true
+    },
+    {
+     "id": "c_inn",
+     "type": "supply",
+     "label": "c_inn",
+     "xy": [
+      400,
+      250
+     ],
+     "role": "post",
+     "pass": {
+      "stamp": 1
+     }
+    },
+    {
+     "id": "c_market",
+     "type": "shop",
+     "label": "c_market",
+     "xy": [
+      400,
+      600
+     ]
+    },
+    {
+     "id": "c_letter",
+     "type": "story",
+     "label": "c_letter",
+     "xy": [
+      650,
+      400
+     ],
+     "scene": "mc_letter",
+     "requires": {
+      "flags": [
+       "t_mini_oath"
+      ]
+     }
+    },
+    {
+     "id": "c_slot1",
+     "type": "slot",
+     "label": "c_slot1",
+     "xy": [
+      650,
+      150
+     ],
+     "slot": {
+      "pool": "mc_one",
+      "kinds": {
+       "event": 3,
+       "camp": 1
+      },
+      "level": 4
+     }
+    },
+    {
+     "id": "c_slot2",
+     "type": "slot",
+     "label": "c_slot2",
+     "xy": [
+      650,
+      700
+     ],
+     "slot": {
+      "pool": "mc_one",
+      "kinds": {
+       "event": 3,
+       "supply": 1
+      },
+      "level": 4
+     }
+    },
+    {
+     "id": "c_slot3",
+     "type": "slot",
+     "label": "c_slot3",
+     "xy": [
+      900,
+      250
+     ],
+     "slot": {
+      "pool": "mc_one",
+      "kinds": {
+       "event": 1
+      },
+      "level": 4
+     }
+    },
+    {
+     "id": "c_slot4",
+     "type": "slot",
+     "label": "c_slot4",
+     "xy": [
+      900,
+      650
+     ],
+     "slot": {
+      "pool": "mc_one",
+      "kinds": {
+       "event": 2,
+       "battle": 1
+      },
+      "level": 4
+     }
+    },
+    {
+     "id": "c_muster",
+     "type": "camp",
+     "label": "c_muster",
+     "xy": [
+      1150,
+      400
+     ],
+     "role": "muster"
+    },
+    {
+     "id": "c_council",
+     "type": "event",
+     "label": "c_council",
+     "xy": [
+      1350,
+      400
+     ],
+     "role": "council",
+     "event": "ev_mc_council",
+     "phase": "campaign"
+    },
+    {
+     "id": "c_camp",
+     "type": "camp",
+     "label": "c_camp",
+     "xy": [
+      1550,
+      400
+     ],
+     "phase": "campaign"
+    },
+    {
+     "id": "c_boss",
+     "type": "boss",
+     "label": "c_boss",
+     "xy": [
+      1750,
+      400
+     ],
+     "scene": "mc_boss",
+     "phase": "campaign",
+     "fixed": true
+    },
+    {
+     "id": "c_escape",
+     "type": "story",
+     "label": "c_escape",
+     "xy": [
+      1750,
+      700
+     ],
+     "scene": "mc_escape",
+     "phase": "campaign"
+    }
+   ],
+   "links": [
+    {
+     "a": "c_arrive",
+     "b": "c_inn",
+     "legs": 1
+    },
+    {
+     "a": "c_arrive",
+     "b": "c_market",
+     "legs": 1
+    },
+    {
+     "a": "c_inn",
+     "b": "c_slot1",
+     "legs": 1
+    },
+    {
+     "a": "c_inn",
+     "b": "c_letter",
+     "legs": 1
+    },
+    {
+     "a": "c_market",
+     "b": "c_letter",
+     "legs": 1
+    },
+    {
+     "a": "c_market",
+     "b": "c_slot2",
+     "legs": 1
+    },
+    {
+     "a": "c_slot1",
+     "b": "c_slot3",
+     "legs": 1
+    },
+    {
+     "a": "c_letter",
+     "b": "c_slot3",
+     "legs": 1
+    },
+    {
+     "a": "c_slot2",
+     "b": "c_slot4",
+     "legs": 1
+    },
+    {
+     "a": "c_letter",
+     "b": "c_slot4",
+     "legs": 1
+    },
+    {
+     "a": "c_slot3",
+     "b": "c_muster",
+     "legs": 1
+    },
+    {
+     "a": "c_slot4",
+     "b": "c_muster",
+     "legs": 1
+    },
+    {
+     "a": "c_muster",
+     "b": "c_council",
+     "legs": 1
+    },
+    {
+     "a": "c_council",
+     "b": "c_camp",
+     "legs": 1
+    },
+    {
+     "a": "c_camp",
+     "b": "c_boss",
+     "legs": 1
+    },
+    {
+     "a": "c_boss",
+     "b": "c_escape",
+     "legs": 1
+    }
+   ]
+  }
+ ]
+}

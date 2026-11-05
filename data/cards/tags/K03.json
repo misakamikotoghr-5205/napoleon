@@ -1,0 +1,77 @@
+{
+  "_meta": {
+    "owner": "K03",
+    "schema": 1,
+    "brief": "K03 人物牌用到的、W0 征兆家族以外的标签。",
+    "_provenance": {
+      "by": "ai",
+      "task": "K03",
+      "date": "2026-10-13"
+    }
+  },
+  "tags": {
+    "buyer": {
+      "brief": "来买货架上的东西"
+    },
+    "child": {
+      "brief": "家里有了孩子"
+    },
+    "clothing": {
+      "brief": "衣物，年关当衣"
+    },
+    "dock": {
+      "brief": "码头、水边"
+    },
+    "family": {
+      "brief": "家宅或亲人"
+    },
+    "farmer": {
+      "brief": "佃户"
+    },
+    "landlord": {
+      "brief": "孙府"
+    },
+    "medicine": {
+      "brief": "药材"
+    },
+    "merchant": {
+      "brief": "行户、铺户"
+    },
+    "new_face": {
+      "brief": "1939 年新面孔"
+    },
+    "nurse": {
+      "brief": "医院过来的人"
+    },
+    "official": {
+      "brief": "官面一边，1939 年挂在伪区公所名下"
+    },
+    "poor": {
+      "brief": "手头紧，来当铺是为了过年"
+    },
+    "post": {
+      "brief": "邮路、家书"
+    },
+    "rice": {
+      "brief": "米粮"
+    },
+    "rumor": {
+      "brief": "茶馆口风"
+    },
+    "story": {
+      "brief": "主线节点上的人物"
+    },
+    "student": {
+      "brief": "学生"
+    },
+    "winter": {
+      "brief": "腊月寒天"
+    },
+    "woman": {
+      "brief": "女性来客"
+    },
+    "year_end": {
+      "brief": "年关、除夕前的柜台上的事"
+    }
+  }
+}

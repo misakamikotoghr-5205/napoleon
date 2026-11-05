@@ -1,0 +1,452 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1,
+    "brief": "通用事件：算命、庙会、赌摊、系统去转，以及带格子的日常"
+  },
+  "cards": [
+    {
+      "id": "ev.any.fortune_teller",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "weight": 4,
+      "tags": [
+        "fortune",
+        "omen_stranger"
+      ],
+      "must_resolve": false,
+      "opens_fortune": "both",
+      "cost": {
+        "money": 3
+      },
+      "choices": [
+        {
+          "id": "pass",
+          "brief": "不算",
+          "effects": []
+        }
+      ],
+      "art": "illus.ev.any.fortune_teller",
+      "brief": "街口算命摊。花一笔小钱可以求签，也可以测字，两种都开。选项 pass 是不算，走过去。不挡打烊。没理会就是这次机会过去，没有别的后果。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.any.cezi_stall",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "weight": 3,
+      "tags": [
+        "fortune",
+        "omen_stranger"
+      ],
+      "must_resolve": false,
+      "opens_fortune": "cezi",
+      "cost": {
+        "money": 2
+      },
+      "choices": [
+        {
+          "id": "pass",
+          "brief": "不算",
+          "effects": []
+        }
+      ],
+      "art": "illus.ev.any.cezi_stall",
+      "brief": "测字摊。只开测字，不开求签。花一笔小钱。不算就走。和算命摊分成两张，日子里可以只遇到测字。不挡打烊。没理会就是这次机会过去，没有别的后果。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.any.temple_lot",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "weight": 3,
+      "tags": [
+        "fortune",
+        "ritual",
+        "omen_official"
+      ],
+      "must_resolve": false,
+      "opens_fortune": "lot",
+      "cost": {
+        "money": 4
+      },
+      "choices": [
+        {
+          "id": "pass",
+          "brief": "不算",
+          "effects": []
+        }
+      ],
+      "art": "illus.ev.any.temple_lot",
+      "brief": "城隍庙抽签。只开求签。花一笔小钱。不算就走。城镇庙里抽签是寻常事，不绑死哪一年。不挡打烊。没理会就是这次机会过去，没有别的后果。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.any.fair",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "weight": 3,
+      "tags": [
+        "fortune",
+        "omen_wealth"
+      ],
+      "must_resolve": false,
+      "opens_wheel": "wh.fair",
+      "cost": {
+        "money": 6
+      },
+      "choices": [
+        {
+          "id": "pass",
+          "brief": "不去",
+          "effects": []
+        }
+      ],
+      "art": "illus.ev.any.fair",
+      "brief": "庙会。花一笔钱就打开庙会轮盘。不去就走。不挡打烊。轮盘扇区归别人写。没理会就是这次机会过去，没有别的后果。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.any.gamble_stall",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "weight": 3,
+      "tags": [
+        "fortune",
+        "omen_wealth"
+      ],
+      "must_resolve": false,
+      "opens_wheel": "wh.gamble",
+      "cost": {
+        "stake": true
+      },
+      "choices": [
+        {
+          "id": "pass",
+          "brief": "不押",
+          "effects": []
+        }
+      ],
+      "art": "illus.ev.any.gamble_stall",
+      "brief": "赌摊。代价是押一张留着的牌，然后打开赌摊轮盘。不押就走。不挡打烊。押出去的牌落在坏的一段会没掉，规则由轮盘那边定。没理会就是这次机会过去，没有别的后果。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.any.wheel_go",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "tags": [
+        "fortune",
+        "omen_road"
+      ],
+      "must_resolve": false,
+      "art": "illus.ev.any.wheel_go",
+      "brief": "系统牌。权重为零，不进随机牌库。别的效果发一次去转的机会时，把这张发到手上。轮盘是哪一个、要花多少，由发它的时候填上。处理它等于打开那一个轮盘。这张牌自己不写死轮盘。没理会等于这次不去。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.any.rain_leak",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "weight": 5,
+      "tags": [
+        "home",
+        "omen_water"
+      ],
+      "must_resolve": true,
+      "slots": [
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "brief": "钱",
+          "tags": [
+            "official"
+          ],
+          "money_per_coin": 10
+        },
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "brief": "敢爬上去的人",
+          "tags": [
+            "official"
+          ],
+          "attr": "nerve",
+          "max": 2
+        }
+      ],
+      "check": {
+        "need": 2,
+        "on_success": [
+          {
+            "op": "flag",
+            "key": "roof_patched"
+          }
+        ],
+        "on_fail": [
+          {
+            "op": "item_lose",
+            "match": {
+              "pick": "any"
+            },
+            "n": 1,
+            "reason": "k02.reason.repair"
+          }
+        ]
+      },
+      "art": "illus.ev.any.rain_leak",
+      "brief": "铺面漏雨。格子放钱和敢爬上去的人，要两个正面。过了：漏处暂时补上。没过：货架上损失一件。没理会当没过。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.any.curfew",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "weight": 5,
+      "tags": [
+        "official",
+        "omen_official",
+        "omen_road",
+        "bad_omen"
+      ],
+      "must_resolve": true,
+      "slots": [
+        {
+          "id": "paper",
+          "accepts": [
+            "kept"
+          ],
+          "brief": "证件",
+          "tags": [
+            "papers"
+          ]
+        },
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "brief": "胆大的人",
+          "attr": "nerve"
+        }
+      ],
+      "check": {
+        "need": 2,
+        "on_success": [
+          {
+            "op": "flag",
+            "key": "passed_curfew"
+          }
+        ],
+        "on_fail": [
+          {
+            "op": "heat",
+            "delta": 5
+          },
+          {
+            "op": "flag",
+            "key": "stopped_after_curfew"
+          },
+          {
+            "op": "notice",
+            "key": "k02.notice.curfew"
+          }
+        ]
+      },
+      "art": "illus.ev.any.curfew",
+      "brief": "宵禁提前，过街要人查。格子放证件和胆子大的人，要两个正面。过了：这趟过去了。没过：风声涨，记一笔被拦住。没理会当没过。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.any.market_haggle",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "weight": 4,
+      "tags": [
+        "market",
+        "omen_wealth"
+      ],
+      "must_resolve": true,
+      "conditions": {
+        "market_day": true
+      },
+      "slots": [
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "brief": "会说话的人",
+          "tags": [
+            "official"
+          ],
+          "attr": "tongue"
+        },
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "brief": "钱",
+          "tags": [
+            "official"
+          ],
+          "money_per_coin": 10
+        }
+      ],
+      "check": {
+        "need": 2,
+        "on_success": [
+          {
+            "op": "money",
+            "delta": 8,
+            "reason": "k02.reason.market"
+          },
+          {
+            "op": "rep",
+            "delta": 2
+          },
+          {
+            "op": "flag",
+            "key": "market_dealt"
+          }
+        ],
+        "on_fail": [
+          {
+            "op": "rep",
+            "delta": -2
+          }
+        ]
+      },
+      "art": "illus.ev.any.market_haggle",
+      "brief": "只在集市日进牌库。格子放会说话的人和一笔钱去讲价，要两个正面。过了：省下一笔，口碑略好。没过：白忙，口碑略掉。没理会当没过。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.any.alley_row",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "weight": 4,
+      "tags": [
+        "dispute",
+        "omen_dispute"
+      ],
+      "must_resolve": true,
+      "slots": [
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "brief": "会说话的人",
+          "attr": "tongue"
+        },
+        {
+          "id": "favor",
+          "accepts": [
+            "kept"
+          ],
+          "brief": "人情",
+          "tags": [
+            "favor"
+          ]
+        }
+      ],
+      "check": {
+        "need": 2,
+        "on_success": [
+          {
+            "op": "rep",
+            "delta": 3
+          },
+          {
+            "op": "flag",
+            "key": "alley_settled"
+          }
+        ],
+        "on_fail": [
+          {
+            "op": "rep",
+            "delta": -2
+          },
+          {
+            "op": "heat",
+            "delta": 2
+          }
+        ]
+      },
+      "art": "illus.ev.any.alley_row",
+      "brief": "巷口两家拉你评理。格子放会说话的人或一张人情，要两个正面。过了：口碑升。没过：口碑掉，风声微动。没理会当没过。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

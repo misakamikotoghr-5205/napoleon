@@ -1,0 +1,438 @@
+{
+  "_meta": {
+    "owner": "C16",
+    "schema": 1,
+    "brief": "Day 0 opening plus day 1 guide events and anchor rects.",
+    "_provenance": {
+      "by": "ai",
+      "task": "C16",
+      "date": "2026-10-13"
+    }
+  },
+  "anchors": [
+    {
+      "id": "a.month.goals",
+      "x": 400,
+      "y": 60,
+      "w": 480,
+      "h": 140
+    },
+    {
+      "id": "a.wheel.face",
+      "x": 460,
+      "y": 180,
+      "w": 280,
+      "h": 180
+    },
+    {
+      "id": "a.wheel.incense",
+      "x": 780,
+      "y": 200,
+      "w": 140,
+      "h": 80
+    },
+    {
+      "id": "a.scene.notice",
+      "x": 160,
+      "y": 16,
+      "w": 420,
+      "h": 40
+    },
+    {
+      "id": "a.hand",
+      "x": 180,
+      "y": 460,
+      "w": 720,
+      "h": 180
+    },
+    {
+      "id": "a.card@c0002",
+      "x": 200,
+      "y": 480,
+      "w": 120,
+      "h": 150
+    },
+    {
+      "id": "a.counter.look",
+      "x": 440,
+      "y": 240,
+      "w": 180,
+      "h": 48
+    },
+    {
+      "id": "a.mg.spot.atlas",
+      "x": 680,
+      "y": 160,
+      "w": 220,
+      "h": 140
+    },
+    {
+      "id": "a.mg.spot.main",
+      "x": 160,
+      "y": 160,
+      "w": 200,
+      "h": 140
+    },
+    {
+      "id": "a.counter.tier.fair",
+      "x": 440,
+      "y": 320,
+      "w": 160,
+      "h": 48
+    },
+    {
+      "id": "a.scene.ledger",
+      "x": 1060,
+      "y": 80,
+      "w": 180,
+      "h": 100
+    },
+    {
+      "id": "a.tab.shelf",
+      "x": 1060,
+      "y": 200,
+      "w": 180,
+      "h": 100
+    },
+    {
+      "id": "a.counter.stock",
+      "x": 440,
+      "y": 390,
+      "w": 220,
+      "h": 48
+    },
+    {
+      "id": "a.btn.close_day",
+      "x": 1060,
+      "y": 640,
+      "w": 180,
+      "h": 48
+    },
+    {
+      "id": "a.night.offers",
+      "x": 340,
+      "y": 180,
+      "w": 560,
+      "h": 180
+    },
+    {
+      "id": "a.settle.lines",
+      "x": 280,
+      "y": 160,
+      "w": 680,
+      "h": 200
+    },
+    {
+      "id": "a.scene.notebook",
+      "x": 1060,
+      "y": 340,
+      "w": 180,
+      "h": 120
+    },
+    {
+      "id": "a.card.gold@c0009",
+      "x": 180,
+      "y": 400,
+      "w": 140,
+      "h": 180
+    },
+    {
+      "id": "a.hand.gold",
+      "x": 180,
+      "y": 360,
+      "w": 160,
+      "h": 36
+    },
+    {
+      "id": "a.slots.choices",
+      "x": 380,
+      "y": 240,
+      "w": 480,
+      "h": 72
+    },
+    {
+      "id": "a.card.keep@c0010",
+      "x": 24,
+      "y": 280,
+      "w": 150,
+      "h": 40
+    },
+    {
+      "id": "a.hand.kept",
+      "x": 16,
+      "y": 180,
+      "w": 160,
+      "h": 180
+    },
+    {
+      "id": "a.slots.first",
+      "x": 360,
+      "y": 280,
+      "w": 110,
+      "h": 110
+    },
+    {
+      "id": "a.card@c0011",
+      "x": 360,
+      "y": 420,
+      "w": 120,
+      "h": 160
+    },
+    {
+      "id": "a.slots.coins",
+      "x": 500,
+      "y": 280,
+      "w": 220,
+      "h": 72
+    }
+  ],
+  "ops": [
+    {
+      "op": "view",
+      "phase": "month_open",
+      "mode": "shop",
+      "stage": 0,
+      "stage_day": 0,
+      "abs_day": 0,
+      "hand": []
+    },
+    {
+      "op": "first",
+      "mech": "month_open"
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "ui",
+      "name": "panel_opened",
+      "kind": "wheel"
+    },
+    {
+      "op": "first",
+      "mech": "month_wheel"
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "tick",
+      "s": 2
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "first",
+      "mech": "incense"
+    },
+    {
+      "op": "cmd",
+      "cmd": "wheel.offer"
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "ui",
+      "name": "panel_closed",
+      "kind": "wheel"
+    },
+    {
+      "op": "view",
+      "phase": "morning",
+      "mode": "shop",
+      "stage": 0,
+      "stage_day": 1,
+      "abs_day": 1,
+      "hand": [
+        {
+          "uid": "c0002",
+          "must_resolve": true,
+          "gold": false
+        }
+      ]
+    },
+    {
+      "op": "first",
+      "mech": "notice"
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "cmd",
+      "cmd": "day.begin"
+    },
+    {
+      "op": "view",
+      "phase": "day",
+      "mode": "shop",
+      "stage": 0,
+      "stage_day": 1,
+      "abs_day": 1,
+      "hand": [
+        {
+          "uid": "c0002",
+          "must_resolve": true,
+          "gold": false
+        }
+      ]
+    },
+    {
+      "op": "first",
+      "mech": "deal"
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "ui",
+      "name": "hand_selected",
+      "uid": "c0002"
+    },
+    {
+      "op": "first",
+      "mech": "person",
+      "uid": "c0002"
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "ui",
+      "name": "panel_opened",
+      "kind": "counter"
+    },
+    {
+      "op": "first",
+      "mech": "counter"
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "cmd",
+      "cmd": "mg.request"
+    },
+    {
+      "op": "first",
+      "mech": "mg.spot"
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "cmd",
+      "cmd": "mg.report"
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "cmd",
+      "cmd": "counter.offer"
+    },
+    {
+      "op": "first",
+      "mech": "ticket"
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "ui",
+      "name": "panel_closed",
+      "kind": "counter"
+    },
+    {
+      "op": "first",
+      "mech": "shelf"
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "ui",
+      "name": "hand_selected",
+      "uid": "c0003"
+    },
+    {
+      "op": "ui",
+      "name": "panel_opened",
+      "kind": "counter"
+    },
+    {
+      "op": "first",
+      "mech": "buyer"
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "cmd",
+      "cmd": "counter.pick_stock"
+    },
+    {
+      "op": "ui",
+      "name": "panel_closed",
+      "kind": "counter"
+    },
+    {
+      "op": "view",
+      "phase": "day",
+      "mode": "shop",
+      "stage": 0,
+      "stage_day": 1,
+      "abs_day": 1,
+      "hand": []
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "cmd",
+      "cmd": "day.end"
+    },
+    {
+      "op": "view",
+      "phase": "night",
+      "mode": "shop",
+      "stage": 0,
+      "stage_day": 1,
+      "abs_day": 1,
+      "hand": []
+    },
+    {
+      "op": "first",
+      "mech": "night"
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "cmd",
+      "cmd": "night.choose"
+    },
+    {
+      "op": "view",
+      "phase": "settle",
+      "mode": "shop",
+      "stage": 0,
+      "stage_day": 1,
+      "abs_day": 1,
+      "hand": []
+    },
+    {
+      "op": "first",
+      "mech": "settle"
+    },
+    {
+      "op": "eval"
+    },
+    {
+      "op": "cmd",
+      "cmd": "settle.next"
+    }
+  ]
+}

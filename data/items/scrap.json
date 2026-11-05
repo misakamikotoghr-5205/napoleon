@@ -1,0 +1,106 @@
+{
+  "items": {
+    "newspapers": {
+      "name": "旧报纸（一捆）",
+      "cat": "scrap",
+      "cat_cn": "破烂",
+      "market": 12,
+      "claimed": 0,
+      "fake": false,
+      "grade": "",
+      "origin": "normal",
+      "contraband": false,
+      "est": [3, 8],
+      "suggest": 7,
+      "ask_w": 1.0,
+      "weight": "十二斤",
+      "tags": [],
+      "sprite": "art/items/newspapers.png",
+      "ticket_condition": "",
+      "parts": [
+        {
+          "id": "weigh",
+          "label": "上小秤称重",
+          "text": "十二斤。废纸一斤一蚨。",
+          "tool": "scale",
+          "rect": [8, 14, 48, 42],
+          "est": [3, 8]
+        },
+        {
+          "id": "flip",
+          "label": "翻一翻报纸",
+          "text": "报纸中间夹着三张油印的小报。",
+          "tool": "hand",
+          "rect": [8, 14, 48, 42],
+          "event": "tabloid"
+        }
+      ],
+      "ref": "newspapers"
+    },
+    "ciyuan": {
+      "name": "《辞源》（一部）",
+      "cat": "scrap",
+      "cat_cn": "破烂",
+      "market": 30,
+      "claimed": 0,
+      "fake": false,
+      "grade": "",
+      "origin": "normal",
+      "contraband": false,
+      "est": [25, 45],
+      "suggest": 18,
+      "ask_w": 1.0,
+      "weight": "",
+      "tags": [],
+      "sprite": "art/items/ciyuan.png",
+      "ticket_condition": "",
+      "parts": [
+        {
+          "id": "check",
+          "label": "看品相",
+          "text": "书角卷了，不缺页。有用的旧书，值三十上下。",
+          "tool": "hand",
+          "rect": [10, 6, 40, 52],
+          "est": [25, 45]
+        },
+        {
+          "id": "flyleaf",
+          "label": "翻扇页",
+          "text": "扇页里夹着几页稿纸，字迹工整，题目是《春水》。",
+          "tool": "hand",
+          "rect": [10, 2, 42, 56],
+          "flag": "found_manuscript"
+        }
+      ],
+      "ref": "ciyuan"
+    },
+    "tabloid": {
+      "name": "油印小报《太湖快讯》（三张）",
+      "cat": "contraband_paper",
+      "cat_cn": "禁报",
+      "market": 0,
+      "claimed": 0,
+      "fake": false,
+      "grade": "",
+      "origin": "contraband",
+      "contraband": true,
+      "est": [0, 0],
+      "suggest": 0,
+      "ask_w": 0.1,
+      "weight": "",
+      "tags": [],
+      "sprite": "art/items/tabloid.png",
+      "ticket_condition": "",
+      "parts": [
+        {
+          "id": "read",
+          "label": "看内容",
+          "text": "上面写着县城据点的消息：哪天换防，哪条路设了卡。",
+          "tool": "magnifier",
+          "rect": [6, 6, 52, 52]
+        }
+      ],
+      "ref": "tabloid"
+    }
+  }
+}

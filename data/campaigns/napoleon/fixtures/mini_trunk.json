@@ -1,0 +1,493 @@
+{
+ "id": "mini_trunk",
+ "version": 2,
+ "title": "迷你主干",
+ "initial": {
+  "treasury": 1000,
+  "morale": 60,
+  "heat": 10,
+  "vitality": 70,
+  "construction": 0,
+  "exploration": 0
+ },
+ "chapters": [
+  {
+   "id": "mt_one",
+   "title": "第一章",
+   "currency": "franc",
+   "currency_name": "法郎",
+   "treasury_start": 1000,
+   "scene_ids": [
+    "mt_arrive",
+    "mt_battle1"
+   ]
+  },
+  {
+   "id": "mt_two",
+   "title": "第二章",
+   "currency": "franc",
+   "currency_name": "法郎",
+   "treasury_start": 1200,
+   "scene_ids": [
+    "mt_march",
+    "mt_boss2",
+    "mt_fork"
+   ]
+  }
+ ],
+ "characters": [
+  {
+   "id": "hero",
+   "name": "维尔福",
+   "role": "军需官"
+  }
+ ],
+ "items": [
+  {
+   "id": "mini_watch",
+   "name": "怀表",
+   "chapter": "mt_one",
+   "description": "一块旧怀表。"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "mt_arrive",
+   "chapter": "mt_one",
+   "date": "1800-01-01",
+   "title": "抵达",
+   "location": "抵达",
+   "speaker": "hero",
+   "body": [
+    "抵达。"
+   ],
+   "item_ids": [],
+   "appraisals": [
+    {
+     "id": "mt_seal",
+     "kind": "spot",
+     "label": "看封蜡",
+     "observation": "蜡上有锚印。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "mt_ask",
+     "label": "四处打听",
+     "advance": false,
+     "effects": {
+      "morale": 2
+     }
+    },
+    {
+     "id": "mt_take_letter",
+     "label": "收下那封信",
+     "flags": [
+      "t_mini_letter"
+     ],
+     "items": [
+      "mini_watch"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     },
+     "requires_clues": [
+      "mt_seal"
+     ]
+    },
+    {
+     "id": "mt_plain",
+     "label": "照常上路",
+     "items": [
+      "mini_watch"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mt_battle1",
+   "chapter": "mt_one",
+   "date": "1800-01-01",
+   "title": "第一仗",
+   "location": "第一仗",
+   "speaker": "hero",
+   "body": [
+    "第一仗。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "mt_after1",
+     "label": "收兵"
+    }
+   ]
+  },
+  {
+   "id": "mt_march",
+   "chapter": "mt_two",
+   "date": "1800-01-01",
+   "title": "行军",
+   "location": "行军",
+   "speaker": "hero",
+   "body": [
+    "行军。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "mt_swear",
+     "label": "立誓随驾",
+     "flags": [
+      "t_mini_oath"
+     ],
+     "rogue": {
+      "recruit": "corso",
+      "coins": {
+       "medal": 2
+      }
+     }
+    },
+    {
+     "id": "mt_march_on",
+     "label": "继续行军"
+    }
+   ]
+  },
+  {
+   "id": "mt_boss2",
+   "chapter": "mt_two",
+   "date": "1800-01-01",
+   "title": "第二仗",
+   "location": "第二仗",
+   "speaker": "hero",
+   "body": [
+    "第二仗。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "mt_after2",
+     "label": "收兵"
+    }
+   ]
+  },
+  {
+   "id": "mt_fork",
+   "chapter": "mt_two",
+   "date": "1800-01-01",
+   "title": "岔路口",
+   "location": "岔路口",
+   "speaker": "hero",
+   "body": [
+    "岔路口。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "fork_conquest",
+     "label": "随皇帝北上",
+     "branch": "conquest",
+     "flags": [
+      "k_mini_marched"
+     ]
+    },
+    {
+     "id": "fork_ocean",
+     "label": "随驾管钱袋",
+     "branch": "ocean",
+     "flags": [
+      "o_mini_followed"
+     ]
+    },
+    {
+     "id": "fork_cristo",
+     "label": "携信去马赛",
+     "branch": "cristo",
+     "flags": [
+      "m_mini_letter_carried"
+     ]
+    }
+   ]
+  }
+ ],
+ "endings": [
+  {
+   "id": "bankruptcy",
+   "kind": "failure",
+   "title": "军费告罄",
+   "body": [
+    "钱袋见底。"
+   ]
+  },
+  {
+   "id": "loss",
+   "kind": "failure",
+   "title": "大军溃散",
+   "body": [
+    "人困马乏。"
+   ]
+  },
+  {
+   "id": "blockade",
+   "kind": "failure",
+   "title": "全区起义",
+   "body": [
+    "四处都是追兵。"
+   ]
+  }
+ ],
+ "tuning": {},
+ "rules": {
+  "failures": [
+   {
+    "ending": "bankruptcy",
+    "reason": "treasury",
+    "when": {
+     "metric": {
+      "treasury": [
+       "<=",
+       0
+      ]
+     }
+    }
+   },
+   {
+    "ending": "loss",
+    "reason": "vitality",
+    "when": {
+     "metric": {
+      "vitality": [
+       "<=",
+       0
+      ]
+     }
+    }
+   },
+   {
+    "ending": "blockade",
+    "reason": "heat",
+    "when": {
+     "metric": {
+      "heat": [
+       ">=",
+       100
+      ]
+     }
+    }
+   }
+  ],
+  "endings": [],
+  "default_ending": "loss",
+  "exclusive_flags": [],
+  "actions": {
+   "build": {
+    "metric": "construction",
+    "chapters": [],
+    "cost": 200,
+    "gain": 25
+   },
+   "explore": {
+    "metric": "exploration",
+    "chapters": [],
+    "cost": 200,
+    "gain": 25
+   },
+   "fund": {
+    "chapters": [],
+    "yes": {
+     "cost": 1000,
+     "effects": {
+      "morale": 15
+     },
+     "flags": []
+    },
+    "no": {
+     "flags": []
+    }
+   }
+  },
+  "signs": {
+   "white": {
+    "daily": {},
+    "map": {}
+   },
+   "red": {
+    "daily": {
+     "heat": 10
+    },
+    "map": {
+     "pass_supply": 1
+    }
+   },
+   "black": {
+    "daily": {
+     "treasury": -10,
+     "heat": -10
+    },
+    "map": {
+     "mp": -1
+    }
+   }
+  }
+ },
+ "events": [
+  {
+   "id": "ev_mt_council1",
+   "pool": "fixed",
+   "council": true,
+   "title": "军议",
+   "location": "营帐",
+   "speaker": "hero",
+   "body": [
+    "三条方略。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "cp",
+     "label": "多带军令",
+     "boss_mod": {
+      "cp_bonus": 2
+     }
+    },
+    {
+     "id": "morale",
+     "label": "先挫敌锐气",
+     "boss_mod": {
+      "enemy_morale": -2
+     }
+    },
+    {
+     "id": "prep",
+     "label": "多一回合布阵",
+     "boss_mod": {
+      "prep_turn": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_mt_council2",
+   "pool": "fixed",
+   "council": true,
+   "title": "军议",
+   "location": "营帐",
+   "speaker": "hero",
+   "body": [
+    "三条方略。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "cp",
+     "label": "多带军令",
+     "boss_mod": {
+      "cp_bonus": 2
+     }
+    },
+    {
+     "id": "morale",
+     "label": "先挫敌锐气",
+     "boss_mod": {
+      "enemy_morale": -2
+     }
+    },
+    {
+     "id": "prep",
+     "label": "多一回合布阵",
+     "boss_mod": {
+      "prep_turn": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_mt_pool",
+   "pool": "mt_two",
+   "weight": 3,
+   "once": true,
+   "chapters": [
+    "mt_two"
+   ],
+   "title": "路边的客商",
+   "location": "路边",
+   "speaker": "hero",
+   "body": [
+    "客商兜售草料。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "buy",
+     "label": "买些草料",
+     "rogue": {
+      "coins": {
+       "supply": 2
+      }
+     }
+    },
+    {
+     "id": "pass",
+     "label": "不理会"
+    }
+   ]
+  },
+  {
+   "id": "ev_mt_audience",
+   "interlude": "audience",
+   "chapters": [
+    "mt_two"
+   ],
+   "title": "召见",
+   "location": "营帐",
+   "speaker": "hero",
+   "body": [
+    "上头问话。"
+   ],
+   "appraisals": [],
+   "questions": [
+    {
+     "id": "q1",
+     "q": "粮草够吗",
+     "a": {
+      "id": "a",
+      "label": "够",
+      "rogue": {
+       "coins": {
+        "medal": 1
+       }
+      }
+     },
+     "b": {
+      "id": "b",
+      "label": "不够",
+      "effects": {
+       "morale": -2
+      }
+     }
+    },
+    {
+     "id": "q2",
+     "q": "士气如何",
+     "a": {
+      "id": "a",
+      "label": "高",
+      "effects": {
+       "morale": 2
+      }
+     },
+     "b": {
+      "id": "b",
+      "label": "低"
+     }
+    }
+   ]
+  }
+ ]
+}

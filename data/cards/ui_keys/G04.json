@@ -1,0 +1,94 @@
+{
+  "_meta": {
+    "owner": "G04",
+    "schema": 1,
+    "_provenance": {
+      "by": "ai",
+      "task": "G04",
+      "date": "2026-10-13"
+    }
+  },
+  "keys": {
+    "g04.reason.pawn_out": {
+      "brief": "Economic interface key: reason.pawn_out"
+    },
+    "g04.reason.sell_in": {
+      "brief": "Economic interface key: reason.sell_in"
+    },
+    "g04.reason.buy_out": {
+      "brief": "Economic interface key: reason.buy_out"
+    },
+    "g04.reason.redeem_in": {
+      "brief": "Economic interface key: reason.redeem_in"
+    },
+    "g04.reason.interest": {
+      "brief": "Economic interface key: reason.interest"
+    },
+    "g04.reason.fee": {
+      "brief": "Economic interface key: reason.fee"
+    },
+    "g04.reason.compensate": {
+      "brief": "Economic interface key: reason.compensate"
+    },
+    "g04.reason.fund": {
+      "brief": "Economic interface key: reason.fund"
+    },
+    "g04.reason.start": {
+      "brief": "Economic interface key: reason.start"
+    },
+    "g04.reason.currency": {
+      "brief": "Economic interface key: reason.currency"
+    },
+    "g04.reason.expenses": {
+      "brief": "Economic interface key: reason.expenses"
+    },
+    "g04.reason.buy_back": {
+      "brief": "Economic interface key: reason.buy_back"
+    },
+    "g04.ticket.number": {
+      "brief": "Economic interface key: ticket.number"
+    },
+    "g04.ticket.overdue": {
+      "brief": "Economic interface key: ticket.overdue"
+    },
+    "g04.ticket.forfeited": {
+      "brief": "Economic interface key: ticket.forfeited"
+    },
+    "g04.counter.intake_blocked": {
+      "brief": "Economic interface key: counter.intake_blocked"
+    },
+    "g04.month.expenses": {
+      "brief": "Economic interface key: month.expenses"
+    },
+    "g04.month.tickets": {
+      "brief": "Economic interface key: month.tickets"
+    },
+    "g04.month.forfeit": {
+      "brief": "Economic interface key: month.forfeit"
+    },
+    "g04.cond.0": {
+      "brief": "Economic interface key: cond.0"
+    },
+    "g04.cond.1": {
+      "brief": "Economic interface key: cond.1"
+    },
+    "g04.cond.2": {
+      "brief": "Economic interface key: cond.2"
+    },
+    "g04.cond.3": {
+      "brief": "Economic interface key: cond.3"
+    },
+    "g04.cond.4": {
+      "brief": "Economic interface key: cond.4"
+    },
+    "g04.counter.lever.caught": {
+      "brief": "说破（主创 10-25）：掌柜点中了真破绽，客人心虚改口、让价。只是客人的一句话，不写“识破”这类结论；人物牌可以在自己的 lines.caught 里另写。参数 price = 客人新报的价。"
+    },
+    "g04.counter.lever.soft": {
+      "brief": "说破（主创 10-25）：掌柜说中的只是旧痕、轻一点点这类不算毛病的，客人认了，稍让一点。只是一句客气话；参数 price = 客人新报的价。"
+    },
+    "g04.counter.lever.offended": {
+      "brief": "说破（主创 10-25）：掌柜把没毛病的说成有毛病，客人不服、有点恼，不肯再让（耐心掉一截，底价抬高，界面不写数）。人物牌可以在自己的 lines.offended 里另写。参数 price = 客人现在的开价。"
+    }
+  }
+}

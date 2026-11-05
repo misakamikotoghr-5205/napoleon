@@ -1,0 +1,66 @@
+C13 #166 门禁回执（合同 §12.1 / §13.2）
+Godot 4.7.stable.official.5b4e0cb0f
+集成基线 origin/claude/festive-ride-vud32a = 7203d02bb465932a25f90c6245809bbac11d4741
+合并前 PR HEAD = bf2ab5746231f2c1b47eee65b9d96ef5e175fd1c
+待测合并树 = b868ffd26c7b6b1404c8f1de2de2ed95145fc848
+（本回执和指引截图是该合并树上的后续提交。测试不读 PNG。）
+
+结论：红。不把 238 项单项 PASS 写成全量全绿。未改 runner，未过滤 ERROR。
+
+真银元客人：仍等 #167 裁决。本树和 tip 都没有 p.stranger_coindealer.any.pawn_silver。
+data/cards 里 silver.yuan 只出现在物品规格（items/launch_items.json、templates_extra.json、minigames/items.json、_examples/minigames/items.json），没有客人把它带进柜台。没有伪造客人，没有合入 #167。柜台下真路径（客人 → mg.request → G04 → autoplay(0.8) → mg.report）因此仍未交付。截图是夹具小游戏，不是这条真路径。正式音频样本仍缺；Dummy 不建 AudioStreamGenerator，静音波形不算正式音频验收。
+
+1) 全量卡牌测试
+命令：JOBS=2 GODOT=/tmp/godot/Godot_v4.7-stable_linux.x86_64 bash tools/run_card_tests.sh
+（未设 CARDS_SUITES）
+退出码：1
+清单：238/238 ✓，含 G06_golden、C13_guide、C13_guide_k16。
+数据校验：✓ CARDS VALID 1091 cards, 0 errors
+import：✗（进程退出码 0，日志有 ERROR）
+    ERROR: Malformed message!
+    at: process_message (editor/debugger/debug_adapter/debug_adapter_protocol.cpp:854)
+未把这条 debug adapter ERROR 当成豁免。同一 tip 上 C07 树的 G06_golden 是红的；本树（没有例子集四条泛泛签）G06_golden 是 ✓。所以那条红不在本 PR。
+
+末 20 行：
+✓ K14_next_day_chaos
+✓ K15_audit_tools
+✓ K16_validate
+✓ K16_validate_strict
+✓ K16_guide_coverage
+✓ K16_tutorial
+✓ K15_missing_text_real
+✓ W0_validate_examples
+✓ W0_fixtures_up_to_date
+✓ K16_d1_3_mock
+✓ W0_engine
+✓ W0_skeleton
+✓ W0_validator
+✓ W0_table_3days
+✓ W0_mock
+✓ W0_stage
+✓ W0_next_day
+卡牌版：238 项清单测试；日志：/tmp/tmp.jbjJH4lxE7
+卡牌版测试失败
+
+2) 旧版冒烟
+命令：GODOT=/tmp/godot/Godot_v4.7-stable_linux.x86_64 bash tools/run_legacy_smoke.sh
+退出码：1
+import 同样 ✗：ERROR: Malformed message!（debug_adapter_protocol.cpp:854），进程退出码 0。
+其余全 ✓：数据校验、对白框、验货找不同、小镇数据与轮盘规则、暂停菜单、过路客人、
+全流程核心 fair、全流程界面 fair、小镇自动试玩 2 天、主入口 --cards。
+末行：旧版冒烟失败
+
+3) 截图（不进清单）
+命令退出码 0。六张都是 1280×720。save_png 返回 0。
+xvfb-run -a -s "-screen 0 1280x720x24" $GODOT --rendering-driver opengl3 --audio-driver Dummy --path . \
+  -s res://scripts/tests/cards/C13/shot_coin_ring.gd -- --out=scripts/tests/cards/C13/shots
+SHOT：01_open.png 02_timing.png 03_listen.png 04_compare.png 05_clink.png guide_gd.mg.coin_ring.png
+01–05 与拍之前字节相同。guide_gd.mg.coin_ring.png 这次有新字节。
+这些画面是夹具上的开局、时机条、听、对比、相碰和指引，不是 #167 的真银元客人。
+
+2026-10-16 现状（未重跑）
+
+tip origin/claude/festive-ride-vud32a 已合入 fe55179a04c453edd70160dd690a94f31306b94f（#189 K18 宠物）。
+#167 仍 OPEN，head a815d39。真银元客人 p.stranger_coindealer.any.pawn_silver 不在本分支。不伪造客人，不 cherry-pick #167。
+上一份红回执是对照旧 tip 7203d02 的实测：run_card_tests.sh 与 run_legacy_smoke.sh 都是 exit 1，原因是 import ERROR: Malformed message!，未豁免，不是全绿。
+这次没有重跑 Godot。不能把旧回执说成新 tip 全绿。

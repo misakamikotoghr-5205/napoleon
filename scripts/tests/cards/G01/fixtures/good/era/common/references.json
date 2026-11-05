@@ -1,0 +1,100 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1
+  },
+  "cards": [
+    {
+      "id": "ev.fixture.refs",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "omen_family"
+      ],
+      "effects": {
+        "on_resolve": [
+          {
+            "op": "add_card",
+            "card": "pr.cell",
+            "to": "hand"
+          },
+          {
+            "op": "add_card",
+            "card": "kp.ma_owes",
+            "to": "hand"
+          },
+          {
+            "op": "add_card",
+            "card": "kp.mystery_box",
+            "to": "hand"
+          },
+          {
+            "op": "add_card",
+            "card": "kp.liangmin",
+            "to": "hand"
+          },
+          {
+            "op": "add_card",
+            "card": "kp.brother_note",
+            "to": "hand"
+          },
+          {
+            "op": "add_card",
+            "card": "ev.any.demand_return",
+            "to": "hand"
+          },
+          {
+            "op": "add_card",
+            "card": "nw.any.family_word",
+            "to": "hand"
+          },
+          {
+            "op": "add_card",
+            "card": "bf.wheel",
+            "to": "hand"
+          },
+          {
+            "op": "add_card",
+            "card": "bf.any.mystery_box",
+            "to": "hand"
+          },
+          {
+            "op": "add_card",
+            "card": "bf.any.ship_ticket",
+            "to": "hand"
+          },
+          {
+            "op": "add_card",
+            "card": "p.any.redeem",
+            "to": "hand"
+          },
+          {
+            "op": "add_card",
+            "card": "ev.any.wheel_go",
+            "to": "hand"
+          },
+          {
+            "op": "add_card",
+            "card": "tk.1938.de196",
+            "to": "hand"
+          },
+          {
+            "op": "add_card",
+            "card": "p.brother.1938.farewell",
+            "to": "hand"
+          }
+        ],
+        "on_expire": []
+      },
+      "brief": "TEST",
+      "_provenance": {
+        "by": "ai",
+        "task": "G01",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

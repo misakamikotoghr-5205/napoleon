@@ -1,0 +1,285 @@
+{
+  "id": "d2_xiaoding_return",
+  "npc": "xiaoding",
+  "mode": "sell",
+  "stock": [
+    "quinine"
+  ],
+  "buyer_prices": {
+    "quinine": {
+      "offer": 60,
+      "max": 80
+    }
+  },
+  "pre": [
+    {
+      "op": "set",
+      "flag": "xiaoding_returned",
+      "value": true
+    },
+    {
+      "op": "set",
+      "flag": "xiaoding_repaid",
+      "value": 0
+    },
+    {
+      "op": "set",
+      "flag": "xiaoding_quinine",
+      "value": "none"
+    },
+    {
+      "op": "narr",
+      "text": "巷口传来一阵急促的脚步声，是小丁。"
+    }
+  ],
+  "intro": [
+    {
+      "op": "narr",
+      "text": "小丁跑进门来，额上全是汗，怀里揣着几张皱巴巴的毛票。"
+    },
+    {
+      "op": "if",
+      "cond": "(str(flag('xiaoding_loan')) in ['20', '20.0'])",
+      "then": [
+        {
+          "op": "repay",
+          "debtor": "xiaoding",
+          "amount": 20,
+          "note": "小丁还借的抓药钱"
+        },
+        {
+          "op": "if",
+          "cond": "var('repaid') >= 20",
+          "then": [
+            {
+              "op": "set",
+              "flag": "xiaoding_repaid",
+              "value": 20
+            },
+            {
+              "op": "say",
+              "who": "xiaoding",
+              "text": "小、小掌柜……钱还你。一个子儿都没少，我、我数了好几遍。"
+            }
+          ]
+        },
+        {
+          "op": "if",
+          "cond": "var('repaid') > 0 and var('repaid') < 20",
+          "then": [
+            {
+              "op": "set",
+              "flag": "xiaoding_repaid",
+              "value": 10
+            },
+            {
+              "op": "say",
+              "who": "xiaoding",
+              "text": "就、就这些……先还这些。剩下的，我、我下个月一定还。"
+            }
+          ]
+        },
+        {
+          "op": "if",
+          "cond": "var('repaid') <= 0",
+          "then": [
+            {
+              "op": "set",
+              "flag": "xiaoding_repaid",
+              "value": 0
+            },
+            {
+              "op": "say",
+              "who": "xiaoding",
+              "text": "我、我手里实在没有……小掌柜，宽、宽限我些日子。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "say",
+      "who": "xiaoding",
+      "text": "小、小掌柜，孙家的管家这两天到处问，说库房少了一袋米……您、您可别跟人讲是我说的。"
+    },
+    {
+      "op": "note",
+      "kind": "消息",
+      "text": "孙府的管家这两天到处问，库房少了一袋米的事。",
+      "source": "heard",
+      "via": "xiaoding"
+    },
+    {
+      "op": "say",
+      "who": "xiaoding",
+      "text": "我娘还在发冷发热，大夫说要奈宁。小、小掌柜，您这儿……还有没有？"
+    },
+    {
+      "op": "if",
+      "cond": "not stock_has('quinine')",
+      "then": [
+        {
+          "op": "say",
+          "who": "xiaoding",
+          "text": "没、没有啊……那我再去别处问问。"
+        },
+        {
+          "op": "set",
+          "flag": "xiaoding_quinine",
+          "value": "noquinine"
+        },
+        {
+          "op": "note",
+          "kind": "消息",
+          "text": "小丁来买奈宁给娘抓药，店里没有货。",
+          "source": "seen"
+        },
+        {
+          "op": "end",
+          "result": "noquinine"
+        }
+      ]
+    },
+    {
+      "op": "say",
+      "who": "xiaoding",
+      "text": "有、有吗？多、多少钱……我、我先看看。"
+    }
+  ],
+  "deals": [
+    {
+      "id": "credit",
+      "label": "赊给他奈宁（记一张借条）",
+      "when": "stock_has('quinine')",
+      "steps": [
+        {
+          "op": "move_item",
+          "def": "quinine",
+          "to": "npc:xiaoding",
+          "note": "奈宁赊给小丁"
+        },
+        {
+          "op": "debt",
+          "debtor": "xiaoding",
+          "creditor": "player",
+          "amount": 60,
+          "cash": false,
+          "note": "小丁赊奈宁"
+        },
+        {
+          "op": "stat",
+          "stat": "favor:xiaoding",
+          "delta": 8,
+          "why": "赊奈宁给小丁"
+        },
+        {
+          "op": "stat",
+          "stat": "benxin",
+          "delta": 2,
+          "why": "赊奈宁给小丁"
+        },
+        {
+          "op": "set",
+          "flag": "xiaoding_quinine",
+          "value": "credit"
+        },
+        {
+          "op": "say",
+          "who": "xiaoding",
+          "text": "小、小掌柜……我记着，一定还。"
+        }
+      ]
+    },
+    {
+      "id": "gift",
+      "label": "白送奈宁",
+      "when": "stock_has('quinine')",
+      "steps": [
+        {
+          "op": "move_item",
+          "def": "quinine",
+          "to": "npc:xiaoding",
+          "note": "白送小丁奈宁"
+        },
+        {
+          "op": "stat",
+          "stat": "favor:xiaoding",
+          "delta": 12,
+          "why": "白送小丁奈宁"
+        },
+        {
+          "op": "stat",
+          "stat": "benxin",
+          "delta": 3,
+          "why": "白送小丁奈宁"
+        },
+        {
+          "op": "set",
+          "flag": "xiaoding_quinine",
+          "value": "gift"
+        },
+        {
+          "op": "say",
+          "who": "xiaoding",
+          "text": "小、小掌柜……我、我不知道怎么谢您。"
+        }
+      ]
+    },
+    {
+      "id": "refuse",
+      "label": "不卖",
+      "steps": [
+        {
+          "op": "stat",
+          "stat": "favor:xiaoding",
+          "delta": -3,
+          "why": "不肯卖奈宁给小丁"
+        },
+        {
+          "op": "set",
+          "flag": "xiaoding_quinine",
+          "value": "refused"
+        },
+        {
+          "op": "note",
+          "kind": "消息",
+          "text": "小丁来买奈宁给娘抓药，如花没有卖。",
+          "source": "seen"
+        }
+      ]
+    }
+  ],
+  "on_accept": [
+    {
+      "op": "set",
+      "flag": "xiaoding_quinine",
+      "value": "bought"
+    },
+    {
+      "op": "stat",
+      "stat": "favor:xiaoding",
+      "delta": 4,
+      "why": "照价卖奈宁给小丁"
+    },
+    {
+      "op": "say",
+      "who": "xiaoding",
+      "text": "够、够了……多谢小掌柜！"
+    }
+  ],
+  "on_leave": [
+    {
+      "op": "set",
+      "flag": "xiaoding_quinine",
+      "value": "walked_away"
+    },
+    {
+      "op": "stat",
+      "stat": "favor:xiaoding",
+      "delta": -2,
+      "why": "小丁买不起奈宁，走了"
+    }
+  ],
+  "outro": [],
+  "post": []
+}

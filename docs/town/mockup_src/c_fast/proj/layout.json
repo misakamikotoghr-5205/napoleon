@@ -1,0 +1,97 @@
+{
+ "facades": {
+  "tea": {
+   "tex": "f_tea.png",
+   "w": 4.625,
+   "h": 4.0625,
+   "lanterns": [
+    [
+     0.75,
+     1.8125
+    ],
+    [
+     3.875,
+     1.8125
+    ]
+   ],
+   "top_px": 28,
+   "pent_y": 1.3125
+  },
+  "pawn": {
+   "tex": "f_pawn.png",
+   "w": 4.375,
+   "h": 4.0625,
+   "lanterns": [
+    [
+     0.375,
+     1.875
+    ],
+    [
+     4.0,
+     1.875
+    ]
+   ],
+   "top_px": 42,
+   "pent_y": 1.3125
+  },
+  "rice": {
+   "tex": "f_rice.png",
+   "w": 4.125,
+   "h": 2.9375,
+   "lanterns": [],
+   "top_px": 32
+  },
+  "pharm": {
+   "tex": "f_pharm.png",
+   "w": 3.875,
+   "h": 4.0625,
+   "lanterns": [],
+   "top_px": 28,
+   "pent_y": 1.3125
+  },
+  "police": {
+   "tex": "f_police.png",
+   "w": 4.125,
+   "h": 2.9375,
+   "lanterns": [],
+   "top_px": 30
+  },
+  "post": {
+   "tex": "f_post.png",
+   "w": 3.875,
+   "h": 4.0625,
+   "lanterns": [],
+   "top_px": 28,
+   "pent_y": 1.3125
+  },
+  "sun": {
+   "tex": "f_sun.png",
+   "w": 5.75,
+   "h": 3.625,
+   "lanterns": [
+    [
+     1.75,
+     0.625
+    ],
+    [
+     4.0,
+     0.625
+    ]
+   ],
+   "top_px": 22
+  }
+ },
+ "gable": {
+  "tex": "f_gable.png",
+  "w": 3.5,
+  "h": 6.75
+ },
+ "bubble_tip": [
+  146,
+  116
+ ],
+ "lock_tip": [
+  75,
+  52
+ ]
+}

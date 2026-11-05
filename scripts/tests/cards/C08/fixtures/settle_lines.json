@@ -1,0 +1,123 @@
+{
+  "_meta": {
+    "owner": "C08",
+    "schema": 1,
+    "brief": "日结七类行各一：当票、留牌、条子、钱、档位字、黄历、金色牌走了",
+    "_provenance": {
+      "by": "ai",
+      "task": "C08",
+      "date": "2026-10-13"
+    }
+  },
+  "queries": {
+    "settle_report|{}": {
+      "lines": [
+        {
+          "args": {
+            "days": 14,
+            "no": 1
+          },
+          "key": "g02.settle.ticket"
+        },
+        {
+          "args": {
+            "days": 1
+          },
+          "key": "g02.settle.kept"
+        },
+        {
+          "args": {
+            "days": 6
+          },
+          "key": "g02.settle.demand"
+        },
+        {
+          "args": {
+            "money": 12
+          },
+          "key": "g02.settle.money"
+        },
+        {
+          "args": {
+            "heat_key": "g03.tier.heat.0",
+            "rep_key": "g03.tier.rep.2"
+          },
+          "key": "g02.settle.tier"
+        },
+        {
+          "args": {},
+          "key": "g02.settle.almanac"
+        },
+        {
+          "args": {
+            "def": "p.brother.1938.farewell"
+          },
+          "key": "g02.settle.gold_left"
+        }
+      ]
+    }
+  },
+  "responses": [
+    {
+      "cmd": "settle.next",
+      "events": [
+        [
+          "phase_changed",
+          "settle",
+          "morning"
+        ]
+      ],
+      "match": {},
+      "patch": [
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "morning"
+        }
+      ],
+      "result": {
+        "err": "",
+        "next_phase": "morning",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    }
+  ],
+  "view": {
+    "busy": false,
+    "date": {
+      "abs_day": 1,
+      "d": 1,
+      "era": "1938",
+      "m": 3,
+      "minute": 900,
+      "stage": 0,
+      "stage_day": 1,
+      "stage_days": 30,
+      "weekday": 1,
+      "y": 1938
+    },
+    "hand": [],
+    "heat_tier": 0,
+    "mode": "shop",
+    "money": {
+      "amount": 118,
+      "currency": "fabi"
+    },
+    "night_offers": [],
+    "phase": "settle",
+    "rep_tier": 1,
+    "stage": {
+      "sealed": false,
+      "set": "counter",
+      "time": "night"
+    },
+    "v": 1
+  }
+}

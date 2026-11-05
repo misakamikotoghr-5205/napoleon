@@ -1,0 +1,107 @@
+{
+  "_meta": {
+    "owner": "C14",
+    "schema": 1,
+    "brief": "称分量小游戏的界面键。正文由人写。",
+    "_provenance": {
+      "by": "ai",
+      "task": "C14",
+      "date": "2026-10-25"
+    }
+  },
+  "keys": {
+    "c14.title": {
+      "brief": "称分量这一屏的标题"
+    },
+    "c14.tool.dengzi": {
+      "brief": "这局用的是戥子（小秤）"
+    },
+    "c14.tool.steelyard": {
+      "brief": "这局用的是杆秤"
+    },
+    "c14.claimed": {
+      "brief": "客人报的分量。参数 w：分量已按几两几钱几分写好（零的部分不写，和砝码面值同一写法）"
+    },
+    "c14.btn.done": {
+      "brief": "把这局交回去（判断按选中的那一项记）"
+    },
+    "c14.tool.weight": {
+      "brief": "砝码：放上或拿下"
+    },
+    "c14.tool.poise": {
+      "brief": "秤砣：拖着沿星点左右挪，看定盘针平没平"
+    },
+    "c14.btn.commit": {
+      "brief": "觉得秤杆压平了，按这个定住秤杆、凑近看星点"
+    },
+    "c14.btn.again": {
+      "brief": "解开刚才定住的秤杆，重新称一回"
+    },
+    "c14.btn.poise_in": {
+      "brief": "秤砣往提纽这边挪一格"
+    },
+    "c14.btn.poise_out": {
+      "brief": "秤砣往杆梢那边挪一格"
+    },
+    "c14.cap.zoom": {
+      "brief": "看星时弹出的放大框的小标题：秤砣挂绳那一段星点放大了"
+    },
+    "c14.star.qian": {
+      "brief": "戥子星点的读法：一颗带数的大星是一钱"
+    },
+    "c14.star.liang": {
+      "brief": "杆秤星点的读法：一颗带数的大星是一两"
+    },
+    "c14.call.match": {
+      "brief": "判断：称出来和客人说的对得上"
+    },
+    "c14.call.light_small": {
+      "brief": "判断：比客人说的轻一点点"
+    },
+    "c14.call.light_much": {
+      "brief": "判断：比客人说的轻了不少"
+    },
+    "c14.call.heavy": {
+      "brief": "判断：比客人说的反倒重了"
+    },
+    "c14.call.unsure": {
+      "brief": "判断：秤没压稳，说不好"
+    },
+    "c14.weight.face": {
+      "brief": "分量的写法（砝码面值、客人报的分量、判断规矩里的分量都用这一套）：几钱几分。参数 qian（0-9）与 fen"
+    },
+    "c14.weight.face_fen": {
+      "brief": "分量的写法：几分。参数 fen"
+    },
+    "c14.weight.face_qian": {
+      "brief": "分量的写法：几钱。参数 qian（0-9）"
+    },
+    "c14.weight.face_liang": {
+      "brief": "分量的写法：几两。参数 liang"
+    },
+    "c14.weight.face_lq": {
+      "brief": "分量的写法：几两几钱（分是零，不写）。参数 liang、qian"
+    },
+    "c14.weight.face_lf": {
+      "brief": "分量的写法：几两几分（钱是零，不写）。参数 liang、fen"
+    },
+    "c14.weight.face_lqf": {
+      "brief": "分量的写法：几两几钱几分。参数 liang、qian、fen"
+    },
+    "c14.rule.match": {
+      "brief": "判断的规矩（秤的规矩，不是这件的真分量）：和客人说的上下差多少以内算对得上。参数 w：一格星点的分量，已写好"
+    },
+    "c14.rule.small": {
+      "brief": "判断的规矩（品类规矩，不是这件的真分量）：比客人说的轻多少以内算轻一点点，再轻算轻了不少。参数 w：“一点点”的上限，已写好"
+    },
+    "c14.legend.dot": {
+      "brief": "读星的图例（秤的规矩，不是这件的真分量）：一颗小点是多少。参数 w：一颗小点的分量，已按几两几钱几分写好（眼力够时戥子一分、杆秤一钱；眼力差时半颗大星）"
+    },
+    "c14.legend.cord": {
+      "brief": "读星的图例：星数在秤砣挂绳压着的地方读"
+    },
+    "c14.legend.sum": {
+      "brief": "读星的图例：钩上的砝码加上挂绳处的星数，就是称出来的分量"
+    }
+  }
+}

@@ -1,0 +1,854 @@
+{
+  "d1_3": [
+    "gd.m.open",
+    "gd.m.wheel",
+    "gd.m.incense",
+    "gd.d1.notice",
+    "gd.d1.deal",
+    "gd.d2.gold",
+    "gd.d1.person",
+    "gd.d1.close",
+    "gd.choice",
+    "gd.d1.look",
+    "gd.d1.spot",
+    "gd.d1.tiers",
+    "gd.d1.ticket",
+    "gd.d1.shelf",
+    "gd.d1.buyer",
+    "gd.d1.night",
+    "gd.d1.settle",
+    "gd.d2.rules",
+    "gd.d2.keep",
+    "gd.slots",
+    "gd.coins"
+  ],
+  "rows": [
+    {
+      "id": "gd.m.open",
+      "teaches": [
+        "month_open"
+      ],
+      "teacher": "brother",
+      "anchor": "a.month.goals",
+      "fallback": "",
+      "rule": "rule.month",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.m.wheel",
+      "teaches": [
+        "month_wheel"
+      ],
+      "teacher": "brother",
+      "anchor": "a.wheel.face",
+      "fallback": "",
+      "rule": "rule.wheel",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.m.incense",
+      "teaches": [
+        "incense"
+      ],
+      "teacher": "brother",
+      "anchor": "a.wheel.incense",
+      "fallback": "",
+      "rule": "rule.wheel",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.d1.notice",
+      "teaches": [
+        "notice"
+      ],
+      "teacher": "brother",
+      "anchor": "a.scene.notice",
+      "fallback": "a.top.date",
+      "rule": "rule.day",
+      "actual_fallback": "a.top.date",
+      "done_when": [
+        "cmd:day.begin",
+        "ui:hotspot_pressed",
+        "ui:dialog_advanced",
+        "timeout"
+      ]
+    },
+    {
+      "id": "gd.d1.deal",
+      "teaches": [
+        "deal"
+      ],
+      "teacher": "brother",
+      "anchor": "a.hand",
+      "fallback": "",
+      "rule": "rule.day",
+      "actual_fallback": "",
+      "done_when": [
+        "ui:hand_selected",
+        "ui:hand_played",
+        "panel:counter",
+        "timeout"
+      ]
+    },
+    {
+      "id": "gd.d1.person",
+      "teaches": [
+        "person"
+      ],
+      "teacher": "brother",
+      "anchor": "a.card@{uid}",
+      "fallback": "a.hand",
+      "rule": "rule.person",
+      "actual_fallback": "a.hand",
+      "done_when": [
+        "ui:hand_played",
+        "cmd:counter.open",
+        "panel:counter",
+        "timeout"
+      ]
+    },
+    {
+      "id": "gd.d1.look",
+      "teaches": [
+        "counter"
+      ],
+      "teacher": "brother",
+      "anchor": "a.counter.look",
+      "fallback": "",
+      "rule": "rule.counter",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.d1.spot",
+      "teaches": [
+        "mg.spot"
+      ],
+      "teacher": "brother",
+      "anchor": "a.mg.spot.atlas",
+      "fallback": "a.mg.spot.main",
+      "rule": "rule.appraise",
+      "actual_fallback": "a.mg.spot.main"
+    },
+    {
+      "id": "gd.d1.tiers",
+      "teaches": [
+        "counter"
+      ],
+      "teacher": "brother",
+      "anchor": "a.counter.tier.fair",
+      "fallback": "",
+      "rule": "rule.counter",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.d1.ticket",
+      "teaches": [
+        "ticket"
+      ],
+      "teacher": "brother",
+      "anchor": "a.scene.ledger",
+      "fallback": "a.tab.tickets",
+      "rule": "rule.ticket",
+      "actual_fallback": "a.tab.tickets"
+    },
+    {
+      "id": "gd.d1.shelf",
+      "teaches": [
+        "shelf"
+      ],
+      "teacher": "brother",
+      "anchor": "a.tab.shelf",
+      "fallback": "",
+      "rule": "rule.shelf",
+      "actual_fallback": "",
+      "done_when": [
+        "ui:hand_selected",
+        "panel:counter",
+        "panel:shelf",
+        "cmd:day.end",
+        "timeout"
+      ]
+    },
+    {
+      "id": "gd.d1.buyer",
+      "teaches": [
+        "buyer"
+      ],
+      "teacher": "brother",
+      "anchor": "a.counter.stock",
+      "fallback": "a.tab.shelf",
+      "rule": "rule.shelf",
+      "actual_fallback": "a.tab.shelf"
+    },
+    {
+      "id": "gd.d1.close",
+      "teaches": [],
+      "teacher": "brother",
+      "anchor": "a.btn.close_day",
+      "fallback": "",
+      "rule": "rule.day",
+      "actual_fallback": "",
+      "hand_clear": false
+    },
+    {
+      "id": "gd.d1.night",
+      "teaches": [
+        "night"
+      ],
+      "teacher": "brother",
+      "anchor": "a.night.offers",
+      "fallback": "",
+      "rule": "rule.night",
+      "actual_fallback": "",
+      "done_when": [
+        "ui:hand_played",
+        "cmd:night.choose",
+        "timeout"
+      ]
+    },
+    {
+      "id": "gd.d1.settle",
+      "teaches": [
+        "settle"
+      ],
+      "teacher": "brother",
+      "anchor": "a.settle.lines",
+      "fallback": "",
+      "rule": "rule.day",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.d2.rules",
+      "teaches": [],
+      "teacher": "brother",
+      "anchor": "a.tab.rules",
+      "fallback": "",
+      "rule": "rule.day",
+      "actual_fallback": "",
+      "done_when": [
+        "cmd:day.begin",
+        "panel:dossier",
+        "panel:help",
+        "timeout"
+      ]
+    },
+    {
+      "id": "gd.d2.gold",
+      "teaches": [
+        "gold"
+      ],
+      "teacher": "brother",
+      "anchor": "a.card.gold@{uid}",
+      "fallback": "a.hand.gold",
+      "rule": "rule.gold",
+      "actual_fallback": "a.hand.gold"
+    },
+    {
+      "id": "gd.choice",
+      "teaches": [
+        "choice"
+      ],
+      "teacher": "brother",
+      "anchor": "a.slots.choices",
+      "fallback": "",
+      "rule": "rule.person",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.d2.keep",
+      "teaches": [
+        "keep"
+      ],
+      "teacher": "brother",
+      "anchor": "a.card.keep@{uid}",
+      "fallback": "a.hand.kept",
+      "rule": "rule.kept",
+      "actual_fallback": "a.hand.kept"
+    },
+    {
+      "id": "gd.slots",
+      "teaches": [
+        "slots"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.slots.first",
+      "fallback": "a.card@{uid}",
+      "rule": "rule.slots",
+      "actual_fallback": "a.card@{uid}"
+    },
+    {
+      "id": "gd.coins",
+      "teaches": [
+        "coins"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.slots.coins",
+      "fallback": "",
+      "rule": "rule.slots",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.almanac",
+      "teaches": [
+        "almanac"
+      ],
+      "teacher": "obj.almanac",
+      "anchor": "a.almanac",
+      "fallback": "a.scene.calendar",
+      "rule": "rule.almanac",
+      "actual_fallback": "a.scene.calendar"
+    },
+    {
+      "id": "gd.lot",
+      "teaches": [
+        "lot"
+      ],
+      "teacher": "suanming",
+      "anchor": "a.fortune.lot",
+      "fallback": "a.card@{uid}",
+      "rule": "rule.fortune",
+      "actual_fallback": "a.card@{uid}"
+    },
+    {
+      "id": "gd.cezi",
+      "teaches": [
+        "cezi"
+      ],
+      "teacher": "suanming",
+      "anchor": "a.fortune.cezi",
+      "fallback": "a.card@{uid}",
+      "rule": "rule.fortune",
+      "actual_fallback": "a.card@{uid}"
+    },
+    {
+      "id": "gd.news",
+      "teaches": [
+        "news"
+      ],
+      "teacher": "zhouma",
+      "anchor": "a.card@{uid}",
+      "fallback": "a.hand",
+      "rule": "rule.news",
+      "actual_fallback": "a.hand"
+    },
+    {
+      "id": "gd.dossier",
+      "teaches": [
+        "dossier"
+      ],
+      "teacher": "zhouma",
+      "anchor": "a.scene.notebook",
+      "fallback": "a.tab.dossier",
+      "rule": "rule.dossier",
+      "actual_fallback": "a.tab.dossier"
+    },
+    {
+      "id": "gd.contact",
+      "teaches": [
+        "contact"
+      ],
+      "teacher": "zhouma",
+      "anchor": "a.contacts",
+      "fallback": "a.tab.contacts",
+      "rule": "rule.contact",
+      "actual_fallback": "a.tab.contacts"
+    },
+    {
+      "id": "gd.tiers",
+      "teaches": [
+        "tier_rep",
+        "tier_heat"
+      ],
+      "teacher": "zhouma",
+      "anchor": "a.top.rep",
+      "fallback": "",
+      "rule": "rule.tiers",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.demand",
+      "teaches": [
+        "demand"
+      ],
+      "teacher": "hu2",
+      "anchor": "a.scene.notewall",
+      "fallback": "a.tab.demands",
+      "rule": "rule.demand",
+      "actual_fallback": "a.tab.demands",
+      "done_when": [
+        "panel:demands",
+        "panel:demand",
+        "cmd:demand.submit",
+        "timeout"
+      ]
+    },
+    {
+      "id": "gd.demand_delay",
+      "teaches": [
+        "demand_delay"
+      ],
+      "teacher": "hu2",
+      "anchor": "a.demand.delay",
+      "fallback": "",
+      "rule": "rule.demand",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.demand_people",
+      "teaches": [
+        "demand_people_return"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.card@{uid}",
+      "fallback": "",
+      "rule": "rule.demand",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.demand_inform",
+      "teaches": [
+        "demand_inform",
+        "demand_fabricate"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.demand.modes",
+      "fallback": "",
+      "rule": "rule.demand",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.demand_fail",
+      "teaches": [
+        "demand_fail"
+      ],
+      "teacher": "hu2",
+      "anchor": "a.demand.tier",
+      "fallback": "a.scene.notice",
+      "rule": "rule.demand",
+      "actual_fallback": "a.scene.notice"
+    },
+    {
+      "id": "gd.shop_closed",
+      "teaches": [
+        "shop_closed"
+      ],
+      "teacher": "obj.notice",
+      "anchor": "a.scene.notice",
+      "fallback": "",
+      "rule": "rule.demand",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.must",
+      "teaches": [
+        "must_resolve"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.endday.blocked",
+      "fallback": "a.btn.close_day",
+      "rule": "rule.day",
+      "actual_fallback": "a.btn.close_day",
+      "done_when": [
+        "cmd:day.end",
+        "ui:panel_closed",
+        "timeout"
+      ],
+      "trigger_panel": "end_day",
+      "priority": 40
+    },
+    {
+      "id": "gd.gold_leave",
+      "teaches": [
+        "gold_leave"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.endday.gold_leave",
+      "fallback": "a.endday.blocked",
+      "rule": "rule.gold",
+      "actual_fallback": "a.endday.blocked",
+      "trigger_panel": "end_day",
+      "priority": 41
+    },
+    {
+      "id": "gd.fate",
+      "teaches": [
+        "fate"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.card@{uid}",
+      "fallback": "",
+      "rule": "rule.fate",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.life",
+      "teaches": [
+        "life"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.card.days@{uid}",
+      "fallback": "a.card@{uid}",
+      "rule": "rule.life",
+      "actual_fallback": "a.card@{uid}"
+    },
+    {
+      "id": "gd.kept_expire",
+      "teaches": [
+        "kept_expire"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.hand.kept",
+      "fallback": "",
+      "rule": "rule.kept",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.kept_full",
+      "teaches": [
+        "kept_full"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.slots.discard",
+      "fallback": "",
+      "rule": "rule.kept",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.kept_risk",
+      "teaches": [
+        "kept_risk"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.hand.kept",
+      "fallback": "",
+      "rule": "rule.kept",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.contacts_full",
+      "teaches": [
+        "contacts_full"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.slots.release",
+      "fallback": "",
+      "rule": "rule.contact",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.person_state",
+      "teaches": [
+        "person_state"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.contacts",
+      "fallback": "a.hero",
+      "rule": "rule.contact",
+      "actual_fallback": "a.hero"
+    },
+    {
+      "id": "gd.redeem",
+      "teaches": [
+        "redeem"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.counter.redeem",
+      "fallback": "",
+      "rule": "rule.ticket",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.mg.coin_ring",
+      "teaches": [
+        "mg.coin_ring"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.mg.coin_ring.blow",
+      "fallback": "",
+      "rule": "rule.appraise",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.mg.weigh",
+      "teaches": [
+        "mg.weigh"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.mg.weigh.weights",
+      "fallback": "",
+      "rule": "rule.appraise",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.mg.fragments",
+      "teaches": [
+        "mg.fragments"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.mg.fragments.board",
+      "fallback": "",
+      "rule": "rule.appraise",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.mg.decode",
+      "teaches": [
+        "mg.decode"
+      ],
+      "teacher": "postman",
+      "anchor": "a.mg.decode.book",
+      "fallback": "",
+      "rule": "rule.appraise",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.market_day",
+      "teaches": [
+        "market_day"
+      ],
+      "teacher": "obj.notice",
+      "anchor": "a.top.weather",
+      "fallback": "",
+      "rule": "rule.day",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.weather",
+      "teaches": [
+        "weather"
+      ],
+      "teacher": "obj.notice",
+      "anchor": "a.top.weather",
+      "fallback": "",
+      "rule": "rule.day",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.money_short",
+      "teaches": [
+        "money_short"
+      ],
+      "teacher": "",
+      "anchor": "a.short.options",
+      "fallback": "",
+      "rule": "rule.ladder",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.mortgage",
+      "teaches": [
+        "mortgage"
+      ],
+      "teacher": "",
+      "anchor": "a.estate.mortgage",
+      "fallback": "a.tab.estates",
+      "rule": "rule.ladder",
+      "actual_fallback": "a.tab.estates"
+    },
+    {
+      "id": "gd.big_wheel",
+      "teaches": [
+        "big_wheel"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.card@{uid}",
+      "fallback": "a.wheel.face",
+      "rule": "rule.wheel",
+      "actual_fallback": "a.wheel.face"
+    },
+    {
+      "id": "gd.fair_wheel",
+      "teaches": [
+        "fair_wheel",
+        "wheel_stake"
+      ],
+      "teacher": "obj.notice",
+      "anchor": "a.wheel.cost",
+      "fallback": "a.card@{uid}",
+      "rule": "rule.wheel",
+      "actual_fallback": "a.card@{uid}"
+    },
+    {
+      "id": "gd.gamble_wheel",
+      "teaches": [
+        "gamble_wheel"
+      ],
+      "teacher": "",
+      "anchor": "a.wheel.cost",
+      "fallback": "a.card@{uid}",
+      "rule": "rule.wheel",
+      "actual_fallback": "a.card@{uid}"
+    },
+    {
+      "id": "gd.street",
+      "teaches": [
+        "street"
+      ],
+      "teacher": "",
+      "anchor": "a.street.redeem",
+      "fallback": "",
+      "rule": "rule.ladder",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.prison",
+      "teaches": [
+        "prison"
+      ],
+      "teacher": "",
+      "anchor": "a.prison.slots",
+      "fallback": "",
+      "rule": "rule.prison",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.game_over",
+      "teaches": [
+        "game_over"
+      ],
+      "teacher": "",
+      "anchor": "a.over.retry",
+      "fallback": "",
+      "rule": "rule.retry",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.retry",
+      "teaches": [
+        "retry"
+      ],
+      "teacher": "",
+      "anchor": "a.top.date",
+      "fallback": "",
+      "rule": "rule.retry",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.resume",
+      "teaches": [
+        "resume"
+      ],
+      "teacher": "",
+      "anchor": "a.top.date",
+      "fallback": "",
+      "rule": "rule.retry",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.month_close",
+      "teaches": [
+        "month_close"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.mclose.accounts",
+      "fallback": "",
+      "rule": "rule.month",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.year_jump",
+      "teaches": [
+        "year_jump"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.year.forfeit",
+      "fallback": "",
+      "rule": "rule.year",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.year_after",
+      "teaches": [
+        "year_after"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.year.after",
+      "fallback": "a.dossier.page",
+      "rule": "rule.dossier",
+      "actual_fallback": "a.dossier.page"
+    },
+    {
+      "id": "gd.dossier_gap",
+      "teaches": [
+        "dossier_gap"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.dossier.gap",
+      "fallback": "a.scene.notebook",
+      "rule": "rule.dossier",
+      "actual_fallback": "a.scene.notebook"
+    },
+    {
+      "id": "gd.currency",
+      "teaches": [
+        "currency"
+      ],
+      "teacher": "obj.notice",
+      "anchor": "a.top.money",
+      "fallback": "",
+      "rule": "rule.year",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.branch_pick",
+      "teaches": [
+        "branch_pick"
+      ],
+      "teacher": "",
+      "anchor": "a.branch.list",
+      "fallback": "",
+      "rule": "rule.branch",
+      "actual_fallback": ""
+    },
+    {
+      "id": "gd.office",
+      "teaches": [
+        "office"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.card.gold@{uid}",
+      "fallback": "a.hand.gold",
+      "rule": "rule.gold",
+      "actual_fallback": "a.hand.gold"
+    },
+    {
+      "id": "gd.apprentice",
+      "teaches": [
+        "apprentice"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.contacts",
+      "fallback": "a.tab.contacts",
+      "rule": "rule.contact",
+      "actual_fallback": "a.tab.contacts"
+    },
+    {
+      "id": "gd.scare",
+      "teaches": [
+        "scare"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.card@{uid}",
+      "fallback": "a.hand",
+      "rule": "rule.kept",
+      "actual_fallback": "a.hand",
+      "done_when": [
+        "cmd:card.choose",
+        "timeout"
+      ]
+    },
+    {
+      "id": "gd.pet",
+      "teaches": [
+        "pet"
+      ],
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.pet",
+      "fallback": "a.contacts",
+      "rule": "rule.contact",
+      "priority": 40,
+      "actual_fallback": "a.contacts"
+    }
+  ],
+  "deviations": {}
+}

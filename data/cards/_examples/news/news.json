@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "owner": "W0",
+    "schema": 1,
+    "brief": "例子集：消息牌（§4.7.8）"
+  },
+  "cards": [
+    {
+      "id": "nw.1938.wangshan_dock",
+      "type": "news",
+      "era": [
+        "1938"
+      ],
+      "weight": 6,
+      "kind": "rumor",
+      "source": "zhouma",
+      "info_about": "wangshan",
+      "keepable": true,
+      "expires_days": 5,
+      "must_resolve": false,
+      "tags": [
+        "info",
+        "dock",
+        "omen_water"
+      ],
+      "effects": {
+        "on_read": [
+          {
+            "op": "dossier",
+            "frag": "df.wangshan.1938.dock"
+          }
+        ],
+        "on_inform": [
+          {
+            "op": "dossier_gap",
+            "frag": "df.wangshan.1938.trust"
+          },
+          {
+            "op": "person_state",
+            "person": "wangshan",
+            "state": "away",
+            "days": 10
+          },
+          {
+            "op": "conscience",
+            "delta": -3
+          }
+        ]
+      },
+      "art": "illus.nw.rumor",
+      "brief": "周妈说王山昨晚在码头出现过。看了补王山一块碎片；留着能交给‘要消息’的条子，交了会伤到王山，档案页断掉一块。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "id": "nw.any.family_word",
+      "type": "news",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "letter",
+      "source": "",
+      "must_resolve": false,
+      "tags": [
+        "family",
+        "omen_family"
+      ],
+      "art": "illus.nw.letter",
+      "brief": "（W0 例子，系统牌）回家吃饭得到的家人消息。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

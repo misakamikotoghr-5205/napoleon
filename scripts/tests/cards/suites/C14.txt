@@ -1,0 +1,18 @@
+# C14 称分量（docs/handoff_cards/C14_mg-weigh.md）
+C14_validate|res://scripts/cards/core/validate_main.gd|120|--only=data/cards/minigames/obs/weigh.json --name=C14_validate
+C14_physics|res://scripts/tests/cards/C14/test_physics.gd|120|
+C14_tell|res://scripts/tests/cards/C14/test_tell.gd|300|
+C14_determinism|res://scripts/tests/cards/C14/test_determinism.gd|120|
+C14_fidelity|res://scripts/tests/cards/C14/test_fidelity.gd|120|
+C14_full_range|res://scripts/tests/cards/C14/test_full_range.gd|180|
+C14_judgment|res://scripts/tests/cards/C14/test_judgment.gd|120|
+C14_replay|res://scripts/tests/cards/C14/test_replay.gd|180|
+C14_no_reveal|res://scripts/tests/cards/C14/test_no_reveal.gd|120|
+C14_mouse|res://scripts/tests/cards/C14/test_mouse.gd|180|
+C14_compat|res://scripts/tests/cards/C14/test_compat.gd|120|
+C14_controls|res://scripts/tests/cards/C14/test_controls.gd|120|
+C14_guide|res://scripts/tests/cards/C14/test_guide.gd|120|
+C14_guide_k16|res://scripts/tests/cards/C14/test_guide.gd|180|--steps=k16 --name=C14_guide_k16
+C14_real_engine|res://scripts/tests/cards/C14/test_real_engine.gd|180|--name=C14_real_engine
+C14_real_engine_k11|res://scripts/tests/cards/C14/test_real_engine.gd|180|--data=k11 --name=C14_real_engine_k11
+C14_host_abort|res://scripts/tests/cards/C13/test_host_abort.gd|120|--game=weigh --name=C14_host_abort

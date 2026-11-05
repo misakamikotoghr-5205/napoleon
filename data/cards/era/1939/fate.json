@@ -1,0 +1,241 @@
+{
+  "_meta": {
+    "owner": "K04",
+    "schema": 1,
+    "brief": "1939 命运牌 4 张。"
+  },
+  "cards": [
+    {
+      "id": "fa.1939.year_remittance",
+      "type": "fate",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "far",
+        "family",
+        "wealth",
+        "omen_far",
+        "omen_family"
+      ],
+      "valence": "good",
+      "choices": [
+        {
+          "id": "accept",
+          "brief": "收下",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 48,
+              "reason": "k04.reason.kin"
+            }
+          ]
+        },
+        {
+          "id": "send_back",
+          "brief": "退回",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": 1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.fa.1939.year_remittance",
+      "brief": "1939 年关，远亲汇来一笔过年的钱。①收下（进账起步 48，按这一关物价偏高的起步值）②退回（口碑升一点）。征兆：远方、家宅。没理会：钱不进也不退，没有别的后果。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.1939.district_fine",
+      "type": "fate",
+      "era": [
+        "1939"
+      ],
+      "weight": 7,
+      "tags": [
+        "official",
+        "levy",
+        "omen_official"
+      ],
+      "valence": "bad",
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "交",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 40,
+              "payee": "district",
+              "reason": "k04.reason.fine",
+              "short": "ladder"
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "不交",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 10
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "heat",
+            "delta": 10
+          }
+        ]
+      },
+      "art": "illus.fa.1939.district_fine",
+      "brief": "伪区公所一笔临时罚款，不是每周条子。①交（付钱起步 40）②不交（风声涨一截）。1939。征兆：官面。没理会当不交，风声涨一截。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.1939.charcoal_wind",
+      "type": "fate",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "fuel",
+        "winter",
+        "omen_wealth"
+      ],
+      "valence": "mixed",
+      "choices": [
+        {
+          "id": "buy",
+          "brief": "现在买",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 22,
+              "payee": "charcoal",
+              "reason": "k04.reason.charcoal",
+              "short": "ladder"
+            },
+            {
+              "op": "flag",
+              "key": "k04_charcoal_bought"
+            }
+          ],
+          "almanac": [
+            "buy_in"
+          ]
+        },
+        {
+          "id": "wait",
+          "brief": "再等",
+          "effects": [
+            {
+              "op": "attr",
+              "who": "ruhua",
+              "attr": "nerve",
+              "delta": -1,
+              "days": 2
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "attr",
+            "who": "ruhua",
+            "attr": "nerve",
+            "delta": -1,
+            "days": 2
+          }
+        ]
+      },
+      "art": "illus.fa.1939.charcoal_wind",
+      "brief": "1939 柴价一阵涨一阵落。①现在买一点（付钱起步 22）②再等（两天里胆量少一点）。征兆：财物。没理会当再等，两天里胆量少一点。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.1939.gate_wink",
+      "type": "fate",
+      "era": [
+        "1939"
+      ],
+      "weight": 6,
+      "tags": [
+        "gate",
+        "official",
+        "omen_official"
+      ],
+      "valence": "mixed",
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "塞钱",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 20,
+              "payee": "gate",
+              "reason": "k04.reason.gate",
+              "short": "ladder"
+            },
+            {
+              "op": "flag",
+              "key": "k04_gate_wink"
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "不塞",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 4
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "heat",
+            "delta": 4
+          }
+        ]
+      },
+      "art": "illus.fa.1939.gate_wink",
+      "brief": "城门有人肯通融一次。①塞钱（付钱起步 20，记下放过，本心降一点）②不塞（风声涨一点）。1939 城门设岗。征兆：官面。没理会当不塞，风声涨一点。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

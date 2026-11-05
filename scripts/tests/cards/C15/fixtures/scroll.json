@@ -1,0 +1,14 @@
+{
+  "kind": "fragments",
+  "seed": 11,
+  "item": "",
+  "art": "item.art.calligraphy",
+  "minutes_per_step": 1,
+  "max_minutes": 30,
+  "doc": "scroll",
+  "pieces": 4,
+  "seal_offset_px": 0,
+  "ink_mismatch": [],
+  "dangzi_marks": 0,
+  "missing_piece": -1
+}

@@ -1,0 +1,8 @@
+# C10 档案簿与帮助（docs/handoff_cards/C10_dossier-help.md）
+C10_dossier|res://scripts/tests/cards/C10/test_dossier.gd|120|
+C10_rules|res://scripts/tests/cards/C10/test_rules.gd|120|
+C10_help_keys|res://scripts/tests/cards/C10/test_help_keys.gd|240|
+C10_guide|res://scripts/tests/cards/C10/test_guide.gd|180|
+C10_real_engine|res://scripts/tests/cards/C10/test_real_engine.gd|120|--name=C10_real_engine
+C10_real_kdata|res://scripts/tests/cards/C10/test_real_engine.gd|180|--name=C10_real_kdata --data=k
+C10_rules_k16|res://scripts/tests/cards/C10/test_rules.gd|120|--steps=k16 --name=C10_rules_k16

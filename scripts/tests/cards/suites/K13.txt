@@ -1,0 +1,3 @@
+# K13 措辞检查工具（docs/handoff_cards/K13_review-history.md）
+K13_wording_lint|res://scripts/tests/cards/K13/test_wording_lint.gd|180|
+K13_rules_valid|res://scripts/cards/core/validate_main.gd|120|--only=data/cards/rules/wording.json,data/cards/tags/K13.json,data/cards/ui_keys/K13.json --name=K13_rules_valid

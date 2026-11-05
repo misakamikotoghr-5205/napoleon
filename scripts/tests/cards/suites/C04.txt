@@ -1,0 +1,13 @@
+# C04 counter (docs/handoff_cards/C04_counter.md)
+C04_pawn_sell|res://scripts/tests/cards/C04/test_pawn_sell.gd|180|
+C04_buy|res://scripts/tests/cards/C04/test_buy.gd|120|
+C04_redeem|res://scripts/tests/cards/C04/test_redeem.gd|120|
+C04_choices|res://scripts/tests/cards/C04/test_choices.gd|120|
+C04_no_hidden|res://scripts/tests/cards/C04/test_no_hidden.gd|120|
+C04_guide|res://scripts/tests/cards/C04/test_guide.gd|180|
+C04_guide_k16|res://scripts/tests/cards/C04/test_guide.gd|180|--steps=k16 --name=C04_guide_k16
+C04_dialog|res://scripts/tests/cards/C04/test_dialog.gd|120|
+C04_drawers|res://scripts/tests/cards/C04/test_drawers.gd|120|
+C04_real_engine|res://scripts/tests/cards/C04/test_real_engine.gd|180|
+C04_dialog_skip|res://scripts/tests/cards/C04/test_dialog_skip.gd|120|
+C04_money_short|res://scripts/tests/cards/C04/test_money_short.gd|180|

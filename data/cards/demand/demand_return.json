@@ -1,0 +1,59 @@
+{
+  "_meta": {
+    "owner": "K07",
+    "schema": 1,
+    "brief": "系统牌 ev.any.demand_return。要人条子派出去的人回来那天由 G03 发。形状照合同例子。不成时的告示键是 k07.notice.not_back。当场掷不成等于 person_state gone。打烊没理会走 effects.on_expire：person 写成 {person}，与锚点 a.card@{uid} 同一代入，由这张牌实例的 vars.person 填上派出去的人；state 为 away、days 为 1。打烊没理会等于人自己晚回来，不是走丢。"
+  },
+  "cards": [
+    {
+      "id": "ev.any.demand_return",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "must_resolve": true,
+      "tags": [
+        "levy",
+        "omen_road"
+      ],
+      "slots": [
+        {
+          "id": "who",
+          "accepts": [
+            "contact",
+            "self"
+          ],
+          "attr": "nerve"
+        }
+      ],
+      "check": {
+        "need": 1,
+        "on_success": [],
+        "on_fail": [
+          {
+            "op": "notice",
+            "key": "k07.notice.not_back"
+          }
+        ]
+      },
+      "effects": {
+        "on_expire": [
+          {
+            "op": "person_state",
+            "person": "{person}",
+            "state": "away",
+            "days": 1
+          }
+        ]
+      },
+      "art": "illus.ev.any.demand_return",
+      "brief": "要人条子派出去的人，回来那天由规则发进手牌，当场办。格子放那个派出去的人（自己或人脉），按胆量掷。掷成：人回来，照常能用。掷不成：告示 k07.notice.not_back，并且这个人没回来，等于 person_state gone。人是谁不写死：on_expire 的 person 用 {person}，与锚点 a.card@{uid} 同一代入，G03 发牌时把派出去的人放进这张牌实例的 vars.person，不另加校验器不认识的字段。不会被随机抽到。打烊前必须处理。打烊没理会不走检定失败，而走 effects.on_expire：这个人 person_state away、只再离开 1 天。打烊没理会等于人自己晚回来，不是走丢。标签 omen_road：人在路上。每张要人条子自己的 return_check 可以更严，发牌时应以条子上的为准；这张的门槛照合同例子，作为没有条子覆盖时的默认。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "owner": "K10",
+    "schema": 1,
+    "brief": "K10 的原因键与告示键。黄历动作的字归 G05，不在这里。"
+  },
+  "keys": {
+    "k10.reason.incense": {
+      "brief": "香案上的香火钱。引擎扣这份钱时用这个原因键，界面正文由 A 或 B 写。"
+    },
+    "k10.reason.fair": {
+      "brief": "庙会轮盘上的小得或小失。"
+    },
+    "k10.reason.gamble": {
+      "brief": "赌摊轮盘上的小得或小失。"
+    },
+    "k10.reason.almanac": {
+      "brief": "黄历照做时进的一点小钱。没有惩罚。"
+    },
+    "k10.notice.fair_rumor": {
+      "brief": "庙会平常段：告示上记一条市井消息。正文由 A 写。"
+    },
+    "k10.notice.fair_look": {
+      "brief": "庙会平常段：告示上记一条看热闹的消息。正文由 A 写。"
+    },
+    "k10.notice.gamble_word": {
+      "brief": "赌摊平常段：告示上记一条传闻。正文由 A 写。"
+    },
+    "k10.notice.gamble_hold": {
+      "brief": "赌摊平常段：告示上记一条和局的消息。正文由 A 写。"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "k08.notice.family": {
+    "t": "看过了家里捎来的消息。"
+  },
+  "k08.notice.decoded": {
+    "t": "电报译开了。"
+  },
+  "k08.notice.pieced": {
+    "t": "撕开的信拼回去了。"
+  },
+  "k08.notice.informed": {
+    "t": "消息交上去了。"
+  }
+}

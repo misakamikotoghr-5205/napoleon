@@ -1,0 +1,9 @@
+{ "colors": [
+  "#0d0a08", "#1f1712", "#3a2a1e", "#5a3f2a", "#7b5638", "#a07448", "#c99a5e", "#e8c88a",
+  "#f4e2b0", "#d9c49a", "#b09a70", "#ffd25a", "#f0a030", "#2b3138", "#46505a", "#6b7680",
+  "#9aa4aa", "#c8ccc8", "#1d2a44", "#2f4670", "#4a6a9a", "#b0262a", "#6e1a1c", "#e8d8c0",
+  "#c49a78", "#8a6448", "#2a2a2a", "#555555", "#8c8c8c", "#e0e0d8", "#c8a030", "#4a6a3a" ],
+  "names": ["black","dkbrown","wood0","wood1","wood2","wood3","tan","lamp_pale",
+  "paper_hi","paper","paper_old","lamp","flame","wall0","wall1","wall2",
+  "mist","fog","indigo0","indigo1","indigo2","seal_red","dkred","skin_hi",
+  "skin","skin_lo","hair","gray","silver","white","gold","moss"] }

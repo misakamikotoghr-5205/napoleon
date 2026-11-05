@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-1938"
+  },
+  "nt.accounts": {
+    "title": "对账",
+    "body": "夜里把这个月的账从头对一遍，看清进出，说不定能翻出些事来。"
+  },
+  "nt.backdoor": {
+    "title": "后门收货",
+    "body": "夜里有人敲后门，要把货便宜出给你。来路说不清，风声也会跟着动。"
+  },
+  "nt.early_sleep": {
+    "title": "早点睡",
+    "body": "早早上了门板歇下，养足精神，明天多接一位客人。"
+  },
+  "nt.family_dinner": {
+    "title": "回家吃饭",
+    "body": "一家人坐下来吃顿饭，说说家里的事。",
+    "choices": {
+      "waive_life": "缓一缓家里的难处",
+      "family_word": "听听家里的消息"
+    }
+  },
+  "nt.telegraph": {
+    "title": "发电报",
+    "body": "去邮电代办那里发一封电报，给远方的人捎句话。明天也许会有回音。"
+  },
+  "nt.tidy": {
+    "title": "整理库房",
+    "body": "把货架上的东西擦洗归置一遍，明天卖的时候好出手些。"
+  }
+}

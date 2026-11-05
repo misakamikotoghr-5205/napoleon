@@ -1,0 +1,128 @@
+{
+  "_meta": {
+    "owner": "C09",
+    "schema": 1,
+    "brief": "跳年：满当、一年后、换币、人脉、新面孔各一两行，带 section。没有 section 时界面按原顺序一页一行。"
+  },
+  "guide_progress": {},
+  "queries": {
+    "firsts|{}": {
+      "firsts": {}
+    },
+    "year_report|{}": {
+      "lines": [
+        {
+          "key": "g02.year.forfeit",
+          "section": "forfeit",
+          "args": {
+            "n": 2
+          }
+        },
+        {
+          "key": "g02.year.forfeit",
+          "section": "forfeit",
+          "args": {
+            "n": 1
+          }
+        },
+        {
+          "key": "g02.year.after",
+          "section": "after",
+          "args": {}
+        },
+        {
+          "key": "g02.year.currency",
+          "section": "currency",
+          "args": {}
+        },
+        {
+          "key": "g02.year.currency",
+          "section": "currency",
+          "args": {
+            "n": 1
+          }
+        },
+        {
+          "key": "g02.year.contacts",
+          "section": "contacts",
+          "args": {}
+        },
+        {
+          "key": "g02.year.faces",
+          "section": "faces",
+          "args": {}
+        },
+        {
+          "key": "g02.year.faces",
+          "section": "faces",
+          "args": {
+            "n": 1
+          }
+        }
+      ]
+    }
+  },
+  "responses": [
+    {
+      "cmd": "year.next",
+      "result": {
+        "ok": true,
+        "err": ""
+      }
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "ok": true,
+        "err": ""
+      }
+    }
+  ],
+  "view": {
+    "v": 1,
+    "phase": "year_jump",
+    "mode": "shop",
+    "busy": false,
+    "date": {
+      "stage": 0,
+      "era": "1938",
+      "y": 1938,
+      "m": 3,
+      "d": 30,
+      "weekday": 2,
+      "stage_day": 30,
+      "stage_days": 30,
+      "abs_day": 30,
+      "minute": 480
+    },
+    "notice": {
+      "weather": "clear",
+      "market_day": false,
+      "news": [],
+      "almanac": {
+        "id": "alm.shoudang",
+        "yi": [],
+        "ji": [],
+        "done": []
+      },
+      "fortune": ""
+    },
+    "money": {
+      "amount": 280,
+      "currency": "fabi"
+    },
+    "rep_tier": 1,
+    "heat_tier": 0,
+    "hand": [],
+    "kept": [],
+    "contacts": [],
+    "pending": [],
+    "demands": [],
+    "tickets": [],
+    "goals": [],
+    "open_panel": {
+      "kind": "",
+      "args": {}
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "_meta": {
+    "owner": "C15",
+    "schema": 1,
+    "kind": "fragments",
+    "brief": "拼碎片观察键：印章、墨色、当字笔画、缺块。只描述看得见的现象。鉴定改版（主创 10-25）：观察是玩家自己的判断（骑缝印选“对得上 / 错开了”、在接不上的缝上打叉），清楚档的判断按 hedge 软成 _maybe，含糊档记“看不准”；当字、缺块、看不准哪一档都照记（any）。",
+    "_provenance": {
+      "by": "ai",
+      "task": "C15",
+      "date": "2026-10-25"
+    }
+  },
+  "obs": {
+    "obs.fragments.seal_aligned": {
+      "fidelity": "clear",
+      "brief": "骑缝印两半对得上",
+      "hedge": {
+        "partial": "obs.fragments.seal_aligned_maybe",
+        "vague": "obs.fragments.unsure"
+      }
+    },
+    "obs.fragments.seal_aligned_maybe": {
+      "fidelity": "partial",
+      "brief": "骑缝印两半好像对得上（没看真切）"
+    },
+    "obs.fragments.seal_offset": {
+      "fidelity": "clear",
+      "brief": "骑缝印两半错开了一截",
+      "hedge": {
+        "partial": "obs.fragments.seal_offset_maybe",
+        "vague": "obs.fragments.unsure"
+      }
+    },
+    "obs.fragments.seal_offset_maybe": {
+      "fidelity": "partial",
+      "brief": "骑缝印两半好像错开了一点（没看真切）"
+    },
+    "obs.fragments.ink_continuous": {
+      "fidelity": "clear",
+      "brief": "拼缝两边的墨色连得上",
+      "hedge": {
+        "partial": "obs.fragments.ink_continuous_maybe",
+        "vague": "obs.fragments.unsure"
+      }
+    },
+    "obs.fragments.ink_continuous_maybe": {
+      "fidelity": "partial",
+      "brief": "拼缝两边的墨好像都连得上（没看真切）"
+    },
+    "obs.fragments.ink_breaks": {
+      "fidelity": "clear",
+      "brief": "拼缝两边的墨色接不上",
+      "hedge": {
+        "partial": "obs.fragments.ink_breaks_maybe",
+        "vague": "obs.fragments.unsure"
+      }
+    },
+    "obs.fragments.ink_breaks_maybe": {
+      "fidelity": "partial",
+      "brief": "有一道拼缝两边的墨好像接不上（没看真切）"
+    },
+    "obs.fragments.dangzi_clear": {
+      "fidelity": "any",
+      "brief": "当字那几笔能看清"
+    },
+    "obs.fragments.piece_missing": {
+      "fidelity": "any",
+      "brief": "桌上少了一块，拼完仍留一个洞"
+    },
+    "obs.fragments.unsure": {
+      "fidelity": "any",
+      "brief": "没拼齐，看不准"
+    }
+  }
+}

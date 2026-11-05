@@ -1,0 +1,9 @@
+{
+  "source_archive": "GameJev_WorldPorts_v0.4_Full_Source.zip",
+  "new_code": "src/gamejev_living and example/test/document additions",
+  "authoring": "Assistant-generated source-code extension in this conversation",
+  "unchanged_model_sha256": "19863076c6cd35d662c1de499698cb8355ece4ae112633bcc152e68f046e48b2",
+  "original_notices_retained": true,
+  "training_this_turn": false,
+  "test_data": "synthetic, code-authored fixture; not release human-authored narrative/art/music"
+}

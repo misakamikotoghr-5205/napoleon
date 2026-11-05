@@ -1,0 +1,8 @@
+{"cards":[
+{"id":"p.test.pawn","type":"person","person":"test_pawner","era":["*"],"weight":0,"schedule":{"stage_day":1,"order":1},"intent":"pawn","item":{"template":"jewelry.hairpin"},"minigame":"spot","asking":{"pct":[100,100]},"floor":{"pct":[50,50]},"patience_min":[120,120],"impatience":"leave","term_days":15,"effects":{}},
+{"id":"p.test.sell","type":"person","person":"test_seller","era":["*"],"weight":0,"schedule":{"stage_day":1,"order":2},"intent":"sell","item":{"template":"utensils.bowl"},"asking":{"pct":[100,100]},"floor":{"pct":[50,50]},"patience_min":[120,120],"effects":{}},
+{"id":"p.test.buy","type":"person","person":"test_buyer","era":["*"],"weight":0,"schedule":{"stage_day":1,"order":3},"intent":"buy","want":{"cats":["utensils"],"budget_pct":[1000,1000]},"patience_min":[120,120],"effects":{}},
+{"id":"p.any.redeem","type":"person","person":"any","era":["*"],"weight":0,"intent":"redeem","patience_min":[120,120],"effects":{}},
+{"id":"tk.test.foreign","type":"pawn_ticket","weight":0,"minigame":"fragments","number":196,"holder":"test_foreign","item_template":"documents.receipt","foreign":true,"fragments":{"doc":"pawn_ticket","pieces":6},"effects":{}},
+{"id":"nw.test.decode","type":"news","weight":0,"minigame":"decode","decode":{"codes":["0417"]},"effects":{}}
+]}

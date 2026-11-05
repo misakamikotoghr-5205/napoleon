@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-1938"
+  },
+  "bf.1938.bail_shop": {
+    "title": "交钱作保",
+    "body": "警察所开门以后，有人带话：交一笔保钱，拿铺子的面子作保，官面上就能松一松。",
+    "choices": {
+      "pledge": "交保",
+      "decline": "不交"
+    }
+  },
+  "bf.1938.night_cargo": {
+    "title": "码头夜货",
+    "body": "码头夜船上的人先付一笔定钱，要把一批货在你这儿放几天。",
+    "choices": {
+      "take": "收下",
+      "decline": "不收"
+    }
+  }
+}

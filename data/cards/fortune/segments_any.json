@@ -1,0 +1,464 @@
+{
+  "_meta": {
+    "owner": "K10",
+    "schema": 1,
+    "brief": "全年代通用的大轮盘、庙会、赌摊扇区。"
+  },
+  "cards": [
+    {
+      "id": "ws.any.big.fanshen_ship",
+      "type": "wheel_segment",
+      "wheel": "wh.big",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 2,
+      "valence": "good",
+      "conditions": {
+        "conscience_gte": -20
+      },
+      "effects": [
+        {
+          "op": "add_card",
+          "card": "bf.any.ship_ticket",
+          "to": "hand"
+        }
+      ],
+      "art": "icon.ws.fanshen",
+      "brief": "大轮盘翻身段，全年代。valence 为 good。本心低于阈值时这一段不上盘，阈值待调。落到后 add_card 把 bf.any.ship_ticket 发到手，那是去上海的船票，大赌本身由 K02 写。扇区名由 A 定。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.any.big.fanshen_sun",
+      "type": "wheel_segment",
+      "wheel": "wh.big",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 2,
+      "valence": "good",
+      "conditions": {
+        "conscience_gte": -20
+      },
+      "effects": [
+        {
+          "op": "add_card",
+          "card": "bf.any.sun_guarantee",
+          "to": "hand"
+        }
+      ],
+      "art": "icon.ws.fanshen",
+      "brief": "大轮盘翻身段，全年代。valence 为 good。同样用本心下限挡住太低的人。落到后发 bf.any.sun_guarantee 到手，那是孙老爷要人作保。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.any.big.pingan",
+      "type": "wheel_segment",
+      "wheel": "wh.big",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 4,
+      "valence": "neutral",
+      "effects": [
+        {
+          "op": "heat",
+          "delta": -10
+        },
+        {
+          "op": "add_card",
+          "card": "bf.any.quiet_fee",
+          "to": "hand"
+        }
+      ],
+      "art": "icon.ws.pingan",
+      "brief": "大轮盘平安段，全年代。valence 为 neutral。效果：风声下降一点，挺过去了。V36：此段发大赌 bf.any.quiet_fee 到手上（#146）。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.any.big.pingan_rep",
+      "type": "wheel_segment",
+      "wheel": "wh.big",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 4,
+      "valence": "neutral",
+      "effects": [
+        {
+          "op": "rep",
+          "delta": 1
+        },
+        {
+          "op": "add_card",
+          "card": "bf.any.street_bed",
+          "to": "hand"
+        }
+      ],
+      "art": "icon.ws.pingan",
+      "brief": "大轮盘平安段，全年代。valence 为 neutral。效果：口碑加一点。V36：此段发大赌 bf.any.street_bed 到手上（#146）。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.any.big.zhuidi_box",
+      "type": "wheel_segment",
+      "wheel": "wh.big",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 4,
+      "valence": "bad",
+      "effects": [
+        {
+          "op": "add_card",
+          "card": "bf.any.mystery_box",
+          "to": "hand"
+        }
+      ],
+      "art": "icon.ws.zhuidi",
+      "brief": "大轮盘坠底段，全年代。valence 为 bad。落到后发 bf.any.mystery_box 到手，那是来路不明的箱子。不写箱子里是什么。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.any.big.zhuidi_house",
+      "type": "wheel_segment",
+      "wheel": "wh.big",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 4,
+      "valence": "bad",
+      "effects": [
+        {
+          "op": "add_card",
+          "card": "bf.any.house_offer",
+          "to": "hand"
+        }
+      ],
+      "art": "icon.ws.zhuidi",
+      "brief": "大轮盘坠底段，全年代。valence 为 bad。落到后发 bf.any.house_offer 到手，那是有人高价买老宅。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.any.fair.xiaocai",
+      "type": "wheel_segment",
+      "wheel": "wh.fair",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 2,
+      "valence": "good",
+      "effects": [
+        {
+          "op": "money",
+          "delta": 6,
+          "reason": "k10.reason.fair"
+        }
+      ],
+      "art": "icon.ws.xiaocai",
+      "brief": "庙会好段，全年代。valence 为 good，香案会把它加宽。效果：进一笔小钱，原因键是香火以外的庙会小得。界面不显示百分比。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.any.fair.renyuan",
+      "type": "wheel_segment",
+      "wheel": "wh.fair",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 2,
+      "valence": "good",
+      "effects": [
+        {
+          "op": "rep",
+          "delta": 1
+        }
+      ],
+      "art": "icon.ws.renyuan",
+      "brief": "庙会好段。valence 为 good。效果：口碑加一点。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.any.fair.guashi",
+      "type": "wheel_segment",
+      "wheel": "wh.fair",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 5,
+      "valence": "neutral",
+      "effects": [
+        {
+          "op": "notice",
+          "key": "k10.notice.fair_rumor"
+        }
+      ],
+      "art": "icon.ws.guashi",
+      "brief": "庙会平常段。valence 为 neutral。效果：告示记一条市井消息，正文键留给 A，这里只有键。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.any.fair.kanshi",
+      "type": "wheel_segment",
+      "wheel": "wh.fair",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 5,
+      "valence": "neutral",
+      "effects": [
+        {
+          "op": "notice",
+          "key": "k10.notice.fair_look"
+        }
+      ],
+      "art": "icon.ws.kanshi",
+      "brief": "庙会平常段。valence 为 neutral。效果：告示记一条看热闹的消息。不改钱。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.any.fair.xiaoshi",
+      "type": "wheel_segment",
+      "wheel": "wh.fair",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 4,
+      "valence": "bad",
+      "effects": [
+        {
+          "op": "money",
+          "delta": -4,
+          "reason": "k10.reason.fair"
+        }
+      ],
+      "art": "icon.ws.xiaoshi",
+      "brief": "庙会坏段。valence 为 bad。效果：小钱出去一笔。这是轮盘上的小失，不是黄历惩罚。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.any.fair.koujue",
+      "type": "wheel_segment",
+      "wheel": "wh.fair",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 4,
+      "valence": "bad",
+      "effects": [
+        {
+          "op": "heat",
+          "delta": 2
+        }
+      ],
+      "art": "icon.ws.koujue",
+      "brief": "庙会坏段。valence 为 bad。效果：风声抬一点。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.any.gamble.yingqian",
+      "type": "wheel_segment",
+      "wheel": "wh.gamble",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 2,
+      "valence": "good",
+      "effects": [
+        {
+          "op": "money",
+          "delta": 12,
+          "reason": "k10.reason.gamble"
+        }
+      ],
+      "art": "icon.ws.yingqian",
+      "brief": "赌摊好段。valence 为 good。效果：进一笔小钱。押上的留牌在非 bad 段由引擎还回来，怎么算待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.any.gamble.shunshou",
+      "type": "wheel_segment",
+      "wheel": "wh.gamble",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 2,
+      "valence": "good",
+      "effects": [
+        {
+          "op": "rep",
+          "delta": 1
+        }
+      ],
+      "art": "icon.ws.shunshou",
+      "brief": "赌摊好段。valence 为 good。效果：口碑加一点。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.any.gamble.pingju",
+      "type": "wheel_segment",
+      "wheel": "wh.gamble",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 5,
+      "valence": "neutral",
+      "effects": [
+        {
+          "op": "notice",
+          "key": "k10.notice.gamble_word"
+        }
+      ],
+      "art": "icon.ws.pingju",
+      "brief": "赌摊平常段。valence 为 neutral。效果：告示记一条传闻。押牌还回来由引擎做。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.any.gamble.heju",
+      "type": "wheel_segment",
+      "wheel": "wh.gamble",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 5,
+      "valence": "neutral",
+      "effects": [
+        {
+          "op": "notice",
+          "key": "k10.notice.gamble_hold"
+        }
+      ],
+      "art": "icon.ws.heju",
+      "brief": "赌摊平常段。valence 为 neutral。效果：告示记一条和局的消息。不改钱。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.any.gamble.shuqian",
+      "type": "wheel_segment",
+      "wheel": "wh.gamble",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 4,
+      "valence": "bad",
+      "effects": [
+        {
+          "op": "heat",
+          "delta": 3
+        }
+      ],
+      "art": "icon.ws.shuqian",
+      "brief": "赌摊坏段。valence 为 bad。押上的留牌没了由引擎做，这里只把风声抬一点，不再 remove_card，避免扣两次。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ws.any.gamble.zhekou",
+      "type": "wheel_segment",
+      "wheel": "wh.gamble",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "arc": 4,
+      "valence": "bad",
+      "effects": [
+        {
+          "op": "rep",
+          "delta": -1
+        }
+      ],
+      "art": "icon.ws.zhekou",
+      "brief": "赌摊坏段。valence 为 bad。效果：口碑降一点。押牌没了仍由引擎做。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

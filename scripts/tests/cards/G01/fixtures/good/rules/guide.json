@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "owner": "C16",
+    "schema": 1
+  },
+  "_doc": [
+    "新手指引：两步之间的间隔、渐显渐隐、默认亮多久、每天最多新亮几步、气泡最宽多少像素（§4.6、§7.10.7）；时间都用毫秒整数。"
+  ],
+  "gap_ms": 2000,
+  "fade_in_ms": 300,
+  "fade_out_ms": 700,
+  "fade_fast_ms": 250,
+  "default_seconds": 16,
+  "max_new_per_day": 16,
+  "bubble_max_w": 360
+}

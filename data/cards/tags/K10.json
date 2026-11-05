@@ -1,0 +1,8 @@
+{
+  "_meta": {
+    "owner": "K10",
+    "schema": 1,
+    "brief": "K10 不新增征兆家族。签和测字只用 tags/W0.json 里封闭的 omen_*。"
+  },
+  "tags": {}
+}

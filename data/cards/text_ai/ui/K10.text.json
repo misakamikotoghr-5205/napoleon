@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "k10.reason.incense": {
+    "t": "香火钱"
+  },
+  "k10.reason.fair": {
+    "t": "庙会"
+  },
+  "k10.reason.gamble": {
+    "t": "赌摊"
+  },
+  "k10.reason.almanac": {
+    "t": "黄历彩头"
+  },
+  "k10.notice.fair_rumor": {
+    "t": "庙会上听人说起镇上的新鲜事。"
+  },
+  "k10.notice.fair_look": {
+    "t": "庙会上挤着看了一回热闹。"
+  },
+  "k10.notice.gamble_word": {
+    "t": "赌摊边上听来一句传闻。"
+  },
+  "k10.notice.gamble_hold": {
+    "t": "赌摊上没输也没赢。"
+  }
+}

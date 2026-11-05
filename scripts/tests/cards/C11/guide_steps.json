@@ -1,0 +1,77 @@
+{
+  "settings": {
+    "gap_ms": 0,
+    "fade_in_ms": 0,
+    "fade_out_ms": 0,
+    "fade_fast_ms": 0,
+    "default_seconds": 30,
+    "max_new_per_day": 8,
+    "bubble_max_w": 360
+  },
+  "steps": [
+    {
+      "id": "gd.money_short",
+      "type": "guide_step",
+      "teaches": ["money_short"],
+      "trigger": {"first": "money_short", "panel": "short"},
+      "teacher": "",
+      "anchor": "a.short.options",
+      "anchor_fallback": "",
+      "done_when": ["cmd:short.resolve"],
+      "rule_page": "rule.ladder",
+      "priority": 60,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "First time there is not enough money: show the three paths."
+    },
+    {
+      "id": "gd.mortgage",
+      "type": "guide_step",
+      "teaches": ["mortgage"],
+      "trigger": {"first": "mortgage", "panel": "estates"},
+      "teacher": "",
+      "anchor": "a.estate.mortgage",
+      "anchor_fallback": "a.tab.estates",
+      "done_when": ["cmd:estate.mortgage"],
+      "rule_page": "rule.ladder",
+      "priority": 60,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "First time the household-goods panel is open: the mortgage button."
+    },
+    {
+      "id": "gd.street",
+      "type": "guide_step",
+      "teaches": ["street"],
+      "trigger": {"first": "street", "mode": "street"},
+      "teacher": "",
+      "anchor": "a.street.redeem",
+      "anchor_fallback": "",
+      "done_when": ["cmd:street.redeem_shop"],
+      "rule_page": "rule.ladder",
+      "priority": 60,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "First time on the street: the redeem-shop button."
+    },
+    {
+      "id": "gd.prison",
+      "type": "guide_step",
+      "teaches": ["prison"],
+      "trigger": {"first": "prison", "panel": "prison"},
+      "teacher": "",
+      "anchor": "a.prison.slots",
+      "anchor_fallback": "",
+      "done_when": ["ui:slot_drop", "cmd:slot.roll"],
+      "rule_page": "rule.prison",
+      "priority": 60,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 30,
+      "brief": "First time in the cell: the slots, then a drop or a toss."
+    }
+  ]
+}

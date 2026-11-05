@@ -1,0 +1,93 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1
+  },
+  "cards": [
+    {
+      "id": "ev.stage.1938",
+      "type": "event",
+      "era": ["1938"],
+      "choices": [
+        {"id": "hide", "brief": "THIS_BRIEF_MUST_NOT_LEAK_STAGECHOICE"}
+      ],
+      "effects": {
+        "on_expire": [{"op": "flag", "key": "missed"}]
+      },
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_STAGECARD",
+      "stage": {
+        "brief": "THIS_BRIEF_MUST_NOT_LEAK_STAGEBLOCK",
+        "cast": [
+          {"who": "ex_patrol", "at": "door_l", "brief": "THIS_BRIEF_MUST_NOT_LEAK_CASTSLOT"}
+        ],
+        "props": [
+          {"art": "prop.trunk", "at": "door_side", "brief": "THIS_BRIEF_MUST_NOT_LEAK_PROP"}
+        ],
+        "intro": [
+          {"who": "", "ref": "body", "brief": "THIS_BRIEF_MUST_NOT_LEAK_BEATBODY"},
+          {"who": "ex_patrol", "ref": "lines.greet", "brief": "THIS_BRIEF_MUST_NOT_LEAK_BEATGREET"},
+          {"who": "me", "ref": "lines.me_ask", "brief": "THIS_BRIEF_MUST_NOT_LEAK_BEATME"}
+        ],
+        "after": {
+          "hide": [
+            {"who": "", "ref": "outcomes.hide", "brief": "THIS_BRIEF_MUST_NOT_LEAK_BEATHIDE"}
+          ],
+          "success": [
+            {"who": "ex_patrol", "ref": "choices.hide", "brief": "THIS_BRIEF_MUST_NOT_LEAK_BEATCHOICE"}
+          ]
+        }
+      }
+    },
+    {
+      "id": "ev.empty.1938",
+      "type": "event",
+      "era": ["1938"],
+      "effects": {"on_expire": []},
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_EMPTYEXPIRE"
+    },
+    {
+      "id": "p.grudge.1938",
+      "type": "person",
+      "era": ["1938"],
+      "person": "linsao",
+      "intent": "story",
+      "effects": {"on_expire": [{"op": "flag", "key": "grudge_linsao"}]},
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_GRUDGE"
+    },
+    {
+      "id": "fa.cold.1938",
+      "type": "fate",
+      "era": ["1938"],
+      "effects": {"on_expire": [{"op": "flag", "key": "cold"}]},
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_FATE"
+    },
+    {
+      "id": "st.rain.1938",
+      "type": "street",
+      "era": ["1938"],
+      "effects": {"on_expire": [{"op": "flag", "key": "rain"}]},
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_STREET"
+    },
+    {
+      "id": "bf.box.1938",
+      "type": "big_fate",
+      "era": ["1938"],
+      "effects": {"on_expire": [{"op": "flag", "key": "box"}]},
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_BIGFATE"
+    },
+    {
+      "id": "lf.winter.1938",
+      "type": "life",
+      "era": ["1938"],
+      "effects": {"on_expire": [{"op": "flag", "key": "winter"}]},
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_LIFE"
+    },
+    {
+      "id": "pr.cell",
+      "type": "prison",
+      "era": ["*"],
+      "effects": {"on_expire": [{"op": "flag", "key": "cell"}]},
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_PRISON"
+    }
+  ]
+}

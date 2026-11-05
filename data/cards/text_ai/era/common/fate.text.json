@@ -1,0 +1,219 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-1938"
+  },
+  "fa.any.clear_road": {
+    "title": "天放晴了",
+    "body": "天放晴了，路也好走，街上的人多起来。",
+    "choices": {
+      "open_up": "开门迎客",
+      "stay": "照旧"
+    },
+    "outcomes": {
+      "ignored": "天照样放晴，只是没多招呼客人。"
+    }
+  },
+  "fa.any.damp_loss": {
+    "title": "货受潮",
+    "body": "连日下雨，铺里返潮，货怕是要受潮。",
+    "choices": {
+      "cover": "把货遮上",
+      "ignore": "不管"
+    },
+    "outcomes": {
+      "ignored": "不管的话，最差的一件货会受潮坏掉。"
+    }
+  },
+  "fa.any.false_charge": {
+    "title": "被人诬告",
+    "body": "有人到官面上告了你一状，说的事都没影。",
+    "choices": {
+      "argue": "当面辩",
+      "payoff": "花钱了事",
+      "silent": "忍着"
+    },
+    "slots": {
+      "talker": "会说话的人"
+    },
+    "outcomes": {
+      "success": "辩清楚了，风声落了下来。",
+      "fail": "没辩过，风声更紧了。",
+      "ignored": "忍下来，风声会紧一大截。"
+    }
+  },
+  "fa.any.fire_next_door": {
+    "title": "邻铺失火",
+    "body": "隔壁铺子起了火，火往这边烧过来了。",
+    "choices": {
+      "move_goods": "冲进去搬货",
+      "call_help": "喊人来救",
+      "shut_door": "关门躲着"
+    },
+    "slots": {
+      "man": "胆大的人"
+    },
+    "outcomes": {
+      "success": "货都搬了出来，街坊都夸你。",
+      "fail": "烟太大，最好的一件货没抢出来，你也受了伤。",
+      "ignored": "关门躲着，会烧掉两件货，街坊也有闲话。"
+    }
+  },
+  "fa.any.found_claim": {
+    "title": "失主上门",
+    "body": "先前捡到的东西，失主找上门来认了。",
+    "choices": {
+      "return_it": "还给他",
+      "keep": "留下"
+    },
+    "outcomes": {
+      "ignored": "不理会，东西就算留下了，风声会紧一些。"
+    }
+  },
+  "fa.any.found_purse": {
+    "title": "拾到钱袋",
+    "body": "路上捡到一只钱袋，不知道是谁丢的。",
+    "choices": {
+      "keep": "留下钱袋",
+      "return_it": "送回去"
+    }
+  },
+  "fa.any.illness": {
+    "title": "病了一场",
+    "body": "你病倒了，头重脚轻，干不了活。",
+    "choices": {
+      "buy_medicine": "抓药",
+      "endure": "硬扛"
+    },
+    "outcomes": {
+      "ignored": "硬扛过去，这几天出不了门，胆气也弱了。"
+    }
+  },
+  "fa.any.kin_money": {
+    "title": "远亲寄钱",
+    "body": "远方的亲戚寄来一笔钱。",
+    "choices": {
+      "accept": "收下",
+      "send_back": "退回去"
+    }
+  },
+  "fa.any.neighbor_row": {
+    "title": "邻里口角",
+    "body": "左邻右舍起了口角，扯到了铺子头上。",
+    "choices": {
+      "mediate": "出面说和",
+      "stay_out": "不管"
+    },
+    "slots": {
+      "talker": "会说话的人"
+    },
+    "outcomes": {
+      "success": "说和了，两边都给你面子。",
+      "fail": "没说和，两边都怪你。",
+      "ignored": "不管的话，街坊会有些闲话。"
+    }
+  },
+  "fa.any.night_knock": {
+    "title": "夜里敲门",
+    "body": "夜里有人敲门，说是遇了难，求你帮一把。",
+    "choices": {
+      "open_door": "开门接济",
+      "shut": "不开门"
+    },
+    "outcomes": {
+      "ignored": "没开门，街坊会说闲话。"
+    }
+  },
+  "fa.any.regular_intro": {
+    "title": "老主顾荐客",
+    "body": "一位老主顾托人带话，说明天有朋友要来铺里。",
+    "choices": {
+      "welcome": "接下这单",
+      "busy": "太忙，不接"
+    }
+  },
+  "fa.any.requisition": {
+    "title": "上门征用",
+    "body": "有人上门征用，要从货架上拿走一件货。",
+    "choices": {
+      "give": "交出去",
+      "hide": "藏起来"
+    },
+    "slots": {
+      "man": "胆大的人"
+    },
+    "outcomes": {
+      "success": "东西藏好了，没被搜出来。",
+      "fail": "没藏住，又被多拿走两件，风声也紧了。",
+      "ignored": "不理会，货架上的一件货会被拿走。"
+    }
+  },
+  "fa.any.rice_dip": {
+    "title": "米价跌了",
+    "body": "这几天米价松了，正好收一点。",
+    "choices": {
+      "buy": "趁便宜收一袋",
+      "pass": "不收"
+    }
+  },
+  "fa.any.shop_sealed": {
+    "title": "要查封三天",
+    "body": "官面上来了人，要把铺子封三天。",
+    "choices": {
+      "bribe": "花钱疏通",
+      "accept": "认了这三天"
+    },
+    "outcomes": {
+      "ignored": "不疏通，铺子会被封上三天。"
+    }
+  },
+  "fa.any.snow_day": {
+    "title": "下雪了",
+    "body": "下起了雪，街上冷清，来铺里的人少了。",
+    "choices": {
+      "sell": "趁冷卖一点",
+      "stay_in": "关门歇着"
+    },
+    "outcomes": {
+      "ignored": "关门歇着，这两天来的人会少些。"
+    }
+  },
+  "fa.any.stranger_deal": {
+    "title": "生人的买卖",
+    "body": "一个生面孔找上门，说有笔小买卖，来路却说不清。",
+    "choices": {
+      "take": "接下",
+      "refuse": "不接"
+    },
+    "outcomes": {
+      "ignored": "没接这笔买卖，街坊倒说你稳当。"
+    }
+  },
+  "fa.any.street_fine": {
+    "title": "罚款",
+    "body": "有人上门要一笔罚款，名目说不清楚。",
+    "choices": {
+      "pay": "交罚款",
+      "refuse": "不交"
+    },
+    "outcomes": {
+      "ignored": "不交罚款，风声会紧一截。"
+    }
+  },
+  "fa.any.theft": {
+    "title": "铺里丢了东西",
+    "body": "铺里少了一件货，像是被人顺走了。",
+    "choices": {
+      "chase": "追出去",
+      "let_go": "算了"
+    },
+    "slots": {
+      "man": "胆大的人"
+    },
+    "outcomes": {
+      "success": "追上了，东西拿了回来。",
+      "fail": "没追上，又丢了一件好货，你也受了伤。",
+      "ignored": "算了，那件货就找不回来了。"
+    }
+  }
+}

@@ -1,0 +1,1646 @@
+{
+  "_doc": [
+    "运行数据由 tools/napoleon/merge_drafts.py 从作者草稿转换，原稿保留在 docs/cards/world/drafts。",
+    "第一卷：主干八章、完整远洋、鹰飞百日、伊夫堡前两章。其余章节标记 volume:2。"
+  ],
+  "id": "napoleon",
+  "version": 1,
+  "volume": 1,
+  "start": "trunk",
+  "title": {
+    "name": "鹰旗军需官",
+    "sub": "一七九三 · 土伦 → 一八一五 · 厄尔巴 → 三条路"
+  },
+  "segments": {
+    "trunk": {
+      "file": "res://data/campaigns/napoleon/trunk.json",
+      "map": "res://data/campaigns/napoleon/maps/europe.json",
+      "kind": "trunk",
+      "brand": "鹰旗",
+      "badge": "eagle",
+      "scene_battles": {
+        "toulon_arrival": {
+          "template": ""
+        },
+        "toulon_mulgrave": {
+          "template": "toulon_night",
+          "level": 1
+        },
+        "italy_nice": {
+          "template": ""
+        },
+        "italy_milan": {
+          "template": ""
+        },
+        "italy_rivoli": {
+          "template": "rivoli_plateau",
+          "level": 3
+        },
+        "italy_campo_formio": {
+          "template": ""
+        },
+        "orient_orders": {
+          "template": ""
+        },
+        "orient_acre": {
+          "template": "acre",
+          "level": 5
+        },
+        "alps_marengo": {
+          "template": ""
+        },
+        "boulogne_orders": {
+          "template": ""
+        },
+        "austerlitz_sun": {
+          "template": "austerlitz",
+          "level": 7
+        },
+        "eylau_snow": {
+          "template": ""
+        },
+        "bayonne_orders": {
+          "template": ""
+        },
+        "saragossa_siege": {
+          "template": "saragossa",
+          "level": 9
+        },
+        "wagram_lobau": {
+          "template": ""
+        },
+        "russia_niemen": {
+          "template": ""
+        },
+        "russia_borodino": {
+          "template": "borodino",
+          "level": 9
+        },
+        "russia_berezina": {
+          "template": "berezina",
+          "level": 10
+        },
+        "collapse_lutzen": {
+          "template": ""
+        },
+        "collapse_leipzig": {
+          "template": "leipzig",
+          "level": 11
+        },
+        "collapse_fontainebleau": {
+          "template": ""
+        },
+        "elba_arrival": {
+          "template": ""
+        },
+        "elba_night": {
+          "template": "elba_cove",
+          "level": 12
+        },
+        "elba_1815": {
+          "template": ""
+        }
+      }
+    },
+    "conquest": {
+      "file": "res://data/campaigns/napoleon/conquest.json",
+      "map": "res://data/campaigns/napoleon/maps/europe_late.json",
+      "kind": "branch",
+      "brand": "鹰飞",
+      "badge": "eagle_flight",
+      "scene_battles": {
+        "k_golfe_juan": {
+          "template": ""
+        },
+        "k_laffrey": {
+          "template": ""
+        },
+        "k_tuileries": {
+          "template": ""
+        },
+        "k_charleroi": {
+          "template": "charleroi_bridge",
+          "level": 12
+        },
+        "k_waterloo": {
+          "template": "waterloo",
+          "level": 14,
+          "mods_when": [
+            {
+              "when": {
+                "flags": [
+                  "k_blucher_down"
+                ]
+              },
+              "mods": {
+                "drop_waves": [
+                  12
+                ]
+              }
+            },
+            {
+              "when": {
+                "flags": [
+                  "k_grouchy_close"
+                ]
+              },
+              "mods": {
+                "prep_turn": 1
+              }
+            },
+            {
+              "when": {
+                "flags": [
+                  "k_crossroads_held"
+                ]
+              },
+              "mods": {
+                "terrain": [
+                  {
+                    "cell": "B2",
+                    "terrain": "high"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "k_waterloo_night": {
+          "template": ""
+        },
+        "k_brussels": {
+          "template": "brussels",
+          "level": 15
+        },
+        "k_ultimatum": {
+          "template": ""
+        },
+        "k_rhine": {
+          "template": "rhine_crossing",
+          "level": 16
+        },
+        "k_bavaria": {
+          "template": ""
+        },
+        "k_vienna": {
+          "template": "vienna_streets",
+          "level": 18
+        },
+        "k_schoenbrunn": {
+          "template": ""
+        },
+        "k_choice_1817": {
+          "template": ""
+        },
+        "k_torres_vedras": {
+          "template": "iberia_return",
+          "level": 20
+        },
+        "k_dover": {
+          "template": "channel_landing",
+          "level": 20
+        },
+        "k_warsaw": {
+          "template": ""
+        },
+        "k_niemen": {
+          "template": "niemen",
+          "level": 22
+        },
+        "k_paris_1819": {
+          "template": ""
+        },
+        "k_leipzig_1819": {
+          "template": "coalition_final",
+          "level": 24
+        },
+        "k_final": {
+          "template": ""
+        }
+      }
+    },
+    "ocean": {
+      "file": "res://data/campaigns/ocean_pawn.json",
+      "map": "res://data/campaigns/napoleon/maps/world.json",
+      "kind": "branch",
+      "brand": "远洋",
+      "badge": "nautilus",
+      "events": "res://data/campaigns/napoleon/ocean_events.json",
+      "gauges": {
+        "treasury": "军费",
+        "morale": "同盟威望",
+        "heat": "敌方警戒",
+        "vitality": "体力与士气",
+        "construction": "岛屿建设",
+        "exploration": "深海探索"
+      },
+      "scene_battles": {
+        "prologue": {
+          "template": "bellerophon_deck",
+          "level": 13
+        },
+        "scene01": {
+          "template": "",
+          "level": 0,
+          "_fallback": {
+            "template": "signal_hill",
+            "level": 14
+          }
+        },
+        "scene02": {
+          "template": "jamestown_streets",
+          "level": 14
+        },
+        "scene03": {
+          "template": "",
+          "level": 0,
+          "_fallback": {
+            "template": "beach_landing",
+            "level": 14
+          }
+        },
+        "scene04": {
+          "template": "sea_cave",
+          "level": 15
+        },
+        "scene05": {
+          "template": "longwood_escape",
+          "level": 16
+        },
+        "scene06": {
+          "template": "shipwreck_beach",
+          "level": 17
+        },
+        "scene07": {
+          "template": "",
+          "level": 0,
+          "_fallback": {
+            "template": "reef_crossing",
+            "level": 18
+          }
+        },
+        "scene08": {
+          "template": "viper_boarding",
+          "level": 19
+        },
+        "scene09": {
+          "template": "skull_reef",
+          "level": 20
+        },
+        "scene10": {
+          "template": "",
+          "level": 0,
+          "_fallback": {
+            "template": "nautilus_deck_raid",
+            "level": 21
+          }
+        },
+        "scene11": {
+          "template": "vigo_seabed",
+          "level": 22
+        },
+        "scene12": {
+          "template": "atlantis",
+          "level": 22
+        },
+        "finale": {
+          "template": "thames_estuary",
+          "level": 24
+        }
+      },
+      "demand_nodes": {
+        "medicine": [
+          "st_helena:hutts_gate"
+        ],
+        "bond": [
+          "st_helena:plantation"
+        ]
+      }
+    },
+    "cristo": {
+      "file": "res://data/campaigns/napoleon/cristo.json",
+      "map": "res://data/campaigns/napoleon/maps/med.json",
+      "kind": "branch",
+      "brand": "伊夫堡",
+      "badge": "castle",
+      "scene_battles": {
+        "c_landfall": {
+          "template": ""
+        },
+        "c_reserve": {
+          "template": ""
+        },
+        "c_gerard": {
+          "template": ""
+        },
+        "c_petition": {
+          "template": ""
+        },
+        "c_white_june": {
+          "template": "marseille_arrest",
+          "level": 14,
+          "order_flag": "m_morrel_kept"
+        },
+        "c_if_contract": {
+          "template": ""
+        },
+        "c_bread_34": {
+          "template": ""
+        },
+        "c_faria_27": {
+          "template": ""
+        },
+        "c_morgiou": {
+          "template": "morgiou_cove",
+          "level": 15,
+          "order_flag": "m_cargo_saved"
+        },
+        "c_faria_dies": {
+          "template": ""
+        },
+        "c_if_night": {
+          "template": "if_corridors",
+          "level": 16,
+          "order_flag": "m_escape_clean"
+        },
+        "c_tiboulen": {
+          "template": "tiboulen_swim",
+          "level": 17,
+          "order_flag": "m_tiboulen_clean"
+        },
+        "c_livorno": {
+          "template": ""
+        },
+        "c_montecristo": {
+          "template": "monte_cristo_cave",
+          "level": 18,
+          "order_flag": "m_all_chests"
+        },
+        "c_caderousse": {
+          "template": ""
+        },
+        "c_morrel_rescue": {
+          "template": ""
+        },
+        "c_carnival": {
+          "template": ""
+        },
+        "c_san_sebastiano": {
+          "template": "san_sebastiano",
+          "level": 21,
+          "order_flag": "m_albert_unharmed"
+        },
+        "c_champs_elysees": {
+          "template": ""
+        },
+        "c_auteuil": {
+          "template": "auteuil_garden",
+          "level": 22,
+          "order_flag": "m_box_kept"
+        },
+        "c_peers": {
+          "template": ""
+        },
+        "c_danglars": {
+          "template": ""
+        },
+        "c_trial": {
+          "template": "cristo_final",
+          "level": 24,
+          "order_flag": "m_witness_alive"
+        }
+      }
+    }
+  },
+  "branches": {
+    "conquest": {
+      "from": "trunk",
+      "scene": "elba_1815",
+      "level_offset": 12,
+      "entry": "",
+      "requires": {
+        "any": [
+          {
+            "stat": {
+              "medal_earned": [
+                ">=",
+                10
+              ]
+            }
+          },
+          {
+            "flags": [
+              "t_guard_oath"
+            ]
+          }
+        ],
+        "hero_ok": true
+      },
+      "reasons": {
+        "any": "皇帝没点你的名：忠诚不够（整局累计挣到勋章 ≥ 10，或在枫丹白露写下名字随驾厄尔巴）",
+        "hero_ok": "主角重伤未愈，上不了马"
+      },
+      "offer": "随皇帝北上，亲赴前线"
+    },
+    "ocean": {
+      "from": "trunk",
+      "scene": "elba_1815",
+      "level_offset": 12,
+      "entry": "prologue",
+      "requires": {},
+      "offer": "以司库身份随驾，管钱袋与船"
+    },
+    "cristo": {
+      "from": "trunk",
+      "scene": "elba_1815",
+      "level_offset": 12,
+      "entry": "",
+      "requires": {
+        "any": [
+          {
+            "flags": [
+              "faria_half_letter"
+            ]
+          },
+          {
+            "flags": [
+              "t_pharaon_known"
+            ]
+          }
+        ]
+      },
+      "reasons": {
+        "any": "你和马赛没有交集：没拿到法利亚的半封信，也没见过莫雷尔或法老号"
+      },
+      "offer": "奉命携密信去马赛"
+    }
+  },
+  "carry": {
+    "metrics": {
+      "treasury": "chapter_start",
+      "morale": "keep",
+      "heat": "initial",
+      "vitality": [
+        "keep_min",
+        40
+      ],
+      "construction": "initial",
+      "exploration": "initial"
+    },
+    "treasury_bonus": [
+      1,
+      4
+    ],
+    "flags": "all",
+    "items": [
+      "elba_watch",
+      "faria_half",
+      "emperor_letter",
+      "guard_eagle_ribbon"
+    ],
+    "rogue": "all",
+    "coin_cap": 20
+  },
+  "shared_flags": [
+    "faria_half_letter",
+    "k_spada_letter",
+    "m_wait_hope_bond",
+    "t_baptiste_marie_married",
+    "t_dantes_letter",
+    "t_guard_oath",
+    "t_lithuania_taken",
+    "t_marie_paid",
+    "t_morrel_credit",
+    "t_mysore_envoy",
+    "t_pharaon_known",
+    "t_ponds_mercy",
+    "t_return_mark",
+    "t_saragossa_storm",
+    "t_saragossa_terms",
+    "t_storks_hostile",
+    "t_vilna_reserve",
+    "t_went_home"
+  ],
+  "companions": "res://data/campaigns/napoleon/companions.json",
+  "events_common": "res://data/campaigns/napoleon/events_common.json",
+  "bond_set": "napoleon",
+  "start_rogue": {
+    "coins": {
+      "gold": 4,
+      "supply": 6,
+      "medal": 2,
+      "intel": 2
+    },
+    "props": [
+      "prop_loaded_dice",
+      "prop_field_ration",
+      "prop_smoke_bomb"
+    ],
+    "odd_seed_prop": "prop_spyglass",
+    "even_seed_prop": "prop_barricade",
+    "companions": []
+  },
+  "start_troops": {
+    "toulon": [
+      "line",
+      "line",
+      "jager",
+      "artillery"
+    ],
+    "italy": [
+      "line",
+      "line",
+      "jager",
+      "artillery"
+    ],
+    "prologue": [
+      "line",
+      "line",
+      "jager"
+    ],
+    "st_helena": [
+      "line",
+      "line",
+      "jager",
+      "artillery"
+    ],
+    "new_elba": [
+      "line",
+      "grenadier",
+      "jager",
+      "hussar",
+      "artillery"
+    ],
+    "nautilus": [
+      "line",
+      "grenadier",
+      "grenadier",
+      "jager",
+      "hussar",
+      "artillery"
+    ],
+    "orient_alps": [
+      "line",
+      "line",
+      "grenadier",
+      "jager",
+      "hussar"
+    ],
+    "austerlitz_jena": [
+      "line",
+      "line",
+      "grenadier",
+      "jager",
+      "hussar"
+    ],
+    "iberia_danube": [
+      "line",
+      "line",
+      "grenadier",
+      "jager",
+      "hussar",
+      "artillery"
+    ],
+    "russia": [
+      "line",
+      "line",
+      "grenadier",
+      "jager",
+      "hussar",
+      "artillery"
+    ],
+    "collapse": [
+      "line",
+      "line",
+      "grenadier",
+      "jager",
+      "hussar",
+      "artillery"
+    ],
+    "elba": [
+      "line",
+      "line",
+      "grenadier",
+      "jager",
+      "hussar",
+      "artillery",
+      "line"
+    ],
+    "hundred_days": [
+      "line",
+      "line",
+      "grenadier",
+      "jager",
+      "hussar",
+      "artillery",
+      "line"
+    ],
+    "rhine": [
+      "line",
+      "line",
+      "grenadier",
+      "jager",
+      "hussar",
+      "artillery",
+      "line",
+      "artillery"
+    ],
+    "vienna": [
+      "line",
+      "line",
+      "grenadier",
+      "jager",
+      "hussar",
+      "artillery",
+      "line",
+      "artillery"
+    ],
+    "iberia_channel": [
+      "line",
+      "line",
+      "grenadier",
+      "jager",
+      "hussar",
+      "artillery",
+      "line",
+      "artillery"
+    ],
+    "niemen": [
+      "line",
+      "line",
+      "grenadier",
+      "jager",
+      "hussar",
+      "artillery",
+      "line",
+      "artillery"
+    ],
+    "last_coalition": [
+      "line",
+      "line",
+      "grenadier",
+      "jager",
+      "hussar",
+      "artillery",
+      "line",
+      "artillery"
+    ],
+    "marseille": [
+      "line",
+      "line",
+      "grenadier",
+      "jager",
+      "hussar",
+      "artillery",
+      "line"
+    ],
+    "if_years": [
+      "line",
+      "line",
+      "grenadier",
+      "jager",
+      "hussar",
+      "artillery",
+      "line",
+      "artillery"
+    ],
+    "montecristo": [
+      "line",
+      "line",
+      "grenadier",
+      "jager",
+      "hussar",
+      "artillery",
+      "line",
+      "artillery"
+    ],
+    "mediterranean": [
+      "line",
+      "line",
+      "grenadier",
+      "jager",
+      "hussar",
+      "artillery",
+      "line",
+      "artillery"
+    ],
+    "paris_1838": [
+      "line",
+      "line",
+      "grenadier",
+      "jager",
+      "hussar",
+      "artillery",
+      "line",
+      "artillery"
+    ]
+  },
+  "march_cards": {
+    "march_2": {
+      "mp": 2,
+      "label": "稳步行军"
+    },
+    "march_3": {
+      "mp": 3,
+      "label": "纵队行军"
+    },
+    "forced_4": {
+      "mp": 4,
+      "effects": {
+        "vitality": -4
+      },
+      "label": "强行军"
+    },
+    "scout_1": {
+      "mp": 1,
+      "reveal": 2,
+      "label": "斥候先行"
+    },
+    "wagon_1": {
+      "mp": 1,
+      "coins": {
+        "supply": 2
+      },
+      "label": "辎重随行"
+    },
+    "night_2": {
+      "mp": 2,
+      "ignore_forced": true,
+      "label": "夜行"
+    },
+    "fair_wind": {
+      "mp": 0,
+      "voyage_minus": 1,
+      "label": "顺风"
+    },
+    "dive_3": {
+      "mp": 3,
+      "ignore_forced": true,
+      "label": "潜航"
+    }
+  },
+  "march_deck": [
+    "march_2",
+    "march_2",
+    "march_2",
+    "march_3",
+    "march_3",
+    "forced_4",
+    "scout_1",
+    "wagon_1",
+    "night_2"
+  ],
+  "march_deck_extra": {
+    "ocean": {
+      "prologue": [
+        "fair_wind"
+      ],
+      "nautilus": [
+        "dive_3",
+        "dive_3",
+        "fair_wind"
+      ]
+    }
+  },
+  "battle_pool": {
+    "trunk": {
+      "1-6": [
+        "skirmish_terraces",
+        "skirmish_mill_ford",
+        "skirmish_hamlet"
+      ],
+      "7-12": [
+        "skirmish_terraces",
+        "skirmish_mill_ford",
+        "skirmish_hamlet"
+      ]
+    },
+    "conquest": {
+      "12-23": [
+        "skirmish_brabant_farm",
+        "skirmish_sunken_lane"
+      ]
+    },
+    "ocean": {
+      "13-16": [
+        "signal_hill",
+        "beach_landing"
+      ],
+      "17-20": [
+        "beach_landing",
+        "reef_crossing"
+      ],
+      "21-24": [
+        "reef_crossing",
+        "nautilus_deck_raid"
+      ]
+    },
+    "cristo": {
+      "12-17": [
+        "alley_ambush",
+        "coast_road"
+      ],
+      "18-23": [
+        "alley_ambush",
+        "coast_road"
+      ]
+    }
+  },
+  "reward_pct_per_level": 4,
+  "hero_hp_max": 24,
+  "meta": {
+    "count_endings": {
+      "conquest": [
+        "k_return",
+        "k_pax",
+        "k_iron",
+        "k_dusk"
+      ],
+      "ocean": [
+        "alliance",
+        "ghost",
+        "dark",
+        "tragedy",
+        "bittersweet"
+      ],
+      "cristo": [
+        "m_wait_hope",
+        "m_full_ledger",
+        "m_name",
+        "m_count"
+      ]
+    }
+  },
+  "debug_carry": {
+    "branch_point": {
+      "coins": {
+        "gold": 6,
+        "supply": 8,
+        "medal": 10,
+        "intel": 3
+      },
+      "flags": [
+        "faria_half_letter",
+        "t_pharaon_known"
+      ],
+      "items": [
+        "elba_watch",
+        "faria_half"
+      ],
+      "companions": {
+        "baptiste": 2,
+        "corso": 2,
+        "marie": 1
+      },
+      "troops": [
+        "line",
+        "line",
+        "grenadier",
+        "jager",
+        "hussar",
+        "artillery"
+      ]
+    },
+    "conquest": {
+      "from": "branch_point",
+      "flags_add": [
+        "t_guard_oath",
+        "t_pharaon_known"
+      ],
+      "stages": {
+        "0": {
+          "coins": {
+            "gold": 6,
+            "supply": 8,
+            "medal": 10,
+            "intel": 3
+          },
+          "companions": {
+            "baptiste": 2,
+            "corso": 2,
+            "marie": 1,
+            "gourgaud": 1,
+            "drouot": 1
+          },
+          "troops": [
+            "line",
+            "line",
+            "grenadier",
+            "jager",
+            "hussar",
+            "artillery"
+          ]
+        },
+        "1": {
+          "coins": {
+            "gold": 8,
+            "supply": 10,
+            "medal": 12,
+            "intel": 3
+          },
+          "companions": {
+            "baptiste": 3,
+            "corso": 3,
+            "marie": 2,
+            "gourgaud": 2,
+            "drouot": 2
+          },
+          "troops": [
+            "line",
+            "line",
+            "grenadier",
+            "jager",
+            "hussar",
+            "artillery",
+            "line"
+          ]
+        },
+        "2": {
+          "coins": {
+            "gold": 10,
+            "supply": 12,
+            "medal": 14,
+            "intel": 3
+          },
+          "companions": {
+            "baptiste": 3,
+            "corso": 3,
+            "marie": 3,
+            "gourgaud": 3,
+            "drouot": 3
+          },
+          "troops": [
+            "line",
+            "line",
+            "grenadier",
+            "jager",
+            "hussar",
+            "artillery",
+            "line",
+            "line"
+          ]
+        },
+        "3": {
+          "coins": {
+            "gold": 12,
+            "supply": 14,
+            "medal": 16,
+            "intel": 3
+          },
+          "companions": {
+            "baptiste": 3,
+            "corso": 3,
+            "marie": 3,
+            "gourgaud": 3,
+            "drouot": 3
+          },
+          "troops": [
+            "line",
+            "line",
+            "grenadier",
+            "jager",
+            "hussar",
+            "artillery",
+            "line",
+            "line",
+            "line"
+          ]
+        },
+        "4": {
+          "coins": {
+            "gold": 14,
+            "supply": 16,
+            "medal": 18,
+            "intel": 3
+          },
+          "companions": {
+            "baptiste": 3,
+            "corso": 3,
+            "marie": 3,
+            "gourgaud": 3,
+            "drouot": 3
+          },
+          "troops": [
+            "line",
+            "line",
+            "grenadier",
+            "jager",
+            "hussar",
+            "artillery",
+            "line",
+            "line",
+            "line",
+            "line"
+          ]
+        },
+        "5": {
+          "coins": {
+            "gold": 16,
+            "supply": 18,
+            "medal": 20,
+            "intel": 3
+          },
+          "companions": {
+            "baptiste": 3,
+            "corso": 3,
+            "marie": 3,
+            "gourgaud": 3,
+            "drouot": 3
+          },
+          "troops": [
+            "line",
+            "line",
+            "grenadier",
+            "jager",
+            "hussar",
+            "artillery",
+            "line",
+            "line",
+            "line",
+            "line",
+            "line"
+          ]
+        }
+      },
+      "companions": {
+        "baptiste": 2,
+        "corso": 2,
+        "marie": 1,
+        "gourgaud": 1,
+        "drouot": 0
+      }
+    },
+    "ocean": {
+      "from": "branch_point",
+      "stages": {
+        "1": {
+          "chapter": "st_helena",
+          "companions": {
+            "dantes": 1,
+            "faria": 1,
+            "gourgaud": 1,
+            "marie": 1
+          },
+          "troops": [
+            "line",
+            "line",
+            "grenadier",
+            "jager",
+            "hussar",
+            "artillery",
+            "line"
+          ],
+          "coins": {
+            "gold": 4,
+            "supply": 6,
+            "medal": 4,
+            "intel": 2
+          }
+        },
+        "2": {
+          "chapter": "new_elba",
+          "companions": {
+            "dantes": 2,
+            "faria": 1,
+            "gourgaud": 2,
+            "marie": 1,
+            "corso": 1,
+            "friday": 1
+          },
+          "troops": [
+            "line",
+            "line",
+            "grenadier",
+            "grenadier",
+            "jager",
+            "hussar",
+            "artillery",
+            "artillery"
+          ],
+          "coins": {
+            "gold": 5,
+            "supply": 6,
+            "medal": 6,
+            "intel": 3
+          }
+        },
+        "3": {
+          "chapter": "nautilus",
+          "companions": {
+            "dantes": 3,
+            "faria": 2,
+            "gourgaud": 2,
+            "marie": 2,
+            "corso": 2,
+            "friday": 2,
+            "nemo": 1,
+            "morel": 1
+          },
+          "troops": [
+            "line",
+            "line",
+            "grenadier",
+            "grenadier",
+            "jager",
+            "jager",
+            "hussar",
+            "artillery"
+          ],
+          "coins": {
+            "gold": 6,
+            "supply": 8,
+            "medal": 8,
+            "intel": 4
+          }
+        }
+      }
+    },
+    "cristo": {
+      "from": "branch_point",
+      "flags_add": [
+        "m_letter_carried"
+      ],
+      "stages": {
+        "0": {
+          "coins": {
+            "gold": 6,
+            "supply": 8,
+            "medal": 10,
+            "intel": 3
+          },
+          "flags": [
+            "faria_half_letter",
+            "t_pharaon_known"
+          ],
+          "items": [
+            "elba_watch",
+            "faria_half"
+          ],
+          "companions": {
+            "baptiste": 2,
+            "corso": 2,
+            "marie": 1
+          },
+          "troops": [
+            "line",
+            "line",
+            "grenadier",
+            "jager",
+            "hussar",
+            "artillery"
+          ],
+          "flags_add": [
+            "faria_half_letter",
+            "t_pharaon_known",
+            "m_letter_carried"
+          ]
+        },
+        "1": {
+          "coins": {
+            "gold": 6,
+            "supply": 8,
+            "medal": 10,
+            "intel": 3
+          },
+          "flags": [
+            "faria_half_letter",
+            "t_pharaon_known"
+          ],
+          "items": [
+            "elba_watch",
+            "faria_half"
+          ],
+          "companions": {
+            "baptiste": 2,
+            "corso": 2,
+            "marie": 1,
+            "morel": 1,
+            "caderousse": 1
+          },
+          "troops": [
+            "line",
+            "line",
+            "grenadier",
+            "jager",
+            "hussar",
+            "artillery"
+          ],
+          "flags_add": [
+            "faria_half_letter",
+            "t_pharaon_known",
+            "m_letter_carried",
+            "m_denunciation",
+            "m_bargain",
+            "m_stay_marseille"
+          ]
+        },
+        "2": {
+          "coins": {
+            "gold": 6,
+            "supply": 8,
+            "medal": 10,
+            "intel": 3
+          },
+          "flags": [
+            "faria_half_letter",
+            "t_pharaon_known"
+          ],
+          "items": [
+            "elba_watch",
+            "faria_half"
+          ],
+          "companions": {
+            "baptiste": 2,
+            "corso": 2,
+            "marie": 1,
+            "morel": 1,
+            "caderousse": 1,
+            "dantes": 2,
+            "faria": 1,
+            "jacopo": 1
+          },
+          "troops": [
+            "line",
+            "line",
+            "grenadier",
+            "jager",
+            "hussar",
+            "artillery"
+          ],
+          "flags_add": [
+            "faria_half_letter",
+            "t_pharaon_known",
+            "m_letter_carried",
+            "m_denunciation",
+            "m_bargain",
+            "m_stay_marseille",
+            "m_faria_lives",
+            "m_escape_clean",
+            "m_jeune_amelie"
+          ]
+        },
+        "3": {
+          "coins": {
+            "gold": 8,
+            "supply": 8,
+            "medal": 10,
+            "intel": 3
+          },
+          "flags": [
+            "faria_half_letter",
+            "t_pharaon_known"
+          ],
+          "items": [
+            "elba_watch",
+            "faria_half"
+          ],
+          "companions": {
+            "baptiste": 2,
+            "corso": 2,
+            "marie": 1,
+            "morel": 1,
+            "caderousse": 1,
+            "dantes": 2,
+            "faria": 1,
+            "jacopo": 1
+          },
+          "troops": [
+            "line",
+            "line",
+            "grenadier",
+            "jager",
+            "hussar",
+            "artillery"
+          ],
+          "flags_add": [
+            "faria_half_letter",
+            "t_pharaon_known",
+            "m_letter_carried",
+            "m_denunciation",
+            "m_bargain",
+            "m_stay_marseille",
+            "m_faria_lives",
+            "m_escape_clean",
+            "m_jeune_amelie",
+            "m_treasure_taken",
+            "m_spada_known"
+          ]
+        },
+        "4": {
+          "coins": {
+            "gold": 8,
+            "supply": 8,
+            "medal": 10,
+            "intel": 3
+          },
+          "flags": [
+            "faria_half_letter",
+            "t_pharaon_known"
+          ],
+          "items": [
+            "elba_watch",
+            "faria_half"
+          ],
+          "companions": {
+            "baptiste": 2,
+            "corso": 2,
+            "marie": 1,
+            "morel": 1,
+            "caderousse": 1,
+            "dantes": 2,
+            "faria": 1,
+            "jacopo": 1,
+            "haydee": 1,
+            "ali": 1,
+            "vampa": 1,
+            "bertuccio": 1
+          },
+          "troops": [
+            "line",
+            "line",
+            "grenadier",
+            "jager",
+            "hussar",
+            "artillery"
+          ],
+          "flags_add": [
+            "faria_half_letter",
+            "t_pharaon_known",
+            "m_letter_carried",
+            "m_denunciation",
+            "m_bargain",
+            "m_stay_marseille",
+            "m_faria_lives",
+            "m_escape_clean",
+            "m_jeune_amelie",
+            "m_treasure_taken",
+            "m_spada_known",
+            "m_albert_freed",
+            "m_haydee_count"
+          ]
+        }
+      }
+    }
+  },
+  "_volume2_scene_battles": {
+    "trunk": {
+      "alps_marengo": {
+        "template": "marengo",
+        "level": 5
+      },
+      "eylau_snow": {
+        "template": "eylau",
+        "level": 7
+      },
+      "wagram_lobau": {
+        "template": "wagram",
+        "level": 9
+      }
+    }
+  },
+  "templates_needed": [
+    {
+      "id": "acre",
+      "level": 5,
+      "seg": "trunk",
+      "from": "ARCH §5",
+      "terrain": "沙漠 + 墙 + 壕沟",
+      "fallback": "major_a"
+    },
+    {
+      "id": "marengo",
+      "level": 5,
+      "seg": "trunk",
+      "from": "ARCH §5",
+      "terrain": "平原 + 葡萄园 + 小溪",
+      "fallback": "major_a"
+    },
+    {
+      "id": "pyramids",
+      "level": 4,
+      "seg": "trunk",
+      "from": "ARCH §5",
+      "terrain": "沙地 + 沙丘 + 村庄，马穆鲁克冲方阵",
+      "fallback": "elite_a"
+    },
+    {
+      "id": "ulm",
+      "level": 6,
+      "seg": "trunk",
+      "from": "ARCH §5",
+      "terrain": "泥地 + 城墙 + 多瑙河桥",
+      "fallback": "elite_a"
+    },
+    {
+      "id": "austerlitz",
+      "level": 7,
+      "seg": "trunk",
+      "from": "ARCH §5",
+      "terrain": "高地 + 冰面（冰裂成河）",
+      "fallback": "major_a"
+    },
+    {
+      "id": "eylau",
+      "level": 7,
+      "seg": "trunk",
+      "from": "ARCH §5",
+      "terrain": "雪地 + 墓地墙",
+      "fallback": "major_a"
+    },
+    {
+      "id": "saragossa",
+      "level": 9,
+      "seg": "trunk",
+      "from": "ARCH §5",
+      "terrain": "街道 + 房屋 + 屋顶 + 修道院墙",
+      "fallback": "major_a"
+    },
+    {
+      "id": "wagram",
+      "level": 9,
+      "seg": "trunk",
+      "from": "ARCH §5",
+      "terrain": "grand，浮桥 + 河 + 平原大炮群",
+      "fallback": "major_a"
+    },
+    {
+      "id": "borodino",
+      "level": 9,
+      "seg": "trunk",
+      "from": "ARCH §5",
+      "terrain": "grand，多面堡（胸墙）+ 村庄",
+      "fallback": "major_a"
+    },
+    {
+      "id": "berezina",
+      "level": 10,
+      "seg": "trunk",
+      "from": "ARCH §5",
+      "terrain": "雪 + 冰（冰裂成河）+ 两座浮桥",
+      "fallback": "major_a"
+    },
+    {
+      "id": "leipzig",
+      "level": 11,
+      "seg": "trunk",
+      "from": "ARCH §5",
+      "terrain": "grand，村庄环 + 埃尔斯特河单桥",
+      "fallback": "major_a"
+    },
+    {
+      "id": "elba_cove",
+      "level": 12,
+      "seg": "trunk",
+      "from": "ARCH §5",
+      "terrain": "码头 + 跳板 + 沙滩 + 海（私掠船、卡隆炮）",
+      "fallback": "major_a"
+    },
+    {
+      "id": "fort_bard",
+      "level": 4,
+      "seg": "trunk",
+      "from": "本稿新提",
+      "terrain": "峡谷单路 + 堡墙 + 屋顶射手；骡道绕行",
+      "fallback": "elite_a"
+    },
+    {
+      "id": "jena",
+      "level": 6,
+      "seg": "trunk",
+      "from": "本稿新提",
+      "terrain": "雾 + 兰德格拉芬山（高地）+ 村庄",
+      "fallback": "elite_a"
+    },
+    {
+      "id": "somosierra",
+      "level": 8,
+      "seg": "trunk",
+      "from": "本稿新提",
+      "terrain": "山口之字路 + 四座炮台（波兰枪骑兵冲坡）",
+      "fallback": "elite_a"
+    },
+    {
+      "id": "aspern",
+      "level": 8,
+      "seg": "trunk",
+      "from": "本稿新提",
+      "terrain": "两村 + 粮仓 + 背后浮桥（第 5 回合桥断）；拉纳的宿命之地",
+      "fallback": "elite_a"
+    },
+    {
+      "id": "krasnoi",
+      "level": 9,
+      "seg": "trunk",
+      "from": "本稿新提",
+      "terrain": "雪 + 结冰小河 + 被围的后卫",
+      "fallback": "elite_a"
+    },
+    {
+      "id": "dresden",
+      "level": 10,
+      "seg": "trunk",
+      "from": "本稿新提",
+      "terrain": "雨 + 城郊花园墙 + 易北河",
+      "fallback": "elite_a"
+    },
+    {
+      "id": "hanau",
+      "level": 10,
+      "seg": "trunk",
+      "from": "本稿新提",
+      "terrain": "林间大道 + 金齐希河桥（巴伐利亚军挡路）",
+      "fallback": "elite_a"
+    },
+    {
+      "id": "brussels",
+      "level": 15,
+      "seg": "conquest",
+      "from": "ARCH §5",
+      "terrain": "城门 + 街道 + 房屋 + 屋顶",
+      "fallback": "major_a"
+    },
+    {
+      "id": "rhine_crossing",
+      "level": 16,
+      "seg": "conquest",
+      "from": "ARCH §5",
+      "terrain": "劳特河防线：胸墙 + 河 + 浅滩 + 渡船",
+      "fallback": "major_a"
+    },
+    {
+      "id": "vienna_streets",
+      "level": 18,
+      "seg": "conquest",
+      "from": "ARCH §5",
+      "terrain": "grand，城墙缺口 + 街道 + 屋顶 + 火箭",
+      "fallback": "major_a"
+    },
+    {
+      "id": "iberia_return",
+      "level": 20,
+      "seg": "conquest",
+      "from": "ARCH §5",
+      "terrain": "托雷斯韦德拉什：多层胸墙 + 墙 + 山路",
+      "fallback": "major_a"
+    },
+    {
+      "id": "channel_landing",
+      "level": 20,
+      "seg": "conquest",
+      "from": "本稿新提（第四章另一条线的 Boss）",
+      "terrain": "海 + 浅水 + 沙滩 + 白崖（高地）+ 炮艇",
+      "fallback": "major_a"
+    },
+    {
+      "id": "niemen",
+      "level": 22,
+      "seg": "conquest",
+      "from": "ARCH §5",
+      "terrain": "大河 + 三座浮桥 + 对岸高地（这次俄军守河）",
+      "fallback": "major_a"
+    },
+    {
+      "id": "coalition_final",
+      "level": 24,
+      "seg": "conquest",
+      "from": "ARCH §5",
+      "terrain": "epic 12×7，村庄环 + 河 + 不规则虚空边",
+      "fallback": "major_a"
+    },
+    {
+      "id": "tiboulen_swim",
+      "volume": 2
+    },
+    {
+      "id": "monte_cristo_cave",
+      "volume": 2
+    },
+    {
+      "id": "appian_way",
+      "volume": 2
+    },
+    {
+      "id": "san_sebastiano",
+      "volume": 2
+    },
+    {
+      "id": "auteuil_garden",
+      "volume": 2
+    },
+    {
+      "id": "paris_rooftops",
+      "volume": 2
+    },
+    {
+      "id": "cristo_final",
+      "volume": 2
+    }
+  ],
+  "hero": {
+    "bonds": [
+      "italy",
+      "quartermaster",
+      "imperial"
+    ]
+  }
+}

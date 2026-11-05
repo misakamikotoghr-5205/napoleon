@@ -1,0 +1,49 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-3940"
+  },
+  "p.chen.1940.dossier_link": {
+    "title": "串起旧账",
+    "body": "陈叔叔把能对上的东西摊在桌上：哥哥的信、王山的行踪、半张旧当票上的字。",
+    "lines": {
+      "greet": "如花，你来看，这几样东西对得上。"
+    },
+    "choices": {
+      "link_all": "串起来",
+      "one_page": "只订一页"
+    },
+    "outcomes": {
+      "ignored": "陈叔叔收起东西回去了，那几页旧账没能对上。"
+    }
+  },
+  "p.postman.1940.hook": {
+    "title": "没写完的信",
+    "body": "这一天，汪伪国民政府在南京成立。邮差送来一封没写完的信，话停在半截。",
+    "lines": {
+      "greet": "沈姑娘，又有你的信，这封有点怪。"
+    },
+    "choices": {
+      "follow": "往下看",
+      "seal": "收起来"
+    },
+    "outcomes": {
+      "ignored": "邮差把信带走了，信里没说完的话，也就没人知道了。"
+    }
+  },
+  "p.sunlaoye.1940.stance": {
+    "title": "孙府要表态",
+    "body": "孙老爷亲自上门，要德厚当表个态：往后跟不跟孙府站在一起。",
+    "lines": {
+      "greet": "沈家丫头，今天你得给我一句话。"
+    },
+    "choices": {
+      "with_sun": "跟孙府站",
+      "apart": "不站",
+      "hedge": "含糊过去"
+    },
+    "outcomes": {
+      "ignored": "孙老爷没等到人，冷着脸走了，这句话就算你没说。"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "_meta": {
+    "_provenance": "ai:claude:opus-5.5:2026-10-25:base-text-misc"
+  },
+  "obs.spot.authenticity.differs": {
+    "t": "款记做工这一处，和图鉴上的不一样。"
+  },
+  "obs.spot.authenticity.differs_maybe": {
+    "t": "款记做工这一处，好像和图鉴上的不太一样。"
+  },
+  "obs.spot.authenticity.wear": {
+    "t": "款记做工这一处，有旧磨痕。"
+  },
+  "obs.spot.authenticity.wear_maybe": {
+    "t": "款记做工这一处，好像是旧痕。"
+  },
+  "obs.spot.authenticity.plain": {
+    "t": "款记做工这一处，看不出特别的痕迹。"
+  },
+  "obs.spot.authenticity.unclear": {
+    "t": "款记做工这一处，没看清。"
+  },
+  "obs.spot.condition.differs": {
+    "t": "成色这一处，和图鉴上的不一样。"
+  },
+  "obs.spot.condition.differs_maybe": {
+    "t": "成色这一处，好像和图鉴上的不太一样。"
+  },
+  "obs.spot.condition.wear": {
+    "t": "成色这一处，有旧磨痕。"
+  },
+  "obs.spot.condition.wear_maybe": {
+    "t": "成色这一处，好像是旧痕。"
+  },
+  "obs.spot.condition.plain": {
+    "t": "成色这一处，看不出特别的痕迹。"
+  },
+  "obs.spot.condition.unclear": {
+    "t": "成色这一处，没看清。"
+  },
+  "obs.spot.material.differs": {
+    "t": "质地这一处，和图鉴上的不一样。"
+  },
+  "obs.spot.material.differs_maybe": {
+    "t": "质地这一处，好像和图鉴上的不太一样。"
+  },
+  "obs.spot.material.wear": {
+    "t": "质地这一处，有旧磨痕。"
+  },
+  "obs.spot.material.wear_maybe": {
+    "t": "质地这一处，好像是旧痕。"
+  },
+  "obs.spot.material.plain": {
+    "t": "质地这一处，看不出特别的痕迹。"
+  },
+  "obs.spot.material.unclear": {
+    "t": "质地这一处，没看清。"
+  },
+  "obs.spot.provenance.differs": {
+    "t": "背后记号这一处，和图鉴上的不一样。"
+  },
+  "obs.spot.provenance.differs_maybe": {
+    "t": "背后记号这一处，好像和图鉴上的不太一样。"
+  },
+  "obs.spot.provenance.wear": {
+    "t": "背后记号这一处，有旧磨痕。"
+  },
+  "obs.spot.provenance.wear_maybe": {
+    "t": "背后记号这一处，好像是旧痕。"
+  },
+  "obs.spot.provenance.plain": {
+    "t": "背后记号这一处，看不出特别的痕迹。"
+  },
+  "obs.spot.provenance.unclear": {
+    "t": "背后记号这一处，没看清。"
+  },
+  "obs.spot.nothing_found": {
+    "t": "对着图谱看了一遍，没找出哪里不一样。"
+  }
+}

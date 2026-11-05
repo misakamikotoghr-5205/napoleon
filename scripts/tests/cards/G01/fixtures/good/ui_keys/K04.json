@@ -1,0 +1,11 @@
+{
+  "_meta": {
+    "owner": "K04",
+    "schema": 1
+  },
+  "keys": {
+    "k04.reason.fire": {
+      "brief": "失火损失"
+    }
+  }
+}

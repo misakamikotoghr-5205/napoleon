@@ -1,0 +1,184 @@
+{
+  "id": "d1_zhang",
+  "npc": "zhang",
+  "mode": "buy",
+  "items": [
+    {
+      "def": "quinine"
+    },
+    {
+      "def": "mercuro"
+    },
+    {
+      "def": "sulfa_fake"
+    }
+  ],
+  "split": true,
+  "ask": 260,
+  "floor": 150,
+  "suggest": 74,
+  "est": [
+    120,
+    380
+  ],
+  "show_floor": true,
+  "hard_floor": false,
+  "fund_button": false,
+  "min_inspect": 0,
+  "hint": "",
+  "pre": [
+    {
+      "op": "narr",
+      "text": "哥哥进库房，取出一本蓝布面的手写册子，放在柜台右侧。"
+    },
+    {
+      "op": "say",
+      "who": "brother",
+      "text": "这是爸妈以前记的，《沈记药材鉴别录》。药是救命的，假药是害命的。收药先看三样：封口、批号、药本身。批号一定要对着册子看。"
+    },
+    {
+      "op": "unlock",
+      "target": "medbook"
+    },
+    {
+      "op": "page",
+      "id": "med_rules"
+    }
+  ],
+  "intro": [
+    {
+      "op": "narr",
+      "text": "一个年轻女人拎着篮子进来，蓝旗袍外面罩着一件发灰的白衣。"
+    },
+    {
+      "op": "say",
+      "who": "zhang",
+      "text": "我姓张，在县城教会医院做护士。医院上个月被征用了，西医生都走了，欠我们的工钱，就用这些药抵。"
+    },
+    {
+      "op": "say",
+      "who": "zhang",
+      "text": "我要带弟弟去上海，缺路费。一共三样，一口价 260。"
+    }
+  ],
+  "on_inspect": {},
+  "extras": [
+    {
+      "id": "tell_fake",
+      "label": "告诉她磺胺是假的",
+      "when": "tells('sulfa_fake') >= 1",
+      "once": true,
+      "steps": [
+        {
+          "op": "say",
+          "who": "zhang",
+          "text": "……不可能。这是我从药房柜子里……（她拿起铁盒，对着光看了很久。）……那医院里那些伤口发烂的病人，打的都是这个？"
+        },
+        {
+          "op": "move_item",
+          "def": "sulfa_fake",
+          "to": "npc:zhang",
+          "note": "张护士把假磺胺收了回去"
+        },
+        {
+          "op": "reprice",
+          "ask": 140,
+          "floor": 90
+        },
+        {
+          "op": "stat",
+          "stat": "benxin",
+          "delta": 2,
+          "why": "告诉张护士磺胺是假的"
+        },
+        {
+          "op": "set_judged",
+          "def": "sulfa_fake",
+          "value": "fake"
+        },
+        {
+          "op": "note",
+          "kind": "消息",
+          "text": "有人往医院里掺假药。",
+          "source": "heard",
+          "via": "zhang"
+        },
+        {
+          "op": "rumor",
+          "key": "fake_hospital",
+          "origin": "zhang"
+        },
+        {
+          "op": "set",
+          "flag": "zhang_told",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "ask_more",
+      "label": "问她还有没有别的药",
+      "once": true,
+      "steps": [
+        {
+          "op": "say",
+          "who": "zhang",
+          "text": "（压低声音）还有一盒吗啡。那个东西我不敢拿出来卖。"
+        },
+        {
+          "op": "set",
+          "flag": "zhang_morphine_hint",
+          "value": true
+        }
+      ]
+    }
+  ],
+  "deals": [],
+  "on_accept": [
+    {
+      "op": "set",
+      "flag": "fake_sulfa_in_stock",
+      "value": true,
+      "when": "selected('sulfa_fake')"
+    },
+    {
+      "op": "set",
+      "flag": "zhang_told",
+      "value": false,
+      "when": "is('found_fake_sulfa') and not is('zhang_told') and not selected('sulfa_fake')"
+    },
+    {
+      "op": "stat",
+      "stat": "benxin",
+      "delta": -1,
+      "why": "发现假货不说，只收真药",
+      "when": "is('found_fake_sulfa') and not is('zhang_told') and not selected('sulfa_fake')"
+    },
+    {
+      "op": "set",
+      "flag": "zhang_deal",
+      "value": true
+    },
+    {
+      "op": "set",
+      "flag": "quinine_in_stock_day1",
+      "value": true,
+      "when": "stock_has('quinine')"
+    }
+  ],
+  "on_leave": [
+    {
+      "op": "set",
+      "flag": "zhang_deal",
+      "value": false
+    }
+  ],
+  "outro": [
+    {
+      "op": "say",
+      "who": "zhang",
+      "text": "你小小年纪，眼力倒好。……小心点，来买药的人不一定都是病人。"
+    }
+  ],
+  "post": []
+}

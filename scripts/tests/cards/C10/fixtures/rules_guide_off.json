@@ -1,0 +1,78 @@
+{
+  "_meta": {
+    "owner": "C10",
+    "schema": 1,
+    "brief": "Same firsts as rules_some. The table host boots with guide off; unlock still follows firsts.",
+    "_provenance": {
+      "by": "ai",
+      "task": "C10",
+      "date": "2026-10-13"
+    }
+  },
+  "guide": "examples",
+  "guide_progress": {},
+  "queries": {
+    "dossier|{}": {
+      "pages": []
+    },
+    "firsts|{}": {
+      "firsts": {
+        "deal": 1,
+        "person": 1,
+        "slots": 1
+      }
+    }
+  },
+  "view": {
+    "v": 1,
+    "phase": "day",
+    "mode": "shop",
+    "busy": false,
+    "date": {
+      "stage": 0,
+      "era": "1938",
+      "y": 1938,
+      "m": 3,
+      "d": 2,
+      "weekday": 2,
+      "stage_day": 2,
+      "stage_days": 30,
+      "abs_day": 2,
+      "minute": 480
+    },
+    "notice": {
+      "weather": "clear",
+      "market_day": false,
+      "news": [],
+      "almanac": {
+        "yi": [],
+        "ji": [],
+        "done": []
+      },
+      "fortune": ""
+    },
+    "caps": {
+      "kept": 5,
+      "contacts": 3,
+      "shelf": 12
+    },
+    "goals": [],
+    "night_offers": [],
+    "open_panel": {
+      "kind": "",
+      "args": {}
+    },
+    "money": {
+      "amount": 80,
+      "currency": "fabi"
+    },
+    "rep_tier": 0,
+    "heat_tier": 0,
+    "hand": [],
+    "kept": [],
+    "contacts": [],
+    "demands": [],
+    "tickets": [],
+    "dossier_new": 0
+  }
+}

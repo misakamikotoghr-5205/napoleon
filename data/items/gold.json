@@ -1,0 +1,65 @@
+{
+  "items": {
+    "hairpin": {
+      "name": "金簪（簪头一粒小珍珠）",
+      "cat": "gold",
+      "cat_cn": "金银",
+      "market": 200,
+      "claimed": 0,
+      "fake": false,
+      "grade": "",
+      "origin": "normal",
+      "contraband": false,
+      "est": [140, 260],
+      "suggest": 160,
+      "ask_w": 1.0,
+      "weight": "三钱二分",
+      "tags": [],
+      "sprite": "art/items/hairpin.png",
+      "ticket_condition": "足金，珠有小缺",
+      "parts": [
+        {
+          "id": "stamp",
+          "label": "看戳记",
+          "text": "簪身内侧打着“宝成足金”。",
+          "tool": "magnifier",
+          "rect": [22, 30, 14, 14],
+          "est": [150, 260]
+        },
+        {
+          "id": "color",
+          "label": "看成色",
+          "text": "颜色深黄，用指甲轻压有浅痕。",
+          "tool": "hand",
+          "rect": [12, 18, 38, 36],
+          "est": [170, 240]
+        },
+        {
+          "id": "weigh",
+          "label": "称重量",
+          "text": "三钱二分。",
+          "tool": "scale",
+          "rect": [12, 16, 40, 40],
+          "est": [195, 205]
+        },
+        {
+          "id": "pearl",
+          "label": "看珍珠",
+          "text": "是淡水珠，有一处小缺口。",
+          "tool": "magnifier",
+          "rect": [40, 6, 18, 18],
+          "est": [200, 200]
+        }
+      ],
+      "ref": "gold_pin",
+      "flaws": [
+        {
+          "part": "pearl",
+          "kind": "chip",
+          "benign": true,
+          "note": "珠子上有一处小缺口"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "owner": "K01",
+    "schema": 1,
+    "brief": "例子集：过路客与系统牌 p.any.redeem"
+  },
+  "persons": {
+    "stranger_peddler": {
+      "portrait": "portrait.stranger_peddler",
+      "dossier": false,
+      "brief": "过路客原型：货郎"
+    },
+    "stranger_refugee": {
+      "portrait": "portrait.stranger_refugee",
+      "dossier": false,
+      "brief": "过路客原型：逃难的人"
+    },
+    "suanming": {
+      "portrait": "portrait.suanming",
+      "dossier": false,
+      "brief": "算命先生（新手指引里教求签测字的人）；名字由 A 定"
+    }
+  },
+  "cards": [
+    {
+      "id": "p.stranger_peddler.any.sell_bowl",
+      "type": "person",
+      "person": "stranger_peddler",
+      "era": [
+        "*"
+      ],
+      "weight": 8,
+      "tags": [
+        "peddler",
+        "omen_road"
+      ],
+      "intent": "sell",
+      "item": {
+        "cat": "utensils"
+      },
+      "asking": {
+        "pct": [
+          100,
+          140
+        ]
+      },
+      "floor": {
+        "pct": [
+          60,
+          85
+        ]
+      },
+      "patience_min": [
+        30,
+        80
+      ],
+      "impatience": "raise",
+      "art": "portrait.stranger_peddler",
+      "brief": "（W0 例子，补全来卖的样子）过路的货郎想把一件旧器物卖给铺子；买下后进货架。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.any.redeem",
+      "type": "person",
+      "person": "stranger_refugee",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "tags": [
+        "redeem",
+        "omen_road"
+      ],
+      "intent": "redeem",
+      "art": "portrait.stranger_refugee",
+      "brief": "（W0 例子，系统牌）来赎当的过路人；G04 按当票生成，主要人物用自己的 redeem 牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

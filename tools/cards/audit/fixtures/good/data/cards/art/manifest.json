@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "owner": "K12",
+    "schema": 1
+  },
+  "art": {
+    "portrait.demo": {
+      "base": [
+        48,
+        64
+      ],
+      "human": "art/cards/portrait.png",
+      "placeholder": "art/_placeholder/cards/portrait.png"
+    }
+  }
+}

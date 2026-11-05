@@ -1,0 +1,11 @@
+{
+  "_meta": {
+    "owner": "C10",
+    "schema": 1
+  },
+  "keys": {
+    "c10.help.move": {
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_HELP"
+    }
+  }
+}

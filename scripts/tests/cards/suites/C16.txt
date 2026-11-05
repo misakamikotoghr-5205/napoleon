@@ -1,0 +1,11 @@
+# C16 新手指引与外壳（docs/handoff_cards/C16_guide-shell.md）
+C16_guide_d1_3|res://scripts/tests/cards/C16/test_guide_d1_3.gd|240|--name=C16_guide_d1_3
+C16_guide_d1_3_examples|res://scripts/tests/cards/C16/test_guide_d1_3.gd|240|--steps=examples --name=C16_guide_d1_3_examples
+C16_guide_d1_3_k16|res://scripts/tests/cards/C16/test_guide_d1_3.gd|240|--steps=k16 --name=C16_guide_d1_3_k16
+C16_guide_rules|res://scripts/tests/cards/C16/test_guide_rules.gd|180|
+C16_guide_switch|res://scripts/tests/cards/C16/test_guide_switch.gd|120|
+C16_guide_overlay|res://scripts/tests/cards/C16/test_guide_overlay.gd|120|
+C16_guide_realtime|res://scripts/tests/cards/C16/test_guide_realtime.gd|360|
+C16_shell|res://scripts/tests/cards/C16/test_shell.gd|240|
+C16_settings|res://scripts/tests/cards/C16/test_settings.gd|120|
+C16_music|res://scripts/tests/cards/C16/test_music.gd|60|

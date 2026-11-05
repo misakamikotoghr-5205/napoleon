@@ -1,0 +1,953 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1,
+    "brief": "1938 年三月的事件：查验证件、伪维持会、码头、月底警察所开门"
+  },
+  "cards": [
+    {
+      "id": "ev.1938.police_check",
+      "type": "event",
+      "era": [
+        "1938"
+      ],
+      "weight": 8,
+      "tags": [
+        "official",
+        "police",
+        "search",
+        "omen_official",
+        "bad_omen"
+      ],
+      "must_resolve": true,
+      "slots": [
+        {
+          "id": "paper",
+          "accepts": [
+            "kept"
+          ],
+          "brief": "证件",
+          "tags": [
+            "papers"
+          ]
+        },
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "brief": "钱",
+          "tags": [
+            "official"
+          ],
+          "money_per_coin": 10
+        },
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "brief": "胆大的人",
+          "tags": [
+            "official"
+          ],
+          "attr": "nerve"
+        }
+      ],
+      "check": {
+        "need": 2,
+        "on_success": [
+          {
+            "op": "notice",
+            "key": "k02.notice.police_pass"
+          }
+        ],
+        "on_fail": [
+          {
+            "op": "heat",
+            "tier": 1
+          },
+          {
+            "op": "flag",
+            "key": "police_knows_name"
+          },
+          {
+            "op": "kept_risk",
+            "tags_any": [
+              "contraband",
+              "leverage"
+            ]
+          },
+          {
+            "op": "notice",
+            "key": "k02.notice.police_fail"
+          }
+        ]
+      },
+      "art": "illus.ev.1938.police_check",
+      "brief": "1938 年三月，出入要查良民证。格子放证件、钱、胆子大的人，要两个正面。带证件标签的留牌按格子规则可以直接凑上。没过：风声升一档，记警察知道你的名字，来路不明或把柄一类的留牌会被翻出来。没理会当没过。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1938.levy_call",
+      "type": "event",
+      "era": [
+        "1938"
+      ],
+      "weight": 6,
+      "tags": [
+        "levy",
+        "official",
+        "omen_official",
+        "bad_omen"
+      ],
+      "must_resolve": true,
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "交一笔",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 36,
+              "payee": "puppet_levy",
+              "reason": "k02.reason.levy",
+              "short": "ladder"
+            },
+            {
+              "op": "flag",
+              "key": "levy_paid_early"
+            }
+          ]
+        },
+        {
+          "id": "talk",
+          "brief": "去说",
+          "check": {
+            "need": 2,
+            "slots": [
+              {
+                "id": "favor",
+                "accepts": [
+                  "kept"
+                ],
+                "brief": "人情",
+                "tags": [
+                  "favor"
+                ]
+              },
+              {
+                "id": "man",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "brief": "会说话的人",
+                "attr": "tongue"
+              }
+            ],
+            "on_success": [
+              {
+                "op": "flag",
+                "key": "levy_talked"
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "heat",
+                "delta": 4
+              }
+            ]
+          },
+          "almanac": [
+            "meet"
+          ]
+        },
+        {
+          "id": "ignore",
+          "brief": "不管",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 6
+            },
+            {
+              "op": "notice",
+              "key": "k02.notice.levy"
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "heat",
+            "delta": 6
+          },
+          {
+            "op": "notice",
+            "key": "k02.notice.levy"
+          }
+        ]
+      },
+      "art": "illus.ev.1938.levy_call",
+      "brief": "伪维持会把这个月的摊派数目贴到铺门。这不是每周的条子，也不是马万利上门那一张人物牌。可以交一笔、找人去说、或不管。不管则风声涨。说成了记一笔，说砸了风声涨。史实：1938 年三月镇上事由伪维持会管，伪县政府还没完全取代它。没理会当不管，风声涨。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1938.dock_night",
+      "type": "event",
+      "era": [
+        "1938"
+      ],
+      "weight": 6,
+      "tags": [
+        "dock",
+        "omen_water"
+      ],
+      "must_resolve": true,
+      "choices": [
+        {
+          "id": "help",
+          "brief": "帮忙卸",
+          "check": {
+            "need": 2,
+            "slots": [
+              {
+                "id": "man",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "brief": "卸货的人",
+                "attr": "nerve",
+                "max": 2
+              }
+            ],
+            "on_success": [
+              {
+                "op": "money",
+                "delta": 18,
+                "reason": "k02.reason.dock"
+              },
+              {
+                "op": "rep",
+                "delta": 2
+              },
+              {
+                "op": "flag",
+                "key": "dock_night_helped"
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "heat",
+                "delta": 5
+              },
+              {
+                "op": "person_state",
+                "person": "ruhua",
+                "state": "hurt",
+                "days": 2
+              }
+            ]
+          },
+          "almanac": [
+            "travel"
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "不去",
+          "effects": []
+        },
+        {
+          "id": "report",
+          "brief": "去报",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 3
+            },
+            {
+              "op": "rep",
+              "delta": -2
+            },
+            {
+              "op": "flag",
+              "key": "dock_reported"
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.ev.1938.dock_night",
+      "brief": "码头一条夜船要人手卸货。帮忙要掷胆量，成了有一笔工钱，不成你可能受伤、风声也动。可以拒绝。也可以去报给巡夜的，报了风声一样会动。这不是王山那条主线，人物出面的节点不在这张牌上。没理会当不去，没有别的后果。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1938.police_open",
+      "type": "event",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "official",
+        "police",
+        "omen_official"
+      ],
+      "must_resolve": true,
+      "story_node": "s1938.police_open",
+      "schedule": {
+        "stage_day": 28,
+        "order": 1,
+        "once": true
+      },
+      "choices": [
+        {
+          "id": "attend",
+          "brief": "去看",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1938.police_open",
+              "outcome": "attended"
+            },
+            {
+              "op": "heat",
+              "delta": 4
+            },
+            {
+              "op": "flag",
+              "key": "police_station_open"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.zhouma.1938.police_open"
+            },
+            {
+              "op": "notice",
+              "key": "k02.notice.police_open"
+            }
+          ]
+        },
+        {
+          "id": "stay",
+          "brief": "不去",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1938.police_open",
+              "outcome": "stayed_shut"
+            },
+            {
+              "op": "rep",
+              "delta": -2
+            },
+            {
+              "op": "flag",
+              "key": "police_station_open"
+            }
+          ]
+        },
+        {
+          "id": "send",
+          "brief": "派人去",
+          "check": {
+            "need": 2,
+            "slots": [
+              {
+                "id": "man",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "brief": "有门路的人",
+                "attr": "pull"
+              }
+            ],
+            "on_success": [
+              {
+                "op": "story",
+                "node": "s1938.police_open",
+                "outcome": "sent_proxy"
+              },
+              {
+                "op": "flag",
+                "key": "police_station_open"
+              },
+              {
+                "op": "dossier",
+                "frag": "df.zhouma.1938.police_open"
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "story",
+                "node": "s1938.police_open",
+                "outcome": "failed_send"
+              },
+              {
+                "op": "heat",
+                "tier": 1
+              },
+              {
+                "op": "flag",
+                "key": "police_station_open"
+              }
+            ]
+          },
+          "almanac": [
+            "meet"
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "story",
+            "node": "s1938.police_open",
+            "outcome": "stayed_shut"
+          },
+          {
+            "op": "rep",
+            "delta": -2
+          },
+          {
+            "op": "flag",
+            "key": "police_station_open"
+          }
+        ]
+      },
+      "art": "illus.ev.1938.police_open",
+      "brief": "主线事件，节点是月底警察所开门。权重为零，排在本关第 28 天，对上公历 1938 年 3 月 28 日伪维新政府在南京成立。当天必须处理。去看、关门不去、或派人去。派人要门路，成与不成各记一个走向。人物出面的主线不在这张牌上。没理会当关门不去，口碑掉，警察所照开，主线记为没去。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1938.road_pass",
+      "type": "event",
+      "era": [
+        "1938"
+      ],
+      "weight": 6,
+      "tags": [
+        "road",
+        "official",
+        "papers",
+        "omen_road",
+        "omen_official"
+      ],
+      "must_resolve": true,
+      "slots": [
+        {
+          "id": "paper",
+          "accepts": [
+            "kept"
+          ],
+          "brief": "证件",
+          "tags": [
+            "papers"
+          ]
+        },
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "brief": "钱",
+          "tags": [
+            "official"
+          ],
+          "money_per_coin": 10
+        },
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "brief": "胆大的人",
+          "tags": [
+            "official"
+          ],
+          "attr": "nerve"
+        }
+      ],
+      "check": {
+        "need": 2,
+        "on_success": [
+          {
+            "op": "flag",
+            "key": "road_clear"
+          },
+          {
+            "op": "notice",
+            "key": "k02.notice.road"
+          }
+        ],
+        "on_fail": [
+          {
+            "op": "heat",
+            "delta": 4
+          },
+          {
+            "op": "flag",
+            "key": "turned_back"
+          }
+        ]
+      },
+      "art": "illus.ev.1938.road_pass",
+      "brief": "出镇路口要路条。格子放证件、钱、胆子大的人，要两个正面。过了记一笔放行。没过被挡回来，风声涨。1938 年三月出入查验证件是常事。没理会当没过。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1938.rice_line",
+      "type": "event",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "rice",
+        "market",
+        "omen_wealth"
+      ],
+      "must_resolve": true,
+      "slots": [
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "brief": "钱",
+          "tags": [
+            "official"
+          ],
+          "money_per_coin": 10
+        },
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "brief": "会说话的人",
+          "tags": [
+            "official"
+          ],
+          "attr": "tongue"
+        }
+      ],
+      "check": {
+        "need": 2,
+        "on_success": [
+          {
+            "op": "item_gain",
+            "cat": "rice",
+            "n": 1
+          },
+          {
+            "op": "flag",
+            "key": "rice_bought"
+          },
+          {
+            "op": "notice",
+            "key": "k02.notice.rice"
+          }
+        ],
+        "on_fail": [
+          {
+            "op": "flag",
+            "key": "rice_missed"
+          }
+        ]
+      },
+      "art": "illus.ev.1938.rice_line",
+      "brief": "米行前限购排队。格子放钱和会说话的人，要两个正面。过了货架进一袋米。没过这天没买上。1938 年春米已经紧，大涨是后年的事，这里只写排队。没理会当没过。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1938.refugee_door",
+      "type": "event",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "refugee",
+        "omen_stranger"
+      ],
+      "must_resolve": true,
+      "choices": [
+        {
+          "id": "give",
+          "brief": "给饭",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 6,
+              "payee": "door_meal",
+              "reason": "k02.reason.refugee",
+              "short": "ladder"
+            },
+            {
+              "op": "rep",
+              "delta": 2
+            },
+            {
+              "op": "flag",
+              "key": "refugee_fed"
+            },
+            {
+              "op": "conscience",
+              "delta": 1
+            }
+          ],
+          "almanac": [
+            "lend"
+          ]
+        },
+        {
+          "id": "turn",
+          "brief": "不给",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -2
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "rep",
+            "delta": -2
+          },
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "illus.ev.1938.refugee_door",
+      "brief": "后门有逃难的人要一口饭。1937 年冬苏南沦陷，1938 年三月路上仍有流民。给饭要花一笔小钱，口碑略好。不给则口碑掉。没理会当不给。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1938.night_patrol",
+      "type": "event",
+      "era": [
+        "1938"
+      ],
+      "weight": 6,
+      "tags": [
+        "police",
+        "search",
+        "omen_official",
+        "bad_omen"
+      ],
+      "must_resolve": true,
+      "slots": [
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "brief": "胆大的人",
+          "tags": [
+            "official"
+          ],
+          "attr": "nerve"
+        },
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "brief": "钱",
+          "tags": [
+            "official"
+          ],
+          "money_per_coin": 10
+        }
+      ],
+      "check": {
+        "need": 2,
+        "on_success": [
+          {
+            "op": "flag",
+            "key": "patrol_passed"
+          }
+        ],
+        "on_fail": [
+          {
+            "op": "heat",
+            "tier": 1
+          },
+          {
+            "op": "kept_risk",
+            "tags_any": [
+              "contraband"
+            ]
+          },
+          {
+            "op": "notice",
+            "key": "k02.notice.patrol"
+          }
+        ]
+      },
+      "art": "illus.ev.1938.night_patrol",
+      "brief": "夜里有人沿街敲窗巡查。格子放胆子大的人和钱，要两个正面。没过：风声升一档，来路不明的留牌会被翻出来。没理会当没过。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1938.puppet_roll",
+      "type": "event",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "levy",
+        "official",
+        "omen_official"
+      ],
+      "must_resolve": true,
+      "choices": [
+        {
+          "id": "go",
+          "brief": "到场",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "flag",
+              "key": "roll_attended"
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            },
+            {
+              "op": "add_card",
+              "card": "kp.liangmin",
+              "to": "kept"
+            }
+          ]
+        },
+        {
+          "id": "send",
+          "brief": "派人",
+          "check": {
+            "need": 2,
+            "slots": [
+              {
+                "id": "man",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "brief": "有门路的人",
+                "attr": "pull"
+              }
+            ],
+            "on_success": [
+              {
+                "op": "flag",
+                "key": "roll_sent"
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "heat",
+                "delta": 4
+              }
+            ]
+          },
+          "almanac": [
+            "meet"
+          ]
+        },
+        {
+          "id": "skip",
+          "brief": "不到",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 5
+            },
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "heat",
+            "delta": 5
+          },
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "illus.ev.1938.puppet_roll",
+      "brief": "伪维持会点铺户到场听会。到场、派人、或不到。不到则风声涨、口碑略掉。派人要门路。1938 年三月这种点名还挂在伪维持会名下。没理会当不到，风声涨、口碑略掉。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1938.wharf_due",
+      "type": "event",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "dock",
+        "levy",
+        "omen_water"
+      ],
+      "must_resolve": true,
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "交",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 12,
+              "payee": "wharf_desk",
+              "reason": "k02.reason.wharf",
+              "short": "ladder"
+            },
+            {
+              "op": "flag",
+              "key": "wharf_paid"
+            }
+          ]
+        },
+        {
+          "id": "haggle",
+          "brief": "讲价",
+          "check": {
+            "need": 2,
+            "slots": [
+              {
+                "id": "man",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "brief": "会说话的人",
+                "attr": "tongue"
+              }
+            ],
+            "on_success": [
+              {
+                "op": "pay",
+                "amount": 6,
+                "payee": "wharf_desk",
+                "reason": "k02.reason.wharf",
+                "short": "ladder"
+              },
+              {
+                "op": "flag",
+                "key": "wharf_cut"
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "pay",
+                "amount": 12,
+                "payee": "wharf_desk",
+                "reason": "k02.reason.wharf",
+                "short": "ladder"
+              },
+              {
+                "op": "heat",
+                "delta": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "refuse",
+          "brief": "拒",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 4
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "heat",
+            "delta": 4
+          }
+        ]
+      },
+      "art": "illus.ev.1938.wharf_due",
+      "brief": "码头一笔小捐，名目挂在伪维持会下。可以交，可以讲价，也可以拒。讲成了少交，讲砸了照样交而且风声涨。拒则风声涨。1938 年三月的码头捐，不是后年的统制。没理会当拒，风声涨。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

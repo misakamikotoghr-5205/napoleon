@@ -1,0 +1,32 @@
+; Engine configuration file.
+config_version=5
+
+[application]
+
+config/name="鹰旗军需官"
+config/description="拿破仑：鹰旗军需官 — 主干与三条分支长篇剧情策略试玩"
+run/main_scene="res://scenes/cards/CardGame.tscn"
+run/main_scene.ship="res://scenes/cards/CardGame.tscn"
+run/main_scene.cards_demo="res://scenes/cards/CardGame.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+
+[autoload]
+
+CardBus="*res://scripts/cards/core/card_bus.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
+
+[gui]
+
+theme/default_font_size=18
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.08, 0.06, 0.05, 1)

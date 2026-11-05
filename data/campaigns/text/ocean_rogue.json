@@ -1,0 +1,277 @@
+{
+  "_doc": [
+    "Player-visible names and descriptions of scripts/cards/campaign/ocean_rogue_data.gd (coins, props, bonds, companions, march board, routes, side activities, camp schedule, big fate), moved here by C1 (WORLD_MAP_DESIGN 12.2 item 7). Owner: package C.",
+    "Keyed by table, then by the row id the .gd keeps; every key here is merged into that row once at load, so the .gd tables keep their old shapes (OceanRogueData.COMPANIONS[id].name and so on). Ids and numbers stay in the .gd.",
+    "Changing a string changes the screen text and nothing else (companion names also show inside battles). No pawnshop wording: scripts/tests/cards/OCEAN/test_content.gd scans this file."
+  ],
+  "coins": {
+    "gold": {
+      "name": "帝国金币",
+      "short": "金币",
+      "role": "招兵买马 · 集市商贸",
+      "desc": "用于在行军驿站招募伙伴、在集市购置大富翁战术小道具与打通关节。"
+    },
+    "supply": {
+      "name": "军需券",
+      "short": "军需",
+      "role": "网格部署 · 战地补给",
+      "desc": "明日方舟式战术网格的部署费用，用于将伙伴与统帅部署到地面或高台格。"
+    },
+    "medal": {
+      "name": "荣誉勋章",
+      "short": "勋章",
+      "role": "晋升伙伴 · 羁绊强化",
+      "desc": "表彰战役与决斗功勋，用于提升伙伴等级、强化羁绊加成与解锁特技。"
+    },
+    "intel": {
+      "name": "密报情报币",
+      "short": "情报",
+      "role": "侦察路线 · 洞悉弱点",
+      "desc": "战前或战中窥探敌军推进路线、削弱敌军攻势并开辟分支捷径。"
+    }
+  },
+  "props": {
+    "prop_loaded_dice": {
+      "name": "遥控罗盘骰",
+      "desc": "大富翁行军可精准投出高步数并获补给；战场使用立即获得军需券+3、情报币+1。"
+    },
+    "prop_barricade": {
+      "name": "铁木拒马路障",
+      "desc": "战场使用令全部敌军停滞1回合并受14点伤害；行军使用稳固营防，军需券+2、警戒-5。"
+    },
+    "prop_forced_march": {
+      "name": "帝国急行军靴",
+      "desc": "行军使用立即前移2格并获军需券+2；战场使用令全体在场友军攻击+8并立刻发动一次齐射。"
+    },
+    "prop_spyglass": {
+      "name": "黄铜单筒望远镜",
+      "desc": "立即点亮敌军行进路线、削弱敌军攻击，并获得情报币+2与同盟威望+5。"
+    },
+    "prop_smoke_bomb": {
+      "name": "炼金掩护烟幕弹",
+      "desc": "为在场友军提供免死掩护（本场抵消一次阵亡）、恢复全体友军30生命，并降低警戒8。"
+    },
+    "prop_field_ration": {
+      "name": "朗姆酒与军粮桶",
+      "desc": "恢复体力与士气+15、军需券+3；若在战场使用，全体在场友军额外恢复35生命。"
+    },
+    "prop_bribe_pouch": {
+      "name": "密使金币袋",
+      "desc": "打开密使暗袋，立即获得帝国金币+2、军费+300，并降低敌方警戒6。"
+    },
+    "prop_imperial_decree": {
+      "name": "帝国鹰徽嘉奖令",
+      "desc": "获得荣誉勋章+2、同盟威望+8；战场使用令全体友军攻击+10、生命上限+20。"
+    }
+  },
+  "bonds": {
+    "imperial": {
+      "name": "帝国旧部",
+      "desc": "2名以上帝国旧部存活：攻击+8，生命+20，开战额外军需券+1。"
+    },
+    "far_sea": {
+      "name": "远洋同盟",
+      "desc": "2名以上远洋同盟存活：攻击+6，生命+15，胜利额外帝国金币+1。"
+    },
+    "shadow": {
+      "name": "暗影密使",
+      "desc": "2名以上暗影密使存活：攻击+10，开战自动洞悉敌情并获情报币+1。"
+    },
+    "scholar": {
+      "name": "博学工坊",
+      "desc": "2名以上博学工坊存活：生命+25，战术技能伤害与治疗提升，获胜勋章+1。"
+    },
+    "island": {
+      "name": "荒岛求生",
+      "desc": "2名以上荒岛求生存活：生命+30，地面干员阻挡数+1。"
+    }
+  },
+  "companions": {
+    "dantes": {
+      "name": "埃德蒙·唐泰斯",
+      "class_label": "先锋·近卫",
+      "skill_name": "基督山复仇剑",
+      "skill_desc": "对路径前排敌军造成高额剑击，并回复1点军需券。"
+    },
+    "gourgaud": {
+      "name": "加斯帕尔·古尔戈",
+      "class_label": "重装·皇家卫队",
+      "skill_name": "老近卫军方阵",
+      "skill_desc": "稳固防线，恢复自身与周围友军35生命并震慑阻挡敌军。"
+    },
+    "faria": {
+      "name": "法利亚神甫",
+      "class_label": "高台·博学医疗",
+      "skill_name": "秘仪疗愈与希腊火",
+      "skill_desc": "治疗全体在场友军25生命，并对敌军造成火焰灼烧。"
+    },
+    "friday": {
+      "name": "星期五",
+      "class_label": "特种·荒岛猎手",
+      "skill_name": "丛林伏击长矛",
+      "skill_desc": "突刺生命最低的敌军并使其迟缓。"
+    },
+    "nemo": {
+      "name": "尼摩船长",
+      "class_label": "高台·雷电术师",
+      "skill_name": "鹦鹉螺电弧炮",
+      "skill_desc": "释放高压电弧，对全路线敌军造成穿透雷击。"
+    },
+    "morel": {
+      "name": "莫雷尔船长",
+      "class_label": "高台·舰炮狙击",
+      "skill_name": "法老号舷侧齐射",
+      "skill_desc": "远程舰炮支援，重创先头敌军并鼓舞士气。"
+    },
+    "marie": {
+      "name": "玛丽·朗热",
+      "class_label": "高台·随军军医",
+      "skill_name": "随军药箱与密信",
+      "skill_desc": "瓦解敌军护甲、恢复友军生命并立即获取1枚情报币。"
+    },
+    "corso": {
+      "name": "科尔索",
+      "class_label": "重装·科西嘉神枪手",
+      "skill_name": "奥斯特里茨榴弹",
+      "skill_desc": "轰击密集敌群并加固地面掩体。"
+    }
+  },
+  "march_board": {
+    "camp": {
+      "name": "行军大本营",
+      "desc": "整备大军团行囊，军需券+2、体力与士气+4。"
+    },
+    "town": {
+      "name": "港口集镇",
+      "desc": "走访海港集镇，军费+150、体力与士气+5。"
+    },
+    "recruit": {
+      "name": "募兵驿站",
+      "desc": "召集旧部志士，帝国金币+1、军需券+1。"
+    },
+    "salon": {
+      "name": "流亡者沙龙",
+      "desc": "名流沙龙夜谈，荣誉勋章+1、同盟威望+6。"
+    },
+    "bazaar": {
+      "name": "远洋自由集市",
+      "desc": "大富翁奇物集市，随机获得1件战术小道具，帝国金币+1。"
+    },
+    "duel": {
+      "name": "荣誉决斗场",
+      "desc": "以剑术赢得敬意，荣誉勋章+1、同盟威望+5。"
+    },
+    "smuggle": {
+      "name": "暗礁走私港",
+      "desc": "截获走私航船，帝国金币+2、军费+250、警戒+5。"
+    },
+    "shrine": {
+      "name": "老近卫军纪念碑",
+      "desc": "缅怀帝国荣光，同盟威望+8、体力与士气+6。"
+    },
+    "gamble": {
+      "name": "军官轮盘赌局",
+      "desc": "行军赌局博弈，帝国金币+1、军需券+2。"
+    },
+    "festival": {
+      "name": "水手狂欢节庆",
+      "desc": "甲板与海岛节庆，体力与士气+10、敌方警戒-6。"
+    },
+    "diplomacy": {
+      "name": "秘密外交公馆",
+      "desc": "与各国密使周旋，密报情报币+2、敌方警戒-8。"
+    },
+    "skirmish": {
+      "name": "前哨遭遇战",
+      "desc": "击退敌方侦察哨，军需券+2、荣誉勋章+1、情报币+1。"
+    }
+  },
+  "routes": {
+    "salon_route": {
+      "name": "名流沙龙与外交分支",
+      "desc": "穿插沙龙、秘密外交与水手节庆；路线奖励：情报币+1、荣誉勋章+1、敌方警戒-5。"
+    },
+    "duel_route": {
+      "name": "决斗试炼与要塞分支",
+      "desc": "穿插荣誉决斗、募兵驿站与前哨练兵；路线奖励：军需券+2、荣誉勋章+1、同盟威望+5。"
+    },
+    "smuggle_route": {
+      "name": "暗礁走私与奇物分支",
+      "desc": "穿插暗礁走私、轮盘赌局与自由集市；路线奖励：帝国金币+2、随机战术小道具+1。"
+    }
+  },
+  "activities": {
+    "salon": {
+      "name": "名流沙龙夜谈",
+      "desc": "与流亡贵族与学者交谈，同盟威望+6、荣誉勋章+1、情报币+1。"
+    },
+    "duel": {
+      "name": "军官荣誉决斗",
+      "desc": "伙伴代表出战决斗，荣誉勋章+2、同盟威望+5（消耗体力与士气4）。"
+    },
+    "gamble": {
+      "name": "水手轮盘赌局",
+      "desc": "以手牌与骰子博弈，帝国金币+2、军费+200。"
+    },
+    "merchant": {
+      "name": "行军黑市行商",
+      "desc": "花费1枚帝国金币购入1件大富翁战术小道具与2张军需券。"
+    },
+    "rest": {
+      "name": "营地篝火休整",
+      "desc": "修整船队与伤员，体力与士气+12、军需券+2，并治愈在场伙伴。"
+    },
+    "smuggle": {
+      "name": "夜航暗礁走私",
+      "desc": "走私军火与补给，帝国金币+2、军费+350、敌方警戒+6。"
+    },
+    "festival": {
+      "name": "远洋水手节庆",
+      "desc": "举办海岛节庆鼓舞人心，同盟威望+8、体力与士气+8、敌方警戒-6。"
+    },
+    "diplomacy": {
+      "name": "密使外交斡旋",
+      "desc": "周旋于各方势力之间，密报情报币+2、敌方警戒-10。"
+    }
+  },
+  "calendar_actions": {
+    "recruit": {
+      "name": "据点日程 · 招兵买马",
+      "desc": "安排本周招募水手与旧部：帝国金币+1、军需券+2。"
+    },
+    "train": {
+      "name": "据点日程 · 战阵演练",
+      "desc": "安排本周战术方阵演练：荣誉勋章+1、军需券+2、全体伙伴生命上限提升。"
+    },
+    "bond_story": {
+      "name": "据点日程 · 伙伴羁绊剧情",
+      "desc": "与伙伴共度日程解锁羁绊往事：荣誉勋章+1、同盟威望+8、体力与士气+6。"
+    },
+    "diplomacy": {
+      "name": "据点日程 · 秘密外交",
+      "desc": "派遣密使刺探敌军动向：密报情报币+2、敌方警戒-8。"
+    },
+    "festival": {
+      "name": "据点日程 · 庆典休整",
+      "desc": "在据点举办节庆振奋军心：体力与士气+10、同盟威望+6、获得1件战术小道具。"
+    },
+    "smuggle": {
+      "name": "据点日程 · 远洋走私",
+      "desc": "打通海上走私暗线：帝国金币+2、军费+300、敌方警戒+5。"
+    }
+  },
+  "big_fates": {
+    "sacrifice_rearguard": {
+      "name": "大命运 · 断后死战（牺牲一名伙伴）",
+      "desc": "一名伙伴自愿断后掩护主力撤离（该伙伴永久阵亡，一条命无法复活），保全军费并获得荣誉勋章+2、同盟威望+6。"
+    },
+    "ransom_supply": {
+      "name": "大命运 · 割让军需赎买",
+      "desc": "交出300军费与部分币子赎回防线，全员免于阵亡，敌方警戒-10、体力与士气+8。"
+    },
+    "desperate_breakout": {
+      "name": "大命运 · 强行浴血突围",
+      "desc": "拒绝妥协强行突围，体力与士气-12、敌方警戒+10，但缴获军需券+3、密报情报币+2。"
+    }
+  }
+}

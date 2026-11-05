@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "owner": "G01",
+    "schema": 1
+  },
+  "_doc": [
+    "One JSON Schema per card type. CardValidator V03 reads 'required' and 'properties' from these files.",
+    "W0 wrote the initial version from CARDS_INTERFACES.md section 4; G01 maintains them."
+  ],
+  "types": [
+    "almanac_day",
+    "big_fate",
+    "cezi",
+    "contact",
+    "demand",
+    "dossier_fragment",
+    "dossier_page",
+    "estate",
+    "event",
+    "fate",
+    "fortune_lot",
+    "goal",
+    "guide_step",
+    "item",
+    "kept",
+    "life",
+    "news",
+    "night",
+    "pawn_ticket",
+    "person",
+    "prison",
+    "relic",
+    "rule_page",
+    "self",
+    "source",
+    "street",
+    "wheel",
+    "wheel_segment"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "kind": "fragments",
+  "seed": 196,
+  "item": "",
+  "art": "illus.tk.de196",
+  "minutes_per_step": 1,
+  "max_minutes": 30,
+  "doc": "pawn_ticket",
+  "pieces": 6,
+  "seal_offset_px": 8,
+  "ink_mismatch": [2],
+  "dangzi_marks": 3,
+  "missing_piece": -1
+}

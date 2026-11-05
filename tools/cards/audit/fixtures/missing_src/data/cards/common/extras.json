@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "owner": "K09",
+    "schema": 1
+  },
+  "persons": {
+    "ex_patrol": {
+      "dossier": false,
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_EXTRA"
+    },
+    "ex_vendor": {
+      "dossier": false,
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_EXTRA2"
+    }
+  }
+}

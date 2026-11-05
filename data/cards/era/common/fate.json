@@ -1,0 +1,1274 @@
+{
+  "_meta": {
+    "owner": "K04",
+    "schema": 1,
+    "brief": "全年代通用命运牌 18 张。第一关就会抽到。好坏混张数起步 5:7:6。"
+  },
+  "cards": [
+    {
+      "id": "fa.any.found_purse",
+      "type": "fate",
+      "era": [
+        "*"
+      ],
+      "weight": 6,
+      "tags": [
+        "wealth",
+        "omen_wealth"
+      ],
+      "valence": "good",
+      "choices": [
+        {
+          "id": "keep",
+          "brief": "留下钱袋",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 18,
+              "reason": "k04.reason.purse"
+            }
+          ],
+          "almanac": [
+            "trade"
+          ]
+        },
+        {
+          "id": "return_it",
+          "brief": "送回去",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 4,
+              "reason": "k04.reason.purse"
+            },
+            {
+              "op": "rep",
+              "delta": 3
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.fa.any.found_purse",
+      "brief": "路上捡到一只钱袋。①留下：进一笔钱（起步 18）②送回：口碑升一点，只留几个谢钱（起步 4）。通用，不写某一年的史实。征兆：财物。没理会：不拿也不还，没有别的后果。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.any.kin_money",
+      "type": "fate",
+      "era": [
+        "*"
+      ],
+      "weight": 6,
+      "tags": [
+        "far",
+        "family",
+        "omen_far",
+        "omen_family"
+      ],
+      "valence": "good",
+      "choices": [
+        {
+          "id": "accept",
+          "brief": "收下",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 36,
+              "reason": "k04.reason.kin"
+            }
+          ]
+        },
+        {
+          "id": "send_back",
+          "brief": "退回",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": 2
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.fa.any.kin_money",
+      "brief": "远亲寄来一笔钱。①收下：进账（起步 36）②退回：不进账，口碑升一点。通用，不写某一年的史实。征兆：远方、家宅。没理会：汇款不动，没有别的后果。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.any.rice_dip",
+      "type": "fate",
+      "era": [
+        "*"
+      ],
+      "weight": 6,
+      "tags": [
+        "wealth",
+        "rice",
+        "omen_wealth"
+      ],
+      "valence": "good",
+      "choices": [
+        {
+          "id": "buy",
+          "brief": "趁便宜收一袋",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 12,
+              "payee": "rice_shop",
+              "reason": "k04.reason.rice",
+              "short": "ladder"
+            },
+            {
+              "op": "item_gain",
+              "cat": "rice",
+              "n": 1
+            }
+          ],
+          "almanac": [
+            "buy_in"
+          ]
+        },
+        {
+          "id": "pass",
+          "brief": "不收",
+          "effects": []
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.fa.any.rice_dip",
+      "brief": "米价松几天。①花一点钱收一袋米（付钱走钱不够阶梯，起步 12；货架进米一类一件）②不收。通用，不写某一年的史实。征兆：财物。没理会当不收，没有别的后果。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.any.regular_intro",
+      "type": "fate",
+      "era": [
+        "*"
+      ],
+      "weight": 6,
+      "tags": [
+        "wealth",
+        "omen_wealth"
+      ],
+      "valence": "good",
+      "choices": [
+        {
+          "id": "welcome",
+          "brief": "接下这单",
+          "effects": [
+            {
+              "op": "extra_deal",
+              "type": "person",
+              "n": 1,
+              "day": "tomorrow"
+            },
+            {
+              "op": "rep",
+              "delta": 2
+            }
+          ],
+          "almanac": [
+            "meet"
+          ]
+        },
+        {
+          "id": "busy",
+          "brief": "太忙，不接",
+          "effects": []
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.fa.any.regular_intro",
+      "brief": "老主顾介绍一笔生意。①接：明天多一张人物牌，口碑升一点②太忙：不接。通用，不写某一年的史实。征兆：财物。没理会当不接，没有别的后果。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.any.clear_road",
+      "type": "fate",
+      "era": [
+        "*"
+      ],
+      "weight": 6,
+      "tags": [
+        "road",
+        "omen_road"
+      ],
+      "valence": "good",
+      "choices": [
+        {
+          "id": "open_up",
+          "brief": "开门做生意",
+          "effects": [
+            {
+              "op": "weather",
+              "value": "clear"
+            },
+            {
+              "op": "extra_deal",
+              "type": "person",
+              "n": 1,
+              "day": "today"
+            }
+          ],
+          "almanac": [
+            "travel"
+          ]
+        },
+        {
+          "id": "stay",
+          "brief": "照旧",
+          "effects": [
+            {
+              "op": "weather",
+              "value": "clear"
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "weather",
+            "value": "clear"
+          }
+        ]
+      },
+      "art": "illus.fa.any.clear_road",
+      "brief": "放晴，路好走。①开门：今天天气改晴，今天多一张人物牌②照旧：只把天气改晴。通用，不写某一年的史实。征兆：出行。没理会当照旧，只把天气改晴。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.any.street_fine",
+      "type": "fate",
+      "era": [
+        "*"
+      ],
+      "weight": 7,
+      "tags": [
+        "official",
+        "levy",
+        "omen_official"
+      ],
+      "valence": "bad",
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "交罚款",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 24,
+              "payee": "fine",
+              "reason": "k04.reason.fine",
+              "short": "ladder"
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "不交",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 10
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "heat",
+            "delta": 10
+          }
+        ]
+      },
+      "art": "illus.fa.any.street_fine",
+      "brief": "一笔说不清名目的罚款。①交（付钱，起步 24，钱不够走阶梯）②不交（风声涨）。不写具体政权，避免绑死年份。征兆：官面。没理会当不交，风声涨。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.any.shop_sealed",
+      "type": "fate",
+      "era": [
+        "*"
+      ],
+      "weight": 7,
+      "tags": [
+        "official",
+        "omen_official"
+      ],
+      "valence": "bad",
+      "choices": [
+        {
+          "id": "bribe",
+          "brief": "花钱疏通",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 30,
+              "payee": "seal",
+              "reason": "k04.reason.seal",
+              "short": "ladder"
+            },
+            {
+              "op": "heat",
+              "delta": 4
+            }
+          ]
+        },
+        {
+          "id": "accept",
+          "brief": "认了这三天",
+          "effects": [
+            {
+              "op": "shop_closed",
+              "days": 3
+            }
+          ],
+          "almanac": [
+            "rest"
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "shop_closed",
+            "days": 3
+          }
+        ]
+      },
+      "art": "illus.fa.any.shop_sealed",
+      "brief": "铺子被封三天。①花钱疏通（起步 30，风声仍动一点）②认了（查封 3 天，这几天不随机来客）。通用，不写某一年的史实。征兆：官面。没理会当认了这三天，查封 3 天。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.any.requisition",
+      "type": "fate",
+      "era": [
+        "*"
+      ],
+      "weight": 7,
+      "tags": [
+        "official",
+        "wealth",
+        "omen_official",
+        "omen_wealth"
+      ],
+      "valence": "bad",
+      "choices": [
+        {
+          "id": "give",
+          "brief": "交出去",
+          "effects": [
+            {
+              "op": "item_lose",
+              "match": {
+                "pick": "any"
+              },
+              "n": 1,
+              "reason": "k04.reason.requisition"
+            }
+          ]
+        },
+        {
+          "id": "hide",
+          "brief": "藏起来",
+          "check": {
+            "slots": [
+              {
+                "id": "man",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "attr": "nerve",
+                "brief": "胆大的人",
+                "max": 2
+              }
+            ],
+            "need": 2,
+            "on_success": [
+              {
+                "op": "flag",
+                "key": "k04_requisition_hid"
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "item_lose",
+                "match": {
+                  "pick": "any"
+                },
+                "n": 2,
+                "reason": "k04.reason.requisition"
+              },
+              {
+                "op": "heat",
+                "tier": 1
+              }
+            ]
+          }
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "item_lose",
+            "match": {
+              "pick": "any"
+            },
+            "n": 1,
+            "reason": "k04.reason.requisition"
+          }
+        ]
+      },
+      "art": "illus.fa.any.requisition",
+      "brief": "上门征用一件货。①交出去（货架按任意一件拿走）②藏（掷胆量，要 2 个正面；没过再丢两件，风声上一档）。通用，不写某一年的史实。征兆：官面、财物。没理会当交出去，丢掉一件货。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.any.false_charge",
+      "type": "fate",
+      "era": [
+        "*"
+      ],
+      "weight": 7,
+      "tags": [
+        "dispute",
+        "official",
+        "omen_dispute",
+        "omen_official"
+      ],
+      "valence": "bad",
+      "choices": [
+        {
+          "id": "argue",
+          "brief": "当面辩",
+          "check": {
+            "slots": [
+              {
+                "id": "talker",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "attr": "tongue",
+                "brief": "会说的人",
+                "max": 2
+              }
+            ],
+            "need": 2,
+            "on_success": [
+              {
+                "op": "heat",
+                "delta": -8
+              },
+              {
+                "op": "flag",
+                "key": "k04_charge_cleared"
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "heat",
+                "tier": 1
+              },
+              {
+                "op": "flag",
+                "key": "k04_accused"
+              }
+            ]
+          }
+        },
+        {
+          "id": "payoff",
+          "brief": "花钱了事",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 36,
+              "payee": "accuser",
+              "reason": "k04.reason.charge",
+              "short": "ladder"
+            },
+            {
+              "op": "conscience",
+              "delta": -2
+            }
+          ]
+        },
+        {
+          "id": "silent",
+          "brief": "忍着",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 12
+            },
+            {
+              "op": "flag",
+              "key": "k04_accused"
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "heat",
+            "delta": 12
+          },
+          {
+            "op": "flag",
+            "key": "k04_accused"
+          }
+        ]
+      },
+      "art": "illus.fa.any.false_charge",
+      "brief": "被人诬告。①辩（掷口才，要 2 个正面；过了风声落下，没过风声上一档）②花钱了事（起步 36，本心降一点）③忍着（风声涨一截）。通用，不写对白，不绑年份。征兆：口舌、官面。没理会当忍着，风声涨，记被诬。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.any.theft",
+      "type": "fate",
+      "era": [
+        "*"
+      ],
+      "weight": 7,
+      "tags": [
+        "wealth",
+        "omen_wealth"
+      ],
+      "valence": "bad",
+      "choices": [
+        {
+          "id": "chase",
+          "brief": "追出去",
+          "check": {
+            "slots": [
+              {
+                "id": "man",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "attr": "nerve",
+                "brief": "胆大的人",
+                "max": 2
+              }
+            ],
+            "need": 2,
+            "on_success": [
+              {
+                "op": "flag",
+                "key": "k04_theft_caught"
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "item_lose",
+                "match": {
+                  "pick": "best"
+                },
+                "n": 1,
+                "reason": "k04.reason.theft"
+              },
+              {
+                "op": "person_state",
+                "person": "ruhua",
+                "state": "hurt",
+                "days": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "let_go",
+          "brief": "算了",
+          "effects": [
+            {
+              "op": "item_lose",
+              "match": {
+                "pick": "any"
+              },
+              "n": 1,
+              "reason": "k04.reason.theft"
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "item_lose",
+            "match": {
+              "pick": "any"
+            },
+            "n": 1,
+            "reason": "k04.reason.theft"
+          }
+        ]
+      },
+      "art": "illus.fa.any.theft",
+      "brief": "铺里少了一件货。①追（掷胆量，要 2 个正面；没过再丢一件最好的，人受伤两天）②算了（丢一件）。通用，不写伤人细节。征兆：财物。没理会当算了，丢掉一件货。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.any.illness",
+      "type": "fate",
+      "era": [
+        "*"
+      ],
+      "weight": 7,
+      "tags": [
+        "illness",
+        "omen_illness"
+      ],
+      "valence": "bad",
+      "choices": [
+        {
+          "id": "buy_medicine",
+          "brief": "抓药",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 18,
+              "payee": "medicine_shop",
+              "reason": "k04.reason.medicine",
+              "short": "ladder"
+            }
+          ],
+          "almanac": [
+            "rest"
+          ]
+        },
+        {
+          "id": "endure",
+          "brief": "硬扛",
+          "effects": [
+            {
+              "op": "person_state",
+              "person": "ruhua",
+              "state": "hurt",
+              "days": 3
+            },
+            {
+              "op": "attr",
+              "who": "ruhua",
+              "attr": "nerve",
+              "delta": -1,
+              "days": 3
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "person_state",
+            "person": "ruhua",
+            "state": "hurt",
+            "days": 3
+          },
+          {
+            "op": "attr",
+            "who": "ruhua",
+            "attr": "nerve",
+            "delta": -1,
+            "days": 3
+          }
+        ]
+      },
+      "art": "illus.fa.any.illness",
+      "brief": "你病了一场。①抓药（付钱起步 18）②硬扛（受伤三天，胆量临时少一点，持续三天）。通用。征兆：病痛。没理会当硬扛，受伤三天，胆量少一点。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.any.damp_loss",
+      "type": "fate",
+      "era": [
+        "*"
+      ],
+      "weight": 7,
+      "tags": [
+        "water",
+        "omen_water"
+      ],
+      "valence": "bad",
+      "conditions": {
+        "weather": "rain"
+      },
+      "choices": [
+        {
+          "id": "cover",
+          "brief": "把货遮上",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 8,
+              "payee": "sundries",
+              "reason": "k04.reason.damp",
+              "short": "ladder"
+            }
+          ],
+          "almanac": [
+            "repair"
+          ]
+        },
+        {
+          "id": "ignore",
+          "brief": "不管",
+          "effects": [
+            {
+              "op": "item_lose",
+              "match": {
+                "pick": "worst"
+              },
+              "n": 1,
+              "reason": "k04.reason.damp"
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "item_lose",
+            "match": {
+              "pick": "worst"
+            },
+            "n": 1,
+            "reason": "k04.reason.damp"
+          }
+        ]
+      },
+      "art": "illus.fa.any.damp_loss",
+      "brief": "下雨返潮，货受潮。只在雨天进牌库。①遮盖（付钱起步 8）②不管（丢掉一件最差的货）。通用，不绑年份。征兆：水。没理会当不管，丢掉一件最差的货。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.any.fire_next_door",
+      "type": "fate",
+      "era": [
+        "*"
+      ],
+      "weight": 6,
+      "tags": [
+        "fire",
+        "disaster",
+        "omen_fire"
+      ],
+      "valence": "mixed",
+      "choices": [
+        {
+          "id": "move_goods",
+          "brief": "搬货（掷胆量）",
+          "check": {
+            "slots": [
+              {
+                "id": "man",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "attr": "nerve",
+                "brief": "胆大的人",
+                "max": 2
+              }
+            ],
+            "need": 2,
+            "on_success": [
+              {
+                "op": "rep",
+                "delta": 3
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "item_lose",
+                "match": {
+                  "pick": "best"
+                },
+                "n": 1,
+                "reason": "k04.reason.fire"
+              },
+              {
+                "op": "person_state",
+                "person": "ruhua",
+                "state": "hurt",
+                "days": 2
+              }
+            ]
+          },
+          "almanac": [
+            "repair"
+          ]
+        },
+        {
+          "id": "call_help",
+          "brief": "喊人来救",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 5
+            },
+            {
+              "op": "item_lose",
+              "match": {
+                "pick": "any"
+              },
+              "n": 1,
+              "reason": "k04.reason.fire"
+            }
+          ]
+        },
+        {
+          "id": "shut_door",
+          "brief": "关门躲",
+          "effects": [
+            {
+              "op": "item_lose",
+              "match": {
+                "pick": "any"
+              },
+              "n": 2,
+              "reason": "k04.reason.fire"
+            },
+            {
+              "op": "rep",
+              "delta": -3
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "item_lose",
+            "match": {
+              "pick": "any"
+            },
+            "n": 2,
+            "reason": "k04.reason.fire"
+          },
+          {
+            "op": "rep",
+            "delta": -3
+          }
+        ]
+      },
+      "art": "illus.fa.any.fire_next_door",
+      "brief": "邻铺失火，火往这边烧。①搬货（掷胆量，要 2 个正面；过了口碑升，没过丢一件最好的货并且受伤两天）②喊人来救（风声动，再丢一件货）③关门躲（丢两件货，口碑掉）。通用，不写某一年的史实。征兆：火。没理会当关门躲，丢两件货，口碑掉。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.any.stranger_deal",
+      "type": "fate",
+      "era": [
+        "*"
+      ],
+      "weight": 6,
+      "tags": [
+        "stranger",
+        "wealth",
+        "omen_stranger",
+        "omen_wealth"
+      ],
+      "valence": "mixed",
+      "choices": [
+        {
+          "id": "take",
+          "brief": "接下",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 28,
+              "reason": "k04.reason.stranger"
+            },
+            {
+              "op": "heat",
+              "delta": 6
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            }
+          ],
+          "almanac": [
+            "trade"
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "不接",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": 1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "rep",
+            "delta": 1
+          }
+        ]
+      },
+      "art": "illus.fa.any.stranger_deal",
+      "brief": "生人出一笔来路不明的小买卖。①接（进钱起步 28，风声涨，本心降一点）②不接（口碑升一点）。通用。征兆：生人、财物。没理会当不接，口碑升一点。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.any.neighbor_row",
+      "type": "fate",
+      "era": [
+        "*"
+      ],
+      "weight": 6,
+      "tags": [
+        "dispute",
+        "family",
+        "omen_dispute",
+        "omen_family"
+      ],
+      "valence": "mixed",
+      "choices": [
+        {
+          "id": "mediate",
+          "brief": "出面说和",
+          "check": {
+            "slots": [
+              {
+                "id": "talker",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "attr": "tongue",
+                "brief": "会说的人"
+              }
+            ],
+            "need": 1,
+            "on_success": [
+              {
+                "op": "rep",
+                "delta": 2
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "rep",
+                "delta": -1
+              }
+            ]
+          },
+          "almanac": [
+            "meet"
+          ]
+        },
+        {
+          "id": "stay_out",
+          "brief": "不管",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "illus.fa.any.neighbor_row",
+      "brief": "邻里起了口舌，扯到铺子。①出面说和（掷口才，要 1 个正面；过了口碑升，没过口碑掉）②不管（口碑掉一点）。通用，不写对白。征兆：口舌、家宅。没理会当不管，口碑掉一点。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.any.night_knock",
+      "type": "fate",
+      "era": [
+        "*"
+      ],
+      "weight": 6,
+      "tags": [
+        "stranger",
+        "family",
+        "omen_stranger",
+        "omen_family"
+      ],
+      "valence": "mixed",
+      "choices": [
+        {
+          "id": "open_door",
+          "brief": "开门接济",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 8,
+              "payee": "night_caller",
+              "reason": "k04.reason.night",
+              "short": "ladder"
+            },
+            {
+              "op": "rep",
+              "delta": 2
+            },
+            {
+              "op": "conscience",
+              "delta": 1
+            }
+          ],
+          "almanac": [
+            "lend"
+          ]
+        },
+        {
+          "id": "shut",
+          "brief": "不开门",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -2
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "rep",
+            "delta": -2
+          }
+        ]
+      },
+      "art": "illus.fa.any.night_knock",
+      "brief": "夜里有人敲门求助。①开门接济（付钱起步 8，口碑升，本心升一点）②不开（口碑掉）。通用，不写对白。征兆：生人、家宅。没理会当不开门，口碑掉。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.any.found_claim",
+      "type": "fate",
+      "era": [
+        "*"
+      ],
+      "weight": 6,
+      "tags": [
+        "wealth",
+        "omen_wealth"
+      ],
+      "valence": "mixed",
+      "choices": [
+        {
+          "id": "return_it",
+          "brief": "还给他",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": 2
+            }
+          ]
+        },
+        {
+          "id": "keep",
+          "brief": "留下",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 16,
+              "reason": "k04.reason.purse"
+            },
+            {
+              "op": "heat",
+              "delta": 4
+            },
+            {
+              "op": "conscience",
+              "delta": -2
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "money",
+            "delta": 16,
+            "reason": "k04.reason.purse"
+          },
+          {
+            "op": "heat",
+            "delta": 4
+          },
+          {
+            "op": "conscience",
+            "delta": -2
+          }
+        ]
+      },
+      "art": "illus.fa.any.found_claim",
+      "brief": "捡到的东西有人来认。①还（口碑升）②留下（进钱起步 16，风声涨，本心降一点）。通用。征兆：财物。没理会当留下，进一笔钱，风声涨，本心降一点。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "fa.any.snow_day",
+      "type": "fate",
+      "era": [
+        "*"
+      ],
+      "weight": 6,
+      "tags": [
+        "road",
+        "family",
+        "winter",
+        "omen_road",
+        "omen_family"
+      ],
+      "valence": "mixed",
+      "conditions": {
+        "weather": "snow"
+      },
+      "choices": [
+        {
+          "id": "sell",
+          "brief": "趁寒卖一点",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 16,
+              "reason": "k04.reason.snow"
+            }
+          ],
+          "almanac": [
+            "sell_out"
+          ]
+        },
+        {
+          "id": "stay_in",
+          "brief": "关门",
+          "effects": [
+            {
+              "op": "weather",
+              "value": "snow"
+            },
+            {
+              "op": "deck_mod",
+              "pool": "person",
+              "pct": 70,
+              "days": 2
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "weather",
+            "value": "snow"
+          },
+          {
+            "op": "deck_mod",
+            "pool": "person",
+            "pct": 70,
+            "days": 2
+          }
+        ]
+      },
+      "art": "illus.fa.any.snow_day",
+      "brief": "下雪。只在雪天进牌库。①趁寒卖出一点（进钱起步 16）②关门（天气维持雪，接下来两天人物牌变少）。通用，不绑年份。征兆：出行、家宅。没理会当关门，天气维持雪，两天里来的人少。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K04",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

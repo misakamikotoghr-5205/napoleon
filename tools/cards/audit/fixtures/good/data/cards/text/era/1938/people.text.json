@@ -1,0 +1,14 @@
+{
+  "_meta": {
+    "owner": "A",
+    "schema": 1
+  },
+  "p.demo.1938": {
+    "title": "Title",
+    "body": "Body",
+    "lines": {
+      "greet": "Hello"
+    },
+    "_provenance": "human:A:2026-01-15"
+  }
+}

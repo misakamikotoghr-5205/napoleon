@@ -1,0 +1,104 @@
+{
+  "_meta": {
+    "owner": "C10",
+    "schema": 1,
+    "brief": "W1 guide steps for dossier and help anchors. Mechanism names and anchors match section 7.10.10.",
+    "_provenance": {
+      "by": "ai",
+      "task": "C10",
+      "date": "2026-10-13"
+    }
+  },
+  "settings": {
+    "gap_ms": 0,
+    "default_seconds": 8,
+    "max_new_per_day": 16,
+    "bubble_max_w": 360
+  },
+  "pages": [],
+  "steps": [
+    {
+      "id": "gd.d2.rules",
+      "teaches": [],
+      "trigger": {
+        "phase": "morning",
+        "stage_day_gte": 2
+      },
+      "teacher": "brother",
+      "anchor": "a.tab.rules",
+      "anchor_fallback": "",
+      "done_when": ["panel:dossier", "panel:help"],
+      "rule_page": "rule.day",
+      "priority": 90,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 4
+    },
+    {
+      "id": "gd.news",
+      "teaches": ["news"],
+      "trigger": {
+        "first": "news",
+        "phase": "day",
+        "stage_day_gte": 6
+      },
+      "teacher": "zhouma",
+      "anchor": "a.card@{uid}",
+      "anchor_fallback": "a.hand",
+      "done_when": ["ui:hand_selected"],
+      "rule_page": "rule.news",
+      "priority": 80,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 4
+    },
+    {
+      "id": "gd.dossier",
+      "teaches": ["dossier"],
+      "trigger": {
+        "first": "dossier"
+      },
+      "teacher": "zhouma",
+      "anchor": "a.scene.notebook",
+      "anchor_fallback": "a.tab.dossier",
+      "done_when": ["panel:dossier"],
+      "rule_page": "rule.dossier",
+      "priority": 70,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 4
+    },
+    {
+      "id": "gd.dossier_gap",
+      "teaches": ["dossier_gap"],
+      "trigger": {
+        "first": "dossier_gap"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.dossier.gap",
+      "anchor_fallback": "a.scene.notebook",
+      "done_when": ["timeout"],
+      "rule_page": "rule.dossier",
+      "priority": 60,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 4
+    },
+    {
+      "id": "gd.year_after",
+      "teaches": ["year_after"],
+      "trigger": {
+        "first": "year_after"
+      },
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.year.after",
+      "anchor_fallback": "a.dossier.page",
+      "done_when": ["timeout"],
+      "rule_page": "rule.dossier",
+      "priority": 50,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 4
+    }
+  ]
+}

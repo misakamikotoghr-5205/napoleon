@@ -1,0 +1,4832 @@
+{
+ "id": "trunk",
+ "version": 2,
+ "title": "鹰旗 · 一七九三—一八一五",
+ "source": "草稿（标签 conquest，2026-11-02，Claude）。主干段定义：ocean_pawn.json 的超集，新键按 ARCH §1.5。序章和第一幕写满（VN 正文每场 6–12 行），第二到第六幕和厄尔巴每幕压成一到三场，够一局走到分岔点。scenes[].when 是本稿对内核提的一处小扩展（条件为假时这一场被跳过，用来做“调令二选一”），见 CONQUEST.md §3。",
+ "brand": "鹰旗",
+ "initial": {
+  "treasury": 2000,
+  "morale": 60,
+  "heat": 10,
+  "vitality": 70,
+  "construction": 0,
+  "exploration": 0
+ },
+ "gauges": {
+  "treasury": "军费",
+  "morale": "士气",
+  "heat": "民愤",
+  "vitality": "体力",
+  "construction": "工事",
+  "exploration": "测绘"
+ },
+ "chapters": [
+  {
+   "id": "toulon",
+   "title": "序章 · 土伦 1793",
+   "currency": "livre",
+   "currency_name": "里弗尔（指券）",
+   "treasury_start": 2000,
+   "scene_ids": [
+    "toulon_arrival",
+    "toulon_mulgrave"
+   ]
+  },
+  {
+   "id": "italy",
+   "title": "第一幕 · 意大利 1796—1797",
+   "currency": "franc",
+   "currency_name": "法郎（银币）",
+   "treasury_start": 4000,
+   "scene_ids": [
+    "italy_nice",
+    "italy_milan",
+    "italy_rivoli",
+    "italy_campo_formio"
+   ]
+  },
+  {
+   "id": "orient_alps",
+   "title": "第二幕 · 东方或阿尔卑斯 1798—1800",
+   "currency": "franc",
+   "currency_name": "法郎（银币）",
+   "treasury_start": 5000,
+   "scene_ids": [
+    "orient_orders",
+    "orient_acre",
+    "alps_marengo"
+   ]
+  },
+  {
+   "id": "austerlitz_jena",
+   "title": "第三幕 · 奥斯特里茨或埃劳 1805—1807",
+   "currency": "franc",
+   "currency_name": "法郎（拿破仑金币）",
+   "treasury_start": 6000,
+   "scene_ids": [
+    "boulogne_orders",
+    "austerlitz_sun",
+    "eylau_snow"
+   ]
+  },
+  {
+   "id": "iberia_danube",
+   "title": "第四幕 · 西班牙或瓦格拉姆 1808—1809",
+   "currency": "franc",
+   "currency_name": "法郎（拿破仑金币）",
+   "treasury_start": 6000,
+   "scene_ids": [
+    "bayonne_orders",
+    "saragossa_siege",
+    "wagram_lobau"
+   ]
+  },
+  {
+   "id": "russia",
+   "title": "第五幕 · 俄罗斯 1812",
+   "currency": "franc",
+   "currency_name": "法郎（拿破仑金币）",
+   "treasury_start": 7000,
+   "scene_ids": [
+    "russia_niemen",
+    "russia_borodino",
+    "russia_berezina"
+   ]
+  },
+  {
+   "id": "collapse",
+   "title": "第六幕 · 崩落 1813—1814",
+   "currency": "franc",
+   "currency_name": "法郎（拿破仑金币）",
+   "treasury_start": 5000,
+   "scene_ids": [
+    "collapse_lutzen",
+    "collapse_leipzig",
+    "collapse_fontainebleau"
+   ]
+  },
+  {
+   "id": "elba",
+   "title": "终章 · 厄尔巴 1814—1815",
+   "currency": "franc",
+   "currency_name": "法郎（厄尔巴金库）",
+   "treasury_start": 2500,
+   "scene_ids": [
+    "elba_arrival",
+    "elba_night",
+    "elba_1815"
+   ]
+  }
+ ],
+ "characters": [
+  {
+   "id": "villefort",
+   "name": "埃德蒙·德·维尔福",
+   "role": "主角；马赛人，1793 年土伦炮兵库书记，后任意大利军团军需文书、近卫军军需司库；与王家检察官杰拉尔·德·维尔福同宗"
+  },
+  {
+   "id": "bonaparte",
+   "name": "拿破仑·波拿巴（青年）",
+   "role": "1793 年土伦的炮兵上尉，1796 年意大利军团总司令；1804 年起由 napoleon 这个人物接替"
+  },
+  {
+   "id": "napoleon",
+   "name": "拿破仑",
+   "role": "法兰西皇帝（1804—1815）；不能上阵，只以命令、召见和会战限定的军令牌出现"
+  },
+  {
+   "id": "baptiste",
+   "name": "巴蒂斯特中士",
+   "role": "伙伴；工兵，土伦起跟着主角，贯穿全程"
+  },
+  {
+   "id": "corso",
+   "name": "科尔索",
+   "role": "伙伴；科西嘉水手出身的猎兵，土伦起跟着主角"
+  },
+  {
+   "id": "marie",
+   "name": "玛丽·朗热",
+   "role": "伙伴；随军女商贩，兼做军医"
+  },
+  {
+   "id": "muiron",
+   "name": "米隆",
+   "role": "伙伴；波拿巴的副官，宿命之地阿尔科莱"
+  },
+  {
+   "id": "lannes",
+   "name": "拉纳",
+   "role": "伙伴；掷弹兵出身的勇将，宿命之地阿斯佩恩"
+  },
+  {
+   "id": "murat",
+   "name": "缪拉",
+   "role": "伙伴；骑兵统领，隐患：1814 年可能倒戈"
+  },
+  {
+   "id": "desaix",
+   "name": "德塞",
+   "role": "伙伴；正直的将军，宿命之地马伦哥"
+  },
+  {
+   "id": "larrey",
+   "name": "拉雷",
+   "role": "伙伴；军医，他在场时伙伴的命悬一线多一枚铜钱"
+  },
+  {
+   "id": "rustam",
+   "name": "鲁斯塔姆",
+   "role": "伙伴；马穆鲁克护卫，隐患：1814 年可能离开"
+  },
+  {
+   "id": "eble",
+   "name": "埃布莱",
+   "role": "伙伴；舟桥兵将军，宿命之地别列津纳"
+  },
+  {
+   "id": "gourgaud",
+   "name": "古尔戈",
+   "role": "伙伴；皇帝的传令官，1812 年起跟随（远洋段同一人）"
+  },
+  {
+   "id": "pierre",
+   "name": "小皮埃尔",
+   "role": "伙伴；别列津纳桥头捡回来的鼓手，太小，只能留守"
+  },
+  {
+   "id": "dugommier",
+   "name": "杜戈米埃将军",
+   "role": "土伦围城军司令"
+  },
+  {
+   "id": "saliceti",
+   "name": "萨利切蒂特派员",
+   "role": "督政府派驻意大利军团的特派员，管捐献与征收"
+  },
+  {
+   "id": "faria",
+   "name": "法利亚神甫",
+   "role": "罗马斯帕达家的书记神甫；1796 年在博洛尼亚把半封信交给主角"
+  },
+  {
+   "id": "eble_aide",
+   "name": "舟桥兵",
+   "role": "别列津纳的群众角色（无立绘）"
+  },
+  {
+   "id": "drouot",
+   "name": "德鲁奥将军",
+   "role": "厄尔巴总督，近卫炮兵出身"
+  },
+  {
+   "id": "dantes",
+   "name": "埃德蒙·唐泰斯",
+   "role": "法老号的年轻大副；1815 年 2 月在费拉约港出现（远洋、伊夫堡段同一人）"
+  },
+  {
+   "id": "campbell",
+   "name": "坎贝尔上校",
+   "role": "英国驻厄尔巴专员"
+  },
+  {
+   "id": "cambronne",
+   "name": "康布罗纳将军",
+   "role": "厄尔巴近卫营营长；鹰飞段的伙伴（掷弹兵，宿命之地滑铁卢）"
+  }
+ ],
+ "items": [
+  {
+   "id": "faria_half",
+   "name": "法利亚的半封信",
+   "chapter": "italy",
+   "description": "博洛尼亚，1796：神甫把一封信撕成两半，留下有斯帕达纹章的那一半给你——“将来要找一个朋友，就拿它来罗马”。另一半在他手里。"
+  },
+  {
+   "id": "lodi_colours",
+   "name": "洛迪桥的军旗",
+   "chapter": "italy",
+   "description": "第一个冲上桥的营留下的破旗。"
+  },
+  {
+   "id": "tolentino_list",
+   "name": "托伦蒂诺清单",
+   "chapter": "italy",
+   "description": "运往巴黎的画、手稿和雕像的清单。多出来的那一行是你写的。"
+  },
+  {
+   "id": "guard_eagle_ribbon",
+   "name": "第一掷弹兵团的鹰旗缎带",
+   "chapter": "collapse",
+   "description": "枫丹白露告别那天，从鹰旗上剪下的一段缎带。"
+  },
+  {
+   "id": "elba_watch",
+   "name": "厄尔巴双面金怀表",
+   "chapter": "elba",
+   "description": "皇帝在厄尔巴用过的旧怀表。表盘后面有个夹层，正好放得下半封信。（远洋段同一件物品，id 冻结）"
+  }
+ ],
+ "rules": {
+  "failures": [
+   {
+    "ending": "bankruptcy",
+    "reason": "treasury",
+    "when": {
+     "metric": {
+      "treasury": [
+       "<=",
+       0
+      ]
+     }
+    }
+   },
+   {
+    "ending": "loss",
+    "reason": "vitality",
+    "when": {
+     "metric": {
+      "vitality": [
+       "<=",
+       0
+      ]
+     }
+    }
+   },
+   {
+    "ending": "blockade",
+    "reason": "heat",
+    "when": {
+     "metric": {
+      "heat": [
+       ">=",
+       100
+      ]
+     }
+    }
+   }
+  ],
+  "endings": [],
+  "default_ending": "",
+  "exclusive_flags": [
+   [
+    "t_orient",
+    "t_alps"
+   ],
+   [
+    "t_austerlitz",
+    "t_prussia"
+   ],
+   [
+    "t_spain",
+    "t_danube"
+   ],
+   [
+    "t_guard_oath",
+    "t_went_home"
+   ]
+  ],
+  "actions": {
+   "_doc": "草稿：数值按 ARCH §1.5 rules.actions 的意思写，键名最后以 A 的实现为准。visit_town = 市镇补给；visit_backdoor = 密探联络；trade_fair = 平价采买；trade_counterfeit = 征发；build = 修兵站和工事（construction）；explore = 测绘（exploration）；fund 主干不用。",
+   "visit_town": {
+    "cost": 80,
+    "effects": {
+     "vitality": 4,
+     "morale": 2
+    }
+   },
+   "visit_backdoor": {
+    "effects": {
+     "heat": -6
+    },
+    "coins": {
+     "intel": 1
+    }
+   },
+   "trade_fair": {
+    "effects": {
+     "treasury": 150
+    }
+   },
+   "trade_counterfeit": {
+    "effects": {
+     "treasury": 400,
+     "heat": 12
+    },
+    "flags": [
+     "t_requisition"
+    ]
+   },
+   "build": {
+    "metric": "construction",
+    "chapters": [
+     "italy",
+     "orient_alps",
+     "iberia_danube",
+     "russia",
+     "elba"
+    ],
+    "cost": 200,
+    "gain": 20
+   },
+   "explore": {
+    "metric": "exploration",
+    "chapters": [
+     "italy",
+     "orient_alps",
+     "austerlitz_jena",
+     "russia"
+    ],
+    "cost": 150,
+    "gain": 20
+   },
+   "fund": {
+    "chapters": []
+   }
+  }
+ },
+ "big_fate_extra": [],
+ "scenes": [
+  {
+   "id": "toulon_arrival",
+   "chapter": "toulon",
+   "date": "1793-11-20",
+   "title": "序章·第一场：数不对的火药桶",
+   "location": "奥利乌勒·围城炮兵库",
+   "speaker": "bonaparte",
+   "body": [
+    "这是架空历史故事。人物的交会、年代的剪裁和你的一生都是戏剧设定；1815 年以后，世界会分成三条路。",
+    "1793 年 11 月，土伦。港里停着英国和西班牙的舰队，城头升着百合花旗。共和国的围城军已经在山上淋了两个月的雨。",
+    "你叫埃德蒙·德·维尔福，马赛人，十七岁，是奥利乌勒炮兵库的书记。你的差事是数火药桶。数了两个月，账上的数和库里的数从来没对上过。",
+    "巴蒂斯特：“又少了三桶。不是英国人偷的，是咱们自己人拿去换酒了。”",
+    "科尔索把一张受潮的地图摊在炮车上：“上尉要见管火药的人。他说谁能把数对上，谁就跟他去打小直布罗陀。”",
+    "炮兵上尉二十四岁，很瘦，头发披到领口，说话很快。他的手指按在港湾西边的一座小山包上。",
+    "波拿巴：“拿下这里，英国舰队就待不住了。土伦不在城墙上，在这座山包上。我要炮，要火药，还要一个算得清账的人。”",
+    "维尔福：“火药缺三十七桶。我知道是谁拿的，也知道去哪里补。”",
+    "波拿巴：“那就去补。三天后，我要在无畏者炮台看见它们。”"
+   ],
+   "item_ids": [],
+   "appraisals": [
+    {
+     "id": "powder_weight",
+     "kind": "weigh",
+     "label": "逐桶过秤",
+     "observation": "账上一桶一百斤，有十二桶只有六十斤出头：底下垫的是湿沙。"
+    },
+    {
+     "id": "powder_trail",
+     "kind": "spot",
+     "label": "察看库房门口的泥地",
+     "observation": "车辙压得很深，一路通向奥利乌勒那家酒馆的后院。"
+    },
+    {
+     "id": "bonaparte_map",
+     "kind": "decode",
+     "label": "看懂上尉画的圈",
+     "observation": "圈不在城墙上，在西岬的埃吉耶特：在那里架炮，港里的船就跑不了。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "expose_thieves",
+     "label": "当众揭穿换酒的人，把火药追回来",
+     "requires_clues": [
+      "powder_weight",
+      "powder_trail"
+     ],
+     "effects": {
+      "morale": 6,
+      "heat": 5
+     },
+     "flags": [
+      "t_powder_honest"
+     ],
+     "rogue": {
+      "recruit": [
+       "baptiste",
+       "corso"
+      ],
+      "coins": {
+       "supply": 2
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "settle_quietly",
+     "label": "私下了结：让他们连夜补齐，不上报",
+     "requires_clues": [
+      "powder_trail"
+     ],
+     "effects": {
+      "morale": 2,
+      "treasury": 100
+     },
+     "flags": [
+      "t_powder_quiet"
+     ],
+     "rogue": {
+      "recruit": [
+       "baptiste",
+       "corso"
+      ],
+      "coins": {
+       "gold": 1
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "buy_in_marseille",
+     "label": "自掏腰包，去马赛买火药",
+     "effects": {
+      "treasury": -300,
+      "morale": 3
+     },
+     "flags": [
+      "t_marseille_powder"
+     ],
+     "rogue": {
+      "recruit": [
+       "baptiste",
+       "corso"
+      ]
+     },
+     "advance": true
+    }
+   ]
+  },
+  {
+   "id": "toulon_mulgrave",
+   "chapter": "toulon",
+   "date": "1793-12-17",
+   "title": "序章·第二场：小直布罗陀",
+   "location": "凯尔高地·穆尔格雷夫棱堡",
+   "speaker": "bonaparte",
+   "body": [
+    "12 月 17 日凌晨一点，暴雨。三路纵队摸黑爬上凯尔高地，去打英国人叫作“小直布罗陀”的棱堡。",
+    "杜戈米埃将军把帽檐压得很低：“今晚拿不下来，巴黎就会要我的脑袋。”他说的是断头台，不是比喻。",
+    "米隆中尉提着一盏防风灯跑下来：“上尉第一个翻进了胸墙！英国人在反扑。”",
+    "你背着最后两桶干火药爬上斜坡。雨水灌进靴子，桶外裹着三层油布。",
+    "波拿巴大腿上挨了一刺刀，靠在炮架上，嗓子已经喊哑了：“炮口转过去，对着海！”",
+    "巴蒂斯特：“堡门得堵上。给我一辆炮车、三根木头、两分钟。”",
+    "科尔索趴在棱堡墙头：“墙挡着我，看不见坡下。我得挪到前面那个土包上去。”",
+    "守住棱堡到天亮，土伦就是共和国的。"
+   ],
+   "item_ids": [],
+   "appraisals": [
+    {
+     "id": "wet_powder",
+     "kind": "spot",
+     "label": "检查炮位上的火药",
+     "observation": "炮位上的药包泡过水，点不着。你背上来的两桶是干的。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "credit_captain",
+     "label": "把夺堡的功劳写在上尉名下",
+     "effects": {
+      "morale": 5
+     },
+     "flags": [
+      "t_credit_bonaparte"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 2
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "report_ledger",
+     "label": "向特派员如实呈报火药账",
+     "requires_clues": [
+      "wet_powder"
+     ],
+     "effects": {
+      "treasury": 200,
+      "heat": 3
+     },
+     "flags": [
+      "t_ledger_honest"
+     ],
+     "rogue": {
+      "coins": {
+       "gold": 1,
+       "medal": 1
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "share_rum",
+     "label": "把缴获的英军朗姆酒分给炮手",
+     "effects": {
+      "morale": 8,
+      "vitality": 6,
+      "heat": 3
+     },
+     "flags": [
+      "t_rum_shared"
+     ],
+     "rogue": {
+      "props": [
+       "prop_field_ration"
+      ]
+     },
+     "advance": true
+    }
+   ]
+  },
+  {
+   "id": "italy_nice",
+   "chapter": "italy",
+   "date": "1796-03-27",
+   "title": "第一幕·第一场：空钱柜和新司令",
+   "location": "尼斯·意大利军团司令部",
+   "speaker": "bonaparte",
+   "body": [
+    "1796 年 3 月，尼斯。意大利军团三万八千人，鞋子不到一半，军饷欠了五个月。",
+    "新司令二十六岁，个子不高。马塞纳、奥热罗、塞吕里耶三位师长进门的时候，谁也没摘帽子。",
+    "波拿巴先摘了自己的帽子，然后看着他们，一直看到他们也把帽子摘下来。",
+    "波拿巴：“维尔福，土伦的账你记得清。现在告诉我，我们有什么。”",
+    "维尔福：“面粉够九天，皮鞋够三个营。钱柜里的现金，不够一个师吃一顿肉。”",
+    "波拿巴：“那就去意大利吃。山那边是全世界最肥的平原。”",
+    "门外，一个推酒桶车的女人正跟哨兵吵架。她叫玛丽·朗热，随军女商贩，说军需处欠她四十瓶白兰地的钱。",
+    "玛丽：“司令要打到米兰，我就跟到米兰。可账得先结清。”",
+    "米隆把一纸调令放在你桌上：你升任意大利军团军需文书，归司令部直辖。"
+   ],
+   "item_ids": [],
+   "appraisals": [
+    {
+     "id": "paper_shoes",
+     "kind": "weigh",
+     "label": "掂一掂承包商交来的皮鞋",
+     "observation": "三成的鞋底是压实的硬纸板，一淋雨就烂。"
+    },
+    {
+     "id": "marie_bill",
+     "kind": "decode",
+     "label": "核对玛丽的欠条",
+     "observation": "欠条是真的，签字的是上一任军需官，他上个月卷款跑了。"
+    },
+    {
+     "id": "coast_road",
+     "kind": "spot",
+     "label": "察看滨海大道",
+     "observation": "英国船在海上盯着这条路；萨沃纳的仓库还是空的。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "pay_marie",
+     "label": "认下玛丽的欠条，用现金结清",
+     "requires_clues": [
+      "marie_bill"
+     ],
+     "effects": {
+      "treasury": -200,
+      "morale": 4
+     },
+     "flags": [
+      "t_marie_paid"
+     ],
+     "rogue": {
+      "recruit": [
+       "marie",
+       "muiron"
+      ]
+     },
+     "advance": true
+    },
+    {
+     "id": "voucher_marie",
+     "label": "开一张调拨凭单给玛丽，到米兰再兑",
+     "effects": {
+      "morale": 1
+     },
+     "flags": [
+      "t_marie_voucher"
+     ],
+     "rogue": {
+      "recruit": [
+       "marie",
+       "muiron"
+      ],
+      "coins": {
+       "supply": 2
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "expose_contractor",
+     "label": "揭穿纸底鞋，扣下承包商的保证金",
+     "requires_clues": [
+      "paper_shoes"
+     ],
+     "effects": {
+      "treasury": 300,
+      "heat": 5
+     },
+     "flags": [
+      "t_storks_hostile"
+     ],
+     "rogue": {
+      "recruit": [
+       "muiron"
+      ]
+     },
+     "advance": true
+    }
+   ]
+  },
+  {
+   "id": "italy_milan",
+   "chapter": "italy",
+   "date": "1796-05-15",
+   "title": "第一幕·第二场：米兰的清单",
+   "location": "米兰·塞尔贝洛尼宫",
+   "speaker": "saliceti",
+   "on_enter": {
+    "demands": [
+     {
+      "id": "paris_remit",
+      "title": "给督政府解送捐献",
+      "due_in": 8,
+      "cost": 500,
+      "item": "",
+      "on_expire": {
+       "effects": {
+        "morale": -4,
+        "heat": 6
+       },
+       "flags": [
+        "t_paris_angry"
+       ]
+      },
+      "on_fulfill": {
+       "flags": [
+        "t_paris_pleased"
+       ]
+      }
+     }
+    ]
+   },
+   "body": [
+    "1796 年 5 月 15 日，米兰。司令骑马进城，有人朝街上扔花，也有人关上了窗。",
+    "督政府的特派员萨利切蒂带来一张清单：米兰要交两千万的“捐献”，另外还有画、手稿和马。",
+    "萨利切蒂：“钱送巴黎，画送卢浮宫。军需官，装箱的事归你。”",
+    "缪拉上校倚在门边，手里转着一只金鼻烟壶：“装箱的时候掉几枚金币在地上，没人会弯腰去捡。”",
+    "拉纳上校的帽子五天前在洛迪桥上被打穿了。拉纳：“掉在地上的，是当兵的饷。”",
+    "玛丽：“城里的面包三天涨了三倍。再这么征下去，帕维亚要出事。”",
+    "你看着清单。欠饷、面包、巴黎的胃口、米兰人的脸——账簿上只有一栏写得下。"
+   ],
+   "item_ids": [],
+   "appraisals": [
+    {
+     "id": "contribution_list",
+     "kind": "decode",
+     "label": "核对捐献清单",
+     "observation": "清单末尾多了一笔“特别费”，没有签收人。"
+    },
+    {
+     "id": "bread_price",
+     "kind": "spot",
+     "label": "察看街口的面包铺",
+     "observation": "征粮队把磨坊的存粮也拉走了，面包铺下午就关门。"
+    },
+    {
+     "id": "debased_coin",
+     "kind": "ring",
+     "label": "听一听入库的银币",
+     "observation": "三成是掺了铅的旧币，热那亚的银行不会收。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "pay_soldiers_first",
+     "label": "先发欠饷，再装箱送巴黎",
+     "requires_clues": [
+      "contribution_list"
+     ],
+     "effects": {
+      "treasury": -400,
+      "morale": 10,
+      "heat": -5
+     },
+     "flags": [
+      "t_soldiers_paid"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      },
+      "recruit": [
+       "lannes"
+      ]
+     },
+     "advance": true
+    },
+    {
+     "id": "paris_first",
+     "label": "照单征收，一个苏也不少送巴黎",
+     "effects": {
+      "treasury": 600,
+      "morale": -3,
+      "heat": 15
+     },
+     "flags": [
+      "t_paris_first"
+     ],
+     "rogue": {
+      "coins": {
+       "gold": 2
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "pocket_the_floor",
+     "label": "收下“掉在地上的”金币",
+     "effects": {
+      "treasury": 300,
+      "heat": 5
+     },
+     "flags": [
+      "t_kickback"
+     ],
+     "rogue": {
+      "coins": {
+       "gold": 3
+      },
+      "recruit": [
+       "murat"
+      ]
+     },
+     "advance": true
+    }
+   ]
+  },
+  {
+   "id": "italy_rivoli",
+   "chapter": "italy",
+   "date": "1797-01-14",
+   "title": "第一幕·第三场：里沃利的月光",
+   "location": "里沃利高原",
+   "speaker": "bonaparte",
+   "body": [
+    "1797 年 1 月 14 日凌晨两点，里沃利高原。月亮很亮，雪地反光，看得见二十里外的营火。",
+    "茹贝尔的一万人守着高原。巴尔多山上是阿尔文齐的六路纵队，营火连成一条项链。",
+    "司令连夜从维罗纳赶到，下马第一句话问的是火药。",
+    "波拿巴：“维尔福，弹药车在哪里？”",
+    "维尔福：“十二辆在高原背后，四辆在峡谷口。峡谷那四辆，奥军的炮也够得着。”",
+    "波拿巴：“那就让它们待在那里。奥斯泰里亚的路只有一条，奥军的车也得从那里爬上来。”",
+    "拉纳：“西边山上有动静。吕西尼昂想绕到我们背后。”",
+    "天亮之前，高原上每一个人都得站到位置上。"
+   ],
+   "item_ids": [],
+   "appraisals": [
+    {
+     "id": "gorge_road",
+     "kind": "spot",
+     "label": "看清峡谷口的之字路",
+     "observation": "路窄得只容一辆车，车翻了，后面的人就全堵在峡谷里。"
+    },
+    {
+     "id": "campfire_count",
+     "kind": "decode",
+     "label": "数山上的营火",
+     "observation": "六处营火，西边那一处离得最远，正往南移：那是吕西尼昂。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "take_wagons",
+     "label": "把缴获的奥军弹药车编进军需队",
+     "effects": {
+      "treasury": 200
+     },
+     "flags": [
+      "t_rivoli_wagons"
+     ],
+     "rogue": {
+      "coins": {
+       "supply": 4
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "pursue_provera",
+     "label": "不歇脚，追普罗韦拉去曼托瓦",
+     "requires_clues": [
+      "campfire_count"
+     ],
+     "effects": {
+      "vitality": -5,
+      "morale": 5
+     },
+     "flags": [
+      "t_favorita_pursuit"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "wounded_first",
+     "label": "让伤员先下山，俘虏交给马塞纳",
+     "effects": {
+      "vitality": 8,
+      "morale": 2
+     },
+     "flags": [
+      "t_rivoli_mercy"
+     ],
+     "rogue": {
+      "heal": 20
+     },
+     "advance": true
+    }
+   ]
+  },
+  {
+   "id": "italy_campo_formio",
+   "chapter": "italy",
+   "date": "1797-10-17",
+   "title": "第一幕·终场：坎波福米奥",
+   "location": "帕塞里亚诺别墅",
+   "speaker": "bonaparte",
+   "body": [
+    "1797 年 10 月，坎波福米奥。和约签了。威尼斯共和国一千一百年，在一张纸上没了。",
+    "司令要回巴黎。司令部里的人，有的升了将军，有的留在了阿尔科莱的堤道边。",
+    "装箱的清单摊在桌上：运往巴黎的画、手稿、雕像，八十三件。你数了三遍，箱子里是八十四件。",
+    "波拿巴：“维尔福，下一仗不在意大利。”他没说在哪里。窗外是亚得里亚海。",
+    "玛丽在给酒桶车换轮子：“下一仗，还跟不跟？”",
+    "你在账簿最后一页写下这一仗所有人的名字：活着的，和不在了的。"
+   ],
+   "item_ids": [
+    "tolentino_list"
+   ],
+   "appraisals": [
+    {
+     "id": "extra_crate",
+     "kind": "weigh",
+     "label": "过秤第八十四只箱子",
+     "observation": "箱子很轻，里面是一幅小画，没有登记，背面写着一座意大利小教堂的名字。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "register_painting",
+     "label": "如实登记，并在清单上标明它从哪座教堂来",
+     "requires_clues": [
+      "extra_crate"
+     ],
+     "effects": {
+      "morale": 2
+     },
+     "flags": [
+      "t_return_mark"
+     ],
+     "items": [
+      "tolentino_list"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "keep_painting",
+     "label": "把那幅画记成运输损耗，留下来",
+     "effects": {
+      "treasury": 500
+     },
+     "flags": [
+      "t_kept_painting"
+     ],
+     "items": [
+      "tolentino_list"
+     ],
+     "rogue": {
+      "coins": {
+       "gold": 2
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "say_nothing",
+     "label": "什么也不说，跟司令回巴黎",
+     "effects": {},
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "supply": 2
+      }
+     },
+     "advance": true
+    }
+   ]
+  },
+  {
+   "id": "orient_orders",
+   "chapter": "orient_alps",
+   "date": "1798-05-10",
+   "title": "第二幕·调令：三百艘船去哪里",
+   "location": "土伦港",
+   "speaker": "bonaparte",
+   "body": [
+    "1798 年 5 月，土伦。港里停着三百艘船，谁也不知道它们去哪里。船上装着大炮、骆驼鞍、印刷机，还有一百六十七名学者。",
+    "波拿巴：“维尔福，东方军团需要一个管水的人。到了沙漠里，一桶水比一桶火药值钱。”",
+    "督政府的信同时到了：莱茵方面缺军需官，第戎在悄悄集结一支后备军。",
+    "玛丽：“去东方，回来的人会少一半。留在欧洲，至少冬天有面包。”",
+    "五年前，你在山上看过这个港口。那时候，港里的船是英国人的。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "sail_east",
+     "label": "随东方军团出海",
+     "effects": {
+      "morale": 3
+     },
+     "flags": [
+      "t_orient"
+     ],
+     "rogue": {
+      "coins": {
+       "supply": 3
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "stay_europe",
+     "label": "留在欧洲，去第戎的后备军",
+     "effects": {
+      "treasury": 300
+     },
+     "flags": [
+      "t_alps"
+     ],
+     "rogue": {
+      "coins": {
+       "gold": 1
+      }
+     },
+     "advance": true
+    }
+   ],
+   "condensed": true
+  },
+  {
+   "id": "orient_acre",
+   "chapter": "orient_alps",
+   "when": {
+    "flags": [
+     "t_orient"
+    ]
+   },
+   "date": "1799-05-10",
+   "title": "第二幕·东方：阿卡城下",
+   "location": "阿卡城外的壕沟",
+   "speaker": "larrey",
+   "body": [
+    "1799 年 5 月，阿卡。城墙后是杰扎尔帕夏，海上是西德尼·史密斯的英国船。",
+    "这是第八次攻城。城下的壕沟里，尸体已经垒到胸口。",
+    "拉雷：“营里出了鼠疫。我要醋、绷带，还要一个肯进隔离帐篷的军需官。”",
+    "波拿巴：“攻不下来了，撤回埃及。维尔福，伤员和炮怎么走？”",
+    "维尔福：“炮带不走就埋。伤员……车不够，得有人下马。”",
+    "波拿巴第一个下了马。",
+    "撤走之前，还得守住壕沟最后一夜：城里的人会出来追。"
+   ],
+   "item_ids": [],
+   "appraisals": [
+    {
+     "id": "plague_tent",
+     "kind": "spot",
+     "label": "进隔离帐篷看一眼",
+     "observation": "一半的病人只是伤口化脓，不是鼠疫；分开放，能多活一半。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "walk_the_desert",
+     "label": "马全部让给伤员，徒步穿越沙漠",
+     "effects": {
+      "vitality": -10,
+      "morale": 8
+     },
+     "flags": [
+      "t_acre_walk"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 2
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "sort_the_sick",
+     "label": "把伤员和病人分开，能走的都带走",
+     "requires_clues": [
+      "plague_tent"
+     ],
+     "effects": {
+      "vitality": 4,
+      "morale": 4
+     },
+     "flags": [
+      "t_acre_sorted"
+     ],
+     "rogue": {
+      "recruit": [
+       "larrey"
+      ]
+     },
+     "advance": true
+    },
+    {
+     "id": "bury_guns",
+     "label": "把炮埋在沙里，标好位置",
+     "effects": {
+      "treasury": -200
+     },
+     "flags": [
+      "t_guns_buried"
+     ],
+     "rogue": {
+      "coins": {
+       "intel": 1
+      }
+     },
+     "advance": true
+    }
+   ],
+   "condensed": true
+  },
+  {
+   "id": "alps_marengo",
+   "chapter": "orient_alps",
+   "when": {
+    "flags": [
+     "t_alps"
+    ]
+   },
+   "date": "1800-06-14",
+   "title": "第二幕·阿尔卑斯：下午三点的马伦哥",
+   "location": "马伦哥平原",
+   "speaker": "desaix",
+   "body": [
+    "1800 年 6 月 14 日下午三点，马伦哥。法军已经退了一上午。",
+    "梅拉斯以为赢定了，回亚历山德里亚吃午饭去了。",
+    "地平线上起了尘土。德塞将军听见炮声，自己带着一个师掉头赶了回来。",
+    "德塞：“这一仗是输了。可现在才三点，还来得及再打赢一仗。”",
+    "德塞：“军需官，给我的人每人一口酒，然后让开路。”",
+    "你把最后十二桶白兰地推到路边。德塞的兵一边喝，一边上刺刀。"
+   ],
+   "item_ids": [],
+   "appraisals": [
+    {
+     "id": "dust_cloud",
+     "kind": "spot",
+     "label": "辨认地平线上的尘土",
+     "observation": "尘土从南边来，是步兵的长纵队，不是骑兵：德塞赶到还要两个钟头。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "send_the_list",
+     "label": "把胜报和伤亡名单一起送去司令部",
+     "effects": {
+      "morale": 5
+     },
+     "flags": [
+      "t_marengo_list"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 2
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "gather_baggage",
+     "label": "收拢奥军丢下的辎重",
+     "effects": {
+      "treasury": 500
+     },
+     "flags": [
+      "t_marengo_loot"
+     ],
+     "rogue": {
+      "coins": {
+       "supply": 4
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "write_letters",
+     "label": "替阵亡的人写家书",
+     "requires_clues": [
+      "dust_cloud"
+     ],
+     "effects": {
+      "morale": 6,
+      "vitality": 4
+     },
+     "flags": [
+      "t_marengo_letters"
+     ],
+     "rogue": {},
+     "advance": true
+    }
+   ],
+   "condensed": true
+  },
+  {
+   "id": "boulogne_orders",
+   "chapter": "austerlitz_jena",
+   "date": "1805-08-27",
+   "title": "第三幕·调令：布洛涅的帐篷",
+   "location": "布洛涅营地",
+   "speaker": "napoleon",
+   "body": [
+    "1805 年 8 月，布洛涅。海峡对岸就是英国，可是舰队没有来。",
+    "皇帝在帐篷里来回走。一夜之间，地图上的箭头从英国转向了多瑙河。",
+    "拿破仑：“维尔福，二十万人，二十天，从海边走到乌尔姆。面包放在哪里？”",
+    "维尔福：“不放在仓库里，放在路上。每一站的面包，前一天就要烤好。”",
+    "贝尔蒂埃递来另一份命令：普鲁士在动员，北边要有人盯住汉诺威的仓库。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "march_danube",
+     "label": "随大军团东进多瑙河",
+     "effects": {
+      "morale": 3
+     },
+     "flags": [
+      "t_austerlitz"
+     ],
+     "rogue": {
+      "coins": {
+       "supply": 3
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "watch_prussia",
+     "label": "去北方盯着普鲁士",
+     "effects": {
+      "treasury": 300
+     },
+     "flags": [
+      "t_prussia"
+     ],
+     "rogue": {
+      "coins": {
+       "intel": 2
+      }
+     },
+     "advance": true
+    }
+   ],
+   "condensed": true
+  },
+  {
+   "id": "austerlitz_sun",
+   "chapter": "austerlitz_jena",
+   "when": {
+    "flags": [
+     "t_austerlitz"
+    ]
+   },
+   "date": "1805-12-02",
+   "title": "第三幕·多瑙河：奥斯特里茨的太阳",
+   "location": "摩拉维亚·普拉岑高地下",
+   "speaker": "napoleon",
+   "body": [
+    "1805 年 12 月 2 日清晨，摩拉维亚。普拉岑高地上全是雾。",
+    "皇帝故意让出了高地。联军的纵队正从高地上下来，去打我们的右翼。",
+    "拿破仑：“等。等太阳出来。”",
+    "达武的第三军两天走了一百一十公里赶到右翼。你给他们备的面包摆在路边，每一站都在。",
+    "雾散了。太阳照在普拉岑高地上。",
+    "维尔福：“陛下，南边池塘上结着冰。联军要是往那边退……”"
+   ],
+   "item_ids": [],
+   "appraisals": [
+    {
+     "id": "pond_ice",
+     "kind": "ring",
+     "label": "敲一敲池塘的冰面",
+     "observation": "声音发空，冰只有两指厚，撑不住炮车。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "melt_the_guns",
+     "label": "把缴获的大炮运回巴黎熔铸纪念柱",
+     "effects": {
+      "treasury": 300
+     },
+     "flags": [
+      "t_column"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 2
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "save_the_drowning",
+     "label": "派人去冰湖边捞落水的人",
+     "requires_clues": [
+      "pond_ice"
+     ],
+     "effects": {
+      "morale": 4,
+      "heat": -5
+     },
+     "flags": [
+      "t_ponds_mercy"
+     ],
+     "rogue": {},
+     "advance": true
+    },
+    {
+     "id": "double_ration",
+     "label": "给第三军发双份酒",
+     "effects": {
+      "vitality": 8
+     },
+     "flags": [
+      "t_davout_wine"
+     ],
+     "rogue": {
+      "coins": {
+       "supply": 3
+      }
+     },
+     "advance": true
+    }
+   ],
+   "condensed": true
+  },
+  {
+   "id": "eylau_snow",
+   "chapter": "austerlitz_jena",
+   "when": {
+    "flags": [
+     "t_prussia"
+    ]
+   },
+   "date": "1807-02-08",
+   "title": "第三幕·北方：埃劳的雪",
+   "location": "东普鲁士·埃劳墓地",
+   "speaker": "napoleon",
+   "body": [
+    "1807 年 2 月 8 日，东普鲁士，埃劳。雪大得看不见二十步外。",
+    "奥热罗的第七军在雪里走错了方向，一头撞上俄军的大炮群，几乎打光了。",
+    "皇帝站在墓地旁的教堂边，炮弹落在他身边。",
+    "拿破仑：“缪拉，你要眼看着我们被这些人吃掉吗？”",
+    "缪拉带着八十个中队冲进了雪里。",
+    "维尔福：“陛下，面包只够两天。如果明天还要打……”"
+   ],
+   "item_ids": [],
+   "appraisals": [
+    {
+     "id": "casualty_roll",
+     "kind": "decode",
+     "label": "核对各军报上来的伤亡",
+     "observation": "报上来的数比点名少了一半：各军都在少报。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "send_wounded_warsaw",
+     "label": "把伤员送回华沙",
+     "effects": {
+      "vitality": 6
+     },
+     "flags": [
+      "t_eylau_wounded"
+     ],
+     "rogue": {
+      "heal": 20
+     },
+     "advance": true
+    },
+    {
+     "id": "seize_russian_train",
+     "label": "截下俄军丢下的辎重车",
+     "effects": {
+      "treasury": 400
+     },
+     "flags": [
+      "t_eylau_train"
+     ],
+     "rogue": {
+      "coins": {
+       "supply": 4
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "report_true_losses",
+     "label": "向皇帝报告真实的伤亡数",
+     "requires_clues": [
+      "casualty_roll"
+     ],
+     "effects": {
+      "morale": -2
+     },
+     "flags": [
+      "t_eylau_truth"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 2
+      }
+     },
+     "advance": true
+    }
+   ],
+   "condensed": true
+  },
+  {
+   "id": "bayonne_orders",
+   "chapter": "iberia_danube",
+   "date": "1808-05-10",
+   "title": "第四幕·调令：巴约讷的城堡",
+   "location": "巴约讷·马拉克城堡",
+   "speaker": "napoleon",
+   "body": [
+    "1808 年 5 月，巴约讷。西班牙的老国王和新国王都在城堡里，皇帝要他们两个都让位。",
+    "马德里的街上已经流过血，就在 5 月 2 日。",
+    "拿破仑：“西班牙会自己掉进篮子里。”",
+    "玛丽：“那边的人恨我们。连井水都不肯给。”",
+    "桌上还有一封从维也纳来的密信：奥地利在重新征兵。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "into_spain",
+     "label": "随军进西班牙",
+     "effects": {
+      "treasury": 300
+     },
+     "flags": [
+      "t_spain"
+     ],
+     "rogue": {
+      "coins": {
+       "gold": 1
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "back_to_danube",
+     "label": "回多瑙河，盯住奥地利",
+     "effects": {
+      "morale": 3
+     },
+     "flags": [
+      "t_danube"
+     ],
+     "rogue": {
+      "coins": {
+       "supply": 3
+      }
+     },
+     "advance": true
+    }
+   ],
+   "condensed": true
+  },
+  {
+   "id": "saragossa_siege",
+   "chapter": "iberia_danube",
+   "when": {
+    "flags": [
+     "t_spain"
+    ]
+   },
+   "date": "1809-02-10",
+   "title": "第四幕·西班牙：一间屋子一间屋子",
+   "location": "萨拉戈萨·圣恩格拉西亚修道院废墟",
+   "speaker": "lannes",
+   "body": [
+    "1809 年 2 月，萨拉戈萨。城墙早就破了，可这座城还在一间屋子一间屋子地打。",
+    "拉纳：“我当了二十年兵，没见过这样的仗。每一间房子都是一座要塞。”",
+    "修女在屋顶上装子弹，孩子在地道里送信。",
+    "维尔福：“元帅，城里在闹斑疹伤寒。我们的人在废墟里也在死。”",
+    "拉纳：“那就快点打完。或者，你有别的办法？”"
+   ],
+   "item_ids": [],
+   "appraisals": [
+    {
+     "id": "tunnel_map",
+     "kind": "decode",
+     "label": "拼出地道图",
+     "observation": "城里的地道通向三座修道院和一座磨坊：磨坊那条是城里人运粮的路。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "offer_terms",
+     "label": "劝降：许诺城里的人保住性命",
+     "requires_clues": [
+      "tunnel_map"
+     ],
+     "effects": {
+      "heat": -10,
+      "morale": -2
+     },
+     "flags": [
+      "t_saragossa_terms"
+     ],
+     "rogue": {
+      "coins": {
+       "intel": 1
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "clear_house_by_house",
+     "label": "照命令逐屋清剿",
+     "effects": {
+      "heat": 15
+     },
+     "flags": [
+      "t_saragossa_storm"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 2
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "feed_civilians",
+     "label": "把军粮分给城里的平民",
+     "effects": {
+      "treasury": -300,
+      "heat": -15,
+      "vitality": 4
+     },
+     "flags": [
+      "t_saragossa_bread"
+     ],
+     "rogue": {},
+     "advance": true
+    }
+   ],
+   "condensed": true
+  },
+  {
+   "id": "wagram_lobau",
+   "chapter": "iberia_danube",
+   "when": {
+    "flags": [
+     "t_danube"
+    ]
+   },
+   "date": "1809-07-05",
+   "title": "第四幕·多瑙河：洛鲍岛的六座桥",
+   "location": "维也纳下游·洛鲍岛",
+   "speaker": "napoleon",
+   "body": [
+    "1809 年 7 月，维也纳下游，洛鲍岛。工兵在多瑙河上搭了六座桥。",
+    "五月在阿斯佩恩，桥被冲断过一次，很多人没能回来。",
+    "拿破仑：“这一次，我要一百门炮排成一排。”",
+    "巴蒂斯特：“桥都编了号。断一座，十分钟换上一座。”",
+    "暴雨夜里，第一批纵队开始过河。"
+   ],
+   "item_ids": [],
+   "appraisals": [
+    {
+     "id": "pontoon_count",
+     "kind": "weigh",
+     "label": "清点浮舟和锚",
+     "observation": "锚少了九只。上游漂下来的东西会把没锚住的那两座桥冲歪。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "grand_battery",
+     "label": "把弹药全部调给大炮群",
+     "effects": {
+      "treasury": -200,
+      "morale": 4
+     },
+     "flags": [
+      "t_grand_battery"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 2
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "anchor_bridges",
+     "label": "先把锚补齐，再让纵队过河",
+     "requires_clues": [
+      "pontoon_count"
+     ],
+     "effects": {
+      "construction": 20
+     },
+     "flags": [
+      "t_bridges_anchored"
+     ],
+     "rogue": {
+      "coins": {
+       "supply": 3
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "vienna_bankers",
+     "label": "去维也纳的银行家那里借钱",
+     "effects": {
+      "treasury": 800,
+      "heat": 8
+     },
+     "flags": [
+      "t_vienna_loan"
+     ],
+     "rogue": {
+      "coins": {
+       "gold": 2
+      }
+     },
+     "advance": true
+    }
+   ],
+   "condensed": true
+  },
+  {
+   "id": "russia_niemen",
+   "chapter": "russia",
+   "date": "1812-06-24",
+   "title": "第五幕·第一场：涅曼河对岸什么都没有",
+   "location": "科夫诺·涅曼河浮桥",
+   "speaker": "napoleon",
+   "on_enter": {
+    "demands": [
+     {
+      "id": "vilna_depot",
+      "title": "把维尔纳仓库填满",
+      "due_in": 10,
+      "cost": 600,
+      "item": "",
+      "on_expire": {
+       "effects": {
+        "vitality": -8
+       },
+       "flags": [
+        "t_vilna_empty"
+       ]
+      },
+      "on_fulfill": {
+       "flags": [
+        "t_vilna_full"
+       ]
+      }
+     }
+    ]
+   },
+   "body": [
+    "1812 年 6 月 24 日，涅曼河。三座浮桥，六十万人，走了三天才过完。",
+    "维尔福：“陛下，我们带了二十天的面包。俄国人会把路上的东西全烧掉。”",
+    "拿破仑：“二十天足够了。亚历山大会求和的。”",
+    "皇帝的传令官古尔戈上尉骑马过来。古尔戈：“前卫到了维尔纳，没看见一个俄国兵。”",
+    "埃布莱将军在桥头数浮舟。他把每一只锚的编号都抄在自己的本子上。",
+    "河对岸什么都没有：没有敌人，没有村子，没有面包。"
+   ],
+   "item_ids": [],
+   "appraisals": [
+    {
+     "id": "bread_count",
+     "kind": "weigh",
+     "label": "称一称一个兵背的面包",
+     "observation": "背囊里的面包只够十二天，不是二十天：车队跟不上，一半还在后面。"
+    },
+    {
+     "id": "burnt_fields",
+     "kind": "spot",
+     "label": "察看河对岸的村子",
+     "observation": "粮仓是空的，井里扔了死马。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "issue_twenty_days",
+     "label": "按二十天发粮，相信车队跟得上",
+     "effects": {
+      "morale": 4
+     },
+     "flags": [
+      "t_twenty_days"
+     ],
+     "rogue": {
+      "recruit": [
+       "gourgaud",
+       "eble"
+      ]
+     },
+     "advance": true
+    },
+    {
+     "id": "keep_half_in_vilna",
+     "label": "每人只发十天，另一半存进维尔纳仓库",
+     "requires_clues": [
+      "bread_count"
+     ],
+     "effects": {
+      "morale": -2,
+      "construction": 20
+     },
+     "flags": [
+      "t_vilna_reserve"
+     ],
+     "rogue": {
+      "recruit": [
+       "gourgaud",
+       "eble"
+      ],
+      "coins": {
+       "supply": 4
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "requisition_lithuania",
+     "label": "沿路征发立陶宛的村子",
+     "effects": {
+      "treasury": 400,
+      "heat": 15
+     },
+     "flags": [
+      "t_lithuania_taken"
+     ],
+     "rogue": {
+      "recruit": [
+       "gourgaud",
+       "eble"
+      ]
+     },
+     "advance": true
+    }
+   ],
+   "condensed": true
+  },
+  {
+   "id": "russia_borodino",
+   "chapter": "russia",
+   "date": "1812-09-07",
+   "title": "第五幕·第二场：博罗季诺",
+   "location": "博罗季诺·谢苗诺夫斯科耶",
+   "speaker": "napoleon",
+   "body": [
+    "1812 年 9 月 7 日，博罗季诺。拉耶夫斯基多面堡在冒烟。",
+    "一天下来，两边加起来死伤七万人。皇帝没有动用近卫军。",
+    "拿破仑：“离法国八百里，我不能拿最后的预备队去赌。”",
+    "维尔福：“陛下，莫斯科就在前面。可从这里到莫斯科，没有一座完整的磨坊。”"
+   ],
+   "item_ids": [],
+   "appraisals": [
+    {
+     "id": "redoubt_guns",
+     "kind": "spot",
+     "label": "看多面堡里的俄军炮",
+     "observation": "炮都钉了炮门：俄国人撤得很有条理，这一仗没有打垮他们。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "push_to_moscow",
+     "label": "全速去莫斯科，进城过冬",
+     "effects": {
+      "morale": 5,
+      "vitality": -6
+     },
+     "flags": [
+      "t_moscow_push"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "field_hospitals",
+     "label": "在科洛茨基修道院开野战医院",
+     "requires_clues": [
+      "redoubt_guns"
+     ],
+     "effects": {
+      "vitality": 8,
+      "treasury": -300
+     },
+     "flags": [
+      "t_kolotsk_hospital"
+     ],
+     "rogue": {
+      "heal": 30
+     },
+     "advance": true
+    }
+   ],
+   "condensed": true
+  },
+  {
+   "id": "russia_berezina",
+   "chapter": "russia",
+   "date": "1812-11-27",
+   "title": "第五幕·终场：别列津纳的两座桥",
+   "location": "斯图江卡·别列津纳河",
+   "speaker": "eble",
+   "body": [
+    "1812 年 11 月，别列津纳河，斯图江卡。莫斯科烧了，回来的路上一直在下雪。",
+    "埃布莱将军的舟桥兵站在齐胸深的冰水里搭桥。他们大多数人活不过这个冬天。",
+    "埃布莱：“两座桥，一座走人，一座走炮。守住这边的河岸，直到最后一个人过去。”",
+    "桥头的雪地里，一个十岁上下的鼓手坐在翻倒的大车旁，鼓还挂在脖子上。",
+    "鼓手：“我叫皮埃尔。我的团……我的团在哪里？”",
+    "维尔福：“你的团在桥那边。跟着我。”"
+   ],
+   "item_ids": [],
+   "appraisals": [
+    {
+     "id": "ice_floes",
+     "kind": "spot",
+     "label": "看河上的浮冰",
+     "observation": "浮冰一夜比一夜大。桥再撑不过两天。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "take_pierre",
+     "label": "带上小皮埃尔，跟最后一批人过桥",
+     "effects": {
+      "morale": 4
+     },
+     "flags": [
+      "t_pierre"
+     ],
+     "rogue": {
+      "recruit": [
+       "pierre"
+      ]
+     },
+     "advance": true
+    },
+    {
+     "id": "wait_for_stragglers",
+     "label": "等到天亮再烧桥，让掉队的人过来",
+     "requires_clues": [
+      "ice_floes"
+     ],
+     "effects": {
+      "vitality": -10,
+      "morale": 6
+     },
+     "flags": [
+      "t_waited_bridges"
+     ],
+     "rogue": {
+      "recruit": [
+       "pierre"
+      ],
+      "coins": {
+       "medal": 2
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "burn_on_time",
+     "label": "按时烧桥",
+     "effects": {
+      "vitality": 4,
+      "morale": -6
+     },
+     "flags": [
+      "t_burned_bridges"
+     ],
+     "rogue": {},
+     "advance": true
+    }
+   ],
+   "condensed": true
+  },
+  {
+   "id": "collapse_lutzen",
+   "chapter": "collapse",
+   "date": "1813-05-02",
+   "title": "第六幕·第一场：玛丽-路易丝们",
+   "location": "萨克森·吕岑",
+   "speaker": "napoleon",
+   "body": [
+    "1813 年 5 月，萨克森，吕岑。新兵都只有十八九岁，人们管他们叫“玛丽-路易丝”。",
+    "他们没有军靴，有的人在第一仗之前没开过枪。",
+    "拿破仑：“维尔福，从俄国回来的人还剩多少？”",
+    "维尔福：“陛下，会算账的只剩我一个了。”",
+    "玛丽：“这些孩子得有人教。怎么装子弹，怎么包扎，怎么在雪里睡觉。”"
+   ],
+   "item_ids": [],
+   "appraisals": [
+    {
+     "id": "conscript_roll",
+     "kind": "decode",
+     "label": "核对新兵名册",
+     "observation": "名册上三成的人填了假年龄：他们才十六岁。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "drill_them",
+     "label": "先操练十天再上战场",
+     "effects": {
+      "morale": 4,
+      "vitality": 6
+     },
+     "flags": [
+      "t_drilled_conscripts"
+     ],
+     "rogue": {
+      "troops": [
+       "line",
+       "line"
+      ]
+     },
+     "advance": true
+    },
+    {
+     "id": "send_youngest_home",
+     "label": "把十六岁的孩子送回家",
+     "requires_clues": [
+      "conscript_roll"
+     ],
+     "effects": {
+      "morale": 6,
+      "heat": -6
+     },
+     "flags": [
+      "t_sent_boys_home"
+     ],
+     "rogue": {
+      "troops": [
+       "line"
+      ]
+     },
+     "advance": true
+    },
+    {
+     "id": "straight_to_line",
+     "label": "直接编进战列",
+     "effects": {
+      "morale": -3
+     },
+     "flags": [
+      "t_raw_conscripts"
+     ],
+     "rogue": {
+      "troops": [
+       "line",
+       "line",
+       "jager"
+      ]
+     },
+     "advance": true
+    }
+   ],
+   "condensed": true
+  },
+  {
+   "id": "collapse_leipzig",
+   "chapter": "collapse",
+   "date": "1813-10-18",
+   "title": "第六幕·第二场：民族之战",
+   "location": "莱比锡·普罗布斯泰达",
+   "speaker": "napoleon",
+   "body": [
+    "1813 年 10 月 18 日，莱比锡。三十多万联军从四面压过来。后来人们叫它“民族之战”。",
+    "下午，萨克森军团在阵地上调转了炮口。",
+    "拿破仑：“维尔福，埃尔斯特河上只有一座桥。全军都得从那里走。”",
+    "明天，那座桥会被提前炸掉。现在还没有人知道。"
+   ],
+   "item_ids": [],
+   "appraisals": [
+    {
+     "id": "single_bridge",
+     "kind": "spot",
+     "label": "看埃尔斯特河上的桥",
+     "observation": "只有一座石桥，桥下埋了炸药，守桥的是一个下士。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "build_second_bridge",
+     "label": "连夜再搭两座便桥",
+     "requires_clues": [
+      "single_bridge"
+     ],
+     "effects": {
+      "construction": 30,
+      "vitality": -6
+     },
+     "flags": [
+      "t_elster_bridges"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 2
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "save_the_treasury",
+     "label": "先把军饷箱运过河",
+     "effects": {
+      "treasury": 600,
+      "morale": -4
+     },
+     "flags": [
+      "t_leipzig_chest"
+     ],
+     "rogue": {
+      "coins": {
+       "gold": 2
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "stay_with_rearguard",
+     "label": "留在后卫，最后一个过桥",
+     "effects": {
+      "morale": 6,
+      "vitality": -8
+     },
+     "flags": [
+      "t_leipzig_rearguard"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     },
+     "advance": true
+    }
+   ],
+   "condensed": true
+  },
+  {
+   "id": "collapse_fontainebleau",
+   "chapter": "collapse",
+   "date": "1814-04-20",
+   "title": "第六幕·终场：白马庭院",
+   "location": "枫丹白露宫·白马庭院",
+   "speaker": "napoleon",
+   "body": [
+    "1814 年 4 月 20 日，枫丹白露宫，白马庭院。",
+    "元帅们一个接一个走了。马尔蒙在埃松带着他的军投了联军。",
+    "皇帝退位了。联军给了他一座岛：厄尔巴。",
+    "老近卫军在庭院里列队。皇帝亲吻了第一掷弹兵团的鹰旗。",
+    "拿破仑：“我不能拥抱你们每一个人。我拥抱你们的将军。”",
+    "去厄尔巴的人只有几百个。名单上，军需官那一栏还空着。"
+   ],
+   "item_ids": [
+    "guard_eagle_ribbon"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "sign_for_elba",
+     "label": "在名单上写下自己的名字：去厄尔巴",
+     "effects": {
+      "morale": 6
+     },
+     "flags": [
+      "t_guard_oath"
+     ],
+     "items": [
+      "guard_eagle_ribbon"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 2
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "go_home_marseille",
+     "label": "回马赛，等时局变了再说",
+     "effects": {
+      "treasury": 500,
+      "morale": -4
+     },
+     "flags": [
+      "t_went_home",
+      "t_pharaon_known"
+     ],
+     "rogue": {
+      "coins": {
+       "gold": 2
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "ledger_to_bertrand",
+     "label": "把皇帝的私账整理好交给贝特朗元帅，随后去厄尔巴",
+     "effects": {
+      "treasury": 200
+     },
+     "flags": [
+      "t_ledger_bertrand"
+     ],
+     "rogue": {
+      "coins": {
+       "intel": 2
+      }
+     },
+     "advance": true
+    }
+   ],
+   "condensed": true
+  },
+  {
+   "id": "elba_arrival",
+   "chapter": "elba",
+   "date": "1814-05-04",
+   "title": "终章·第一场：二百二十平方公里的帝国",
+   "location": "厄尔巴岛·费拉约港",
+   "speaker": "drouot",
+   "body": [
+    "1814 年 5 月 4 日，厄尔巴岛，费拉约港。皇帝从英国护卫舰“无畏号”上下来，岛上放了礼炮。跟来的人，有的和他同船，有的是后来自己找来的。",
+    "皇帝的新帝国：二百二十平方公里，一万二千人，一座铁矿，一个六百人的近卫营。",
+    "德鲁奥将军当了总督。他把一本空白账簿交给你。",
+    "德鲁奥：“岛上的税、铁矿的钱、近卫营的饷、皇帝的花园，都从这本账上走。巴黎答应的年金，一个苏也没来。”",
+    "维尔福：“那就先从铁矿算起。”",
+    "港外，英国专员坎贝尔上校的船每周来一次。他看人，也看账。"
+   ],
+   "item_ids": [],
+   "appraisals": [
+    {
+     "id": "iron_ledger",
+     "kind": "weigh",
+     "label": "核对里奥铁矿的出矿账",
+     "observation": "矿石按船算，可船的吃水对不上：每船少报三成。"
+    },
+    {
+     "id": "campbell_eyes",
+     "kind": "spot",
+     "label": "留意坎贝尔上校在看什么",
+     "observation": "他不看炮台，他看港里的船和码头的仓库。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "audit_the_mine",
+     "label": "整顿铁矿，追回少报的三成",
+     "requires_clues": [
+      "iron_ledger"
+     ],
+     "effects": {
+      "treasury": 600,
+      "heat": 6
+     },
+     "flags": [
+      "t_mine_audited"
+     ],
+     "rogue": {
+      "coins": {
+       "gold": 1
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "raise_island_tax",
+     "label": "加征岛上的税",
+     "effects": {
+      "treasury": 400,
+      "heat": 15
+     },
+     "flags": [
+      "t_elba_tax"
+     ],
+     "rogue": {},
+     "advance": true
+    },
+    {
+     "id": "cut_court_costs",
+     "label": "削减宫里的开销，先保近卫营的饷",
+     "effects": {
+      "treasury": 200,
+      "morale": 6
+     },
+     "flags": [
+      "t_guard_paid"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     },
+     "advance": true
+    }
+   ]
+  },
+  {
+   "id": "elba_night",
+   "chapter": "elba",
+   "date": "1815-02-24",
+   "title": "终章·第二场：港口的三盏灯",
+   "location": "费拉约港·码头仓库",
+   "speaker": "drouot",
+   "body": [
+    "1815 年 2 月 24 日夜，费拉约港。双桅船“不屈号”刷成了英国船的颜色，舱里藏着近卫营的军火。",
+    "皇帝要走的消息，比皇帝自己走得快。",
+    "德鲁奥：“科西嘉那边雇了一伙私掠船，想在出发前抢走金库，能把人一起抢走更好。”",
+    "金库就在码头仓库里：十二只箱子，四十万法郎的金币。",
+    "巴蒂斯特：“码头只有一条跳板路。守住跳板……”",
+    "海上亮起了三盏灯。他们来了。"
+   ],
+   "item_ids": [],
+   "appraisals": [
+    {
+     "id": "three_lights",
+     "kind": "decode",
+     "label": "读懂海上的灯号",
+     "observation": "三盏灯是“分三处登岸”：一处码头，一处石滩，一处从城墙下的水门。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "load_the_chests",
+     "label": "连夜把金库搬上不屈号",
+     "effects": {
+      "treasury": 300
+     },
+     "flags": [
+      "t_chests_loaded"
+     ],
+     "rogue": {
+      "coins": {
+       "gold": 2
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "hold_the_prisoners",
+     "label": "审问抓到的私掠船员",
+     "requires_clues": [
+      "three_lights"
+     ],
+     "effects": {
+      "heat": -6
+     },
+     "flags": [
+      "t_corsairs_questioned"
+     ],
+     "rogue": {
+      "coins": {
+       "intel": 2
+      }
+     },
+     "advance": true
+    },
+    {
+     "id": "pay_the_guard",
+     "label": "先给近卫营发两个月的饷",
+     "effects": {
+      "treasury": -300,
+      "morale": 8
+     },
+     "flags": [
+      "t_guard_paid_elba"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     },
+     "advance": true
+    }
+   ]
+  },
+  {
+   "id": "elba_1815",
+   "chapter": "elba",
+   "date": "1815-02-25",
+   "title": "终章·分岔：台球桌上的地图",
+   "location": "费拉约港·穆利尼宫",
+   "speaker": "napoleon",
+   "body": [
+    "1815 年 2 月 25 日，穆利尼宫。皇帝把地图摊在台球桌上。",
+    "拿破仑：“维尔福，明天夜里我们走。去巴黎。”",
+    "拿破仑：“你有三条路。跟我北上，打最后一仗；或者留在我身边，管钱袋，管船，不管结局是什么；或者——”",
+    "他把一封封好的信放在桌上，信封上写着马赛的一个地址。",
+    "拿破仑：“——替我把这封信送到马赛。送信的人可能会进监狱。”",
+    "维尔福这个姓，在马赛的王家检察署里还有一个人：杰拉尔·德·维尔福，你的远房族人，国王的人。",
+    "窗外，不屈号正在升帆。"
+   ],
+   "item_ids": [
+    "elba_watch"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "march_with_emperor",
+     "label": "随皇帝北上，亲赴前线",
+     "branch": "conquest",
+     "effects": {},
+     "flags": [
+      "k_marched"
+     ],
+     "items": [
+      "elba_watch"
+     ],
+     "advance": true
+    },
+    {
+     "id": "follow_as_treasurer",
+     "label": "以司库身份随驾，管钱袋与船",
+     "branch": "ocean",
+     "effects": {},
+     "flags": [
+      "o_followed"
+     ],
+     "items": [
+      "elba_watch"
+     ],
+     "advance": true
+    },
+    {
+     "id": "carry_the_letter",
+     "label": "奉命携密信去马赛",
+     "branch": "cristo",
+     "effects": {},
+     "flags": [
+      "m_letter_carried"
+     ],
+     "items": [
+      "elba_watch"
+     ],
+     "advance": true
+    }
+   ]
+  }
+ ],
+ "events": [
+  {
+   "id": "ev_faria_half_letter",
+   "pool": "fixed",
+   "weight": 0,
+   "once": true,
+   "requires": {},
+   "title": "博洛尼亚的神甫",
+   "location": "博洛尼亚·斯帕达府的书房",
+   "speaker": "faria",
+   "date": "1796-06-24",
+   "body": [
+    "1796 年 6 月，博洛尼亚。教皇国签了停战协定，法国的学者委员会在各家图书馆里挑书，挑中的装箱运去巴黎。",
+    "斯帕达府书房的角落里，一个瘦削的神甫守着一只书箱，不肯走。",
+    "法利亚：“箱子里的书你们拿走，我不拦。只求留下这一本：这是枢机家里的日课经，对巴黎一文不值。”",
+    "那本日课经很旧，扉页上有斯帕达家的纹章，旁边写着一个年份：1498。",
+    "法利亚：“你是军需官，你的笔比委员会的大。一笔划掉，它就不在清单上了。”"
+   ],
+   "appraisals": [
+    {
+     "id": "spada_crest",
+     "kind": "spot",
+     "label": "细看扉页的纹章",
+     "observation": "纹章下面有人用极细的笔写过字，又刮掉了，只剩 C. S. 两个字母。"
+    },
+    {
+     "id": "breviary_weight",
+     "kind": "weigh",
+     "label": "掂一掂这本日课经",
+     "observation": "分量和同样厚的书一样。书里没有夹东西——神甫要的就是书本身。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "strike_it_off",
+     "label": "把日课经从清单上划掉，留给神甫",
+     "requires_clues": [
+      "spada_crest"
+     ],
+     "effects": {
+      "morale": 2,
+      "heat": -3
+     },
+     "flags": [
+      "faria_half_letter"
+     ],
+     "items": [
+      "faria_half"
+     ],
+     "rogue": {}
+    },
+    {
+     "id": "ship_it",
+     "label": "照章装箱，运往巴黎",
+     "effects": {},
+     "flags": [
+      "t_spada_shipped"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     }
+    },
+    {
+     "id": "take_his_silver",
+     "label": "收下神甫塞来的银币，放他走",
+     "effects": {
+      "heat": 3
+     },
+     "flags": [
+      "t_spada_bribe"
+     ],
+     "rogue": {
+      "coins": {
+       "gold": 1
+      }
+     }
+    }
+   ],
+   "_after": "选第一项时追加一行旁白（VN 结尾卡）：法利亚把一封信撕成两半，把有纹章的那一半塞给你：“将来如果你需要一个朋友，就带着它来罗马找我。”"
+  },
+  {
+   "id": "ev_storks_scale",
+   "pool": "italy",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "白鹳商行的秤",
+   "location": "萨沃纳·军需仓库",
+   "speaker": "villefort",
+   "body": [
+    "白鹳商行送来三十袋面粉，跟着一张盖了章的过秤单。",
+    "送货的经纪人笑得很殷勤：“司令部的大人们都认识我们。这是一点心意。”他的手在你的袖口里放下一只小钱袋。",
+    "仓库门口，饿了三天的掷弹兵在排队领面包。"
+   ],
+   "appraisals": [
+    {
+     "id": "short_weight",
+     "kind": "weigh",
+     "label": "当场过秤",
+     "observation": "每袋短了八斤，三十袋短了一辆车的量。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "expose",
+     "label": "揭穿短秤",
+     "requires_clues": [
+      "short_weight"
+     ],
+     "effects": {},
+     "flags": [
+      "t_storks_hostile"
+     ],
+     "rogue": {
+      "coins": {
+       "supply": 4
+      }
+     }
+    },
+    {
+     "id": "kickback",
+     "label": "收下回扣",
+     "effects": {
+      "treasury": 80
+     },
+     "flags": [
+      "t_kickback"
+     ],
+     "rogue": {
+      "coins": {
+       "supply": 2
+      }
+     }
+    },
+    {
+     "id": "report",
+     "label": "报告司令部，等调查",
+     "effects": {},
+     "flags": [
+      "t_storks_reported"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     },
+     "days": 2
+    }
+   ]
+  },
+  {
+   "id": "ev_morrel_grain",
+   "pool": "toulon",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "莫雷尔父子商行的粮船",
+   "location": "萨纳里港·码头",
+   "speaker": "villefort",
+   "body": [
+    "萨纳里港，一条从马赛来的三桅商船刚靠岸，舱里是给围城军的小麦。",
+    "船东是莫雷尔父子商行。年轻的莫雷尔先生在码头上来回踱步：“军需处上一船的钱还没付。再这样，我们的船就只能卖给英国人了。”",
+    "围城军的面包只够四天。"
+   ],
+   "appraisals": [
+    {
+     "id": "morrel_books",
+     "kind": "decode",
+     "label": "看莫雷尔商行的账",
+     "observation": "账记得清清楚楚，连船员的工钱都单列了一栏。这家人做生意不赖账。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "pay_morrel",
+     "label": "按市价付清莫雷尔的钱",
+     "requires_clues": [
+      "morrel_books"
+     ],
+     "effects": {
+      "treasury": -200,
+      "morale": 2
+     },
+     "flags": [
+      "t_pharaon_known"
+     ],
+     "rogue": {
+      "coins": {
+       "supply": 3
+      }
+     }
+    },
+    {
+     "id": "seize_grain",
+     "label": "拿征发令扣下粮船",
+     "effects": {
+      "heat": 10
+     },
+     "flags": [
+      "t_morrel_seized"
+     ],
+     "rogue": {
+      "coins": {
+       "supply": 5
+      }
+     }
+    },
+    {
+     "id": "vouch_for_credit",
+     "label": "以个人名义替军需处担保赊账",
+     "effects": {
+      "morale": 1
+     },
+     "flags": [
+      "t_pharaon_known",
+      "t_morrel_credit"
+     ],
+     "rogue": {
+      "coins": {
+       "supply": 3
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_deserters",
+   "pool": "trunk",
+   "weight": 3,
+   "once": false,
+   "requires": {},
+   "title": "林子里的逃兵",
+   "location": "行军路旁的树林",
+   "speaker": "baptiste",
+   "body": [
+    "巡逻队在林子里抓到四个逃兵，最小的那个还没长胡子。",
+    "巴蒂斯特：“按军法，该枪毙。可他们是饿跑的，不是怕跑的。”"
+   ],
+   "appraisals": [
+    {
+     "id": "deserter_boots",
+     "kind": "spot",
+     "label": "看他们的脚",
+     "observation": "四个人里有三个没有鞋，脚上缠着布。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "court_martial",
+     "label": "按军法处置",
+     "effects": {
+      "morale": -3,
+      "heat": -2
+     },
+     "flags": [
+      "t_deserters_shot"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     }
+    },
+    {
+     "id": "baggage_duty",
+     "label": "罚去辎重队推车",
+     "requires_clues": [
+      "deserter_boots"
+     ],
+     "effects": {
+      "morale": 2
+     },
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "supply": 2
+      }
+     }
+    },
+    {
+     "id": "let_them_go",
+     "label": "给他们一双鞋，放回连队",
+     "effects": {
+      "morale": 3,
+      "treasury": -60
+     },
+     "flags": [
+      "t_deserters_forgiven"
+     ],
+     "rogue": {}
+    }
+   ]
+  },
+  {
+   "id": "ev_faro_table",
+   "pool": "trunk",
+   "weight": 2,
+   "once": false,
+   "requires": {
+    "coins": {
+     "gold": [
+      ">=",
+      1
+     ]
+    }
+   },
+   "title": "法罗牌桌",
+   "location": "军官食堂",
+   "speaker": "murat",
+   "body": [
+    "军官食堂里有一桌法罗牌。缪拉在坐庄，桌上堆着金币。",
+    "缪拉：“军需官也来一把？赢了算你的，输了算军饷的。”大家都笑了。",
+    "牌桌边的参谋们喝多了，嘴也松了。"
+   ],
+   "appraisals": [
+    {
+     "id": "loose_talk",
+     "kind": "decode",
+     "label": "听参谋们在说什么",
+     "observation": "他们在说明天的行军路线：有一段要绕过敌人的哨所。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "play_and_listen",
+     "label": "下一枚金币的注，边玩边听",
+     "effects": {},
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "gold": -1,
+       "intel": 2
+      }
+     }
+    },
+    {
+     "id": "play_to_win",
+     "label": "坐下来认真赌",
+     "effects": {
+      "heat": 3
+     },
+     "flags": [
+      "t_gambler"
+     ],
+     "rogue": {
+      "coins": {
+       "gold": 1
+      }
+     }
+    },
+    {
+     "id": "walk_away",
+     "label": "笑着走开",
+     "requires_clues": [
+      "loose_talk"
+     ],
+     "effects": {},
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "intel": 1
+      }
+     },
+     "reveal": 2
+    }
+   ]
+  },
+  {
+   "id": "ev_barbets_convoy",
+   "pool": "italy",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "山路上的巴尔贝",
+   "location": "滨海阿尔卑斯的骡道",
+   "speaker": "corso",
+   "body": [
+    "一队运饷的骡车在山路上停住了。前面的林子太静。",
+    "科尔索：“巴尔贝。山里人，打了三年游击，专挑骡车。”",
+    "向导说，往海边绕一天，就能避开这片林子。"
+   ],
+   "appraisals": [
+    {
+     "id": "ambush_signs",
+     "kind": "spot",
+     "label": "看林子边上的痕迹",
+     "observation": "新砍的树枝横在路上，是故意让车停在林子边的。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "clear_the_woods",
+     "label": "派兵搜林子（打一场遭遇战）",
+     "requires_clues": [
+      "ambush_signs"
+     ],
+     "effects": {},
+     "flags": [
+      "t_barbets_cleared"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     },
+     "battle": {
+      "template": "skirmish_hamlet",
+      "level": 1
+     }
+    },
+    {
+     "id": "go_by_the_sea",
+     "label": "绕海边走",
+     "effects": {
+      "vitality": -3
+     },
+     "flags": [],
+     "rogue": {},
+     "days": 1
+    },
+    {
+     "id": "pay_the_toll",
+     "label": "让向导去跟山里人谈价钱",
+     "effects": {},
+     "flags": [
+      "t_barbets_paid"
+     ],
+     "rogue": {
+      "coins": {
+       "gold": -1,
+       "intel": 1
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_pavia_revolt",
+   "pool": "italy",
+   "weight": 2,
+   "once": true,
+   "requires": {
+    "metric": {
+     "heat": [
+      ">=",
+      25
+     ]
+    }
+   },
+   "title": "帕维亚的钟声",
+   "location": "帕维亚城外",
+   "speaker": "saliceti",
+   "body": [
+    "帕维亚的钟一起响了。城里的人关上城门，扣下了一个营的法国兵。",
+    "萨利切蒂：“司令的命令：烧掉比纳斯科，杀一儆百。军需官，你去点火油。”",
+    "比纳斯科是路边的一个小村子。村口有个女人在晾衣服。"
+   ],
+   "appraisals": [
+    {
+     "id": "who_rang",
+     "kind": "decode",
+     "label": "查清是谁敲的钟",
+     "observation": "带头的是城里的几个贵族和神学院的学生，不是村里的农民。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "burn_binasco",
+     "label": "照命令办",
+     "effects": {
+      "heat": 20,
+      "morale": 2
+     },
+     "flags": [
+      "t_binasco_burned"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     }
+    },
+    {
+     "id": "only_the_leaders",
+     "label": "只抓带头的人",
+     "requires_clues": [
+      "who_rang"
+     ],
+     "effects": {
+      "heat": 5
+     },
+     "flags": [
+      "t_pavia_leaders"
+     ],
+     "rogue": {
+      "coins": {
+       "intel": 1
+      }
+     }
+    },
+    {
+     "id": "return_the_grain",
+     "label": "把征来的粮食退回帕维亚",
+     "effects": {
+      "treasury": -200,
+      "heat": -10
+     },
+     "flags": [
+      "t_pavia_grain"
+     ],
+     "rogue": {}
+    }
+   ]
+  },
+  {
+   "id": "ev_muiron_letter",
+   "pool": "italy",
+   "weight": 4,
+   "once": true,
+   "requires": {
+    "alive": [
+     "muiron"
+    ]
+   },
+   "title": "米隆的家书",
+   "location": "维罗纳·司令部的走廊",
+   "speaker": "muiron",
+   "body": [
+    "米隆把一封信塞进你手里，信封上写着他母亲的地址。",
+    "米隆：“要是我回不来，你替我寄。要是我回来了，你就当没见过。”",
+    "米隆：“别跟司令说。他会让我留在后面的。”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "keep_it",
+     "label": "收下，放进账簿的夹层",
+     "effects": {
+      "morale": 2
+     },
+     "flags": [
+      "t_muiron_letter"
+     ],
+     "rogue": {}
+    },
+    {
+     "id": "tell_general",
+     "label": "告诉司令，让米隆留在后方",
+     "effects": {
+      "morale": -2
+     },
+     "flags": [
+      "t_muiron_benched"
+     ],
+     "rogue": {}
+    },
+    {
+     "id": "give_it_back",
+     "label": "还给他：“你自己寄。”",
+     "effects": {
+      "morale": 1
+     },
+     "flags": [
+      "t_muiron_dare"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_mysore_envoy",
+   "pool": "fixed",
+   "weight": 0,
+   "once": true,
+   "requires": {
+    "flags": [
+     "t_orient"
+    ]
+   },
+   "title": "提普苏丹的使者",
+   "location": "开罗·司令部门外",
+   "speaker": "villefort",
+   "body": [
+    "1799 年，开罗。一个从苏伊士来的阿拉伯商人带来一封信，信是迈索尔的提普苏丹写给“法兰西共和国的将军”的。",
+    "商人说，苏丹要大炮、炮手和造火药的人，愿意拿黄金和大象来换。",
+    "商人身后跟着一个少年，腰上挂着一把刻着虎纹的短刀。他一句法语也不会，却一直盯着港口的船看。"
+   ],
+   "appraisals": [
+    {
+     "id": "tiger_dagger",
+     "kind": "spot",
+     "label": "细看少年的虎纹短刀",
+     "observation": "刀柄上是迈索尔王族的虎纹。这个少年不是商人的仆人。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "arrange_audience",
+     "label": "替使者在司令部安排一次接见",
+     "requires_clues": [
+      "tiger_dagger"
+     ],
+     "effects": {
+      "morale": 2
+     },
+     "flags": [
+      "t_mysore_envoy"
+     ],
+     "rogue": {
+      "coins": {
+       "intel": 1
+      }
+     }
+    },
+    {
+     "id": "trade_to_british",
+     "label": "把使者交给英国人换回俘虏",
+     "effects": {
+      "heat": 5
+     },
+     "flags": [
+      "t_mysore_betrayed"
+     ],
+     "rogue": {
+      "coins": {
+       "gold": 2
+      }
+     }
+    },
+    {
+     "id": "send_powder_home",
+     "label": "让使者带一车火药和两个炮手回印度",
+     "effects": {
+      "treasury": -300
+     },
+     "flags": [
+      "t_mysore_envoy",
+      "t_mysore_powder"
+     ],
+     "rogue": {
+      "coins": {
+       "supply": -3
+      }
+     }
+    }
+   ],
+   "_note": "固定事件节点（东方半张图的苏伊士），不进随机池。t_mysore_envoy 是远洋的软挂钩：尼摩招募价 −1、开局信赖 1（ARCH §1.2）。史实里波拿巴 1799 年 1 月确实给提普苏丹写过信，信被英国人截获；少年是虚构的伏笔，不点名。"
+  },
+  {
+   "id": "ev_marie_cantine",
+   "pool": "trunk",
+   "weight": 3,
+   "once": true,
+   "requires": {
+    "alive": [
+     "marie"
+    ]
+   },
+   "title": "玛丽的酒桶车",
+   "location": "宿营地",
+   "speaker": "marie",
+   "body": [
+    "玛丽的酒桶车翻在沟里，一只轮子断了。",
+    "玛丽：“这车跟了我八年。车在，我就在。”",
+    "她身后排着一队伤兵，等着她的白兰地和绷带。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "fix_the_wheel",
+     "label": "让工兵连夜修好",
+     "effects": {
+      "morale": 3,
+      "vitality": 3
+     },
+     "flags": [
+      "t_marie_wheel"
+     ],
+     "rogue": {
+      "coins": {
+       "supply": -1
+      }
+     }
+    },
+    {
+     "id": "new_wagon",
+     "label": "从军需处拨一辆新车给她",
+     "effects": {
+      "treasury": -120,
+      "morale": 4
+     },
+     "flags": [
+      "t_marie_wagon"
+     ],
+     "rogue": {}
+    },
+    {
+     "id": "carry_by_hand",
+     "label": "和她一起把东西搬到伤兵那边",
+     "effects": {
+      "vitality": -2,
+      "morale": 5
+     },
+     "flags": [
+      "t_marie_carried"
+     ],
+     "rogue": {}
+    }
+   ]
+  },
+  {
+   "id": "ev_pharaon_elba",
+   "pool": "fixed",
+   "weight": 0,
+   "once": true,
+   "requires": {},
+   "title": "法老号的大副",
+   "location": "费拉约港·码头",
+   "speaker": "dantes",
+   "date": "1815-02-20",
+   "body": [
+    "1815 年 2 月，费拉约港。一条马赛商船在港外停了半天，放下一条小艇。",
+    "上岸的是个十九岁的大副，晒得很黑，说话有马赛口音。唐泰斯：“我叫唐泰斯，法老号的。船长在海上死了，临终托我把一包东西交给贝特朗元帅。”",
+    "唐泰斯：“交完我就走。我在马赛有个姑娘在等，下礼拜订婚。”",
+    "贝特朗元帅的副官从宫里出来，手里拿着一封信，要交给“一个去马赛的可靠的人”。"
+   ],
+   "appraisals": [
+    {
+     "id": "pharaon_flag",
+     "kind": "spot",
+     "label": "看港外那条船的旗",
+     "observation": "莫雷尔父子商行的旗。你在土伦围城那年就见过这面旗。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "drink_with_him",
+     "label": "请他去码头酒馆喝一杯",
+     "effects": {
+      "morale": 2
+     },
+     "flags": [
+      "t_pharaon_known"
+     ],
+     "rogue": {}
+    },
+    {
+     "id": "hand_him_the_letter",
+     "label": "替副官把回信交给他",
+     "requires_clues": [
+      "pharaon_flag"
+     ],
+     "effects": {},
+     "flags": [
+      "t_pharaon_known",
+      "t_dantes_letter"
+     ],
+     "rogue": {
+      "coins": {
+       "intel": 1
+      }
+     }
+    },
+    {
+     "id": "look_away",
+     "label": "装作没看见",
+     "effects": {},
+     "flags": [],
+     "rogue": {}
+    }
+   ],
+   "_note": "大仲马原著第一章：法老号 2 月 24 日回到马赛，途中唐泰斯在厄尔巴替死去的船长送了一包东西，带回一封给巴黎的信——这封信让他在订婚宴上被捕。t_dantes_letter 让伊夫堡分支开场多一层负罪感（是你把信交到他手里的）。"
+  },
+  {
+   "id": "ev_capoliveri",
+   "pool": "elba",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "卡波利韦里不交税",
+   "location": "厄尔巴岛·卡波利韦里",
+   "speaker": "drouot",
+   "body": [
+    "卡波利韦里的村民把收税的人赶出了村子。",
+    "德鲁奥：“皇帝说派一百个宪兵去。我说派一个会算账的人去。”",
+    "村口的石墙上，有人用炭写了一句话：皇帝也得交房租。"
+   ],
+   "appraisals": [
+    {
+     "id": "tax_roll",
+     "kind": "decode",
+     "label": "核对卡波利韦里的税册",
+     "observation": "税册是照岛北的富村定的，这里的地一半是石头。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "send_gendarmes",
+     "label": "派宪兵去",
+     "effects": {
+      "treasury": 200,
+      "heat": 12
+     },
+     "flags": [
+      "t_capoliveri_forced"
+     ],
+     "rogue": {}
+    },
+    {
+     "id": "fix_the_roll",
+     "label": "重新核定税额",
+     "requires_clues": [
+      "tax_roll"
+     ],
+     "effects": {
+      "treasury": 80,
+      "heat": -8
+     },
+     "flags": [
+      "t_capoliveri_fair"
+     ],
+     "rogue": {
+      "coins": {
+       "intel": 1
+      }
+     }
+    },
+    {
+     "id": "forgive_this_year",
+     "label": "今年免了",
+     "effects": {
+      "treasury": -100,
+      "heat": -12,
+      "morale": 2
+     },
+     "flags": [
+      "t_capoliveri_forgiven"
+     ],
+     "rogue": {}
+    }
+   ]
+  },
+  {
+   "id": "ev_walewska",
+   "pool": "elba",
+   "weight": 2,
+   "once": true,
+   "requires": {},
+   "title": "山上的客人",
+   "location": "厄尔巴岛·马尔恰纳的山间小庵",
+   "speaker": "villefort",
+   "body": [
+    "九月，一条小船夜里靠岸，一位戴面纱的夫人带着一个孩子上了山。",
+    "皇帝在山上的小庵里住了两天。岛上的人说，那是皇后来了；坎贝尔上校的人说，那不是皇后。",
+    "你接到的命令只有一句：两天的吃用，不要记在宫里的账上。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "own_pocket",
+     "label": "从自己的薪水里出",
+     "effects": {
+      "morale": 3
+     },
+     "flags": [
+      "t_walewska_quiet"
+     ],
+     "rogue": {
+      "coins": {
+       "gold": -1,
+       "medal": 1
+      }
+     }
+    },
+    {
+     "id": "misc_column",
+     "label": "记在“杂项”里",
+     "effects": {
+      "treasury": -60
+     },
+     "flags": [],
+     "rogue": {}
+    },
+    {
+     "id": "tell_campbell",
+     "label": "把这件事卖给坎贝尔上校的人",
+     "effects": {
+      "treasury": 300,
+      "heat": 6
+     },
+     "flags": [
+      "t_sold_walewska"
+     ],
+     "rogue": {
+      "coins": {
+       "gold": 1
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_council_toulon",
+   "pool": "fixed",
+   "council": true,
+   "weight": 0,
+   "once": true,
+   "requires": {},
+   "title": "杜戈米埃的军议",
+   "location": "奥利乌勒·围城司令部",
+   "speaker": "bonaparte",
+   "date": "1793-12-11",
+   "body": [
+    "围城司令部里点着两支蜡烛。杜戈米埃将军、萨利切蒂特派员和几位师长围着桌上的地图。",
+    "波拿巴：“别去碰城墙。先拿凯尔高地上的小直布罗陀，港里的英国舰队自己就待不住了。”",
+    "杜戈米埃：“那就定在十七日夜里。军需官，你说说，我们还缺什么？”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "more_powder",
+     "label": "多拉两车干火药上山（开场军令点 +2）",
+     "effects": {
+      "treasury": -100
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "cp_bonus": 2
+     }
+    },
+    {
+     "id": "false_target",
+     "label": "让科尔索去城下放风：主攻在马尔布斯克堡（敌军心 −2）",
+     "effects": {
+      "heat": 2
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "enemy_morale": -2
+     }
+    },
+    {
+     "id": "guns_by_night",
+     "label": "趁天黑先把炮拖到坡下（多一回合布阵）",
+     "effects": {
+      "vitality": -3
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "prep_turn": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_council_italy",
+   "pool": "fixed",
+   "council": true,
+   "weight": 0,
+   "once": true,
+   "requires": {},
+   "title": "维罗纳军议",
+   "location": "维罗纳·司令部",
+   "speaker": "bonaparte",
+   "date": "1796-11-14",
+   "body": [
+    "1796 年 11 月，维罗纳。阿尔文齐的奥军第三次来解曼托瓦之围，这个冬天不会太平。",
+    "波拿巴：“他们人多，我们腿快。阿迪杰河两岸的路，谁先走完谁赢。”",
+    "马塞纳的师在里沃利，奥热罗的师在维罗纳。中间只有你的车队在跑。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "empty_verona",
+     "label": "把维罗纳仓库搬空，弹药全往前送（开场军令点 +2）",
+     "effects": {},
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "supply": -1
+      }
+     },
+     "boss_mod": {
+      "cp_bonus": 2
+     }
+    },
+    {
+     "id": "false_bridge",
+     "label": "在阿迪杰河上搭一座假桥，让奥军以为我们要撤（敌军心 −2）",
+     "effects": {
+      "construction": 5
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "enemy_morale": -2
+     }
+    },
+    {
+     "id": "dike_march",
+     "label": "夜里沿河堤走，比奥军早半天到位（多一回合布阵）",
+     "effects": {
+      "vitality": -4
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "prep_turn": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_council_acre",
+   "pool": "fixed",
+   "council": true,
+   "weight": 0,
+   "once": true,
+   "requires": {},
+   "title": "凯撒利亚军议",
+   "location": "凯撒利亚·海边的营帐",
+   "speaker": "bonaparte",
+   "date": "1799-03-18",
+   "body": [
+    "1799 年 3 月，凯撒利亚。从亚历山大港走海路的攻城炮，在半路被西德尼·史密斯的船截走了。",
+    "拉雷：“雅法回来的兵里已经有人发烧。再往北走，病会跟着我们走。”",
+    "波拿巴：“阿卡是叙利亚的钥匙。维尔福，拿野战炮当攻城炮，弹药够打几天？”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "pool_shells",
+     "label": "把野战炮的炮弹全部集中给攻城队（开场军令点 +2）",
+     "effects": {},
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "supply": -2
+      }
+     },
+     "boss_mod": {
+      "cp_bonus": 2
+     }
+    },
+    {
+     "id": "plague_rumour",
+     "label": "让城里的人相信瘟疫已经进了城（敌军心 −2）",
+     "effects": {
+      "heat": 4
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "enemy_morale": -2
+     }
+    },
+    {
+     "id": "dig_saps",
+     "label": "先挖坑道，挖到城墙脚下再打（多一回合布阵）",
+     "effects": {
+      "vitality": -4,
+      "construction": 10
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "prep_turn": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_council_marengo",
+   "pool": "fixed",
+   "council": true,
+   "weight": 0,
+   "once": true,
+   "requires": {},
+   "title": "沃盖拉军议",
+   "location": "沃盖拉·驿站",
+   "speaker": "bonaparte",
+   "date": "1800-06-13",
+   "body": [
+    "1800 年 6 月 13 日，沃盖拉。梅拉斯的奥军缩回了亚历山德里亚，谁也不知道他明天往哪边走。",
+    "波拿巴：“德塞，你带一个师往南，去诺维看住他。”",
+    "德塞看了你一眼。他的师走了，平原上就只剩下一半的人。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "milan_wagons",
+     "label": "把米兰的弹药车全调上来（开场军令点 +2）",
+     "effects": {
+      "treasury": -150
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "cp_bonus": 2
+     }
+    },
+    {
+     "id": "false_fires",
+     "label": "派骑兵在斯克里维亚河边点一排假营火（敌军心 −2）",
+     "effects": {},
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "intel": -1
+      }
+     },
+     "boss_mod": {
+      "enemy_morale": -2
+     }
+    },
+    {
+     "id": "keep_desaix_close",
+     "label": "替德塞备好回程的马，让他别走太远（多一回合布阵）",
+     "effects": {},
+     "flags": [
+      "t_desaix_close"
+     ],
+     "rogue": {},
+     "boss_mod": {
+      "prep_turn": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_council_austerlitz",
+   "pool": "fixed",
+   "council": true,
+   "weight": 0,
+   "once": true,
+   "requires": {},
+   "title": "布吕恩军议",
+   "location": "布吕恩·皇帝的营帐",
+   "speaker": "napoleon",
+   "date": "1805-11-28",
+   "body": [
+    "1805 年 11 月 28 日，布吕恩。离家一千公里，冬天快来了，俄奥联军比我们多两万人。",
+    "拿破仑：“我要把普拉岑高地让出来。让他们以为我怕了，让他们从高地上下来打我的右翼。”",
+    "拿破仑：“维尔福，右翼要撑一整个上午。面包和弹药，放在他们够得着的地方。”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "santon_stores",
+     "label": "把面包和弹药都囤在桑顿山后面（开场军令点 +2）",
+     "effects": {},
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "supply": -1
+      }
+     },
+     "boss_mod": {
+      "cp_bonus": 2
+     }
+    },
+    {
+     "id": "feigned_fear",
+     "label": "陪萨瓦里去联军营里谈判，装出害怕的样子（敌军心 −2）",
+     "effects": {},
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "intel": -1
+      }
+     },
+     "boss_mod": {
+      "enemy_morale": -2
+     }
+    },
+    {
+     "id": "davout_forced",
+     "label": "给达武的第三军沿路备好面包，让他们连夜赶来（多一回合布阵）",
+     "effects": {
+      "treasury": -200
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "prep_turn": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_council_eylau",
+   "pool": "fixed",
+   "council": true,
+   "weight": 0,
+   "once": true,
+   "requires": {},
+   "title": "奥斯特罗德军议",
+   "location": "奥斯特罗德·冻住的磨坊",
+   "speaker": "napoleon",
+   "date": "1807-02-06",
+   "body": [
+    "1807 年 2 月，东普鲁士。雪下了十天，路面是冻住的泥。贝尼希森的俄军在前面退，退得很慢。",
+    "拿破仑：“他想让我在冬天追他。好，那就追。”",
+    "缪拉：“马快饿死了。陛下要骑兵去冲，得先让马吃饱。”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "warsaw_carts",
+     "label": "把华沙的粮车全部发往前线（开场军令点 +2）",
+     "effects": {
+      "treasury": -200
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "cp_bonus": 2
+     }
+    },
+    {
+     "id": "cavalry_everywhere",
+     "label": "让缪拉的骑兵在雪里到处露面（敌军心 −2）",
+     "effects": {
+      "vitality": -3
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "enemy_morale": -2
+     }
+    },
+    {
+     "id": "wait_for_ney",
+     "label": "等奈伊的军赶到再打（多一回合布阵）",
+     "effects": {
+      "morale": -2
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "prep_turn": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_council_saragossa",
+   "pool": "fixed",
+   "council": true,
+   "weight": 0,
+   "once": true,
+   "requires": {},
+   "title": "阿拉贡军议",
+   "location": "阿拉贡·工兵指挥所",
+   "speaker": "lannes",
+   "date": "1809-01-22",
+   "body": [
+    "1809 年 1 月，萨拉戈萨城外。城墙已经破了，可每一条街还在打。",
+    "拉纳：“我不想把这座城一间一间炸平。可巴黎要的是一份捷报。”",
+    "巴蒂斯特：“地道挖到圣恩格拉西亚修道院底下，要五天。火药要四十桶。”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "all_the_powder",
+     "label": "把工兵的炸药全部调来（开场军令点 +2）",
+     "effects": {},
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "supply": -2
+      }
+     },
+     "boss_mod": {
+      "cp_bonus": 2
+     }
+    },
+    {
+     "id": "surrender_leaflets",
+     "label": "往城里射劝降书，许诺保住平民（敌军心 −2）",
+     "effects": {
+      "heat": -4
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "enemy_morale": -2
+     }
+    },
+    {
+     "id": "tunnel_first",
+     "label": "先把地道挖到修道院底下（多一回合布阵）",
+     "effects": {
+      "vitality": -4,
+      "construction": 10
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "prep_turn": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_council_wagram",
+   "pool": "fixed",
+   "council": true,
+   "weight": 0,
+   "once": true,
+   "requires": {},
+   "title": "埃伯斯多夫军议",
+   "location": "凯泽埃伯斯多夫·皇帝的营帐",
+   "speaker": "napoleon",
+   "date": "1809-07-04",
+   "body": [
+    "1809 年 7 月 4 日，多瑙河。五月在阿斯佩恩，桥被冲断过一次。",
+    "拿破仑：“这一次，六座桥，一百门炮。卡尔大公在对岸等着，我要他等错地方。”",
+    "工兵报告：洛鲍岛上的浮舟够了，锚还缺一百二十只。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "hundred_guns",
+     "label": "一百门炮的弹药先运上洛鲍岛（开场军令点 +2）",
+     "effects": {
+      "treasury": -200
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "cp_bonus": 2
+     }
+    },
+    {
+     "id": "feint_at_aspern",
+     "label": "在阿斯佩恩那边假装搭桥（敌军心 −2）",
+     "effects": {
+      "construction": 5
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "enemy_morale": -2
+     }
+    },
+    {
+     "id": "cross_in_storm",
+     "label": "趁雷雨夜提前过河（多一回合布阵）",
+     "effects": {
+      "vitality": -5
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "prep_turn": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_council_retreat",
+   "pool": "fixed",
+   "council": true,
+   "weight": 0,
+   "once": true,
+   "requires": {},
+   "title": "小雅罗斯拉韦茨军议",
+   "location": "小雅罗斯拉韦茨·烧掉一半的教堂",
+   "speaker": "napoleon",
+   "date": "1812-10-25",
+   "body": [
+    "1812 年 10 月 25 日。一个月前，莫斯科烧了四天。现在城里只剩烟囱。",
+    "库图佐夫堵住了南边的新路。往南，要再打一仗；往北，是来时那条烧光的老路。",
+    "拿破仑：“维尔福，老路上还有什么？”",
+    "维尔福：“斯摩棱斯克还有半个月的面粉，如果没被人吃掉的话。”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "horses_to_guns",
+     "label": "把剩下的马全部套上炮车（开场军令点 +2）",
+     "effects": {
+      "vitality": -4
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "cp_bonus": 2
+     }
+    },
+    {
+     "id": "burn_the_baggage",
+     "label": "烧掉带不走的辎重，轻装走（敌军心 −2）",
+     "effects": {
+      "treasury": -300,
+      "morale": 2
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "enemy_morale": -2
+     }
+    },
+    {
+     "id": "eble_ahead",
+     "label": "让埃布莱带工具车先走，提前到别列津纳河（多一回合布阵）",
+     "effects": {},
+     "flags": [
+      "t_eble_ahead"
+     ],
+     "rogue": {},
+     "boss_mod": {
+      "prep_turn": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_council_leipzig",
+   "pool": "fixed",
+   "council": true,
+   "weight": 0,
+   "once": true,
+   "requires": {},
+   "title": "艾伦堡军议",
+   "location": "艾伦堡·邮驿站",
+   "speaker": "napoleon",
+   "date": "1813-10-15",
+   "body": [
+    "1813 年 10 月，萨克森。普鲁士、俄国、奥地利、瑞典四路大军在往莱比锡收拢。",
+    "拿破仑：“他们一共三十万，我们十九万。我要在他们会齐以前，先打掉一个。”",
+    "玛丽：“萨克森兵在私下议论，说下个月就不给咱们打了。”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "torgau_ammo",
+     "label": "把托尔高要塞的弹药全部调来（开场军令点 +2）",
+     "effects": {},
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "supply": -2
+      }
+     },
+     "boss_mod": {
+      "cp_bonus": 2
+     }
+    },
+    {
+     "id": "pay_the_saxons",
+     "label": "去萨克森军团营地补发两个月的饷（敌军心 −2）",
+     "effects": {
+      "treasury": -300
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "enemy_morale": -2
+     }
+    },
+    {
+     "id": "marmont_night",
+     "label": "让马尔蒙的军连夜进村，先挖好工事（多一回合布阵）",
+     "effects": {
+      "vitality": -3,
+      "construction": 10
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "prep_turn": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_council_elba",
+   "pool": "fixed",
+   "council": true,
+   "weight": 0,
+   "once": true,
+   "requires": {},
+   "title": "法尔科内堡军议",
+   "location": "费拉约港·法尔科内堡",
+   "speaker": "drouot",
+   "date": "1815-02-24",
+   "body": [
+    "1815 年 2 月 24 日，法尔科内堡。从炮台上看得见整个港湾和港外的海。",
+    "德鲁奥：“私掠船今夜会来，目标是码头仓库。他们以为近卫营在山上的营房里睡觉。”",
+    "康布罗纳：“那就让他们以为对了。”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "bullets_to_quay",
+     "label": "把近卫营的子弹从星堡搬到码头（开场军令点 +2）",
+     "effects": {},
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "supply": -1
+      }
+     },
+     "boss_mod": {
+      "cp_bonus": 2
+     }
+    },
+    {
+     "id": "three_false_lights",
+     "label": "在港外点三盏假灯，把私掠船引向暗礁（敌军心 −2）",
+     "effects": {},
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "intel": -1
+      }
+     },
+     "boss_mod": {
+      "enemy_morale": -2
+     }
+    },
+    {
+     "id": "fishermen_watch",
+     "label": "让渔民提前出海放哨（多一回合布阵）",
+     "effects": {
+      "treasury": -80
+     },
+     "flags": [],
+     "rogue": {},
+     "boss_mod": {
+      "prep_turn": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_malta_silver",
+   "pool": "fixed",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "骑士团的银库",
+   "location": "马耳他·瓦莱塔·圣约翰大教堂",
+   "speaker": "bonaparte",
+   "date": "1798-06-12",
+   "body": [
+    "1798 年 6 月，马耳他。圣约翰骑士团几乎没抵抗就开了城门。",
+    "波拿巴：“骑士团的银器、教堂的烛台，全部熔成银锭，带去埃及发饷。”",
+    "大教堂的侧廊里有一扇大门，通体刷着黑漆。看守的老修士站在门前，一句话也不说。"
+   ],
+   "appraisals": [
+    {
+     "id": "black_gate",
+     "kind": "spot",
+     "label": "细看那扇刷了黑漆的门",
+     "observation": "漆底下透出一点银光：整扇门是纯银的，有人连夜把它刷黑了。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "melt_everything",
+     "label": "照命令全部熔掉",
+     "effects": {
+      "treasury": 600,
+      "heat": 6
+     },
+     "flags": [
+      "t_malta_melted"
+     ],
+     "rogue": {
+      "coins": {
+       "gold": 1
+      }
+     }
+    },
+    {
+     "id": "ledger_and_ship",
+     "label": "登记造册，原样装船运走",
+     "effects": {
+      "treasury": 300
+     },
+     "flags": [
+      "t_malta_listed"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     }
+    },
+    {
+     "id": "leave_the_gate",
+     "label": "那扇黑门不在清单上，留给老修士",
+     "requires_clues": [
+      "black_gate"
+     ],
+     "effects": {
+      "morale": 2,
+      "heat": -4
+     },
+     "flags": [
+      "t_malta_gate"
+     ],
+     "rogue": {}
+    }
+   ],
+   "_note": "银门涂黑躲过熔铸是马耳他流传的说法，这里当传说用，不当史实写。"
+  },
+  {
+   "id": "ev_st_bernard",
+   "pool": "fixed",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "山口上的修道院",
+   "location": "大圣伯纳德山口·济贫院",
+   "speaker": "baptiste",
+   "date": "1800-05-20",
+   "body": [
+    "1800 年 5 月，大圣伯纳德山口，海拔两千四百米。后备军团要从这里把大炮拖进意大利。",
+    "修道院的修士在路边摆了桌子，给每一个经过的兵一块面包、一块奶酪、一杯酒。四万人，一个也没漏。",
+    "巴蒂斯特：“炮车过不去。炮管得卸下来，在雪里拖。”"
+   ],
+   "appraisals": [
+    {
+     "id": "pine_trunk",
+     "kind": "weigh",
+     "label": "掂一掂修士们劈开的松树干",
+     "observation": "树干掏空以后，正好能装下一根四磅炮的炮管，像雪橇一样在雪上滑。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "pay_the_monks",
+     "label": "按市价给修道院付现钱",
+     "effects": {
+      "treasury": -200,
+      "morale": 4
+     },
+     "flags": [
+      "t_bernard_paid"
+     ],
+     "rogue": {}
+    },
+    {
+     "id": "army_voucher",
+     "label": "开一张军需凭单，写明法兰西欠修道院的账",
+     "effects": {
+      "morale": 2
+     },
+     "flags": [
+      "t_bernard_voucher"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     }
+    },
+    {
+     "id": "hollow_logs",
+     "label": "把炮管装进掏空的松树干，一百人拖一根",
+     "requires_clues": [
+      "pine_trunk"
+     ],
+     "effects": {
+      "vitality": 4
+     },
+     "flags": [
+      "t_hollow_logs"
+     ],
+     "rogue": {
+      "coins": {
+       "supply": 2
+      }
+     }
+    }
+   ],
+   "_note": "史实里拿破仑确实欠下济贫院一笔账，几十年后才由法国政府偿付。"
+  },
+  {
+   "id": "ev_ulm_prisoners",
+   "pool": "fixed",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "两万七千个俘虏",
+   "location": "奥格斯堡·城外的草场",
+   "speaker": "villefort",
+   "date": "1805-10-22",
+   "body": [
+    "1805 年 10 月，乌尔姆投降了。马克将军带着两万七千人放下了武器。",
+    "他们从奥格斯堡城外走过，一眼望不到头。每个人都要吃饭。",
+    "军需处的面包只够我们自己的兵吃到维也纳。"
+   ],
+   "appraisals": [
+    {
+     "id": "prisoner_count",
+     "kind": "decode",
+     "label": "核对投降名册",
+     "observation": "名册上有四千多个工兵和车夫：他们会修路，也会赶车。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "feed_like_ours",
+     "label": "按我们自己的兵发口粮",
+     "effects": {
+      "treasury": -300,
+      "morale": 2,
+      "heat": -5
+     },
+     "flags": [
+      "t_ulm_fed"
+     ],
+     "rogue": {}
+    },
+    {
+     "id": "half_ration",
+     "label": "发半份，赶快押去法国",
+     "effects": {
+      "heat": 3
+     },
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "supply": 2
+      }
+     }
+    },
+    {
+     "id": "labour_gangs",
+     "label": "编成工程队，修路换饭吃",
+     "requires_clues": [
+      "prisoner_count"
+     ],
+     "effects": {
+      "treasury": 200,
+      "construction": 10
+     },
+     "flags": [
+      "t_ulm_labour"
+     ],
+     "rogue": {}
+    }
+   ]
+  },
+  {
+   "id": "ev_frederick_sword",
+   "pool": "fixed",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "腓特烈大王的佩剑",
+   "location": "柏林·王宫的军械室",
+   "speaker": "napoleon",
+   "date": "1806-10-27",
+   "body": [
+    "1806 年 10 月，柏林。皇帝在波茨坦的驻军教堂里，在腓特烈大王的墓前站了很久。",
+    "拿破仑：“他的佩剑、腰带和勋章，送到荣军院去。”",
+    "装箱的单子交到你手里。普鲁士的老侍从站在门口，帽子拿在手上。"
+   ],
+   "appraisals": [
+    {
+     "id": "old_servant",
+     "kind": "spot",
+     "label": "留意门口的老侍从",
+     "observation": "他胸前别着一枚旧勋章：七年战争时跟大王打过仗。他在等，不是在看。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "crate_with_honour",
+     "label": "照命令装箱，单独押运",
+     "effects": {
+      "morale": 2
+     },
+     "flags": [
+      "t_sword_taken"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     }
+    },
+    {
+     "id": "mark_the_origin",
+     "label": "在清单上写明它从哪座教堂来、属于谁",
+     "requires_clues": [
+      "old_servant"
+     ],
+     "effects": {},
+     "flags": [
+      "t_sword_marked",
+      "t_return_mark"
+     ],
+     "rogue": {
+      "coins": {
+       "intel": 1
+      }
+     }
+    },
+    {
+     "id": "leave_the_sash",
+     "label": "只带走佩剑，把腰带留给老侍从",
+     "effects": {
+      "heat": -5
+     },
+     "flags": [
+      "t_sash_left"
+     ],
+     "rogue": {}
+    }
+   ]
+  },
+  {
+   "id": "ev_dos_de_mayo",
+   "pool": "fixed",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "五月三日之后",
+   "location": "马德里·丽池宫的粮仓",
+   "speaker": "villefort",
+   "date": "1808-12-04",
+   "body": [
+    "1808 年 12 月，马德里。五月二日的起义，五月三日的枪决，城里的人都还记得。",
+    "皇帝进城了。丽池宫的粮仓里堆着够全城吃一个月的小麦，门口是排队买面包的人。",
+    "军需处的命令只有一句：粮仓归大军。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "open_to_city",
+     "label": "开仓平价卖给城里",
+     "effects": {
+      "treasury": -200,
+      "heat": -10
+     },
+     "flags": [
+      "t_madrid_bread"
+     ],
+     "rogue": {}
+    },
+    {
+     "id": "sell_at_market",
+     "label": "按黑市价卖出去",
+     "effects": {
+      "treasury": 400,
+      "heat": 10
+     },
+     "flags": [
+      "t_madrid_sold"
+     ],
+     "rogue": {
+      "coins": {
+       "gold": 1
+      }
+     }
+    },
+    {
+     "id": "army_only",
+     "label": "照命令，全部装车给大军",
+     "effects": {},
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "supply": 3
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_ratisbon_wound",
+   "pool": "fixed",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "皇帝的脚踝",
+   "location": "雷根斯堡城外",
+   "speaker": "napoleon",
+   "date": "1809-04-23",
+   "body": [
+    "1809 年 4 月 23 日，雷根斯堡城外。一颗打到尽头的子弹落在皇帝的右脚踝上。",
+    "拿破仑：“这么远都打得中，只能是蒂罗尔的猎手。”他咬着牙，脸色发白。",
+    "城下的兵已经有人在喊：皇帝中弹了。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "ride_the_lines",
+     "label": "扶皇帝上马，从队伍前面骑过去",
+     "effects": {
+      "morale": 6,
+      "vitality": -2
+     },
+     "flags": [
+      "t_ratisbon_ride"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     }
+    },
+    {
+     "id": "keep_it_quiet",
+     "label": "封住消息，先包扎",
+     "effects": {
+      "heat": -2
+     },
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "intel": 1
+      }
+     }
+    },
+    {
+     "id": "call_larrey",
+     "label": "去找拉雷",
+     "requires": {
+      "alive": [
+       "larrey"
+      ]
+     },
+     "effects": {
+      "vitality": 4,
+      "morale": 2
+     },
+     "flags": [
+      "t_larrey_ankle"
+     ],
+     "rogue": {}
+    }
+   ],
+   "_note": "史实：拿破仑一生唯一一次在战场上负伤。"
+  },
+  {
+   "id": "ev_smolensk_granary",
+   "pool": "fixed",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "斯摩棱斯克的粮仓",
+   "location": "斯摩棱斯克·第聂伯河边",
+   "speaker": "villefort",
+   "date": "1812-08-18",
+   "body": [
+    "1812 年 8 月，斯摩棱斯克。俄军走的时候放了火，整座城还在烧。",
+    "河边有一座石头粮仓，屋顶已经着了，门还锁着。",
+    "古尔戈：“里面的东西够两个师吃十天。再过一个钟头，什么都不剩了。”"
+   ],
+   "appraisals": [
+    {
+     "id": "stone_roof",
+     "kind": "spot",
+     "label": "看清粮仓的结构",
+     "observation": "屋顶是木头的，墙和地窖是石头的。地窖里的面粉烧不到。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "save_the_grain",
+     "label": "带人上去灭火，抢粮",
+     "effects": {
+      "vitality": -4
+     },
+     "flags": [
+      "t_smolensk_grain"
+     ],
+     "rogue": {
+      "coins": {
+       "supply": 5
+      }
+     }
+    },
+    {
+     "id": "let_it_burn",
+     "label": "不值得拿人去换，继续往前走",
+     "effects": {
+      "morale": -2
+     },
+     "flags": [],
+     "rogue": {}
+    },
+    {
+     "id": "mark_for_return",
+     "label": "记下粮仓的位置，回来的路上用",
+     "requires_clues": [
+      "stone_roof"
+     ],
+     "effects": {
+      "construction": 10
+     },
+     "flags": [
+      "t_smolensk_depot"
+     ],
+     "rogue": {
+      "coins": {
+       "supply": 2
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_six_days",
+   "pool": "fixed",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "六日战役",
+   "location": "香槟·蒙米赖",
+   "speaker": "napoleon",
+   "date": "1814-02-11",
+   "body": [
+    "1814 年 2 月，香槟。联军打进了法国。皇帝带着几万个新兵，六天里打了四仗，赢了四仗。",
+    "村里的农民把面包和葡萄酒送到路边，说：“打完这一仗，就回家吧。”",
+    "拿破仑：“维尔福，还能打几天？”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "one_more_week",
+     "label": "“还有一个星期的子弹。”",
+     "effects": {
+      "morale": 4,
+      "vitality": -4
+     },
+     "flags": [
+      "t_six_days"
+     ],
+     "rogue": {
+      "coins": {
+       "medal": 1
+      }
+     }
+    },
+    {
+     "id": "pay_the_farmers",
+     "label": "替大军把农民的面包钱付了",
+     "effects": {
+      "treasury": -150,
+      "heat": -8
+     },
+     "flags": [
+      "t_champagne_paid"
+     ],
+     "rogue": {}
+    },
+    {
+     "id": "tell_the_truth",
+     "label": "“一天也不能了，陛下。”",
+     "effects": {
+      "morale": -2
+     },
+     "flags": [
+      "t_told_truth_1814"
+     ],
+     "rogue": {
+      "coins": {
+       "intel": 1
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_scholars_crates",
+   "pool": "orient",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "学者的箱子",
+   "location": "沙漠里的行军路",
+   "speaker": "villefort",
+   "body": [
+    "学者委员会的箱子装着仪器、标本和刚拓下来的碑文，一共四十只，要八头骆驼。",
+    "骆驼不够驮水了。蒙日教授抱着一只箱子不撒手：“这里面是三千年。”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "water_first",
+     "label": "先驮水",
+     "effects": {
+      "vitality": 4
+     },
+     "flags": [],
+     "rogue": {}
+    },
+    {
+     "id": "crates_first",
+     "label": "先驮箱子，人少喝一口",
+     "effects": {
+      "vitality": -3,
+      "morale": 1
+     },
+     "flags": [
+      "t_crates_saved"
+     ],
+     "rogue": {
+      "coins": {
+       "intel": 1
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_alps_mules",
+   "pool": "alps",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "骡夫罢工",
+   "location": "圣皮埃尔村",
+   "speaker": "villefort",
+   "body": [
+    "山脚下的圣皮埃尔村，三百个骡夫坐在路边不走了：说好的工钱还没给。",
+    "骡夫头子：“炮你们自己扛上去吧。”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "pay_in_cash",
+     "label": "当场付现钱",
+     "effects": {
+      "treasury": -150
+     },
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "supply": 2
+      }
+     }
+    },
+    {
+     "id": "pay_double_later",
+     "label": "开凭单，到米兰付双倍",
+     "effects": {
+      "morale": -1
+     },
+     "flags": [
+      "t_mule_voucher"
+     ],
+     "rogue": {
+      "coins": {
+       "supply": 2
+      }
+     }
+    },
+    {
+     "id": "conscript_mules",
+     "label": "征用骡子，骡夫押着走",
+     "effects": {
+      "heat": 8
+     },
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "supply": 3
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_bread_ovens",
+   "pool": "north",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "路上的面包炉",
+   "location": "行军路旁的村庄",
+   "speaker": "villefort",
+   "body": [
+    "前一站的面包炉连夜烤了九千个面包，车队却晚到了半天，面包在路边放凉了。",
+    "后面一个军的兵正在赶上来，前面一个军的兵正在饿着走。"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "forward_corps",
+     "label": "先给前面的军",
+     "effects": {
+      "morale": 2
+     },
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "supply": 1
+      }
+     }
+    },
+    {
+     "id": "rear_corps",
+     "label": "留给后面的军",
+     "effects": {
+      "vitality": 3
+     },
+     "flags": [],
+     "rogue": {}
+    },
+    {
+     "id": "split_and_bake",
+     "label": "对半分，再借村里的炉子烤一批",
+     "effects": {
+      "treasury": -80,
+      "morale": 2,
+      "vitality": 2
+     },
+     "flags": [
+      "t_village_ovens"
+     ],
+     "rogue": {}
+    }
+   ]
+  },
+  {
+   "id": "ev_poisoned_well",
+   "pool": "iberia",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "井",
+   "location": "卡斯蒂利亚的一个村子",
+   "speaker": "marie",
+   "body": [
+    "村里的人全跑光了。井口边上放着一只水桶，桶底有一层白粉。",
+    "玛丽：“兵已经渴了一天，看见井就要往下扑。”"
+   ],
+   "appraisals": [
+    {
+     "id": "white_powder",
+     "kind": "spot",
+     "label": "细看桶底的白粉",
+     "observation": "是石灰，不是砒霜。有人想吓住你们，不想毒死你们。"
+    }
+   ],
+   "choices": [
+    {
+     "id": "guard_the_well",
+     "label": "派人守井，等后面的水车",
+     "effects": {
+      "vitality": -3
+     },
+     "flags": [],
+     "rogue": {}
+    },
+    {
+     "id": "test_it",
+     "label": "先拿死驴子试一试",
+     "requires_clues": [
+      "white_powder"
+     ],
+     "effects": {},
+     "flags": [
+      "t_well_tested"
+     ],
+     "rogue": {
+      "coins": {
+       "intel": 1
+      }
+     }
+    },
+    {
+     "id": "burn_the_village",
+     "label": "照命令烧村子",
+     "effects": {
+      "heat": 15
+     },
+     "flags": [
+      "t_village_burned"
+     ],
+     "rogue": {
+      "coins": {
+       "supply": 2
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_danube_pontoons",
+   "pool": "danube",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "浮舟被冲走了",
+   "location": "多瑙河边",
+   "speaker": "baptiste",
+   "body": [
+    "上游放下来一条着了火的驳船，撞断了三只浮舟的缆绳。",
+    "巴蒂斯特：“剩下的锚不够了。要么去城里拆教堂的铁链，要么等新的从巴黎运来。”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "church_chains",
+     "label": "去拆教堂的铁链",
+     "effects": {
+      "heat": 6,
+      "construction": 10
+     },
+     "flags": [],
+     "rogue": {
+      "coins": {
+       "supply": 1
+      }
+     }
+    },
+    {
+     "id": "wait_for_paris",
+     "label": "等巴黎的锚",
+     "effects": {
+      "vitality": -2
+     },
+     "flags": [],
+     "rogue": {}
+    },
+    {
+     "id": "boom_upstream",
+     "label": "在上游拦一道木栅",
+     "effects": {
+      "treasury": -120,
+      "construction": 15
+     },
+     "flags": [
+      "t_danube_boom"
+     ],
+     "rogue": {}
+    }
+   ]
+  },
+  {
+   "id": "ev_horse_meat",
+   "pool": "russia",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "马",
+   "location": "斯摩棱斯克大道",
+   "speaker": "villefort",
+   "body": [
+    "一夜之间冻死了四百匹马。路边的兵已经开始割马肉了。",
+    "炮兵上尉：“马吃完了，炮就得扔在这里。”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "ration_the_horses",
+     "label": "按名册分马肉，每个连一匹",
+     "effects": {
+      "vitality": 6,
+      "morale": -2
+     },
+     "flags": [],
+     "rogue": {}
+    },
+    {
+     "id": "save_for_guns",
+     "label": "先保拉炮的马，兵饿着",
+     "effects": {
+      "vitality": -4
+     },
+     "flags": [
+      "t_guns_kept"
+     ],
+     "rogue": {
+      "coins": {
+       "supply": 1
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev_conscript_letter",
+   "pool": "collapse",
+   "weight": 3,
+   "once": true,
+   "requires": {},
+   "title": "新兵的信",
+   "location": "萨克森的宿营地",
+   "speaker": "pierre",
+   "body": [
+    "一个十八岁的新兵托你寄一封信。信封上写着家乡的村名，信里只有一行字：“妈妈，我还活着。”",
+    "小皮埃尔：“他不会写字，是我替他写的。他问能不能多写一句。”"
+   ],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "write_more",
+     "label": "让他多写一句",
+     "effects": {
+      "morale": 2
+     },
+     "flags": [],
+     "rogue": {}
+    },
+    {
+     "id": "post_free",
+     "label": "用军需处的驿马免费寄",
+     "effects": {
+      "treasury": -20,
+      "morale": 3
+     },
+     "flags": [
+      "t_letters_free"
+     ],
+     "rogue": {}
+    }
+   ]
+  }
+ ],
+ "endings": [
+  {
+   "id": "bankruptcy",
+   "title": "军费告罄",
+   "body": [
+    "钱柜空了，面包车停在半路。你被叫回巴黎接受审计，账簿被收走。",
+    "后来有人说，那个总能把数对上的军需官，最后一次没有对上。"
+   ]
+  },
+  {
+   "id": "loss",
+   "title": "大军溃散",
+   "body": [
+    "兵走不动了。逃兵比行军的人多，辎重车一辆接一辆被扔在路边。",
+    "你在一张没人签收的调拨凭单上写完最后一行，合上了账簿。"
+   ]
+  },
+  {
+   "id": "blockade",
+   "title": "全区起义",
+   "body": [
+    "钟声从一座城传到另一座城。补给线断了，后路也断了。",
+    "征发来的每一袋面粉，最后都变成了一颗子弹。"
+   ]
+  },
+  {
+   "id": "exile",
+   "title": "污名",
+   "body": [
+    "你被撤了职，名字从花名册上划掉，账簿交给了别人。",
+    "这不是结局，只是一页回忆录。下一次，你会从土伦重新开始。"
+   ]
+  }
+ ],
+ "tuning": {
+  "wealth_limit": 20000
+ },
+ "design_notes": [
+  "主干没有正常结局，只有失败收场；正常的出口只有 elba_1815 的三个分岔抉择（ARCH §1.6）。",
+  "调令二选一：orient_orders / boulogne_orders / bayonne_orders 设互斥旗标，后面两场各带 when，条件为假时整场跳过（本稿提议，A 加一行判断）。",
+  "旗标前缀：主干 t_，鹰飞 k_，伊夫堡 m_，远洋保留原名（o_followed 是本稿给远洋入口的新旗标，远洋段可以不读）。跨段旗标登记在 book.shared_flags：faria_half_letter、t_pharaon_known、t_guard_oath、t_mysore_envoy，另提议加 t_dantes_letter、t_storks_hostile、t_return_mark。",
+  "rogue.recruit 本稿写成列表（序章一场同时入队两人）；A 若只支持字符串，改成两场各一人即可。",
+  "events[].pool = fixed 的事件只由地图上的固定事件节点打开（node.event），不进随机池；其余按 ARCH §2.6 的三层池抽取。",
+  "军议（pool=fixed、council=true）每章一场，三个抉择分别给 boss_mod：cp_bonus +2（开场军令点）、enemy_morale −2、prep_turn +1（第一波晚一回合到，回合上限同时 +1，守的回合数不变）。"
+ ]
+}

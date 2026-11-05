@@ -1,0 +1,38 @@
+{
+  "_meta": {
+    "_provenance": "ai:claude:opus-5.5:2026-10-25:base-text-misc"
+  },
+  "obs.fragments.seal_aligned": {
+    "t": "骑缝印两半对得上。"
+  },
+  "obs.fragments.seal_aligned_maybe": {
+    "t": "骑缝印两半好像对得上，没敢细看。"
+  },
+  "obs.fragments.seal_offset": {
+    "t": "骑缝印两半错开了一截。"
+  },
+  "obs.fragments.seal_offset_maybe": {
+    "t": "骑缝印两半好像错开了一点，没看真切。"
+  },
+  "obs.fragments.ink_continuous": {
+    "t": "拼缝两边的墨色连得上。"
+  },
+  "obs.fragments.ink_continuous_maybe": {
+    "t": "拼缝两边的墨，看着像是都连得上。"
+  },
+  "obs.fragments.ink_breaks": {
+    "t": "拼缝两边的墨色接不上。"
+  },
+  "obs.fragments.ink_breaks_maybe": {
+    "t": "有一道拼缝的墨好像接不上，没看真切。"
+  },
+  "obs.fragments.dangzi_clear": {
+    "t": "当字那几笔看得清。"
+  },
+  "obs.fragments.piece_missing": {
+    "t": "拼到最后还缺一块，留着一个洞。"
+  },
+  "obs.fragments.unsure": {
+    "t": "没拼齐，看不准。"
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "_meta": {
+    "owner": "K06",
+    "schema": 1,
+    "brief": "1940 大赌，平时不抽，只等大轮盘扇区来发。"
+  },
+  "cards": [
+    {
+      "id": "bf.1940.yamen_crate",
+      "type": "big_fate",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "crisis": [
+        "cash_short"
+      ],
+      "valence": "mixed",
+      "tags": [
+        "crate",
+        "official",
+        "contraband",
+        "omen_official",
+        "omen_stranger"
+      ],
+      "must_resolve": true,
+      "choices": [
+        {
+          "id": "hide",
+          "brief": "收下藏好",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 260,
+              "reason": "k06.reason.crate"
+            },
+            {
+              "op": "heat",
+              "tier": 1
+            },
+            {
+              "op": "flag",
+              "key": "yamen_crate"
+            },
+            {
+              "op": "conscience",
+              "delta": -3
+            },
+            {
+              "op": "notice",
+              "key": "k06.notice.crate"
+            }
+          ]
+        },
+        {
+          "id": "pass_on",
+          "brief": "转手",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 120,
+              "reason": "k06.reason.crate"
+            },
+            {
+              "op": "heat",
+              "delta": 8
+            },
+            {
+              "op": "flag",
+              "key": "yamen_crate"
+            },
+            {
+              "op": "notice",
+              "key": "k06.notice.crate"
+            }
+          ]
+        },
+        {
+          "id": "decline",
+          "brief": "不收",
+          "effects": []
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.bf.1940.yamen_crate",
+      "brief": "伪维新政府撤衙时，有人出大价钱请你收下一箱文书。藏好能进一大笔，风声上一档，本心往下走一点；转手进得少一些，风声紧一紧；可以不收。没理会当不收。只在快缺钱时由大轮盘发到手上，平时不抽。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "bf.1940.night_road",
+      "type": "big_fate",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "crisis": [
+        "heat_max"
+      ],
+      "valence": "good",
+      "tags": [
+        "road",
+        "papers",
+        "omen_road"
+      ],
+      "must_resolve": true,
+      "choices": [
+        {
+          "id": "use",
+          "brief": "连夜出城",
+          "effects": [
+            {
+              "op": "heat",
+              "tier": -1
+            },
+            {
+              "op": "flag",
+              "key": "night_road_used"
+            }
+          ]
+        },
+        {
+          "id": "sell",
+          "brief": "把路条卖了",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 90,
+              "reason": "k06.reason.night_road"
+            }
+          ]
+        },
+        {
+          "id": "stay",
+          "brief": "留下",
+          "effects": []
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.bf.1940.night_road",
+      "brief": "一张能出城的夜路路条。用了风声降一档；卖掉进一笔；也可以留下。没理会当留下，什么也不发生。只在风声到顶时由大轮盘发到手上，平时不抽。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K06",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

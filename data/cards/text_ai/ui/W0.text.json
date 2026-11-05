@@ -1,0 +1,201 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "w0.title.new": {
+    "t": "开张"
+  },
+  "w0.title.continue": {
+    "t": "接着做生意"
+  },
+  "w0.title.settings": {
+    "t": "设置"
+  },
+  "w0.title.quit": {
+    "t": "离开"
+  },
+  "w0.btn.primary": {
+    "t": "就办这件"
+  },
+  "w0.btn.close": {
+    "t": "关上"
+  },
+  "w0.btn.close_day": {
+    "t": "打烊 · 下一天"
+  },
+  "w0.mg.done": {
+    "t": "看完了"
+  },
+  "w0.top.money": {
+    "t": "钱"
+  },
+  "w0.top.day": {
+    "t": "天"
+  },
+  "w0.zone.kept": {
+    "t": "留着的牌"
+  },
+  "w0.zone.contacts": {
+    "t": "人脉"
+  },
+  "w0.zone.self": {
+    "t": "你自己"
+  },
+  "w0.zone.tickets": {
+    "t": "当票"
+  },
+  "w0.zone.shelf": {
+    "t": "货架"
+  },
+  "w0.zone.dossier": {
+    "t": "档案簿"
+  },
+  "w0.panel.counter": {
+    "t": "柜台"
+  },
+  "w0.panel.slots": {
+    "t": "格子"
+  },
+  "w0.panel.demand": {
+    "t": "条子"
+  },
+  "w0.panel.wheel": {
+    "t": "轮盘"
+  },
+  "w0.panel.fortune": {
+    "t": "算命摊"
+  },
+  "w0.panel.end_day": {
+    "t": "打烊之前"
+  },
+  "w0.panel.night": {
+    "t": "夜里"
+  },
+  "w0.panel.settle": {
+    "t": "日结"
+  },
+  "w0.panel.month_open": {
+    "t": "开月"
+  },
+  "w0.panel.month_close": {
+    "t": "月底结账"
+  },
+  "w0.panel.year_jump": {
+    "t": "一年以后"
+  },
+  "w0.panel.game_over": {
+    "t": "这一局完了"
+  },
+  "w0.panel.dossier": {
+    "t": "档案簿"
+  },
+  "w0.panel.estates": {
+    "t": "家当"
+  },
+  "w0.panel.short": {
+    "t": "钱不够"
+  },
+  "w0.panel.prison": {
+    "t": "牢房"
+  },
+  "w0.panel.read": {
+    "t": "看消息"
+  },
+  "w0.panel.contacts_full": {
+    "t": "人脉满了"
+  },
+  "w0.panel.kept_full": {
+    "t": "留着的牌满了"
+  },
+  "w0.panel.help": {
+    "t": "帮助"
+  },
+  "w0.panel.pause": {
+    "t": "歇一歇"
+  },
+  "w0.panel.settings": {
+    "t": "设置"
+  },
+  "w0.panel.minigame": {
+    "t": "细看东西"
+  },
+  "w0.mock.notice": {
+    "t": "今日照常开门。"
+  },
+  "w0.mock.estate": {
+    "t": "押家当"
+  },
+  "w0.mock.fortune": {
+    "t": "算命钱"
+  },
+  "w0.mock.sold": {
+    "t": "卖货进账"
+  },
+  "w0.mock.pawn_out": {
+    "t": "放当"
+  },
+  "w0.mock.bought": {
+    "t": "收货"
+  },
+  "w0.mock.slot_money": {
+    "t": "打点的钱"
+  },
+  "w0.mock.incense": {
+    "t": "香火钱"
+  },
+  "w0.mock.payee": {
+    "t": "讨账的人"
+  },
+  "w0.card.keep": {
+    "t": "留着"
+  },
+  "w0.street.redeem": {
+    "t": "赎回铺面"
+  },
+  "w0.stage.enter": {
+    "t": "{name}走到柜台前。"
+  },
+  "w0.stage.at_door": {
+    "t": "{name}站在门口。"
+  },
+  "w0.stage.leave": {
+    "t": "{name}出了门。"
+  },
+  "w0.dialog.skip": {
+    "t": "跳过"
+  },
+  "w0.hand.play": {
+    "t": "打出"
+  },
+  "w0.hand.sleep": {
+    "t": "睡了"
+  },
+  "w0.hero.eye": {
+    "t": "眼力 {value}"
+  },
+  "w0.hero.tongue": {
+    "t": "口才 {value}"
+  },
+  "w0.hero.pull": {
+    "t": "人脉 {value}"
+  },
+  "w0.hero.nerve": {
+    "t": "胆量 {value}"
+  },
+  "w0.panel.contacts": {
+    "t": "人脉"
+  },
+  "w0.panel.demands": {
+    "t": "条子"
+  },
+  "w0.panel.shelf": {
+    "t": "货架"
+  },
+  "w0.panel.tickets": {
+    "t": "当票"
+  },
+  "w0.panel.almanac": {
+    "t": "黄历"
+  }
+}

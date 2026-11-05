@@ -1,0 +1,48 @@
+{
+  "art": "item.jewelry.hairpin",
+  "atlas_art": "item.jewelry.hairpin",
+  "atlas_open": true,
+  "ink": 3,
+  "item": "I001",
+  "kind": "spot",
+  "marks": [
+    {
+      "fine": 800,
+      "kind": "differs",
+      "part": "authenticity",
+      "seed": 443342557
+    },
+    {
+      "fine": 300,
+      "kind": "wear",
+      "part": "condition",
+      "seed": 1168446250
+    }
+  ],
+  "max_minutes": 30,
+  "minutes_per_step": 1,
+  "parts": [
+    {
+      "id": "material",
+      "rect": [42, 8, 13, 13],
+      "tool": "eye"
+    },
+    {
+      "id": "condition",
+      "rect": [7, 46, 10, 9],
+      "tool": "eye"
+    },
+    {
+      "id": "authenticity",
+      "rect": [24, 30, 10, 10],
+      "tool": "lens"
+    },
+    {
+      "id": "provenance",
+      "rect": [34, 20, 10, 10],
+      "tool": "eye"
+    }
+  ],
+  "seed": 1449328704,
+  "tools": ["eye", "lens", "atlas"]
+}

@@ -1,0 +1,283 @@
+{
+ "errors": [],
+ "warnings": [],
+ "maps": [
+  {
+   "chapter": "marseille",
+   "view": "marseille_1815",
+   "nodes": 23,
+   "links": 29,
+   "slots": 8,
+   "expected_events": 4.0,
+   "shortest_days": 10,
+   "days_max": 18,
+   "boss_L": 14,
+   "interlude": "bond"
+  },
+  {
+   "chapter": "if_years",
+   "view": "if_fortress",
+   "nodes": 25,
+   "links": 33,
+   "slots": 8,
+   "expected_events": 4.1,
+   "shortest_days": 15,
+   "days_max": 22,
+   "boss_L": 16,
+   "interlude": "minigame:decode"
+  },
+  {
+   "chapter": "montecristo",
+   "view": "med",
+   "nodes": 20,
+   "links": 27,
+   "slots": 8,
+   "expected_events": 4.1,
+   "shortest_days": 9,
+   "days_max": 20,
+   "boss_L": 18,
+   "interlude": "camp_night"
+  },
+  {
+   "chapter": "mediterranean",
+   "view": "med",
+   "nodes": 23,
+   "links": 30,
+   "slots": 8,
+   "expected_events": 4.1,
+   "shortest_days": 10,
+   "days_max": 22,
+   "boss_L": 21,
+   "interlude": "audience"
+  },
+  {
+   "chapter": "paris_1838",
+   "view": "paris_1838",
+   "nodes": 23,
+   "links": 30,
+   "slots": 7,
+   "expected_events": 3.6,
+   "shortest_days": 12,
+   "days_max": 22,
+   "boss_L": 24,
+   "interlude": "minigame:weigh"
+  }
+ ],
+ "boss_curve": [
+  {
+   "chapter": "marseille",
+   "template": "marseille_arrest",
+   "L": 14,
+   "power": 530
+  },
+  {
+   "chapter": "if_years",
+   "template": "if_corridors",
+   "L": 16,
+   "power": 631
+  },
+  {
+   "chapter": "montecristo",
+   "template": "monte_cristo_cave",
+   "L": 18,
+   "power": 710,
+   "planned": true
+  },
+  {
+   "chapter": "mediterranean",
+   "template": "san_sebastiano",
+   "L": 21,
+   "power": 830,
+   "planned": true
+  },
+  {
+   "chapter": "paris_1838",
+   "template": "cristo_final",
+   "L": 24,
+   "power": 960,
+   "planned": true
+  }
+ ],
+ "counts": {
+  "scenes": 23,
+  "events": 27,
+  "random_events": 14,
+  "characters": 25,
+  "items": 11,
+  "endings": 4,
+  "companions_new": 8,
+  "templates_built": 6,
+  "templates_planned": 8,
+  "enemies": 38,
+  "art_assets": 124,
+  "flags_set": 108
+ },
+ "evidence": {
+  "catalans_cove": [
+   {
+    "L": 13,
+    "idle": "defeat t6",
+    "hero_only": "defeat t7 (B1:right)",
+    "plan": "victory m11 leaks3 fallen['morel'] orderTrue",
+    "power": 242,
+    "enemies": 22,
+    "hunters": 1,
+    "elites": 0
+   }
+  ],
+  "marseille_arrest": [
+   {
+    "L": 14,
+    "idle": "defeat t10",
+    "hero_only": "defeat t10 (J3:right)",
+    "plan": "victory m15 leaks0 fallen['marie'] orderTrue",
+    "power": 530,
+    "enemies": 38,
+    "hunters": 3,
+    "elites": 5
+   }
+  ],
+  "morgiou_cove": [
+   {
+    "L": 15,
+    "idle": "defeat t8",
+    "hero_only": "defeat t9 (B4:right)",
+    "plan": "victory m14 leaks0 fallen['caderousse'] orderFalse",
+    "power": 282,
+    "enemies": 18,
+    "hunters": 1,
+    "elites": 0
+   }
+  ],
+  "if_corridors": [
+   {
+    "L": 16,
+    "idle": "defeat t9",
+    "hero_only": "defeat t9 (C1:right)",
+    "plan": "victory m5 leaks5 fallen['morel'] orderTrue",
+    "power": 631,
+    "enemies": 33,
+    "hunters": 4,
+    "elites": 6
+   }
+  ],
+  "alley_ambush": [
+   {
+    "L": 12,
+    "idle": "defeat t7",
+    "hero_only": "defeat t7 (A1:right)",
+    "plan": "victory m14 leaks0 fallen[] orderTrue",
+    "power": 114,
+    "enemies": 11,
+    "hunters": 1,
+    "elites": 0
+   },
+   {
+    "L": 14,
+    "idle": "defeat t7",
+    "hero_only": "defeat t7 (A1:right)",
+    "plan": "victory m10 leaks1 fallen['morel'] orderFalse",
+    "power": 139,
+    "enemies": 11,
+    "hunters": 1,
+    "elites": 0
+   },
+   {
+    "L": 16,
+    "idle": "defeat t7",
+    "hero_only": "defeat t7 (A1:right)",
+    "plan": "victory m14 leaks0 fallen[] orderTrue",
+    "power": 153,
+    "enemies": 11,
+    "hunters": 1,
+    "elites": 0
+   },
+   {
+    "L": 19,
+    "idle": "defeat t7",
+    "hero_only": "defeat t7 (A1:right)",
+    "plan": "victory m5 leaks3 fallen['morel'] orderFalse",
+    "power": 335,
+    "enemies": 19,
+    "hunters": 1,
+    "elites": 0
+   },
+   {
+    "L": 22,
+    "idle": "defeat t7",
+    "hero_only": "defeat t7 (A1:right)",
+    "plan": "victory m12 leaks0 fallen['caderousse'] orderTrue",
+    "power": 519,
+    "enemies": 26,
+    "hunters": 2,
+    "elites": 0
+   }
+  ],
+  "coast_road": [
+   {
+    "L": 12,
+    "idle": "defeat t6",
+    "hero_only": "defeat t7 (A1:right)",
+    "plan": "victory m12 leaks0 fallen['morel'] orderFalse",
+    "power": 124,
+    "enemies": 11,
+    "hunters": 1,
+    "elites": 0
+   },
+   {
+    "L": 14,
+    "idle": "defeat t6",
+    "hero_only": "defeat t7 (A1:right)",
+    "plan": "victory m13 leaks0 fallen[] orderTrue",
+    "power": 156,
+    "enemies": 11,
+    "hunters": 1,
+    "elites": 0
+   },
+   {
+    "L": 16,
+    "idle": "defeat t6",
+    "hero_only": "defeat t7 (A1:right)",
+    "plan": "victory m8 leaks0 fallen['morel', 'caderousse'] orderFalse",
+    "power": 190,
+    "enemies": 12,
+    "hunters": 1,
+    "elites": 0
+   },
+   {
+    "L": 19,
+    "idle": "defeat t6",
+    "hero_only": "defeat t6 (A1:right)",
+    "plan": "victory m6 leaks1 fallen['morel', 'caderousse'] orderFalse",
+    "power": 334,
+    "enemies": 18,
+    "hunters": 1,
+    "elites": 0
+   },
+   {
+    "L": 22,
+    "idle": "defeat t6",
+    "hero_only": "defeat t6 (A1:right)",
+    "plan": "victory m1 leaks3 fallen['morel', 'caderousse'] orderFalse",
+    "power": 618,
+    "enemies": 25,
+    "hunters": 2,
+    "elites": 0
+   }
+  ]
+ },
+ "files": [
+  "/tmp/claude-0/-home-user/f413af39-a419-5ad7-b290-de5bfd493b6e/scratchpad/wm/cristo/data/campaigns/napoleon/cristo.json",
+  "/tmp/claude-0/-home-user/f413af39-a419-5ad7-b290-de5bfd493b6e/scratchpad/wm/cristo/data/campaigns/napoleon/maps/med.json",
+  "/tmp/claude-0/-home-user/f413af39-a419-5ad7-b290-de5bfd493b6e/scratchpad/wm/cristo/data/campaigns/napoleon/companions_cristo.json",
+  "/tmp/claude-0/-home-user/f413af39-a419-5ad7-b290-de5bfd493b6e/scratchpad/wm/cristo/data/campaigns/battle_templates_cristo.json",
+  "/tmp/claude-0/-home-user/f413af39-a419-5ad7-b290-de5bfd493b6e/scratchpad/wm/cristo/data/campaigns/napoleon/book_cristo_patch.json",
+  "/tmp/claude-0/-home-user/f413af39-a419-5ad7-b290-de5bfd493b6e/scratchpad/wm/cristo/data/hd/art_requests/C_cristo.json",
+  "/tmp/claude-0/-home-user/f413af39-a419-5ad7-b290-de5bfd493b6e/scratchpad/wm/cristo/data/hd/vn_cast_cristo.json",
+  "/tmp/claude-0/-home-user/f413af39-a419-5ad7-b290-de5bfd493b6e/scratchpad/wm/cristo/maps/preview_marseille.png",
+  "/tmp/claude-0/-home-user/f413af39-a419-5ad7-b290-de5bfd493b6e/scratchpad/wm/cristo/maps/preview_if_years.png",
+  "/tmp/claude-0/-home-user/f413af39-a419-5ad7-b290-de5bfd493b6e/scratchpad/wm/cristo/maps/preview_montecristo.png",
+  "/tmp/claude-0/-home-user/f413af39-a419-5ad7-b290-de5bfd493b6e/scratchpad/wm/cristo/maps/preview_mediterranean.png",
+  "/tmp/claude-0/-home-user/f413af39-a419-5ad7-b290-de5bfd493b6e/scratchpad/wm/cristo/maps/preview_paris_1838.png"
+ ]
+}

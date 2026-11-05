@@ -1,0 +1,785 @@
+{
+  "_meta": {
+    "owner": "K07",
+    "schema": 1,
+    "brief": "1938 年条子 16 张（钱、货、人、消息，各四档）。计价口径：resolve.money.amount 与 resolve.substitute.money 写当年价（法币），不是 1938 不变价。物价指数见 stages.json：1938=100、1939=160、1940=220。钱和顶替的钱按 1938 基数乘当年指数除以 100，本表基数都能整除，不四舍五入。件数、人数、离开天数、检定门槛不乘指数；年份越晚这些数不减，有的加重是摊派更紧，不是物价。引擎不要再乘一次指数。第一关第 7 天（1938-03-07，星期一）按 demand_rules.tier_by_stage 的第一格发小档；四张 1938 小档权重相同、没有日程，抽到哪一类都温和。吃亏全走 demand_rules 的默认阶梯，卡上不覆盖。依据 era.json 第一关：小镇沦陷不久，伪维持会管事。"
+  },
+  "cards": [
+    {
+      "id": "dm.1938.money.t0",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "money",
+      "tier": 0,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "money": {
+          "amount": 30,
+          "jitter_pct": 10,
+          "heat_tier_pct": 0
+        },
+        "haggle": {
+          "slots": [
+            {
+              "id": "favor",
+              "accepts": [
+                "kept"
+              ],
+              "tags": [
+                "favor"
+              ]
+            },
+            {
+              "id": "talker",
+              "accepts": [
+                "self",
+                "contact"
+              ],
+              "attr": "tongue"
+            }
+          ],
+          "need": 1,
+          "tier_down": 1
+        }
+      },
+      "slots": [
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "pay": true
+        }
+      ],
+      "art": "illus.dm.money",
+      "brief": "1938 年，名目是伪维持会摊派（月底伪维新政府在南京成立，这一关仍按伪维持会写）。门牌小捐：七天内交 30 蚨上下。格子只收钱。也可以放人情留牌，或放自己、人脉里口才好的去讲价，讲成则降一档；已经是最低档时由规则钳住，不能再降。风声不往这笔基数上加。第一关第 7 天若抽到要钱，就是这一张：数目小，讲价门槛最低。办不成走默认小档：罚一笔钱。依据 era.json 第一关：小镇沦陷不久，伪维持会管事。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.money.t1",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "money",
+      "tier": 1,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "money": {
+          "amount": 60,
+          "jitter_pct": 10,
+          "heat_tier_pct": 10
+        },
+        "haggle": {
+          "slots": [
+            {
+              "id": "favor",
+              "accepts": [
+                "kept"
+              ],
+              "tags": [
+                "favor"
+              ]
+            },
+            {
+              "id": "talker",
+              "accepts": [
+                "self",
+                "contact"
+              ],
+              "attr": "tongue"
+            }
+          ],
+          "need": 2,
+          "tier_down": 1
+        }
+      },
+      "slots": [
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "pay": true
+        }
+      ],
+      "art": "illus.dm.money",
+      "brief": "1938 年，名目是伪维持会摊派（月底伪维新政府在南京成立，这一关仍按伪维持会写）。按月摊派：七天内交 60 蚨上下。格子只收钱。也可以放人情留牌，或放自己、人脉里口才好的去讲价，讲成则降一档；已经是最低档时由规则钳住，不能再降。风声高时基数会再高一些。办不成走默认中档：查封三天。依据 era.json 第一关：小镇沦陷不久，伪维持会管事。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.money.t2",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "money",
+      "tier": 2,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "money": {
+          "amount": 120,
+          "jitter_pct": 15,
+          "heat_tier_pct": 15
+        },
+        "haggle": {
+          "slots": [
+            {
+              "id": "favor",
+              "accepts": [
+                "kept"
+              ],
+              "tags": [
+                "favor"
+              ]
+            },
+            {
+              "id": "talker",
+              "accepts": [
+                "self",
+                "contact"
+              ],
+              "attr": "tongue"
+            }
+          ],
+          "need": 2,
+          "tier_down": 1
+        }
+      },
+      "slots": [
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "pay": true
+        }
+      ],
+      "art": "illus.dm.money",
+      "brief": "1938 年，名目是伪维持会摊派（月底伪维新政府在南京成立，这一关仍按伪维持会写）。治安费：七天内交 120 蚨上下。格子只收钱。也可以放人情留牌，或放自己、人脉里口才好的去讲价，讲成则降一档；已经是最低档时由规则钳住，不能再降。风声高时基数会再高一些。办不成走默认大档：拿走一件家当。依据 era.json 第一关：小镇沦陷不久，伪维持会管事。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.money.t3",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "money",
+      "tier": 3,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "money": {
+          "amount": 240,
+          "jitter_pct": 20,
+          "heat_tier_pct": 20
+        },
+        "haggle": {
+          "slots": [
+            {
+              "id": "favor",
+              "accepts": [
+                "kept"
+              ],
+              "tags": [
+                "favor"
+              ]
+            },
+            {
+              "id": "talker",
+              "accepts": [
+                "self",
+                "contact"
+              ],
+              "attr": "tongue"
+            }
+          ],
+          "need": 3,
+          "tier_down": 1
+        }
+      },
+      "slots": [
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "pay": true
+        }
+      ],
+      "art": "illus.dm.money",
+      "brief": "1938 年，名目是伪维持会摊派（月底伪维新政府在南京成立，这一关仍按伪维持会写）。特别摊派：七天内交 240 蚨上下。格子只收钱。也可以放人情留牌，或放自己、人脉里口才好的去讲价，讲成则降一档；已经是最低档时由规则钳住，不能再降。风声高时基数会再高一些。办不成走默认要命档：进牢房。依据 era.json 第一关：小镇沦陷不久，伪维持会管事。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.goods.t0",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "goods",
+      "tier": 0,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "goods": {
+          "cat": "rice",
+          "n": 1
+        },
+        "substitute": {
+          "money": 50
+        }
+      },
+      "slots": [
+        {
+          "id": "goods",
+          "accepts": [
+            "item"
+          ],
+          "item_match": {
+            "cat": "rice"
+          },
+          "pay": true,
+          "max": 1
+        }
+      ],
+      "art": "illus.dm.goods",
+      "brief": "1938 年，名目是伪维持会摊派（月底伪维新政府在南京成立，这一关仍按伪维持会写）。零星要粮：七天内交 1 袋米。格子收这一类货，放上去就交出去。没有货可以交 50 蚨顶替。第一关第 7 天若抽到要货，就是这一张：只要一件常见的米。办不成走默认小档：罚一笔钱。依据 era.json 第一关：小镇沦陷不久，伪维持会管事。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.goods.t1",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "goods",
+      "tier": 1,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "goods": {
+          "cat": "clothing",
+          "n": 2
+        },
+        "substitute": {
+          "money": 100
+        }
+      },
+      "slots": [
+        {
+          "id": "goods",
+          "accepts": [
+            "item"
+          ],
+          "item_match": {
+            "cat": "clothing"
+          },
+          "pay": true,
+          "max": 2
+        }
+      ],
+      "art": "illus.dm.goods",
+      "brief": "1938 年，名目是伪维持会摊派（月底伪维新政府在南京成立，这一关仍按伪维持会写）。要衣物：七天内交 2 件衣物。格子收这一类货，放上去就交出去。没有货可以交 100 蚨顶替。办不成走默认中档：查封三天。依据 era.json 第一关：小镇沦陷不久，伪维持会管事。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.goods.t2",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "goods",
+      "tier": 2,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "goods": {
+          "cat": "medicine",
+          "n": 3
+        },
+        "substitute": {
+          "money": 180
+        }
+      },
+      "slots": [
+        {
+          "id": "goods",
+          "accepts": [
+            "item"
+          ],
+          "item_match": {
+            "cat": "medicine"
+          },
+          "pay": true,
+          "max": 3
+        }
+      ],
+      "art": "illus.dm.goods",
+      "brief": "1938 年，名目是伪维持会摊派（月底伪维新政府在南京成立，这一关仍按伪维持会写）。要药材：七天内交 3 份药材。格子收这一类货，放上去就交出去。没有货可以交 180 蚨顶替。办不成走默认大档：拿走一件家当。依据 era.json 第一关：小镇沦陷不久，伪维持会管事。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.goods.t3",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "goods",
+      "tier": 3,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "goods": {
+          "cat": "jewelry",
+          "n": 4
+        },
+        "substitute": {
+          "money": 320
+        }
+      },
+      "slots": [
+        {
+          "id": "goods",
+          "accepts": [
+            "item"
+          ],
+          "item_match": {
+            "cat": "jewelry"
+          },
+          "pay": true,
+          "max": 4
+        }
+      ],
+      "art": "illus.dm.goods",
+      "brief": "1938 年，名目是伪维持会摊派（月底伪维新政府在南京成立，这一关仍按伪维持会写）。要首饰：七天内交 4 件首饰。格子收这一类货，放上去就交出去。没有货可以交 320 蚨顶替。办不成走默认要命档：进牢房。依据 era.json 第一关：小镇沦陷不久，伪维持会管事。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.people.t0",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "people",
+      "tier": 0,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "people": {
+          "n": 1,
+          "away_days": 3,
+          "return_check": {
+            "attr": "nerve",
+            "need": 1
+          }
+        },
+        "substitute": {
+          "money": 30
+        }
+      },
+      "slots": [
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "attr": "nerve",
+          "max": 1
+        }
+      ],
+      "art": "illus.dm.people",
+      "brief": "1938 年，名目是伪维持会摊派（月底伪维新政府在南京成立，这一关仍按伪维持会写）。看门、搬告示：七天内派 1 个人，离开 3 天。格子放自己或人脉，看胆量；离开期间不能用。回来那天发 ev.any.demand_return，当场按他的胆量掷，不成就是没回来，记为 person_state gone。也可以交 30 蚨顶替。第一关第 7 天若抽到要人，就是这一张：离开的日子短。办不成走默认小档：罚一笔钱。依据 era.json 第一关：小镇沦陷不久，伪维持会管事。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.people.t1",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "people",
+      "tier": 1,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "people": {
+          "n": 1,
+          "away_days": 7,
+          "return_check": {
+            "attr": "nerve",
+            "need": 1
+          }
+        },
+        "substitute": {
+          "money": 60
+        }
+      },
+      "slots": [
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "attr": "nerve",
+          "max": 1
+        }
+      ],
+      "art": "illus.dm.people",
+      "brief": "1938 年，名目是伪维持会摊派（月底伪维新政府在南京成立，这一关仍按伪维持会写）。出夫修路：七天内派 1 个人，离开 7 天。格子放自己或人脉，看胆量；离开期间不能用。回来那天发 ev.any.demand_return，当场按他的胆量掷，不成就是没回来，记为 person_state gone。也可以交 60 蚨顶替。办不成走默认中档：查封三天。依据 era.json 第一关：小镇沦陷不久，伪维持会管事。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.people.t2",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "people",
+      "tier": 2,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "people": {
+          "n": 2,
+          "away_days": 10,
+          "return_check": {
+            "attr": "nerve",
+            "need": 2
+          }
+        },
+        "substitute": {
+          "money": 140
+        }
+      },
+      "slots": [
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "attr": "nerve",
+          "max": 2
+        }
+      ],
+      "art": "illus.dm.people",
+      "brief": "1938 年，名目是伪维持会摊派（月底伪维新政府在南京成立，这一关仍按伪维持会写）。修路，人更多：七天内派 2 个人，离开 10 天。格子放自己或人脉，看胆量；离开期间不能用。回来那天发 ev.any.demand_return，当场按他的胆量掷，不成就是没回来，记为 person_state gone。也可以交 140 蚨顶替。办不成走默认大档：拿走一件家当。依据 era.json 第一关：小镇沦陷不久，伪维持会管事。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.people.t3",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "people",
+      "tier": 3,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "people": {
+          "n": 3,
+          "away_days": 14,
+          "return_check": {
+            "attr": "nerve",
+            "need": 3
+          }
+        },
+        "substitute": {
+          "money": 280
+        }
+      },
+      "slots": [
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "attr": "nerve",
+          "max": 3
+        }
+      ],
+      "art": "illus.dm.people",
+      "brief": "1938 年，名目是伪维持会摊派（月底伪维新政府在南京成立，这一关仍按伪维持会写）。凑差役名额：七天内派 3 个人，离开 14 天。格子放自己或人脉，看胆量；离开期间不能用。回来那天发 ev.any.demand_return，当场按他的胆量掷，不成就是没回来，记为 person_state gone。也可以交 280 蚨顶替。办不成走默认要命档：进牢房。依据 era.json 第一关：小镇沦陷不久，伪维持会管事。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.info.t0",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "info",
+      "tier": 0,
+      "tags": [
+        "levy",
+        "official",
+        "informer"
+      ],
+      "resolve": {
+        "info": {
+          "n": 1
+        },
+        "fabricate": {
+          "attr": "nerve",
+          "need": 1,
+          "on_fail": [
+            {
+              "op": "heat",
+              "delta": 4
+            }
+          ]
+        }
+      },
+      "slots": [
+        {
+          "id": "news",
+          "accepts": [
+            "news"
+          ],
+          "max": 1
+        }
+      ],
+      "art": "illus.dm.info",
+      "brief": "1938 年，名目是伪维持会摊派（月底伪维新政府在南京成立，这一关仍按伪维持会写）。要 1 条消息，说的是谁最近常来铺里，不指定具体的人，也不引用还没写的消息牌。格子收留着的消息，交出去会走那张消息自己的 on_inform。也可以编一个：按胆量掷，不成则风声升高。第一关第 7 天若抽到要消息，就是这一张：编一个的门槛最低。办不成走默认小档：罚一笔钱。依据 era.json 第一关：小镇沦陷不久，伪维持会管事。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.info.t1",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "info",
+      "tier": 1,
+      "tags": [
+        "levy",
+        "official",
+        "informer"
+      ],
+      "resolve": {
+        "info": {
+          "n": 2
+        },
+        "fabricate": {
+          "attr": "nerve",
+          "need": 1,
+          "on_fail": [
+            {
+              "op": "heat",
+              "delta": 8
+            }
+          ]
+        }
+      },
+      "slots": [
+        {
+          "id": "news",
+          "accepts": [
+            "news"
+          ],
+          "max": 2
+        }
+      ],
+      "art": "illus.dm.info",
+      "brief": "1938 年，名目是伪维持会摊派（月底伪维新政府在南京成立，这一关仍按伪维持会写）。要 2 条消息，说的是哪家铺子进了货，不指定具体的人，也不引用还没写的消息牌。格子收留着的消息，交出去会走那张消息自己的 on_inform。也可以编一个：按胆量掷，不成则风声升高。办不成走默认中档：查封三天。依据 era.json 第一关：小镇沦陷不久，伪维持会管事。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.info.t2",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "info",
+      "tier": 2,
+      "tags": [
+        "levy",
+        "official",
+        "informer"
+      ],
+      "resolve": {
+        "info": {
+          "n": 2
+        },
+        "fabricate": {
+          "attr": "nerve",
+          "need": 2,
+          "on_fail": [
+            {
+              "op": "heat",
+              "delta": 12
+            }
+          ]
+        }
+      },
+      "slots": [
+        {
+          "id": "news",
+          "accepts": [
+            "news"
+          ],
+          "max": 2
+        }
+      ],
+      "art": "illus.dm.info",
+      "brief": "1938 年，名目是伪维持会摊派（月底伪维新政府在南京成立，这一关仍按伪维持会写）。要 2 条消息，说的是谁跟官面走得近，不指定具体的人，也不引用还没写的消息牌。格子收留着的消息，交出去会走那张消息自己的 on_inform。也可以编一个：按胆量掷，不成则风声升高。办不成走默认大档：拿走一件家当。依据 era.json 第一关：小镇沦陷不久，伪维持会管事。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1938.info.t3",
+      "type": "demand",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "kind": "info",
+      "tier": 3,
+      "tags": [
+        "levy",
+        "official",
+        "informer"
+      ],
+      "resolve": {
+        "info": {
+          "n": 3
+        },
+        "fabricate": {
+          "attr": "nerve",
+          "need": 3,
+          "on_fail": [
+            {
+              "op": "heat",
+              "delta": 20
+            }
+          ]
+        }
+      },
+      "slots": [
+        {
+          "id": "news",
+          "accepts": [
+            "news"
+          ],
+          "max": 3
+        }
+      ],
+      "art": "illus.dm.info",
+      "brief": "1938 年，名目是伪维持会摊派（月底伪维新政府在南京成立，这一关仍按伪维持会写）。要 3 条消息，说的是谁可疑，不指定具体的人，也不引用还没写的消息牌。格子收留着的消息，交出去会走那张消息自己的 on_inform。也可以编一个：按胆量掷，不成则风声升高。办不成走默认要命档：进牢房。依据 era.json 第一关：小镇沦陷不久，伪维持会管事。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

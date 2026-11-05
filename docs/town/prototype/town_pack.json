@@ -1,0 +1,125 @@
+{
+  "version": "dehoudang-townpack/1",
+  "time": {
+    "slots": ["清晨", "上午", "中午", "下午", "傍晚", "夜"],
+    "slot_hours": [6, 9, 12, 15, 18, 21],
+    "season_days": 28,
+    "start_weekday": 0
+  },
+  "pressures": {
+    "rice_price": {"kind": "exogenous", "base": 1.0, "min": 0.8, "max": 1.8, "revert": 0.12, "noise": 0.04},
+    "med_price":  {"kind": "exogenous", "base": 1.0, "min": 0.8, "max": 2.0, "revert": 0.10, "noise": 0.05},
+    "rent_index": {"kind": "exogenous", "base": 1.0, "min": 1.0, "max": 1.6, "revert": 0.0, "noise": 0.0},
+    "heat":       {"kind": "endogenous", "base": 0.0, "min": 0.0, "max": 1.0, "half_life_days": 5},
+    "unrest":     {"kind": "endogenous", "base": 0.0, "min": 0.0, "max": 1.0, "half_life_days": 7}
+  },
+  "influence": {
+    "daily_cap": {"heat": 0.35, "unrest": 0.25},
+    "feeds": [
+      {"from": "rice_price", "above": 1.25, "to": "unrest", "gain": 0.10}
+    ]
+  },
+  "living_costs": [
+    {"id": "food", "label": "伙食", "period": "daily", "base": 4, "scale": "rice_price", "jitter": 0.15, "payee": "米行柜"},
+    {"id": "fuel", "label": "柴炭", "period": "daily", "base": 1, "season_mult": [1.0, 0.3, 0.8, 2.0], "jitter": 0.3, "payee": "柴炭铺"},
+    {"id": "rent", "label": "铺租", "period": "weekly", "weekday": 6, "base": 30, "scale": "rent_index", "jitter": 0.0, "payee": "保长"},
+    {"id": "mother_med", "label": "娘的药", "period": "daily", "base": 3, "scale": "med_price", "jitter": 0.2, "payee": "济生堂柜", "when": {"flag": "mother_sick"}}
+  ],
+  "buildings": {
+    "pawnshop":  {"name": "德厚当", "unlocked": true, "tags": ["shop", "player"]},
+    "teahouse":  {"name": "茶馆", "unlocked": true, "tags": ["social"]},
+    "ricehall":  {"name": "米行", "unlocked": true, "tags": ["shop"]},
+    "pharmacy":  {"name": "济生堂", "unlock": {"any": [{"day_gte": 3}, {"flag": "met_chen"}]}, "tags": ["shop"], "news": "济生堂重新开了门，陈叔叔托人带话让你去坐坐。"},
+    "police":    {"name": "警察所", "unlock": {"any": [{"day_gte": 6}, {"pressure_gte": ["unrest", 0.2]}]}, "tags": ["authority"], "news": "桥头新挂了“警察所”的牌子，门口站着两个背枪的。"},
+    "dock":      {"name": "码头", "unlock": {"day_gte": 8}, "tags": ["transport"], "news": "河上的卡撤了一道，码头又有船靠了。"},
+    "mansion":   {"name": "孙府", "unlock": {"stat_gte": ["koubei", 60]}, "tags": ["rich"], "news": "孙府管家递了帖子，请德厚当的掌柜去府上看几件老东西。"}
+  },
+  "npcs": {
+    "xiaoding": {
+      "home": "mansion", "roles": [], "cash": 6, "links": {"zhouma": 0.7, "laowang": 0.4},
+      "schedule": {"default": ["mansion", "ricehall", "mansion", "teahouse", "mansion", "mansion"]},
+      "visit": {"base": 0.10, "need_scale": 40, "intents": {"pawn": 1.0, "gossip": 0.5, "redeem": 2.0}}
+    },
+    "zhouma": {
+      "home": "teahouse", "roles": [], "cash": 20, "links": {"xiaoding": 0.7, "linsao": 0.9, "laowang": 0.5},
+      "schedule": {"default": ["teahouse", "ricehall", "teahouse", "teahouse", "pawnshop", "teahouse"]},
+      "visit": {"base": 0.35, "need_scale": 80, "intents": {"gossip": 2.0, "buy": 0.5}}
+    },
+    "linsao": {
+      "home": "teahouse", "roles": [], "cash": 15, "links": {"zhouma": 0.9},
+      "schedule": {"default": ["teahouse", "ricehall", "teahouse", "pharmacy", "teahouse", "teahouse"], "weather:雨": ["teahouse", "teahouse", "teahouse", "teahouse", "teahouse", "teahouse"]},
+      "visit": {"base": 0.12, "need_scale": 30, "intents": {"pawn": 1.5, "redeem": 2.0, "buy": 0.3}}
+    },
+    "laowang": {
+      "home": "ricehall", "roles": ["merchant"], "cash": 200, "links": {"zhouma": 0.5, "officer_qian": 0.6, "xiaoding": 0.4},
+      "schedule": {"default": ["ricehall", "ricehall", "ricehall", "teahouse", "ricehall", "ricehall"]},
+      "visit": {"base": 0.08, "need_scale": 200, "intents": {"sell": 1.0, "buy": 1.0}}
+    },
+    "officer_qian": {
+      "home": "police", "roles": ["authority"], "cash": 50, "links": {"laowang": 0.6},
+      "requires_building": "police",
+      "schedule": {"default": ["police", "police", "teahouse", "police", "police", "police"], "weekday:6": ["police", "pawnshop", "teahouse", "police", "police", "police"]},
+      "visit": {"base": 0.02, "need_scale": 100, "intents": {"inspect": 1.0, "buy": 0.2}, "heat_gain": 1.5}
+    }
+  },
+  "strangers": {
+    "per_day": {"base": 1.0, "unrest_gain": 2.0, "market_day_bonus": 1.0, "max": 4},
+    "archetypes": [
+      {"id": "refugee",   "weight": 1.0, "unrest_bias": 3.0, "intents": {"pawn": 3.0, "sell": 1.0}},
+      {"id": "peddler",   "weight": 2.0, "intents": {"sell": 2.0, "buy": 1.0}},
+      {"id": "student",   "weight": 0.7, "intents": {"pawn": 1.0, "sell": 1.0}},
+      {"id": "fence",     "weight": 0.4, "unrest_bias": 2.0, "intents": {"sell_stolen": 1.0}, "norm": "fence_goods"},
+      {"id": "collector", "weight": 0.3, "requires_building": "dock", "intents": {"buy": 2.0}}
+    ]
+  },
+  "wheels": [
+    {"id": "climate", "period": "day", "mode": "exogenous", "outcomes": [
+      {"id": "quiet", "weight": 5, "cooldown_days": 0, "effects": []},
+      {"id": "晴", "weight": 3, "cooldown_days": 0, "effects": [{"op": "weather", "value": "晴"}]},
+      {"id": "雨", "weight": 2, "cooldown_days": 1, "season_weights": [2, 1.5, 1, 0.5], "effects": [{"op": "weather", "value": "雨"}]},
+      {"id": "雾", "weight": 1, "cooldown_days": 0, "effects": [{"op": "weather", "value": "雾"}]},
+      {"id": "大风", "weight": 0.3, "cooldown_days": 6, "effects": [{"op": "weather", "value": "大风"}, {"op": "bill", "label": "修瓦", "min": 5, "max": 15, "payee": "泥瓦匠"}]}
+    ]},
+    {"id": "market", "period": "day", "mode": "exogenous", "outcomes": [
+      {"id": "quiet", "weight": 4, "cooldown_days": 0, "effects": []},
+      {"id": "rice_boat", "weight": 1.5, "cooldown_days": 2, "effects": [{"op": "pressure_add", "key": "rice_price", "value": -0.08}, {"op": "news", "text": "米船昨夜靠了码头，米行落了价。", "via": "挑担的"}]},
+      {"id": "no_boat", "weight": 1.2, "cooldown_days": 2, "effects": [{"op": "pressure_add", "key": "rice_price", "value": 0.10}, {"op": "news", "text": "河上设了卡，米船没来，米行一早涨了价。", "via": "挑担的"}]},
+      {"id": "requisition", "weight": 0.6, "cooldown_days": 5, "effects": [{"op": "pressure_add", "key": "med_price", "value": 0.15}, {"op": "news", "text": "城里的兵在各乡收药，西药一天一个价。", "via": "卖菜的"}]},
+      {"id": "fair_day", "weight": 0.8, "cooldown_days": 6, "effects": [{"op": "flag_today", "key": "market_day"}, {"op": "news", "text": "今天赶集，桥头人挤人。", "via": "街上"}]}
+    ]},
+    {"id": "civic", "period": "day", "mode": "endogenous", "outcomes": [
+      {"id": "quiet", "weight": 6, "cooldown_days": 0, "effects": []},
+      {"id": "patrol", "weight": 1, "cooldown_days": 1, "pressure": {"unrest": {"bias": 2.0}}, "effects": [{"op": "news", "text": "一队人从街口过去了，街上的人都低下头。", "via": "门外"}, {"op": "npc_feel", "where": "teahouse", "key": "fear", "value": 0.2}]},
+      {"id": "levy", "weight": 0.5, "cooldown_days": 7, "pressure": {"unrest": {"bias": 3.0}}, "effects": [{"op": "pressure_add", "key": "rent_index", "value": 0.1}, {"op": "news", "text": "维持会贴了告示：铺捐又要涨一成。", "via": "告示"}]},
+      {"id": "raid_pawnshop", "weight": 0.4, "cooldown_days": 6, "requires_building": "police", "pressure": {"heat": {"bias": 6.0, "min": 0.3}}, "effects": [{"op": "institution", "id": "police", "act": "raid", "target": "pawnshop"}, {"op": "pressure_add", "key": "heat", "value": -0.2}]}
+    ]}
+  ],
+  "building_decks": {
+    "ricehall": {"period": "day", "outcomes": [
+      {"id": "quiet", "weight": 6, "cooldown_days": 0, "effects": []},
+      {"id": "credit_cut", "weight": 1, "cooldown_days": 4, "pressure": {"unrest": {"bias": 2.0}}, "effects": [{"op": "rumor", "key": "rice_credit_cut", "origin": "laowang"}]},
+      {"id": "rice_theft", "weight": 0.5, "cooldown_days": 8, "effects": [{"op": "rumor", "key": "rice_stolen", "origin": "laowang"}, {"op": "spawn_visit", "who": "stranger:fence", "intent": "sell_stolen", "item": "rice", "delay_days": 1}]}
+    ]},
+    "teahouse": {"period": "day", "outcomes": [
+      {"id": "quiet", "weight": 5, "cooldown_days": 0, "effects": []},
+      {"id": "storyteller", "weight": 1, "cooldown_days": 3, "effects": [{"op": "flag_today", "key": "teahouse_busy"}]},
+      {"id": "quarrel", "weight": 0.6, "cooldown_days": 4, "effects": [{"op": "pressure_add", "key": "unrest", "value": 0.05}, {"op": "rumor", "key": "teahouse_quarrel", "origin": "zhouma"}]}
+    ]}
+  },
+  "communication": {"delay_slots": 1, "confidence_decay": 0.7, "relay_probability": 0.45, "max_hops": 3, "ttl_slots": 18, "min_confidence": 0.2},
+  "rumors": {
+    "rice_credit_cut": ["米行不赊账了", "米行要关门了", "镇上要断粮了"],
+    "rice_stolen": ["米行丢了两袋米", "有人偷了米行的米去当", "德厚当收贼赃"],
+    "teahouse_quarrel": ["茶馆里有人吵起来了", "茶馆里有人骂维持会", "茶馆里有人要闹事"],
+    "pawnshop_fenced": ["德厚当收了来路不明的东西", "德厚当专收贼赃", "德厚当跟湖匪有来往"]
+  },
+  "norms": [
+    {"id": "fence_goods", "act": "accept_stolen", "building": "pawnshop", "detect_probability": 0.35, "forgiveness": 0.4, "heat": 0.25, "rumor": "pawnshop_fenced"}
+  ],
+  "institutions": {
+    "police": {"building": "police", "acts": {
+      "raid": {"fine_min": 10, "fine_max": 40, "confiscate": "stolen", "news": "警察所的人进了德厚当，翻了半个时辰。"},
+      "inspect": {"news": "钱巡官在柜台前转了一圈，什么也没说。"}
+    }}
+  }
+}

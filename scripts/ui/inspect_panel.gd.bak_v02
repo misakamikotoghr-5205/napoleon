@@ -1,0 +1,245 @@
+# 验货面板：物品特写（64×64 放大 4 倍）+ 可检查部位。用放大镜点一个部位，揭开一条鉴定结果（写进档案簿）。
+# 不检查就谈价，只能看到很模糊的初始估价（设计稿“商品与鉴定系统”）。
+extends PanelContainer
+
+signal closed
+signal inspected(iid, pid)
+signal done_practice
+
+var main
+var session = null
+var iid: String = ""
+var practice: bool = false
+var closeup: Control
+var name_lbl: Label
+var info_lbl: Label
+var parts_box: VBoxContainer
+var findings: RichTextLabel
+var tabs_box: HBoxContainer
+var opts_box: HBoxContainer
+var close_btn: Button
+var hover_part: String = ""
+
+func _ready() -> void:
+	add_theme_stylebox_override("panel", UiStyle.box(Color("#f4e2b0"), Color("#3a2a1e"), 5, 3, 14))
+	var h := UiStyle.hbox(16)
+	add_child(h)
+	var left := UiStyle.vbox(6)
+	h.add_child(left)
+	tabs_box = UiStyle.hbox(4)
+	left.add_child(tabs_box)
+	closeup = Control.new()
+	closeup.custom_minimum_size = Vector2(300, 300)
+	closeup.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	closeup.draw.connect(_draw_closeup)
+	closeup.gui_input.connect(_closeup_input)
+	closeup.mouse_filter = Control.MOUSE_FILTER_STOP
+	left.add_child(closeup)
+	var right := UiStyle.vbox(6)
+	right.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	h.add_child(right)
+	name_lbl = UiStyle.title_label("", 28)
+	right.add_child(name_lbl)
+	info_lbl = UiStyle.label("", 15, UiStyle.INK_SOFT)
+	right.add_child(info_lbl)
+	right.add_child(UiStyle.label("用放大镜点部位（左图或下面的按钮）：", 15, UiStyle.INK_SOFT))
+	parts_box = UiStyle.vbox(4)
+	right.add_child(parts_box)
+	right.add_child(UiStyle.hsep())
+	findings = RichTextLabel.new()
+	findings.bbcode_enabled = true
+	findings.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	findings.add_theme_font_size_override("normal_font_size", 17)
+	findings.add_theme_color_override("default_color", UiStyle.INK)
+	right.add_child(findings)
+	opts_box = UiStyle.hbox(6)
+	right.add_child(opts_box)
+	close_btn = UiStyle.button("放下（回柜台）", 17, "wood")
+	close_btn.pressed.connect(_on_close)
+	right.add_child(close_btn)
+
+func open(s, first_iid: String = "", is_practice: bool = false) -> void:
+	session = s
+	practice = is_practice
+	iid = first_iid if first_iid != "" else (s.item_ids[0] if not s.item_ids.is_empty() else "")
+	visible = true
+	_rebuild()
+
+func _rebuild() -> void:
+	for c in tabs_box.get_children():
+		tabs_box.remove_child(c)
+		c.queue_free()
+	if session.item_ids.size() > 1:
+		for i in session.item_ids:
+			var it: Dictionary = session.item(i)
+			var b := UiStyle.button(str(it["name"]).substr(0, 8), 13, "paper" if i != iid else "seal")
+			var id: String = i
+			b.pressed.connect(_select_item.bind(id))
+			tabs_box.add_child(b)
+	var it2: Dictionary = session.item(iid)
+	name_lbl.text = str(it2["name"])
+	var w := ""
+	if it2.get("weighed", false) and str(it2.get("weight", "")) != "":
+		w = "　重：%s" % it2["weight"]
+	info_lbl.text = "类别：%s%s" % [it2.get("cat_cn", ""), w]
+	for c in parts_box.get_children():
+		parts_box.remove_child(c)
+		c.queue_free()
+	var row: HBoxContainer = null
+	var i := 0
+	for p in it2.get("parts", []):
+		if i % 2 == 0:
+			row = UiStyle.hbox(4)
+			parts_box.add_child(row)
+		i += 1
+		var done: bool = session.inspected.get(iid, {}).has(p["id"])
+		var tool := str(p.get("tool", "magnifier"))
+		var usable: bool = session.can_use_tool(tool)
+		var prefix: String = {"magnifier": "镜", "scale": "秤", "book": "册", "hand": "手", "nose": "闻"}.get(tool, "看")
+		var hl: bool = _highlighted(p) and not done
+		var b2 := UiStyle.button(("✓ " if done else ("★" if hl else "") + "【%s】" % prefix) + str(p["label"]) + (str(p.get("highlight_note", "")) if hl else ""), 15, "seal" if hl else ("paper" if not done else "wood"), true)
+		b2.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		b2.disabled = not usable and not done
+		if not usable:
+			b2.tooltip_text = "需要%s（还没拿到）" % {"scale": "小秤", "book": "《沈记药材鉴别录》"}.get(tool, tool)
+		var pid: String = p["id"]
+		b2.pressed.connect(do_inspect.bind(pid))
+		b2.set_meta("pid", pid)
+		row.add_child(b2)
+	_refresh_findings()
+	for c in opts_box.get_children():
+		opts_box.remove_child(c)
+		c.queue_free()
+	if not practice and session.mode != "practice":
+		if session.split or (session.mode == "sell" and session.item_ids.size() > 1):
+			var cb := CheckBox.new()
+			cb.text = "这件也算进去" if session.mode != "sell" else "这件要卖"
+			cb.button_pressed = session.selected.get(iid, true)
+			cb.add_theme_color_override("font_color", UiStyle.INK)
+			cb.add_theme_color_override("font_pressed_color", UiStyle.INK)
+			cb.add_theme_color_override("font_hover_color", UiStyle.INK)
+			cb.toggled.connect(_on_select_toggled)
+			opts_box.add_child(cb)
+		var fk := CheckBox.new()
+		fk.text = "我看这是假货"
+		fk.button_pressed = session.judged.get(iid, "") == "fake"
+		fk.add_theme_color_override("font_color", UiStyle.SEAL)
+		fk.add_theme_color_override("font_pressed_color", UiStyle.SEAL)
+		fk.add_theme_color_override("font_hover_color", UiStyle.SEAL)
+		fk.toggled.connect(_on_fake_toggled)
+		opts_box.add_child(fk)
+	if main != null and main.world != null and main.world.unlocked.get("medbook", false) and str(it2.get("cat", "")) == "medicine":
+		var mb := UiStyle.button("翻《沈记药材鉴别录》对照", 15, "wood")
+		mb.pressed.connect(main._open_medbook)
+		opts_box.add_child(mb)
+	close_btn.text = "看完了" if practice else "放下（回柜台）"
+	close_btn.disabled = practice and session.inspected_total() < 1
+	closeup.queue_redraw()
+
+func _select_item(id: String) -> void:
+	iid = id
+	_rebuild()
+
+func _on_select_toggled(on: bool) -> void:
+	session.set_selected(iid, on)
+	if main != null:
+		main.sidebar.refresh_session()
+
+func _on_fake_toggled(on: bool) -> void:
+	session.set_judged(iid, "fake" if on else "")
+
+func _refresh_findings() -> void:
+	var t := ""
+	var it: Dictionary = session.item(iid)
+	for p in it.get("parts", []):
+		if session.inspected.get(iid, {}).has(p["id"]):
+			var col := "#b0262a" if p.get("tell", false) else "#1f1712"
+			t += "[color=#5a3f2a]%s：[/color][color=%s]%s[/color]\n" % [p["label"], col, str(p.get("_shown", p["text"])).replace("[", "[lb]")]
+	if t == "":
+		t = "[color=#7b5638]（还没细看。客人说的不算数。）[/color]"
+	findings.text = t
+
+func do_inspect(pid: String) -> void:
+	if session == null:
+		return
+	var r: String = session.inspect(iid, pid)
+	if main != null and main.beeper != null:
+		main.beeper.click()
+	emit_signal("inspected", iid, pid)
+	_rebuild()
+	if r != "" and not session.pending_events.is_empty() and not practice:
+		_on_close()
+
+# 部位自动高亮：例如看过赵老三的契，再看孙少爷的“四至”会自己跳出来（设计稿）
+func _highlighted(p: Dictionary) -> bool:
+	var f := str(p.get("highlight_if", ""))
+	return f != "" and main != null and main.world != null and main.world.flags.get(f, false)
+
+func _part_rect(p: Dictionary) -> Rect2:
+	var r: Array = p.get("rect", [])
+	if r.size() != 4:
+		return Rect2()
+	var sc := closeup.size.x / 64.0
+	return Rect2(r[0] * sc, r[1] * sc, r[2] * sc, r[3] * sc)
+
+func _draw_closeup() -> void:
+	if session == null or iid == "":
+		return
+	var it: Dictionary = session.item(iid)
+	closeup.draw_rect(Rect2(Vector2.ZERO, closeup.size), Color("#3a2a1e"))
+	closeup.draw_rect(Rect2(Vector2(4, 4), closeup.size - Vector2(8, 8)), Color("#5a3f2a"))
+	var tx := DB.tex(str(it.get("sprite", "")))
+	if tx != null:
+		closeup.draw_texture_rect(tx, Rect2(Vector2.ZERO, closeup.size), false)
+	for p in it.get("parts", []):
+		var r := _part_rect(p)
+		if r.size == Vector2.ZERO:
+			continue
+		var done: bool = session.inspected.get(iid, {}).has(p["id"])
+		if p["id"] == hover_part:
+			closeup.draw_rect(r, Color(1.0, 0.82, 0.35, 0.9), false, 3.0)
+		elif _highlighted(p) and not done:
+			closeup.draw_rect(r, Color(1.0, 0.82, 0.35, 0.5 + 0.5 * sin(Time.get_ticks_msec() / 200.0)), false, 3.0)
+		elif done:
+			closeup.draw_rect(r, Color(0.69, 0.15, 0.16, 0.55) if p.get("tell", false) else Color(0.3, 0.42, 0.23, 0.6), false, 2.0)
+		else:
+			closeup.draw_rect(r, Color(1, 1, 1, 0.18), false, 1.0)
+
+func _part_at(pos: Vector2) -> String:
+	var it: Dictionary = session.item(iid)
+	var best := ""
+	var best_area := 1e9
+	for p in it.get("parts", []):
+		var r := _part_rect(p)
+		if r.has_point(pos) and r.get_area() < best_area:
+			best = p["id"]
+			best_area = r.get_area()
+	return best
+
+func _process(_d: float) -> void:
+	if visible and closeup != null:
+		closeup.queue_redraw()
+
+func _closeup_input(ev: InputEvent) -> void:
+	if session == null:
+		return
+	if ev is InputEventMouseMotion:
+		var h := _part_at(ev.position)
+		if h != hover_part:
+			hover_part = h
+			closeup.mouse_default_cursor_shape = Control.CURSOR_CROSS if h != "" else Control.CURSOR_ARROW
+			closeup.queue_redraw()
+	elif ev is InputEventMouseButton and ev.pressed and ev.button_index == MOUSE_BUTTON_LEFT:
+		var p := _part_at(ev.position)
+		if p != "":
+			do_inspect(p)
+
+func _on_close() -> void:
+	if practice:
+		if session.inspected_total() < 1:
+			return
+		visible = false
+		emit_signal("done_practice")
+		return
+	visible = false
+	emit_signal("closed")

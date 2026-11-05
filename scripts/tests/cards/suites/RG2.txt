@@ -1,0 +1,7 @@
+# RG2 肉鸽 v1：周末盘账、客源、stock_offer（货郎）、种子（docs/cards/rogue/ROGUE_V1.md §14 RG2）
+RG2_seed|res://scripts/tests/cards/RG2/test_seed.gd|180|
+RG2_stocktake|res://scripts/tests/cards/RG2/test_stocktake.gd|240|
+RG2_sources|res://scripts/tests/cards/RG2/test_sources.gd|180|
+RG2_peddler|res://scripts/tests/cards/RG2/test_peddler.gd|180|
+RG2_zero|res://scripts/tests/cards/RG2/test_zero.gd|180|
+RG2_validate|res://scripts/cards/core/validate_main.gd|120|--mode=strict --only=data/cards/ui_keys/RG2.json,data/cards/text_ai/ui/RG2.text.json --name=RG2_validate

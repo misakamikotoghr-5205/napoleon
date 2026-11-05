@@ -1,0 +1,353 @@
+{
+  "_meta": {
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-misc"
+  },
+  "df.brother.1939.after_farewell": {
+    "body": "又过了一年，哥哥交代的那几条规矩，你还记在账簿头一页。"
+  },
+  "df.brother.1939.first_letter": {
+    "body": "哥哥离家后的第一封信送到时，信纸被撕成了几片。"
+  },
+  "df.brother.1939.quiet": {
+    "body": "哥哥的信还肯寄到铺子来，信里的事你没对外人提。"
+  },
+  "df.zhouma.1939.after_kitchen": {
+    "body": "隔了一年，你又翻到周妈那口铜锅的当票。"
+  },
+  "df.zhouma.1939.heard_dock": {
+    "body": "周妈又说，水边有人见过那个便衣青年。"
+  },
+  "df.linsao.1939.after_hairpin": {
+    "body": "隔了一年，你又翻出那支金簪的当票看了看。"
+  },
+  "df.linsao.1939.child": {
+    "body": "隔了一年，有人提起林嫂孩子的消息。"
+  },
+  "df.linsao.1939.quiet": {
+    "body": "林嫂孩子的事，你没拿去交差。"
+  },
+  "df.wangshan.1939.after_dock": {
+    "body": "隔了一年，码头上还有人记得见过王山。"
+  },
+  "df.wangshan.1939.whereabouts": {
+    "body": "有人把王山的下落说到了实处。"
+  },
+  "df.wangshan.1939.whisper": {
+    "body": "又有人提起水边，王山的下落却还没有着落。"
+  },
+  "df.wangshan.1939.quiet": {
+    "body": "王山的下落，你没拿去交差。"
+  },
+  "df.zhao.1939.after_land": {
+    "body": "隔了一年，你又翻出赵老三那张当票，打听田里的收成。"
+  },
+  "df.zhao.1939.year_end": {
+    "body": "年关，赵老三把冬衣也当了。"
+  },
+  "df.zhao.1939.crowd": {
+    "body": "年关柜台前人多，有人说赵老三也在队里。"
+  },
+  "df.zhao.1939.fuel": {
+    "body": "柴价涨起来的时候，有人提起赵家的灶火。"
+  },
+  "df.zhao.1939.quiet": {
+    "body": "年关的事，你没拿去交差。"
+  },
+  "df.ma.1939.after_levy": {
+    "body": "隔了一年，你又问起那笔摊派最后落在了谁头上。"
+  },
+  "df.ma.1939.post": {
+    "body": "伪县政府、伪区公所接了伪维持会的事，马保长还是镇上出面的人。"
+  },
+  "df.hu2.1939.after_errand": {
+    "body": "隔了一年，你留意胡二是否还在保长身边跑腿。"
+  },
+  "df.hu2.1939.rounds": {
+    "body": "城门设岗以后，有人说胡二也去衙门口候着。"
+  },
+  "df.chen.1939.after_clinic": {
+    "body": "隔了一年，你又去济生堂门口看过，留意它还开不开门。"
+  },
+  "df.chen.1939.code": {
+    "body": "有人寄给陈叔叔一封没译开的短笺，看得出是在用电码找他。"
+  },
+  "df.chen.1939.quiet": {
+    "body": "那封短笺的事，你没交出去。"
+  },
+  "df.xiaoding.1939.after_rice": {
+    "body": "隔了一年，你又翻出那袋米的当票看了看。"
+  },
+  "df.xiaoding.1939.still": {
+    "body": "年关，小丁还在孙家灶上做事。"
+  },
+  "df.zhang.1939.after_sulfa": {
+    "body": "隔了一年，你又翻出那板药的当票看了看。"
+  },
+  "df.zhang.1939.ward": {
+    "body": "张护士说，病房里人多，药更紧了。"
+  },
+  "df.zhang.1939.quiet": {
+    "body": "病房里的难处，你没交出去。"
+  },
+  "df.li.1939.after_books": {
+    "body": "隔了一年，你看看那几本旧书还在不在架上。"
+  },
+  "df.li.1939.gate": {
+    "body": "城门盘查时，有人看见学生模样的人被拦下问证件。"
+  },
+  "df.li.1939.school": {
+    "body": "又有人说，学堂里的人少了。"
+  },
+  "df.li.1939.quiet": {
+    "body": "城门口的事，你没交出去。"
+  },
+  "df.sunyoung.1939.after_deed": {
+    "body": "隔了一年，那张契没有下文，孙家也没人来认。"
+  },
+  "df.sunyoung.1939.spend": {
+    "body": "年关，有人说孙少爷还在铺子外头转悠。"
+  },
+  "df.sunlaoye.1939.after_guild": {
+    "body": "隔了一年，你留意商会是否还由孙老爷出面。"
+  },
+  "df.sunlaoye.1939.market": {
+    "body": "日商压着茧行和米行的时候，有人说商会一声不吭。"
+  },
+  "df.sunlaoye.1939.quiet": {
+    "body": "茧和米的行市，你没拿去交差。"
+  },
+  "df.sunlaoye.1939.quiet_house": {
+    "body": "孙府闭门不出的事，你没交出去。"
+  },
+  "df.guanjia.1939.after_errand": {
+    "body": "隔了一年，你留意孙福是否还替孙府出门。"
+  },
+  "df.guanjia.1939.gate": {
+    "body": "孙福说城门设了岗，让府里的人少出门。"
+  },
+  "df.wu.1939.after_quote": {
+    "body": "隔了一年，你拿吴掌柜那年说的行市，对了对后来的米价。"
+  },
+  "df.wu.1939.price": {
+    "body": "年关，吴掌柜亲自把米价抬了上去。"
+  },
+  "df.wu.1939.board": {
+    "body": "街坊只说，米又紧了。"
+  },
+  "df.wu.1939.quiet": {
+    "body": "米紧的消息，你没拿去交差。"
+  },
+  "df.postman.1939.after_route": {
+    "body": "隔了一年，你留意邮路是否还照他说的日子走。"
+  },
+  "df.postman.1939.letter_run": {
+    "body": "腊月里，何启明把哥哥的第一封信送到了铺子。"
+  },
+  "df.postman.1939.rounds": {
+    "body": "有人看见何启明下雨天也照样出门送信。"
+  },
+  "df.postman.1939.quiet": {
+    "body": "何启明送信走的路线，你没交出去。"
+  },
+  "df.nf1938a.1939.after_pawn": {
+    "body": "隔了一年，那件家什还在架上，你打听钱阿根是否还在码头。"
+  },
+  "df.nf1938c.1939.after_ask": {
+    "body": "隔了一年，方小安没再来问书。"
+  },
+  "df.nf1939a.1939.coat": {
+    "body": "年关，柴佬来当冬衣，当铺门口的队排到了街上。"
+  },
+  "df.nf1939a.1939.heard": {
+    "body": "有人说，柴佬年后再来赎。"
+  },
+  "df.nf1939b.1939.gate": {
+    "body": "茧账捎来消息，城门口的盘查又紧了。"
+  },
+  "df.nf1939b.1939.said": {
+    "body": "茧账只说，证件要随身带着。"
+  },
+  "df.nf1939c.1939.cocoon": {
+    "body": "茧行被日商压了价，乡嫂把一包蚕茧拿来当了。"
+  },
+  "df.nf1939c.1939.heard": {
+    "body": "有人说，茧行的秤如今不由本地掌柜做主。"
+  },
+  "df.nf1939d.1939.word": {
+    "body": "区抄捎来一封口信，信不是他自己的。"
+  },
+  "df.nf1939d.1939.road": {
+    "body": "有人说，区抄走小路是为了避开城门。"
+  },
+  "df.brother.1939.letter": {
+    "body": "腊月里，哥哥的第一封家书到了，信不长，问铺子，也问你。"
+  },
+  "df.brother.1939.letter_argue": {
+    "body": "哥哥在信里没提临走那天的争执，只问铺子还开着没有。"
+  },
+  "df.brother.1939.letter_listen": {
+    "body": "哥哥在信里问，临走交代的那几条规矩，你还记不记得。"
+  },
+  "df.brother.1939.letter_note": {
+    "body": "家书末尾另附了一张小纸条，字写得很急。"
+  },
+  "df.chen.1939.clock": {
+    "body": "腊月里，陈叔叔来当一架座钟，人比从前显老了。"
+  },
+  "df.chen.1939.letter_route": {
+    "body": "家书到了之后，陈叔叔来问远方的信还走不走得通，你照实说了。"
+  },
+  "df.chen.1939.letter_unread": {
+    "body": "陈叔叔来问信路时，你照实说了，那封家书你还没拆开。"
+  },
+  "df.chen.1939.redeem": {
+    "body": "陈叔叔来赎他还没到期的当。"
+  },
+  "df.guanjia.1939.bangle": {
+    "body": "腊月里，孙福替孙府办年货，在铺子里买了一件首饰。"
+  },
+  "df.guanjia.1939.ledger": {
+    "body": "年关，孙福来打听都有谁来过柜台，你说了，他替府里记下。"
+  },
+  "df.hu2.1939.coat": {
+    "body": "腊月里，胡二来当了一件棉袄。"
+  },
+  "df.hu2.1939.redeem": {
+    "body": "胡二来赎他自己的当。"
+  },
+  "df.li.1939.redeem": {
+    "body": "李敬之来赎回了他的袍子。"
+  },
+  "df.li.1939.robe": {
+    "body": "腊月里，李敬之来当一件袍子。"
+  },
+  "df.linsao.1939.winter_coat": {
+    "body": "腊月里，林嫂来当一件冬衣。"
+  },
+  "df.linsao.1939.winter_redeem": {
+    "body": "林嫂来赎她的冬衣。"
+  },
+  "df.linsao.1939.year_end": {
+    "body": "年关，林嫂把冬衣当了，好凑钱过年。"
+  },
+  "df.ma.1939.office_hard": {
+    "body": "马保长板着脸来要你照办，你照办了。"
+  },
+  "df.ma.1939.office_soft": {
+    "body": "马保长软着声来商量，你应下了。"
+  },
+  "df.ma.1939.refused_hard": {
+    "body": "马保长板着脸来要你照办，你没答应。"
+  },
+  "df.ma.1939.refused_soft": {
+    "body": "马保长软着声来商量，你没答应。"
+  },
+  "df.nf1939b.1939.cocoon": {
+    "body": "茧账来打听茧农当在铺子里的东西，你答了他。"
+  },
+  "df.nf1939c.1939.scarf": {
+    "body": "腊月里，乡嫂来当一条围巾。"
+  },
+  "df.nf1939d.1939.office": {
+    "body": "区抄来要看铺子里的当，你拿给他看了。"
+  },
+  "df.postman.1939.held": {
+    "body": "哥哥的第一封家书，你先请何启明替你收着。"
+  },
+  "df.postman.1939.mail": {
+    "body": "何启明又来说起别的信和电报底稿。"
+  },
+  "df.sunlaoye.1939.ask": {
+    "body": "年关，孙老爷没买东西，只问铺子里还押着谁家的地契。"
+  },
+  "df.sunlaoye.1939.deed": {
+    "body": "孙老爷平日不到柜台，这回来买走了一张契。"
+  },
+  "df.sunyoung.1939.qipao": {
+    "body": "腊月里，孙少爷把一匹旗袍料拿来当，不想让府里知道。"
+  },
+  "df.sunyoung.1939.redeem": {
+    "body": "孙少爷来把那匹料子赎走了。"
+  },
+  "df.sunyoung.1939.scroll": {
+    "body": "孙少爷来买走了货架上的一幅书画。"
+  },
+  "df.wangshan.1939.redeem": {
+    "body": "王山来赎他自己的当。"
+  },
+  "df.wangshan.1939.ring": {
+    "body": "腊月里，王山来当一枚戒指。"
+  },
+  "df.wangshan.1939.sent_off": {
+    "body": "王山的下落有了着落，你送他上了路。"
+  },
+  "df.wangshan.1939.sheltered": {
+    "body": "王山的下落有了着落，你又收留了他一回。"
+  },
+  "df.wangshan.1939.wary": {
+    "body": "王山只来打听，不肯把东西押下。"
+  },
+  "df.wu.1939.rice_bought": {
+    "body": "腊月里，吴掌柜反过来收走了货架上的米。"
+  },
+  "df.wu.1939.rice_sold": {
+    "body": "腊月里，吴掌柜来卖给铺子一袋米。"
+  },
+  "df.wu.1939.supply": {
+    "body": "吴掌柜说，日商管着米行，乡下的米船哪天来，他也说不准。"
+  },
+  "df.xiaoding.1939.redeem": {
+    "body": "小丁来赎他自己的当。"
+  },
+  "df.xiaoding.1939.scarf_cold": {
+    "body": "腊月里，小丁来当一条围巾，话说得很少。"
+  },
+  "df.xiaoding.1939.scarf_known": {
+    "body": "腊月里，小丁来当一条围巾，跟你说了几句家里的事。"
+  },
+  "df.zhang.1939.coat": {
+    "body": "腊月里，张护士来当一件冬衣。"
+  },
+  "df.zhang.1939.medicine": {
+    "body": "腊月里，张护士来卖一些药。"
+  },
+  "df.zhang.1939.redeem": {
+    "body": "年前，张护士来赎她当的东西，好带回去过年。"
+  },
+  "df.zhao.1939.coat": {
+    "body": "腊月里，赵老三来当一件棉袄。"
+  },
+  "df.zhao.1939.redeem": {
+    "body": "赵老三来赎他自己的当。"
+  },
+  "df.zhao.1939.repay": {
+    "body": "腊月里，赵老三来还了一小笔钱，你收下了。"
+  },
+  "df.zhao.1939.waived": {
+    "body": "腊月里，赵老三来还钱，你没收。"
+  },
+  "df.zhouma.1939.redeem": {
+    "body": "周妈来赎她自己的当。"
+  },
+  "df.zhouma.1939.rumor": {
+    "body": "周妈来传口风：码头上的事，米价，还有没有人打听王山。"
+  },
+  "df.zhouma.1939.scarf": {
+    "body": "腊月里，周妈来当一条围巾。"
+  },
+  "df.guanjia.1939.snub": {
+    "body": "孙老爷那回来时铺子打了烊，孙福上门问为什么关门，你把缘由说了。"
+  },
+  "df.ma.1939.grudge": {
+    "body": "那回打烊没接他，马保长记下了，摊派时你应下了这笔账。"
+  },
+  "df.ma.1939.grudge_refused": {
+    "body": "马保长记着打烊那回的仇来摊派，你没应下。"
+  },
+  "df.nf1939d.1939.return": {
+    "body": "区抄先前被冷落过，再来时，你还是让他看了没赎的当。"
+  },
+  "df.wu.1939.cold": {
+    "body": "吴掌柜放了冷话，叫铺子别跟他抢米。"
+  }
+}

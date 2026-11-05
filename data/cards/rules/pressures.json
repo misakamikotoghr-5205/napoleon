@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "owner": "G05",
+    "schema": 1
+  },
+  "pressures": {
+    "c_unrest": {
+      "kind": "exogenous",
+      "base_milli": 300,
+      "min_milli": 0,
+      "max_milli": 1000,
+      "noise_milli": 40,
+      "revert_milli": 50
+    },
+    "c_support": {
+      "kind": "endogenous",
+      "base_milli": 300,
+      "min_milli": 0,
+      "max_milli": 1000,
+      "half_life_days": 10
+    }
+  },
+  "daily_cap_milli": {
+    "c_support": 200
+  }
+}

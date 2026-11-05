@@ -1,0 +1,1301 @@
+{
+  "_meta": {
+    "owner": "K08",
+    "schema": 1,
+    "brief": "档案页：主要人物、新面孔、有页的过路客。算命先生不设页。",
+    "_provenance": {
+      "by": "ai",
+      "task": "K08",
+      "date": "2026-10-13"
+    }
+  },
+  "cards": [
+    {
+      "id": "dp.brother",
+      "type": "dossier_page",
+      "person": "brother",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.brother.1938.farewell",
+        "df.brother.1938.farewell_cold",
+        "df.brother.1938.de196",
+        "df.brother.1938.quiet",
+        "df.brother.1939.after_farewell",
+        "df.brother.1939.first_letter",
+        "df.brother.1939.quiet",
+        "df.brother.1940.after_letter",
+        "df.brother.1940.road",
+        "df.brother.any.family_word",
+        "df.brother.any.trust",
+        "df.brother.1938.ticket196",
+        "df.brother.1939.letter",
+        "df.brother.1939.letter_argue",
+        "df.brother.1939.letter_listen",
+        "df.brother.1939.letter_note",
+        "df.brother.1940.letter",
+        "df.brother.1940.letter_cold",
+        "df.brother.1940.link_from_chen"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.brother",
+            "value": true
+          }
+        ]
+      },
+      "brief": "少东家一页。补齐只设旗标给结局用，不收人脉，人已经离开。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.chen",
+      "type": "dossier_page",
+      "person": "chen",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.chen.1938.clinic",
+        "df.chen.1938.wire",
+        "df.chen.1938.old_post",
+        "df.chen.1938.quiet",
+        "df.chen.1939.after_clinic",
+        "df.chen.1939.code",
+        "df.chen.1939.quiet",
+        "df.chen.1940.after_code",
+        "df.chen.1940.plain",
+        "df.chen.1940.scrap",
+        "df.chen.1940.link",
+        "df.chen.1940.exposed",
+        "df.chen.1938.farewell",
+        "df.chen.1938.scroll",
+        "df.chen.1938.ticket",
+        "df.chen.1939.clock",
+        "df.chen.1939.letter_route",
+        "df.chen.1939.letter_unread",
+        "df.chen.1939.redeem",
+        "df.chen.1940.link_one",
+        "df.chen.1940.quinine",
+        "df.chen.1940.redeemed"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "contact_gain",
+            "person": "chen"
+          }
+        ]
+      },
+      "brief": "济生堂旧识一页。补齐后可以成为人脉。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.xiaoding",
+      "type": "dossier_page",
+      "person": "xiaoding",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.xiaoding.1938.rice",
+        "df.xiaoding.1938.mother",
+        "df.xiaoding.1938.kitchen",
+        "df.xiaoding.1938.quiet",
+        "df.xiaoding.1939.after_rice",
+        "df.xiaoding.1939.still",
+        "df.xiaoding.1940.after_still",
+        "df.xiaoding.1940.stay",
+        "df.xiaoding.1940.quiet",
+        "df.xiaoding.1939.redeem",
+        "df.xiaoding.1939.scarf_cold",
+        "df.xiaoding.1939.scarf_known",
+        "df.xiaoding.1940.redeemed",
+        "df.xiaoding.1940.rice"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "contact_gain",
+            "person": "xiaoding"
+          }
+        ]
+      },
+      "brief": "孙家小伙计一页。补齐后可以成为人脉。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.zhang",
+      "type": "dossier_page",
+      "person": "zhang",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.zhang.1938.sulfa",
+        "df.zhang.1938.hospital",
+        "df.zhang.1938.ticket",
+        "df.zhang.1938.quiet",
+        "df.zhang.1939.after_sulfa",
+        "df.zhang.1939.ward",
+        "df.zhang.1939.quiet",
+        "df.zhang.1940.after_ward",
+        "df.zhang.1940.short",
+        "df.zhang.1940.quiet",
+        "df.zhang.1938.shanghai",
+        "df.zhang.1939.coat",
+        "df.zhang.1939.medicine",
+        "df.zhang.1939.redeem",
+        "df.zhang.1940.sulfa",
+        "df.zhang.1940.ward"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "contact_gain",
+            "person": "zhang"
+          }
+        ]
+      },
+      "brief": "县城医院护士一页。补齐后可以成为人脉。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.wangshan",
+      "type": "dossier_page",
+      "person": "wangshan",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.wangshan.1938.dock",
+        "df.wangshan.1938.trust",
+        "df.wangshan.1938.meet",
+        "df.wangshan.1939.after_dock",
+        "df.wangshan.1939.whereabouts",
+        "df.wangshan.1939.whisper",
+        "df.wangshan.1939.quiet",
+        "df.wangshan.1940.after_where",
+        "df.wangshan.1938.food",
+        "df.wangshan.1938.met",
+        "df.wangshan.1938.road",
+        "df.wangshan.1938.turned",
+        "df.wangshan.1939.redeem",
+        "df.wangshan.1939.ring",
+        "df.wangshan.1939.sent_off",
+        "df.wangshan.1939.sheltered",
+        "df.wangshan.1939.wary",
+        "df.wangshan.1940.link_from_chen",
+        "df.wangshan.1940.lost",
+        "df.wangshan.1940.shelter",
+        "df.wangshan.1940.turned"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "contact_gain",
+            "person": "wangshan"
+          }
+        ]
+      },
+      "brief": "便衣青年一页。补齐后可以成为人脉。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.li",
+      "type": "dossier_page",
+      "person": "li",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.li.1938.books",
+        "df.li.1938.school",
+        "df.li.1938.poster",
+        "df.li.1939.after_books",
+        "df.li.1939.gate",
+        "df.li.1939.school",
+        "df.li.1939.quiet",
+        "df.li.1940.after_gate",
+        "df.li.1940.gate",
+        "df.li.1940.quiet",
+        "df.li.1938.letter",
+        "df.li.1938.redeem",
+        "df.li.1939.redeem",
+        "df.li.1939.robe",
+        "df.li.1940.calligraphy",
+        "df.li.1940.school"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "contact_gain",
+            "person": "li"
+          }
+        ]
+      },
+      "brief": "县立中学学生一页。补齐后可以成为人脉。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.linsao",
+      "type": "dossier_page",
+      "person": "linsao",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.linsao.1938.hairpin",
+        "df.linsao.1938.husband",
+        "df.linsao.1938.neighbors",
+        "df.linsao.1938.term",
+        "df.linsao.1938.quiet",
+        "df.linsao.1939.after_hairpin",
+        "df.linsao.1939.child",
+        "df.linsao.1939.quiet",
+        "df.linsao.1940.after_child",
+        "df.linsao.1938.forfeit",
+        "df.linsao.1938.redeem",
+        "df.linsao.1938.wait",
+        "df.linsao.1939.winter_coat",
+        "df.linsao.1939.winter_redeem",
+        "df.linsao.1939.year_end",
+        "df.linsao.1940.coat",
+        "df.linsao.1940.gone_word",
+        "df.linsao.1940.redeemed"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "contact_gain",
+            "person": "linsao"
+          }
+        ]
+      },
+      "brief": "船户家里的人一页。补齐后可以成为人脉。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.zhouma",
+      "type": "dossier_page",
+      "person": "zhouma",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.zhouma.1938.tut_news",
+        "df.zhouma.1938.teahouse",
+        "df.zhouma.1938.kitchen",
+        "df.zhouma.1938.quiet",
+        "df.zhouma.1939.after_kitchen",
+        "df.zhouma.1939.heard_dock",
+        "df.zhouma.1940.after_dock",
+        "df.zhouma.1940.teahouse_word",
+        "df.zhouma.1940.hook",
+        "df.zhouma.1940.quiet",
+        "df.zhouma.1938.meal",
+        "df.zhouma.1938.police_open",
+        "df.zhouma.1938.town",
+        "df.zhouma.1938.zhao",
+        "df.zhouma.1939.redeem",
+        "df.zhouma.1939.rumor",
+        "df.zhouma.1939.scarf",
+        "df.zhouma.1940.scarf",
+        "df.zhouma.1940.tea",
+        "df.zhouma.1940.tea_cold"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "contact_gain",
+            "person": "zhouma"
+          }
+        ]
+      },
+      "brief": "茶馆厨娘一页。补齐后成为人脉。和第7天教学给人脉不冲突，已有则不重复。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.zhao",
+      "type": "dossier_page",
+      "person": "zhao",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.zhao.1938.borrow",
+        "df.zhao.1938.land",
+        "df.zhao.1938.neighbors",
+        "df.zhao.1938.quiet",
+        "df.zhao.1939.after_land",
+        "df.zhao.1939.year_end",
+        "df.zhao.1939.crowd",
+        "df.zhao.1939.fuel",
+        "df.zhao.1939.quiet",
+        "df.zhao.1940.after_year_end",
+        "df.zhao.1938.partial",
+        "df.zhao.1938.redeem",
+        "df.zhao.1938.refused",
+        "df.zhao.1938.robe",
+        "df.zhao.1938.thanks",
+        "df.zhao.1939.coat",
+        "df.zhao.1939.redeem",
+        "df.zhao.1939.repay",
+        "df.zhao.1939.waived",
+        "df.zhao.1940.field",
+        "df.zhao.1940.lent_again",
+        "df.zhao.1940.redeemed"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.zhao",
+            "value": true
+          }
+        ]
+      },
+      "brief": "佃户一页。补齐只设旗标，不在人脉名单里。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.sunyoung",
+      "type": "dossier_page",
+      "person": "sunyoung",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.sunyoung.1938.deed",
+        "df.sunyoung.1938.temper",
+        "df.sunyoung.1938.street",
+        "df.sunyoung.1938.quiet",
+        "df.sunyoung.1939.after_deed",
+        "df.sunyoung.1939.spend",
+        "df.sunyoung.1938.jade",
+        "df.sunyoung.1939.qipao",
+        "df.sunyoung.1939.redeem",
+        "df.sunyoung.1939.scroll",
+        "df.sunyoung.1940.borrow",
+        "df.sunyoung.1940.redeemed",
+        "df.sunyoung.1940.ring"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.sunyoung",
+            "value": true
+          }
+        ]
+      },
+      "brief": "孙家独子一页。补齐只设旗标。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.ma",
+      "type": "dossier_page",
+      "person": "ma",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.ma.1938.levy",
+        "df.ma.1938.clip",
+        "df.ma.1938.street",
+        "df.ma.1938.quiet",
+        "df.ma.1939.after_levy",
+        "df.ma.1939.post",
+        "df.ma.1940.after_post",
+        "df.ma.1940.levy_word",
+        "df.ma.1940.new_post",
+        "df.ma.1940.quiet",
+        "df.ma.1938.levy_no",
+        "df.ma.1938.names",
+        "df.ma.1938.rice",
+        "df.ma.1939.office_hard",
+        "df.ma.1939.office_soft",
+        "df.ma.1939.refused_hard",
+        "df.ma.1939.refused_soft",
+        "df.ma.1940.levy_harsh",
+        "df.ma.1940.levy_new",
+        "df.ma.1940.levy_old",
+        "df.ma.1940.title_kept",
+        "df.ma.1940.title_new",
+        "df.ma.1939.grudge",
+        "df.ma.1939.grudge_refused"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "contact_gain",
+            "person": "ma"
+          }
+        ]
+      },
+      "brief": "伪维持会任命的保长一页。补齐后可以成为人脉。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.hu2",
+      "type": "dossier_page",
+      "person": "hu2",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.hu2.1938.errand",
+        "df.hu2.1938.route",
+        "df.hu2.1938.ledger",
+        "df.hu2.1938.police",
+        "df.hu2.1938.quiet",
+        "df.hu2.1939.after_errand",
+        "df.hu2.1939.rounds",
+        "df.hu2.1940.after_rounds",
+        "df.hu2.1940.regime",
+        "df.hu2.1940.clerk",
+        "df.hu2.1938.levy",
+        "df.hu2.1938.ring",
+        "df.hu2.1939.coat",
+        "df.hu2.1939.redeem",
+        "df.hu2.1940.gone",
+        "df.hu2.1940.slip_new",
+        "df.hu2.1940.slip_old",
+        "df.hu2.1940.title_new"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.hu2",
+            "value": true
+          }
+        ]
+      },
+      "brief": "保长身边跑腿的一页。补齐只设旗标。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.sunlaoye",
+      "type": "dossier_page",
+      "person": "sunlaoye",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.sunlaoye.1938.guild",
+        "df.sunlaoye.1938.visit",
+        "df.sunlaoye.1938.account",
+        "df.sunlaoye.1939.after_guild",
+        "df.sunlaoye.1939.market",
+        "df.sunlaoye.1939.quiet",
+        "df.sunlaoye.1939.quiet_house",
+        "df.sunlaoye.1940.after_quiet",
+        "df.sunlaoye.1940.stance",
+        "df.sunlaoye.1940.quiet",
+        "df.sunlaoye.1938.field",
+        "df.sunlaoye.1938.land",
+        "df.sunlaoye.1939.ask",
+        "df.sunlaoye.1939.deed",
+        "df.sunlaoye.1940.favor",
+        "df.sunlaoye.1940.pressure",
+        "df.sunlaoye.1940.stance_apart",
+        "df.sunlaoye.1940.stance_hedge",
+        "df.sunlaoye.1940.stance_with"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.sunlaoye",
+            "value": true
+          }
+        ]
+      },
+      "brief": "孙府当家一页。补齐只设旗标，表态在金色牌上。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.guanjia",
+      "type": "dossier_page",
+      "person": "guanjia",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.guanjia.1938.errand",
+        "df.guanjia.1938.list",
+        "df.guanjia.1938.kitchen",
+        "df.guanjia.1939.after_errand",
+        "df.guanjia.1939.gate",
+        "df.guanjia.1940.after_gate",
+        "df.guanjia.1940.stance_echo",
+        "df.guanjia.1938.ledger",
+        "df.guanjia.1938.rice",
+        "df.guanjia.1938.stranger",
+        "df.guanjia.1939.bangle",
+        "df.guanjia.1939.ledger",
+        "df.guanjia.1940.intro",
+        "df.guanjia.1940.pledge",
+        "df.guanjia.1940.scroll",
+        "df.guanjia.1939.snub"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "contact_gain",
+            "person": "guanjia"
+          }
+        ]
+      },
+      "brief": "孙府管家一页。补齐后可以成为人脉。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.wu",
+      "type": "dossier_page",
+      "person": "wu",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.wu.1938.rice_quote",
+        "df.wu.1938.shop",
+        "df.wu.1938.ticket",
+        "df.wu.1938.quiet",
+        "df.wu.1939.after_quote",
+        "df.wu.1939.price",
+        "df.wu.1939.board",
+        "df.wu.1939.quiet",
+        "df.wu.1940.after_price",
+        "df.wu.1940.board",
+        "df.wu.1940.quiet",
+        "df.wu.1938.buy",
+        "df.wu.1938.jing",
+        "df.wu.1939.rice_bought",
+        "df.wu.1939.rice_sold",
+        "df.wu.1939.supply",
+        "df.wu.1940.rice",
+        "df.wu.1940.stock",
+        "df.wu.1939.cold"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "contact_gain",
+            "person": "wu"
+          }
+        ]
+      },
+      "brief": "米行掌柜一页。补齐后可以成为人脉。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.postman",
+      "type": "dossier_page",
+      "person": "postman",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.postman.1938.route",
+        "df.postman.1938.stamp",
+        "df.postman.1938.window",
+        "df.postman.1938.quiet",
+        "df.postman.1939.after_route",
+        "df.postman.1939.letter_run",
+        "df.postman.1939.rounds",
+        "df.postman.1939.quiet",
+        "df.postman.1940.after_run",
+        "df.postman.1940.code_book",
+        "df.postman.1940.quiet",
+        "df.postman.1938.copy",
+        "df.postman.1938.letter",
+        "df.postman.1938.silence",
+        "df.postman.1939.held",
+        "df.postman.1939.mail",
+        "df.postman.1940.hook_letter",
+        "df.postman.1940.hook_sealed",
+        "df.postman.1940.mail"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "contact_gain",
+            "person": "postman"
+          }
+        ]
+      },
+      "brief": "邮电代办一页。补齐后可以成为人脉。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.nf1938a",
+      "type": "dossier_page",
+      "person": "nf1938a",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.nf1938a.1938.pawn",
+        "df.nf1938a.1938.heard",
+        "df.nf1938a.1939.after_pawn",
+        "df.nf1938a.1938.boat",
+        "df.nf1938a.1938.rice"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.nf1938a",
+            "value": true
+          }
+        ]
+      },
+      "brief": "新面孔：码头扛包，三十上下。dossier true。名字由 A 定。补齐只设旗标。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.nf1938b",
+      "type": "dossier_page",
+      "person": "nf1938b",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.nf1938b.1938.cloth",
+        "df.nf1938b.1938.heard",
+        "df.nf1938b.1938.bangle"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.nf1938b",
+            "value": true
+          }
+        ]
+      },
+      "brief": "新面孔：邻村来当衣服的妇人。dossier true。名字由 A 定。补齐只设旗标。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.nf1938c",
+      "type": "dossier_page",
+      "person": "nf1938c",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.nf1938c.1938.ask",
+        "df.nf1938c.1938.note",
+        "df.nf1938c.1939.after_ask",
+        "df.nf1938c.1938.med"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.nf1938c",
+            "value": true
+          }
+        ]
+      },
+      "brief": "新面孔：县城来问旧书的年轻人。dossier true。名字由 A 定。补齐只设旗标。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.nf1938d",
+      "type": "dossier_page",
+      "person": "nf1938d",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.nf1938d.1938.boat",
+        "df.nf1938d.1938.pawn",
+        "df.nf1938d.1938.watch"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.nf1938d",
+            "value": true
+          }
+        ]
+      },
+      "brief": "新面孔：船上帮手，有时带米。dossier true。名字由 A 定。补齐只设旗标。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.nf1939a",
+      "type": "dossier_page",
+      "person": "nf1939a",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.nf1939a.1939.coat",
+        "df.nf1939a.1939.heard",
+        "df.nf1939a.1940.after_coat"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.nf1939a",
+            "value": true
+          }
+        ]
+      },
+      "brief": "新面孔：年关来当冬衣。dossier true。名字由 A 定。补齐只设旗标。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.nf1939b",
+      "type": "dossier_page",
+      "person": "nf1939b",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.nf1939b.1939.gate",
+        "df.nf1939b.1939.said",
+        "df.nf1939b.1939.cocoon"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.nf1939b",
+            "value": true
+          }
+        ]
+      },
+      "brief": "新面孔：城门口那边的亲戚。dossier true。名字由 A 定。补齐只设旗标。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.nf1939c",
+      "type": "dossier_page",
+      "person": "nf1939c",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.nf1939c.1939.cocoon",
+        "df.nf1939c.1939.heard",
+        "df.nf1939c.1940.after_cocoon",
+        "df.nf1939c.1939.scarf"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.nf1939c",
+            "value": true
+          }
+        ]
+      },
+      "brief": "新面孔：茧被压价后的小贩。dossier true。名字由 A 定。补齐只设旗标。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.nf1939d",
+      "type": "dossier_page",
+      "person": "nf1939d",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.nf1939d.1939.word",
+        "df.nf1939d.1939.road",
+        "df.nf1939d.1939.office",
+        "df.nf1939d.1939.return"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.nf1939d",
+            "value": true
+          }
+        ]
+      },
+      "brief": "新面孔：乡下捎口信。dossier true。名字由 A 定。补齐只设旗标。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.nf1940a",
+      "type": "dossier_page",
+      "person": "nf1940a",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.nf1940a.1940.seal",
+        "df.nf1940a.1940.said",
+        "df.nf1940a.1940.register"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.nf1940a",
+            "value": true
+          }
+        ]
+      },
+      "brief": "新面孔：新官衙门的跑腿。dossier true。名字由 A 定。补齐只设旗标。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.nf1940b",
+      "type": "dossier_page",
+      "person": "nf1940b",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.nf1940b.1940.visit",
+        "df.nf1940b.1940.ask",
+        "df.nf1940b.1940.rumor"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.nf1940b",
+            "value": true
+          }
+        ]
+      },
+      "brief": "新面孔：孙府远亲，来探口风。dossier true。名字由 A 定。补齐只设旗标。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.nf1940c",
+      "type": "dossier_page",
+      "person": "nf1940c",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.nf1940c.1940.clip",
+        "df.nf1940c.1940.said",
+        "df.nf1940c.1940.redeemed",
+        "df.nf1940c.1940.robe"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.nf1940c",
+            "value": true
+          }
+        ]
+      },
+      "brief": "新面孔：收旧报纸，能把剪报对上人。dossier true。名字由 A 定。补齐只设旗标。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.nf1940d",
+      "type": "dossier_page",
+      "person": "nf1940d",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.nf1940d.1940.letter",
+        "df.nf1940d.1940.road",
+        "df.nf1940d.1940.half_ticket"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.nf1940d",
+            "value": true
+          }
+        ]
+      },
+      "brief": "新面孔：外地带着往后的信，这一关不收尾。dossier true。名字由 A 定。补齐只设旗标。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.stranger_refugee",
+      "type": "dossier_page",
+      "person": "stranger_refugee",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.stranger_refugee.any.bundle",
+        "df.stranger_refugee.any.kin",
+        "df.stranger_refugee.any.coat"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.stranger_refugee",
+            "value": true
+          }
+        ]
+      },
+      "brief": "过路客：逃难的人。有页。补齐只设旗标。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.stranger_peddler",
+      "type": "dossier_page",
+      "person": "stranger_peddler",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.stranger_peddler.any.tray",
+        "df.stranger_peddler.any.route",
+        "df.stranger_peddler.any.bowl"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.stranger_peddler",
+            "value": true
+          }
+        ]
+      },
+      "brief": "过路客：小贩。有页。补齐只设旗标。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.stranger_collector",
+      "type": "dossier_page",
+      "person": "stranger_collector",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.stranger_collector.any.ask",
+        "df.stranger_collector.any.shop",
+        "df.stranger_collector.any.art"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.stranger_collector",
+            "value": true
+          }
+        ]
+      },
+      "brief": "过路客：收古玩的。有页。补齐只设旗标。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.stranger_fence",
+      "type": "dossier_page",
+      "person": "stranger_fence",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.stranger_fence.any.box",
+        "df.stranger_fence.any.lane",
+        "df.stranger_fence.any.ring"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.stranger_fence",
+            "value": true
+          }
+        ]
+      },
+      "brief": "过路客：来路说不清的货。有页。补齐只设旗标。不写转手手法。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.stranger_waixiang",
+      "type": "dossier_page",
+      "person": "stranger_waixiang",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.stranger_waixiang.any.coat",
+        "df.stranger_waixiang.any.thanks",
+        "df.stranger_waixiang.any.alms",
+        "df.stranger_waixiang.any.scarf"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.stranger_waixiang",
+            "value": true
+          }
+        ]
+      },
+      "brief": "过路客：外乡人。白给几个钱也会记上这一页。补齐只设旗标。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.stranger_boatman",
+      "type": "dossier_page",
+      "person": "stranger_boatman",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.stranger_boatman.any.boat",
+        "df.stranger_boatman.any.net",
+        "df.stranger_boatman.any.dock"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.stranger_boatman",
+            "value": true
+          }
+        ]
+      },
+      "brief": "过路客：船上的人。有页。补齐只设旗标。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.stranger_student",
+      "type": "dossier_page",
+      "person": "stranger_student",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.stranger_student.any.book",
+        "df.stranger_student.any.road"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.stranger_student",
+            "value": true
+          }
+        ]
+      },
+      "brief": "过路客：过路学生。有页。补齐只设旗标。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dp.stranger_widow",
+      "type": "dossier_page",
+      "person": "stranger_widow",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "fragments": [
+        "df.stranger_widow.any.pin",
+        "df.stranger_widow.any.well",
+        "df.stranger_widow.any.help"
+      ],
+      "effects": {
+        "on_complete": [
+          {
+            "op": "flag",
+            "key": "k08.page.stranger_widow",
+            "value": true
+          }
+        ]
+      },
+      "brief": "过路客：过路的寡妇。有页。补齐只设旗标。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

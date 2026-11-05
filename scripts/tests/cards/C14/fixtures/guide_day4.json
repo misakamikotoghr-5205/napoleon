@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "owner": "C14",
+    "schema": 1,
+    "brief": "Legal shop day for gd.mg.weigh. Stage 0 starts 1938-03-01, so stage_day 4 is 1938-03-04 (weekday 4). stage_day and abs_day are both 4."
+  },
+  "guide_progress": {},
+  "view": {
+    "phase": "day",
+    "mode": "shop",
+    "stage": 0,
+    "hand": [],
+    "open_panel": {
+      "kind": "",
+      "args": {}
+    },
+    "date": {
+      "y": 1938,
+      "m": 3,
+      "d": 4,
+      "era": "1938",
+      "weekday": 4,
+      "stage": 0,
+      "stage_day": 4,
+      "stage_days": 30,
+      "abs_day": 4,
+      "minute": 480
+    }
+  }
+}

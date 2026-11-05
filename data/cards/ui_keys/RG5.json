@@ -1,0 +1,60 @@
+{
+  "_meta": {
+    "owner": "RG5",
+    "schema": 1,
+    "brief": "肉鸽 v1 旧账（RG5）：开头告示、开头按钮、铺史行、合账与档案提示、档案簿旧墨。铺史按本心挑键，正文不出数。"
+  },
+  "keys": {
+    "rg5.notice.shanghai": {
+      "brief": "上海学过徒的开头，第一天早上"
+    },
+    "rg5.opening.default": {
+      "brief": "开头：哥哥的铺子"
+    },
+    "rg5.opening.shanghai": {
+      "brief": "开头：上海学过徒"
+    },
+    "rg5.chronicle.ending.kind": {
+      "brief": "铺史：收尾，本心高"
+    },
+    "rg5.chronicle.ending.plain": {
+      "brief": "铺史：收尾"
+    },
+    "rg5.chronicle.ending.hard": {
+      "brief": "铺史：收尾，本心低"
+    },
+    "rg5.chronicle.prison.1938": {
+      "brief": "铺史：1938 被抓（参数 d）"
+    },
+    "rg5.chronicle.prison.1939": {
+      "brief": "铺史：1939 腊月被抓（参数 d）"
+    },
+    "rg5.chronicle.prison.1940": {
+      "brief": "铺史：1940 被抓（参数 d）"
+    },
+    "rg5.chronicle.abandoned.1938": {
+      "brief": "铺史：1938 另起一本（参数 d）"
+    },
+    "rg5.chronicle.abandoned.1939": {
+      "brief": "铺史：1939 另起一本（参数 d）"
+    },
+    "rg5.chronicle.abandoned.1940": {
+      "brief": "铺史：1940 另起一本（参数 d）"
+    },
+    "rg5.chronicle.other": {
+      "brief": "铺史：别的原因（参数 d）"
+    },
+    "rg5.toast.closed": {
+      "brief": "合账飘字"
+    },
+    "rg5.toast.profile_reset": {
+      "brief": "档案读不出来"
+    },
+    "rg5.dossier.old_ink": {
+      "brief": "旧墨碎片的小印"
+    },
+    "rg5.dossier.old_ink_hint": {
+      "brief": "有旧墨的页底一句"
+    }
+  }
+}

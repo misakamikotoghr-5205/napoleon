@@ -1,0 +1,87 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "c05.kind.money": {
+    "t": "要钱"
+  },
+  "c05.kind.goods": {
+    "t": "要货"
+  },
+  "c05.kind.people": {
+    "t": "要人"
+  },
+  "c05.kind.info": {
+    "t": "要消息"
+  },
+  "c05.tier.0": {
+    "t": "小"
+  },
+  "c05.tier.1": {
+    "t": "中"
+  },
+  "c05.tier.2": {
+    "t": "大"
+  },
+  "c05.tier.3": {
+    "t": "要命"
+  },
+  "c05.mode.pay": {
+    "t": "照数交"
+  },
+  "c05.mode.haggle": {
+    "t": "找胡二讲价"
+  },
+  "c05.mode.substitute": {
+    "t": "拿别的顶替"
+  },
+  "c05.mode.fabricate": {
+    "t": "编一个"
+  },
+  "c05.mode.send_person": {
+    "t": "派人去"
+  },
+  "c05.mode.inform": {
+    "t": "交一条消息"
+  },
+  "c05.btn.submit": {
+    "t": "交上去"
+  },
+  "c05.btn.delay": {
+    "t": "拖一拖"
+  },
+  "c05.delay.note": {
+    "t": "拖得过今天，期限往后推几天，可这张条子要再重一档。"
+  },
+  "c05.inform.note": {
+    "t": "消息交上去，被说到的那个人怕是要吃亏。"
+  },
+  "c05.days": {
+    "t": "还剩 {n} 天"
+  },
+  "c05.amount": {
+    "t": "要交 {n} 蚨"
+  },
+  "c05.board.title": {
+    "t": "条子"
+  },
+  "c05.reply.delay": {
+    "t": "再宽限几天"
+  },
+  "c05.reply.submit": {
+    "t": "交上去"
+  },
+  "c05.reply.later": {
+    "t": "先放着，回头再说"
+  },
+  "c05.drawer.title": {
+    "t": "胡二送来的条子"
+  },
+  "c05.drawer.note": {
+    "t": "胡二送来的条子，张张都有期限。点一张拿出来办：照数交、找胡二讲价，或者拿别的顶替。"
+  },
+  "c05.drawer.empty": {
+    "t": "还没有条子。"
+  }
+}

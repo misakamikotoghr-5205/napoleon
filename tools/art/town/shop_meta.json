@@ -1,0 +1,50 @@
+{
+  "teahouse": {
+    "bg": "art/town/shops/teahouse_bg.png",
+    "keeper": "zhouma",
+    "keeper_at": [
+      200,
+      40
+    ]
+  },
+  "ricehall": {
+    "bg": "art/town/shops/ricehall_bg.png",
+    "keeper": "wu",
+    "keeper_at": [
+      150,
+      40
+    ]
+  },
+  "pharmacy": {
+    "bg": "art/town/shops/pharmacy_bg.png",
+    "keeper": "chen",
+    "keeper_at": [
+      180,
+      36
+    ]
+  },
+  "baogong": {
+    "bg": "art/town/shops/baogong_bg.png",
+    "keeper": "ma",
+    "keeper_at": [
+      190,
+      36
+    ]
+  },
+  "post": {
+    "bg": "art/town/shops/post_bg.png",
+    "keeper": "postman",
+    "keeper_at": [
+      170,
+      36
+    ]
+  },
+  "market": {
+    "bg": "art/town/shops/market_bg.png",
+    "keeper": "stranger_peddler",
+    "keeper_at": [
+      160,
+      48
+    ]
+  }
+}

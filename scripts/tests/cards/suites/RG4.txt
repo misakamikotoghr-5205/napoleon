@@ -1,0 +1,7 @@
+# RG4 肉鸽 v1 界面：盘账叠层、博古格抽屉、场景博古格、标题种子 / 书架盒（docs/cards/rogue/ROGUE_V1.md §7、§14 RG4）
+RG4_stocktake|res://scripts/tests/cards/RG4/test_stocktake.gd|240|
+RG4_drawer|res://scripts/tests/cards/RG4/test_drawer.gd|180|
+RG4_shelf|res://scripts/tests/cards/RG4/test_shelf.gd|180|
+RG4_title|res://scripts/tests/cards/RG4/test_title.gd|180|
+RG4_lint|res://scripts/tests/cards/RG4/test_lint.gd|60|
+RG4_validate|res://scripts/cards/core/validate_main.gd|120|--mode=strict --only=data/cards/ui_keys/RG4.json,data/cards/text_ai/ui/RG4.text.json --name=RG4_validate

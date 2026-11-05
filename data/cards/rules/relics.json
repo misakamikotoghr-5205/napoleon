@@ -1,0 +1,23 @@
+{
+  "_meta": {"owner": "RG3", "schema": 1, "brief": "老物件与博古格（肉鸽 v1）：格数、不灵的时候、同类修正的钳子。数字待调，不上界面。"},
+  "_doc": [
+    "cap: bookshelf cells. Picking past it needs a replace.",
+    "dormant_in_street / dormant_in_prison: held relics do nothing while the shop is lost or the player is jailed.",
+    "clamp: the product (pct kinds) or the sum (delta kinds) over all held relics is clamped before it is returned."
+  ],
+  "enabled": true,
+  "cap": 6,
+  "dormant_in_street": true,
+  "dormant_in_prison": true,
+  "clamp": {
+    "price_pay_min": 90, "price_pay_max": 105,
+    "price_receive_min": 95, "price_receive_max": 115,
+    "patience_min": 85, "patience_max": 125,
+    "appraise_min": 90, "appraise_max": 140,
+    "pool_min": 50, "pool_max": 200,
+    "shelf_cap_min": -1, "shelf_cap_max": 2,
+    "kept_cap_min": 0, "kept_cap_max": 1,
+    "deal_count_min": 0, "deal_count_max": 1,
+    "coins_min": 0, "coins_max": 1
+  }
+}

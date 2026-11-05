@@ -1,0 +1,114 @@
+{
+  "_meta": {
+    "owner": "C08",
+    "schema": 1,
+    "brief": "牢房连续没出来：打烊清单是 fail，确认后进 game_over",
+    "_provenance": {
+      "by": "ai",
+      "task": "C08",
+      "date": "2026-10-14"
+    }
+  },
+  "queries": {
+    "card|{\"uid\":\"c0601\"}": {
+      "actions": [],
+      "art": "illus.pr.cell",
+      "asking": -1,
+      "attrs": {},
+      "away_days": 0,
+      "can_appraise": false,
+      "days_left": 0,
+      "def": "pr.cell",
+      "expires_in": -1,
+      "gold": false,
+      "intent": "",
+      "item": null,
+      "keepable": false,
+      "must_resolve": true,
+      "observations": [],
+      "panel": "prison",
+      "person": "",
+      "status": "open",
+      "type": "prison",
+      "uid": "c0601",
+      "used_today": false,
+      "zone": "hand"
+    },
+    "day.end_preview|{}": {
+      "items": [
+        {
+          "args": {
+            "max": 3,
+            "nights": 3
+          },
+          "consequence_key": "g06.end.fail",
+          "def": "pr.cell",
+          "kind": "fail",
+          "uid": "c0601"
+        }
+      ],
+      "needs_confirm": true,
+      "step": "end_day"
+    }
+  },
+  "responses": [
+    {
+      "cmd": "day.end",
+      "events": [
+        ["game_over", "prison"]
+      ],
+      "match": {
+        "confirm": true
+      },
+      "patch": [
+        {
+          "op": "set",
+          "path": "phase",
+          "value": "game_over"
+        }
+      ],
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "err": "",
+        "ok": true
+      }
+    }
+  ],
+  "view": {
+    "busy": false,
+    "date": {
+      "abs_day": 6,
+      "d": 6,
+      "era": "1938",
+      "m": 3,
+      "minute": 600,
+      "stage": 0,
+      "stage_day": 6,
+      "stage_days": 30,
+      "weekday": 6,
+      "y": 1938
+    },
+    "hand": [],
+    "heat_tier": 0,
+    "mode": "shop",
+    "money": {
+      "amount": 40,
+      "currency": "fabi"
+    },
+    "night_offers": [],
+    "phase": "day",
+    "rep_tier": 1,
+    "stage": {
+      "sealed": false,
+      "set": "counter",
+      "time": "day"
+    },
+    "v": 1
+  }
+}

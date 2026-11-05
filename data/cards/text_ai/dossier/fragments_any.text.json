@@ -1,0 +1,83 @@
+{
+  "_meta": {
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-misc"
+  },
+  "df.brother.any.family_word": {
+    "body": "家里人捎来几句话，多半是哥哥那边托人带的。"
+  },
+  "df.brother.any.trust": {
+    "body": "家里人说的话，你只留在家里，没拿出去。"
+  },
+  "df.stranger_refugee.any.bundle": {
+    "body": "逃难的人来当一口袋旧衣裳。"
+  },
+  "df.stranger_refugee.any.kin": {
+    "body": "有人说，那逃难的人家里有病人。"
+  },
+  "df.stranger_peddler.any.tray": {
+    "body": "货郎把货筐里的一件零碎当了。"
+  },
+  "df.stranger_peddler.any.route": {
+    "body": "货郎说，下一集他还来。"
+  },
+  "df.stranger_collector.any.ask": {
+    "body": "上门收货的人问架上有没有旧物件。"
+  },
+  "df.stranger_collector.any.shop": {
+    "body": "有人说，他专挑字画和铜器收。"
+  },
+  "df.stranger_fence.any.box": {
+    "body": "一个说不清来路的人，拿来一匣东西。"
+  },
+  "df.stranger_fence.any.lane": {
+    "body": "有人说，那人总在夜里出现。"
+  },
+  "df.stranger_waixiang.any.coat": {
+    "body": "外乡人来当一件棉袄，说家里孩子病了。"
+  },
+  "df.stranger_waixiang.any.thanks": {
+    "body": "外乡人临走前，又把家里的难处说了一遍。"
+  },
+  "df.stranger_boatman.any.boat": {
+    "body": "有人说，船上来的人常在码头歇脚。"
+  },
+  "df.stranger_boatman.any.net": {
+    "body": "船工把一张旧渔网当了。"
+  },
+  "df.stranger_student.any.book": {
+    "body": "一个赶路的学生当了一本旧书，他不是本镇学堂的人。"
+  },
+  "df.stranger_student.any.road": {
+    "body": "那学生来问去县城的路。"
+  },
+  "df.stranger_widow.any.pin": {
+    "body": "守寡的过路人当了一支旧簪子。"
+  },
+  "df.stranger_widow.any.well": {
+    "body": "有人在井边见过她。"
+  },
+  "df.stranger_boatman.any.dock": {
+    "body": "船工来打听码头上谁还收货、谁家有人在上海的船上，你说了知道的。"
+  },
+  "df.stranger_collector.any.art": {
+    "body": "上门收货的人来看字画，买走了一件。"
+  },
+  "df.stranger_fence.any.ring": {
+    "body": "那人来卖一枚戒指，说不清是从哪来的。"
+  },
+  "df.stranger_peddler.any.bowl": {
+    "body": "货郎来卖一只旧碗。"
+  },
+  "df.stranger_refugee.any.coat": {
+    "body": "逃难的过路人来当一件旧衣。"
+  },
+  "df.stranger_waixiang.any.alms": {
+    "body": "外乡人想当一条围巾，你没收东西，白给了他几个钱。"
+  },
+  "df.stranger_waixiang.any.scarf": {
+    "body": "外乡人来当一条围巾。"
+  },
+  "df.stranger_widow.any.help": {
+    "body": "守寡的过路人来求几个钱熬过这阵子，你给了。"
+  }
+}

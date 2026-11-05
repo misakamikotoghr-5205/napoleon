@@ -1,0 +1,109 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-1938"
+  },
+  "p.any.redeem": {
+    "title": "过路人来赎当",
+    "body": "一个过路人拿着当票来赎当。",
+    "lines": {
+      "greet": "掌柜的，我来赎东西，当票在这儿。"
+    }
+  },
+  "p.stranger_boatman.any.ask_dock": {
+    "title": "船工打听码头",
+    "body": "一个船工来打听码头上的事：谁还收货，谁家有人在上海的船上。",
+    "lines": {
+      "greet": "掌柜的，跟您打听点码头上的事。"
+    },
+    "choices": {
+      "tell": "把听到的告诉他",
+      "dodge": "岔开不说"
+    }
+  },
+  "p.stranger_coindealer.any.pawn_silver": {
+    "title": "过路客当银元",
+    "body": "一个过路的生人拿出一枚银元，想当几个钱。",
+    "lines": {
+      "greet": "掌柜的，这块银元能当多少？",
+      "accept": "行，就这么当。",
+      "leave": "这价钱太低，我不当了。",
+      "refused": "那我去别处试试。"
+    }
+  },
+  "p.stranger_collector.any.buy_art": {
+    "title": "收货人看字画",
+    "body": "一个上门收货的人来看货架上的字画，想买一件走。",
+    "lines": {
+      "greet": "掌柜的，有字画吗？拿几件我看看。",
+      "accept": "好，这件我要了。",
+      "leave": "价钱谈不拢，回头再说。",
+      "refused": "不卖就算了。"
+    }
+  },
+  "p.stranger_fence.any.sell_ring": {
+    "title": "来路不明的戒指",
+    "body": "一个人拿来一枚戒指要卖，问他来路，他只说是家传的。",
+    "lines": {
+      "greet": "掌柜的，收戒指吗？价钱好商量。",
+      "accept": "爽快，钱给我。",
+      "leave": "这价太黑了，我走了。",
+      "refused": "不收拉倒。"
+    }
+  },
+  "p.stranger_peddler.any.sell_bowl": {
+    "title": "货郎卖旧碗",
+    "body": "走街串巷的货郎挑着担子，想卖一只旧碗给铺子。",
+    "lines": {
+      "greet": "掌柜的，看看这只碗，老东西。",
+      "accept": "成交，您收好。",
+      "leave": "这价钱我亏本，不卖了。",
+      "refused": "那我上别家去。"
+    }
+  },
+  "p.stranger_refugee.any.pawn_coat": {
+    "title": "逃难人当旧衣",
+    "body": "一个逃难的人拿来一件旧衣，想当几个钱路上用。",
+    "lines": {
+      "greet": "掌柜的，这件衣裳能当几个钱？",
+      "accept": "谢谢掌柜的。",
+      "leave": "这点钱不够路上用，我再想想。",
+      "refused": "唉，那我走了。"
+    }
+  },
+  "p.stranger_student.any.ask_road": {
+    "title": "学生问路",
+    "body": "一个赶路的学生来问出镇的路，还想打听铺里收不收信件。",
+    "lines": {
+      "greet": "请问，出镇往哪条路走？"
+    },
+    "choices": {
+      "tell": "告诉他怎么走",
+      "dodge": "说不知道"
+    }
+  },
+  "p.stranger_waixiang.any.pawn_scarf": {
+    "title": "外乡人当围巾",
+    "body": "一个外乡人拿来一条旧围巾，想当几个钱。",
+    "lines": {
+      "greet": "掌柜的，这条围巾，您看能当几个钱？",
+      "accept": "多谢，多谢。",
+      "leave": "这太少了，我再去别处问问。",
+      "refused": "那打扰了。"
+    },
+    "choices": {
+      "alms": "白给他几个钱"
+    }
+  },
+  "p.stranger_widow.any.help_cold": {
+    "title": "过路的寡妇",
+    "body": "一个守寡的过路女人，想讨几个钱熬过这几天。",
+    "lines": {
+      "greet": "掌柜的，行行好，给几个钱吧。"
+    },
+    "choices": {
+      "give": "给几个钱",
+      "refuse": "不给"
+    }
+  }
+}

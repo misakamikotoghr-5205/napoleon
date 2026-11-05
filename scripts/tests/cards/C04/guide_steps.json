@@ -1,0 +1,82 @@
+{
+  "settings": {
+    "gap_ms": 0,
+    "fade_in_ms": 0,
+    "fade_out_ms": 0,
+    "default_seconds": 8,
+    "max_new_per_day": 16,
+    "bubble_max_w": 320
+  },
+  "steps": [
+    {
+      "id": "gd.d1.look",
+      "teaches": ["counter"],
+      "trigger": {"first": "counter"},
+      "teacher": "brother",
+      "anchor": "a.counter.look",
+      "anchor_fallback": "",
+      "done_when": ["cmd:mg.request"],
+      "rule_page": "rule.counter",
+      "priority": 80,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 8
+    },
+    {
+      "id": "gd.d1.tiers",
+      "teaches": ["counter"],
+      "trigger": {"first": "counter", "after": ["gd.d1.look"]},
+      "teacher": "brother",
+      "anchor": "a.counter.tier.fair",
+      "anchor_fallback": "",
+      "done_when": ["cmd:counter.offer"],
+      "rule_page": "rule.counter",
+      "priority": 70,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 8
+    },
+    {
+      "id": "gd.d1.buyer",
+      "teaches": ["buyer"],
+      "trigger": {"first": "buyer"},
+      "teacher": "brother",
+      "anchor": "a.counter.stock",
+      "anchor_fallback": "",
+      "done_when": ["cmd:counter.pick_stock"],
+      "rule_page": "rule.shelf",
+      "priority": 80,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 8
+    },
+    {
+      "id": "gd.redeem",
+      "teaches": ["redeem"],
+      "trigger": {"first": "redeem"},
+      "teacher": "obj.brother_ledger",
+      "anchor": "a.counter.redeem",
+      "anchor_fallback": "",
+      "done_when": ["cmd:counter.redeem"],
+      "rule_page": "rule.ticket",
+      "priority": 80,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 8
+    },
+    {
+      "id": "gd.d1.ticket",
+      "teaches": ["ticket"],
+      "trigger": {"first": "ticket"},
+      "teacher": "brother",
+      "anchor": "a.scene.ledger",
+      "anchor_fallback": "a.tab.tickets",
+      "done_when": ["timeout"],
+      "rule_page": "rule.ticket",
+      "priority": 90,
+      "interrupt": false,
+      "max_shows": 2,
+      "seconds": 8
+    }
+  ]
+}

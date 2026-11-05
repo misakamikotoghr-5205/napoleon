@@ -1,0 +1,658 @@
+{
+  "_meta": {
+    "owner": "K16",
+    "schema": 1,
+    "brief": "1938 年头几天按日程插入的教学牌。全部权重为 0。第 4 天不插。第1天另有哥哥的交代（金框，照网页原型），其余客人用已登记的人物，避开胡二和有主线节点的人。"
+  },
+  "cards": [
+    {
+      "id": "p.brother.1938.tut_handover",
+      "type": "person",
+      "person": "brother",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "family",
+        "story",
+        "omen_family",
+        "k16_lesson"
+      ],
+      "gold": true,
+      "story_node": "s1938.brother_handover",
+      "intent": "story",
+      "keepable": false,
+      "schedule": {
+        "stage_day": 1,
+        "order": 4,
+        "when": {
+          "not": {
+            "veteran": true
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "listen",
+          "brief": "听他把铺子的规矩一条条说完",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1938.brother_handover",
+              "outcome": "listened"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.brother.1938.quiet"
+            }
+          ]
+        },
+        {
+          "id": "assure",
+          "brief": "让他放心走",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1938.brother_handover",
+              "outcome": "assured"
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "story",
+            "node": "s1938.brother_handover",
+            "outcome": "ignored"
+          },
+          {
+            "op": "dossier_gap",
+            "frag": "df.brother.1938.quiet"
+          }
+        ]
+      },
+      "art": "portrait.brother",
+      "brief": "第1天教学：哥哥在柜台边把铺子交给你，照网页原型做第1天的第一张金框牌，好让第1天早上的指引当场讲金框的规矩，教的人也站在柜台边。两个做法都不改钱和名声：听他说完补档案里他还肯把铺子的事说给家里听的那一块；让他放心走只记主线。当天不理，打烊时他先走，那一块变缺口。第2天他照旧来告别（K01 的 p.brother.1938.farewell）。排在第1天三位客人后面发，第一张人物牌仍是来当的客人；手牌里金框排最前。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      }
+    },
+    {
+      "id": "p.zhang.1938.tut_pawn",
+      "type": "person",
+      "person": "zhang",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "omen_wealth",
+        "k16_lesson"
+      ],
+      "intent": "pawn",
+      "schedule": {
+        "stage_day": 1,
+        "order": 1,
+        "when": {
+          "not": {
+            "veteran": true
+          }
+        }
+      },
+      "art": "portrait.zhang",
+      "brief": "第1天教学：护士张慧娟拿一支能找出不一样的簪子来当，只想先周转一小笔钱，所以要得少。固定看货做法是找不一样，好让第1天的指引一定走到那一步。按指引出中间那一档她一定肯，柜上的钱也够第二位客人。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      },
+      "item": {
+        "template": "jewelry.hairpin"
+      },
+      "asking": {
+        "pct": [
+          30,
+          40
+        ]
+      },
+      "floor": {
+        "pct": [
+          15,
+          20
+        ]
+      },
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "leave",
+      "term_days": 15,
+      "minigame": "spot",
+      "effects": {
+        "on_accept": [
+          {
+            "op": "flag",
+            "key": "k16_tut_pawn"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p.wu.1938.tut_sell",
+      "type": "person",
+      "person": "wu",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "omen_wealth",
+        "k16_lesson"
+      ],
+      "intent": "sell",
+      "schedule": {
+        "stage_day": 1,
+        "order": 2,
+        "when": {
+          "not": {
+            "veteran": true
+          }
+        }
+      },
+      "art": "portrait.wu",
+      "brief": "第1天教学：吴先生急着出手一件首饰，开价不高，东西进货架。看货同样固定为找不一样，避免第1天又亮出称分量。按指引出中间那一档他一定肯，柜上的钱付得起。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      },
+      "item": {
+        "template": "jewelry.hairpin"
+      },
+      "asking": {
+        "pct": [
+          50,
+          65
+        ]
+      },
+      "floor": {
+        "pct": [
+          30,
+          37
+        ]
+      },
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "leave",
+      "minigame": "spot",
+      "effects": {
+        "on_accept": [
+          {
+            "op": "flag",
+            "key": "k16_tut_sell"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p.xiaoding.1938.tut_buy",
+      "type": "person",
+      "person": "xiaoding",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "omen_stranger",
+        "k16_lesson"
+      ],
+      "intent": "buy",
+      "schedule": {
+        "stage_day": 1,
+        "order": 3,
+        "when": {
+          "not": {
+            "veteran": true
+          }
+        }
+      },
+      "art": "portrait.xiaoding",
+      "brief": "第1天教学：小丁来买首饰，要的类别和来卖的那件相同，货架上买得到；带的钱够按中间那一档买下。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      },
+      "want": {
+        "cats": [
+          "jewelry"
+        ],
+        "budget_pct": [
+          140,
+          160
+        ]
+      },
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "leave",
+      "effects": {
+        "on_accept": [
+          {
+            "op": "flag",
+            "key": "k16_tut_buy"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p.sunyoung.1938.tut_pawn",
+      "type": "person",
+      "person": "sunyoung",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "omen_family",
+        "k16_lesson"
+      ],
+      "intent": "pawn",
+      "schedule": {
+        "stage_day": 2,
+        "order": 2,
+        "when": {
+          "not": {
+            "veteran": true
+          }
+        }
+      },
+      "art": "portrait.sunyoung",
+      "brief": "第2天教学：孙家年轻人拿一支簪子来当，只要一小笔。只有当，不带选项。哥哥告别那张金色牌是 K01 的，顺序排在他前面。出中间那一档他一定肯。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      },
+      "item": {
+        "template": "jewelry.hairpin"
+      },
+      "asking": {
+        "pct": [
+          40,
+          55
+        ]
+      },
+      "floor": {
+        "pct": [
+          20,
+          28
+        ]
+      },
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "leave",
+      "term_days": 15,
+      "minigame": "spot",
+      "effects": {
+        "on_accept": [
+          {
+            "op": "flag",
+            "key": "k16_tut_pawn"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p.guanjia.1938.tut_buy",
+      "type": "person",
+      "person": "guanjia",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "omen_official",
+        "k16_lesson"
+      ],
+      "intent": "buy",
+      "schedule": {
+        "stage_day": 2,
+        "order": 3,
+        "when": {
+          "not": {
+            "veteran": true
+          }
+        }
+      },
+      "art": "portrait.guanjia",
+      "brief": "第2天教学：管家来买首饰。不带选项，不引出新机制。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      },
+      "want": {
+        "cats": [
+          "jewelry"
+        ],
+        "budget_pct": [
+          80,
+          120
+        ]
+      },
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "leave",
+      "effects": {
+        "on_accept": [
+          {
+            "op": "flag",
+            "key": "k16_tut_buy"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ev.1938.tut_slots",
+      "type": "event",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "omen_official",
+        "k16_lesson"
+      ],
+      "must_resolve": true,
+      "schedule": {
+        "stage_day": 3,
+        "order": 1,
+        "when": {
+          "not": {
+            "veteran": true
+          }
+        }
+      },
+      "slots": [
+        {
+          "id": "who",
+          "accepts": [
+            "self"
+          ],
+          "attr": "nerve",
+          "brief": "自己站出来"
+        },
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "money_per_coin": 10,
+          "brief": "放一笔钱"
+        }
+      ],
+      "check": {
+        "need": 1,
+        "on_success": [
+          {
+            "op": "money",
+            "delta": 2,
+            "reason": "k16.reason.tut_slots_ok"
+          }
+        ],
+        "on_fail": [
+          {
+            "op": "flag",
+            "key": "k16_tut_slots_fail"
+          }
+        ]
+      },
+      "art": "illus.ev.1938.police_check",
+      "brief": "第3天教学：一张收自己和钱的格子牌，只要一个正面。过了只进一小笔钱，没过只记一个标记，不升档、不封铺。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.li.1938.tut_sell",
+      "type": "person",
+      "person": "li",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "omen_dispute",
+        "k16_lesson"
+      ],
+      "intent": "sell",
+      "schedule": {
+        "stage_day": 3,
+        "order": 2,
+        "when": {
+          "not": {
+            "veteran": true
+          }
+        }
+      },
+      "art": "portrait.li",
+      "brief": "第3天教学：学生李敬之来卖一件首饰，开价不高。看货固定为找不一样，不带选项。出中间那一档他一定肯。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      },
+      "item": {
+        "template": "jewelry.hairpin"
+      },
+      "asking": {
+        "pct": [
+          35,
+          45
+        ]
+      },
+      "floor": {
+        "pct": [
+          20,
+          26
+        ]
+      },
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "leave",
+      "minigame": "spot",
+      "effects": {
+        "on_accept": [
+          {
+            "op": "flag",
+            "key": "k16_tut_sell"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p.postman.1938.tut_buy",
+      "type": "person",
+      "person": "postman",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "omen_far",
+        "k16_lesson"
+      ],
+      "intent": "buy",
+      "schedule": {
+        "stage_day": 3,
+        "order": 3,
+        "when": {
+          "not": {
+            "veteran": true
+          }
+        }
+      },
+      "art": "portrait.postman",
+      "brief": "第3天教学：邮差来买首饰，类别和当天来卖的那件相同，货架上买得到；带的钱够按中间那一档买下。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-23"
+      },
+      "want": {
+        "cats": [
+          "jewelry"
+        ],
+        "budget_pct": [
+          140,
+          160
+        ]
+      },
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "leave",
+      "effects": {
+        "on_accept": [
+          {
+            "op": "flag",
+            "key": "k16_tut_buy"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ev.1938.tut_fortune",
+      "type": "event",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "omen_stranger",
+        "k16_lesson"
+      ],
+      "must_resolve": false,
+      "schedule": {
+        "stage_day": 5,
+        "order": 1
+      },
+      "opens_fortune": "both",
+      "cost": {
+        "money": 3
+      },
+      "choices": [
+        {
+          "id": "pass",
+          "effects": [],
+          "brief": "不求也不测，这张牌就此处理掉"
+        }
+      ],
+      "art": "illus.ev.any.fortune_teller",
+      "brief": "第5天教学：街上的算命先生，花一小笔钱可以求签或测字。另有一个不花这笔钱就走的做法。口吻对应 suanming，人物已由 K01 登记为 suanming。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "nw.1938.tut_zhouma",
+      "type": "news",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "kind": "rumor",
+      "source": "zhouma",
+      "info_about": "zhouma",
+      "keepable": true,
+      "expires_days": 4,
+      "must_resolve": false,
+      "schedule": {
+        "stage_day": 6,
+        "order": 1
+      },
+      "tags": [
+        "omen_family",
+        "k16_lesson"
+      ],
+      "effects": {
+        "on_read": [
+          {
+            "op": "dossier",
+            "frag": "df.zhouma.1938.tut_news"
+          }
+        ]
+      },
+      "art": "illus.nw.rumor",
+      "brief": "第6天教学：周妈传来的一句街谈，可以留着。看过之后给档案补一块碎片，碎片 id 与 K08 约定。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ev.1938.tut_contact",
+      "type": "event",
+      "era": [
+        "1938"
+      ],
+      "weight": 0,
+      "tags": [
+        "omen_family",
+        "k16_lesson"
+      ],
+      "must_resolve": false,
+      "schedule": {
+        "stage_day": 7,
+        "order": 1
+      },
+      "choices": [
+        {
+          "id": "trust",
+          "effects": [
+            {
+              "op": "contact_gain",
+              "person": "zhouma"
+            }
+          ],
+          "brief": "把周妈记成人脉"
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "contact_gain",
+            "person": "zhouma"
+          }
+        ]
+      },
+      "art": "portrait.zhouma",
+      "brief": "第7天教学：只有一个做法，把周妈记成人脉。这一天也是第一张条子的日子，不再加别的教学牌。人脉牌为 K09 已登记的 ct.zhouma。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K16",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

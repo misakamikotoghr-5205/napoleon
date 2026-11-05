@@ -1,0 +1,19 @@
+# Name|script|timeout|parameters
+G05_weights|res://scripts/tests/cards/G05/test_weights.gd|120|
+G05_fate_trigger|res://scripts/tests/cards/G05/test_fate_trigger.gd|120|--seeds=50
+G05_wheel_math|res://scripts/tests/cards/G05/test_wheel_math.gd|180|--seeds=200
+G05_wheel_flow|res://scripts/tests/cards/G05/test_wheel_flow.gd|120|
+G05_lot_accuracy_a|res://scripts/tests/cards/G05/test_lot_accuracy.gd|600|--seed_from=0 --seed_to=250 --lots=3 --name=G05_lot_accuracy_a
+G05_lot_accuracy_b|res://scripts/tests/cards/G05/test_lot_accuracy.gd|600|--seed_from=250 --seed_to=500 --lots=3 --name=G05_lot_accuracy_b
+G05_lot_accuracy_c|res://scripts/tests/cards/G05/test_lot_accuracy.gd|600|--seed_from=500 --seed_to=750 --lots=3 --name=G05_lot_accuracy_c
+G05_lot_accuracy_d|res://scripts/tests/cards/G05/test_lot_accuracy.gd|600|--seed_from=750 --seed_to=1000 --lots=3 --name=G05_lot_accuracy_d
+G05_lot_harsh|res://scripts/tests/cards/G05/test_lot_harsh.gd|300|--seeds=500
+G05_cezi|res://scripts/tests/cards/G05/test_cezi.gd|180|--seeds=200
+G05_almanac|res://scripts/tests/cards/G05/test_almanac.gd|120|
+G05_pressure_weather|res://scripts/tests/cards/G05/test_pressure_weather.gd|120|--seeds=20
+G05_ops_conds|res://scripts/tests/cards/G05/test_ops_conds.gd|120|
+G05_view_leaks|res://scripts/tests/cards/G05/test_view_leaks.gd|120|
+G05_determinism_save|res://scripts/tests/cards/G05/test_determinism_save.gd|180|
+G05_firsts|res://scripts/tests/cards/G05/test_firsts.gd|120|
+G05_static_bridge|res://scripts/tests/cards/G05/test_static_bridge.gd|120|
+G05_end_day|res://scripts/tests/cards/G05/test_end_day.gd|120|

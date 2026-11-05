@@ -1,0 +1,328 @@
+{
+  "_meta": {
+    "owner": "G02",
+    "schema": 1
+  },
+  "cards": [
+    {
+      "id": "p.test.single",
+      "type": "person",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "intent": "story",
+      "schedule": {
+        "stage_day": 1,
+        "order": 2
+      },
+      "stage": {
+        "set": "counter",
+        "time": "day",
+        "brief": "ROOT_BRIEF",
+        "cast": [
+          {
+            "who": "brother",
+            "at": "customer",
+            "brief": "CAST_BRIEF"
+          }
+        ],
+        "intro": [
+          {
+            "who": "brother",
+            "ref": "#intro.1",
+            "brief": "INTRO_BRIEF"
+          }
+        ],
+        "after": {
+          "accept": [
+            {
+              "who": "brother",
+              "ref": "#accept.1",
+              "brief": "AFTER_BRIEF"
+            }
+          ]
+        }
+      },
+      "effects": {
+        "on_leave": [
+          {
+            "op": "notice",
+            "key": "g02.reason.person",
+            "args": {
+              "n": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ev.test.window",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "schedule": {
+        "stage_day": [
+          3,
+          7
+        ],
+        "when": {
+          "weekday": 4
+        },
+        "order": 4
+      }
+    },
+    {
+      "id": "ev.test.when",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "schedule": {
+        "when": {
+          "day_gte": 5
+        },
+        "order": 3
+      }
+    },
+    {
+      "id": "ev.test.repeat",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "schedule": {
+        "when": {
+          "day_gte": 9
+        },
+        "once": false,
+        "order": 5
+      }
+    },
+    {
+      "id": "p.test.gold",
+      "type": "person",
+      "person": "brother",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "gold": true,
+      "schedule": {
+        "stage_day": 2,
+        "order": 0
+      },
+      "effects": {
+        "on_expire": [
+          {
+            "op": "notice",
+            "key": "g02.settle.gold_left",
+            "args": {
+              "n": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "lf.test",
+      "type": "life",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "conditions": {},
+      "due_days": 3
+    },
+    {
+      "id": "nt.test.a",
+      "type": "night",
+      "art": "illus.nt.test.a",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "effects": {
+        "on_choose": []
+      }
+    },
+    {
+      "id": "nt.test.b",
+      "type": "night",
+      "art": "illus.nt.test.b",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "choices": [
+        {
+          "id": "one",
+          "effects": [
+            {
+              "op": "notice",
+              "key": "g02.notice.market_day",
+              "args": {
+                "n": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "two",
+          "effects": []
+        }
+      ],
+      "effects": {
+        "on_choose": [
+          {
+            "op": "notice",
+            "key": "g02.notice.clear",
+            "args": {
+              "n": 2
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "nt.test.c",
+      "type": "night",
+      "art": "illus.nt.test.c",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "effects": {
+        "on_choose": []
+      }
+    },
+    {
+      "id": "nw.test.source",
+      "type": "news",
+      "source": "brother",
+      "era": [
+        "*"
+      ],
+      "weight": 0
+    },
+    {
+      "id": "gl.test.main",
+      "type": "goal",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "main": true,
+      "eval": "month_close",
+      "done_when": {
+        "day_gte": 30
+      }
+    },
+    {
+      "id": "gl.test.any",
+      "type": "goal",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "main": false,
+      "eval": "any_time",
+      "done_when": {
+        "day_gte": 2
+      },
+      "effects": {
+        "on_done": [
+          {
+            "op": "notice",
+            "key": "g02.month.goal.done",
+            "args": {
+              "n": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "gl.test.optional",
+      "type": "goal",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "main": false,
+      "eval": "month_close",
+      "done_when": {
+        "day_gte": 31
+      },
+      "effects": {
+        "on_fail": [
+          {
+            "op": "notice",
+            "key": "g02.month.goal.failed",
+            "args": {
+              "n": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ct.test.ma",
+      "type": "contact",
+      "person": "ma",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "year_changes": [
+        {
+          "to_era": "1939",
+          "num": 1,
+          "den": 1,
+          "effects": [
+            {
+              "op": "notice",
+              "key": "g02.year.contact",
+              "args": {
+                "n": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kp.test",
+      "type": "kept",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "expires_days": 4
+    },
+    {
+      "id": "ev.test.afternoon",
+      "type": "event",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "schedule": {
+        "when": {
+          "flag": "afternoon_ready"
+        },
+        "order": 7
+      },
+      "brief": "Afternoon condition becomes eligible for the next morning.",
+      "_provenance": {
+        "by": "ai",
+        "task": "G02",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

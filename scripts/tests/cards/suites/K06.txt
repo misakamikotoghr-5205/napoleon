@@ -1,0 +1,4 @@
+# K06 1940 世界牌 + 通用生活牌（docs/handoff_cards/K06_data-1940-world.md）
+K06_validate|res://scripts/cards/core/validate_main.gd|120|--only=data/cards/era/1940/events.json,data/cards/era/1940/fate.json,data/cards/era/1940/big_fate.json,data/cards/era/1940/life.json,data/cards/era/1940/goals.json,data/cards/era/1940/stage.json,data/cards/era/common/life.json,data/cards/tags/K06.json,data/cards/ui_keys/K06.json --name=K06_validate
+K06_data|res://scripts/tests/cards/K06/test_data.gd|120|
+K06_guide_support|res://scripts/tests/cards/K06/test_guide_support.gd|120|

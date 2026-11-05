@@ -1,0 +1,9 @@
+{
+  "baseline_filename": "GameJev_Lite_Dynamic_Actions_v0.2.zip",
+  "baseline_sha256": "e128e6249792064b484634e5c4fa6fa4990163387bf2132c6c20738db7bd24c0",
+  "baseline_version": "GameJev Lite v0.2; attached source inspected in this session",
+  "adaptation": "12 grouped numeric projections + shared attention residual; core refactor, not compatible with v0.2 weights",
+  "upstream_architecture": "https://github.com/vinnylarouge/jevlike",
+  "license": "MIT; original notice copied verbatim under legal/",
+  "not_claimed": "No Jev original weights, no newly fetched upstream checkpoint, no public repository commit."
+}

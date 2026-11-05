@@ -1,0 +1,83 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1,
+    "brief": "例子集：1938 事件牌（§4.7.3）"
+  },
+  "cards": [
+    {
+      "id": "ev.1938.police_check",
+      "type": "event",
+      "era": [
+        "1938"
+      ],
+      "weight": 10,
+      "tags": [
+        "official",
+        "police",
+        "search",
+        "omen_official"
+      ],
+      "slots": [
+        {
+          "id": "paper",
+          "accepts": [
+            "kept"
+          ],
+          "tags": [
+            "papers"
+          ],
+          "brief": "证件"
+        },
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "tags": [
+            "official"
+          ],
+          "money_per_coin": 10,
+          "brief": "钱"
+        },
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "attr": "nerve",
+          "brief": "胆大的人"
+        }
+      ],
+      "check": {
+        "need": 2,
+        "on_success": [],
+        "on_fail": [
+          {
+            "op": "heat",
+            "tier": 1
+          },
+          {
+            "op": "flag",
+            "key": "police_knows_name"
+          },
+          {
+            "op": "kept_risk",
+            "tags_any": [
+              "contraband",
+              "leverage"
+            ]
+          }
+        ]
+      },
+      "art": "illus.ev.1938.police_check",
+      "brief": "警察挨家查良民证。放良民证（留着的牌，证件）直接过；没有就放钱和胆大的人掷铜钱，要 2 个正面。没过：风声上一档，警察记下名字；手上来路不明的东西会被翻出来。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-14"
+      }
+    }
+  ]
+}

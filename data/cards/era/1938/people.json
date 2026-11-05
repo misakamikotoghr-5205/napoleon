@@ -1,0 +1,2853 @@
+{
+  "_meta": {
+    "owner": "K01",
+    "schema": 1,
+    "brief": "1938 年三月主要人物的柜台来意，以及四个新面孔。"
+  },
+  "persons": {
+    "nf1938a": {
+      "portrait": "portrait.nf1938a",
+      "dossier": true,
+      "brief": "新面孔：米行脚夫，四十出头，替米行在码头搬袋，和铺子是散客。名字提议钱阿根，由 A 定稿。"
+    },
+    "nf1938b": {
+      "portrait": "portrait.nf1938b",
+      "dossier": true,
+      "brief": "新面孔：原茧行女工，二十出头，茧行停后在桥头做针线，来铺子当小件。名字提议周阿绣，由 A 定稿。"
+    },
+    "nf1938c": {
+      "portrait": "portrait.nf1938c",
+      "dossier": true,
+      "brief": "新面孔：济生堂学徒，十八九岁，跟药铺和当铺都有来往，来买成药。名字提议方小安，由 A 定稿。"
+    },
+    "nf1938d": {
+      "portrait": "portrait.nf1938d",
+      "dossier": true,
+      "brief": "新面孔：更夫，五十出头，夜里看街，和铺子只是邻街熟人。名字提议崔老奎，由 A 定稿。"
+    }
+  },
+  "cards": [
+    {
+      "id": "p.nf1938a.1938.sell_rice",
+      "type": "person",
+      "person": "nf1938a",
+      "era": [
+        "1938"
+      ],
+      "weight": 6,
+      "tags": [
+        "new_face",
+        "dock",
+        "rice",
+        "omen_water"
+      ],
+      "intent": "sell",
+      "item": {
+        "template": "rice.jing"
+      },
+      "asking": {
+        "pct": [
+          90,
+          120
+        ]
+      },
+      "floor": {
+        "pct": [
+          60,
+          80
+        ]
+      },
+      "patience_min": [
+        30,
+        70
+      ],
+      "impatience": "raise",
+      "minigame_hint": "spot",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "nf1938a",
+            "gone"
+          ]
+        }
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.nf1938a.1938.rice"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.nf1938a",
+      "brief": "新面孔，米行脚夫，1938 年三月来卖一小袋粳米。成交补档案。名字在人物登记里提议。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.nf1938a.1938.ask_boat",
+      "type": "person",
+      "person": "nf1938a",
+      "era": [
+        "1938"
+      ],
+      "weight": 4,
+      "tags": [
+        "new_face",
+        "dock",
+        "omen_water"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "nf1938a",
+            "gone"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "tell",
+          "brief": "告诉他知道的船期",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.nf1938a.1938.boat"
+            }
+          ]
+        },
+        {
+          "id": "dodge",
+          "brief": "说不清楚",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.nf1938a",
+      "brief": "同一个脚夫来打听米船哪天靠码头。说了补档案；岔开伤交情。1938 年三月。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.nf1938b.1938.pawn_bangle",
+      "type": "person",
+      "person": "nf1938b",
+      "era": [
+        "1938"
+      ],
+      "weight": 6,
+      "tags": [
+        "new_face",
+        "woman",
+        "poor",
+        "omen_wealth"
+      ],
+      "intent": "pawn",
+      "item": {
+        "template": "jewelry.bangle"
+      },
+      "asking": {
+        "pct": [
+          85,
+          115
+        ]
+      },
+      "floor": {
+        "pct": [
+          50,
+          70
+        ]
+      },
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "leave",
+      "term_days": 14,
+      "minigame_hint": "weigh",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "nf1938b",
+            "gone"
+          ]
+        }
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.nf1938b.1938.bangle"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.nf1938b",
+      "brief": "新面孔，做针线的年轻女人，1938 年三月来当一只银镯。当期较短。成交得当票并补档案。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.nf1938c.1938.buy_med",
+      "type": "person",
+      "person": "nf1938c",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "new_face",
+        "medicine",
+        "buyer",
+        "omen_illness"
+      ],
+      "intent": "buy",
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "leave",
+      "want": {
+        "cats": [
+          "medicine"
+        ],
+        "budget_pct": [
+          70,
+          110
+        ]
+      },
+      "conditions": {
+        "not": {
+          "person_state": [
+            "nf1938c",
+            "gone"
+          ]
+        }
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.nf1938c.1938.med"
+          },
+          {
+            "op": "rep",
+            "delta": 1
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.nf1938c",
+      "brief": "新面孔，药铺学徒，1938 年三月来买成药。成交补档案。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.nf1938d.1938.ask_watch",
+      "type": "person",
+      "person": "nf1938d",
+      "era": [
+        "1938"
+      ],
+      "weight": 4,
+      "tags": [
+        "new_face",
+        "official",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "nf1938d",
+            "gone"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "tell",
+          "brief": "把夜里看见的说了",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.nf1938d.1938.watch"
+            },
+            {
+              "op": "flag",
+              "key": "k01_police_talk",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "dodge",
+          "brief": "装没看见",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.nf1938d",
+      "brief": "新面孔，夜里看街的更夫，1938 年三月来问警察所是不是在修。时局仍是伪维持会管事，月底伪维新政府成立后伪县政府会接手。说了补档案。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.chen.1938.buy_scroll",
+      "type": "person",
+      "person": "chen",
+      "era": [
+        "1938"
+      ],
+      "weight": 6,
+      "tags": [
+        "buyer",
+        "omen_far"
+      ],
+      "intent": "buy",
+      "patience_min": [
+        50,
+        110
+      ],
+      "impatience": "leave",
+      "want": {
+        "cats": [
+          "art"
+        ],
+        "budget_pct": [
+          80,
+          130
+        ]
+      },
+      "conditions": {
+        "not": {
+          "person_state": [
+            "chen",
+            "gone"
+          ]
+        }
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.chen.1938.scroll"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.chen",
+      "brief": "父母的老友，1938 年三月来看货架上的字画，想买一件。成交补档案。电台的事这张不写。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.chen.1938.ask_ticket",
+      "type": "person",
+      "person": "chen",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "official",
+        "omen_far",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "chen",
+                "gone"
+              ]
+            }
+          },
+          {
+            "story": [
+              "s1938.ticket196",
+              "pieced"
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "tell",
+          "brief": "把拼出来的给看",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.chen.1938.ticket"
+            },
+            {
+              "op": "flag",
+              "key": "k01_chen_saw_ticket",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "dodge",
+          "brief": "先不给他看",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.chen",
+      "brief": "德字第一九六号拼完之后，父母的老友来问这张外来当票。1938 年三月。选项问个明白或岔开。他做过报务这件事只作设计依据，牌上不点破。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.chen.1938.help_farewell",
+      "type": "person",
+      "person": "chen",
+      "era": [
+        "1938"
+      ],
+      "weight": 4,
+      "tags": [
+        "family",
+        "omen_family"
+      ],
+      "intent": "help",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "chen",
+                "gone"
+              ]
+            }
+          },
+          {
+            "story": [
+              "s1938.brother_farewell",
+              "argued"
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "stay",
+          "brief": "让他坐一会",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.chen.1938.farewell"
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "id": "send",
+          "brief": "请他回去",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.chen",
+      "brief": "哥哥告别时吵过之后，父母的老友来铺子缓一缓。1938 年三月。留下他坐一会，或请他回去。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.xiaoding.1938.sell_rice",
+      "type": "person",
+      "person": "xiaoding",
+      "era": [
+        "1938"
+      ],
+      "weight": 8,
+      "tags": [
+        "rice",
+        "poor",
+        "omen_wealth"
+      ],
+      "intent": "sell",
+      "item": {
+        "template": "rice.jing"
+      },
+      "asking": {
+        "pct": [
+          70,
+          100
+        ]
+      },
+      "floor": {
+        "pct": [
+          40,
+          60
+        ]
+      },
+      "patience_min": [
+        20,
+        50
+      ],
+      "impatience": "leave",
+      "minigame_hint": "spot",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "xiaoding",
+            "gone"
+          ]
+        }
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.xiaoding.1938.rice"
+          },
+          {
+            "op": "heat",
+            "delta": 2
+          },
+          {
+            "op": "flag",
+            "key": "k01_xiaoding_rice",
+            "value": true
+          },
+          {
+            "op": "notice",
+            "key": "k01.notice.xiaoding_rice"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.xiaoding",
+      "brief": "孙府伙夫，1938 年三月拿一小袋粳米来卖。米是库房里拿出来的。收下进货架，风声会紧，并立一个旗给管家那张牌用。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.xiaoding.1938.help_mother",
+      "type": "person",
+      "person": "xiaoding",
+      "era": [
+        "1938"
+      ],
+      "weight": 7,
+      "tags": [
+        "medicine",
+        "poor",
+        "omen_illness"
+      ],
+      "intent": "help",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "xiaoding",
+            "gone"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "give",
+          "brief": "出钱让他去买药",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 8,
+              "payee": "xiaoding",
+              "reason": "k01.reason.xiaoding_med",
+              "short": "ladder"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.xiaoding.1938.mother"
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "不帮",
+          "effects": [
+            {
+              "op": "conscience",
+              "delta": -1
+            },
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.xiaoding",
+      "brief": "孙府伙夫来求几个钱给家里病人买药。1938 年三月。给钱或拒绝。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhang.1938.sell_sulfa",
+      "type": "person",
+      "person": "zhang",
+      "era": [
+        "1938"
+      ],
+      "weight": 7,
+      "tags": [
+        "nurse",
+        "woman",
+        "medicine",
+        "omen_illness"
+      ],
+      "intent": "sell",
+      "item": {
+        "template": "medicine.sulfa"
+      },
+      "asking": {
+        "pct": [
+          90,
+          130
+        ]
+      },
+      "floor": {
+        "pct": [
+          55,
+          80
+        ]
+      },
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "leave",
+      "minigame_hint": "spot",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "zhang",
+            "gone"
+          ]
+        }
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.zhang.1938.sulfa"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.zhang",
+      "brief": "县城医院的护士，1938 年三月医院被征用之后，拿一瓶成药来卖，抵拖欠的工钱。成交补档案。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhang.1938.help_shanghai",
+      "type": "person",
+      "person": "zhang",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "nurse",
+        "woman",
+        "omen_far"
+      ],
+      "intent": "help",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "zhang",
+            "gone"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "give",
+          "brief": "借出路费",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 24,
+              "payee": "zhang",
+              "reason": "k01.reason.zhang_road",
+              "short": "ladder"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.zhang.1938.shanghai"
+            },
+            {
+              "op": "flag",
+              "key": "k01_zhang_road",
+              "value": true
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "不借",
+          "effects": [
+            {
+              "op": "conscience",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.zhang",
+      "brief": "同一个护士想凑一笔去上海的路费，带着家里的弟弟走。1938 年三月。借给她或拒绝。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.wangshan.1938.help_food",
+      "type": "person",
+      "person": "wangshan",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "omen_stranger"
+      ],
+      "intent": "help",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "wangshan",
+            "gone"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "give",
+          "brief": "垫一顿饭钱",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 5,
+              "payee": "wangshan",
+              "reason": "k01.reason.wangshan_food",
+              "short": "ladder"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.wangshan.1938.food"
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "不给",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.wangshan",
+      "brief": "自称过路的青年，1938 年三月在主线节点之前或之外来讨一顿饭。给垫钱或拒绝。哪一边先不写死。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.wangshan.1938.ask_road",
+      "type": "person",
+      "person": "wangshan",
+      "era": [
+        "1938"
+      ],
+      "weight": 4,
+      "tags": [
+        "omen_road"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "wangshan",
+                "gone"
+              ]
+            }
+          },
+          {
+            "story": [
+              "s1938.wangshan",
+              "helped"
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "tell",
+          "brief": "告诉他怎么走",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.wangshan.1938.road"
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "id": "dodge",
+          "brief": "不说",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.wangshan",
+      "brief": "主线里收留过他之后，同一个青年来问出镇的路。1938 年三月。告诉他或岔开。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.li.1938.pawn_letter",
+      "type": "person",
+      "person": "li",
+      "era": [
+        "1938"
+      ],
+      "weight": 6,
+      "tags": [
+        "student",
+        "official",
+        "omen_official",
+        "omen_dispute"
+      ],
+      "intent": "pawn",
+      "item": {
+        "template": "documents.letter"
+      },
+      "asking": {
+        "pct": [
+          60,
+          90
+        ]
+      },
+      "floor": {
+        "pct": [
+          30,
+          50
+        ]
+      },
+      "patience_min": [
+        20,
+        45
+      ],
+      "impatience": "leave",
+      "term_days": 8,
+      "minigame_hint": "fragments",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "li",
+            "gone"
+          ]
+        }
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.li.1938.letter"
+          },
+          {
+            "op": "heat",
+            "delta": 1
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "heat",
+            "delta": 1
+          }
+        ]
+      },
+      "art": "portrait.li",
+      "brief": "县立中学的学生，1938 年三月、镇上查良民证的时候，来当一封不方便留在身上的信。当期短。成交补档案。稿子的事这张不写报头。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.li.1938.redeem",
+      "type": "person",
+      "person": "li",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "student",
+        "redeem",
+        "omen_wealth"
+      ],
+      "intent": "redeem",
+      "conditions": {
+        "all": [
+          {
+            "ticket_open": "li"
+          },
+          {
+            "not": {
+              "person_state": [
+                "li",
+                "gone"
+              ]
+            }
+          }
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.li.1938.redeem"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.li",
+      "brief": "学生来赎自己当出去的那封信。只有他还有没赎的当票时才会来。1938 年三月。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.linsao.1938.pawn_hairpin",
+      "type": "person",
+      "person": "linsao",
+      "era": [
+        "1938"
+      ],
+      "weight": 8,
+      "tags": [
+        "woman",
+        "boat",
+        "pregnant",
+        "poor",
+        "omen_water",
+        "omen_family"
+      ],
+      "intent": "pawn",
+      "item": {
+        "template": "jewelry.hairpin"
+      },
+      "asking": {
+        "pct": [
+          90,
+          120
+        ]
+      },
+      "floor": {
+        "pct": [
+          55,
+          75
+        ]
+      },
+      "patience_min": [
+        50,
+        110
+      ],
+      "impatience": "leave",
+      "term_days": 15,
+      "minigame_hint": "weigh",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "linsao",
+            "gone"
+          ]
+        }
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.linsao.1938.hairpin"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          },
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ],
+        "on_expire": [
+          {
+            "op": "flag",
+            "key": "grudge_linsao",
+            "value": true
+          },
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.linsao",
+      "brief": "船户的家眷，有孕，1938 年三月来当一支金簪。当期按起步天数。丈夫在上海船上、汇款断了，只作设计依据，不写对白。成交得当票并补档案。当天打烊没接她：她记仇，立旗，交情降一点；之后求再宽限的牌不来。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.linsao.1938.redeem",
+      "type": "person",
+      "person": "linsao",
+      "era": [
+        "1938"
+      ],
+      "weight": 6,
+      "tags": [
+        "woman",
+        "boat",
+        "redeem",
+        "omen_water"
+      ],
+      "intent": "redeem",
+      "conditions": {
+        "all": [
+          {
+            "ticket_open": "linsao"
+          },
+          {
+            "not": {
+              "person_state": [
+                "linsao",
+                "gone"
+              ]
+            }
+          }
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.linsao.1938.redeem"
+          },
+          {
+            "op": "rep",
+            "delta": 1
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.linsao",
+      "brief": "船户家眷来赎金簪。只有她还有没赎的当票时才会来。1938 年三月。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.linsao.1938.help_wait",
+      "type": "person",
+      "person": "linsao",
+      "era": [
+        "1938"
+      ],
+      "weight": 4,
+      "tags": [
+        "woman",
+        "boat",
+        "pregnant",
+        "omen_family"
+      ],
+      "intent": "help",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "linsao",
+                "gone"
+              ]
+            }
+          },
+          {
+            "story": [
+              "s1938.linsao_term",
+              "extended"
+            ]
+          },
+          {
+            "not": {
+              "flag": "grudge_linsao"
+            }
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "wait",
+          "brief": "再宽几天",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.linsao.1938.wait"
+            },
+            {
+              "op": "flag",
+              "key": "k01_linsao_wait",
+              "value": true
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "不再宽",
+          "effects": [
+            {
+              "op": "conscience",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.linsao",
+      "brief": "金色当期被宽限之后，她再来求铺子再等一等汇款。1938 年三月。答应再等，或不再管。当簪那天没接、记仇旗已立，这张不来。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhouma.1938.ask_town",
+      "type": "person",
+      "person": "zhouma",
+      "era": [
+        "1938"
+      ],
+      "weight": 8,
+      "tags": [
+        "cook",
+        "omen_stranger"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "zhouma",
+            "gone"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "tell",
+          "brief": "说几件不打紧的",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.zhouma.1938.town"
+            },
+            {
+              "op": "flag",
+              "key": "k01_zhouma_talk",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "dodge",
+          "brief": "不多说",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.zhouma",
+      "brief": "茶馆厨娘，1938 年三月来柜台闲聊，打听铺子最近收了什么。说了补档案，也立一个她来过的旗；岔开伤交情。人脉那张教学牌不在这里。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhouma.1938.help_meal",
+      "type": "person",
+      "person": "zhouma",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "cook",
+        "family",
+        "omen_family"
+      ],
+      "intent": "help",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "zhouma",
+            "gone"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "carry",
+          "brief": "答应带话",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.zhouma.1938.meal"
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "不揽这事",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.zhouma",
+      "brief": "厨娘来让你给她带一句口信，或帮她留一顿饭的钱。1938 年三月。答应或拒绝。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhouma.1938.ask_zhao",
+      "type": "person",
+      "person": "zhouma",
+      "era": [
+        "1938"
+      ],
+      "weight": 4,
+      "tags": [
+        "cook",
+        "omen_dispute"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "zhouma",
+                "gone"
+              ]
+            }
+          },
+          {
+            "story": [
+              "s1938.zhao_borrow",
+              "refused"
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "tell",
+          "brief": "承认拒绝过他",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.zhouma.1938.zhao"
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            }
+          ]
+        },
+        {
+          "id": "dodge",
+          "brief": "不谈",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.zhouma",
+      "brief": "佃户借钱被拒之后，厨娘来传这句话，问你还认不认这门交情。1938 年三月。认或岔开。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhao.1938.pawn_robe",
+      "type": "person",
+      "person": "zhao",
+      "era": [
+        "1938"
+      ],
+      "weight": 7,
+      "tags": [
+        "farmer",
+        "poor",
+        "omen_family"
+      ],
+      "intent": "pawn",
+      "item": {
+        "template": "clothing.robe"
+      },
+      "asking": {
+        "pct": [
+          80,
+          110
+        ]
+      },
+      "floor": {
+        "pct": [
+          45,
+          65
+        ]
+      },
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "leave",
+      "term_days": 20,
+      "minigame_hint": "spot",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "zhao",
+            "gone"
+          ]
+        }
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.zhao.1938.robe"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.zhao",
+      "brief": "佃户，1938 年三月来当一件袍子。家里等钱用。当期按起步天数。成交补档案。借钱那张是金色主线，不在这张上。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhao.1938.redeem",
+      "type": "person",
+      "person": "zhao",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "farmer",
+        "redeem",
+        "omen_wealth"
+      ],
+      "intent": "redeem",
+      "conditions": {
+        "all": [
+          {
+            "ticket_open": "zhao"
+          },
+          {
+            "not": {
+              "person_state": [
+                "zhao",
+                "gone"
+              ]
+            }
+          }
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.zhao.1938.redeem"
+          },
+          {
+            "op": "rep",
+            "delta": 1
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.zhao",
+      "brief": "佃户来赎袍子。只有他还有没赎的当票时才会来。1938 年三月。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhao.1938.help_thanks",
+      "type": "person",
+      "person": "zhao",
+      "era": [
+        "1938"
+      ],
+      "weight": 4,
+      "tags": [
+        "farmer",
+        "omen_family"
+      ],
+      "intent": "help",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "zhao",
+                "gone"
+              ]
+            }
+          },
+          {
+            "story": [
+              "s1938.zhao_borrow",
+              "lent"
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "listen",
+          "brief": "听他说",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.zhao.1938.thanks"
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "id": "cut",
+          "brief": "打断",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.zhao",
+      "brief": "主线里把三百借给他之后，他再来报一声家里的人还没回来。1938 年三月。听完补档案，或把话挡回去。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.sunyoung.1938.buy_jade",
+      "type": "person",
+      "person": "sunyoung",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "landlord",
+        "buyer",
+        "omen_wealth"
+      ],
+      "intent": "buy",
+      "patience_min": [
+        30,
+        70
+      ],
+      "impatience": "raise",
+      "want": {
+        "cats": [
+          "jewelry"
+        ],
+        "budget_pct": [
+          90,
+          150
+        ]
+      },
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "sunyoung",
+                "gone"
+              ]
+            }
+          },
+          {
+            "not": {
+              "counter_gte": [
+                "snub_guanjia",
+                1
+              ]
+            }
+          }
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.sunyoung.1938.jade"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.sunyoung",
+      "brief": "孙府独子，1938 年三月来看首饰，想买一件。真正要来做什么先不写死，留给后年站队。成交补档案。管家来要米那天没接、冷落记过一次，这张不来。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.sunyoung.1938.ask_deed",
+      "type": "person",
+      "person": "sunyoung",
+      "era": [
+        "1938"
+      ],
+      "weight": 4,
+      "tags": [
+        "landlord",
+        "official",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "sunyoung",
+            "gone"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "tell",
+          "brief": "说有没有过契",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.sunyoung.1938.deed"
+            },
+            {
+              "op": "flag",
+              "key": "k01_sun_asked_deed",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "dodge",
+          "brief": "不说",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.sunyoung",
+      "brief": "孙府独子来问铺子收没收过田契。1938 年三月，伪维持会还在管事。说了或岔开。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.ma.1938.sell_rice",
+      "type": "person",
+      "person": "ma",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "official",
+        "levy",
+        "rice",
+        "omen_official",
+        "omen_wealth"
+      ],
+      "intent": "sell",
+      "item": {
+        "template": "rice.jing"
+      },
+      "asking": {
+        "pct": [
+          110,
+          150
+        ]
+      },
+      "floor": {
+        "pct": [
+          75,
+          100
+        ]
+      },
+      "patience_min": [
+        30,
+        60
+      ],
+      "impatience": "raise",
+      "minigame_hint": "spot",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "ma",
+                "gone"
+              ]
+            }
+          },
+          {
+            "not": {
+              "flag": "grudge_ma"
+            }
+          }
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.ma.1938.rice"
+          },
+          {
+            "op": "heat",
+            "delta": -1
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          },
+          {
+            "op": "heat",
+            "delta": 1
+          }
+        ]
+      },
+      "art": "portrait.ma",
+      "brief": "伪维持会的保长，1938 年三月把收上来的一袋米转手卖掉。开口偏高，谈不拢会加价。成交补档案，风声松一点。摊派是另一张金色牌。打听名字那天没接、记仇旗已立，这袋米不来卖。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.ma.1938.ask_names",
+      "type": "person",
+      "person": "ma",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "official",
+        "levy",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "ma",
+            "gone"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "tell",
+          "brief": "报几个名字",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.ma.1938.names"
+            },
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "conscience",
+              "delta": -2
+            }
+          ]
+        },
+        {
+          "id": "dodge",
+          "brief": "岔开",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "flag",
+            "key": "grudge_ma",
+            "value": true
+          },
+          {
+            "op": "counter",
+            "key": "snub_ma",
+            "delta": 1
+          },
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.ma",
+      "brief": "伪维持会的保长来打听谁在铺子进出。1938 年三月。说了风声变紧并补档案；岔开伤交情，风声也紧。当天打烊没接他：他记仇，立旗并记一次冷落，交情降一点；他不再来卖米，跑腿也不再来卖戒指。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.hu2.1938.sell_ring",
+      "type": "person",
+      "person": "hu2",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "official",
+        "omen_dispute",
+        "omen_wealth"
+      ],
+      "intent": "sell",
+      "item": {
+        "template": "jewelry.ring"
+      },
+      "asking": {
+        "pct": [
+          80,
+          120
+        ]
+      },
+      "floor": {
+        "pct": [
+          45,
+          70
+        ]
+      },
+      "patience_min": [
+        25,
+        55
+      ],
+      "impatience": "leave",
+      "minigame_hint": "weigh",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "hu2",
+                "gone"
+              ]
+            }
+          },
+          {
+            "not": {
+              "counter_gte": [
+                "snub_ma",
+                1
+              ]
+            }
+          }
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.hu2.1938.ring"
+          },
+          {
+            "op": "heat",
+            "delta": 2
+          },
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": 1
+          }
+        ]
+      },
+      "art": "portrait.hu2",
+      "brief": "给伪维持会保长跑腿的人，1938 年三月卖掉一只自己扣下来的戒指。收下风声会紧。保长打听名字那天没接、冷落记过一次，这只戒指不来卖。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.hu2.1938.ask_levy",
+      "type": "person",
+      "person": "hu2",
+      "era": [
+        "1938"
+      ],
+      "weight": 4,
+      "tags": [
+        "official",
+        "levy",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "hu2",
+                "gone"
+              ]
+            }
+          },
+          {
+            "any": [
+              {
+                "story": [
+                  "s1938.ma_levy",
+                  "paid"
+                ]
+              },
+              {
+                "story": [
+                  "s1938.ma_levy",
+                  "refused"
+                ]
+              },
+              {
+                "story": [
+                  "s1938.ma_levy",
+                  "talked"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "tell",
+          "brief": "告诉他办过了",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.hu2.1938.levy"
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "add_card",
+              "card": "kp.hu_owes",
+              "to": "kept"
+            }
+          ]
+        },
+        {
+          "id": "dodge",
+          "brief": "不认",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.hu2",
+      "brief": "金色摊派被应付过之后（交了、拒了或讲成了），跑腿来问那笔钱。1938 年三月，人是伪维持会一边的。当天没理保长的那条路他不来。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.sunlaoye.1938.buy_field",
+      "type": "person",
+      "person": "sunlaoye",
+      "era": [
+        "1938"
+      ],
+      "weight": 4,
+      "tags": [
+        "landlord",
+        "buyer",
+        "official",
+        "omen_wealth"
+      ],
+      "intent": "buy",
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "leave",
+      "want": {
+        "cats": [
+          "documents"
+        ],
+        "budget_pct": [
+          70,
+          120
+        ]
+      },
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "sunlaoye",
+                "gone"
+              ]
+            }
+          },
+          {
+            "not": {
+              "flag": "grudge_sunlaoye"
+            }
+          }
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.sunlaoye.1938.field"
+          },
+          {
+            "op": "flag",
+            "key": "k01_sun_bought_deed",
+            "value": true
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.sunlaoye",
+      "brief": "孙府当家，1938 年三月来看货架上的田契一类文书，想买走。低价收地只作设计依据。成交补档案。问核地那天没接、记仇旗已立，这张不来。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.sunlaoye.1938.ask_land",
+      "type": "person",
+      "person": "sunlaoye",
+      "era": [
+        "1938"
+      ],
+      "weight": 4,
+      "tags": [
+        "landlord",
+        "official",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "sunlaoye",
+            "gone"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "agree",
+          "brief": "答应核",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.sunlaoye.1938.land"
+            },
+            {
+              "op": "flag",
+              "key": "k01_sun_land",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "不揽",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "flag",
+            "key": "grudge_sunlaoye",
+            "value": true
+          },
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.sunlaoye",
+      "brief": "孙府当家来问你肯不肯帮他核一笔地。1938 年三月，伪维持会还在。答应就立旗并补档案；拒绝伤交情。当天打烊没接他：他记仇，立旗，交情降一点；之后不来买文书。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.guanjia.1938.ask_ledger",
+      "type": "person",
+      "person": "guanjia",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "steward",
+        "landlord",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "guanjia",
+                "gone"
+              ]
+            }
+          },
+          {
+            "not": {
+              "flag": "grudge_guanjia"
+            }
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "tell",
+          "brief": "说几笔",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.guanjia.1938.ledger"
+            }
+          ]
+        },
+        {
+          "id": "dodge",
+          "brief": "不说",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        },
+        {
+          "id": "show",
+          "brief": "把账摊开讲",
+          "check": {
+            "slots": [
+              {
+                "id": "talker",
+                "accepts": [
+                  "self",
+                  "contact"
+                ],
+                "attr": "tongue",
+                "brief": "出面说话的人"
+              }
+            ],
+            "need": 2,
+            "on_success": [
+              {
+                "op": "dossier",
+                "frag": "df.guanjia.1938.ledger"
+              },
+              {
+                "op": "rep",
+                "delta": 1
+              }
+            ],
+            "on_fail": [
+              {
+                "op": "heat",
+                "delta": 1
+              },
+              {
+                "op": "rep",
+                "delta": -1
+              }
+            ]
+          }
+        }
+      ],
+      "art": "portrait.guanjia",
+      "brief": "孙府管家，1938 年三月来问铺子近期收了什么。可以说，可以岔开，也可以把账拿出来掷口才。来要米那天没接、记仇旗已立，这张不来。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.guanjia.1938.help_rice",
+      "type": "person",
+      "person": "guanjia",
+      "era": [
+        "1938"
+      ],
+      "weight": 4,
+      "tags": [
+        "steward",
+        "rice",
+        "omen_wealth"
+      ],
+      "intent": "help",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "guanjia",
+                "gone"
+              ]
+            }
+          },
+          {
+            "flag": "k01_xiaoding_rice"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "return",
+          "brief": "答应查这袋米",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.guanjia.1938.rice"
+            },
+            {
+              "op": "flag",
+              "key": "k01_rice_questioned",
+              "value": true
+            },
+            {
+              "op": "heat",
+              "delta": -1
+            },
+            {
+              "op": "add_card",
+              "card": "kp.leverage.xiaoding",
+              "to": "kept"
+            }
+          ]
+        },
+        {
+          "id": "keep",
+          "brief": "不退",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "flag",
+            "key": "grudge_guanjia",
+            "value": true
+          },
+          {
+            "op": "counter",
+            "key": "snub_guanjia",
+            "delta": 1
+          }
+        ]
+      },
+      "art": "portrait.guanjia",
+      "brief": "伙夫那袋米已经收下之后，管家来要回去。1938 年三月。还给他，或咬定是正当买卖。当天打烊没接他：他记仇，立旗并记一次冷落；之后不再来问账，孙府独子也不再来买首饰。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.guanjia.1938.ask_stranger",
+      "type": "person",
+      "person": "guanjia",
+      "era": [
+        "1938"
+      ],
+      "weight": 4,
+      "tags": [
+        "steward",
+        "omen_stranger"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "guanjia",
+                "gone"
+              ]
+            }
+          },
+          {
+            "story": [
+              "s1938.wangshan",
+              "turned"
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "tell",
+          "brief": "说你交过他",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.guanjia.1938.stranger"
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "id": "dodge",
+          "brief": "不认",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.guanjia",
+      "brief": "主线里把过路青年交出去之后，管家来问这个人。1938 年三月。说了补档案并动风声；不说伤交情。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.wu.1938.sell_jing",
+      "type": "person",
+      "person": "wu",
+      "era": [
+        "1938"
+      ],
+      "weight": 6,
+      "tags": [
+        "rice",
+        "dock",
+        "omen_water",
+        "omen_wealth"
+      ],
+      "intent": "sell",
+      "item": {
+        "template": "rice.jing"
+      },
+      "asking": {
+        "pct": [
+          100,
+          130
+        ]
+      },
+      "floor": {
+        "pct": [
+          70,
+          90
+        ]
+      },
+      "patience_min": [
+        30,
+        70
+      ],
+      "impatience": "raise",
+      "minigame_hint": "spot",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "wu",
+            "gone"
+          ]
+        }
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.wu.1938.jing"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.wu",
+      "brief": "米行掌柜，1938 年三月送来一小袋粳米。城里收粮的事这张不说完。成交补档案。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.wu.1938.buy_rice",
+      "type": "person",
+      "person": "wu",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "rice",
+        "buyer",
+        "omen_wealth"
+      ],
+      "intent": "buy",
+      "patience_min": [
+        30,
+        70
+      ],
+      "impatience": "leave",
+      "want": {
+        "cats": [
+          "rice"
+        ],
+        "budget_pct": [
+          80,
+          120
+        ]
+      },
+      "conditions": {
+        "not": {
+          "person_state": [
+            "wu",
+            "gone"
+          ]
+        }
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.wu.1938.buy"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.wu",
+      "brief": "米行掌柜来回买货架上的米。1938 年三月。成交补档案。船期仍不一次说完。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.postman.1938.ask_letter",
+      "type": "person",
+      "person": "postman",
+      "era": [
+        "1938"
+      ],
+      "weight": 5,
+      "tags": [
+        "post",
+        "omen_far"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "postman",
+                "gone"
+              ]
+            }
+          },
+          {
+            "story": [
+              "s1938.brother_farewell",
+              "listened"
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "keep",
+          "brief": "让他把底留下",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.postman.1938.letter"
+            },
+            {
+              "op": "flag",
+              "key": "k01_letter_copy",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "skip",
+          "brief": "先不留",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.postman",
+      "brief": "听完哥哥交代之后，邮电代办来问要不要留一封信的底。1938 年三月。留下或谢绝。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.postman.1938.ask_silence",
+      "type": "person",
+      "person": "postman",
+      "era": [
+        "1938"
+      ],
+      "weight": 4,
+      "tags": [
+        "post",
+        "omen_far"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "postman",
+                "gone"
+              ]
+            }
+          },
+          {
+            "story": [
+              "s1938.brother_farewell",
+              "ignored"
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "open",
+          "brief": "说还收",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.postman.1938.silence"
+            }
+          ]
+        },
+        {
+          "id": "shut",
+          "brief": "说先不收",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.postman",
+      "brief": "哥哥告别那天没理他之后，邮电代办来问铺子还收不收信。1938 年三月。这条路和听完交代不是同一张牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.postman.1938.help_copy",
+      "type": "person",
+      "person": "postman",
+      "era": [
+        "1938"
+      ],
+      "weight": 4,
+      "tags": [
+        "post",
+        "omen_far"
+      ],
+      "intent": "help",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "postman",
+            "gone"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "copy",
+          "brief": "帮他核",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.postman.1938.copy"
+            },
+            {
+              "op": "flag",
+              "key": "k01_wire_copy",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "brief": "不碰",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "art": "portrait.postman",
+      "brief": "邮电代办来求你帮他核一份明码电的底，不解释发给谁。1938 年三月。帮或拒绝。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K01",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

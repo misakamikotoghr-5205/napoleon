@@ -1,0 +1,14 @@
+# C01 牌桌（docs/handoff_cards/C01_table.md）
+C01_layout|res://scripts/tests/cards/C01/test_layout.gd|240|
+C01_input|res://scripts/tests/cards/C01/test_input.gd|180|
+C01_reply_route|res://scripts/tests/cards/C01/test_reply_route.gd|240|
+C01_host|res://scripts/tests/cards/C01/test_host.gd|180|
+C01_minigame_host|res://scripts/tests/cards/C01/test_minigame_host.gd|120|
+C01_guide_host|res://scripts/tests/cards/C01/test_guide_host.gd|180|
+C01_theme|res://scripts/tests/cards/C01/test_theme.gd|60|
+C01_autoplay|res://scripts/tests/cards/C01/test_autoplay.gd|240|
+C01_next_day|res://scripts/tests/cards/C01/test_next_day.gd|240|
+C01_stage|res://scripts/tests/cards/C01/test_stage.gd|180|
+C01_hud|res://scripts/tests/cards/C01/test_hud.gd|120|
+C01_close_day_mode|res://scripts/tests/cards/C01/test_close_day_mode.gd|180|
+C01_shell_fixes|res://scripts/tests/cards/C01/test_shell_fixes.gd|240|

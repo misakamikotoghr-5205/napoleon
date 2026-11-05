@@ -1,0 +1,50 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-3940"
+  },
+  "p.linsao.1939.year_end": {
+    "title": "年关当衣",
+    "body": "年关的柜台前挤满了人。林嫂抱着已经会坐的孩子，把一件冬衣递了过来。",
+    "lines": {
+      "greet": "沈姑娘，求你收下这件衣裳，过了年我一定来赎。",
+      "accept": "谢谢你，这个年我们娘俩能过了。",
+      "leave": "人太多了，我改天再来吧。",
+      "refused": "我再去想想办法。",
+      "ask": "这件冬衣，能当{price}块就好。",
+      "counter": "{price}块，过了年我一定来赎。"
+    },
+    "outcomes": {
+      "ignored": "林嫂抱着孩子在门外等了很久，最后走了。这一页留下了空白。"
+    }
+  },
+  "p.postman.1939.brother_letter": {
+    "title": "哥哥的家书",
+    "body": "邮差何启明送来一封信，信封上是哥哥的字。",
+    "lines": {
+      "greet": "沈姑娘，你哥哥来信了！"
+    },
+    "choices": {
+      "read": "拆开读信",
+      "hold": "先压着"
+    },
+    "outcomes": {
+      "ignored": "邮差把信带了回去，哥哥的消息这回没能接上。"
+    }
+  },
+  "p.wangshan.1939.whereabouts": {
+    "title": "王山的下落",
+    "body": "王山又出现在柜台边，人瘦了一圈，这一年不知去了哪里。",
+    "lines": {
+      "greet": "沈姑娘，是我。"
+    },
+    "choices": {
+      "ask_where": "问他去向",
+      "shelter": "让他躲几天",
+      "send_off": "让他离镇"
+    },
+    "outcomes": {
+      "ignored": "王山没等到人，悄悄走了。这一年他去了哪里，没人知道。"
+    }
+  }
+}

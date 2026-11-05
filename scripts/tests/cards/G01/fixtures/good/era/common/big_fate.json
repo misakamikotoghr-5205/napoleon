@@ -1,0 +1,133 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1,
+    "brief": "例子集：大命运（§4.7.5）"
+  },
+  "cards": [
+    {
+      "id": "bf.wheel",
+      "type": "big_fate",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "tags": [
+        "big"
+      ],
+      "opens_wheel": "wh.big",
+      "art": "illus.bf.wheel",
+      "brief": "快输的时候出现：处理它就是转一次大轮盘（翻身／平安／坠底），转之前可以往香案上放东西。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "id": "bf.any.mystery_box",
+      "type": "big_fate",
+      "era": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 0,
+      "crisis": [
+        "cash_short"
+      ],
+      "valence": "mixed",
+      "tags": [
+        "contraband",
+        "stranger"
+      ],
+      "choices": [
+        {
+          "id": "take",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 300,
+              "reason": "k02.reason.bigfate"
+            },
+            {
+              "op": "add_card",
+              "card": "kp.mystery_box",
+              "to": "kept"
+            }
+          ],
+          "brief": "收下"
+        },
+        {
+          "id": "decline",
+          "effects": [],
+          "brief": "不收"
+        }
+      ],
+      "art": "illus.bf.any.mystery_box",
+      "brief": "陌生人出大价钱请你保管一箱东西七天。收下：钱够还清抵押；箱子成了留着的牌，被查到直接被抓。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-14"
+      },
+      "effects": {
+        "on_expire": []
+      }
+    },
+    {
+      "id": "bf.any.ship_ticket",
+      "type": "big_fate",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "crisis": [
+        "cash_short",
+        "heat_max"
+      ],
+      "valence": "good",
+      "tags": [
+        "big",
+        "water"
+      ],
+      "choices": [
+        {
+          "id": "go",
+          "effects": [
+            {
+              "op": "flag",
+              "key": "ship_ticket_used"
+            },
+            {
+              "op": "heat",
+              "delta": -20
+            }
+          ],
+          "brief": "去上海躲一阵"
+        },
+        {
+          "id": "sell",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 120,
+              "reason": "k02.reason.bigfate"
+            }
+          ],
+          "brief": "把船票卖了"
+        }
+      ],
+      "art": "illus.bf.any.ship_ticket",
+      "brief": "（W0 例子，补全大轮盘翻身段引用的大赌）一张去上海的船票：躲一阵（风声落下来）或者卖掉换钱。",
+      "_provenance": {
+        "by": "ai",
+        "task": "W0",
+        "date": "2026-10-13"
+      },
+      "effects": {
+        "on_expire": []
+      }
+    }
+  ]
+}

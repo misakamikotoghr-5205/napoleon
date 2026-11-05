@@ -1,0 +1,189 @@
+{
+  "id": "d2_linsao",
+  "npc": "linsao",
+  "mode": "pawn",
+  "items": [
+    {
+      "def": "hairpin"
+    }
+  ],
+  "ask": 150,
+  "floor": 100,
+  "suggest": 160,
+  "est": [
+    100,
+    260
+  ],
+  "show_floor": false,
+  "hard_floor": false,
+  "fund_button": false,
+  "min_inspect": 0,
+  "split": false,
+  "hint": "",
+  "pre": [
+    {
+      "op": "narr",
+      "text": "一个怀孕的年轻妇人扶着腰进来，先在门槛边喝了口气。"
+    }
+  ],
+  "intro": [
+    {
+      "op": "say",
+      "who": "linsao",
+      "text": "哎呦，如花，你都会当家了。……你爸妈的事我听说了，会回来的。"
+    },
+    {
+      "op": "say",
+      "who": "linsao",
+      "text": "还有一个月就要生了。我们这儿的规矩，孩子生下来要戴个金锁，锁住命。银楼说要提前定做，先付一半定钱。"
+    },
+    {
+      "op": "say",
+      "who": "linsao",
+      "text": "孩子他爹在上海跑船，三个月没汇钱回来了。这支簪子是我的嫁妆，先放你这儿。等他的钱到了，我就来赎。"
+    }
+  ],
+  "extras": [
+    {
+      "id": "ask_husband",
+      "label": "问问孩子和她丈夫",
+      "once": true,
+      "steps": [
+        {
+          "op": "say",
+          "who": "you",
+          "text": "孩子他爹在上海跑船，三个月没汇钱回来，你就不急？"
+        },
+        {
+          "op": "narr",
+          "text": "她一手扶着腰，另一只手在簪子上摩挲了一下。"
+        },
+        {
+          "op": "say",
+          "who": "linsao",
+          "text": "怎么不急。可他是跑船的，船上的事哪说得准。他临走前答应过，这一趟跑完就回来，我就当他还在路上。"
+        },
+        {
+          "op": "say",
+          "who": "linsao",
+          "text": "孩子生下来，我就告诉他，他爹是跑船的，最有本事。"
+        }
+      ]
+    }
+  ],
+  "deals": [
+    {
+      "id": "refuse",
+      "label": "拒收",
+      "steps": [
+        {
+          "op": "stat",
+          "stat": "koubei",
+          "delta": -2,
+          "why": "拒收林嫂的金簪"
+        },
+        {
+          "op": "set",
+          "flag": "lin_pawn",
+          "value": "refused"
+        },
+        {
+          "op": "say",
+          "who": "linsao",
+          "text": "那……婶子再想想别的法子。"
+        }
+      ]
+    }
+  ],
+  "on_accept": [
+    {
+      "op": "if",
+      "cond": "price() >= 160",
+      "then": [
+        {
+          "op": "stat",
+          "stat": "koubei",
+          "delta": 3,
+          "why": "林嫂当本公道"
+        },
+        {
+          "op": "stat",
+          "stat": "benxin",
+          "delta": 1,
+          "why": "林嫂当本公道"
+        },
+        {
+          "op": "set",
+          "flag": "lin_pawn",
+          "value": "fair"
+        }
+      ]
+    },
+    {
+      "op": "if",
+      "cond": "price() > 130 and price() < 160",
+      "then": [
+        {
+          "op": "set",
+          "flag": "lin_pawn",
+          "value": "fair"
+        }
+      ]
+    },
+    {
+      "op": "if",
+      "cond": "price() >= 100 and price() <= 130",
+      "then": [
+        {
+          "op": "stat",
+          "stat": "benxin",
+          "delta": -2,
+          "why": "压林嫂的当本"
+        },
+        {
+          "op": "set",
+          "flag": "lin_pawn",
+          "value": "low"
+        }
+      ]
+    },
+    {
+      "op": "if",
+      "cond": "str(flag('ticket_old_last')) == 'true'",
+      "then": [
+        {
+          "op": "set",
+          "flag": "lin_ticket_old",
+          "value": true
+        }
+      ]
+    },
+    {
+      "op": "note",
+      "kind": "线索",
+      "text": "林嫂的金簪当票到期日为第 32 天；她丈夫汇款能否寄到、孩子能否平安生下，是长线。",
+      "source": "inferred",
+      "via": "linsao"
+    },
+    {
+      "op": "say",
+      "who": "linsao",
+      "text": "等孩子满月，红蛋先给你送来。"
+    }
+  ],
+  "on_leave": [
+    {
+      "op": "stat",
+      "stat": "koubei",
+      "delta": -2,
+      "why": "林嫂压价后走了（同拒收）"
+    },
+    {
+      "op": "set",
+      "flag": "lin_pawn",
+      "value": "refused"
+    }
+  ],
+  "outro": [],
+  "post": []
+}

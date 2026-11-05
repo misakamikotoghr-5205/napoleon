@@ -1,0 +1,12 @@
+# C02 牌（docs/handoff_cards/C02_card-widget.md）
+C02_examples|res://scripts/tests/cards/C02/test_examples.gd|180|
+C02_states|res://scripts/tests/cards/C02/test_states.gd|120|
+C02_drag_zoom|res://scripts/tests/cards/C02/test_drag_zoom.gd|120|
+C02_anchors|res://scripts/tests/cards/C02/test_anchors.gd|120|
+C02_art|res://scripts/tests/cards/C02/test_art.gd|60|
+C02_guide|res://scripts/tests/cards/C02/test_guide.gd|180|
+C02_guide_k16|res://scripts/tests/cards/C02/test_guide.gd|180|--steps=k16 --name=C02_guide_k16
+C02_fan|res://scripts/tests/cards/C02/test_fan.gd|180|
+C02_hero|res://scripts/tests/cards/C02/test_hero.gd|120|
+C02_real_engine|res://scripts/tests/cards/C02/test_real_engine.gd|180|
+C02_real_data|res://scripts/tests/cards/C02/test_real_engine.gd|180|--name=C02_real_data

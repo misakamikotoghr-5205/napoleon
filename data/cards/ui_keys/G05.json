@@ -1,0 +1,85 @@
+{
+  "_meta": {
+    "owner": "G05",
+    "schema": 1,
+    "_provenance": {
+      "by": "ai",
+      "task": "G05",
+      "date": "2026-10-13"
+    }
+  },
+  "keys": {
+    "g05.almanac.pawn_in": {
+      "brief": "黄历动作键：收当。"
+    },
+    "g05.almanac.buy_in": {
+      "brief": "黄历动作键：收货。"
+    },
+    "g05.almanac.sell_out": {
+      "brief": "黄历动作键：出货。"
+    },
+    "g05.almanac.redeem": {
+      "brief": "黄历动作键：赎当。"
+    },
+    "g05.almanac.trade": {
+      "brief": "黄历动作键：交易。"
+    },
+    "g05.almanac.meet": {
+      "brief": "黄历动作键：会友。"
+    },
+    "g05.almanac.travel": {
+      "brief": "黄历动作键：出行。"
+    },
+    "g05.almanac.pray": {
+      "brief": "黄历动作键：祭祀。"
+    },
+    "g05.almanac.repair": {
+      "brief": "黄历动作键：修造。"
+    },
+    "g05.almanac.rest": {
+      "brief": "黄历动作键：安床。"
+    },
+    "g05.almanac.lend": {
+      "brief": "黄历动作键：借贷。"
+    },
+    "g05.almanac.wed": {
+      "brief": "黄历动作键：嫁娶。"
+    },
+    "g05.reason.wheel": {
+      "brief": "轮盘代价付款的原因键。"
+    },
+    "g05.reason.incense": {
+      "brief": "香火钱付款的原因键。"
+    },
+    "g05.reason.fortune": {
+      "brief": "求签或测字付款的原因键。"
+    },
+    "g05.notice.peek": {
+      "brief": "提前看到明日牌的提示；参数只包含该牌定义 id。"
+    },
+    "g05.notice.almanac": {
+      "brief": "完成宜事且未做忌事，结算小奖励的提示。"
+    },
+    "g05.end.void": {
+      "brief": "打烊时未转大命运轮盘，这次机会作废；不补发，未用的香案和押牌解除预留。"
+    },
+    "g05.weather.clear": {
+      "brief": "顶栏天气词：晴（hud.gd 按 fate.weather 拼键，rules/daily_wheels.json 的 climate 扇区）"
+    },
+    "g05.weather.cloud": {
+      "brief": "顶栏天气词：阴"
+    },
+    "g05.weather.rain": {
+      "brief": "顶栏天气词：下雨"
+    },
+    "g05.weather.fog": {
+      "brief": "顶栏天气词：起雾"
+    },
+    "g05.weather.wind": {
+      "brief": "顶栏天气词：大风"
+    },
+    "g05.weather.snow": {
+      "brief": "顶栏天气词：下雪"
+    }
+  }
+}

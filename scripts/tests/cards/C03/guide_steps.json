@@ -1,0 +1,87 @@
+{
+  "settings": {
+    "gap_ms": 0,
+    "max_new_per_day": 16,
+    "default_seconds": 16,
+    "bubble_max_w": 360,
+    "fade_in_ms": 0,
+    "fade_out_ms": 0
+  },
+  "steps": [
+    {
+      "id": "gd.slots",
+      "trigger": {
+        "first": "slots",
+        "phase": "day"
+      },
+      "anchor": "a.slots.first",
+      "anchor_fallback": "a.card@{uid}",
+      "done_when": [
+        "ui:slot_drop"
+      ],
+      "priority": 80,
+      "max_shows": 2,
+      "seconds": 12
+    },
+    {
+      "id": "gd.coins",
+      "trigger": {
+        "first": "coins",
+        "phase": "day"
+      },
+      "anchor": "a.slots.coins",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:slot.roll"
+      ],
+      "priority": 70,
+      "max_shows": 2,
+      "seconds": 12
+    },
+    {
+      "id": "gd.choice",
+      "trigger": {
+        "first": "choice",
+        "phase": "day"
+      },
+      "anchor": "a.slots.choices",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:card.choose"
+      ],
+      "priority": 60,
+      "max_shows": 2,
+      "seconds": 12
+    },
+    {
+      "id": "gd.contacts_full",
+      "trigger": {
+        "first": "contacts_full",
+        "phase": "day"
+      },
+      "anchor": "a.slots.release",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:contact.release"
+      ],
+      "priority": 60,
+      "max_shows": 2,
+      "seconds": 12
+    },
+    {
+      "id": "gd.kept_full",
+      "trigger": {
+        "first": "kept_full",
+        "phase": "day"
+      },
+      "anchor": "a.slots.discard",
+      "anchor_fallback": "",
+      "done_when": [
+        "cmd:card.discard"
+      ],
+      "priority": 60,
+      "max_shows": 2,
+      "seconds": 12
+    }
+  ]
+}

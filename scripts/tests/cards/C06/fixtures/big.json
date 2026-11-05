@@ -1,0 +1,145 @@
+{
+  "_meta": {
+    "owner": "C06",
+    "schema": 1,
+    "wheel": "wh.big",
+    "uid": "c0100",
+    "required": false,
+    "brief": "大轮盘：翻身、平安、坠底三段。",
+    "_provenance": {
+      "by": "ai",
+      "task": "C06",
+      "date": "2026-10-13"
+    }
+  },
+  "view": {
+    "v": 1,
+    "phase": "day",
+    "mode": "shop",
+    "busy": false,
+    "money": {
+      "amount": 340,
+      "currency": "fabi"
+    },
+    "hand": [],
+    "kept": [],
+    "contacts": [],
+    "date": {
+      "abs_day": 1,
+      "stage": 0,
+      "stage_day": 1,
+      "era": "1938"
+    },
+    "open_panel": {
+      "kind": "wheel",
+      "args": {
+        "wheel": "wh.big",
+        "uid": "c0100",
+        "required": false
+      }
+    }
+  },
+  "queries": {
+    "wheel|{\"uid\":\"c0100\",\"wheel\":\"wh.big\"}": {
+      "wheel": "wh.big",
+      "uid": "c0100",
+      "kind": "big",
+      "art": "wheel.big",
+      "segments": [
+        {
+          "id": "ws.any.big.fanshen_ship",
+          "arc_deg": 90.0,
+          "art": "icon.ws.caixing"
+        },
+        {
+          "id": "ws.any.big.pingan",
+          "arc_deg": 135.0,
+          "art": "icon.ws.liunian"
+        },
+        {
+          "id": "ws.any.big.zhuidi",
+          "arc_deg": 135.0,
+          "art": "icon.ws.pingan"
+        }
+      ],
+      "incense": {
+        "accepts": [
+          "money",
+          "kept",
+          "contact"
+        ],
+        "placed": [],
+        "full": false
+      },
+      "cost": {
+        "money": 0,
+        "stake": false
+      },
+      "staked": "",
+      "spun": false,
+      "result": {
+        "segment": "",
+        "stop_deg": 0.0
+      }
+    }
+  },
+  "responses": [
+    {
+      "cmd": "wheel.offer",
+      "match": {
+        "uid": "c0100",
+        "wheel": "wh.big",
+        "source": {
+          "kind": "money",
+          "amount": 10
+        }
+      },
+      "result": {
+        "ok": true,
+        "err": ""
+      },
+      "events": []
+    },
+    {
+      "cmd": "wheel.withdraw",
+      "match": {
+        "uid": "c0100",
+        "wheel": "wh.big",
+        "index": 0
+      },
+      "result": {
+        "ok": true,
+        "err": ""
+      },
+      "events": []
+    },
+    {
+      "cmd": "wheel.spin",
+      "match": {
+        "uid": "c0100",
+        "wheel": "wh.big"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "segment": "ws.any.big.pingan",
+        "stop_deg": 150.0
+      },
+      "events": [
+        [
+          "wheel_spun",
+          "wh.big",
+          "ws.any.big.pingan",
+          150.0
+        ]
+      ]
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "ok": true,
+        "err": ""
+      }
+    }
+  ]
+}

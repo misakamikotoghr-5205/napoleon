@@ -1,0 +1,291 @@
+{
+	"_meta": {
+		"_provenance": {
+			"by": "ai",
+			"date": "2026-10-25",
+			"task": "RG6"
+		},
+		"brief": "RG6：第 8 天白天，货郎牌在手上（选项 send_off 在前、look 在后），还没看担子；看了以后 p8 开着。",
+		"owner": "RG6",
+		"schema": 1
+	},
+	"queries": {
+		"card|{\"uid\":\"c0100\"}": {
+			"card": {
+				"actions": [
+					{
+						"enabled": true,
+						"id": "open",
+						"reason_key": ""
+					},
+					{
+						"enabled": true,
+						"id": "choose:send_off",
+						"reason_key": ""
+					},
+					{
+						"enabled": true,
+						"id": "choose:look",
+						"reason_key": ""
+					}
+				],
+				"art": "portrait.stranger_peddler",
+				"away_days": 0,
+				"choices": [
+					{
+						"enabled": true,
+						"id": "send_off"
+					},
+					{
+						"enabled": true,
+						"id": "look"
+					}
+				],
+				"def": "p.stranger_peddler.1938.curios",
+				"gold": false,
+				"intent": "story",
+				"keepable": false,
+				"must_resolve": false,
+				"panel": "slots",
+				"person": "stranger_peddler",
+				"slots": [],
+				"status": "open",
+				"type": "person",
+				"uid": "c0100",
+				"used_today": false,
+				"zone": "hand"
+			},
+			"err": "",
+			"ok": true
+		},
+		"day.end_preview|{}": {
+			"items": [],
+			"needs_confirm": false,
+			"step": "to_night"
+		},
+		"slots|{\"uid\":\"c0100\"}": {
+			"err": "",
+			"ok": true,
+			"ready": false,
+			"slots": []
+		},
+		"stocktake|{\"offer\":\"p8\"}": {
+			"cap": 6,
+			"deals": 0,
+			"err": "",
+			"from": "peddler",
+			"full": false,
+			"held": [],
+			"items": [
+				{
+					"art": "prop.relic.stub_box",
+					"depth": "plain",
+					"id": "rl.stub_box",
+					"kind": "relic"
+				},
+				{
+					"art": "prop.relic.oilpaper_umbrella",
+					"depth": "plain",
+					"id": "rl.oilpaper_umbrella",
+					"kind": "relic"
+				}
+			],
+			"offer": "p8",
+			"ok": true,
+			"picked": "",
+			"stage": 0,
+			"status": "open",
+			"week": -1
+		},
+		"stocktake|{}": {
+			"err": "not_allowed",
+			"ok": false
+		}
+	},
+	"responses": [
+		{
+			"cmd": "card.choose",
+			"events": [
+				[
+					"request_panel",
+					"stocktake",
+					{
+						"offer": "p8"
+					}
+				],
+				[
+					"view_changed",
+					[
+						"hand"
+					]
+				]
+			],
+			"match": {
+				"choice": "look",
+				"uid": "c0100"
+			},
+			"patch": [
+				{
+					"op": "set",
+					"path": "hand",
+					"value": []
+				},
+				{
+					"op": "set",
+					"path": "open_panel",
+					"value": {
+						"args": {
+							"offer": "p8"
+						},
+						"kind": "stocktake"
+					}
+				}
+			]
+		},
+		{
+			"cmd": "card.choose",
+			"match": {
+				"choice": "send_off",
+				"uid": "c0100"
+			},
+			"patch": [
+				{
+					"op": "set",
+					"path": "hand",
+					"value": []
+				}
+			]
+		}
+	],
+	"view": {
+		"busy": false,
+		"caps": {
+			"contacts": 3,
+			"kept": 5,
+			"shelf": 12
+		},
+		"contacts": [],
+		"date": {
+			"abs_day": 8,
+			"d": 8,
+			"era": "1938",
+			"m": 3,
+			"minute": 1200,
+			"stage": 0,
+			"stage_day": 8,
+			"stage_days": 30,
+			"weekday": 0,
+			"y": 1938
+		},
+		"demands": [],
+		"estates": [
+			{
+				"id": "es.jewel_cabinet",
+				"interest_money": 4,
+				"money": 80,
+				"status": "held"
+			},
+			{
+				"id": "es.storeroom",
+				"interest_money": 6,
+				"money": 120,
+				"status": "held"
+			},
+			{
+				"id": "es.counter",
+				"interest_money": 7,
+				"money": 150,
+				"status": "held"
+			},
+			{
+				"id": "es.old_house",
+				"interest_money": 10,
+				"money": 260,
+				"status": "held"
+			},
+			{
+				"id": "es.shopfront",
+				"interest_money": 16,
+				"money": 400,
+				"status": "held"
+			}
+		],
+		"game_over_reason": "",
+		"goals": [
+			{
+				"id": "gl.1938.keep_shop",
+				"main": true,
+				"status": "open"
+			}
+		],
+		"hand": [
+			{
+				"actions": [
+					{
+						"enabled": true,
+						"id": "open",
+						"reason_key": ""
+					},
+					{
+						"enabled": true,
+						"id": "choose:send_off",
+						"reason_key": ""
+					},
+					{
+						"enabled": true,
+						"id": "choose:look",
+						"reason_key": ""
+					}
+				],
+				"art": "portrait.stranger_peddler",
+				"away_days": 0,
+				"def": "p.stranger_peddler.1938.curios",
+				"gold": false,
+				"intent": "story",
+				"keepable": false,
+				"must_resolve": false,
+				"panel": "slots",
+				"person": "stranger_peddler",
+				"status": "open",
+				"type": "person",
+				"uid": "c0100",
+				"used_today": false,
+				"zone": "hand"
+			}
+		],
+		"heat_tier": 0,
+		"kept": [],
+		"mode": "shop",
+		"money": {
+			"amount": 118,
+			"currency": "fabi"
+		},
+		"night_offers": [],
+		"open_panel": {
+			"args": {},
+			"kind": ""
+		},
+		"pending": [],
+		"phase": "day",
+		"rep_tier": 1,
+		"self": {
+			"attrs": {
+				"eye": 2,
+				"nerve": 1,
+				"pull": 1,
+				"tongue": 1
+			},
+			"def": "self.ruhua",
+			"uid": "c0001",
+			"used_today": false
+		},
+		"shelf_count": 0,
+		"stage": {
+			"sealed": false,
+			"set": "counter",
+			"time": "day"
+		},
+		"tickets": [],
+		"v": 1
+	}
+}

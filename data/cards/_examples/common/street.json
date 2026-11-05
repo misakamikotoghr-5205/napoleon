@@ -1,0 +1,48 @@
+{
+  "_meta": {
+    "owner": "W0",
+    "schema": 1,
+    "brief": "例子集：街头（§4.7.13）"
+  },
+  "cards": [
+    {
+      "id": "st.write_letters",
+      "type": "street",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "tags": [
+        "street",
+        "letter"
+      ],
+      "slots": [
+        {
+          "id": "you",
+          "accepts": [
+            "self"
+          ],
+          "attr": "tongue"
+        }
+      ],
+      "check": {
+        "need": 1,
+        "on_success": [
+          {
+            "op": "money",
+            "delta": 6,
+            "reason": "k09.reason.street_work"
+          }
+        ],
+        "on_fail": []
+      },
+      "art": "illus.st.write_letters",
+      "brief": "流落街头时：替人写信挣几个钱（掷口才）。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-14"
+      }
+    }
+  ]
+}

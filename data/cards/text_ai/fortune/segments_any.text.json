@@ -1,0 +1,77 @@
+{
+  "_meta": {
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-misc"
+  },
+  "ws.any.big.fanshen_ship": {
+    "title": "一张船票",
+    "body": "有人递来一张去上海的船票。"
+  },
+  "ws.any.big.fanshen_sun": {
+    "title": "贵人相助",
+    "body": "孙老爷肯先支一笔钱，只要你出面作保。"
+  },
+  "ws.any.big.pingan": {
+    "title": "破财消灾",
+    "body": "风声落了不少，也有人上门，说能替你把风声再压一压。"
+  },
+  "ws.any.big.pingan_rep": {
+    "title": "有人留宿",
+    "body": "街坊高看你一眼，也有人肯留你住几晚。"
+  },
+  "ws.any.big.zhuidi_box": {
+    "title": "来路不明的箱子",
+    "body": "有陌生人出大价钱，请你替他保管一口箱子。"
+  },
+  "ws.any.big.zhuidi_house": {
+    "title": "高价买老宅",
+    "body": "有人出高价，要买你家的老宅。"
+  },
+  "ws.any.fair.xiaocai": {
+    "title": "小有进账",
+    "body": "庙会上手气好，进了一笔小钱。"
+  },
+  "ws.any.fair.renyuan": {
+    "title": "人缘好",
+    "body": "庙会上碰见熟人，说了不少好话。"
+  },
+  "ws.any.fair.guashi": {
+    "title": "听闲话",
+    "body": "庙会上听了几句市井闲话。"
+  },
+  "ws.any.fair.kanshi": {
+    "title": "看热闹",
+    "body": "看了一场热闹，什么也没花。"
+  },
+  "ws.any.fair.xiaoshi": {
+    "title": "破点小财",
+    "body": "庙会人挤，丢了几个小钱。"
+  },
+  "ws.any.fair.koujue": {
+    "title": "拌了几句嘴",
+    "body": "和人拌了几句嘴，风声紧了一点。"
+  },
+  "ws.any.gamble.yingqian": {
+    "title": "押中了",
+    "body": "押中了，赢了一笔小钱。"
+  },
+  "ws.any.gamble.shunshou": {
+    "title": "手气顺",
+    "body": "手气顺，旁人对你另眼相看。"
+  },
+  "ws.any.gamble.pingju": {
+    "title": "平局",
+    "body": "不输不赢，听了一耳朵传闻。"
+  },
+  "ws.any.gamble.heju": {
+    "title": "和局",
+    "body": "不输不赢，各自散了。"
+  },
+  "ws.any.gamble.shuqian": {
+    "title": "输了",
+    "body": "押的东西输掉了，风声也紧了一点。"
+  },
+  "ws.any.gamble.zhekou": {
+    "title": "输了面子",
+    "body": "押的东西输掉了，旁人看低了你几分。"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1
+  },
+  "keys": {
+    "k02.reason.bigfate": {
+      "brief": "大命运进出的钱"
+    }
+  }
+}

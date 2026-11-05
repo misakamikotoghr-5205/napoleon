@@ -1,0 +1,332 @@
+{
+  "_meta": {
+    "owner": "C11",
+    "schema": 1,
+    "brief": "牢房：空格子，掷铜钱成了",
+    "_provenance": {
+      "by": "ai",
+      "task": "C11",
+      "date": "2026-10-13"
+    }
+  },
+  "guide_progress": {},
+  "view": {
+    "v": 1,
+    "phase": "day",
+    "mode": "shop",
+    "busy": false,
+    "date": {
+      "stage": 0,
+      "era": "1938",
+      "y": 1938,
+      "m": 3,
+      "d": 9,
+      "weekday": 2,
+      "stage_day": 9,
+      "stage_days": 30,
+      "abs_day": 9,
+      "minute": 480
+    },
+    "notice": {
+      "weather": "clear",
+      "market_day": false,
+      "news": [],
+      "almanac": {
+        "id": "alm.shoudang",
+        "yi": [],
+        "ji": [],
+        "done": []
+      },
+      "fortune": ""
+    },
+    "money": {
+      "amount": 12,
+      "currency": "fabi"
+    },
+    "rep_tier": 1,
+    "heat_tier": 0,
+    "hand": [
+      {
+        "uid": "c0015",
+        "def": "pr.cell",
+        "type": "prison",
+        "zone": "hand",
+        "gold": false,
+        "must_resolve": true,
+        "keepable": false,
+        "expires_in": -1,
+        "status": "open",
+        "art": "illus.pr.cell",
+        "person": "",
+        "intent": "",
+        "item": null,
+        "asking": -1,
+        "observations": [],
+        "days_left": -1,
+        "attrs": {},
+        "used_today": false,
+        "away_days": 0,
+        "can_appraise": false,
+        "panel": "prison",
+        "actions": [
+          {
+            "id": "open",
+            "enabled": true,
+            "reason_key": ""
+          }
+        ]
+      }
+    ],
+    "kept": [
+      {
+        "uid": "c0012",
+        "def": "kp.liangmin",
+        "type": "kept",
+        "zone": "kept",
+        "gold": false,
+        "must_resolve": false,
+        "keepable": true,
+        "expires_in": -1,
+        "status": "open",
+        "art": "illus.kp.liangmin",
+        "person": "",
+        "intent": "",
+        "item": null,
+        "asking": -1,
+        "observations": [],
+        "days_left": -1,
+        "attrs": {},
+        "used_today": false,
+        "away_days": 0,
+        "can_appraise": false,
+        "panel": "none",
+        "actions": []
+      }
+    ],
+    "contacts": [
+      {
+        "uid": "c0013",
+        "def": "ct.ma",
+        "type": "contact",
+        "zone": "contacts",
+        "gold": false,
+        "must_resolve": false,
+        "keepable": false,
+        "expires_in": -1,
+        "status": "open",
+        "art": "portrait.ma",
+        "person": "ma",
+        "intent": "",
+        "item": null,
+        "asking": -1,
+        "observations": [],
+        "days_left": -1,
+        "attrs": {},
+        "used_today": false,
+        "away_days": 0,
+        "can_appraise": false,
+        "panel": "none",
+        "actions": []
+      }
+    ],
+    "pending": [],
+    "demands": [],
+    "tickets": [],
+    "estates": [],
+    "goals": [],
+    "night_offers": [],
+    "lots": [],
+    "dossier_new": 0,
+    "shelf_count": 0,
+    "caps": {
+      "kept": 5,
+      "contacts": 3,
+      "shelf": 12
+    },
+    "open_panel": {
+      "kind": "",
+      "args": {}
+    },
+    "self": {
+      "uid": "c0001",
+      "def": "self.ruhua",
+      "attrs": {},
+      "used_today": false
+    }
+  },
+  "queries": {
+    "card|{\"uid\":\"c0015\"}": {
+      "uid": "c0015",
+      "def": "pr.cell",
+      "type": "prison",
+      "art": "illus.pr.cell"
+    },
+    "slots|{\"uid\":\"c0015\"}": {
+      "auto_heads": 0,
+      "auto_pass": false,
+      "coins": 0,
+      "need": 3,
+      "ready": true,
+      "slots": [
+        {
+          "id": "bribe",
+          "accepts": [
+            "money"
+          ],
+          "attr": "",
+          "coins": 0,
+          "max": 3,
+          "placed": [],
+          "required": false,
+          "wants": [
+            "official"
+          ]
+        },
+        {
+          "id": "bail",
+          "accepts": [
+            "contact"
+          ],
+          "attr": "pull",
+          "coins": 0,
+          "max": 1,
+          "placed": [],
+          "required": false,
+          "wants": [
+            "official"
+          ]
+        },
+        {
+          "id": "favor",
+          "accepts": [
+            "kept"
+          ],
+          "attr": "",
+          "coins": 0,
+          "max": 2,
+          "placed": [],
+          "required": false,
+          "wants": [
+            "official",
+            "papers",
+            "favor"
+          ]
+        }
+      ]
+    },
+    "firsts|{}": {
+      "firsts": {}
+    }
+  },
+  "responses": [
+    {
+      "cmd": "slot.place",
+      "match": {
+        "uid": "c0015",
+        "slot": "bribe",
+        "source": {
+          "kind": "money",
+          "amount": 40
+        }
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "coins": 2
+      },
+      "events": [
+        [
+          "card_updated",
+          "c0015"
+        ]
+      ]
+    },
+    {
+      "cmd": "slot.place",
+      "match": {
+        "uid": "c0015",
+        "slot": "bail",
+        "source": {
+          "kind": "contact",
+          "uid": "c0013"
+        }
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "coins": 3
+      },
+      "events": [
+        [
+          "card_updated",
+          "c0015"
+        ]
+      ]
+    },
+    {
+      "cmd": "slot.place",
+      "match": {
+        "uid": "c0015",
+        "slot": "favor",
+        "source": {
+          "kind": "kept",
+          "uid": "c0012"
+        }
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "coins": 1
+      },
+      "events": [
+        [
+          "card_updated",
+          "c0015"
+        ]
+      ]
+    },
+    {
+      "cmd": "slot.remove",
+      "match": {
+        "uid": "c0015",
+        "slot": "bribe",
+        "index": 0
+      },
+      "result": {
+        "ok": true,
+        "err": ""
+      }
+    },
+    {
+      "cmd": "slot.roll",
+      "match": {
+        "uid": "c0015"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "faces": [
+          true,
+          true,
+          true
+        ],
+        "heads": 3,
+        "need": 3,
+        "success": true
+      },
+      "events": [
+        [
+          "coins_tossed",
+          "c0015",
+          [
+            true,
+            true,
+            true
+          ],
+          3,
+          true
+        ]
+      ]
+    }
+  ]
+}

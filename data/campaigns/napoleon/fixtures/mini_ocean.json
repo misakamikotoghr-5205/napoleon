@@ -1,0 +1,370 @@
+{
+ "id": "mini_ocean",
+ "version": 2,
+ "title": "迷你远洋",
+ "initial": {
+  "treasury": 1000,
+  "morale": 60,
+  "heat": 10,
+  "vitality": 70,
+  "construction": 0,
+  "exploration": 0
+ },
+ "chapters": [
+  {
+   "id": "mo_one",
+   "title": "流亡",
+   "currency": "franc",
+   "currency_name": "法郎",
+   "treasury_start": 2000,
+   "scene_ids": [
+    "mo_dock",
+    "scene07",
+    "mo_boss1"
+   ]
+  },
+  {
+   "id": "mo_two",
+   "title": "新岛",
+   "currency": "franc",
+   "currency_name": "法郎",
+   "treasury_start": 2500,
+   "scene_ids": [
+    "mo_isle",
+    "mo_boss2",
+    "mo_end"
+   ]
+  }
+ ],
+ "characters": [
+  {
+   "id": "hero",
+   "name": "维尔福",
+   "role": "军需官"
+  }
+ ],
+ "items": [
+  {
+   "id": "mini_watch",
+   "name": "怀表",
+   "chapter": "mo_one",
+   "description": "一块旧怀表。"
+  },
+  {
+   "id": "o_mini_herbs",
+   "name": "草药",
+   "chapter": "mo_two",
+   "description": "岛上的草药。"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "mo_dock",
+   "chapter": "mo_one",
+   "date": "1800-01-01",
+   "title": "码头",
+   "location": "码头",
+   "speaker": "hero",
+   "body": [
+    "码头。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "mo_board",
+     "label": "登船"
+    }
+   ]
+  },
+  {
+   "id": "scene07",
+   "chapter": "mo_one",
+   "date": "1800-01-01",
+   "title": "海上无事",
+   "location": "海上无事",
+   "speaker": "hero",
+   "body": [
+    "海上无事。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "mo_calm",
+     "label": "看海"
+    }
+   ]
+  },
+  {
+   "id": "mo_boss1",
+   "chapter": "mo_one",
+   "date": "1800-01-01",
+   "title": "甲板之战",
+   "location": "甲板之战",
+   "speaker": "hero",
+   "body": [
+    "甲板之战。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "mo_after1",
+     "label": "收兵"
+    }
+   ]
+  },
+  {
+   "id": "mo_isle",
+   "chapter": "mo_two",
+   "date": "1800-01-01",
+   "title": "上岛",
+   "location": "上岛",
+   "speaker": "hero",
+   "body": [
+    "上岛。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "mo_land",
+     "label": "扎营"
+    }
+   ],
+   "on_enter": {
+    "demands": [
+     {
+      "id": "o_mini_medicine",
+      "title": "岛上缺药",
+      "due_in": 4,
+      "cost": 0,
+      "item": "o_mini_herbs",
+      "on_expire": {
+       "effects": {
+        "vitality": -10
+       },
+       "flags": [
+        "o_mini_med_missed"
+       ]
+      },
+      "on_fulfill": {
+       "flags": [
+        "o_mini_med_ok"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "mo_boss2",
+   "chapter": "mo_two",
+   "date": "1800-01-01",
+   "title": "礁石之战",
+   "location": "礁石之战",
+   "speaker": "hero",
+   "body": [
+    "礁石之战。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "mo_after2",
+     "label": "收兵"
+    }
+   ]
+  },
+  {
+   "id": "mo_end",
+   "chapter": "mo_two",
+   "date": "1800-01-01",
+   "title": "终局",
+   "location": "终局",
+   "speaker": "hero",
+   "body": [
+    "终局。"
+   ],
+   "item_ids": [],
+   "appraisals": [],
+   "choices": [
+    {
+     "id": "mo_ally",
+     "label": "结盟",
+     "flags": [
+      "o_mini_ally"
+     ]
+    },
+    {
+     "id": "mo_alone",
+     "label": "独行",
+     "flags": [
+      "o_mini_alone"
+     ]
+    }
+   ]
+  }
+ ],
+ "endings": [
+  {
+   "id": "bankruptcy",
+   "kind": "failure",
+   "title": "军费告罄",
+   "body": [
+    "钱袋见底。"
+   ]
+  },
+  {
+   "id": "loss",
+   "kind": "failure",
+   "title": "大军溃散",
+   "body": [
+    "人困马乏。"
+   ]
+  },
+  {
+   "id": "blockade",
+   "kind": "failure",
+   "title": "全区起义",
+   "body": [
+    "四处都是追兵。"
+   ]
+  },
+  {
+   "id": "o_mini_alliance",
+   "title": "同盟",
+   "body": [
+    "结盟了。"
+   ]
+  },
+  {
+   "id": "o_mini_plain",
+   "title": "平淡",
+   "body": [
+    "就这样。"
+   ]
+  }
+ ],
+ "tuning": {},
+ "rules": {
+  "failures": [
+   {
+    "ending": "bankruptcy",
+    "reason": "treasury",
+    "when": {
+     "metric": {
+      "treasury": [
+       "<=",
+       0
+      ]
+     }
+    }
+   },
+   {
+    "ending": "loss",
+    "reason": "vitality",
+    "when": {
+     "metric": {
+      "vitality": [
+       "<=",
+       0
+      ]
+     }
+    }
+   },
+   {
+    "ending": "blockade",
+    "reason": "heat",
+    "when": {
+     "metric": {
+      "heat": [
+       ">=",
+       100
+      ]
+     }
+    }
+   }
+  ],
+  "endings": [
+   {
+    "id": "o_mini_alliance",
+    "when": {
+     "flags": [
+      "o_mini_ally"
+     ]
+    }
+   }
+  ],
+  "default_ending": "o_mini_plain",
+  "exclusive_flags": [
+   [
+    "o_mini_ally",
+    "o_mini_alone"
+   ]
+  ],
+  "signs": {
+   "white": {
+    "daily": {},
+    "map": {}
+   },
+   "red": {
+    "daily": {
+     "heat": 10
+    },
+    "map": {
+     "pass_supply": 1
+    }
+   },
+   "black": {
+    "daily": {
+     "treasury": -10,
+     "heat": -10
+    },
+    "map": {
+     "mp": -1
+    }
+   }
+  },
+  "actions": {
+   "build": {
+    "metric": "construction",
+    "chapters": [],
+    "cost": 200,
+    "gain": 25
+   },
+   "explore": {
+    "metric": "exploration",
+    "chapters": [],
+    "cost": 200,
+    "gain": 25
+   },
+   "fund": {
+    "chapters": [],
+    "yes": {
+     "cost": 1000,
+     "effects": {
+      "morale": 15
+     },
+     "flags": []
+    },
+    "no": {
+     "flags": []
+    }
+   },
+   "visit_town": {
+    "cost": 100,
+    "effects": {
+     "vitality": 5,
+     "morale": 3
+    },
+    "items_by_chapter": {
+     "mo_two": [
+      "o_mini_herbs"
+     ]
+    }
+   }
+  }
+ }
+}

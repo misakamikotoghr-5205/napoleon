@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "owner": "Claude",
+    "schema": 1
+  },
+  "_doc": [
+    "Files shipped in the Steam (card-only) package that may contain CJK characters outside data/cards/text/**, with the reason (CARDS_INTERFACES.md section 11.4 item 5).",
+    "Reasons must say why the characters are never shown to the player in the ship build. K15's audit.py fails on any other shipped file with CJK.",
+    "Comments in .gd files are stripped by the binary-token export (script_export_mode=2); string literals are not.",
+    "W0 initial list: legacy files the card engine reuses (read-only). Re-check when a task starts preloading another legacy file."
+  ],
+  "files": {
+    "scripts/sim/item_gen.gd": "ItemGen writes CJK item names/notes into its own item dicts; CardItems keeps only sanitized integer fields in state and shows item text from data/cards/text/items.text.json.",
+    "scripts/core/ledger.gd": "Legacy ledger journal reasons and ticket ids are CJK; card_ledger.gd overrides open_pawn/redeem_amount/tick_contracts with ASCII ids and reason codes; journal text is never displayed in the card UI.",
+    "scripts/ui/style.gd": "UiStyle is used only for fonts (body_font/title_font); its CJK helpers (cn_money, labels) are not called by card UI code.",
+    "scripts/core/appraise.gd": "C12 preloads it only for circle fitting and part rects; TOOL_CN / hit_note / miss_note text is never shown (spot_panel.gd uses CardText).",
+    "scripts/core/flaw_render.gd": "Pixel flaw rendering only; the CJK is in a comment-free constant never shown to the player.",
+    "scripts/town/settings.gd": "Read/written by C16 for the four shared keys; TEXT_SPEEDS labels are not displayed by the card settings panel (it uses c16.* ui keys).",
+    "scripts/sim/pressure_model.gd": "Report strings for the legacy town log; never displayed in the card UI.",
+    "scripts/sim/world_wheel.gd": "Report strings for the legacy town log; never displayed in the card UI.",
+    "data/town/item_templates.json": "Legacy item names and texts; the card build shows item text only from data/cards/text/items.text.json (human), templates are read for prices, parts and sprites.",
+    "data/cast.json": "Legacy names; person names are shown only from data/cards/text/persons.text.json (human); cast.json is read for person ids only."
+  }
+}

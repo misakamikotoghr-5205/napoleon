@@ -1,0 +1,69 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "c11.status.held": {
+    "t": "还在"
+  },
+  "c11.status.mortgaged": {
+    "t": "押出去了"
+  },
+  "c11.status.lost": {
+    "t": "没了"
+  },
+  "c11.money": {
+    "t": "押出去能换"
+  },
+  "c11.interest": {
+    "t": "每月利息"
+  },
+  "c11.btn.mortgage": {
+    "t": "押出去"
+  },
+  "c11.btn.redeem": {
+    "t": "赎回来"
+  },
+  "c11.short.amount": {
+    "t": "还差"
+  },
+  "c11.short.goods": {
+    "t": "拿货抵"
+  },
+  "c11.short.estate": {
+    "t": "押家当"
+  },
+  "c11.short.default": {
+    "t": "认了"
+  },
+  "c11.short.default_note": {
+    "t": "认了，这笔钱就交不上了，该吃的亏照样要吃。"
+  },
+  "c11.street.hint": {
+    "t": "铺面押出去了，只能在街上想办法。攒够了钱，就把铺面赎回来。"
+  },
+  "c11.street.redeem": {
+    "t": "赎回铺面"
+  },
+  "c11.prison.try": {
+    "t": "托人疏通"
+  },
+  "c11.prison.days": {
+    "t": "在牢里还能熬 {n} 夜，得早些托人疏通。"
+  },
+  "c11.reply.try": {
+    "t": "托人疏通"
+  },
+  "c11.reply.later": {
+    "t": "先放一放"
+  },
+  "c11.btn.close": {
+    "t": "关上"
+  },
+  "c11.drawer.estates": {
+    "t": "家当"
+  },
+  "c11.drawer.estates_note": {
+    "t": "押出去能换钱，押着每月要付利息。"
+  }
+}

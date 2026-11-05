@@ -1,0 +1,18 @@
+{
+  "kind": "fragments",
+  "seed": 1939,
+  "item": "",
+  "art": "",
+  "minutes_per_step": 1,
+  "max_minutes": 30,
+  "doc": "letter",
+  "pieces": 5,
+  "seal_offset_px": 0,
+  "ink_mismatch": [],
+  "dangzi_marks": 0,
+  "missing_piece": -1,
+  "stain": -1,
+  "rotate": false,
+  "lens_px": 72,
+  "backlight": false
+}

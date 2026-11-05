@@ -1,0 +1,22 @@
+{
+  "kind": "coin_ring",
+  "seed": 5,
+  "item": "it.silver.yuan_a",
+  "art": "item.silver.yuan_a",
+  "minutes_per_step": 1,
+  "max_minutes": 30,
+  "coins": [
+    {
+      "id": "a",
+      "ring_ms": 1400,
+      "pitch_cents": 0,
+      "buzz": 4
+    }
+  ],
+  "reference": {
+    "ring_ms": 1450,
+    "pitch_cents": 0,
+    "buzz": 6
+  },
+  "tries": 1
+}

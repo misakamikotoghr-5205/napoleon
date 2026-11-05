@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "owner": "G02",
+    "schema": 1
+  },
+  "keys": {
+    "g02.end.leave": {
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_G02"
+    },
+    "g02.end.ignore": {
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_G02B"
+    },
+    "g01.end.wait": {
+      "brief": "THIS_BRIEF_MUST_NOT_LEAK_G01"
+    }
+  }
+}

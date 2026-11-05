@@ -1,0 +1,3 @@
+# K12 占位美术管线（docs/handoff_cards/K12_art-pipeline.md）
+K12_art_tools|res://scripts/tests/cards/K12/test_art_tools.gd|300|
+K12_art_load|res://scripts/tests/cards/K12/test_art_load.gd|120|

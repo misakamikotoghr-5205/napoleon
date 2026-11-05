@@ -1,0 +1,3480 @@
+{
+  "_meta": {
+    "owner": "K05",
+    "schema": 1,
+    "brief": "1940 年三月人物牌：老面孔跨年、孙府、新面孔。只写机制。汪伪成立当天的事件不在这个文件。"
+  },
+  "persons": {
+    "nf1940a": {
+      "portrait": "portrait.nf1940a",
+      "dossier": true,
+      "brief": "新面孔甲。1940 年 3 月随新官先到镇上来核对当铺名册的年轻书记，二十出头，和铺子无旧。名字提议顾承年，由人定稿。"
+    },
+    "nf1940b": {
+      "portrait": "portrait.nf1940b",
+      "dossier": true,
+      "brief": "新面孔乙。从南京方向走路来的报贩，四十上下，把外地传闻夹在旧纸里。名字提议齐路生，由人定稿。"
+    },
+    "nf1940c": {
+      "portrait": "portrait.nf1940c",
+      "dossier": true,
+      "brief": "新面孔丙。被新摊派挤得周转不开的布贩，三十五上下，来当衣物。名字提议蔡布成，由人定稿。"
+    },
+    "nf1940d": {
+      "portrait": "portrait.nf1940d",
+      "dossier": true,
+      "brief": "新面孔丁。寻人的妇人，二十八上下，带着半张旧当票想对上档案簿。名字提议方晚晴，由人定稿。"
+    }
+  },
+  "cards": [
+    {
+      "id": "p.brother.1940.letter_warm",
+      "type": "person",
+      "person": "brother",
+      "era": [
+        "1940"
+      ],
+      "weight": 5,
+      "tags": [
+        "family",
+        "letter",
+        "omen_far",
+        "omen_family"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "story": [
+                "s1939.brother_letter",
+                "ignored"
+              ]
+            }
+          },
+          {
+            "any": [
+              {
+                "story": [
+                  "s1938.brother_farewell",
+                  "listened"
+                ]
+              },
+              {
+                "all": [
+                  {
+                    "not": {
+                      "story": [
+                        "s1938.brother_farewell",
+                        "listened"
+                      ]
+                    }
+                  },
+                  {
+                    "not": {
+                      "story": [
+                        "s1938.brother_farewell",
+                        "argued"
+                      ]
+                    }
+                  },
+                  {
+                    "not": {
+                      "story": [
+                        "s1938.brother_farewell",
+                        "ignored"
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "read_on",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.brother.1940.letter"
+            },
+            {
+              "op": "flag",
+              "key": "k05_brother_read",
+              "value": true
+            },
+            {
+              "op": "add_card",
+              "card": "kp.silver_keepsake",
+              "to": "kept"
+            }
+          ],
+          "brief": "看完这封信"
+        },
+        {
+          "id": "set_aside",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "flag",
+              "key": "k05_brother_aside",
+              "value": true
+            }
+          ],
+          "brief": "先把信搁下"
+        }
+      ],
+      "art": "portrait.brother",
+      "brief": "哥哥人不在镇上。1940 年 3 月这张是第二封家书，由邮电代办送到柜台，人仍记哥哥。条件：1938 告别听完了交代，或那一节点还没结果；并且 1939 家书节点不是没理。看完：补碎片 df.brother.1940.letter，旗标 k05_brother_read。搁下：口碑降 1。不写旧台词，不把这一年写成抗战已经结束。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.brother.1940.letter_cold",
+      "type": "person",
+      "person": "brother",
+      "era": [
+        "1940"
+      ],
+      "weight": 4,
+      "tags": [
+        "family",
+        "letter",
+        "bad_omen",
+        "omen_far"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "any": [
+          {
+            "story": [
+              "s1938.brother_farewell",
+              "argued"
+            ]
+          },
+          {
+            "story": [
+              "s1938.brother_farewell",
+              "ignored"
+            ]
+          },
+          {
+            "story": [
+              "s1939.brother_letter",
+              "ignored"
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "keep_blank",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.brother.1940.letter_cold"
+            },
+            {
+              "op": "flag",
+              "key": "k05_brother_cold",
+              "value": true
+            }
+          ],
+          "brief": "收下这页断信"
+        },
+        {
+          "id": "burn",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "flag",
+              "key": "k05_brother_burn",
+              "value": true
+            }
+          ],
+          "brief": "不看"
+        }
+      ],
+      "art": "portrait.brother",
+      "brief": "哥哥的信变冷或断了。条件是 1938 告别时争过、没理，或 1939 家书节点没理。人仍不在柜台。收下空白或断页：补碎片 df.brother.1940.letter_cold。烧掉不看：口碑降 1。这不是首发结尾，结尾钩子另有一张。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.chen.1940.pawn_quinine",
+      "type": "person",
+      "person": "chen",
+      "era": [
+        "1940"
+      ],
+      "weight": 8,
+      "tags": [
+        "dossier",
+        "omen_illness",
+        "omen_family"
+      ],
+      "intent": "pawn",
+      "item": {
+        "template": "medicine.quinine"
+      },
+      "asking": {
+        "pct": [
+          88,
+          118
+        ]
+      },
+      "floor": {
+        "pct": [
+          52,
+          74
+        ]
+      },
+      "patience_min": [
+        60,
+        120
+      ],
+      "impatience": "leave",
+      "term_days": 18,
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.chen.1940.quinine"
+          },
+          {
+            "op": "rep",
+            "delta": 1
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.chen",
+      "brief": "济生堂的长辈来当一瓶奎宁，当期 18 天。成交补碎片 df.chen.1940.quinine，口碑加 1。拒绝或等不及走了：口碑降 1。1940 年 3 月。他串档案的那张是金色节点，不在这张上。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.chen.1940.redeem",
+      "type": "person",
+      "person": "chen",
+      "era": [
+        "1940"
+      ],
+      "weight": 7,
+      "tags": [
+        "dossier",
+        "omen_illness"
+      ],
+      "intent": "redeem",
+      "conditions": {
+        "ticket_open": "chen"
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.chen.1940.redeemed"
+          },
+          {
+            "op": "rep",
+            "delta": 1
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.chen",
+      "brief": "陈文庭自己来赎 1940 年当出的药。条件是他名下还有没赎的当票。成交补碎片，口碑加 1；拒绝口碑降 1。过路的赎当仍走系统牌，这张只给他本人。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.xiaoding.1940.pawn_rice",
+      "type": "person",
+      "person": "xiaoding",
+      "era": [
+        "1940"
+      ],
+      "weight": 9,
+      "tags": [
+        "poor",
+        "rice",
+        "sunfu",
+        "omen_wealth"
+      ],
+      "intent": "pawn",
+      "item": {
+        "template": "rice.jing"
+      },
+      "asking": {
+        "pct": [
+          80,
+          110
+        ]
+      },
+      "floor": {
+        "pct": [
+          45,
+          68
+        ]
+      },
+      "patience_min": [
+        40,
+        80
+      ],
+      "impatience": "leave",
+      "term_days": 10,
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.xiaoding.1940.rice"
+          },
+          {
+            "op": "rep",
+            "delta": 1
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "heat",
+            "delta": 1
+          }
+        ]
+      },
+      "art": "portrait.xiaoding",
+      "brief": "孙家厨房的小伙子来当一小袋粳米，袋口重新缝过，当期 10 天。成交补碎片 df.xiaoding.1940.rice。拒绝：口碑降 1。不写他米从哪来的旧说法。1940 年 3 月，孙府的事多，他仍会自己来柜台。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.xiaoding.1940.redeem",
+      "type": "person",
+      "person": "xiaoding",
+      "era": [
+        "1940"
+      ],
+      "weight": 7,
+      "tags": [
+        "poor",
+        "rice",
+        "omen_wealth"
+      ],
+      "intent": "redeem",
+      "conditions": {
+        "ticket_open": "xiaoding"
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.xiaoding.1940.redeemed"
+          },
+          {
+            "op": "rep",
+            "delta": 1
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.xiaoding",
+      "brief": "小伙子来赎自己当出的米。条件是名下还有当票。成交补碎片；拒绝口碑降 1。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhang.1940.sell_sulfa",
+      "type": "person",
+      "person": "zhang",
+      "era": [
+        "1940"
+      ],
+      "weight": 7,
+      "tags": [
+        "nurse",
+        "woman",
+        "omen_illness"
+      ],
+      "intent": "sell",
+      "item": {
+        "template": "medicine.sulfa"
+      },
+      "asking": {
+        "pct": [
+          95,
+          130
+        ]
+      },
+      "floor": {
+        "pct": [
+          60,
+          85
+        ]
+      },
+      "patience_min": [
+        50,
+        100
+      ],
+      "impatience": "leave",
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.zhang.1940.sulfa"
+          },
+          {
+            "op": "rep",
+            "delta": 1
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.zhang",
+      "brief": "县城教会医院的护士来卖一瓶磺胺。成交补碎片 df.zhang.1940.sulfa，口碑加 1。拒绝：口碑降 1。1940 年 3 月医院仍缺药，这张不写行情百分数。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhang.1940.ask_ward",
+      "type": "person",
+      "person": "zhang",
+      "era": [
+        "1940"
+      ],
+      "weight": 6,
+      "tags": [
+        "nurse",
+        "woman",
+        "omen_illness",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "choices": [
+        {
+          "id": "reserve",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": 2
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.zhang.1940.ward"
+            },
+            {
+              "op": "flag",
+              "key": "k05_ward_reserved",
+              "value": true
+            },
+            {
+              "op": "add_card",
+              "card": "kp.leverage.zhang",
+              "to": "kept"
+            }
+          ],
+          "brief": "药先留给医院"
+        },
+        {
+          "id": "refuse",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "flag",
+              "key": "k05_ward_refused",
+              "value": true
+            }
+          ],
+          "brief": "不答应"
+        }
+      ],
+      "art": "portrait.zhang",
+      "brief": "护士来打听铺子肯不肯把药优先留给医院，而不是新官的礼单。答应：口碑加 2，风声加 1，补碎片。拒绝：口碑降 1。1940 年 3 月新官上任，名目在换，医院不在那个名册里。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.wangshan.1940.help_hide",
+      "type": "person",
+      "person": "wangshan",
+      "era": [
+        "1940"
+      ],
+      "weight": 5,
+      "tags": [
+        "rumor",
+        "omen_road",
+        "omen_stranger"
+      ],
+      "intent": "help",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "story": [
+                "s1938.wangshan",
+                "ignored"
+              ]
+            }
+          },
+          {
+            "not": {
+              "story": [
+                "s1939.wangshan_whereabouts",
+                "ignored"
+              ]
+            }
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "shelter",
+          "effects": [
+            {
+              "op": "person_state",
+              "person": "wangshan",
+              "state": "away",
+              "days": 5
+            },
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            },
+            {
+              "op": "conscience",
+              "delta": 1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.wangshan.1940.shelter"
+            },
+            {
+              "op": "flag",
+              "key": "k05_wangshan_sheltered",
+              "value": true
+            }
+          ],
+          "brief": "收留几天"
+        },
+        {
+          "id": "turn_away",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -2
+            },
+            {
+              "op": "heat",
+              "delta": -1
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            },
+            {
+              "op": "flag",
+              "key": "k05_wangshan_turned",
+              "value": true
+            },
+            {
+              "op": "dossier",
+              "frag": "df.wangshan.1940.turned"
+            }
+          ],
+          "brief": "让他走"
+        }
+      ],
+      "art": "portrait.wangshan",
+      "brief": "便衣青年本人来求助。条件：1938 王山节点不是没理，并且 1939 下落节点也不是没理。收留几天：他状态改为暂离 5 天，风声加 2，口碑加 1，补碎片。撵走：口碑降 2，风声降 1。1940 年 3 月他仍没有一个公开身份。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.wangshan.1940.ask_lost",
+      "type": "person",
+      "person": "wangshan",
+      "era": [
+        "1940"
+      ],
+      "weight": 5,
+      "tags": [
+        "rumor",
+        "bad_omen",
+        "omen_road"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "any": [
+          {
+            "story": [
+              "s1938.wangshan",
+              "ignored"
+            ]
+          },
+          {
+            "story": [
+              "s1939.wangshan_whereabouts",
+              "ignored"
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "note",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.wangshan.1940.lost"
+            },
+            {
+              "op": "flag",
+              "key": "k05_wangshan_lost",
+              "value": true
+            }
+          ],
+          "brief": "记下断线"
+        },
+        {
+          "id": "drop",
+          "effects": [
+            {
+              "op": "flag",
+              "key": "k05_wangshan_dropped",
+              "value": true
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            }
+          ],
+          "brief": "不再问"
+        }
+      ],
+      "art": "portrait.wangshan",
+      "brief": "王山没露面。条件：1938 王山节点没理，或 1939 下落节点没理。这张仍挂在他名下，表示线断了，人不到柜台。记下断线：补碎片 df.wangshan.1940.lost。放弃：只立旗标。不把他写成已经死了或已经打胜。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.li.1940.sell_calligraphy",
+      "type": "person",
+      "person": "li",
+      "era": [
+        "1940"
+      ],
+      "weight": 6,
+      "tags": [
+        "student",
+        "omen_far",
+        "omen_stranger"
+      ],
+      "intent": "sell",
+      "item": {
+        "template": "art.calligraphy"
+      },
+      "asking": {
+        "pct": [
+          85,
+          120
+        ]
+      },
+      "floor": {
+        "pct": [
+          50,
+          78
+        ]
+      },
+      "patience_min": [
+        45,
+        90
+      ],
+      "impatience": "leave",
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.li.1940.calligraphy"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.li",
+      "brief": "县立中学的学生来卖一幅旧字。成交补碎片 df.li.1940.calligraphy。拒绝口碑降 1。1940 年 3 月学堂还开着，这张不写停课。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.li.1940.ask_school",
+      "type": "person",
+      "person": "li",
+      "era": [
+        "1940"
+      ],
+      "weight": 6,
+      "tags": [
+        "student",
+        "omen_official",
+        "omen_family"
+      ],
+      "intent": "ask",
+      "choices": [
+        {
+          "id": "hear",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.li.1940.school"
+            },
+            {
+              "op": "flag",
+              "key": "k05_school_heard",
+              "value": true
+            },
+            {
+              "op": "add_card",
+              "card": "kp.leverage.li",
+              "to": "kept"
+            }
+          ],
+          "brief": "给人保"
+        },
+        {
+          "id": "dismiss",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "flag",
+              "key": "k05_school_dismissed",
+              "value": true
+            }
+          ],
+          "brief": "不写"
+        }
+      ],
+      "art": "portrait.li",
+      "brief": "学生来问铺子肯不肯在新名册上给同学写一笔人保。1940 年 3 月新官上任，伪县政府要重报名册，学堂本身没有被写成关闭。写：风声加 1，补碎片。不写：口碑降 1。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.linsao.1940.pawn_coat",
+      "type": "person",
+      "person": "linsao",
+      "era": [
+        "1940"
+      ],
+      "weight": 9,
+      "tags": [
+        "woman",
+        "boat",
+        "poor",
+        "omen_water"
+      ],
+      "intent": "pawn",
+      "item": {
+        "template": "clothing.coat"
+      },
+      "asking": {
+        "pct": [
+          80,
+          112
+        ]
+      },
+      "floor": {
+        "pct": [
+          45,
+          65
+        ]
+      },
+      "patience_min": [
+        40,
+        85
+      ],
+      "impatience": "leave",
+      "term_days": 12,
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "linsao",
+                "gone"
+              ]
+            }
+          },
+          {
+            "not": {
+              "story": [
+                "s1938.linsao_term",
+                "ignored"
+              ]
+            }
+          },
+          {
+            "not": {
+              "flag": "grudge_linsao"
+            }
+          }
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.linsao.1940.coat"
+          },
+          {
+            "op": "rep",
+            "delta": 1
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          },
+          {
+            "op": "conscience",
+            "delta": -1
+          }
+        ],
+        "on_leave": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ],
+        "on_expire": [
+          {
+            "op": "flag",
+            "key": "grudge_linsao",
+            "value": true
+          },
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.linsao",
+      "brief": "船工家里的女人来当一件冬衣，当期 12 天。条件：人不是已经走了，1938 林嫂当期节点不是没理，并且还没立旗标 grudge_linsao。成交补碎片。拒绝口碑降 1。1940 年 3 月，不再用 1938 年那句怀孕的旧说法。打烊没接：旗标 grudge_linsao，口碑降 1，之后改走不到柜台那张。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.linsao.1940.redeem",
+      "type": "person",
+      "person": "linsao",
+      "era": [
+        "1940"
+      ],
+      "weight": 7,
+      "tags": [
+        "woman",
+        "boat",
+        "poor",
+        "omen_water"
+      ],
+      "intent": "redeem",
+      "conditions": {
+        "all": [
+          {
+            "ticket_open": "linsao"
+          },
+          {
+            "not": {
+              "person_state": [
+                "linsao",
+                "gone"
+              ]
+            }
+          },
+          {
+            "not": {
+              "story": [
+                "s1938.linsao_term",
+                "ignored"
+              ]
+            }
+          }
+        ]
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.linsao.1940.redeemed"
+          },
+          {
+            "op": "rep",
+            "delta": 1
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.linsao",
+      "brief": "她来赎自己的冬衣。条件：名下有当票，人没走，1938 当期节点不是没理。成交补碎片；拒绝口碑降 1。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.linsao.1940.ask_gone",
+      "type": "person",
+      "person": "linsao",
+      "era": [
+        "1940"
+      ],
+      "weight": 4,
+      "tags": [
+        "woman",
+        "boat",
+        "bad_omen",
+        "omen_water"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "any": [
+          {
+            "person_state": [
+              "linsao",
+              "gone"
+            ]
+          },
+          {
+            "story": [
+              "s1938.linsao_term",
+              "ignored"
+            ]
+          },
+          {
+            "flag": "grudge_linsao"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "note_gap",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.linsao.1940.gone_word"
+            },
+            {
+              "op": "flag",
+              "key": "k05_linsao_noted",
+              "value": true
+            }
+          ],
+          "brief": "记下传闻"
+        },
+        {
+          "id": "ask_boat",
+          "effects": [
+            {
+              "op": "flag",
+              "key": "k05_linsao_dropped",
+              "value": true
+            }
+          ],
+          "brief": "不再问"
+        }
+      ],
+      "art": "portrait.linsao",
+      "brief": "林嫂不到柜台。条件：人已经走了，或 1938 当期节点没理，或已有旗标 grudge_linsao。牌仍挂她名下，表示码头上的一句传闻。记下：补碎片。不再问：只立旗标。打烊没接冬衣也会立旗标 grudge_linsao，改走这张。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhouma.1940.ask_open",
+      "type": "person",
+      "person": "zhouma",
+      "era": [
+        "1940"
+      ],
+      "weight": 8,
+      "tags": [
+        "tea",
+        "woman",
+        "omen_stranger",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "not": {
+          "story": [
+            "s1939.year_end",
+            "ignored"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "listen",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": 1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.zhouma.1940.tea"
+            },
+            {
+              "op": "flag",
+              "key": "k05_tea_heard",
+              "value": true
+            }
+          ],
+          "brief": "听完"
+        },
+        {
+          "id": "hush",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": -1
+            },
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "flag",
+              "key": "k05_tea_hushed",
+              "value": true
+            }
+          ],
+          "brief": "挡住"
+        }
+      ],
+      "art": "portrait.zhouma",
+      "brief": "茶馆厨娘来传新官和孙府的闲话。条件：1939 年关节点不是没理。听完：口碑加 1，补碎片 df.zhouma.1940.tea。把话挡回去：风声降 1，口碑降 1。1940 年 3 月。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhouma.1940.ask_cold",
+      "type": "person",
+      "person": "zhouma",
+      "era": [
+        "1940"
+      ],
+      "weight": 5,
+      "tags": [
+        "tea",
+        "woman",
+        "bad_omen",
+        "omen_dispute"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "story": [
+          "s1939.year_end",
+          "ignored"
+        ]
+      },
+      "choices": [
+        {
+          "id": "listen",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.zhouma.1940.tea_cold"
+            },
+            {
+              "op": "flag",
+              "key": "k05_tea_cold",
+              "value": true
+            }
+          ],
+          "brief": "还是听"
+        },
+        {
+          "id": "hush",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "flag",
+              "key": "k05_tea_cold_hush",
+              "value": true
+            }
+          ],
+          "brief": "挡住"
+        }
+      ],
+      "art": "portrait.zhouma",
+      "brief": "年关那节没理，厨娘这年说话变冷。条件：1939 年关节点没理。仍听：风声加 1，补碎片。挡回去：风声加 1，口碑降 1。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhouma.1940.sell_scarf",
+      "type": "person",
+      "person": "zhouma",
+      "era": [
+        "1940"
+      ],
+      "weight": 6,
+      "tags": [
+        "tea",
+        "woman",
+        "omen_wealth"
+      ],
+      "intent": "sell",
+      "item": {
+        "template": "clothing.scarf"
+      },
+      "asking": {
+        "pct": [
+          85,
+          115
+        ]
+      },
+      "floor": {
+        "pct": [
+          50,
+          75
+        ]
+      },
+      "patience_min": [
+        40,
+        90
+      ],
+      "impatience": "leave",
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.zhouma.1940.scarf"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.zhouma",
+      "brief": "厨娘来卖一条旧围巾。成交补碎片。拒绝口碑降 1。和年关走向无关，两条闲话牌之外她仍会来。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhao.1940.pawn_field",
+      "type": "person",
+      "person": "zhao",
+      "era": [
+        "1940"
+      ],
+      "weight": 8,
+      "tags": [
+        "farmer",
+        "poor",
+        "omen_wealth",
+        "omen_family"
+      ],
+      "intent": "pawn",
+      "item": {
+        "template": "documents.field"
+      },
+      "asking": {
+        "pct": [
+          82,
+          115
+        ]
+      },
+      "floor": {
+        "pct": [
+          48,
+          70
+        ]
+      },
+      "patience_min": [
+        50,
+        110
+      ],
+      "impatience": "leave",
+      "term_days": 20,
+      "conditions": {
+        "not": {
+          "story": [
+            "s1938.zhao_borrow",
+            "ignored"
+          ]
+        }
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.zhao.1940.field"
+          },
+          {
+            "op": "rep",
+            "delta": 1
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.zhao",
+      "brief": "佃户来当一份田契文书，当期 20 天。条件：1938 借钱节点不是没理。成交补碎片。拒绝口碑降 1。1940 年 3 月他仍靠地过活，这张不重讲旧年借三百的原话。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhao.1940.redeem",
+      "type": "person",
+      "person": "zhao",
+      "era": [
+        "1940"
+      ],
+      "weight": 7,
+      "tags": [
+        "farmer",
+        "poor",
+        "omen_wealth"
+      ],
+      "intent": "redeem",
+      "conditions": {
+        "ticket_open": "zhao"
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.zhao.1940.redeemed"
+          },
+          {
+            "op": "rep",
+            "delta": 1
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.zhao",
+      "brief": "佃户来赎田契。条件只看名下还有没有当票。成交补碎片；拒绝口碑降 1。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.zhao.1940.help_again",
+      "type": "person",
+      "person": "zhao",
+      "era": [
+        "1940"
+      ],
+      "weight": 5,
+      "tags": [
+        "farmer",
+        "poor",
+        "bad_omen",
+        "omen_dispute"
+      ],
+      "intent": "help",
+      "conditions": {
+        "story": [
+          "s1938.zhao_borrow",
+          "ignored"
+        ]
+      },
+      "choices": [
+        {
+          "id": "lend",
+          "effects": [
+            {
+              "op": "money",
+              "delta": -30,
+              "reason": "k05.reason.zhao_lend"
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            },
+            {
+              "op": "flag",
+              "key": "k05_zhao_lent",
+              "value": true
+            },
+            {
+              "op": "dossier",
+              "frag": "df.zhao.1940.lent_again"
+            }
+          ],
+          "brief": "再借一小笔"
+        },
+        {
+          "id": "refuse",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "conscience",
+              "delta": 1
+            },
+            {
+              "op": "flag",
+              "key": "k05_zhao_refused",
+              "value": true
+            }
+          ],
+          "brief": "不借"
+        }
+      ],
+      "art": "portrait.zhao",
+      "brief": "1938 借钱节点没理他。1940 年 3 月他再来求一小笔钱，不是来当。借出：钱减少，口碑加 1。拒绝：口碑降 1。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.sunyoung.1940.pawn_ring",
+      "type": "person",
+      "person": "sunyoung",
+      "era": [
+        "1940"
+      ],
+      "weight": 7,
+      "tags": [
+        "sunfu",
+        "omen_wealth",
+        "omen_family"
+      ],
+      "intent": "pawn",
+      "item": {
+        "template": "jewelry.ring"
+      },
+      "asking": {
+        "pct": [
+          100,
+          140
+        ]
+      },
+      "floor": {
+        "pct": [
+          70,
+          92
+        ]
+      },
+      "patience_min": [
+        40,
+        80
+      ],
+      "impatience": "raise",
+      "term_days": 15,
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.sunyoung.1940.ring"
+          },
+          {
+            "op": "heat",
+            "delta": 1
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          },
+          {
+            "op": "heat",
+            "delta": 1
+          }
+        ]
+      },
+      "art": "portrait.sunyoung",
+      "brief": "孙府独子来当一枚戒指，当期 15 天。开口偏硬，等不及会把价往上抬而不是走。成交补碎片 df.sunyoung.1940.ring，风声加 1。拒绝：口碑降 1，风声加 1。借钱和表态不在这张上。1940 年 3 月。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.sunyoung.1940.redeem",
+      "type": "person",
+      "person": "sunyoung",
+      "era": [
+        "1940"
+      ],
+      "weight": 7,
+      "tags": [
+        "sunfu",
+        "omen_wealth"
+      ],
+      "intent": "redeem",
+      "conditions": {
+        "ticket_open": "sunyoung"
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.sunyoung.1940.redeemed"
+          },
+          {
+            "op": "rep",
+            "delta": 1
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.sunyoung",
+      "brief": "孙府独子来赎戒指。条件是名下有当票。成交补碎片；拒绝则口碑降 1、风声加 1。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.sunyoung.1940.borrow",
+      "type": "person",
+      "person": "sunyoung",
+      "era": [
+        "1940"
+      ],
+      "weight": 7,
+      "tags": [
+        "sunfu",
+        "omen_wealth",
+        "omen_official"
+      ],
+      "intent": "help",
+      "choices": [
+        {
+          "id": "lend",
+          "effects": [
+            {
+              "op": "money",
+              "delta": -80,
+              "reason": "k05.reason.sun_borrow"
+            },
+            {
+              "op": "rep",
+              "delta": 2
+            },
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            },
+            {
+              "op": "flag",
+              "key": "k05_sunyoung_lent",
+              "value": true
+            },
+            {
+              "op": "dossier",
+              "frag": "df.sunyoung.1940.borrow"
+            }
+          ],
+          "brief": "借给他"
+        },
+        {
+          "id": "refuse",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -2
+            },
+            {
+              "op": "conscience",
+              "delta": 1
+            },
+            {
+              "op": "flag",
+              "key": "k05_sunyoung_refused",
+              "value": true
+            }
+          ],
+          "brief": "不借"
+        }
+      ],
+      "art": "portrait.sunyoung",
+      "brief": "孙府独子来借一笔钱，说是要应新官的礼数。借出：钱减少，口碑加 2，风声加 2，下一张条子不动。拒绝：口碑降 2。不作保、不表态，那两件在管家和孙府当家的牌上。史实只作背景：1940 年 3 月 30 日汪伪国民政府将在南京成立，伪维新政府并入，孙府要人先站队。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.ma.1940.levy_old",
+      "type": "person",
+      "person": "ma",
+      "era": [
+        "1940"
+      ],
+      "weight": 8,
+      "tags": [
+        "official",
+        "levy",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "ma",
+                "changed"
+              ]
+            }
+          },
+          {
+            "not": {
+              "person_state": [
+                "ma",
+                "gone"
+              ]
+            }
+          },
+          {
+            "not": {
+              "story": [
+                "s1938.ma_levy",
+                "ignored"
+              ]
+            }
+          },
+          {
+            "not": {
+              "flag": "grudge_ma"
+            }
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "pay_old",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.ma.1940.levy_old"
+            },
+            {
+              "op": "flag",
+              "key": "k05_ma_pay_old",
+              "value": true
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            }
+          ],
+          "brief": "应承旧名目"
+        },
+        {
+          "id": "haggle",
+          "effects": [
+            {
+              "op": "demand_tier",
+              "delta": -1
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            },
+            {
+              "op": "flag",
+              "key": "k05_ma_haggle",
+              "value": true
+            }
+          ],
+          "brief": "跟他讲价"
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "flag",
+            "key": "grudge_ma",
+            "value": true
+          },
+          {
+            "op": "counter",
+            "key": "snub_ma",
+            "delta": 1
+          },
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.ma",
+      "brief": "保长仍用伪维持会时期的名目来打招呼。条件：身份还没改、人没走、1938 摊派节点不是没理，并且还没立旗标 grudge_ma。应承旧名目：风声加 1，补碎片。讲价：下一张条子降 1 档，风声加 1，口碑加 1。换名目的那张排在本关第 12 天，不占金色节点。新官上任的事件牌归 K06。打烊没接：旗标 grudge_ma，计数 snub_ma 加 1，口碑降 1，之后改走更紧的那张。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.ma.1940.levy_harsh",
+      "type": "person",
+      "person": "ma",
+      "era": [
+        "1940"
+      ],
+      "weight": 6,
+      "tags": [
+        "official",
+        "levy",
+        "bad_omen",
+        "omen_official",
+        "omen_dispute"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "ma",
+                "changed"
+              ]
+            }
+          },
+          {
+            "not": {
+              "person_state": [
+                "ma",
+                "gone"
+              ]
+            }
+          },
+          {
+            "any": [
+              {
+                "story": [
+                  "s1938.ma_levy",
+                  "ignored"
+                ]
+              },
+              {
+                "flag": "grudge_ma"
+              },
+              {
+                "counter_gte": [
+                  "snub_ma",
+                  1
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "brace",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "demand_tier",
+              "delta": 1
+            },
+            {
+              "op": "flag",
+              "key": "k05_ma_brace",
+              "value": true
+            }
+          ],
+          "brief": "硬顶"
+        },
+        {
+          "id": "soothe",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.ma.1940.levy_harsh"
+            },
+            {
+              "op": "flag",
+              "key": "k05_ma_soothe",
+              "value": true
+            }
+          ],
+          "brief": "补一笔"
+        }
+      ],
+      "art": "portrait.ma",
+      "brief": "1938 摊派节点没理他，1940 年 3 月他仍挂伪维持会的名目，但说话更紧。条件：身份还没改、人没走，并且那一节点是没理，或已有旗标 grudge_ma，或计数 snub_ma 至少 1。硬顶：风声加 2，下一张条子升 1 档。补一笔：口碑降 1，风声加 1，补碎片。打烊没接旧名目也会立旗标 grudge_ma、计数 snub_ma，改走这张。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.ma.1940.levy_new",
+      "type": "person",
+      "person": "ma",
+      "era": [
+        "1940"
+      ],
+      "weight": 8,
+      "tags": [
+        "official",
+        "levy",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "person_state": [
+          "ma",
+          "changed"
+        ]
+      },
+      "choices": [
+        {
+          "id": "pay_new",
+          "effects": [
+            {
+              "op": "demand_tier",
+              "delta": -1
+            },
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "conscience",
+              "delta": -2
+            },
+            {
+              "op": "dossier",
+              "frag": "df.ma.1940.levy_new"
+            },
+            {
+              "op": "flag",
+              "key": "k05_ma_pay_new",
+              "value": true
+            }
+          ],
+          "brief": "应承新名目"
+        },
+        {
+          "id": "cold",
+          "effects": [
+            {
+              "op": "demand_tier",
+              "delta": 1
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            },
+            {
+              "op": "conscience",
+              "delta": 1
+            },
+            {
+              "op": "flag",
+              "key": "k05_ma_cold",
+              "value": true
+            }
+          ],
+          "brief": "冷淡"
+        }
+      ],
+      "art": "portrait.ma",
+      "brief": "保长已经换了身份。条件：人物状态是 changed。名目改挂到伪县政府底下，不再称伪维持会。应承新名目：下一张条子降 1 档，风声加 2，口碑降 1，补碎片。冷淡：下一张条子升 1 档，风声加 1，口碑加 1。史实：1940 年 3 月新官上任，摊派换了名目。成立当天的事件不在这张上。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.ma.1940.office_shift",
+      "type": "person",
+      "person": "ma",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "tags": [
+        "official",
+        "levy",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "ma",
+            "changed"
+          ]
+        }
+      },
+      "schedule": {
+        "stage_day": 12,
+        "order": 1,
+        "once": true
+      },
+      "choices": [
+        {
+          "id": "accept_title",
+          "effects": [
+            {
+              "op": "person_state",
+              "person": "ma",
+              "state": "changed"
+            },
+            {
+              "op": "flag",
+              "key": "k05_ma_changed",
+              "value": true
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.ma.1940.title_new"
+            },
+            {
+              "op": "notice",
+              "key": "k05.notice.ma_changed"
+            }
+          ],
+          "brief": "认他的新名目"
+        },
+        {
+          "id": "keep_old",
+          "effects": [
+            {
+              "op": "flag",
+              "key": "k05_ma_old_name",
+              "value": true
+            },
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            },
+            {
+              "op": "conscience",
+              "delta": 1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.ma.1940.title_kept"
+            },
+            {
+              "op": "notice",
+              "key": "k05.notice.ma_kept"
+            }
+          ],
+          "brief": "仍用旧称呼"
+        }
+      ],
+      "art": "portrait.ma",
+      "brief": "本关第 12 天，保长来说名目要换。不是金色牌，也不是 K06 的新官上任事件。条件：身份还没改。认新名目：人物状态改为 changed，风声加 1，口碑降 1，告示 k05.notice.ma_changed。仍用旧称呼：风声加 2，口碑加 1，告示 k05.notice.ma_kept。1940 年 3 月，伪维新政府尚未并完的那几天他先来打这个招呼。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.hu2.1940.slip_old",
+      "type": "person",
+      "person": "hu2",
+      "era": [
+        "1940"
+      ],
+      "weight": 8,
+      "tags": [
+        "official",
+        "levy",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "person_state": [
+                "hu2",
+                "changed"
+              ]
+            }
+          },
+          {
+            "not": {
+              "person_state": [
+                "hu2",
+                "gone"
+              ]
+            }
+          },
+          {
+            "not": {
+              "flag": "grudge_hu2"
+            }
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "take_old",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.hu2.1940.slip_old"
+            },
+            {
+              "op": "flag",
+              "key": "k05_hu2_old",
+              "value": true
+            }
+          ],
+          "brief": "听他传话"
+        },
+        {
+          "id": "bar",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            },
+            {
+              "op": "flag",
+              "key": "k05_hu2_bar",
+              "value": true
+            }
+          ],
+          "brief": "挡在门外"
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "flag",
+            "key": "grudge_hu2",
+            "value": true
+          },
+          {
+            "op": "counter",
+            "key": "snub_hu2",
+            "delta": 1
+          },
+          {
+            "op": "person_state",
+            "person": "hu2",
+            "state": "away",
+            "days": 3
+          }
+        ]
+      },
+      "art": "portrait.hu2",
+      "brief": "跑腿的仍替伪维持会名目挨家传话。条件：身份没改、人没走，并且还没立旗标 grudge_hu2。接下旧条子口风：风声加 1，补碎片。挡在门外：风声加 1，口碑加 1。换身份排在第 13 天。1940 年 3 月。打烊没接：旗标 grudge_hu2，计数 snub_hu2 加 1，人暂离 3 天，之后改走冷脸那张。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.hu2.1940.slip_cold",
+      "type": "person",
+      "person": "hu2",
+      "era": [
+        "1940"
+      ],
+      "weight": 6,
+      "tags": [
+        "official",
+        "levy",
+        "bad_omen",
+        "omen_official",
+        "omen_dispute"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "flag": "grudge_hu2"
+          },
+          {
+            "counter_gte": [
+              "snub_hu2",
+              1
+            ]
+          },
+          {
+            "not": {
+              "person_state": [
+                "hu2",
+                "changed"
+              ]
+            }
+          },
+          {
+            "not": {
+              "person_state": [
+                "hu2",
+                "gone"
+              ]
+            }
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "hear",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "flag",
+              "key": "k05_hu2_cold_heard",
+              "value": true
+            }
+          ],
+          "brief": "听他把上次没接的话补上"
+        },
+        {
+          "id": "bar_again",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "counter",
+              "key": "snub_hu2",
+              "delta": 1
+            },
+            {
+              "op": "flag",
+              "key": "k05_hu2_cold_bar",
+              "value": true
+            }
+          ],
+          "brief": "再挡一次"
+        }
+      ],
+      "art": "portrait.hu2",
+      "brief": "没接旧传话之后，跑腿的记上一笔再来。条件：旗标 grudge_hu2，计数 snub_hu2 至少 1，身份没改、人没走。听：风声加 2。再挡：口碑降 1，风声加 1，计数再加 1。名目仍是伪维持会。1940 年 3 月。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.hu2.1940.slip_new",
+      "type": "person",
+      "person": "hu2",
+      "era": [
+        "1940"
+      ],
+      "weight": 8,
+      "tags": [
+        "official",
+        "levy",
+        "bad_omen",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "person_state": [
+          "hu2",
+          "changed"
+        ]
+      },
+      "choices": [
+        {
+          "id": "pay_lip",
+          "effects": [
+            {
+              "op": "demand_tier",
+              "delta": -1
+            },
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.hu2.1940.slip_new"
+            },
+            {
+              "op": "flag",
+              "key": "k05_hu2_lip",
+              "value": true
+            }
+          ],
+          "brief": "应承新传话"
+        },
+        {
+          "id": "cold",
+          "effects": [
+            {
+              "op": "demand_tier",
+              "delta": 1
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            },
+            {
+              "op": "conscience",
+              "delta": 1
+            },
+            {
+              "op": "flag",
+              "key": "k05_hu2_cold",
+              "value": true
+            }
+          ],
+          "brief": "冷淡"
+        }
+      ],
+      "art": "portrait.hu2",
+      "brief": "跑腿已经改替新官传话。条件：人物状态是 changed。名目是伪县政府，不是伪维持会。应承：下一张条子降 1 档，风声加 2，口碑降 1。冷淡：下一张条子升 1 档，风声加 1，口碑加 1。这就是条子升档在人物牌上的写法；升档事件本身若做成事件牌归 K06。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.hu2.1940.office_shift",
+      "type": "person",
+      "person": "hu2",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "tags": [
+        "official",
+        "levy",
+        "omen_official",
+        "omen_road"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "not": {
+          "person_state": [
+            "hu2",
+            "gone"
+          ]
+        }
+      },
+      "schedule": {
+        "stage_day": 13,
+        "order": 1,
+        "once": true
+      },
+      "choices": [
+        {
+          "id": "take_new",
+          "effects": [
+            {
+              "op": "person_state",
+              "person": "hu2",
+              "state": "changed"
+            },
+            {
+              "op": "flag",
+              "key": "k05_hu2_changed",
+              "value": true
+            },
+            {
+              "op": "dossier",
+              "frag": "df.hu2.1940.title_new"
+            },
+            {
+              "op": "notice",
+              "key": "k05.notice.hu2_changed"
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            }
+          ],
+          "brief": "认他改跟新官"
+        },
+        {
+          "id": "send_off",
+          "effects": [
+            {
+              "op": "person_state",
+              "person": "hu2",
+              "state": "gone"
+            },
+            {
+              "op": "flag",
+              "key": "k05_hu2_gone",
+              "value": true
+            },
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "conscience",
+              "delta": 1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.hu2.1940.gone"
+            }
+          ],
+          "brief": "让他别再来"
+        }
+      ],
+      "art": "portrait.hu2",
+      "brief": "本关第 13 天，跑腿的来说自己改跟新官。不是金色牌。条件：人还没走。认下：人物状态改为 changed，告示 k05.notice.hu2_changed，补碎片。撵走：人物状态改为 gone，风声加 2，口碑降 1。1940 年 3 月新官上任，摊派换名目。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.sunlaoye.1940.ask_favor",
+      "type": "person",
+      "person": "sunlaoye",
+      "era": [
+        "1940"
+      ],
+      "weight": 6,
+      "tags": [
+        "sunfu",
+        "official",
+        "omen_family",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "story": [
+          "s1940.sunfu_stance",
+          "with_sun"
+        ]
+      },
+      "choices": [
+        {
+          "id": "grant",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": 1
+            },
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "demand_tier",
+              "delta": -1
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.sunlaoye.1940.favor"
+            },
+            {
+              "op": "flag",
+              "key": "k05_sun_favor",
+              "value": true
+            },
+            {
+              "op": "add_card",
+              "card": "kp.gold_bar",
+              "to": "kept"
+            }
+          ],
+          "brief": "给他这个人情"
+        },
+        {
+          "id": "refuse",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -2
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "conscience",
+              "delta": 1
+            },
+            {
+              "op": "flag",
+              "key": "k05_sun_favor_no",
+              "value": true
+            }
+          ],
+          "brief": "推掉"
+        }
+      ],
+      "art": "portrait.sunlaoye",
+      "brief": "已经跟孙府站在一起之后，孙府当家来要人情：让铺子出面给一户人家说项。条件：表态走向是 with_sun。答应：口碑加 1，风声加 2，下一张条子降 1 档，补碎片。推掉：口碑降 2，风声加 1。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.sunlaoye.1940.ask_cold",
+      "type": "person",
+      "person": "sunlaoye",
+      "era": [
+        "1940"
+      ],
+      "weight": 6,
+      "tags": [
+        "sunfu",
+        "bad_omen",
+        "omen_dispute",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "any": [
+          {
+            "story": [
+              "s1940.sunfu_stance",
+              "apart"
+            ]
+          },
+          {
+            "story": [
+              "s1940.sunfu_stance",
+              "hedge"
+            ]
+          },
+          {
+            "story": [
+              "s1940.sunfu_stance",
+              "ignored"
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "bend",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "demand_tier",
+              "delta": -1
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.sunlaoye.1940.pressure"
+            },
+            {
+              "op": "flag",
+              "key": "k05_sun_bend",
+              "value": true
+            }
+          ],
+          "brief": "低头"
+        },
+        {
+          "id": "hold",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": 1
+            },
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "demand_tier",
+              "delta": 1
+            },
+            {
+              "op": "conscience",
+              "delta": 1
+            },
+            {
+              "op": "flag",
+              "key": "k05_sun_hold",
+              "value": true
+            }
+          ],
+          "brief": "顶住"
+        }
+      ],
+      "art": "portrait.sunlaoye",
+      "brief": "表态没跟孙府站死（不站、含糊或没理）之后，孙府当家来施压。低头：口碑降 1，风声加 2，下一张条子降 1 档。顶住：口碑加 1，风声加 2，下一张条子升 1 档。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.guanjia.1940.pledge",
+      "type": "person",
+      "person": "guanjia",
+      "era": [
+        "1940"
+      ],
+      "weight": 7,
+      "tags": [
+        "sunfu",
+        "pledge",
+        "omen_official",
+        "omen_family"
+      ],
+      "intent": "help",
+      "choices": [
+        {
+          "id": "pledge",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": 1
+            },
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "demand_tier",
+              "delta": -1
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.guanjia.1940.pledge"
+            },
+            {
+              "op": "flag",
+              "key": "k05_guanjia_pledge",
+              "value": true
+            }
+          ],
+          "brief": "作保"
+        },
+        {
+          "id": "refuse_pledge",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "demand_tier",
+              "delta": 1
+            },
+            {
+              "op": "conscience",
+              "delta": 1
+            },
+            {
+              "op": "flag",
+              "key": "k05_guanjia_refused",
+              "value": true
+            }
+          ],
+          "brief": "不作保"
+        }
+      ],
+      "art": "portrait.guanjia",
+      "brief": "孙府管家来让铺子作保。不看表态走向，他可以比金色节点更早到。作保：口碑加 1，风声加 2，下一张条子降 1 档，补碎片，旗标 k05_guanjia_pledge。拒绝：口碑降 1，风声加 1，下一张条子升 1 档。1940 年 3 月，孙府要用铺子的名字去应新官。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.guanjia.1940.intro",
+      "type": "person",
+      "person": "guanjia",
+      "era": [
+        "1940"
+      ],
+      "weight": 5,
+      "tags": [
+        "sunfu",
+        "letter",
+        "pledge",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "any": [
+          {
+            "story": [
+              "s1940.sunfu_stance",
+              "with_sun"
+            ]
+          },
+          {
+            "story": [
+              "s1940.sunfu_stance",
+              "hedge"
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "give_letter",
+          "effects": [
+            {
+              "op": "add_card",
+              "card": "kp.sunfu_letter",
+              "to": "kept"
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.guanjia.1940.intro"
+            },
+            {
+              "op": "flag",
+              "key": "k05_intro_given",
+              "value": true
+            }
+          ],
+          "brief": "收下介绍信"
+        },
+        {
+          "id": "decline_letter",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "flag",
+              "key": "k05_intro_declined",
+              "value": true
+            }
+          ],
+          "brief": "不收"
+        }
+      ],
+      "art": "portrait.guanjia",
+      "brief": "表态跟孙府站在一起或含糊过去之后，管家把一封介绍信放到手里。收下：留牌 kp.sunfu_letter（定义归 K09，这里只引用），风声加 1，补碎片。不收：口碑降 1。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.guanjia.1940.buy_scroll",
+      "type": "person",
+      "person": "guanjia",
+      "era": [
+        "1940"
+      ],
+      "weight": 6,
+      "tags": [
+        "sunfu",
+        "buyer",
+        "omen_wealth"
+      ],
+      "intent": "buy",
+      "want": {
+        "cats": [
+          "art"
+        ],
+        "budget_pct": [
+          70,
+          120
+        ]
+      },
+      "patience_min": [
+        45,
+        95
+      ],
+      "impatience": "leave",
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.guanjia.1940.scroll"
+          },
+          {
+            "op": "rep",
+            "delta": 1
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.guanjia",
+      "brief": "管家来给孙府挑货架上的书画。预算是隐藏区间，说明里不写开价和底线。成交与否由柜台结算；这张不另改钱。1940 年 3 月他仍会为府里办货。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.wu.1940.sell_rice",
+      "type": "person",
+      "person": "wu",
+      "era": [
+        "1940"
+      ],
+      "weight": 7,
+      "tags": [
+        "rice",
+        "omen_wealth"
+      ],
+      "intent": "sell",
+      "item": {
+        "template": "rice.jing"
+      },
+      "asking": {
+        "pct": [
+          100,
+          135
+        ]
+      },
+      "floor": {
+        "pct": [
+          65,
+          90
+        ]
+      },
+      "patience_min": [
+        40,
+        80
+      ],
+      "impatience": "raise",
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.wu.1940.rice"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.wu",
+      "brief": "米行掌柜来卖一小袋粳米。成交补碎片 df.wu.1940.rice。拒绝口碑降 1。1940 年 3 月米仍紧，这张不重写 1939 涨价那一节，也不写百分数。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.wu.1940.ask_stock",
+      "type": "person",
+      "person": "wu",
+      "era": [
+        "1940"
+      ],
+      "weight": 6,
+      "tags": [
+        "rice",
+        "omen_wealth",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "choices": [
+        {
+          "id": "stock_up",
+          "effects": [
+            {
+              "op": "money",
+              "delta": -40,
+              "reason": "k05.reason.wu_rice"
+            },
+            {
+              "op": "item_gain",
+              "template": "rice.jing",
+              "n": 1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.wu.1940.stock"
+            },
+            {
+              "op": "flag",
+              "key": "k05_rice_stock",
+              "value": true
+            }
+          ],
+          "brief": "先抓一把米"
+        },
+        {
+          "id": "wait",
+          "effects": [
+            {
+              "op": "flag",
+              "key": "k05_rice_wait",
+              "value": true
+            }
+          ],
+          "brief": "再等等"
+        }
+      ],
+      "art": "portrait.wu",
+      "brief": "掌柜问要不要在新摊派换名目之前先抓一把米。进货：花钱，货架加一小袋粳米，补碎片。再等等：只立旗标。1940 年 3 月，伪县政府的新名目还没写进这张牌的正文。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.postman.1940.deliver",
+      "type": "person",
+      "person": "postman",
+      "era": [
+        "1940"
+      ],
+      "weight": 7,
+      "tags": [
+        "letter",
+        "omen_far",
+        "omen_road"
+      ],
+      "intent": "ask",
+      "choices": [
+        {
+          "id": "take",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.postman.1940.mail"
+            },
+            {
+              "op": "flag",
+              "key": "k05_mail_taken",
+              "value": true
+            }
+          ],
+          "brief": "收下信"
+        },
+        {
+          "id": "refuse",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "flag",
+              "key": "k05_mail_refused",
+              "value": true
+            }
+          ],
+          "brief": "不收"
+        }
+      ],
+      "art": "portrait.postman",
+      "brief": "邮电代办来交一封普通的信，不是结尾那封。收下：补碎片 df.postman.1940.mail。不收：口碑降 1。1940 年 3 月他仍走镇上来回。结尾钩子排在本关最后一天，另算一张金色牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.nf1940a.1940.register",
+      "type": "person",
+      "person": "nf1940a",
+      "era": [
+        "1940"
+      ],
+      "weight": 7,
+      "tags": [
+        "newface",
+        "official",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "not": {
+              "flag": "grudge_nf1940a"
+            }
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "comply",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "demand_tier",
+              "delta": -1
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            },
+            {
+              "op": "flag",
+              "key": "k05_registered",
+              "value": true
+            },
+            {
+              "op": "dossier",
+              "frag": "df.nf1940a.1940.register"
+            },
+            {
+              "op": "notice",
+              "key": "k05.notice.registered"
+            }
+          ],
+          "brief": "把铺子写上名册"
+        },
+        {
+          "id": "delay",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            },
+            {
+              "op": "demand_tier",
+              "delta": 1
+            },
+            {
+              "op": "conscience",
+              "delta": 1
+            },
+            {
+              "op": "flag",
+              "key": "k05_register_delayed",
+              "value": true
+            }
+          ],
+          "brief": "先拖着"
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "flag",
+            "key": "grudge_nf1940a",
+            "value": true
+          },
+          {
+            "op": "counter",
+            "key": "snub_nf1940a",
+            "delta": 1
+          },
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.nf1940a",
+      "brief": "新面孔甲，名字提议顾承年，二十出头，1940 年 3 月随新官先到，来给当铺换名册。和铺子无旧。条件：还没立旗标 grudge_nf1940a。应承：风声加 1，口碑降 1，下一张条子降 1 档，告示 k05.notice.registered，补碎片。拖延：风声加 2，口碑加 1，下一张条子升 1 档。史实：3 月 30 日汪伪国民政府在南京成立，伪维新政府并入；这张是成立前就来核对的人，当天的事件牌归 K06。打烊没接：旗标 grudge_nf1940a，计数 snub_nf1940a 加 1，口碑降 1，之后改走冷脸核对。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.nf1940a.1940.register_cold",
+      "type": "person",
+      "person": "nf1940a",
+      "era": [
+        "1940"
+      ],
+      "weight": 5,
+      "tags": [
+        "newface",
+        "official",
+        "bad_omen",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "conditions": {
+        "all": [
+          {
+            "flag": "grudge_nf1940a"
+          },
+          {
+            "counter_gte": [
+              "snub_nf1940a",
+              1
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "comply_late",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "demand_tier",
+              "delta": 1
+            },
+            {
+              "op": "flag",
+              "key": "k05_register_forced",
+              "value": true
+            }
+          ],
+          "brief": "补上名册"
+        },
+        {
+          "id": "delay_again",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 2
+            },
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "flag",
+              "key": "k05_register_snubbed",
+              "value": true
+            }
+          ],
+          "brief": "再拖"
+        }
+      ],
+      "art": "portrait.nf1940a",
+      "brief": "书记没被接过之后再来核对名册。条件：旗标 grudge_nf1940a，计数 snub_nf1940a 至少 1。补上：风声加 2，口碑降 1，下一张条子升 1 档。再拖：风声加 2，口碑降 1。名目仍挂伪县政府，不是伪维持会。1940 年 3 月，汪伪国民政府成立当天的事件不在这张上。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.nf1940b.1940.ask_rumor",
+      "type": "person",
+      "person": "nf1940b",
+      "era": [
+        "1940"
+      ],
+      "weight": 6,
+      "tags": [
+        "newface",
+        "rumor",
+        "omen_far",
+        "omen_official"
+      ],
+      "intent": "ask",
+      "choices": [
+        {
+          "id": "keep_paper",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.nf1940b.1940.rumor"
+            },
+            {
+              "op": "flag",
+              "key": "k05_rumor_kept",
+              "value": true
+            }
+          ],
+          "brief": "留下这张传闻"
+        },
+        {
+          "id": "refuse_paper",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": -1
+            },
+            {
+              "op": "flag",
+              "key": "k05_rumor_refused",
+              "value": true
+            }
+          ],
+          "brief": "不留"
+        }
+      ],
+      "art": "portrait.nf1940b",
+      "brief": "新面孔乙，名字提议齐路生，四十上下，从南京方向走路来的报贩。他卖的是成立前的传闻：1940 年 3 月 30 日汪伪国民政府将在南京成立，伪维新政府将并入。这张不是事件牌。收下：补碎片 df.nf1940b.1940.rumor。不收：风声降 1。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.nf1940c.1940.pawn_robe",
+      "type": "person",
+      "person": "nf1940c",
+      "era": [
+        "1940"
+      ],
+      "weight": 7,
+      "tags": [
+        "newface",
+        "poor",
+        "omen_wealth"
+      ],
+      "intent": "pawn",
+      "item": {
+        "template": "clothing.robe"
+      },
+      "asking": {
+        "pct": [
+          85,
+          118
+        ]
+      },
+      "floor": {
+        "pct": [
+          50,
+          72
+        ]
+      },
+      "patience_min": [
+        45,
+        90
+      ],
+      "impatience": "leave",
+      "term_days": 14,
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.nf1940c.1940.robe"
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.nf1940c",
+      "brief": "新面孔丙，名字提议蔡布成，三十五上下，布贩。新摊派换名目之后周转不开，来当一件袍，当期 14 天。成交补碎片。拒绝口碑降 1。1940 年 3 月。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.nf1940c.1940.redeem",
+      "type": "person",
+      "person": "nf1940c",
+      "era": [
+        "1940"
+      ],
+      "weight": 7,
+      "tags": [
+        "newface",
+        "poor",
+        "omen_wealth"
+      ],
+      "intent": "redeem",
+      "conditions": {
+        "ticket_open": "nf1940c"
+      },
+      "effects": {
+        "on_accept": [
+          {
+            "op": "dossier",
+            "frag": "df.nf1940c.1940.redeemed"
+          },
+          {
+            "op": "rep",
+            "delta": 1
+          }
+        ],
+        "on_refuse": [
+          {
+            "op": "rep",
+            "delta": -1
+          }
+        ]
+      },
+      "art": "portrait.nf1940c",
+      "brief": "布贩来赎自己的袍。条件是名下有当票。成交补碎片；拒绝口碑降 1。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "p.nf1940d.1940.ask_ticket",
+      "type": "person",
+      "person": "nf1940d",
+      "era": [
+        "1940"
+      ],
+      "weight": 6,
+      "tags": [
+        "newface",
+        "woman",
+        "dossier",
+        "omen_far",
+        "omen_family"
+      ],
+      "intent": "ask",
+      "choices": [
+        {
+          "id": "copy_ticket",
+          "effects": [
+            {
+              "op": "dossier",
+              "frag": "df.nf1940d.1940.half_ticket"
+            },
+            {
+              "op": "flag",
+              "key": "k05_half_ticket",
+              "value": true
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            },
+            {
+              "op": "add_card",
+              "card": "kp.blank_ticket",
+              "to": "kept"
+            }
+          ],
+          "brief": "把半张票抄进档案"
+        },
+        {
+          "id": "turn_away_ticket",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            },
+            {
+              "op": "flag",
+              "key": "k05_half_refused",
+              "value": true
+            }
+          ],
+          "brief": "打发走"
+        }
+      ],
+      "art": "portrait.nf1940d",
+      "brief": "新面孔丁，名字提议方晚晴，二十八上下，来寻人。手里有半张旧当票，想对上档案簿。抄进档案：补碎片 df.nf1940d.1940.half_ticket，旗标 k05_half_ticket。把人打发走：口碑降 1。把碎片串成一串的是陈文庭那张金色牌，这张只提供半张票。1940 年 3 月。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K05",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

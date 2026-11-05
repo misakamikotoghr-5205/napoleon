@@ -1,0 +1,65 @@
+{
+  "_meta": {
+    "owner": "K08",
+    "schema": 1,
+    "brief": "系统牌：回家吃饭得到的家人消息。",
+    "_provenance": {
+      "by": "ai",
+      "task": "K08",
+      "date": "2026-10-13"
+    }
+  },
+  "cards": [
+    {
+      "id": "nw.any.family_word",
+      "type": "news",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "kind": "letter",
+      "source": "brother",
+      "info_about": "brother",
+      "keepable": true,
+      "expires_days": 7,
+      "must_resolve": false,
+      "tags": [
+        "omen_family",
+        "info"
+      ],
+      "effects": {
+        "on_read": [
+          {
+            "op": "dossier",
+            "frag": "df.brother.any.family_word"
+          },
+          {
+            "op": "notice",
+            "key": "k08.notice.family"
+          }
+        ],
+        "on_inform": [
+          {
+            "op": "dossier_gap",
+            "frag": "df.brother.any.trust"
+          },
+          {
+            "op": "conscience",
+            "delta": -3
+          },
+          {
+            "op": "notice",
+            "key": "k08.notice.informed"
+          }
+        ]
+      },
+      "art": "illus.nw.letter",
+      "brief": "系统牌。回家吃饭若选家人的消息，次日进手牌。来源是哥哥。不进随机牌库。不写原话，不写成报纸标题。看了补：df.brother.any.family_word。交给要消息的条子则 df.brother.any.trust 变成缺口。夜牌回家吃饭的选项发这张。没看也没留就留在手上，从到手那天起按7天倒计时，到期碎片过期，不执行 on_read，错过 df.brother.any.family_word。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K08",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

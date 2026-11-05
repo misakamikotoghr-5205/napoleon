@@ -1,0 +1,498 @@
+{
+ "version": 1,
+ "_doc": "给 vn_cast.json 的演出表草稿：场景 / 事件 → 背景 id 与主讲人（立绘位由 VN 按主讲人和正文里的“名字：”自动排）。",
+ "scenes": {
+  "toulon_arrival": {
+   "bg": "ollioules_depot",
+   "speaker": "bonaparte"
+  },
+  "toulon_mulgrave": {
+   "bg": "mulgrave_redoubt_night",
+   "speaker": "bonaparte"
+  },
+  "italy_nice": {
+   "bg": "nice_hq_1796",
+   "speaker": "bonaparte"
+  },
+  "italy_milan": {
+   "bg": "milan_serbelloni",
+   "speaker": "saliceti"
+  },
+  "italy_rivoli": {
+   "bg": "rivoli_moonlight",
+   "speaker": "bonaparte"
+  },
+  "italy_campo_formio": {
+   "bg": "passariano_villa",
+   "speaker": "bonaparte"
+  },
+  "orient_orders": {
+   "bg": "toulon_harbour_1798",
+   "speaker": "bonaparte"
+  },
+  "orient_acre": {
+   "bg": "acre_trenches",
+   "speaker": "larrey"
+  },
+  "alps_marengo": {
+   "bg": "marengo_plain",
+   "speaker": "desaix"
+  },
+  "boulogne_orders": {
+   "bg": "boulogne_camp",
+   "speaker": "napoleon"
+  },
+  "austerlitz_sun": {
+   "bg": "pratzen_fog",
+   "speaker": "napoleon"
+  },
+  "eylau_snow": {
+   "bg": "eylau_churchyard",
+   "speaker": "napoleon"
+  },
+  "bayonne_orders": {
+   "bg": "bayonne_marracq",
+   "speaker": "napoleon"
+  },
+  "saragossa_siege": {
+   "bg": "saragossa_ruins",
+   "speaker": "lannes"
+  },
+  "wagram_lobau": {
+   "bg": "lobau_bridges",
+   "speaker": "napoleon"
+  },
+  "russia_niemen": {
+   "bg": "niemen_pontoons",
+   "speaker": "napoleon"
+  },
+  "russia_borodino": {
+   "bg": "raevsky_redoubt",
+   "speaker": "napoleon"
+  },
+  "russia_berezina": {
+   "bg": "berezina_bridges",
+   "speaker": "eble"
+  },
+  "collapse_lutzen": {
+   "bg": "lutzen_conscripts",
+   "speaker": "napoleon"
+  },
+  "collapse_leipzig": {
+   "bg": "leipzig_elster",
+   "speaker": "napoleon"
+  },
+  "collapse_fontainebleau": {
+   "bg": "fontainebleau_cour",
+   "speaker": "napoleon"
+  },
+  "elba_arrival": {
+   "bg": "portoferraio_quay",
+   "speaker": "drouot"
+  },
+  "elba_night": {
+   "bg": "portoferraio_warehouse",
+   "speaker": "drouot"
+  },
+  "elba_1815": {
+   "bg": "mulini_billiard",
+   "speaker": "napoleon"
+  },
+  "event:ev_faria_half_letter": {
+   "bg": "spada_library",
+   "speaker": "faria"
+  },
+  "event:ev_storks_scale": {
+   "bg": "depot_warehouse",
+   "speaker": "villefort"
+  },
+  "event:ev_morrel_grain": {
+   "bg": "harbour_quay",
+   "speaker": "villefort"
+  },
+  "event:ev_deserters": {
+   "bg": "roadside_woods",
+   "speaker": "baptiste"
+  },
+  "event:ev_faro_table": {
+   "bg": "officers_mess",
+   "speaker": "murat"
+  },
+  "event:ev_barbets_convoy": {
+   "bg": "roadside_woods",
+   "speaker": "corso"
+  },
+  "event:ev_pavia_revolt": {
+   "bg": "village_street",
+   "speaker": "saliceti"
+  },
+  "event:ev_muiron_letter": {
+   "bg": "hq_tent",
+   "speaker": "muiron"
+  },
+  "event:ev_mysore_envoy": {
+   "bg": "cairo_courtyard",
+   "speaker": "villefort"
+  },
+  "event:ev_marie_cantine": {
+   "bg": "bivouac_rain",
+   "speaker": "marie"
+  },
+  "event:ev_pharaon_elba": {
+   "bg": "portoferraio_quay",
+   "speaker": "dantes"
+  },
+  "event:ev_capoliveri": {
+   "bg": "village_street",
+   "speaker": "drouot"
+  },
+  "event:ev_walewska": {
+   "bg": "mountain_hermitage",
+   "speaker": "villefort"
+  },
+  "event:ev_council_toulon": {
+   "bg": "hq_tent",
+   "speaker": "bonaparte"
+  },
+  "event:ev_council_italy": {
+   "bg": "hq_tent",
+   "speaker": "bonaparte"
+  },
+  "event:ev_council_acre": {
+   "bg": "hq_tent",
+   "speaker": "bonaparte"
+  },
+  "event:ev_council_marengo": {
+   "bg": "hq_tent",
+   "speaker": "bonaparte"
+  },
+  "event:ev_council_austerlitz": {
+   "bg": "hq_tent",
+   "speaker": "napoleon"
+  },
+  "event:ev_council_eylau": {
+   "bg": "hq_tent",
+   "speaker": "napoleon"
+  },
+  "event:ev_council_saragossa": {
+   "bg": "hq_tent",
+   "speaker": "lannes"
+  },
+  "event:ev_council_wagram": {
+   "bg": "hq_tent",
+   "speaker": "napoleon"
+  },
+  "event:ev_council_retreat": {
+   "bg": "hq_tent",
+   "speaker": "napoleon"
+  },
+  "event:ev_council_leipzig": {
+   "bg": "hq_tent",
+   "speaker": "napoleon"
+  },
+  "event:ev_council_elba": {
+   "bg": "hq_tent",
+   "speaker": "drouot"
+  },
+  "event:ev_malta_silver": {
+   "bg": "valletta_cathedral",
+   "speaker": "bonaparte"
+  },
+  "event:ev_st_bernard": {
+   "bg": "st_bernard_hospice",
+   "speaker": "baptiste"
+  },
+  "event:ev_ulm_prisoners": {
+   "bg": "roadside_woods",
+   "speaker": "villefort"
+  },
+  "event:ev_frederick_sword": {
+   "bg": "palace_hall",
+   "speaker": "napoleon"
+  },
+  "event:ev_dos_de_mayo": {
+   "bg": "depot_warehouse",
+   "speaker": "villefort"
+  },
+  "event:ev_ratisbon_wound": {
+   "bg": "roadside_woods",
+   "speaker": "napoleon"
+  },
+  "event:ev_smolensk_granary": {
+   "bg": "smolensk_fire",
+   "speaker": "villefort"
+  },
+  "event:ev_six_days": {
+   "bg": "village_street",
+   "speaker": "napoleon"
+  },
+  "event:ev_scholars_crates": {
+   "bg": "desert_road",
+   "speaker": "villefort"
+  },
+  "event:ev_alps_mules": {
+   "bg": "st_bernard_hospice",
+   "speaker": "villefort"
+  },
+  "event:ev_bread_ovens": {
+   "bg": "village_street",
+   "speaker": "villefort"
+  },
+  "event:ev_poisoned_well": {
+   "bg": "village_well",
+   "speaker": "marie"
+  },
+  "event:ev_danube_pontoons": {
+   "bg": "lobau_bridges",
+   "speaker": "baptiste"
+  },
+  "event:ev_horse_meat": {
+   "bg": "bivouac_snow",
+   "speaker": "villefort"
+  },
+  "event:ev_conscript_letter": {
+   "bg": "bivouac_rain",
+   "speaker": "pierre"
+  },
+  "k_golfe_juan": {
+   "bg": "golfe_juan_beach",
+   "speaker": "napoleon"
+  },
+  "k_laffrey": {
+   "bg": "laffrey_meadow",
+   "speaker": "napoleon"
+  },
+  "k_tuileries": {
+   "bg": "tuileries_bees",
+   "speaker": "napoleon"
+  },
+  "k_charleroi": {
+   "bg": "charleroi_bridge_dawn",
+   "speaker": "napoleon"
+  },
+  "k_waterloo": {
+   "bg": "plancenoit_churchyard",
+   "speaker": "napoleon"
+  },
+  "k_waterloo_night": {
+   "bg": "waterloo_inn",
+   "speaker": "napoleon"
+  },
+  "k_brussels": {
+   "bg": "brussels_warehouse",
+   "speaker": "napoleon"
+  },
+  "k_ultimatum": {
+   "bg": "metz_hall",
+   "speaker": "talleyrand"
+  },
+  "k_rhine": {
+   "bg": "lauter_lines",
+   "speaker": "napoleon"
+  },
+  "k_bavaria": {
+   "bg": "nymphenburg",
+   "speaker": "max_joseph"
+  },
+  "k_vienna": {
+   "bg": "vienna_breach",
+   "speaker": "napoleon"
+  },
+  "k_schoenbrunn": {
+   "bg": "schoenbrunn_nursery",
+   "speaker": "king_of_rome"
+  },
+  "k_choice_1817": {
+   "bg": "boulogne_camp",
+   "speaker": "napoleon"
+  },
+  "k_torres_vedras": {
+   "bg": "torres_vedras_lines",
+   "speaker": "gourgaud"
+  },
+  "k_dover": {
+   "bg": "dover_cliffs",
+   "speaker": "napoleon"
+  },
+  "k_warsaw": {
+   "bg": "warsaw_castle",
+   "speaker": "napoleon"
+  },
+  "k_niemen": {
+   "bg": "niemen_pontoons",
+   "speaker": "napoleon"
+  },
+  "k_paris_1819": {
+   "bg": "tuileries_fireworks",
+   "speaker": "napoleon"
+  },
+  "k_leipzig_1819": {
+   "bg": "leipzig_villages",
+   "speaker": "napoleon"
+  },
+  "k_final": {
+   "bg": "emperor_tent_night",
+   "speaker": "napoleon"
+  },
+  "event:ev_council_fleurus": {
+   "bg": "hq_tent",
+   "speaker": "napoleon"
+  },
+  "event:ev_council_rhine": {
+   "bg": "hq_tent",
+   "speaker": "napoleon"
+  },
+  "event:ev_council_vienna": {
+   "bg": "hq_tent",
+   "speaker": "napoleon"
+  },
+  "event:ev_council_torres": {
+   "bg": "hq_tent",
+   "speaker": "gourgaud"
+  },
+  "event:ev_council_channel": {
+   "bg": "hq_tent",
+   "speaker": "napoleon"
+  },
+  "event:ev_council_niemen": {
+   "bg": "hq_tent",
+   "speaker": "napoleon"
+  },
+  "event:ev_council_final": {
+   "bg": "hq_tent",
+   "speaker": "napoleon"
+  },
+  "event:ev_ney_auxerre": {
+   "bg": "auxerre_prefecture",
+   "speaker": "ney"
+  },
+  "event:ev_morrel_petition": {
+   "bg": "war_ministry_archive",
+   "speaker": "villefort"
+  },
+  "event:ev_marie_louise_letter": {
+   "bg": "palace_hall",
+   "speaker": "napoleon"
+  },
+  "event:ev_melk_library": {
+   "bg": "monastery_library",
+   "speaker": "villefort"
+  },
+  "event:ev_arapiles_bones": {
+   "bg": "salamanca_field",
+   "speaker": "gourgaud"
+  },
+  "event:ev_fulton_nautilus": {
+   "bg": "dunkirk_dock",
+   "speaker": "villefort"
+  },
+  "event:ev_tilsit_raft": {
+   "bg": "niemen_pontoons",
+   "speaker": "napoleon"
+  },
+  "event:ev_goethe_tea": {
+   "bg": "weimar_garden",
+   "speaker": "goethe"
+  },
+  "event:ev_federes": {
+   "bg": "paris_faubourg",
+   "speaker": "villefort"
+  },
+  "event:ev_vendee_rising": {
+   "bg": "war_ministry_archive",
+   "speaker": "fouche"
+  },
+  "event:ev_post_horses": {
+   "bg": "village_street",
+   "speaker": "villefort"
+  },
+  "event:ev_alsace_harvest": {
+   "bg": "vineyard",
+   "speaker": "marie"
+  },
+  "event:ev_tyrol_innkeeper": {
+   "bg": "alpine_inn",
+   "speaker": "villefort"
+  },
+  "event:ev_smugglers_deal": {
+   "bg": "harbour_quay",
+   "speaker": "corso"
+  },
+  "event:ev_carters_debt": {
+   "bg": "village_street",
+   "speaker": "villefort"
+  },
+  "event:ev_guard_pensions": {
+   "bg": "invalides",
+   "speaker": "cambronne"
+  },
+  "event:ev_lodi_veteran": {
+   "bg": "roadside_woods",
+   "speaker": "villefort"
+  },
+  "event:ev_courier_lost": {
+   "bg": "roadside_woods",
+   "speaker": "gourgaud"
+  },
+  "event:ia_carnot": {
+   "bg": "hq_tent",
+   "speaker": "villefort"
+  },
+  "event:ia_berthier": {
+   "bg": "hq_tent",
+   "speaker": "napoleon"
+  },
+  "event:ia_inconstant": {
+   "bg": "hq_tent",
+   "speaker": "napoleon"
+  },
+  "event:ia_boulogne_1817": {
+   "bg": "hq_tent",
+   "speaker": "napoleon"
+  },
+  "event:ib_fireside": {
+   "bg": "bivouac_rain",
+   "speaker": "villefort"
+  },
+  "event:ib_baptiste_marie": {
+   "bg": "bivouac_rain",
+   "speaker": "marie"
+  },
+  "event:ib_lannes_murat": {
+   "bg": "bivouac_rain",
+   "speaker": "lannes"
+  },
+  "event:ic_rain_bivouac": {
+   "bg": "bivouac_rain",
+   "speaker": "villefort"
+  },
+  "event:ic_snow_bivouac": {
+   "bg": "bivouac_snow",
+   "speaker": "villefort"
+  },
+  "event:ic_harbour_night": {
+   "bg": "bivouac_rain",
+   "speaker": "villefort"
+  },
+  "event:im_cipher_dispatch": {
+   "bg": "hq_tent",
+   "speaker": "gourgaud"
+  },
+  "event:im_tsar_letter": {
+   "bg": "hq_tent",
+   "speaker": "napoleon"
+  },
+  "event:iw_elba_iron": {
+   "bg": "hq_tent",
+   "speaker": "drouot"
+  },
+  "event:ev_deserter_pardon": {
+   "bg": "hq_tent",
+   "speaker": "villefort"
+  },
+  "event:ev_counterfeit_assignats": {
+   "bg": "hq_tent",
+   "speaker": "corso"
+  }
+ }
+}

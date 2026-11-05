@@ -1,0 +1,180 @@
+{
+  "_meta": {
+    "owner": "C04",
+    "schema": 1,
+    "brief": "buyer, shelf has three scrolls, nothing picked yet",
+    "_provenance": {
+      "by": "ai",
+      "task": "C04",
+      "date": "2026-10-13"
+    }
+  },
+  "guide_progress": {},
+  "view": {
+    "phase": "day",
+    "mode": "shop",
+    "date": {
+      "abs_day": 1,
+      "stage": 0,
+      "stage_day": 1,
+      "y": 1938,
+      "m": 3,
+      "d": 2,
+      "weekday": 2
+    },
+    "money": {
+      "amount": 340,
+      "currency": "fabi"
+    },
+    "hand": [],
+    "tickets": [],
+    "notice": {
+      "weather": "clear",
+      "news": []
+    }
+  },
+  "queries": {
+    "counter|{\"uid\":\"c0004\"}": {
+      "uid": "c0004",
+      "person": "chen",
+      "intent": "buy",
+      "item": null,
+      "asking": -1,
+      "tiers": {
+        "harsh": 130,
+        "fair": 105,
+        "kind": 85
+      },
+      "direction": "receive",
+      "round": 0,
+      "last_reply": "",
+      "last_price": 0,
+      "line_key": "p.chen.1938.buy_scroll#lines.greet",
+      "can_appraise": false,
+      "stock": [
+        "I010",
+        "I011",
+        "I012"
+      ],
+      "ticket": null
+    },
+    "card|{\"uid\":\"c0004\"}": {
+      "uid": "c0004",
+      "def": "p.chen.1938.buy_scroll",
+      "type": "person",
+      "person": "chen",
+      "intent": "buy",
+      "art": "portrait.chen",
+      "panel": "counter",
+      "choices": [],
+      "zone": "hand",
+      "status": "open"
+    },
+    "stock|{}": {
+      "items": [
+        {
+          "item": "I010",
+          "template": "art.flowers",
+          "cat": "art",
+          "art": "item.art.flowers",
+          "condition_word": 2,
+          "observations": [],
+          "on_shelf_since": 3
+        },
+        {
+          "item": "I011",
+          "template": "art.woodcut",
+          "cat": "art",
+          "art": "item.art.woodcut",
+          "condition_word": 1,
+          "observations": [],
+          "on_shelf_since": 2
+        },
+        {
+          "item": "I012",
+          "template": "jewelry.hairpin",
+          "cat": "jewelry",
+          "art": "item.jewelry.hairpin",
+          "condition_word": 3,
+          "observations": [],
+          "on_shelf_since": 1
+        }
+      ]
+    },
+    "tickets|{}": {
+      "tickets": []
+    }
+  },
+  "responses": [
+    {
+      "cmd": "counter.pick_stock",
+      "match": {
+        "uid": "c0004",
+        "item": "I010"
+      },
+      "result": {
+        "ok": true,
+        "err": ""
+      },
+      "events": []
+    },
+    {
+      "cmd": "counter.pick_stock",
+      "match": {
+        "uid": "c0004",
+        "item": "I011"
+      },
+      "result": {
+        "ok": true,
+        "err": ""
+      },
+      "events": []
+    },
+    {
+      "cmd": "counter.pick_stock",
+      "match": {
+        "uid": "c0004",
+        "item": "I012"
+      },
+      "result": {
+        "ok": true,
+        "err": ""
+      },
+      "events": []
+    },
+    {
+      "cmd": "counter.offer",
+      "match": {
+        "uid": "c0004",
+        "tier": "fair"
+      },
+      "result": {
+        "ok": true,
+        "err": "",
+        "reply": "accept",
+        "price": 105
+      },
+      "events": [
+        [
+          "money_changed",
+          340,
+          445,
+          "w0.mock.sold"
+        ],
+        [
+          "card_left",
+          "c0004",
+          "resolved"
+        ]
+      ]
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "ok": true,
+        "err": ""
+      },
+      "events": []
+    }
+  ]
+}

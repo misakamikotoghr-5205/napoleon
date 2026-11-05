@@ -1,0 +1,323 @@
+{
+  "_meta": {
+    "owner": "K17",
+    "schema": 1,
+    "brief": "合同 1.4（§九.7 官场开头）：1940 金色牌“请你当保长”和它的档案碎片。只写键与 brief，正文由 A/B 写。"
+  },
+  "cards": [
+    {
+      "id": "p.ma.1940.baozhang",
+      "type": "person",
+      "person": "ma",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "tags": [
+        "office",
+        "official",
+        "story",
+        "omen_official"
+      ],
+      "gold": true,
+      "story_node": "s1940.baozhang",
+      "intent": "story",
+      "schedule": {
+        "stage_day": 14,
+        "order": 1,
+        "once": true
+      },
+      "choices": [
+        {
+          "id": "take",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1940.baozhang",
+              "outcome": "take"
+            },
+            {
+              "op": "flag",
+              "key": "office_post",
+              "value": "baozhang"
+            },
+            {
+              "op": "flag",
+              "key": "office_baozhang_take",
+              "value": true
+            },
+            {
+              "op": "counter",
+              "key": "sujian_marks",
+              "delta": 2
+            },
+            {
+              "op": "heat",
+              "delta": -2
+            },
+            {
+              "op": "rep",
+              "delta": -2
+            },
+            {
+              "op": "conscience",
+              "delta": -3
+            },
+            {
+              "op": "demand_tier",
+              "delta": -1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.ma.1940.baozhang_ask"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.ma.1940.baozhang_take"
+            }
+          ],
+          "brief": "接下保长"
+        },
+        {
+          "id": "nominal",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1940.baozhang",
+              "outcome": "nominal"
+            },
+            {
+              "op": "flag",
+              "key": "office_post",
+              "value": "baozhang"
+            },
+            {
+              "op": "flag",
+              "key": "office_baozhang_nominal",
+              "value": true
+            },
+            {
+              "op": "flag",
+              "key": "office_shield_neighbors",
+              "value": true
+            },
+            {
+              "op": "counter",
+              "key": "sujian_marks",
+              "delta": 1
+            },
+            {
+              "op": "heat",
+              "delta": 1
+            },
+            {
+              "op": "conscience",
+              "delta": -1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.ma.1940.baozhang_ask"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.ma.1940.baozhang_nominal"
+            }
+          ],
+          "brief": "挂个名，暗里替街坊挡事"
+        },
+        {
+          "id": "buy_off",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1940.baozhang",
+              "outcome": "buy_off"
+            },
+            {
+              "op": "flag",
+              "key": "office_baozhang_buy_off",
+              "value": true
+            },
+            {
+              "op": "money",
+              "delta": -60,
+              "reason": "dadian"
+            },
+            {
+              "op": "rep",
+              "delta": -1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.ma.1940.baozhang_ask"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.ma.1940.baozhang_buy_off"
+            }
+          ],
+          "brief": "打点一笔，把差事推给别人"
+        },
+        {
+          "id": "refuse",
+          "effects": [
+            {
+              "op": "story",
+              "node": "s1940.baozhang",
+              "outcome": "refuse"
+            },
+            {
+              "op": "flag",
+              "key": "office_baozhang_refuse",
+              "value": true
+            },
+            {
+              "op": "flag",
+              "key": "office_foe_ma",
+              "value": true
+            },
+            {
+              "op": "heat",
+              "delta": 3
+            },
+            {
+              "op": "rep",
+              "delta": 1
+            },
+            {
+              "op": "conscience",
+              "delta": 2
+            },
+            {
+              "op": "demand_tier",
+              "delta": 1
+            },
+            {
+              "op": "dossier",
+              "frag": "df.ma.1940.baozhang_ask"
+            },
+            {
+              "op": "dossier",
+              "frag": "df.ma.1940.baozhang_refuse"
+            }
+          ],
+          "brief": "当面回绝"
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {
+            "op": "story",
+            "node": "s1940.baozhang",
+            "outcome": "ignored"
+          },
+          {
+            "op": "flag",
+            "key": "office_baozhang_ignored",
+            "value": true
+          },
+          {
+            "op": "heat",
+            "delta": 1
+          },
+          {
+            "op": "dossier_gap",
+            "frag": "df.ma.1940.baozhang_ask"
+          }
+        ]
+      },
+      "art": "portrait.ma",
+      "brief": "金色节点 s1940.baozhang，官场线的开头。本关第 14 天，马万利要往伪区公所升，保甲要重编，他上门要你接他留下的保长。接下：office_post=baozhang，肃奸记号 sujian_marks 加 2，风声降 2、口碑降 2、本心降 3、下一张条子降 1 档。挂名暗里护街坊：office_post=baozhang、office_shield_neighbors，肃奸记号加 1，风声加 1、本心降 1。打点推掉：花 60（钱不够付光为止），口碑降 1，不进名册。当面回绝：office_foe_ma（马万利成对头），风声加 3、口碑加 1、本心加 2、条子升 1 档。打烊没理：差事落到别人头上，风声加 1，碎片 df.ma.1940.baozhang_ask 变缺口。后续官场线读 office_*，1945 肃奸读 story.s1940.baozhang 与计数 sujian_marks。不写血腥。史实：1940 年 3 月汪伪政权成立前后，沦陷区重编保甲，保长多由地方商户被迫出任。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K17",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "id": "df.ma.1940.baozhang_ask",
+      "type": "dossier_fragment",
+      "person": "ma",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "order": 30,
+      "kind": "said",
+      "brief": "1940年，马万利上门要你接保长，他把来意说明。来源是本人开口，不写原话。补它的牌：K17 的 p.ma.1940.baozhang 任一选项；on_expire 不理则变缺口。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K17",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "id": "df.ma.1940.baozhang_take",
+      "type": "dossier_fragment",
+      "person": "ma",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "order": 31,
+      "kind": "ticket",
+      "brief": "1940年，你接下保长，名字上了保甲名册。来源是名册上的字，不写原文。补它的牌：K17 的 p.ma.1940.baozhang 选项 take。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K17",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "id": "df.ma.1940.baozhang_nominal",
+      "type": "dossier_fragment",
+      "person": "ma",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "order": 32,
+      "kind": "heard",
+      "brief": "1940年，你挂了保长的名，暗里替街坊挡事。来源是街坊提起，不写原话。补它的牌：K17 的 p.ma.1940.baozhang 选项 nominal。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K17",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "id": "df.ma.1940.baozhang_buy_off",
+      "type": "dossier_fragment",
+      "person": "ma",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "order": 33,
+      "kind": "said",
+      "brief": "1940年，你打点一笔，把保长推给了别人。来源是本人开口，不写原话。补它的牌：K17 的 p.ma.1940.baozhang 选项 buy_off。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K17",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "id": "df.ma.1940.baozhang_refuse",
+      "type": "dossier_fragment",
+      "person": "ma",
+      "era": [
+        "1940"
+      ],
+      "weight": 0,
+      "order": 34,
+      "kind": "said",
+      "brief": "1940年，你当面回绝了保长，马万利记下了。来源是本人开口，不写原话。补它的牌：K17 的 p.ma.1940.baozhang 选项 refuse。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K17",
+        "date": "2026-10-15"
+      }
+    }
+  ]
+}

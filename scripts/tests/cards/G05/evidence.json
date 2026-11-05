@@ -1,0 +1,84 @@
+{
+  "_meta": {
+    "owner": "G05",
+    "date": "2026-10-13",
+    "kind": "offline-test-evidence"
+  },
+  "fortune": {
+    "seed_from": 0,
+    "seed_to_exclusive": 1000,
+    "lots_per_seed": 3,
+    "successful_lots": 3000,
+    "unique_pinned_promises": 5275,
+    "delivered_promises": 5275,
+    "accuracy_pct": 100,
+    "shards": [
+      {
+        "seed_from": 0,
+        "seed_to_exclusive": 250,
+        "lots": 750,
+        "promises": 1309,
+        "delivered": 1309
+      },
+      {
+        "seed_from": 250,
+        "seed_to_exclusive": 500,
+        "lots": 750,
+        "promises": 1312,
+        "delivered": 1312
+      },
+      {
+        "seed_from": 500,
+        "seed_to_exclusive": 750,
+        "lots": 750,
+        "promises": 1319,
+        "delivered": 1319
+      },
+      {
+        "seed_from": 750,
+        "seed_to_exclusive": 1000,
+        "lots": 750,
+        "promises": 1335,
+        "delivered": 1335
+      }
+    ]
+  },
+  "conscience": {
+    "seeds": 500,
+    "picks_per_seed": 2,
+    "high_bad_picks": 90,
+    "low_bad_picks": 226,
+    "sample_picks_per_group": 1000,
+    "difference_pct_points": 13.6,
+    "required_difference_pct_points": 10
+  },
+  "cezi": {
+    "seeds": 200,
+    "has": 200,
+    "none": 200,
+    "actual_delivery_and_bans_verified": true
+  },
+  "wheel": {
+    "monotonic_units_from": 0,
+    "monotonic_units_to": 6,
+    "needle_seeds": 200,
+    "condition_filter_verified": true,
+    "stake_trials": 60
+  },
+  "bench_example_mean_ms": {
+    "lot": 3.073,
+    "spin": 0.242,
+    "pool_rows": 0.131
+  },
+  "validation": {
+    "required_g05_suites_passed": 16,
+    "static_bridge_extra_passed": true,
+    "full_card_suites_passed": 23,
+    "full_card_suites_failed": 1,
+    "full_card_failure": "W0_engine obsolete first_time count; issue #40",
+    "legacy_smoke_passed": true,
+    "legacy_smoke_items": 11,
+    "production_cards_validated": 0,
+    "total_g05_suites_passed": 17
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "owner": "K18",
+    "schema": 1,
+    "brief": "店里的猫。数字待调。"
+  },
+  "_doc": [
+    "looks_per_day: extra appraisal looks while the cat is home. Not a permanent attribute.",
+    "conscience_night: hidden meter gained on the settle night the cat is home. Do not show the number.",
+    "mold_permille: rice on the shelf loses this much condition each lost night, only after the cat has lived here.",
+    "wander_num/wander_den: after min_nights at home, int(draw * den) < num means the cat leaves.",
+    "retry_days: if the find-cat card is not in hand or queued when still lost, queue it again after this many days."
+  ],
+  "looks_per_day": 1,
+  "conscience_night": 1,
+  "mold_permille": 50,
+  "wander_num": 1,
+  "wander_den": 12,
+  "min_nights": 3,
+  "retry_days": 3
+}

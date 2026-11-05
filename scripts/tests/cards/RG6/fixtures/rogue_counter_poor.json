@@ -1,0 +1,176 @@
+{
+	"_meta": {
+		"_provenance": {
+			"by": "ai",
+			"date": "2026-10-25",
+			"task": "RG6"
+		},
+		"brief": "RG6：第 3 天白天，柜台开着，林嫂来当，手上的钱不够公道价（看 trader 不押家当）。",
+		"owner": "RG6",
+		"schema": 1
+	},
+	"queries": {
+		"counter|{\"uid\":\"c0002\"}": {
+			"asking": 294,
+			"can_appraise": false,
+			"direction": "pay",
+			"intent": "pawn",
+			"last_price": 0,
+			"last_reply": "",
+			"line_key": "p.linsao.1938.pawn_hairpin#lines.greet",
+			"person": "linsao",
+			"round": 0,
+			"stock": [],
+			"ticket": null,
+			"tiers": {
+				"fair": 220,
+				"harsh": 161,
+				"kind": 279
+			},
+			"uid": "c0002"
+		},
+		"day.end_preview|{}": {
+			"items": [],
+			"needs_confirm": false,
+			"step": "to_night"
+		},
+		"stocktake|{}": {
+			"err": "not_allowed",
+			"ok": false
+		}
+	},
+	"responses": [
+		{
+			"cmd": "counter.offer",
+			"match": {
+				"uid": "c0002"
+			},
+			"result": {
+				"err": "no_money",
+				"ok": false
+			}
+		}
+	],
+	"view": {
+		"busy": false,
+		"caps": {
+			"contacts": 3,
+			"kept": 5,
+			"shelf": 12
+		},
+		"contacts": [],
+		"date": {
+			"abs_day": 3,
+			"d": 3,
+			"era": "1938",
+			"m": 3,
+			"minute": 1200,
+			"stage": 0,
+			"stage_day": 3,
+			"stage_days": 30,
+			"weekday": 0,
+			"y": 1938
+		},
+		"demands": [],
+		"estates": [
+			{
+				"id": "es.jewel_cabinet",
+				"interest_money": 4,
+				"money": 80,
+				"status": "held"
+			},
+			{
+				"id": "es.storeroom",
+				"interest_money": 6,
+				"money": 120,
+				"status": "held"
+			},
+			{
+				"id": "es.counter",
+				"interest_money": 7,
+				"money": 150,
+				"status": "held"
+			},
+			{
+				"id": "es.old_house",
+				"interest_money": 10,
+				"money": 260,
+				"status": "held"
+			},
+			{
+				"id": "es.shopfront",
+				"interest_money": 16,
+				"money": 400,
+				"status": "held"
+			}
+		],
+		"game_over_reason": "",
+		"goals": [
+			{
+				"id": "gl.1938.keep_shop",
+				"main": true,
+				"status": "open"
+			}
+		],
+		"hand": [
+			{
+				"actions": [
+					{
+						"enabled": true,
+						"id": "open",
+						"reason_key": ""
+					}
+				],
+				"art": "portrait.linsao",
+				"away_days": 0,
+				"can_appraise": false,
+				"def": "p.linsao.1938.pawn_hairpin",
+				"gold": false,
+				"intent": "pawn",
+				"keepable": false,
+				"must_resolve": true,
+				"panel": "counter",
+				"person": "linsao",
+				"status": "open",
+				"type": "person",
+				"uid": "c0002",
+				"used_today": false,
+				"zone": "hand"
+			}
+		],
+		"heat_tier": 0,
+		"kept": [],
+		"mode": "shop",
+		"money": {
+			"amount": 50,
+			"currency": "fabi"
+		},
+		"night_offers": [],
+		"open_panel": {
+			"args": {},
+			"kind": ""
+		},
+		"pending": [],
+		"phase": "day",
+		"rep_tier": 1,
+		"self": {
+			"attrs": {
+				"eye": 2,
+				"nerve": 1,
+				"pull": 1,
+				"tongue": 1
+			},
+			"def": "self.ruhua",
+			"uid": "c0001",
+			"used_today": false
+		},
+		"shelf_count": 0,
+		"stage": {
+			"sealed": false,
+			"set": "counter",
+			"time": "day"
+		},
+		"tickets": [],
+		"v": 1
+	}
+}

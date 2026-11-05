@@ -1,0 +1,1343 @@
+{
+  "version": 1,
+  "description": "Real Director branch policies and public action plans; all plans continue to day14.",
+  "plans": {
+    "fair_active": {
+      "strategy": "town_fair",
+      "until_day": 14,
+      "refuse_generated": true,
+      "no_bills": true,
+      "sessions": {
+        "d1_xiaoding": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d1_zhang": {
+          "offer": "refuse"
+        },
+        "d1_wangshan": {
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_linsao": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_zhao": {
+          "deal": "refuse"
+        },
+        "d2_sunyoung": {
+          "deal": "decline",
+          "extras": []
+        },
+        "d2_zhouma": {
+          "offer": "refuse"
+        }
+      },
+      "script_choices": {
+        "town_day7_fees": [
+          "defer"
+        ],
+        "town_day14_accounts": [
+          "defer"
+        ],
+        "town_day12_linsao": [
+          "wait"
+        ],
+        "town_day2_farewell": [
+          "0"
+        ]
+      },
+      "expect_flags": {
+        "ticket196": true,
+        "brother_letter_1": true,
+        "post_unlocked": true,
+        "town_chapter_continues": true,
+        "town_day14_complete": true
+      },
+      "expect_contracts": [
+        {
+          "borrower": "zhouma",
+          "status": "redeemed"
+        },
+        {
+          "borrower": "linsao",
+          "status": "active",
+          "due_day": 32
+        }
+      ]
+    },
+    "first_day_refuse": {
+      "strategy": "town_fair",
+      "until_day": 14,
+      "refuse_generated": true,
+      "no_bills": true,
+      "sessions": {
+        "d1_xiaoding": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d1_zhang": {
+          "offer": "refuse"
+        },
+        "d1_wangshan": {
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_linsao": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_zhao": {
+          "deal": "refuse"
+        },
+        "d2_sunyoung": {
+          "deal": "decline",
+          "extras": []
+        },
+        "d2_zhouma": {
+          "offer": "refuse"
+        }
+      },
+      "script_choices": {
+        "town_day7_fees": [
+          "defer"
+        ],
+        "town_day14_accounts": [
+          "defer"
+        ],
+        "town_day12_linsao": [
+          "wait"
+        ],
+        "town_day2_farewell": [
+          "0"
+        ]
+      },
+      "refuse_day1": true,
+      "expect_flags": {
+        "xiaoding_rice": "refused",
+        "ticket196": true,
+        "town_day14_complete": true
+      }
+    },
+    "stolen_rice": {
+      "strategy": "town_fair",
+      "until_day": 14,
+      "refuse_generated": true,
+      "no_bills": true,
+      "sessions": {
+        "d1_xiaoding": {
+          "offer": "ask",
+          "extras": [
+            "ask_origin"
+          ]
+        },
+        "d1_zhang": {
+          "offer": "refuse"
+        },
+        "d1_wangshan": {
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_linsao": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_zhao": {
+          "deal": "refuse"
+        },
+        "d2_sunyoung": {
+          "deal": "decline",
+          "extras": []
+        },
+        "d2_zhouma": {
+          "offer": "refuse",
+          "deselect": [
+            "rice_jing_a",
+            "rice_xian_b",
+            "rice_nuo_c",
+            "rice_sunji"
+          ]
+        },
+        "d2_guanjia": {
+          "deal": "deny"
+        }
+      },
+      "script_choices": {
+        "town_day7_fees": [
+          "defer"
+        ],
+        "town_day14_accounts": [
+          "defer"
+        ],
+        "town_day12_linsao": [
+          "wait"
+        ],
+        "town_day2_farewell": [
+          "0"
+        ],
+        "d1_xiaoding": [
+          "keep"
+        ]
+      },
+      "expect_flags": {
+        "rice_bag_swapped": false,
+        "guanjia_visit": "denied",
+        "town_stolen_rice_open_account": true
+      }
+    },
+    "live_gold_missing": {
+      "strategy": "town_fair",
+      "until_day": 14,
+      "refuse_generated": true,
+      "no_bills": true,
+      "sessions": {
+        "d1_xiaoding": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d1_zhang": {
+          "offer": "refuse"
+        },
+        "d1_wangshan": {
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_linsao": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_zhao": {
+          "deal": "refuse"
+        },
+        "d2_sunyoung": {
+          "deal": "decline",
+          "extras": []
+        },
+        "d2_zhouma": {
+          "offer": "refuse"
+        }
+      },
+      "script_choices": {
+        "town_day7_fees": [
+          "defer"
+        ],
+        "town_day14_accounts": [
+          "defer"
+        ],
+        "town_day12_linsao": [
+          "wait"
+        ],
+        "town_day2_farewell": [
+          "0"
+        ]
+      },
+      "actions": [
+        {
+          "day": 2,
+          "trigger": "d2_linsao",
+          "act": "sell",
+          "item_def": "hairpin",
+          "expect": {
+            "ok": false,
+            "error": "live_pawn_requires_explicit_risk"
+          },
+          "expect_ledger_unchanged": true
+        },
+        {
+          "day": 2,
+          "trigger": "d2_linsao",
+          "act": "risk_sell",
+          "item_def": "hairpin",
+          "expect": {
+            "ok": true,
+            "risky": true
+          }
+        }
+      ],
+      "expect_contracts": [
+        {
+          "borrower": "linsao",
+          "status": "active",
+          "unauthorized_disposal": true
+        }
+      ],
+      "expect_flags": {
+        "town_lin_waits_due": true
+      }
+    },
+    "live_gold_compensated": {
+      "strategy": "town_fair",
+      "until_day": 14,
+      "refuse_generated": true,
+      "no_bills": true,
+      "sessions": {
+        "d1_xiaoding": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d1_zhang": {
+          "offer": "refuse"
+        },
+        "d1_wangshan": {
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_linsao": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_zhao": {
+          "deal": "refuse"
+        },
+        "d2_sunyoung": {
+          "deal": "decline",
+          "extras": []
+        },
+        "d2_zhouma": {
+          "offer": "refuse"
+        }
+      },
+      "script_choices": {
+        "town_day7_fees": [
+          "defer"
+        ],
+        "town_day14_accounts": [
+          "defer"
+        ],
+        "town_day12_linsao": [
+          "compensate"
+        ],
+        "town_day2_farewell": [
+          "0"
+        ]
+      },
+      "actions": [
+        {
+          "day": 2,
+          "trigger": "d2_linsao",
+          "act": "risk_sell",
+          "item_def": "hairpin",
+          "expect": {
+            "ok": true,
+            "risky": true
+          }
+        }
+      ],
+      "expect_contracts": [
+        {
+          "borrower": "linsao",
+          "status": "compensated",
+          "unauthorized_disposal": true
+        }
+      ],
+      "expect_flags": {
+        "town_lin_compensated": true
+      }
+    },
+    "inherited_pawn_buyback": {
+      "strategy": "town_fair",
+      "until_day": 14,
+      "refuse_generated": true,
+      "no_bills": true,
+      "sessions": {
+        "d1_xiaoding": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d1_zhang": {
+          "offer": "refuse"
+        },
+        "d1_wangshan": {
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_linsao": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_zhao": {
+          "deal": "refuse"
+        },
+        "d2_sunyoung": {
+          "deal": "decline",
+          "extras": []
+        },
+        "d2_zhouma": {
+          "offer": "refuse"
+        }
+      },
+      "script_choices": {
+        "town_day7_fees": [
+          "defer"
+        ],
+        "town_day14_accounts": [
+          "defer"
+        ],
+        "town_day12_linsao": [
+          "wait"
+        ],
+        "town_day2_farewell": [
+          "0"
+        ],
+        "town_day3_zhouma_pawn": [
+          "buyback"
+        ]
+      },
+      "actions": [
+        {
+          "day": 1,
+          "trigger": "start",
+          "act": "risk_sell",
+          "item_def": "handwarmer",
+          "expect": {
+            "ok": true,
+            "risky": true
+          }
+        }
+      ],
+      "expect_contracts": [
+        {
+          "borrower": "zhouma",
+          "status": "redeemed",
+          "unauthorized_disposal": true
+        }
+      ],
+      "expect_flags": {
+        "town_zhouma_redeemed": true
+      }
+    },
+    "live_gold_renewal": {
+      "strategy": "town_fair",
+      "until_day": 14,
+      "refuse_generated": true,
+      "no_bills": true,
+      "sessions": {
+        "d1_xiaoding": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d1_zhang": {
+          "offer": "refuse"
+        },
+        "d1_wangshan": {
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_linsao": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_zhao": {
+          "deal": "refuse"
+        },
+        "d2_sunyoung": {
+          "deal": "decline",
+          "extras": []
+        },
+        "d2_zhouma": {
+          "offer": "refuse"
+        }
+      },
+      "script_choices": {
+        "town_day7_fees": [
+          "defer"
+        ],
+        "town_day14_accounts": [
+          "defer"
+        ],
+        "town_day12_linsao": [
+          "renew"
+        ],
+        "town_day2_farewell": [
+          "0"
+        ]
+      },
+      "expect_contracts": [
+        {
+          "borrower": "linsao",
+          "status": "active",
+          "due_day": 39
+        }
+      ],
+      "expect_flags": {
+        "town_lin_renewed": true
+      },
+      "actions": [
+        {
+          "day": 3,
+          "trigger": "start",
+          "act": "renew",
+          "args": {
+            "borrower": "linsao",
+            "fee": -1
+          },
+          "expect": {
+            "ok": false,
+            "error": "invalid_fee"
+          },
+          "expect_ledger_unchanged": true
+        }
+      ]
+    },
+    "fee_overdue": {
+      "strategy": "town_fair",
+      "until_day": 14,
+      "refuse_generated": true,
+      "no_bills": true,
+      "sessions": {
+        "d1_xiaoding": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d1_zhang": {
+          "offer": "refuse"
+        },
+        "d1_wangshan": {
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_linsao": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_zhao": {
+          "deal": "refuse"
+        },
+        "d2_sunyoung": {
+          "deal": "decline",
+          "extras": []
+        },
+        "d2_zhouma": {
+          "offer": "refuse"
+        }
+      },
+      "script_choices": {
+        "town_day7_fees": [
+          "defer"
+        ],
+        "town_day14_accounts": [
+          "defer"
+        ],
+        "town_day12_linsao": [
+          "wait"
+        ],
+        "town_day2_farewell": [
+          "0"
+        ]
+      },
+      "no_sale": true,
+      "expect_overdue": true,
+      "expect_flags": {
+        "town_week1_unpaid": true,
+        "town_week2_unpaid": true
+      }
+    },
+    "fee_paid": {
+      "strategy": "town_fair",
+      "until_day": 14,
+      "refuse_generated": true,
+      "no_bills": true,
+      "sessions": {
+        "d1_xiaoding": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d1_zhang": {
+          "offer": "refuse"
+        },
+        "d1_wangshan": {
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_linsao": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_zhao": {
+          "deal": "refuse"
+        },
+        "d2_sunyoung": {
+          "deal": "decline",
+          "extras": []
+        },
+        "d2_zhouma": {
+          "offer": "refuse"
+        }
+      },
+      "script_choices": {
+        "town_day7_fees": [
+          "pay"
+        ],
+        "town_day14_accounts": [
+          "pay"
+        ],
+        "town_day12_linsao": [
+          "wait"
+        ],
+        "town_day2_farewell": [
+          "0"
+        ]
+      },
+      "expect_flags": {
+        "town_week1_paid": true
+      }
+    },
+    "stock_single_item": {
+      "strategy": "town_fair",
+      "until_day": 14,
+      "refuse_generated": true,
+      "no_bills": true,
+      "sessions": {
+        "d1_xiaoding": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d1_zhang": {
+          "offer": "refuse"
+        },
+        "d1_wangshan": {
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_linsao": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_zhao": {
+          "deal": "refuse"
+        },
+        "d2_sunyoung": {
+          "deal": "decline",
+          "extras": []
+        },
+        "d2_zhouma": {
+          "offer": "refuse"
+        }
+      },
+      "script_choices": {
+        "town_day7_fees": [
+          "defer"
+        ],
+        "town_day14_accounts": [
+          "defer"
+        ],
+        "town_day12_linsao": [
+          "wait"
+        ],
+        "town_day2_farewell": [
+          "0"
+        ]
+      },
+      "actions": [
+        {
+          "day": 1,
+          "trigger": "start",
+          "act": "sell",
+          "item_def": "rice_jing_a",
+          "args": {
+            "request_id": "one-stock-sale"
+          },
+          "expect": {
+            "ok": true
+          },
+          "expect_stock_delta": -1,
+          "expect_cash_matches_price": true
+        },
+        {
+          "day": 1,
+          "trigger": "start",
+          "act": "sell",
+          "item_def": "rice_jing_a",
+          "args": {
+            "request_id": "one-stock-sale"
+          },
+          "expect": {
+            "ok": true
+          },
+          "expect_stock_delta": 0,
+          "expect_ledger_unchanged": true
+        }
+      ]
+    },
+    "rice_to_ricehall": {
+      "strategy": "town_fair",
+      "until_day": 14,
+      "refuse_generated": true,
+      "no_bills": true,
+      "sessions": {
+        "d1_xiaoding": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d1_zhang": {
+          "offer": "refuse"
+        },
+        "d1_wangshan": {
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_linsao": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_zhao": {
+          "deal": "refuse"
+        },
+        "d2_sunyoung": {
+          "deal": "decline",
+          "extras": []
+        },
+        "d2_zhouma": {
+          "offer": "refuse"
+        }
+      },
+      "script_choices": {
+        "town_day7_fees": [
+          "defer"
+        ],
+        "town_day14_accounts": [
+          "defer"
+        ],
+        "town_day12_linsao": [
+          "wait"
+        ],
+        "town_day2_farewell": [
+          "0"
+        ]
+      },
+      "actions": [
+        {
+          "day": 1,
+          "trigger": "start",
+          "act": "sell_rice",
+          "item_def": "rice_jing_a",
+          "expect": {
+            "ok": true
+          },
+          "expect_stock_delta": -1,
+          "expect_cash_matches_price": true
+        },
+        {
+          "day": 1,
+          "trigger": "start",
+          "act": "sell_rice",
+          "item_def": "newspapers",
+          "expect": {
+            "ok": false,
+            "error": "rice_only"
+          },
+          "expect_ledger_unchanged": true
+        }
+      ]
+    },
+    "medicine_resale": {
+      "strategy": "town_fair",
+      "until_day": 14,
+      "refuse_generated": true,
+      "no_bills": true,
+      "sessions": {
+        "d1_xiaoding": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d1_zhang": {
+          "offer": "refuse"
+        },
+        "d1_wangshan": {
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_linsao": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_zhao": {
+          "deal": "refuse"
+        },
+        "d2_sunyoung": {
+          "deal": "decline",
+          "extras": []
+        },
+        "d2_zhouma": {
+          "offer": "refuse"
+        }
+      },
+      "script_choices": {
+        "town_day7_fees": [
+          "defer"
+        ],
+        "town_day14_accounts": [
+          "defer"
+        ],
+        "town_day12_linsao": [
+          "wait"
+        ],
+        "town_day2_farewell": [
+          "0"
+        ]
+      },
+      "actions": [
+        {
+          "day": 2,
+          "trigger": "start",
+          "act": "sell_medicine",
+          "item_def": "aspirin",
+          "expect": {
+            "ok": true
+          },
+          "expect_stock_delta": -1,
+          "expect_cash_matches_price": true
+        },
+        {
+          "day": 2,
+          "trigger": "start",
+          "act": "sell_medicine",
+          "item_def": "ciyuan",
+          "expect": {
+            "ok": false,
+            "error": "medicine_only"
+          },
+          "expect_ledger_unchanged": true
+        }
+      ]
+    },
+    "letter_ticket_reply": {
+      "strategy": "town_fair",
+      "until_day": 14,
+      "refuse_generated": true,
+      "no_bills": true,
+      "sessions": {
+        "d1_xiaoding": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d1_zhang": {
+          "offer": "refuse"
+        },
+        "d1_wangshan": {
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_linsao": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_zhao": {
+          "deal": "refuse"
+        },
+        "d2_sunyoung": {
+          "deal": "decline",
+          "extras": []
+        },
+        "d2_zhouma": {
+          "offer": "refuse"
+        }
+      },
+      "script_choices": {
+        "town_day7_fees": [
+          "defer"
+        ],
+        "town_day14_accounts": [
+          "defer"
+        ],
+        "town_day12_linsao": [
+          "wait"
+        ],
+        "town_day2_farewell": [
+          "0"
+        ],
+        "town_day4_letter": [
+          "ticket"
+        ]
+      },
+      "expect_flags": {
+        "brother_letter_1": true,
+        "post_unlocked": true,
+        "town_letter_reply": "ticket"
+      },
+      "expect_unlocked": [
+        "post",
+        "silver_ring"
+      ],
+      "actions": [
+        {
+          "day": 3,
+          "trigger": "start",
+          "act": "letters",
+          "expect": {
+            "ok": false,
+            "error": "no_letter_yet"
+          },
+          "expect_ledger_unchanged": true
+        },
+        {
+          "day": 4,
+          "trigger": "story_d4_first_letter",
+          "act": "letters",
+          "expect": {
+            "ok": true
+          },
+          "expect_ledger_unchanged": true
+        }
+      ]
+    },
+    "counter_only": {
+      "strategy": "town_fair",
+      "until_day": 14,
+      "refuse_generated": true,
+      "no_bills": true,
+      "sessions": {
+        "d1_xiaoding": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d1_zhang": {
+          "offer": "refuse"
+        },
+        "d1_wangshan": {
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_linsao": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_zhao": {
+          "deal": "refuse"
+        },
+        "d2_sunyoung": {
+          "deal": "decline",
+          "extras": []
+        },
+        "d2_zhouma": {
+          "offer": "refuse"
+        }
+      },
+      "script_choices": {
+        "town_day7_fees": [
+          "defer"
+        ],
+        "town_day14_accounts": [
+          "defer"
+        ],
+        "town_day12_linsao": [
+          "wait"
+        ],
+        "town_day2_farewell": [
+          "0"
+        ]
+      },
+      "counter_only": true,
+      "expect_flags": {
+        "ticket196": true,
+        "town_day14_complete": true
+      }
+    },
+    "invitation_gift": {
+      "strategy": "town_fair",
+      "until_day": 14,
+      "refuse_generated": true,
+      "no_bills": true,
+      "sessions": {
+        "d1_xiaoding": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d1_zhang": {
+          "offer": "refuse"
+        },
+        "d1_wangshan": {
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_linsao": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_zhao": {
+          "deal": "refuse"
+        },
+        "d2_sunyoung": {
+          "deal": "decline",
+          "extras": []
+        },
+        "d2_zhouma": {
+          "offer": "refuse"
+        }
+      },
+      "script_choices": {
+        "town_day7_fees": [
+          "defer"
+        ],
+        "town_day14_accounts": [
+          "defer"
+        ],
+        "town_day12_linsao": [
+          "wait"
+        ],
+        "town_day2_farewell": [
+          "0"
+        ],
+        "town_day6_invitation": [
+          "gift"
+        ],
+        "town_day10_invitation": [
+          "gift"
+        ]
+      },
+      "expect_flags": {
+        "town_invitation_gifted": true
+      }
+    },
+    "invitation_decline": {
+      "strategy": "town_fair",
+      "until_day": 14,
+      "refuse_generated": true,
+      "no_bills": true,
+      "sessions": {
+        "d1_xiaoding": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d1_zhang": {
+          "offer": "refuse"
+        },
+        "d1_wangshan": {
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_linsao": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_zhao": {
+          "deal": "refuse"
+        },
+        "d2_sunyoung": {
+          "deal": "decline",
+          "extras": []
+        },
+        "d2_zhouma": {
+          "offer": "refuse"
+        }
+      },
+      "script_choices": {
+        "town_day7_fees": [
+          "defer"
+        ],
+        "town_day14_accounts": [
+          "defer"
+        ],
+        "town_day12_linsao": [
+          "wait"
+        ],
+        "town_day2_farewell": [
+          "0"
+        ],
+        "town_day6_invitation": [
+          "decline"
+        ],
+        "town_day10_invitation": [
+          "decline"
+        ]
+      },
+      "expect_flags": {
+        "town_invitation_declined": true
+      }
+    },
+    "fee_negotiated": {
+      "strategy": "town_fair",
+      "until_day": 14,
+      "refuse_generated": true,
+      "no_bills": true,
+      "sessions": {
+        "d1_xiaoding": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d1_zhang": {
+          "offer": "refuse"
+        },
+        "d1_wangshan": {
+          "deal": "refuse"
+        },
+        "d1_li": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_linsao": {
+          "offer": "ask",
+          "extras": []
+        },
+        "d2_zhao": {
+          "deal": "refuse"
+        },
+        "d2_sunyoung": {
+          "deal": "decline",
+          "extras": []
+        },
+        "d2_zhouma": {
+          "offer": "refuse"
+        }
+      },
+      "script_choices": {
+        "town_day7_fees": [
+          "negotiate"
+        ],
+        "town_day14_accounts": [
+          "negotiate"
+        ],
+        "town_day12_linsao": [
+          "wait"
+        ],
+        "town_day2_farewell": [
+          "0"
+        ]
+      },
+      "expect_flags": {
+        "town_fee_negotiated": true
+      }
+    },
+    "wangshan_iou_day9": {
+      "strategy": "town_fair",
+      "until_day": 14,
+      "refuse_generated": true,
+      "no_bills": true,
+      "sessions": {
+        "d1_xiaoding": {
+          "offer": "refuse"
+        },
+        "d1_zhang": {
+          "offer": "ask",
+          "inspect": "all",
+          "extras": []
+        },
+        "d1_wangshan": {
+          "deal": "iou_quinine",
+          "extras": []
+        },
+        "d1_li": {
+          "offer": "refuse"
+        },
+        "d2_linsao": {
+          "deal": "refuse"
+        },
+        "d2_zhao": {
+          "deal": "refuse"
+        },
+        "d2_sunyoung": {
+          "deal": "decline",
+          "extras": []
+        },
+        "d2_zhouma": {
+          "offer": "refuse"
+        }
+      },
+      "script_choices": {
+        "town_day7_fees": [
+          "defer"
+        ],
+        "town_day14_accounts": [
+          "defer"
+        ],
+        "town_day12_linsao": [
+          "wait"
+        ],
+        "town_day2_farewell": [
+          "0"
+        ]
+      },
+      "expect_flags": {
+        "wangshan_iou": 60,
+        "town_wangshan_due_payment": true,
+        "ticket196": true,
+        "town_day14_complete": true
+      },
+      "expect_contracts": [
+        {
+          "borrower": "zhouma",
+          "status": "redeemed"
+        }
+      ],
+      "expect_debts": [
+        {
+          "debtor": "wangshan",
+          "creditor": "player",
+          "status": "settled",
+          "outstanding": 0
+        }
+      ]
+    }
+  },
+  "compare": [
+    [
+      "fair_active",
+      "first_day_refuse",
+      [
+        "flags",
+        "cash"
+      ]
+    ],
+    [
+      "fair_active",
+      "stolen_rice",
+      [
+        "flags"
+      ]
+    ],
+    [
+      "fair_active",
+      "live_gold_missing",
+      [
+        "contracts",
+        "cash"
+      ]
+    ],
+    [
+      "live_gold_missing",
+      "live_gold_compensated",
+      [
+        "contracts",
+        "koubei"
+      ]
+    ],
+    [
+      "fair_active",
+      "inherited_pawn_buyback",
+      [
+        "contracts",
+        "cash",
+        "koubei"
+      ]
+    ],
+    [
+      "fair_active",
+      "live_gold_renewal",
+      [
+        "contracts",
+        "cash"
+      ]
+    ],
+    [
+      "fee_paid",
+      "fee_overdue",
+      [
+        "flags",
+        "bills",
+        "cash"
+      ]
+    ],
+    [
+      "fair_active",
+      "stock_single_item",
+      [
+        "cash"
+      ]
+    ],
+    [
+      "fair_active",
+      "rice_to_ricehall",
+      [
+        "cash",
+        "accounts"
+      ]
+    ],
+    [
+      "fair_active",
+      "medicine_resale",
+      [
+        "accounts"
+      ]
+    ],
+    [
+      "fair_active",
+      "letter_ticket_reply",
+      [
+        "flags"
+      ]
+    ],
+    [
+      "fair_active",
+      "counter_only",
+      [
+        "household",
+        "cash"
+      ]
+    ],
+    [
+      "invitation_gift",
+      "invitation_decline",
+      [
+        "flags",
+        "cash"
+      ]
+    ],
+    [
+      "fee_negotiated",
+      "fee_paid",
+      [
+        "flags",
+        "cash",
+        "bills"
+      ]
+    ],
+    [
+      "fair_active",
+      "wangshan_iou_day9",
+      [
+        "debts",
+        "flags",
+        "accounts"
+      ]
+    ]
+  ]
+}

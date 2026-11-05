@@ -1,0 +1,71 @@
+{
+  "_meta": {
+    "owner": "K05",
+    "schema": 1,
+    "brief": "K05 人物牌用到的、征兆家族以外的标签。",
+    "_provenance": {
+      "by": "ai",
+      "task": "K05",
+      "date": "2026-10-13"
+    }
+  },
+  "tags": {
+    "story": {
+      "brief": "主线节点上的人物牌"
+    },
+    "family": {
+      "brief": "家宅与兄弟"
+    },
+    "official": {
+      "brief": "官面、名册、新官"
+    },
+    "poor": {
+      "brief": "手头紧"
+    },
+    "woman": {
+      "brief": "女性来客"
+    },
+    "boat": {
+      "brief": "船与码头"
+    },
+    "buyer": {
+      "brief": "来买货"
+    },
+    "levy": {
+      "brief": "摊派与条子"
+    },
+    "sunfu": {
+      "brief": "孙府的人"
+    },
+    "letter": {
+      "brief": "信与邮电"
+    },
+    "nurse": {
+      "brief": "医院来的人"
+    },
+    "student": {
+      "brief": "学堂来的人"
+    },
+    "farmer": {
+      "brief": "佃户"
+    },
+    "rice": {
+      "brief": "米粮"
+    },
+    "tea": {
+      "brief": "茶馆"
+    },
+    "newface": {
+      "brief": "1940 年新面孔"
+    },
+    "dossier": {
+      "brief": "和档案簿有关"
+    },
+    "pledge": {
+      "brief": "作保"
+    },
+    "rumor": {
+      "brief": "传闻，不是当天的事件牌"
+    }
+  }
+}

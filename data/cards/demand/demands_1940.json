@@ -1,0 +1,785 @@
+{
+  "_meta": {
+    "owner": "K07",
+    "schema": 1,
+    "brief": "1940 年条子 16 张（钱、货、人、消息，各四档）。计价口径：resolve.money.amount 与 resolve.substitute.money 写当年价（法币），不是 1938 不变价。物价指数见 stages.json：1938=100、1939=160、1940=220。钱和顶替的钱按 1938 基数乘当年指数除以 100，本表基数都能整除，不四舍五入。件数、人数、离开天数、检定门槛不乘指数；年份越晚这些数不减，有的加重是摊派更紧，不是物价。引擎不要再乘一次指数。第一关第 7 天（1938-03-07，星期一）按 demand_rules.tier_by_stage 的第一格发小档；四张 1938 小档权重相同、没有日程，抽到哪一类都温和。吃亏全走 demand_rules 的默认阶梯，卡上不覆盖。依据 era.json 第三关：汪伪国民政府成立，新官上任，摊派换了名目。"
+  },
+  "cards": [
+    {
+      "id": "dm.1940.money.t0",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "money",
+      "tier": 0,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "money": {
+          "amount": 66,
+          "jitter_pct": 10,
+          "heat_tier_pct": 0
+        },
+        "haggle": {
+          "slots": [
+            {
+              "id": "favor",
+              "accepts": [
+                "kept"
+              ],
+              "tags": [
+                "favor"
+              ]
+            },
+            {
+              "id": "talker",
+              "accepts": [
+                "self",
+                "contact"
+              ],
+              "attr": "tongue"
+            }
+          ],
+          "need": 1,
+          "tier_down": 1
+        }
+      },
+      "slots": [
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "pay": true
+        }
+      ],
+      "art": "illus.dm.money",
+      "brief": "1940 年，名目是汪伪国民政府成立后新官上任，摊派换了名目。换了名目的门牌捐：七天内交 66 蚨上下。格子只收钱。也可以放人情留牌，或放自己、人脉里口才好的去讲价，讲成则降一档；已经是最低档时由规则钳住，不能再降。风声不往这笔基数上加。办不成走默认小档：罚一笔钱。依据 era.json 第三关：汪伪国民政府成立，新官上任，摊派换了名目。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.money.t1",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "money",
+      "tier": 1,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "money": {
+          "amount": 132,
+          "jitter_pct": 10,
+          "heat_tier_pct": 10
+        },
+        "haggle": {
+          "slots": [
+            {
+              "id": "favor",
+              "accepts": [
+                "kept"
+              ],
+              "tags": [
+                "favor"
+              ]
+            },
+            {
+              "id": "talker",
+              "accepts": [
+                "self",
+                "contact"
+              ],
+              "attr": "tongue"
+            }
+          ],
+          "need": 2,
+          "tier_down": 1
+        }
+      },
+      "slots": [
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "pay": true
+        }
+      ],
+      "art": "illus.dm.money",
+      "brief": "1940 年，名目是汪伪国民政府成立后新官上任，摊派换了名目。换了名目的月捐：七天内交 132 蚨上下。格子只收钱。也可以放人情留牌，或放自己、人脉里口才好的去讲价，讲成则降一档；已经是最低档时由规则钳住，不能再降。风声高时基数会再高一些。办不成走默认中档：查封三天。依据 era.json 第三关：汪伪国民政府成立，新官上任，摊派换了名目。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.money.t2",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "money",
+      "tier": 2,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "money": {
+          "amount": 264,
+          "jitter_pct": 15,
+          "heat_tier_pct": 15
+        },
+        "haggle": {
+          "slots": [
+            {
+              "id": "favor",
+              "accepts": [
+                "kept"
+              ],
+              "tags": [
+                "favor"
+              ]
+            },
+            {
+              "id": "talker",
+              "accepts": [
+                "self",
+                "contact"
+              ],
+              "attr": "tongue"
+            }
+          ],
+          "need": 3,
+          "tier_down": 1
+        }
+      },
+      "slots": [
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "pay": true
+        }
+      ],
+      "art": "illus.dm.money",
+      "brief": "1940 年，名目是汪伪国民政府成立后新官上任，摊派换了名目。治安特别费：七天内交 264 蚨上下。格子只收钱。也可以放人情留牌，或放自己、人脉里口才好的去讲价，讲成则降一档；已经是最低档时由规则钳住，不能再降。风声高时基数会再高一些。办不成走默认大档：拿走一件家当。依据 era.json 第三关：汪伪国民政府成立，新官上任，摊派换了名目。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.money.t3",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "money",
+      "tier": 3,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "money": {
+          "amount": 528,
+          "jitter_pct": 20,
+          "heat_tier_pct": 20
+        },
+        "haggle": {
+          "slots": [
+            {
+              "id": "favor",
+              "accepts": [
+                "kept"
+              ],
+              "tags": [
+                "favor"
+              ]
+            },
+            {
+              "id": "talker",
+              "accepts": [
+                "self",
+                "contact"
+              ],
+              "attr": "tongue"
+            }
+          ],
+          "need": 4,
+          "tier_down": 1
+        }
+      },
+      "slots": [
+        {
+          "id": "cash",
+          "accepts": [
+            "money"
+          ],
+          "pay": true
+        }
+      ],
+      "art": "illus.dm.money",
+      "brief": "1940 年，名目是汪伪国民政府成立后新官上任，摊派换了名目。到任大额摊派：七天内交 528 蚨上下。格子只收钱。也可以放人情留牌，或放自己、人脉里口才好的去讲价，讲成则降一档；已经是最低档时由规则钳住，不能再降。风声高时基数会再高一些。办不成走默认要命档：进牢房。依据 era.json 第三关：汪伪国民政府成立，新官上任，摊派换了名目。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.goods.t0",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "goods",
+      "tier": 0,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "goods": {
+          "cat": "rice",
+          "n": 1
+        },
+        "substitute": {
+          "money": 110
+        }
+      },
+      "slots": [
+        {
+          "id": "goods",
+          "accepts": [
+            "item"
+          ],
+          "item_match": {
+            "cat": "rice"
+          },
+          "pay": true,
+          "max": 1
+        }
+      ],
+      "art": "illus.dm.goods",
+      "brief": "1940 年，名目是汪伪国民政府成立后新官上任，摊派换了名目。新官公务用粮：七天内交 1 袋米。格子收这一类货，放上去就交出去。没有货可以交 110 蚨顶替。办不成走默认小档：罚一笔钱。依据 era.json 第三关：汪伪国民政府成立，新官上任，摊派换了名目。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.goods.t1",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "goods",
+      "tier": 1,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "goods": {
+          "cat": "clothing",
+          "n": 2
+        },
+        "substitute": {
+          "money": 220
+        }
+      },
+      "slots": [
+        {
+          "id": "goods",
+          "accepts": [
+            "item"
+          ],
+          "item_match": {
+            "cat": "clothing"
+          },
+          "pay": true,
+          "max": 2
+        }
+      ],
+      "art": "illus.dm.goods",
+      "brief": "1940 年，名目是汪伪国民政府成立后新官上任，摊派换了名目。换名目后要衣物：七天内交 2 件衣物。格子收这一类货，放上去就交出去。没有货可以交 220 蚨顶替。办不成走默认中档：查封三天。依据 era.json 第三关：汪伪国民政府成立，新官上任，摊派换了名目。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.goods.t2",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "goods",
+      "tier": 2,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "goods": {
+          "cat": "medicine",
+          "n": 4
+        },
+        "substitute": {
+          "money": 396
+        }
+      },
+      "slots": [
+        {
+          "id": "goods",
+          "accepts": [
+            "item"
+          ],
+          "item_match": {
+            "cat": "medicine"
+          },
+          "pay": true,
+          "max": 4
+        }
+      ],
+      "art": "illus.dm.goods",
+      "brief": "1940 年，名目是汪伪国民政府成立后新官上任，摊派换了名目。新官要药材：七天内交 4 份药材。格子收这一类货，放上去就交出去。没有货可以交 396 蚨顶替。办不成走默认大档：拿走一件家当。依据 era.json 第三关：汪伪国民政府成立，新官上任，摊派换了名目。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.goods.t3",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "goods",
+      "tier": 3,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "goods": {
+          "cat": "utensils",
+          "n": 5
+        },
+        "substitute": {
+          "money": 704
+        }
+      },
+      "slots": [
+        {
+          "id": "goods",
+          "accepts": [
+            "item"
+          ],
+          "item_match": {
+            "cat": "utensils"
+          },
+          "pay": true,
+          "max": 5
+        }
+      ],
+      "art": "illus.dm.goods",
+      "brief": "1940 年，名目是汪伪国民政府成立后新官上任，摊派换了名目。新官要铜器家什：七天内交 5 件铜器家什。格子收这一类货，放上去就交出去。没有货可以交 704 蚨顶替。办不成走默认要命档：进牢房。依据 era.json 第三关：汪伪国民政府成立，新官上任，摊派换了名目。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.people.t0",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "people",
+      "tier": 0,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "people": {
+          "n": 1,
+          "away_days": 5,
+          "return_check": {
+            "attr": "nerve",
+            "need": 1
+          }
+        },
+        "substitute": {
+          "money": 66
+        }
+      },
+      "slots": [
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "attr": "nerve",
+          "max": 1
+        }
+      ],
+      "art": "illus.dm.people",
+      "brief": "1940 年，名目是汪伪国民政府成立后新官上任，摊派换了名目。新官的短差：七天内派 1 个人，离开 5 天。格子放自己或人脉，看胆量；离开期间不能用。回来那天发 ev.any.demand_return，当场按他的胆量掷，不成就是没回来，记为 person_state gone。也可以交 66 蚨顶替。办不成走默认小档：罚一笔钱。依据 era.json 第三关：汪伪国民政府成立，新官上任，摊派换了名目。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.people.t1",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "people",
+      "tier": 1,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "people": {
+          "n": 2,
+          "away_days": 9,
+          "return_check": {
+            "attr": "nerve",
+            "need": 2
+          }
+        },
+        "substitute": {
+          "money": 132
+        }
+      },
+      "slots": [
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "attr": "nerve",
+          "max": 2
+        }
+      ],
+      "art": "illus.dm.people",
+      "brief": "1940 年，名目是汪伪国民政府成立后新官上任，摊派换了名目。换名目后的出夫：七天内派 2 个人，离开 9 天。格子放自己或人脉，看胆量；离开期间不能用。回来那天发 ev.any.demand_return，当场按他的胆量掷，不成就是没回来，记为 person_state gone。也可以交 132 蚨顶替。办不成走默认中档：查封三天。依据 era.json 第三关：汪伪国民政府成立，新官上任，摊派换了名目。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.people.t2",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "people",
+      "tier": 2,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "people": {
+          "n": 2,
+          "away_days": 14,
+          "return_check": {
+            "attr": "nerve",
+            "need": 3
+          }
+        },
+        "substitute": {
+          "money": 308
+        }
+      },
+      "slots": [
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "attr": "nerve",
+          "max": 2
+        }
+      ],
+      "art": "illus.dm.people",
+      "brief": "1940 年，名目是汪伪国民政府成立后新官上任，摊派换了名目。差役，离开更久：七天内派 2 个人，离开 14 天。格子放自己或人脉，看胆量；离开期间不能用。回来那天发 ev.any.demand_return，当场按他的胆量掷，不成就是没回来，记为 person_state gone。也可以交 308 蚨顶替。办不成走默认大档：拿走一件家当。依据 era.json 第三关：汪伪国民政府成立，新官上任，摊派换了名目。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.people.t3",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "people",
+      "tier": 3,
+      "tags": [
+        "levy",
+        "official"
+      ],
+      "resolve": {
+        "people": {
+          "n": 3,
+          "away_days": 18,
+          "return_check": {
+            "attr": "nerve",
+            "need": 3
+          }
+        },
+        "substitute": {
+          "money": 616
+        }
+      },
+      "slots": [
+        {
+          "id": "man",
+          "accepts": [
+            "self",
+            "contact"
+          ],
+          "attr": "nerve",
+          "max": 3
+        }
+      ],
+      "art": "illus.dm.people",
+      "brief": "1940 年，名目是汪伪国民政府成立后新官上任，摊派换了名目。新官要的名额：七天内派 3 个人，离开 18 天。格子放自己或人脉，看胆量；离开期间不能用。回来那天发 ev.any.demand_return，当场按他的胆量掷，不成就是没回来，记为 person_state gone。也可以交 616 蚨顶替。办不成走默认要命档：进牢房。依据 era.json 第三关：汪伪国民政府成立，新官上任，摊派换了名目。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.info.t0",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "info",
+      "tier": 0,
+      "tags": [
+        "levy",
+        "official",
+        "informer"
+      ],
+      "resolve": {
+        "info": {
+          "n": 2
+        },
+        "fabricate": {
+          "attr": "nerve",
+          "need": 1,
+          "on_fail": [
+            {
+              "op": "heat",
+              "delta": 8
+            }
+          ]
+        }
+      },
+      "slots": [
+        {
+          "id": "news",
+          "accepts": [
+            "news"
+          ],
+          "max": 2
+        }
+      ],
+      "art": "illus.dm.info",
+      "brief": "1940 年，名目是汪伪国民政府成立后新官上任，摊派换了名目。要 2 条消息，说的是谁来铺里，不指定具体的人，也不引用还没写的消息牌。格子收留着的消息，交出去会走那张消息自己的 on_inform。也可以编一个：按胆量掷，不成则风声升高。办不成走默认小档：罚一笔钱。依据 era.json 第三关：汪伪国民政府成立，新官上任，摊派换了名目。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.info.t1",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "info",
+      "tier": 1,
+      "tags": [
+        "levy",
+        "official",
+        "informer"
+      ],
+      "resolve": {
+        "info": {
+          "n": 3
+        },
+        "fabricate": {
+          "attr": "nerve",
+          "need": 2,
+          "on_fail": [
+            {
+              "op": "heat",
+              "delta": 12
+            }
+          ]
+        }
+      },
+      "slots": [
+        {
+          "id": "news",
+          "accepts": [
+            "news"
+          ],
+          "max": 3
+        }
+      ],
+      "art": "illus.dm.info",
+      "brief": "1940 年，名目是汪伪国民政府成立后新官上任，摊派换了名目。要 3 条消息，说的是谁跟新官有往来，不指定具体的人，也不引用还没写的消息牌。格子收留着的消息，交出去会走那张消息自己的 on_inform。也可以编一个：按胆量掷，不成则风声升高。办不成走默认中档：查封三天。依据 era.json 第三关：汪伪国民政府成立，新官上任，摊派换了名目。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.info.t2",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "info",
+      "tier": 2,
+      "tags": [
+        "levy",
+        "official",
+        "informer"
+      ],
+      "resolve": {
+        "info": {
+          "n": 4
+        },
+        "fabricate": {
+          "attr": "nerve",
+          "need": 3,
+          "on_fail": [
+            {
+              "op": "heat",
+              "delta": 18
+            }
+          ]
+        }
+      },
+      "slots": [
+        {
+          "id": "news",
+          "accepts": [
+            "news"
+          ],
+          "max": 4
+        }
+      ],
+      "art": "illus.dm.info",
+      "brief": "1940 年，名目是汪伪国民政府成立后新官上任，摊派换了名目。要 4 条消息，说的是谁不肯应新的摊派，不指定具体的人，也不引用还没写的消息牌。格子收留着的消息，交出去会走那张消息自己的 on_inform。也可以编一个：按胆量掷，不成则风声升高。办不成走默认大档：拿走一件家当。依据 era.json 第三关：汪伪国民政府成立，新官上任，摊派换了名目。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "dm.1940.info.t3",
+      "type": "demand",
+      "era": [
+        "1940"
+      ],
+      "weight": 10,
+      "kind": "info",
+      "tier": 3,
+      "tags": [
+        "levy",
+        "official",
+        "informer"
+      ],
+      "resolve": {
+        "info": {
+          "n": 5
+        },
+        "fabricate": {
+          "attr": "nerve",
+          "need": 4,
+          "on_fail": [
+            {
+              "op": "heat",
+              "delta": 28
+            }
+          ]
+        }
+      },
+      "slots": [
+        {
+          "id": "news",
+          "accepts": [
+            "news"
+          ],
+          "max": 5
+        }
+      ],
+      "art": "illus.dm.info",
+      "brief": "1940 年，名目是汪伪国民政府成立后新官上任，摊派换了名目。要 5 条消息，说的是新官问的人，不指定具体的人，也不引用还没写的消息牌。格子收留着的消息，交出去会走那张消息自己的 on_inform。也可以编一个：按胆量掷，不成则风声升高。办不成走默认要命档：进牢房。依据 era.json 第三关：汪伪国民政府成立，新官上任，摊派换了名目。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K07",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

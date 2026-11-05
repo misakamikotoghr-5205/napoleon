@@ -1,0 +1,77 @@
+C07 #178 门禁回执（合同 §12.1 / §13.2）
+Godot 4.7.stable.official.5b4e0cb0f
+集成基线 origin/claude/festive-ride-vud32a = 7203d02bb465932a25f90c6245809bbac11d4741
+合并前 PR HEAD = 25582999066465b61f78afeb83e531bc4b344734
+待测合并树 = 5f7cc2f5c687497ec715960ab30ee59eea26fc49
+（本回执和截图是该合并树上的后续提交，测试不读 PNG。）
+
+结论：红。不把单项 PASS 写成全量全绿。未改 tools/run_card_tests.sh、tools/run_legacy_smoke.sh，未过滤 ERROR，未改 golden.json。
+
+1) 全量卡牌测试
+命令：JOBS=2 GODOT=/tmp/godot/Godot_v4.7-stable_linux.x86_64 bash tools/run_card_tests.sh
+（未设 CARDS_SUITES）
+退出码：1
+清单：240 项里 239 项 ✓，1 项 ✗（G06_golden）。
+数据校验：✓ CARDS VALID 1091 cards, 0 errors
+import：✗（进程退出码 0，日志有 ERROR）
+    ERROR: Malformed message!
+    at: process_message (editor/debugger/debug_adapter/debug_adapter_protocol.cpp:854)
+未把这条 debug adapter ERROR 当成豁免。
+
+G06_golden（exit 1）失败摘要：
+    FAIL: golden reaches every required checkpoint: expected [10,20,30], got [10]
+    FAIL: checkpoint hashes: day 10 expected c10c2ac3aec1a54c6d31ed22e83719eb1b7981c99cba7176ce2c5cefa9a7efc2
+        got 0a7d62858949be5515b0cbfaa0b9b5ed60004626c3fe1f80e9a9e45eb571d797
+    第 20、30 日没有哈希（只记到 abs_day 10）。重复跑同一失败，last line 是 checkpoint hashes。
+归因：黄金种子走 only_examples。本分支在 Claude 的 data/cards/_examples/fortune/lots.json
+补了 lot.g0/g2/g3/g4.any（见 #186）。原先等第 3 求签是 unknown_def，现在抽到泛泛签，
+例子局状态在第 10 日前就变了，并且没有走到第 20 日的 morning/month_close。
+这不是 tip 7203d02 的 schema 文案改动能解释的。不更新 scripts/tests/cards/golden/golden.json
+（归 G06）。PR 加 golden-change，等 Claude/GPT 决定要不要另提交更新哈希。
+
+末 20 行：
+✓ K14_guide_onoff_mock
+✓ K14_guide_d1_3
+✓ K14_play_ui_mock
+✓ K14_next_day_chaos
+✓ K15_audit_tools
+✓ K16_validate
+✓ K16_validate_strict
+✓ K16_guide_coverage
+✓ K15_missing_text_real
+✓ K16_tutorial
+✓ W0_validate_examples
+✓ W0_fixtures_up_to_date
+✓ K16_d1_3_mock
+✓ W0_engine
+✓ W0_skeleton
+✓ W0_validator
+✓ W0_table_3days
+✓ W0_mock
+✓ W0_stage
+✓ W0_next_day
+卡牌版：240 项清单测试；日志：/tmp/tmp.pPvOJcD2lk
+卡牌版测试失败
+
+2) 旧版冒烟
+命令：GODOT=/tmp/godot/Godot_v4.7-stable_linux.x86_64 bash tools/run_legacy_smoke.sh
+退出码：1
+import 同样 ✗：ERROR: Malformed message!（debug_adapter_protocol.cpp:854），进程退出码 0。
+其余全 ✓：数据校验、对白框、验货找不同、小镇数据与轮盘规则、暂停菜单、过路客人、
+全流程核心 fair、全流程界面 fair、小镇自动试玩 2 天、主入口 --cards。
+末行：旧版冒烟失败
+
+3) 截图（不进清单）
+两条命令退出码都是 0。画面 1280×720，渲染 OpenGL 4.5 llvmpipe。
+xvfb-run -a -s "-screen 0 1280x720x24" $GODOT --rendering-driver opengl3 --audio-driver Dummy --path . \
+  -s res://scripts/tests/cards/C07/shot_fortune.gd -- --out=scripts/tests/cards/C07/shots
+xvfb-run -a -s "-screen 0 1280x720x24" $GODOT --rendering-driver opengl3 --audio-driver Dummy --path . \
+  -s res://scripts/tests/cards/C07/shot_guide.gd -- --out=scripts/tests/cards/C07/shots
+SHOT：almanac_strip panel_both panel_lot_only panel_cezi_only lot_shake lot_result cezi_chars cezi_result
+SHOT：guide_gd.almanac guide_gd.lot guide_gd.cezi
+
+4) 例子集归属
+data/cards/_examples/fortune/lots.json 归 Claude。共享记录：#186。
+未改 ownership.json，未删 C07_real_engine。
+
+2026-10-16 现状（未重跑）：tip 已合入 fe55179；#186 仍 OPEN 且无评论，例子集归属没有新裁决，不改 lots.json、不改 golden.json、不改 fate/**；上一份红回执对照旧 tip 7203d02：两套脚本 exit 1（import Malformed message 未豁免），清单 239/240，唯一清单失败是 G06_golden；这次没重跑，不把旧回执说成新 tip 全绿。

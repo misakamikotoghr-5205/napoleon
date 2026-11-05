@@ -1,0 +1,9 @@
+# C11 破产阶梯界面（docs/handoff_cards/C11_ladder.md）
+C11_estates|res://scripts/tests/cards/C11/test_estates.gd|120|
+C11_short|res://scripts/tests/cards/C11/test_short.gd|120|
+C11_street|res://scripts/tests/cards/C11/test_street.gd|120|
+C11_prison|res://scripts/tests/cards/C11/test_prison.gd|120|
+C11_guide|res://scripts/tests/cards/C11/test_guide.gd|180|
+C11_guide_k16|res://scripts/tests/cards/C11/test_guide.gd|180|--steps=k16 --name=C11_guide_k16
+C11_real_engine|res://scripts/tests/cards/C11/test_real_engine.gd|180|--name=C11_real_engine
+C11_real_k|res://scripts/tests/cards/C11/test_real_engine.gd|300|--name=C11_real_k --examples=false

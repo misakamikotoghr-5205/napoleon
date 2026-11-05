@@ -1,0 +1,11 @@
+# C03 格子与铜钱（docs/handoff_cards/C03_slots-coins.md）
+C03_slot_panel|res://scripts/tests/cards/C03/test_slot_panel.gd|180|
+C03_sources|res://scripts/tests/cards/C03/test_sources.gd|120|
+C03_coin_toss|res://scripts/tests/cards/C03/test_coin_toss.gd|120|
+C03_full_panels|res://scripts/tests/cards/C03/test_full_panels.gd|120|
+C03_read|res://scripts/tests/cards/C03/test_read.gd|120|
+C03_guide|res://scripts/tests/cards/C03/test_guide.gd|180|
+C03_contacts_drawer|res://scripts/tests/cards/C03/test_contacts_drawer.gd|120|
+C03_real_engine|res://scripts/tests/cards/C03/test_real_engine.gd|180|
+C03_real_kdata|res://scripts/tests/cards/C03/test_real_engine.gd|180|--kdata --name=C03_real_kdata
+C03_guide_k16|res://scripts/tests/cards/C03/test_guide.gd|180|--steps=k16 --name=C03_guide_k16

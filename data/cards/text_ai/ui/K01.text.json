@@ -1,0 +1,54 @@
+{
+  "_meta": {
+    "schema": 1,
+    "_provenance": "ai:claude:opus-5.5:2026-10-22:base-text-ui"
+  },
+  "k01.notice.brother_ignored": {
+    "t": "哥哥提着箱子走了，那天没人送他。"
+  },
+  "k01.notice.levy_paid": {
+    "t": "伪维持会的摊派交过了。"
+  },
+  "k01.notice.linsao_ignored": {
+    "t": "林嫂来谈当期，没人理她，她走了。"
+  },
+  "k01.notice.ma_ignored": {
+    "t": "马保长来收摊派，没人理他，他走了。"
+  },
+  "k01.notice.ticket_pieced": {
+    "t": "德字第一九六号当票拼回去了。"
+  },
+  "k01.notice.waixiang_alms": {
+    "t": "白给了外乡人几个钱。"
+  },
+  "k01.notice.wangshan_ignored": {
+    "t": "王山那天来过，没人理他。"
+  },
+  "k01.notice.xiaoding_rice": {
+    "t": "小丁送来的米上了货架。"
+  },
+  "k01.notice.zhao_ignored": {
+    "t": "赵老三来借钱，没人理他。"
+  },
+  "k01.reason.ma_levy": {
+    "t": "伪维持会摊派"
+  },
+  "k01.reason.wangshan_food": {
+    "t": "给王山的饭钱"
+  },
+  "k01.reason.widow_help": {
+    "t": "接济过路人"
+  },
+  "k01.reason.xiaoding_med": {
+    "t": "给小丁家买药"
+  },
+  "k01.reason.zhang_road": {
+    "t": "张护士的路费"
+  },
+  "k01.reason.zhao_lend": {
+    "t": "借给赵老三"
+  },
+  "k01.reason.zhao_part": {
+    "t": "先付赵老三"
+  }
+}

@@ -1,0 +1,4543 @@
+{
+ "id": "europe_late",
+ "version": 1,
+ "segment": "conquest",
+ "_doc": "Normalized authored map. Source: docs/cards/world/drafts/conquest/data/campaigns/napoleon/maps/europe_late.json",
+ "views": {
+  "europe": {
+   "proj": "mercator",
+   "base": "europe",
+   "bg": "map_europe"
+  }
+ },
+ "sheets": [
+  {
+   "chapter": "hundred_days",
+   "view": "europe",
+   "start": "golfe_juan",
+   "days_max": 16,
+   "stamps_need": 2,
+   "muster": "beaumont",
+   "boss": "waterloo_field",
+   "interlude": "audience",
+   "frames": [
+    {
+     "id": "belgium_1815",
+     "when": {
+      "mustered": true
+     },
+     "zoom": 100,
+     "center": [
+      440,
+      5055
+     ],
+     "_draft_bounds": {
+      "lon": [
+       390,
+       490
+      ],
+      "lat": [
+       5015,
+       5095
+      ]
+     }
+    },
+    {
+     "id": "france_1815",
+     "when": {
+      "scene_done": "k_laffrey"
+     },
+     "zoom": 100,
+     "center": [
+      370,
+      4790
+     ],
+     "_draft_bounds": {
+      "lon": [
+       180,
+       560
+      ],
+      "lat": [
+       4540,
+       5040
+      ]
+     }
+    },
+    {
+     "id": "route_napoleon",
+     "when": {},
+     "zoom": 100,
+     "center": [
+      595,
+      4465
+     ],
+     "_draft_bounds": {
+      "lon": [
+       430,
+       760
+      ],
+      "lat": [
+       4340,
+       4590
+      ]
+     }
+    }
+   ],
+   "sets": [
+    {
+     "id": "route_napoleon",
+     "nodes": [
+      "digne",
+      "grenoble"
+     ],
+     "bonus": {
+      "pass_supply": 1
+     }
+    }
+   ],
+   "rivals": [
+    {
+     "id": "royalist_volunteers",
+     "label": "王党志愿军",
+     "path": [
+      "macon",
+      "chalon",
+      "macon",
+      "lyon_1815"
+     ],
+     "speed": 1,
+     "start": 0,
+     "meet": {
+      "battle": {
+       "template": "skirmish_brabant_farm",
+       "level": 12
+      },
+      "toll": {
+       "gold": 1
+      }
+     },
+     "burns_depots": true
+    },
+    {
+     "id": "rival_contractor",
+     "label": "对手承包商（白鹳商行）",
+     "path": [
+      "laon",
+      "avesnes",
+      "laon",
+      "soissons"
+     ],
+     "speed": 1,
+     "start": 1,
+     "requires": {
+      "flags": [
+       "t_storks_hostile"
+      ]
+     },
+     "meet": {
+      "toll": {
+       "supply": 3
+      }
+     },
+     "buys_depots": true
+    }
+   ],
+   "nodes": [
+    {
+     "id": "golfe_juan",
+     "type": "story",
+     "label": "儒安湾",
+     "date": "1815-03-01",
+     "geo": [
+      707,
+      4357
+     ],
+     "scene": "k_golfe_juan",
+     "frame": [
+      "route_napoleon"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "xy": [
+      870,
+      1235
+     ]
+    },
+    {
+     "id": "grasse",
+     "type": "slot",
+     "label": "格拉斯",
+     "geo": [
+      692,
+      4366
+     ],
+     "slot": {
+      "pool": "hundred_days",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "frame": [
+      "route_napoleon"
+     ],
+     "fog": "type",
+     "xy": [
+      236,
+      1026
+     ]
+    },
+    {
+     "id": "castellane",
+     "type": "slot",
+     "label": "卡斯特拉讷",
+     "geo": [
+      651,
+      4385
+     ],
+     "slot": {
+      "pool": "hundred_days",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 12
+     },
+     "frame": [
+      "route_napoleon"
+     ],
+     "fog": "type",
+     "xy": [
+      791,
+      1374
+     ]
+    },
+    {
+     "id": "digne",
+     "type": "supply",
+     "role": "post",
+     "label": "迪涅驿站",
+     "geo": [
+      624,
+      4409
+     ],
+     "frame": [
+      "route_napoleon"
+     ],
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     },
+     "xy": [
+      384,
+      584
+     ]
+    },
+    {
+     "id": "sisteron",
+     "type": "slot",
+     "label": "锡斯特龙",
+     "geo": [
+      594,
+      4420
+     ],
+     "slot": {
+      "pool": "hundred_days",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "frame": [
+      "route_napoleon"
+     ],
+     "fog": "type",
+     "xy": [
+      637,
+      1391
+     ]
+    },
+    {
+     "id": "gap",
+     "type": "slot",
+     "label": "加普",
+     "geo": [
+      608,
+      4456
+     ],
+     "slot": {
+      "pool": "hundred_days",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 12
+     },
+     "frame": [
+      "route_napoleon"
+     ],
+     "fog": "type",
+     "xy": [
+      965,
+      934
+     ]
+    },
+    {
+     "id": "laffrey",
+     "type": "story",
+     "label": "拉弗雷·相遇的草地",
+     "date": "1815-03-07",
+     "geo": [
+      577,
+      4501
+     ],
+     "scene": "k_laffrey",
+     "frame": [
+      "route_napoleon"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "xy": [
+      415,
+      1311
+     ]
+    },
+    {
+     "id": "grenoble",
+     "type": "supply",
+     "label": "格勒诺布尔兵工厂",
+     "date": "1815-03-07",
+     "geo": [
+      572,
+      4519
+     ],
+     "frame": [
+      "route_napoleon"
+     ],
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "once": false,
+     "xy": [
+      715,
+      1236
+     ]
+    },
+    {
+     "id": "vienne",
+     "type": "slot",
+     "label": "维埃纳",
+     "geo": [
+      487,
+      4552
+     ],
+     "slot": {
+      "pool": "hundred_days",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 12
+     },
+     "frame": [
+      "route_napoleon"
+     ],
+     "fog": "type",
+     "xy": [
+      341,
+      1150
+     ]
+    },
+    {
+     "id": "lyon_1815",
+     "type": "shop",
+     "label": "里昂（丝绸商与新兵）",
+     "date": "1815-03-10",
+     "geo": [
+      484,
+      4576
+     ],
+     "frame": [
+      "route_napoleon",
+      "france_1815"
+     ],
+     "fog": "open",
+     "actions": [
+      "activity:merchant",
+      "recruit:troop"
+     ],
+     "once": false,
+     "xy": [
+      954,
+      1104
+     ]
+    },
+    {
+     "id": "macon",
+     "type": "slot",
+     "label": "马孔",
+     "geo": [
+      483,
+      4631
+     ],
+     "slot": {
+      "pool": "hundred_days",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 12
+     },
+     "frame": [
+      "france_1815"
+     ],
+     "fog": "type",
+     "xy": [
+      561,
+      1257
+     ]
+    },
+    {
+     "id": "chalon",
+     "type": "supply",
+     "role": "post",
+     "label": "沙隆驿站",
+     "geo": [
+      485,
+      4678
+     ],
+     "frame": [
+      "france_1815"
+     ],
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     },
+     "xy": [
+      687,
+      1084
+     ]
+    },
+    {
+     "id": "auxerre",
+     "type": "event",
+     "label": "欧塞尔·内伊的铁笼",
+     "date": "1815-03-17",
+     "geo": [
+      357,
+      4780
+     ],
+     "event": "ev_ney_auxerre",
+     "frame": [
+      "france_1815"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "xy": [
+      788,
+      599
+     ]
+    },
+    {
+     "id": "fontainebleau_1815",
+     "type": "slot",
+     "label": "枫丹白露",
+     "geo": [
+      270,
+      4840
+     ],
+     "slot": {
+      "pool": "hundred_days",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 12
+     },
+     "frame": [
+      "france_1815"
+     ],
+     "fog": "type",
+     "xy": [
+      495,
+      1116
+     ]
+    },
+    {
+     "id": "paris_1815",
+     "type": "story",
+     "label": "巴黎·杜伊勒里宫",
+     "date": "1815-03-20",
+     "geo": [
+      235,
+      4886
+     ],
+     "scene": "k_tuileries",
+     "actions": [
+      "visit:town",
+      "visit:backdoor",
+      "trade:fair",
+      "trade:counterfeit"
+     ],
+     "frame": [
+      "france_1815"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "xy": [
+      390,
+      1003
+     ]
+    },
+    {
+     "id": "war_ministry",
+     "type": "event",
+     "label": "战争部·档案室",
+     "geo": [
+      235,
+      4886
+     ],
+     "event": "ev_morrel_petition",
+     "requires": {
+      "scene_done": "k_tuileries"
+     },
+     "frame": [
+      "france_1815"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "xy": [
+      561,
+      537
+     ]
+    },
+    {
+     "id": "soissons",
+     "type": "slot",
+     "label": "苏瓦松",
+     "geo": [
+      332,
+      4938
+     ],
+     "slot": {
+      "pool": "hundred_days",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "frame": [
+      "france_1815"
+     ],
+     "fog": "type",
+     "xy": [
+      567,
+      979
+     ]
+    },
+    {
+     "id": "laon",
+     "type": "slot",
+     "label": "拉昂",
+     "geo": [
+      362,
+      4956
+     ],
+     "slot": {
+      "pool": "hundred_days",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 12
+     },
+     "frame": [
+      "france_1815"
+     ],
+     "fog": "type",
+     "xy": [
+      279,
+      875
+     ]
+    },
+    {
+     "id": "avesnes",
+     "type": "supply",
+     "role": "post",
+     "label": "阿韦讷驿站",
+     "geo": [
+      393,
+      5012
+     ],
+     "frame": [
+      "france_1815"
+     ],
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     },
+     "xy": [
+      505,
+      681
+     ]
+    },
+    {
+     "id": "beaumont",
+     "type": "camp",
+     "role": "muster",
+     "label": "博蒙（北方军团集结）",
+     "date": "1815-06-14",
+     "geo": [
+      424,
+      5024
+     ],
+     "frame": [
+      "france_1815",
+      "belgium_1815"
+     ],
+     "fog": "open",
+     "actions": [
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "activity:rest",
+      "muster"
+     ],
+     "fixed": true,
+     "once": false,
+     "phase": "accumulate",
+     "xy": [
+      603,
+      801
+     ]
+    },
+    {
+     "id": "charleroi",
+     "type": "battle",
+     "label": "沙勒罗瓦桥",
+     "date": "1815-06-15",
+     "geo": [
+      444,
+      5041
+     ],
+     "scene": "k_charleroi",
+     "frame": [
+      "belgium_1815"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "phase": "campaign",
+     "xy": [
+      830,
+      1010
+     ]
+    },
+    {
+     "id": "fleurus",
+     "type": "event",
+     "role": "council",
+     "label": "弗勒吕斯军议",
+     "date": "1815-06-16",
+     "geo": [
+      455,
+      5048
+     ],
+     "event": "ev_council_fleurus",
+     "frame": [
+      "belgium_1815"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "phase": "campaign",
+     "xy": [
+      233,
+      662
+     ]
+    },
+    {
+     "id": "ligny",
+     "type": "elite",
+     "label": "利尼",
+     "date": "1815-06-16",
+     "geo": [
+      458,
+      5051
+     ],
+     "template": "ligny",
+     "level": 13,
+     "weather": [
+      "clear",
+      "rain"
+     ],
+     "reward": {
+      "coins": {
+       "medal": 2
+      }
+     },
+     "frame": [
+      "belgium_1815"
+     ],
+     "fog": "open",
+     "phase": "campaign",
+     "xy": [
+      896,
+      795
+     ]
+    },
+    {
+     "id": "quatre_bras",
+     "type": "elite",
+     "label": "四臂村",
+     "date": "1815-06-16",
+     "geo": [
+      445,
+      5057
+     ],
+     "template": "quatre_bras",
+     "level": 13,
+     "weather": [
+      "clear"
+     ],
+     "reward": {
+      "coins": {
+       "medal": 2
+      }
+     },
+     "frame": [
+      "belgium_1815"
+     ],
+     "fog": "open",
+     "phase": "campaign",
+     "xy": [
+      461,
+      865
+     ]
+    },
+    {
+     "id": "genappe",
+     "type": "camp",
+     "label": "热纳普的雨夜",
+     "date": "1815-06-17",
+     "geo": [
+      445,
+      5061
+     ],
+     "actions": [
+      "activity:rest",
+      "schedule:bond_story"
+     ],
+     "frame": [
+      "belgium_1815"
+     ],
+     "fog": "open",
+     "once": false,
+     "phase": "campaign",
+     "xy": [
+      708,
+      915
+     ]
+    },
+    {
+     "id": "waterloo_field",
+     "type": "boss",
+     "label": "滑铁卢·普朗斯努瓦",
+     "date": "1815-06-18",
+     "geo": [
+      442,
+      5066
+     ],
+     "scene": "k_waterloo",
+     "weather": [
+      "mud"
+     ],
+     "frame": [
+      "belgium_1815"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "phase": "campaign",
+     "xy": [
+      364,
+      745
+     ]
+    },
+    {
+     "id": "waterloo_inn",
+     "type": "story",
+     "label": "滑铁卢村·客栈",
+     "date": "1815-06-18",
+     "geo": [
+      440,
+      5072
+     ],
+     "scene": "k_waterloo_night",
+     "frame": [
+      "belgium_1815"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "phase": "campaign",
+     "xy": [
+      748,
+      749
+     ]
+    }
+   ],
+   "links": [
+    {
+     "a": "golfe_juan",
+     "b": "grasse",
+     "legs": 1
+    },
+    {
+     "a": "grasse",
+     "b": "castellane",
+     "legs": 2
+    },
+    {
+     "a": "golfe_juan",
+     "b": "castellane",
+     "legs": 2,
+     "supply": 1
+    },
+    {
+     "a": "castellane",
+     "b": "digne",
+     "legs": 1
+    },
+    {
+     "a": "digne",
+     "b": "sisteron",
+     "legs": 1
+    },
+    {
+     "a": "sisteron",
+     "b": "gap",
+     "legs": 1
+    },
+    {
+     "a": "digne",
+     "b": "gap",
+     "legs": 2,
+     "supply": 1
+    },
+    {
+     "a": "gap",
+     "b": "laffrey",
+     "legs": 2
+    },
+    {
+     "a": "sisteron",
+     "b": "laffrey",
+     "legs": 3,
+     "supply": 1
+    },
+    {
+     "a": "laffrey",
+     "b": "grenoble",
+     "legs": 1
+    },
+    {
+     "a": "grenoble",
+     "b": "vienne",
+     "legs": 2
+    },
+    {
+     "a": "vienne",
+     "b": "lyon_1815",
+     "legs": 1
+    },
+    {
+     "a": "grenoble",
+     "b": "lyon_1815",
+     "legs": 3,
+     "supply": 1
+    },
+    {
+     "a": "lyon_1815",
+     "b": "macon",
+     "legs": 2
+    },
+    {
+     "a": "macon",
+     "b": "chalon",
+     "legs": 1
+    },
+    {
+     "a": "chalon",
+     "b": "auxerre",
+     "legs": 3
+    },
+    {
+     "a": "lyon_1815",
+     "b": "auxerre",
+     "legs": 4,
+     "supply": 2
+    },
+    {
+     "a": "auxerre",
+     "b": "fontainebleau_1815",
+     "legs": 2
+    },
+    {
+     "a": "fontainebleau_1815",
+     "b": "paris_1815",
+     "legs": 1
+    },
+    {
+     "a": "auxerre",
+     "b": "paris_1815",
+     "legs": 3,
+     "supply": 1
+    },
+    {
+     "a": "paris_1815",
+     "b": "war_ministry",
+     "legs": 1
+    },
+    {
+     "a": "paris_1815",
+     "b": "soissons",
+     "legs": 2
+    },
+    {
+     "a": "war_ministry",
+     "b": "soissons",
+     "legs": 2
+    },
+    {
+     "a": "soissons",
+     "b": "laon",
+     "legs": 1
+    },
+    {
+     "a": "laon",
+     "b": "avesnes",
+     "legs": 2
+    },
+    {
+     "a": "avesnes",
+     "b": "beaumont",
+     "legs": 1
+    },
+    {
+     "a": "soissons",
+     "b": "avesnes",
+     "legs": 3,
+     "supply": 1
+    },
+    {
+     "a": "beaumont",
+     "b": "charleroi",
+     "legs": 1
+    },
+    {
+     "a": "charleroi",
+     "b": "fleurus",
+     "legs": 1
+    },
+    {
+     "a": "fleurus",
+     "b": "ligny",
+     "legs": 1
+    },
+    {
+     "a": "fleurus",
+     "b": "quatre_bras",
+     "legs": 1
+    },
+    {
+     "a": "ligny",
+     "b": "genappe",
+     "legs": 2
+    },
+    {
+     "a": "quatre_bras",
+     "b": "genappe",
+     "legs": 1
+    },
+    {
+     "a": "fleurus",
+     "b": "genappe",
+     "legs": 2
+    },
+    {
+     "a": "genappe",
+     "b": "waterloo_field",
+     "legs": 1
+    },
+    {
+     "a": "waterloo_field",
+     "b": "waterloo_inn",
+     "legs": 1
+    }
+   ],
+   "_draft_days_max": 16,
+   "templates_needed": [],
+   "_marker_layout": "Authored geo retained; transaction markers separated for readable selection."
+  },
+  {
+   "chapter": "rhine",
+   "view": "europe",
+   "start": "brussels_1815",
+   "days_max": 12,
+   "stamps_need": 2,
+   "muster": "strasbourg_1815",
+   "boss": "wissembourg",
+   "interlude": "camp_night",
+   "frames": [
+    {
+     "id": "lauter_1815",
+     "when": {
+      "mustered": true
+     },
+     "zoom": 100,
+     "center": [
+      795,
+      4882
+     ],
+     "_draft_bounds": {
+      "lon": [
+       740,
+       850
+      ],
+      "lat": [
+       4850,
+       4915
+      ]
+     }
+    },
+    {
+     "id": "lowlands_rhine",
+     "when": {},
+     "zoom": 100,
+     "center": [
+      625,
+      4980
+     ],
+     "_draft_bounds": {
+      "lon": [
+       350,
+       900
+      ],
+      "lat": [
+       4820,
+       5140
+      ]
+     }
+    }
+   ],
+   "sets": [],
+   "rivals": [
+    {
+     "id": "prussian_rearguard",
+     "label": "普军后卫",
+     "path": [
+      "liege",
+      "namur",
+      "liege",
+      "maastricht"
+     ],
+     "speed": 1,
+     "start": 0,
+     "meet": {
+      "battle": {
+       "template": "skirmish_brabant_farm",
+       "level": 14
+      },
+      "toll": {
+       "gold": 1
+      }
+     },
+     "burns_depots": true
+    }
+   ],
+   "nodes": [
+    {
+     "id": "brussels_1815",
+     "type": "boss",
+     "label": "布鲁塞尔",
+     "date": "1815-06-20",
+     "geo": [
+      435,
+      5085
+     ],
+     "scene": "k_brussels",
+     "frame": [
+      "lowlands_rhine"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      449,
+      1008
+     ]
+    },
+    {
+     "id": "antwerp_1815",
+     "type": "slot",
+     "label": "安特卫普",
+     "geo": [
+      440,
+      5122
+     ],
+     "slot": {
+      "pool": "rhine",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "frame": [
+      "lowlands_rhine"
+     ],
+     "fog": "type",
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      568,
+      541
+     ]
+    },
+    {
+     "id": "namur",
+     "type": "supply",
+     "role": "post",
+     "label": "那慕尔驿站",
+     "geo": [
+      487,
+      5047
+     ],
+     "frame": [
+      "lowlands_rhine"
+     ],
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     },
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      924,
+      850
+     ]
+    },
+    {
+     "id": "liege",
+     "type": "slot",
+     "label": "列日",
+     "geo": [
+      557,
+      5063
+     ],
+     "slot": {
+      "pool": "rhine",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 14
+     },
+     "frame": [
+      "lowlands_rhine"
+     ],
+     "fog": "type",
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      497,
+      679
+     ]
+    },
+    {
+     "id": "maastricht",
+     "type": "slot",
+     "label": "马斯特里赫特",
+     "geo": [
+      569,
+      5085
+     ],
+     "slot": {
+      "pool": "rhine",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "frame": [
+      "lowlands_rhine"
+     ],
+     "fog": "type",
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      656,
+      671
+     ]
+    },
+    {
+     "id": "luxembourg",
+     "type": "supply",
+     "role": "post",
+     "label": "卢森堡要塞",
+     "geo": [
+      613,
+      4961
+     ],
+     "frame": [
+      "lowlands_rhine"
+     ],
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     },
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      305,
+      920
+     ]
+    },
+    {
+     "id": "thionville",
+     "type": "slot",
+     "label": "蒂永维尔",
+     "geo": [
+      617,
+      4936
+     ],
+     "slot": {
+      "pool": "rhine",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 14
+     },
+     "frame": [
+      "lowlands_rhine"
+     ],
+     "fog": "type",
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      940,
+      1016
+     ]
+    },
+    {
+     "id": "metz_1815",
+     "type": "story",
+     "label": "梅斯·会议厅",
+     "date": "1815-07-20",
+     "geo": [
+      618,
+      4912
+     ],
+     "scene": "k_ultimatum",
+     "frame": [
+      "lowlands_rhine"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      415,
+      811
+     ]
+    },
+    {
+     "id": "verdun",
+     "type": "slot",
+     "label": "凡尔登",
+     "geo": [
+      538,
+      4916
+     ],
+     "slot": {
+      "pool": "rhine",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 14
+     },
+     "frame": [
+      "lowlands_rhine"
+     ],
+     "fog": "type",
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      847,
+      715
+     ]
+    },
+    {
+     "id": "nancy",
+     "type": "event",
+     "label": "南锡·维也纳来的信",
+     "geo": [
+      618,
+      4869
+     ],
+     "event": "ev_marie_louise_letter",
+     "frame": [
+      "lowlands_rhine"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      578,
+      1097
+     ]
+    },
+    {
+     "id": "saverne",
+     "type": "shop",
+     "label": "萨韦尔讷山口的骡马市",
+     "geo": [
+      736,
+      4874
+     ],
+     "frame": [
+      "lowlands_rhine"
+     ],
+     "fog": "open",
+     "actions": [
+      "activity:merchant",
+      "recruit:troop"
+     ],
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      724,
+      810
+     ]
+    },
+    {
+     "id": "strasbourg_1815",
+     "type": "camp",
+     "role": "muster",
+     "label": "斯特拉斯堡（开拔）",
+     "geo": [
+      775,
+      4858
+     ],
+     "frame": [
+      "lowlands_rhine",
+      "lauter_1815"
+     ],
+     "fog": "open",
+     "actions": [
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "activity:rest",
+      "muster"
+     ],
+     "fixed": true,
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "phase": "accumulate",
+     "xy": [
+      745,
+      1098
+     ]
+    },
+    {
+     "id": "haguenau",
+     "type": "event",
+     "role": "council",
+     "label": "阿格诺军议",
+     "geo": [
+      779,
+      4882
+     ],
+     "event": "ev_council_rhine",
+     "frame": [
+      "lauter_1815"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "xy": [
+      570,
+      824
+     ]
+    },
+    {
+     "id": "seltz",
+     "type": "camp",
+     "label": "塞尔茨渡口的营火",
+     "geo": [
+      810,
+      4889
+     ],
+     "actions": [
+      "activity:rest",
+      "schedule:bond_story"
+     ],
+     "frame": [
+      "lauter_1815"
+     ],
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "xy": [
+      802,
+      946
+     ]
+    },
+    {
+     "id": "wissembourg",
+     "type": "boss",
+     "label": "维桑堡防线·劳特河",
+     "date": "1815-09-02",
+     "geo": [
+      794,
+      4904
+     ],
+     "scene": "k_rhine",
+     "weather": [
+      "rain",
+      "clear"
+     ],
+     "frame": [
+      "lauter_1815"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "xy": [
+      647,
+      958
+     ]
+    }
+   ],
+   "links": [
+    {
+     "a": "brussels_1815",
+     "b": "antwerp_1815",
+     "legs": 2
+    },
+    {
+     "a": "brussels_1815",
+     "b": "namur",
+     "legs": 2
+    },
+    {
+     "a": "antwerp_1815",
+     "b": "maastricht",
+     "legs": 3
+    },
+    {
+     "a": "namur",
+     "b": "liege",
+     "legs": 2
+    },
+    {
+     "a": "liege",
+     "b": "maastricht",
+     "legs": 1
+    },
+    {
+     "a": "namur",
+     "b": "luxembourg",
+     "legs": 3,
+     "supply": 1
+    },
+    {
+     "a": "liege",
+     "b": "luxembourg",
+     "legs": 3
+    },
+    {
+     "a": "maastricht",
+     "b": "luxembourg",
+     "legs": 4,
+     "supply": 1
+    },
+    {
+     "a": "luxembourg",
+     "b": "thionville",
+     "legs": 1
+    },
+    {
+     "a": "thionville",
+     "b": "metz_1815",
+     "legs": 1
+    },
+    {
+     "a": "luxembourg",
+     "b": "metz_1815",
+     "legs": 2
+    },
+    {
+     "a": "metz_1815",
+     "b": "verdun",
+     "legs": 2
+    },
+    {
+     "a": "metz_1815",
+     "b": "nancy",
+     "legs": 2
+    },
+    {
+     "a": "nancy",
+     "b": "saverne",
+     "legs": 2
+    },
+    {
+     "a": "metz_1815",
+     "b": "saverne",
+     "legs": 3,
+     "supply": 1
+    },
+    {
+     "a": "saverne",
+     "b": "strasbourg_1815",
+     "legs": 1
+    },
+    {
+     "a": "strasbourg_1815",
+     "b": "haguenau",
+     "legs": 1
+    },
+    {
+     "a": "haguenau",
+     "b": "seltz",
+     "legs": 1
+    },
+    {
+     "a": "seltz",
+     "b": "wissembourg",
+     "legs": 1
+    }
+   ],
+   "_draft_days_max": 12,
+   "templates_needed": [],
+   "_marker_layout": "Authored geo retained; transaction markers separated for readable selection."
+  },
+  {
+   "chapter": "vienna",
+   "view": "europe",
+   "start": "munich_1816",
+   "days_max": 17,
+   "stamps_need": 2,
+   "muster": "st_polten",
+   "boss": "vienna_1816",
+   "interlude": "bond",
+   "frames": [
+    {
+     "id": "vienna_1816",
+     "when": {
+      "mustered": true
+     },
+     "zoom": 100,
+     "center": [
+      1605,
+      4818
+     ],
+     "_draft_bounds": {
+      "lon": [
+       1550,
+       1660
+      ],
+      "lat": [
+       4800,
+       4835
+      ]
+     }
+    },
+    {
+     "id": "danube_1816",
+     "when": {},
+     "zoom": 100,
+     "center": [
+      1380,
+      4805
+     ],
+     "_draft_bounds": {
+      "lon": [
+       1080,
+       1680
+      ],
+      "lat": [
+       4720,
+       4890
+      ]
+     }
+    }
+   ],
+   "sets": [],
+   "rivals": [
+    {
+     "id": "tyrolean_riflemen",
+     "label": "蒂罗尔射手",
+     "path": [
+      "kufstein",
+      "salzburg"
+     ],
+     "speed": 1,
+     "start": 0,
+     "meet": {
+      "battle": {
+       "template": "skirmish_brabant_farm",
+       "level": 16
+      },
+      "toll": {
+       "gold": 1
+      }
+     },
+     "burns_depots": true
+    }
+   ],
+   "nodes": [
+    {
+     "id": "munich_1816",
+     "type": "story",
+     "label": "慕尼黑·宁芬堡宫",
+     "date": "1816-04-10",
+     "geo": [
+      1158,
+      4814
+     ],
+     "scene": "k_bavaria",
+     "frame": [
+      "danube_1816"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      626,
+      1012
+     ]
+    },
+    {
+     "id": "landshut",
+     "type": "slot",
+     "label": "兰茨胡特",
+     "geo": [
+      1215,
+      4854
+     ],
+     "slot": {
+      "pool": "vienna",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "frame": [
+      "danube_1816"
+     ],
+     "fog": "type",
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      779,
+      704
+     ]
+    },
+    {
+     "id": "kufstein",
+     "type": "slot",
+     "label": "库夫施泰因（蒂罗尔山口）",
+     "geo": [
+      1217,
+      4758
+     ],
+     "slot": {
+      "pool": "vienna",
+      "kinds": {
+       "event": 4,
+       "camp": 1,
+       "battle": 3
+      },
+      "level": 16
+     },
+     "frame": [
+      "danube_1816"
+     ],
+     "fog": "type",
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      974,
+      1203
+     ]
+    },
+    {
+     "id": "salzburg",
+     "type": "supply",
+     "role": "post",
+     "label": "萨尔茨堡驿站",
+     "geo": [
+      1305,
+      4780
+     ],
+     "frame": [
+      "danube_1816"
+     ],
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     },
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      719,
+      850
+     ]
+    },
+    {
+     "id": "passau_1816",
+     "type": "supply",
+     "role": "post",
+     "label": "帕绍驿站",
+     "geo": [
+      1346,
+      4857
+     ],
+     "frame": [
+      "danube_1816"
+     ],
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     },
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1201,
+      911
+     ]
+    },
+    {
+     "id": "braunau_1816",
+     "type": "slot",
+     "label": "布劳瑙",
+     "geo": [
+      1303,
+      4826
+     ],
+     "slot": {
+      "pool": "vienna",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 16
+     },
+     "frame": [
+      "danube_1816"
+     ],
+     "fog": "type",
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      778,
+      1042
+     ]
+    },
+    {
+     "id": "linz_1816",
+     "type": "shop",
+     "label": "林茨的多瑙河船坞",
+     "geo": [
+      1429,
+      4831
+     ],
+     "frame": [
+      "danube_1816"
+     ],
+     "fog": "open",
+     "actions": [
+      "activity:merchant",
+      "recruit:troop"
+     ],
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1093,
+      756
+     ]
+    },
+    {
+     "id": "wels",
+     "type": "slot",
+     "label": "韦尔斯",
+     "geo": [
+      1403,
+      4816
+     ],
+     "slot": {
+      "pool": "vienna",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "frame": [
+      "danube_1816"
+     ],
+     "fog": "type",
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      819,
+      1191
+     ]
+    },
+    {
+     "id": "steyr",
+     "type": "slot",
+     "label": "施泰尔",
+     "geo": [
+      1442,
+      4804
+     ],
+     "slot": {
+      "pool": "vienna",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 16
+     },
+     "frame": [
+      "danube_1816"
+     ],
+     "fog": "type",
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      862,
+      911
+     ]
+    },
+    {
+     "id": "melk",
+     "type": "event",
+     "label": "梅尔克修道院的图书馆",
+     "geo": [
+      1533,
+      4823
+     ],
+     "event": "ev_melk_library",
+     "frame": [
+      "danube_1816"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      941,
+      1044
+     ]
+    },
+    {
+     "id": "st_polten",
+     "type": "camp",
+     "role": "muster",
+     "label": "圣珀尔滕（开拔）",
+     "geo": [
+      1563,
+      4820
+     ],
+     "frame": [
+      "danube_1816",
+      "vienna_1816"
+     ],
+     "fog": "open",
+     "actions": [
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "activity:rest",
+      "muster"
+     ],
+     "fixed": true,
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "phase": "accumulate",
+     "xy": [
+      968,
+      620
+     ]
+    },
+    {
+     "id": "purkersdorf",
+     "type": "event",
+     "role": "council",
+     "label": "普尔克斯多夫军议",
+     "geo": [
+      1618,
+      4821
+     ],
+     "event": "ev_council_vienna",
+     "frame": [
+      "vienna_1816"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "xy": [
+      1126,
+      1176
+     ]
+    },
+    {
+     "id": "laxenburg",
+     "type": "camp",
+     "label": "拉克森堡的林苑",
+     "geo": [
+      1636,
+      4807
+     ],
+     "actions": [
+      "activity:rest",
+      "schedule:bond_story"
+     ],
+     "frame": [
+      "vienna_1816"
+     ],
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "xy": [
+      920,
+      768
+     ]
+    },
+    {
+     "id": "vienna_1816",
+     "type": "boss",
+     "label": "维也纳城墙",
+     "date": "1816-06-12",
+     "geo": [
+      1637,
+      4821
+     ],
+     "scene": "k_vienna",
+     "frame": [
+      "vienna_1816"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "xy": [
+      1095,
+      1024
+     ]
+    },
+    {
+     "id": "schoenbrunn",
+     "type": "story",
+     "label": "美泉宫",
+     "date": "1816-06-14",
+     "geo": [
+      1631,
+      4818
+     ],
+     "scene": "k_schoenbrunn",
+     "frame": [
+      "vienna_1816"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "xy": [
+      1016,
+      891
+     ]
+    }
+   ],
+   "links": [
+    {
+     "a": "munich_1816",
+     "b": "landshut",
+     "legs": 2
+    },
+    {
+     "a": "munich_1816",
+     "b": "kufstein",
+     "legs": 2
+    },
+    {
+     "a": "kufstein",
+     "b": "salzburg",
+     "legs": 2
+    },
+    {
+     "a": "landshut",
+     "b": "passau_1816",
+     "legs": 2
+    },
+    {
+     "a": "landshut",
+     "b": "braunau_1816",
+     "legs": 2
+    },
+    {
+     "a": "braunau_1816",
+     "b": "passau_1816",
+     "legs": 1
+    },
+    {
+     "a": "braunau_1816",
+     "b": "salzburg",
+     "legs": 2
+    },
+    {
+     "a": "salzburg",
+     "b": "steyr",
+     "legs": 3,
+     "supply": 1
+    },
+    {
+     "a": "passau_1816",
+     "b": "linz_1816",
+     "legs": 2
+    },
+    {
+     "a": "linz_1816",
+     "b": "wels",
+     "legs": 1
+    },
+    {
+     "a": "wels",
+     "b": "steyr",
+     "legs": 1
+    },
+    {
+     "a": "linz_1816",
+     "b": "melk",
+     "legs": 2
+    },
+    {
+     "a": "steyr",
+     "b": "melk",
+     "legs": 2
+    },
+    {
+     "a": "melk",
+     "b": "st_polten",
+     "legs": 1
+    },
+    {
+     "a": "linz_1816",
+     "b": "st_polten",
+     "legs": 3,
+     "supply": 1
+    },
+    {
+     "a": "st_polten",
+     "b": "purkersdorf",
+     "legs": 2
+    },
+    {
+     "a": "purkersdorf",
+     "b": "laxenburg",
+     "legs": 2
+    },
+    {
+     "a": "laxenburg",
+     "b": "vienna_1816",
+     "legs": 1
+    },
+    {
+     "a": "vienna_1816",
+     "b": "schoenbrunn",
+     "legs": 1
+    }
+   ],
+   "_draft_days_max": 12,
+   "templates_needed": [],
+   "_marker_layout": "Authored geo retained; transaction markers separated for readable selection."
+  },
+  {
+   "chapter": "iberia_channel",
+   "view": "europe",
+   "start": "boulogne_1817",
+   "days_max": 33,
+   "stamps_need": 2,
+   "muster": [
+    "santarem",
+    "calais"
+   ],
+   "boss": [
+    "torres_vedras",
+    "dover"
+   ],
+   "interlude": "audience",
+   "frames": [
+    {
+     "id": "torres_1817",
+     "when": {
+      "flags": [
+       "k_iberia"
+      ],
+      "mustered": true
+     },
+     "zoom": 100,
+     "center": [
+      -900,
+      3915
+     ],
+     "_draft_bounds": {
+      "lon": [
+       -960,
+       -840
+      ],
+      "lat": [
+       3870,
+       3960
+      ]
+     }
+    },
+    {
+     "id": "kent_1817",
+     "when": {
+      "flags": [
+       "k_channel"
+      ],
+      "mustered": true
+     },
+     "zoom": 100,
+     "center": [
+      145,
+      5100
+     ],
+     "_draft_bounds": {
+      "lon": [
+       80,
+       210
+      ],
+      "lat": [
+       5075,
+       5125
+      ]
+     }
+    },
+    {
+     "id": "iberia_1817",
+     "when": {
+      "flags": [
+       "k_iberia"
+      ]
+     },
+     "zoom": 100,
+     "center": [
+      -540,
+      4110
+     ],
+     "_draft_bounds": {
+      "lon": [
+       -1000,
+       -80
+      ],
+      "lat": [
+       3850,
+       4370
+      ]
+     }
+    },
+    {
+     "id": "channel_1817",
+     "when": {
+      "flags": [
+       "k_channel"
+      ]
+     },
+     "zoom": 100,
+     "center": [
+      225,
+      5100
+     ],
+     "_draft_bounds": {
+      "lon": [
+       -50,
+       500
+      ],
+      "lat": [
+       4980,
+       5220
+      ]
+     }
+    },
+    {
+     "id": "west_1817",
+     "when": {},
+     "zoom": 100,
+     "center": [
+      -50,
+      4725
+     ],
+     "_draft_bounds": {
+      "lon": [
+       -600,
+       500
+      ],
+      "lat": [
+       4250,
+       5200
+      ]
+     }
+    }
+   ],
+   "sets": [],
+   "rivals": [],
+   "nodes": [
+    {
+     "id": "boulogne_1817",
+     "type": "story",
+     "label": "布洛涅·皇帝的木屋",
+     "date": "1817-03-01",
+     "geo": [
+      161,
+      5073
+     ],
+     "scene": "k_choice_1817",
+     "frame": [
+      "west_1817",
+      "channel_1817"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      467,
+      564
+     ]
+    },
+    {
+     "id": "bayonne_1817",
+     "type": "supply",
+     "role": "post",
+     "label": "巴约讷驿站",
+     "geo": [
+      -147,
+      4349
+     ],
+     "requires": {
+      "flags": [
+       "k_iberia"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "west_1817",
+      "iberia_1817"
+     ],
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     },
+     "xy": [
+      468,
+      1191
+     ]
+    },
+    {
+     "id": "vitoria_1817",
+     "type": "slot",
+     "label": "维多利亚",
+     "geo": [
+      -267,
+      4285
+     ],
+     "slot": {
+      "pool": "iberia_channel",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "requires": {
+      "flags": [
+       "k_iberia"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "iberia_1817"
+     ],
+     "fog": "type",
+     "xy": [
+      223,
+      1612
+     ]
+    },
+    {
+     "id": "burgos_1817",
+     "type": "slot",
+     "label": "布尔戈斯",
+     "geo": [
+      -370,
+      4234
+     ],
+     "slot": {
+      "pool": "iberia_channel",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 18
+     },
+     "requires": {
+      "flags": [
+       "k_iberia"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "iberia_1817"
+     ],
+     "fog": "type",
+     "xy": [
+      377,
+      1057
+     ]
+    },
+    {
+     "id": "valladolid",
+     "type": "slot",
+     "label": "巴利亚多利德",
+     "geo": [
+      -472,
+      4165
+     ],
+     "slot": {
+      "pool": "iberia_channel",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "requires": {
+      "flags": [
+       "k_iberia"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "iberia_1817"
+     ],
+     "fog": "type",
+     "xy": [
+      273,
+      1311
+     ]
+    },
+    {
+     "id": "salamanca",
+     "type": "event",
+     "label": "萨拉曼卡·阿拉皮莱斯的白骨",
+     "geo": [
+      -566,
+      4097
+     ],
+     "event": "ev_arapiles_bones",
+     "requires": {
+      "flags": [
+       "k_iberia"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "iberia_1817"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "xy": [
+      -72,
+      1406
+     ]
+    },
+    {
+     "id": "ciudad_rodrigo",
+     "type": "slot",
+     "label": "罗德里戈城",
+     "geo": [
+      -653,
+      4060
+     ],
+     "slot": {
+      "pool": "iberia_channel",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 18
+     },
+     "requires": {
+      "flags": [
+       "k_iberia"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "iberia_1817"
+     ],
+     "fog": "type",
+     "xy": [
+      259,
+      1157
+     ]
+    },
+    {
+     "id": "guarda",
+     "type": "slot",
+     "label": "瓜达",
+     "geo": [
+      -727,
+      4054
+     ],
+     "slot": {
+      "pool": "iberia_channel",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "requires": {
+      "flags": [
+       "k_iberia"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "iberia_1817"
+     ],
+     "fog": "type",
+     "xy": [
+      375,
+      1427
+     ]
+    },
+    {
+     "id": "coimbra",
+     "type": "supply",
+     "role": "post",
+     "label": "科英布拉驿站",
+     "geo": [
+      -843,
+      4021
+     ],
+     "requires": {
+      "flags": [
+       "k_iberia"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "iberia_1817"
+     ],
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     },
+     "xy": [
+      104,
+      1170
+     ]
+    },
+    {
+     "id": "santarem",
+     "type": "camp",
+     "role": "muster",
+     "label": "圣塔伦（开拔）",
+     "geo": [
+      -868,
+      3924
+     ],
+     "requires": {
+      "flags": [
+       "k_iberia"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "iberia_1817",
+      "torres_1817"
+     ],
+     "fog": "open",
+     "actions": [
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "activity:rest",
+      "muster"
+     ],
+     "fixed": true,
+     "once": false,
+     "phase": "accumulate",
+     "xy": [
+      -45,
+      1211
+     ]
+    },
+    {
+     "id": "etaples",
+     "type": "supply",
+     "role": "post",
+     "label": "埃塔普勒的平底船",
+     "geo": [
+      164,
+      5051
+     ],
+     "requires": {
+      "flags": [
+       "k_channel"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "channel_1817"
+     ],
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     },
+     "xy": [
+      532,
+      1048
+     ]
+    },
+    {
+     "id": "abbeville",
+     "type": "slot",
+     "label": "阿布维尔",
+     "geo": [
+      183,
+      5010
+     ],
+     "slot": {
+      "pool": "iberia_channel",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 18
+     },
+     "requires": {
+      "flags": [
+       "k_channel"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "channel_1817"
+     ],
+     "fog": "type",
+     "xy": [
+      204,
+      574
+     ]
+    },
+    {
+     "id": "saint_omer",
+     "type": "supply",
+     "role": "post",
+     "label": "圣奥梅尔驿站",
+     "geo": [
+      225,
+      5075
+     ],
+     "requires": {
+      "flags": [
+       "k_channel"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "channel_1817"
+     ],
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     },
+     "xy": [
+      680,
+      1002
+     ]
+    },
+    {
+     "id": "cassel",
+     "type": "slot",
+     "label": "卡塞勒",
+     "geo": [
+      249,
+      5080
+     ],
+     "slot": {
+      "pool": "iberia_channel",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 18
+     },
+     "requires": {
+      "flags": [
+       "k_channel"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "channel_1817"
+     ],
+     "fog": "type",
+     "xy": [
+      472,
+      734
+     ]
+    },
+    {
+     "id": "lille",
+     "type": "slot",
+     "label": "里尔",
+     "geo": [
+      306,
+      5063
+     ],
+     "slot": {
+      "pool": "iberia_channel",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "requires": {
+      "flags": [
+       "k_channel"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "channel_1817"
+     ],
+     "fog": "type",
+     "xy": [
+      768,
+      870
+     ]
+    },
+    {
+     "id": "dunkirk",
+     "type": "event",
+     "label": "敦刻尔克·美国人的潜水船",
+     "geo": [
+      238,
+      5103
+     ],
+     "event": "ev_fulton_nautilus",
+     "requires": {
+      "flags": [
+       "k_channel"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "channel_1817"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "xy": [
+      257,
+      942
+     ]
+    },
+    {
+     "id": "ostend",
+     "type": "slot",
+     "label": "奥斯坦德",
+     "geo": [
+      292,
+      5123
+     ],
+     "slot": {
+      "pool": "iberia_channel",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "requires": {
+      "flags": [
+       "k_channel"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "channel_1817"
+     ],
+     "fog": "type",
+     "xy": [
+      622,
+      571
+     ]
+    },
+    {
+     "id": "bruges",
+     "type": "slot",
+     "label": "布鲁日",
+     "geo": [
+      322,
+      5121
+     ],
+     "slot": {
+      "pool": "iberia_channel",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 18
+     },
+     "requires": {
+      "flags": [
+       "k_channel"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "channel_1817"
+     ],
+     "fog": "type",
+     "xy": [
+      440,
+      915
+     ]
+    },
+    {
+     "id": "antwerp_1817",
+     "type": "shop",
+     "label": "安特卫普造船厂",
+     "geo": [
+      440,
+      5122
+     ],
+     "requires": {
+      "flags": [
+       "k_channel"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "channel_1817"
+     ],
+     "fog": "open",
+     "actions": [
+      "activity:merchant",
+      "recruit:troop"
+     ],
+     "once": false,
+     "xy": [
+      781,
+      713
+     ]
+    },
+    {
+     "id": "calais",
+     "type": "camp",
+     "role": "muster",
+     "label": "加来（开拔）",
+     "geo": [
+      186,
+      5095
+     ],
+     "requires": {
+      "flags": [
+       "k_channel"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "channel_1817",
+      "kent_1817"
+     ],
+     "fog": "open",
+     "actions": [
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "activity:rest",
+      "muster"
+     ],
+     "fixed": true,
+     "once": false,
+     "phase": "accumulate",
+     "xy": [
+      339,
+      651
+     ]
+    },
+    {
+     "id": "alenquer",
+     "type": "event",
+     "role": "council",
+     "label": "阿伦克尔军议",
+     "geo": [
+      -901,
+      3905
+     ],
+     "event": "ev_council_torres",
+     "requires": {
+      "flags": [
+       "k_iberia"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "torres_1817"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "_volume2_phase": "campaign",
+     "xy": [
+      221,
+      1457
+     ]
+    },
+    {
+     "id": "sobral",
+     "type": "camp",
+     "label": "索布拉尔的雨夜",
+     "geo": [
+      -915,
+      3903
+     ],
+     "requires": {
+      "flags": [
+       "k_iberia"
+      ],
+      "volume": 2
+     },
+     "actions": [
+      "activity:rest",
+      "schedule:bond_story"
+     ],
+     "frame": [
+      "torres_1817"
+     ],
+     "fog": "open",
+     "once": false,
+     "_volume2_phase": "campaign",
+     "xy": [
+      67,
+      1320
+     ]
+    },
+    {
+     "id": "torres_vedras",
+     "type": "boss",
+     "label": "托雷斯韦德拉什防线",
+     "date": "1817-10-14",
+     "geo": [
+      -926,
+      3909
+     ],
+     "scene": "k_torres_vedras",
+     "requires": {
+      "flags": [
+       "k_iberia"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "torres_1817"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "_volume2_phase": "campaign",
+     "xy": [
+      67,
+      1475
+     ]
+    },
+    {
+     "id": "gris_nez",
+     "type": "event",
+     "role": "council",
+     "label": "灰鼻角军议",
+     "geo": [
+      158,
+      5087
+     ],
+     "event": "ev_council_channel",
+     "requires": {
+      "flags": [
+       "k_channel"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "kent_1817"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "_volume2_phase": "campaign",
+     "xy": [
+      590,
+      876
+     ]
+    },
+    {
+     "id": "hythe",
+     "type": "camp",
+     "label": "海斯海滩的夜",
+     "geo": [
+      108,
+      5107
+     ],
+     "requires": {
+      "flags": [
+       "k_channel"
+      ],
+      "volume": 2
+     },
+     "actions": [
+      "activity:rest",
+      "schedule:bond_story"
+     ],
+     "frame": [
+      "kent_1817"
+     ],
+     "fog": "open",
+     "once": false,
+     "_volume2_phase": "campaign",
+     "xy": [
+      330,
+      805
+     ]
+    },
+    {
+     "id": "dover",
+     "type": "boss",
+     "label": "多佛尔的白崖",
+     "date": "1817-08-19",
+     "geo": [
+      131,
+      5113
+     ],
+     "scene": "k_dover",
+     "requires": {
+      "flags": [
+       "k_channel"
+      ],
+      "volume": 2
+     },
+     "frame": [
+      "kent_1817"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "_volume2_phase": "campaign",
+     "xy": [
+      627,
+      725
+     ]
+    }
+   ],
+   "links": [
+    {
+     "a": "boulogne_1817",
+     "b": "bayonne_1817",
+     "legs": 4,
+     "requires": {
+      "flags": [
+       "k_iberia"
+      ]
+     },
+     "supply": 1
+    },
+    {
+     "a": "bayonne_1817",
+     "b": "vitoria_1817",
+     "legs": 2
+    },
+    {
+     "a": "vitoria_1817",
+     "b": "burgos_1817",
+     "legs": 2
+    },
+    {
+     "a": "burgos_1817",
+     "b": "valladolid",
+     "legs": 2
+    },
+    {
+     "a": "valladolid",
+     "b": "salamanca",
+     "legs": 2
+    },
+    {
+     "a": "salamanca",
+     "b": "ciudad_rodrigo",
+     "legs": 2
+    },
+    {
+     "a": "ciudad_rodrigo",
+     "b": "guarda",
+     "legs": 2
+    },
+    {
+     "a": "guarda",
+     "b": "coimbra",
+     "legs": 2,
+     "supply": 1
+    },
+    {
+     "a": "salamanca",
+     "b": "coimbra",
+     "legs": 4,
+     "supply": 2
+    },
+    {
+     "a": "coimbra",
+     "b": "santarem",
+     "legs": 2
+    },
+    {
+     "a": "boulogne_1817",
+     "b": "etaples",
+     "legs": 1,
+     "requires": {
+      "flags": [
+       "k_channel"
+      ]
+     }
+    },
+    {
+     "a": "etaples",
+     "b": "abbeville",
+     "legs": 2
+    },
+    {
+     "a": "boulogne_1817",
+     "b": "saint_omer",
+     "legs": 2,
+     "requires": {
+      "flags": [
+       "k_channel"
+      ]
+     }
+    },
+    {
+     "a": "abbeville",
+     "b": "saint_omer",
+     "legs": 3
+    },
+    {
+     "a": "saint_omer",
+     "b": "cassel",
+     "legs": 1
+    },
+    {
+     "a": "cassel",
+     "b": "lille",
+     "legs": 2
+    },
+    {
+     "a": "cassel",
+     "b": "dunkirk",
+     "legs": 2
+    },
+    {
+     "a": "lille",
+     "b": "bruges",
+     "legs": 2
+    },
+    {
+     "a": "dunkirk",
+     "b": "ostend",
+     "legs": 2
+    },
+    {
+     "a": "ostend",
+     "b": "bruges",
+     "legs": 1
+    },
+    {
+     "a": "bruges",
+     "b": "antwerp_1817",
+     "legs": 2
+    },
+    {
+     "a": "dunkirk",
+     "b": "calais",
+     "legs": 2
+    },
+    {
+     "a": "saint_omer",
+     "b": "calais",
+     "legs": 2
+    },
+    {
+     "a": "etaples",
+     "b": "calais",
+     "legs": 3,
+     "supply": 1
+    },
+    {
+     "a": "santarem",
+     "b": "alenquer",
+     "legs": 2
+    },
+    {
+     "a": "alenquer",
+     "b": "sobral",
+     "legs": 1
+    },
+    {
+     "a": "sobral",
+     "b": "torres_vedras",
+     "legs": 1
+    },
+    {
+     "a": "calais",
+     "b": "gris_nez",
+     "legs": 1
+    },
+    {
+     "a": "gris_nez",
+     "b": "hythe",
+     "voyage_days": 1
+    },
+    {
+     "a": "hythe",
+     "b": "dover",
+     "legs": 1
+    }
+   ],
+   "_draft_days_max": 11,
+   "templates_needed": [],
+   "_marker_layout": "Authored geo retained; transaction markers separated for readable selection."
+  },
+  {
+   "chapter": "niemen",
+   "view": "europe",
+   "start": "warsaw_1818",
+   "days_max": 18,
+   "stamps_need": 2,
+   "muster": "vilkaviskis",
+   "boss": "kovno_1818",
+   "interlude": "minigame:decode",
+   "frames": [
+    {
+     "id": "niemen_1818",
+     "when": {
+      "mustered": true
+     },
+     "zoom": 100,
+     "center": [
+      2350,
+      5475
+     ],
+     "_draft_bounds": {
+      "lon": [
+       2260,
+       2440
+      ],
+      "lat": [
+       5435,
+       5515
+      ]
+     }
+    },
+    {
+     "id": "poland_1818",
+     "when": {},
+     "zoom": 100,
+     "center": [
+      1950,
+      5355
+     ],
+     "_draft_bounds": {
+      "lon": [
+       1400,
+       2500
+      ],
+      "lat": [
+       5150,
+       5560
+      ]
+     }
+    }
+   ],
+   "sets": [
+    {
+     "id": "vistula",
+     "nodes": [
+      "posen_1818",
+      "grodno"
+     ],
+     "bonus": {
+      "pass_supply": 1
+     }
+    }
+   ],
+   "rivals": [
+    {
+     "id": "cossacks_1818",
+     "label": "普拉托夫的哥萨克",
+     "path": [
+      "bialystok",
+      "grodno",
+      "bialystok",
+      "ostrolenka"
+     ],
+     "speed": 1,
+     "start": 0,
+     "meet": {
+      "battle": {
+       "template": "skirmish_brabant_farm",
+       "level": 20
+      },
+      "toll": {
+       "supply": 2
+      }
+     },
+     "burns_depots": true
+    }
+   ],
+   "nodes": [
+    {
+     "id": "warsaw_1818",
+     "type": "story",
+     "label": "华沙·王宫",
+     "date": "1818-05-03",
+     "geo": [
+      2101,
+      5223
+     ],
+     "scene": "k_warsaw",
+     "frame": [
+      "poland_1818"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1262,
+      903
+     ]
+    },
+    {
+     "id": "posen_1818",
+     "type": "supply",
+     "role": "post",
+     "label": "波森驿站",
+     "geo": [
+      1693,
+      5241
+     ],
+     "frame": [
+      "poland_1818"
+     ],
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     },
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      862,
+      781
+     ]
+    },
+    {
+     "id": "plock",
+     "type": "slot",
+     "label": "普沃茨克",
+     "geo": [
+      1970,
+      5255
+     ],
+     "slot": {
+      "pool": "niemen",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 20
+     },
+     "frame": [
+      "poland_1818"
+     ],
+     "fog": "type",
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1275,
+      741
+     ]
+    },
+    {
+     "id": "thorn",
+     "type": "slot",
+     "label": "托伦",
+     "geo": [
+      1860,
+      5301
+     ],
+     "slot": {
+      "pool": "niemen",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "frame": [
+      "poland_1818"
+     ],
+     "fog": "type",
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1004,
+      719
+     ]
+    },
+    {
+     "id": "danzig",
+     "type": "shop",
+     "label": "但泽的粮商",
+     "geo": [
+      1865,
+      5435
+     ],
+     "frame": [
+      "poland_1818"
+     ],
+     "fog": "open",
+     "actions": [
+      "activity:merchant",
+      "recruit:troop"
+     ],
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      894,
+      550
+     ]
+    },
+    {
+     "id": "konigsberg",
+     "type": "slot",
+     "label": "柯尼斯堡",
+     "geo": [
+      2051,
+      5471
+     ],
+     "slot": {
+      "pool": "niemen",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 20
+     },
+     "frame": [
+      "poland_1818"
+     ],
+     "fog": "type",
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1042,
+      503
+     ]
+    },
+    {
+     "id": "tilsit_1818",
+     "type": "event",
+     "label": "提尔西特·河心的木筏",
+     "geo": [
+      2189,
+      5508
+     ],
+     "event": "ev_tilsit_raft",
+     "frame": [
+      "poland_1818"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1323,
+      412
+     ]
+    },
+    {
+     "id": "ostrolenka",
+     "type": "slot",
+     "label": "奥斯特罗文卡",
+     "geo": [
+      2157,
+      5308
+     ],
+     "slot": {
+      "pool": "niemen",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "frame": [
+      "poland_1818"
+     ],
+     "fog": "type",
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1141,
+      647
+     ]
+    },
+    {
+     "id": "bialystok",
+     "type": "slot",
+     "label": "比亚韦斯托克",
+     "geo": [
+      2316,
+      5313
+     ],
+     "slot": {
+      "pool": "niemen",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 20
+     },
+     "frame": [
+      "poland_1818"
+     ],
+     "fog": "type",
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1467,
+      523
+     ]
+    },
+    {
+     "id": "grodno",
+     "type": "supply",
+     "role": "post",
+     "label": "格罗德诺仓库",
+     "geo": [
+      2383,
+      5368
+     ],
+     "frame": [
+      "poland_1818"
+     ],
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     },
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      1133,
+      804
+     ]
+    },
+    {
+     "id": "vilkaviskis",
+     "type": "camp",
+     "role": "muster",
+     "label": "维尔卡维什基斯（开拔）",
+     "geo": [
+      2303,
+      5465
+     ],
+     "frame": [
+      "poland_1818",
+      "niemen_1818"
+     ],
+     "fog": "open",
+     "actions": [
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "activity:rest",
+      "muster"
+     ],
+     "fixed": true,
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "phase": "accumulate",
+     "xy": [
+      1142,
+      358
+     ]
+    },
+    {
+     "id": "mariampol",
+     "type": "event",
+     "role": "council",
+     "label": "马里扬波尔军议",
+     "geo": [
+      2335,
+      5456
+     ],
+     "event": "ev_council_niemen",
+     "frame": [
+      "niemen_1818"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "xy": [
+      1429,
+      703
+     ]
+    },
+    {
+     "id": "pilviskiai",
+     "type": "camp",
+     "label": "皮尔维什基艾的营火",
+     "geo": [
+      2321,
+      5471
+     ],
+     "actions": [
+      "activity:rest",
+      "schedule:bond_story"
+     ],
+     "frame": [
+      "niemen_1818"
+     ],
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "xy": [
+      1197,
+      502
+     ]
+    },
+    {
+     "id": "kovno_1818",
+     "type": "boss",
+     "label": "科夫诺·涅曼河",
+     "date": "1818-06-24",
+     "geo": [
+      2390,
+      5490
+     ],
+     "scene": "k_niemen",
+     "frame": [
+      "niemen_1818"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "xy": [
+      1326,
+      588
+     ]
+    }
+   ],
+   "links": [
+    {
+     "a": "warsaw_1818",
+     "b": "plock",
+     "legs": 2
+    },
+    {
+     "a": "plock",
+     "b": "posen_1818",
+     "legs": 3
+    },
+    {
+     "a": "warsaw_1818",
+     "b": "ostrolenka",
+     "legs": 2
+    },
+    {
+     "a": "plock",
+     "b": "thorn",
+     "legs": 2
+    },
+    {
+     "a": "posen_1818",
+     "b": "thorn",
+     "legs": 2
+    },
+    {
+     "a": "thorn",
+     "b": "danzig",
+     "legs": 3
+    },
+    {
+     "a": "danzig",
+     "b": "konigsberg",
+     "legs": 3,
+     "supply": 1
+    },
+    {
+     "a": "konigsberg",
+     "b": "tilsit_1818",
+     "legs": 2
+    },
+    {
+     "a": "tilsit_1818",
+     "b": "vilkaviskis",
+     "legs": 2
+    },
+    {
+     "a": "ostrolenka",
+     "b": "bialystok",
+     "legs": 2
+    },
+    {
+     "a": "bialystok",
+     "b": "grodno",
+     "legs": 1
+    },
+    {
+     "a": "grodno",
+     "b": "vilkaviskis",
+     "legs": 3,
+     "supply": 1
+    },
+    {
+     "a": "ostrolenka",
+     "b": "thorn",
+     "legs": 3
+    },
+    {
+     "a": "konigsberg",
+     "b": "grodno",
+     "legs": 4,
+     "supply": 1
+    },
+    {
+     "a": "vilkaviskis",
+     "b": "mariampol",
+     "legs": 1
+    },
+    {
+     "a": "mariampol",
+     "b": "pilviskiai",
+     "legs": 1
+    },
+    {
+     "a": "pilviskiai",
+     "b": "kovno_1818",
+     "legs": 2
+    }
+   ],
+   "_draft_days_max": 12,
+   "templates_needed": [],
+   "_marker_layout": "Authored geo retained; transaction markers separated for readable selection."
+  },
+  {
+   "chapter": "last_coalition",
+   "view": "europe",
+   "start": "paris_1819",
+   "days_max": 15,
+   "stamps_need": 2,
+   "muster": "naumburg_1819",
+   "boss": "leipzig_1819",
+   "interlude": "camp_night",
+   "frames": [
+    {
+     "id": "leipzig_1819",
+     "when": {
+      "mustered": true
+     },
+     "zoom": 100,
+     "center": [
+      1220,
+      5130
+     ],
+     "_draft_bounds": {
+      "lon": [
+       1170,
+       1270
+      ],
+      "lat": [
+       5110,
+       5150
+      ]
+     }
+    },
+    {
+     "id": "germany_1819",
+     "when": {},
+     "zoom": 100,
+     "center": [
+      760,
+      5025
+     ],
+     "_draft_bounds": {
+      "lon": [
+       200,
+       1320
+      ],
+      "lat": [
+       4850,
+       5200
+      ]
+     }
+    }
+   ],
+   "sets": [],
+   "rivals": [
+    {
+     "id": "british_hussars",
+     "label": "英军骠骑兵",
+     "path": [
+      "fulda",
+      "frankfurt",
+      "fulda",
+      "erfurt"
+     ],
+     "speed": 1,
+     "start": 0,
+     "meet": {
+      "battle": {
+       "template": "skirmish_brabant_farm",
+       "level": 22
+      },
+      "toll": {
+       "gold": 1
+      }
+     },
+     "burns_depots": true
+    }
+   ],
+   "nodes": [
+    {
+     "id": "paris_1819",
+     "type": "story",
+     "label": "巴黎·杜伊勒里宫",
+     "date": "1819-08-15",
+     "geo": [
+      235,
+      4886
+     ],
+     "scene": "k_paris_1819",
+     "frame": [
+      "germany_1819"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      385,
+      905
+     ]
+    },
+    {
+     "id": "reims_1819",
+     "type": "slot",
+     "label": "兰斯",
+     "geo": [
+      403,
+      4926
+     ],
+     "slot": {
+      "pool": "last_coalition",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "frame": [
+      "germany_1819"
+     ],
+     "fog": "type",
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      525,
+      687
+     ]
+    },
+    {
+     "id": "chalons_1819",
+     "type": "slot",
+     "label": "沙隆",
+     "geo": [
+      436,
+      4896
+     ],
+     "slot": {
+      "pool": "last_coalition",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 22
+     },
+     "frame": [
+      "germany_1819"
+     ],
+     "fog": "type",
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      488,
+      1021
+     ]
+    },
+    {
+     "id": "metz_1819",
+     "type": "supply",
+     "role": "post",
+     "label": "梅斯驿站",
+     "geo": [
+      618,
+      4912
+     ],
+     "frame": [
+      "germany_1819"
+     ],
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     },
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      705,
+      1093
+     ]
+    },
+    {
+     "id": "kaiserslautern",
+     "type": "slot",
+     "label": "凯泽斯劳滕",
+     "geo": [
+      777,
+      4944
+     ],
+     "slot": {
+      "pool": "last_coalition",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 22
+     },
+     "frame": [
+      "germany_1819"
+     ],
+     "fog": "type",
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      995,
+      939
+     ]
+    },
+    {
+     "id": "mainz_1819",
+     "type": "shop",
+     "label": "美因茨的军火库",
+     "geo": [
+      827,
+      5000
+     ],
+     "frame": [
+      "germany_1819"
+     ],
+     "fog": "open",
+     "actions": [
+      "activity:merchant",
+      "recruit:troop"
+     ],
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      527,
+      842
+     ]
+    },
+    {
+     "id": "frankfurt",
+     "type": "slot",
+     "label": "法兰克福",
+     "geo": [
+      868,
+      5011
+     ],
+     "slot": {
+      "pool": "last_coalition",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1,
+       "battle": 2
+      },
+      "level": 22
+     },
+     "frame": [
+      "germany_1819"
+     ],
+     "fog": "type",
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      833,
+      978
+     ]
+    },
+    {
+     "id": "fulda",
+     "type": "slot",
+     "label": "富尔达",
+     "geo": [
+      968,
+      5055
+     ],
+     "slot": {
+      "pool": "last_coalition",
+      "kinds": {
+       "event": 5,
+       "supply": 2,
+       "camp": 2,
+       "shop": 1
+      }
+     },
+     "frame": [
+      "germany_1819"
+     ],
+     "fog": "type",
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      664,
+      620
+     ]
+    },
+    {
+     "id": "erfurt",
+     "type": "supply",
+     "role": "post",
+     "label": "爱尔福特驿站",
+     "geo": [
+      1103,
+      5098
+     ],
+     "frame": [
+      "germany_1819"
+     ],
+     "fog": "open",
+     "actions": [
+      "visit:town",
+      "trade:fair",
+      "trade:counterfeit",
+      "build_depot"
+     ],
+     "once": false,
+     "pass": {
+      "stamp": 1,
+      "coins": {
+       "supply": 1
+      }
+     },
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      866,
+      563
+     ]
+    },
+    {
+     "id": "weimar",
+     "type": "event",
+     "label": "魏玛·歌德的花园小屋",
+     "geo": [
+      1133,
+      5098
+     ],
+     "event": "ev_goethe_tea",
+     "frame": [
+      "germany_1819"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "xy": [
+      630,
+      958
+     ]
+    },
+    {
+     "id": "naumburg_1819",
+     "type": "camp",
+     "role": "muster",
+     "label": "瑙姆堡（开拔）",
+     "geo": [
+      1181,
+      5115
+     ],
+     "frame": [
+      "germany_1819",
+      "leipzig_1819"
+     ],
+     "fog": "open",
+     "actions": [
+      "schedule:recruit",
+      "schedule:train",
+      "schedule:bond_story",
+      "activity:rest",
+      "muster"
+     ],
+     "fixed": true,
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "phase": "accumulate",
+     "xy": [
+      1042,
+      614
+     ]
+    },
+    {
+     "id": "lutzen_1819",
+     "type": "event",
+     "role": "council",
+     "label": "吕岑军议",
+     "geo": [
+      1214,
+      5126
+     ],
+     "event": "ev_council_final",
+     "frame": [
+      "leipzig_1819"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "xy": [
+      796,
+      702
+     ]
+    },
+    {
+     "id": "markkleeberg",
+     "type": "camp",
+     "label": "马克克莱贝格的最后一夜",
+     "geo": [
+      1237,
+      5128
+     ],
+     "actions": [
+      "activity:rest",
+      "schedule:bond_story"
+     ],
+     "frame": [
+      "leipzig_1819"
+     ],
+     "fog": "open",
+     "once": false,
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "xy": [
+      1032,
+      769
+     ]
+    },
+    {
+     "id": "leipzig_1819",
+     "type": "boss",
+     "label": "莱比锡·第二次民族之战",
+     "date": "1819-10-18",
+     "geo": [
+      1237,
+      5134
+     ],
+     "scene": "k_leipzig_1819",
+     "frame": [
+      "leipzig_1819"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "xy": [
+      734,
+      843
+     ]
+    },
+    {
+     "id": "probstheida",
+     "type": "story",
+     "label": "普罗布斯泰达·皇帝的帐篷",
+     "date": "1819-10-19",
+     "geo": [
+      1242,
+      5130
+     ],
+     "scene": "k_final",
+     "frame": [
+      "leipzig_1819"
+     ],
+     "fog": "open",
+     "fixed": true,
+     "requires": {
+      "volume": 2
+     },
+     "_volume2_phase": "campaign",
+     "xy": [
+      888,
+      827
+     ]
+    }
+   ],
+   "links": [
+    {
+     "a": "paris_1819",
+     "b": "reims_1819",
+     "legs": 3
+    },
+    {
+     "a": "paris_1819",
+     "b": "chalons_1819",
+     "legs": 4,
+     "supply": 1
+    },
+    {
+     "a": "reims_1819",
+     "b": "chalons_1819",
+     "legs": 1
+    },
+    {
+     "a": "reims_1819",
+     "b": "metz_1819",
+     "legs": 3
+    },
+    {
+     "a": "chalons_1819",
+     "b": "metz_1819",
+     "legs": 3
+    },
+    {
+     "a": "metz_1819",
+     "b": "kaiserslautern",
+     "legs": 2
+    },
+    {
+     "a": "kaiserslautern",
+     "b": "mainz_1819",
+     "legs": 2
+    },
+    {
+     "a": "metz_1819",
+     "b": "mainz_1819",
+     "legs": 4,
+     "supply": 1
+    },
+    {
+     "a": "mainz_1819",
+     "b": "frankfurt",
+     "legs": 1
+    },
+    {
+     "a": "frankfurt",
+     "b": "fulda",
+     "legs": 2
+    },
+    {
+     "a": "mainz_1819",
+     "b": "fulda",
+     "legs": 3,
+     "supply": 1
+    },
+    {
+     "a": "fulda",
+     "b": "erfurt",
+     "legs": 2
+    },
+    {
+     "a": "erfurt",
+     "b": "weimar",
+     "legs": 1
+    },
+    {
+     "a": "weimar",
+     "b": "naumburg_1819",
+     "legs": 1
+    },
+    {
+     "a": "erfurt",
+     "b": "naumburg_1819",
+     "legs": 2
+    },
+    {
+     "a": "naumburg_1819",
+     "b": "lutzen_1819",
+     "legs": 1
+    },
+    {
+     "a": "lutzen_1819",
+     "b": "markkleeberg",
+     "legs": 1
+    },
+    {
+     "a": "markkleeberg",
+     "b": "leipzig_1819",
+     "legs": 1
+    },
+    {
+     "a": "leipzig_1819",
+     "b": "probstheida",
+     "legs": 1
+    }
+   ],
+   "_draft_days_max": 12,
+   "templates_needed": [],
+   "_marker_layout": "Authored geo retained; transaction markers separated for readable selection."
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+  "kind": "decode",
+  "seed": 88,
+  "item": "",
+  "art": "illus.kp.brother_note",
+  "minutes_per_step": 2,
+  "max_minutes": 20,
+  "cipher": "ledger",
+  "message": "nw.ex.ledger",
+  "codes": ["5102", "5101"],
+  "book_words": ["cb.word.5102", "cb.word.5122", "cb.word.5101"]
+}

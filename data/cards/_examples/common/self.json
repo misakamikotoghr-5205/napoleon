@@ -1,0 +1,38 @@
+{
+  "_meta": {
+    "owner": "W0",
+    "schema": 1,
+    "brief": "例子集：你自己（§4.7.2）"
+  },
+  "persons": {
+    "ruhua": {
+      "portrait": "portrait.ruhua",
+      "dossier": false,
+      "brief": "主角；名字沿用 cast 的提议，由 A 定"
+    }
+  },
+  "cards": [
+    {
+      "id": "self.ruhua",
+      "type": "self",
+      "person": "ruhua",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "attrs": {
+        "eye": 2,
+        "tongue": 1,
+        "pull": 1,
+        "nerve": 1
+      },
+      "art": "portrait.ruhua",
+      "brief": "主角沈如花自己，可以放进格子；属性会随事件成长。起始属性待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-14"
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# K14 QA 自动化（docs/handoff_cards/K14_qa-automation.md）
+# W1：Mock 一关走查 + 指引开关 + 打烊乱按。W2 真引擎整局不在这里冒充通过（日循环仍是桩，见 docs/cards/qa/findings.md）。
+# W2 的 --engine=real 打烊行先不放进必跑清单：本环境没有显示服务器，日循环仍是桩，放进来会失败或只是空跑。
+K14_play_ui_mock|res://scripts/tests/cards/K14/play_ui.gd|600|--engine=mock --seed=7 --days=30 --name=K14_play_ui_mock
+K14_guide_onoff_mock|res://scripts/tests/cards/K14/test_guide_onoff_mock.gd|300|
+K14_guide_d1_3|res://scripts/tests/cards/K14/test_guide_d1_3.gd|180|
+K14_next_day_chaos|res://scripts/tests/cards/K14/play_ui.gd|600|--engine=mock --seed=7 --days=10 --chaos --name=K14_next_day_chaos

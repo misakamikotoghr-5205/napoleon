@@ -1,0 +1,94 @@
+{
+  "_meta": {
+    "owner": "K18",
+    "schema": 1,
+    "brief": "1938 第一关中段店里的猫，以及走丢后的找猫。都不进随机池。"
+  },
+  "cards": [
+    {
+      "id": "ev.1938.cat_arrive",
+      "type": "event",
+      "era": ["1938"],
+      "weight": 0,
+      "tags": ["shop", "cat", "omen_family"],
+      "must_resolve": true,
+      "schedule": {
+        "stage_day": 15,
+        "order": 40,
+        "once": true
+      },
+      "choices": [
+        {
+          "id": "keep",
+          "brief": "留下",
+          "effects": [
+            {"op": "flag", "key": "pet_home"},
+            {"op": "notice", "key": "k18.notice.kept"}
+          ]
+        },
+        {
+          "id": "shoo",
+          "brief": "赶走",
+          "effects": [
+            {"op": "flag", "key": "pet_refused"},
+            {"op": "notice", "key": "k18.notice.shoo"}
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {"op": "flag", "key": "pet_missed"},
+          {"op": "notice", "key": "k18.notice.missed"}
+        ],
+        "on_done": [
+          {"op": "add_card", "card": "ev.1938.find_cat", "to": "queue", "in_days": 1}
+        ]
+      },
+      "brief": "1938 第一关中段一只猫进店。留下就住下。赶走或不理会都没留成。走丢时引擎才跑 on_done，把找猫排进之后的日子。目标系统不读这张事件牌。不挡打烊。",
+      "_provenance": {"by": "ai", "task": "K18", "date": "2026-10-15"}
+    },
+    {
+      "id": "ev.1938.find_cat",
+      "type": "event",
+      "era": ["1938"],
+      "weight": 0,
+      "tags": ["shop", "cat", "omen_family"],
+      "must_resolve": true,
+      "choices": [
+        {
+          "id": "search",
+          "brief": "去找",
+          "effects": [
+            {
+              "op": "coin_check",
+              "coins": 2,
+              "need": 1,
+              "then": [
+                {"op": "flag", "key": "pet_home"},
+                {"op": "flag_clear", "key": "pet_lost"},
+                {"op": "notice", "key": "k18.notice.found"}
+              ],
+              "else": [
+                {"op": "notice", "key": "k18.notice.still_lost"}
+              ]
+            }
+          ]
+        },
+        {
+          "id": "leave_it",
+          "brief": "先不管",
+          "effects": [
+            {"op": "notice", "key": "k18.notice.left_out"}
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": [
+          {"op": "notice", "key": "k18.notice.ignored_find"}
+        ]
+      },
+      "brief": "猫走丢之后才排进来。去找要掷两枚铜钱、要一个正面。找到就回来。没找到、先不管或不理会，猫仍不在，过几夜再排一次。不会自己走回。",
+      "_provenance": {"by": "ai", "task": "K18", "date": "2026-10-15"}
+    }
+  ]
+}

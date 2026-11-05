@@ -1,0 +1,68 @@
+{
+  "_meta": {
+    "owner": "C07",
+    "schema": 1,
+    "brief": "Fortune stall and almanac strip labels. Briefs name the control; the words players read are written by a person.",
+    "_provenance": {
+      "by": "ai",
+      "task": "C07",
+      "date": "2026-10-13"
+    }
+  },
+  "keys": {
+    "c07.btn.lot": {
+      "brief": "Button that asks the stall for a lot"
+    },
+    "c07.btn.cezi": {
+      "brief": "Button that starts a character reading"
+    },
+    "c07.btn.pass": {
+      "brief": "Button that leaves the stall"
+    },
+    "c07.btn.ok": {
+      "brief": "Button that closes the reading"
+    },
+    "c07.cost": {
+      "brief": "Label for the stall fee; the amount is {n}"
+    },
+    "c07.grade.0": {
+      "brief": "Word for the lowest lot grade"
+    },
+    "c07.grade.1": {
+      "brief": "Word for a low lot grade"
+    },
+    "c07.grade.2": {
+      "brief": "Word for a middle lot grade"
+    },
+    "c07.grade.3": {
+      "brief": "Word for a high lot grade"
+    },
+    "c07.grade.4": {
+      "brief": "Word for the highest lot grade"
+    },
+    "c07.cezi.pick": {
+      "brief": "Prompt to choose one character"
+    },
+    "c07.strip.yi": {
+      "brief": "suitable"
+    },
+    "c07.strip.ji": {
+      "brief": "avoid"
+    },
+    "c07.err.money": {
+      "brief": "Shown when the fee cannot be paid"
+    },
+    "c07.drawer.title": {
+      "brief": "Almanac drawer: heading above today's suitable and avoid actions"
+    },
+    "c07.drawer.fortune": {
+      "brief": "Almanac drawer: heading above this month's fortune segment name"
+    },
+    "c07.drawer.lots": {
+      "brief": "Almanac drawer: heading above the verses of lots already drawn"
+    },
+    "c07.drawer.none": {
+      "brief": "Almanac drawer: shown under a heading that has nothing yet"
+    }
+  }
+}

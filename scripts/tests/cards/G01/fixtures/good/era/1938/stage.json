@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1
+  },
+  "era": "1938",
+  "bg": "bg.stage.1938",
+  "intro_paras": 3,
+  "main_goal": "gl.1938.keep_shop",
+  "brief": "开场过场：小镇沦陷不久，伪维持会管事，出入查良民证；哥哥要走。三段：时局、铺子、家里。",
+  "_provenance": {
+    "by": "ai",
+    "task": "K02",
+    "date": "2026-10-14"
+  }
+}

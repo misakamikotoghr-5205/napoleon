@@ -1,0 +1,64 @@
+{
+  "_meta": {
+    "owner": "C16",
+    "schema": 1,
+    "brief": "卡牌版曲目：中世纪/古典史诗分场景配乐（序幕 title / 叙事剧情 story / 军营筹备 camp / 战前排兵 battle_prep / 交响激战 battle / 凯旋结算 victory）。",
+    "_provenance": {
+      "by": "ai",
+      "task": "C16",
+      "date": "2026-11-05"
+    }
+  },
+  "cues": {
+    "title": {
+      "human": "audio/cards/music/title.ogg",
+      "ai": "audio/ai/music/title.ogg",
+      "legacy": "audio/cards/music/title.ogg"
+    },
+    "day": {
+      "human": "audio/cards/music/day.ogg",
+      "ai": "audio/ai/music/day.ogg",
+      "legacy": "audio/cards/music/camp.ogg"
+    },
+    "night": {
+      "human": "audio/cards/music/night.ogg",
+      "ai": "audio/ai/music/night.ogg",
+      "legacy": "audio/cards/music/story.ogg"
+    },
+    "month_close": {
+      "human": "audio/cards/music/month_close.ogg",
+      "ai": "audio/ai/music/month_close.ogg",
+      "legacy": "audio/cards/music/victory.ogg"
+    },
+    "year_jump": {
+      "human": "audio/cards/music/year_jump.ogg",
+      "ai": "audio/ai/music/year_jump.ogg",
+      "legacy": "audio/cards/music/title.ogg"
+    },
+    "story": {
+      "human": "audio/cards/music/story.ogg",
+      "ai": "audio/ai/music/story.ogg",
+      "legacy": "audio/cards/music/story.ogg"
+    },
+    "camp": {
+      "human": "audio/cards/music/camp.ogg",
+      "ai": "audio/ai/music/camp.ogg",
+      "legacy": "audio/cards/music/camp.ogg"
+    },
+    "battle_prep": {
+      "human": "audio/cards/music/battle_prep.ogg",
+      "ai": "audio/ai/music/battle_prep.ogg",
+      "legacy": "audio/cards/music/battle_prep.ogg"
+    },
+    "battle": {
+      "human": "audio/cards/music/battle.ogg",
+      "ai": "audio/ai/music/battle.ogg",
+      "legacy": "audio/cards/music/battle.ogg"
+    },
+    "victory": {
+      "human": "audio/cards/music/victory.ogg",
+      "ai": "audio/ai/music/victory.ogg",
+      "legacy": "audio/cards/music/victory.ogg"
+    }
+  }
+}

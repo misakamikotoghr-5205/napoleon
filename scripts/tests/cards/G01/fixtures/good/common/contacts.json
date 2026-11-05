@@ -1,0 +1,85 @@
+{
+  "_meta": {
+    "owner": "K09",
+    "schema": 1,
+    "brief": "例子集：人脉（§4.7.10）"
+  },
+  "cards": [
+    {
+      "id": "ct.ma",
+      "type": "contact",
+      "person": "ma",
+      "era": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 0,
+      "attrs": {
+        "eye": 1,
+        "tongue": 2,
+        "pull": 3,
+        "nerve": 1
+      },
+      "tags": [
+        "official"
+      ],
+      "passives": [
+        {
+          "hook": "demand_issue",
+          "effects": [
+            {
+              "op": "demand_tier",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "downsides": [
+        {
+          "hook": "day_start",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 2
+            }
+          ]
+        }
+      ],
+      "leave_when": [
+        {
+          "cond": {
+            "flag": "ma_offended"
+          },
+          "effects": [
+            {
+              "op": "notice",
+              "key": "ct.ma#lines.leave"
+            }
+          ]
+        }
+      ],
+      "year_changes": [
+        {
+          "to_era": "1940",
+          "num": 1,
+          "den": 2,
+          "effects": [
+            {
+              "op": "person_state",
+              "person": "ma",
+              "state": "changed"
+            }
+          ]
+        }
+      ],
+      "art": "portrait.ma",
+      "brief": "马万利（伪维持会任命的保长）：条子降一档，但风声每天涨。1940 年新官上任后可能换了身份。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-14"
+      }
+    }
+  ]
+}

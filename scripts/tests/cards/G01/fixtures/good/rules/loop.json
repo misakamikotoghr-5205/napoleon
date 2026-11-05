@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "owner": "G02",
+    "schema": 1
+  },
+  "_doc": [
+    "ASCII fixture. Clock is display-only. dusk_pct is the V25 required share of dealt cards that must leave the hand before stage time becomes dusk."
+  ],
+  "open_minute": 480,
+  "close_minute": 1080,
+  "dusk_pct": 60,
+  "life_per_week": {
+    "min": 1,
+    "max": 2
+  }
+}

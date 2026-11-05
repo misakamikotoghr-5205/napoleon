@@ -1,0 +1,350 @@
+{
+  "_meta": {
+    "owner": "K02",
+    "schema": 1,
+    "brief": "大轮盘那一张，加上只由扇区发到手上的通用大赌"
+  },
+  "cards": [
+    {
+      "id": "bf.wheel",
+      "type": "big_fate",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "tags": [
+        "big"
+      ],
+      "opens_wheel": "wh.big",
+      "art": "illus.bf.wheel",
+      "brief": "快输的时候出现。处理它就是转一次大轮盘，转之前可以往香案上放东西。扇区是翻身、平安、坠底。这张只负责打开大轮盘，不进随机牌库。别的大赌由扇区发到手上，不由这张牌直接发出。没理会由引擎作废，这张不写到期后果。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "bf.any.mystery_box",
+      "type": "big_fate",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "tags": [
+        "contraband",
+        "stranger"
+      ],
+      "crisis": [
+        "cash_short"
+      ],
+      "valence": "mixed",
+      "choices": [
+        {
+          "id": "take",
+          "brief": "收下",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 300,
+              "reason": "k02.reason.bigfate"
+            },
+            {
+              "op": "add_card",
+              "card": "kp.mystery_box",
+              "to": "kept"
+            }
+          ]
+        },
+        {
+          "id": "decline",
+          "brief": "不收",
+          "effects": []
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.bf.any.mystery_box",
+      "brief": "陌生人出大价钱，请你保管一箱东西七天。收下：钱进账，箱子成为留着的牌，被查到会出事。不收：这张牌就这么过了。适合手头紧的时候。不进随机牌库，只由大轮盘的扇区发到手上。没理会当不收。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "bf.any.sun_guarantee",
+      "type": "big_fate",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "tags": [
+        "favor"
+      ],
+      "crisis": [
+        "cash_short",
+        "street_long"
+      ],
+      "valence": "mixed",
+      "choices": [
+        {
+          "id": "stand",
+          "brief": "作保",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 80,
+              "reason": "k02.reason.bigfate"
+            },
+            {
+              "op": "flag",
+              "key": "sun_guarantee"
+            },
+            {
+              "op": "heat",
+              "delta": 6
+            },
+            {
+              "op": "rep",
+              "delta": 2
+            }
+          ],
+          "almanac": [
+            "lend"
+          ]
+        },
+        {
+          "id": "decline",
+          "brief": "不作",
+          "effects": []
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.bf.any.sun_guarantee",
+      "brief": "孙老爷肯先支一笔钱，条件是你出面作保。作保：钱进账，风声会跟着动，铺子和孙家绑在一起。不作：钱没有。适合手头紧或已经在街头的时候。不进随机牌库，只由大轮盘的扇区发到手上。没理会当不作。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "bf.any.house_offer",
+      "type": "big_fate",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "tags": [
+        "home"
+      ],
+      "crisis": [
+        "cash_short"
+      ],
+      "valence": "mixed",
+      "conditions": {
+        "estate_status": [
+          "es.old_house",
+          "held"
+        ]
+      },
+      "choices": [
+        {
+          "id": "sell",
+          "brief": "卖掉",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 480,
+              "reason": "k02.reason.bigfate"
+            },
+            {
+              "op": "flag",
+              "key": "sold_old_house"
+            },
+            {
+              "op": "estate_seize",
+              "pick": "es.old_house"
+            }
+          ]
+        },
+        {
+          "id": "keep",
+          "brief": "不卖",
+          "effects": []
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.bf.any.house_offer",
+      "brief": "有人出高价买老宅。卖掉：进一大笔钱，老宅从家当里去掉。不卖：宅子还在。只在老宅还在自己名下时才发得出。适合手头紧。不进随机牌库，只由大轮盘的扇区发到手上。没理会当不卖。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "bf.any.ship_ticket",
+      "type": "big_fate",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "tags": [
+        "big",
+        "water"
+      ],
+      "crisis": [
+        "cash_short",
+        "heat_max"
+      ],
+      "valence": "good",
+      "choices": [
+        {
+          "id": "go",
+          "brief": "去躲一阵",
+          "effects": [
+            {
+              "op": "flag",
+              "key": "ship_ticket_used"
+            },
+            {
+              "op": "heat",
+              "delta": -20
+            }
+          ],
+          "almanac": [
+            "travel"
+          ]
+        },
+        {
+          "id": "sell",
+          "brief": "卖掉",
+          "effects": [
+            {
+              "op": "money",
+              "delta": 120,
+              "reason": "k02.reason.bigfate"
+            }
+          ]
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.bf.any.ship_ticket",
+      "brief": "一张去上海的船票。可以去躲一阵，风声会落下来；也可以把船票卖掉换钱。适合手头紧或风声到顶。不进随机牌库，只由大轮盘的扇区发到手上。没理会既不去也不卖，没有别的后果。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "bf.any.quiet_fee",
+      "type": "big_fate",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "tags": [
+        "official"
+      ],
+      "crisis": [
+        "heat_max",
+        "arrested"
+      ],
+      "valence": "mixed",
+      "choices": [
+        {
+          "id": "pay",
+          "brief": "付钱",
+          "effects": [
+            {
+              "op": "pay",
+              "amount": 60,
+              "payee": "quiet_desk",
+              "reason": "k02.reason.quiet",
+              "short": "ladder"
+            },
+            {
+              "op": "heat",
+              "tier": -1
+            },
+            {
+              "op": "flag",
+              "key": "quiet_paid"
+            }
+          ]
+        },
+        {
+          "id": "decline",
+          "brief": "不付",
+          "effects": []
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.bf.any.quiet_fee",
+      "brief": "有人收一笔钱，把风声压下一档。付不起就走钱不够的阶梯。不付就放过。适合风声到顶或已经被抓的时候。不进随机牌库，只由大轮盘的扇区发到手上。没理会当不付。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "bf.any.street_bed",
+      "type": "big_fate",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "tags": [
+        "home"
+      ],
+      "crisis": [
+        "street_long"
+      ],
+      "valence": "good",
+      "choices": [
+        {
+          "id": "accept",
+          "brief": "住下",
+          "effects": [
+            {
+              "op": "flag",
+              "key": "street_bed"
+            },
+            {
+              "op": "rep",
+              "delta": 2
+            }
+          ]
+        },
+        {
+          "id": "decline",
+          "brief": "不去",
+          "effects": []
+        }
+      ],
+      "effects": {
+        "on_expire": []
+      },
+      "art": "illus.bf.any.street_bed",
+      "brief": "流落街头过了几天，有人肯留你住几晚。住下记一笔，口碑略好。不去就还在街上。适合街头拖久了的时候。不进随机牌库，只由大轮盘的扇区发到手上。没理会当不去。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K02",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

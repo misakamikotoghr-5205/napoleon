@@ -1,0 +1,718 @@
+{
+  "_meta": {
+    "owner": "K09",
+    "schema": 1,
+    "brief": "跨年代人脉：属性、被动、坏处、离开、跨年"
+  },
+  "cards": [
+    {
+      "id": "ct.zhouma",
+      "type": "contact",
+      "person": "zhouma",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "attrs": {
+        "eye": 2,
+        "tongue": 3,
+        "pull": 2,
+        "nerve": 1
+      },
+      "tags": [
+        "info",
+        "rumor"
+      ],
+      "passives": [
+        {
+          "hook": "day_start",
+          "effects": [
+            {
+              "op": "extra_deal",
+              "type": "news",
+              "n": 1,
+              "day": "tomorrow"
+            }
+          ]
+        }
+      ],
+      "downsides": [],
+      "mods": [],
+      "leave_when": [
+        {
+          "cond": {
+            "flag": "zhouma_offended"
+          },
+          "effects": [
+            {
+              "op": "notice",
+              "key": "k09.notice.zhouma_leave"
+            }
+          ]
+        }
+      ],
+      "year_changes": [],
+      "art": "portrait.zhouma",
+      "brief": "周妈，桥头茶馆的厨娘，镇上的消息中心。第 7 天教学让她成人脉。被动：每天开始，让明天多发一张消息牌，看得见。不另加坏处数值。离开看旗标 zhouma_offended。主创原话是每天多一张消息。四项属性待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ct.chen",
+      "type": "contact",
+      "person": "chen",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "attrs": {
+        "eye": 3,
+        "tongue": 2,
+        "pull": 2,
+        "nerve": 1
+      },
+      "tags": [
+        "medicine"
+      ],
+      "passives": [],
+      "downsides": [],
+      "mods": [
+        {
+          "mod": "appraise_pct",
+          "cats": [
+            "art",
+            "medicine"
+          ],
+          "pct": 120
+        }
+      ],
+      "leave_when": [
+        {
+          "cond": {
+            "flag": "chen_leaves"
+          },
+          "effects": [
+            {
+              "op": "notice",
+              "key": "k09.notice.chen_leave"
+            }
+          ]
+        }
+      ],
+      "year_changes": [
+        {
+          "to_era": "1940",
+          "num": 1,
+          "den": 4,
+          "effects": [
+            {
+              "op": "person_state",
+              "person": "chen",
+              "state": "changed"
+            }
+          ]
+        }
+      ],
+      "art": "portrait.chen",
+      "brief": "陈文庭，济生堂，父母的旧交。常驻修正 appraise_pct：书画（art）和药材（medicine）看得更清楚，pct 120（人脉 mods 的 pct 是乘数，100 不变，见合同 §7.3）。1940 年跳年有几率身份变动，见 year_changes。离开看旗标 chen_leaves。属性待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ct.ma",
+      "type": "contact",
+      "person": "ma",
+      "era": [
+        "1938",
+        "1939",
+        "1940"
+      ],
+      "weight": 0,
+      "attrs": {
+        "eye": 1,
+        "tongue": 2,
+        "pull": 3,
+        "nerve": 1
+      },
+      "tags": [
+        "official"
+      ],
+      "passives": [
+        {
+          "hook": "demand_issue",
+          "effects": [
+            {
+              "op": "demand_tier",
+              "delta": -1
+            }
+          ]
+        }
+      ],
+      "downsides": [
+        {
+          "hook": "day_start",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 2
+            }
+          ]
+        }
+      ],
+      "mods": [],
+      "leave_when": [
+        {
+          "cond": {
+            "flag": "ma_offended"
+          },
+          "effects": [
+            {
+              "op": "notice",
+              "key": "k09.notice.ma_leave"
+            }
+          ]
+        }
+      ],
+      "year_changes": [
+        {
+          "to_era": "1940",
+          "num": 1,
+          "den": 2,
+          "effects": [
+            {
+              "op": "person_state",
+              "person": "ma",
+              "state": "changed"
+            }
+          ]
+        }
+      ],
+      "art": "portrait.ma",
+      "brief": "马万利，伪维持会任命的保长。条子降一档，但风声每天往上走。1940 年汪伪国民政府成立、新官上任后，有可能换成另一个身份。离开看旗标 ma_offended。属性与涨幅待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ct.xiaoding",
+      "type": "contact",
+      "person": "xiaoding",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "attrs": {
+        "eye": 2,
+        "tongue": 1,
+        "pull": 1,
+        "nerve": 1
+      },
+      "tags": [
+        "home"
+      ],
+      "passives": [
+        {
+          "hook": "day_start",
+          "effects": [
+            {
+              "op": "peek",
+              "pool": "event",
+              "n": 1
+            }
+          ]
+        }
+      ],
+      "downsides": [],
+      "mods": [],
+      "leave_when": [
+        {
+          "cond": {
+            "flag": "xiaoding_caught"
+          },
+          "effects": [
+            {
+              "op": "notice",
+              "key": "k09.notice.xiaoding_leave"
+            }
+          ]
+        }
+      ],
+      "year_changes": [],
+      "art": "portrait.xiaoding",
+      "brief": "小丁，孙家的伙夫。被动：每天开始可以看明天一张事件牌。格子里胆量低。离开看旗标 xiaoding_caught，库房的米被揭开时用。属性待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ct.wangshan",
+      "type": "contact",
+      "person": "wangshan",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "attrs": {
+        "eye": 2,
+        "tongue": 1,
+        "pull": 2,
+        "nerve": 3
+      },
+      "tags": [
+        "street"
+      ],
+      "passives": [],
+      "downsides": [],
+      "mods": [
+        {
+          "mod": "pool_weight",
+          "pool": "event",
+          "tags_any": [
+            "search",
+            "police"
+          ],
+          "pct": 140
+        }
+      ],
+      "leave_when": [
+        {
+          "cond": {
+            "flag": "wangshan_exposed"
+          },
+          "effects": [
+            {
+              "op": "notice",
+              "key": "k09.notice.wangshan_leave"
+            }
+          ]
+        }
+      ],
+      "year_changes": [
+        {
+          "to_era": "1939",
+          "num": 1,
+          "den": 3,
+          "effects": [
+            {
+              "op": "person_state",
+              "person": "wangshan",
+              "state": "away",
+              "days": 20
+            }
+          ]
+        }
+      ],
+      "art": "portrait.wangshan",
+      "brief": "王山，过路的青年，胆量高。坏处：人脉在的时候，查铺和警察一类事件变多（pool_weight）。不写他属于哪一边。待 G03/G06 确认人脉上的 pool_weight 由谁读。1939 年跳年有几率暂时离开。离开看旗标 wangshan_exposed。属性待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ct.li",
+      "type": "contact",
+      "person": "li",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "attrs": {
+        "eye": 2,
+        "tongue": 2,
+        "pull": 1,
+        "nerve": 2
+      },
+      "tags": [
+        "info"
+      ],
+      "passives": [
+        {
+          "hook": "demand_issue",
+          "effects": [
+            {
+              "op": "extra_deal",
+              "type": "news",
+              "n": 1,
+              "day": "today"
+            }
+          ]
+        }
+      ],
+      "downsides": [
+        {
+          "hook": "day_start",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 1
+            }
+          ]
+        }
+      ],
+      "mods": [],
+      "leave_when": [
+        {
+          "cond": {
+            "flag": "li_exposed"
+          },
+          "effects": [
+            {
+              "op": "notice",
+              "key": "k09.notice.li_leave"
+            }
+          ]
+        }
+      ],
+      "year_changes": [],
+      "art": "portrait.li",
+      "brief": "李敬之，县立中学的学生。每周条子发下来时多一张消息。每天风声往上走一点。不写稿子内容。离开看旗标 li_exposed。属性待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ct.linsao",
+      "type": "contact",
+      "person": "linsao",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "attrs": {
+        "eye": 1,
+        "tongue": 2,
+        "pull": 1,
+        "nerve": 2
+      },
+      "tags": [
+        "family",
+        "home"
+      ],
+      "passives": [
+        {
+          "hook": "settle",
+          "effects": [
+            {
+              "op": "rep",
+              "delta": 1
+            }
+          ]
+        }
+      ],
+      "downsides": [],
+      "mods": [
+        {
+          "mod": "pool_weight",
+          "pool": "life",
+          "tags_any": [
+            "home"
+          ],
+          "pct": 130
+        }
+      ],
+      "leave_when": [
+        {
+          "cond": {
+            "flag": "linsao_left"
+          },
+          "effects": [
+            {
+              "op": "notice",
+              "key": "k09.notice.linsao_leave"
+            }
+          ]
+        }
+      ],
+      "year_changes": [],
+      "art": "portrait.linsao",
+      "brief": "林嫂，船工的妻子。被动：每天结算时口碑往上走一点。坏处：家里的生活牌变多（pool_weight）。离开看旗标 linsao_left。属性待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ct.zhang",
+      "type": "contact",
+      "person": "zhang",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "attrs": {
+        "eye": 3,
+        "tongue": 1,
+        "pull": 1,
+        "nerve": 2
+      },
+      "tags": [
+        "medicine"
+      ],
+      "passives": [
+        {
+          "hook": "day_start",
+          "effects": [
+            {
+              "op": "if",
+              "cond": {
+                "person_state": [
+                  "ruhua",
+                  "hurt"
+                ]
+              },
+              "then": [
+                {
+                  "op": "person_state",
+                  "person": "ruhua",
+                  "state": "ok"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "downsides": [
+        {
+          "hook": "demand_issue",
+          "effects": [
+            {
+              "op": "heat",
+              "delta": 1
+            }
+          ]
+        }
+      ],
+      "mods": [],
+      "leave_when": [
+        {
+          "cond": {
+            "flag": "zhang_left"
+          },
+          "effects": [
+            {
+              "op": "notice",
+              "key": "k09.notice.zhang_leave"
+            }
+          ]
+        }
+      ],
+      "year_changes": [
+        {
+          "to_era": "1940",
+          "num": 1,
+          "den": 3,
+          "effects": [
+            {
+              "op": "person_state",
+              "person": "zhang",
+              "state": "away",
+              "days": 30
+            }
+          ]
+        }
+      ],
+      "art": "portrait.zhang",
+      "brief": "张慧娟，县城教会医院的护士。你处于受伤状态时，每天开始可以把状态拉回能出门。条子发下来时风声往上走一点，因为医院被征用。1940 年跳年有几率离开一阵。离开看旗标 zhang_left。属性待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ct.wu",
+      "type": "contact",
+      "person": "wu",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "attrs": {
+        "eye": 3,
+        "tongue": 2,
+        "pull": 2,
+        "nerve": 1
+      },
+      "tags": [
+        "rice",
+        "trade"
+      ],
+      "passives": [
+        {
+          "hook": "deal",
+          "effects": [
+            {
+              "op": "price_mod",
+              "scope": "cat",
+              "cat": "rice",
+              "pct": 5,
+              "days": 1
+            }
+          ]
+        }
+      ],
+      "downsides": [],
+      "mods": [],
+      "leave_when": [
+        {
+          "cond": {
+            "flag": "wu_offended"
+          },
+          "effects": [
+            {
+              "op": "notice",
+              "key": "k09.notice.wu_leave"
+            }
+          ]
+        }
+      ],
+      "year_changes": [],
+      "art": "portrait.wu",
+      "brief": "吴长发，裕丰米行掌柜。有成交时，米这一类的价格改一档，维持一天。price_mod 的 pct 是增量，只改你卖货收钱这一头：+5 = 米的卖价涨 5%（合同 §5.2）。离开看旗标 wu_offended。属性待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ct.guanjia",
+      "type": "contact",
+      "person": "guanjia",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "attrs": {
+        "eye": 2,
+        "tongue": 2,
+        "pull": 3,
+        "nerve": 1
+      },
+      "tags": [
+        "official"
+      ],
+      "passives": [
+        {
+          "hook": "day_start",
+          "effects": [
+            {
+              "op": "peek",
+              "pool": "person",
+              "n": 1
+            }
+          ]
+        }
+      ],
+      "downsides": [],
+      "mods": [
+        {
+          "mod": "pool_weight",
+          "pool": "event",
+          "tags_any": [
+            "official"
+          ],
+          "pct": 120
+        }
+      ],
+      "leave_when": [
+        {
+          "cond": {
+            "flag": "guanjia_left"
+          },
+          "effects": [
+            {
+              "op": "notice",
+              "key": "k09.notice.guanjia_leave"
+            }
+          ]
+        }
+      ],
+      "year_changes": [],
+      "art": "portrait.guanjia",
+      "brief": "孙福，孙府管家。被动：每天开始可以看明天一位客人。坏处：官面事件变多（pool_weight）。离开看旗标 guanjia_left。属性待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "ct.postman",
+      "type": "contact",
+      "person": "postman",
+      "era": [
+        "*"
+      ],
+      "weight": 0,
+      "attrs": {
+        "eye": 2,
+        "tongue": 1,
+        "pull": 2,
+        "nerve": 1
+      },
+      "tags": [
+        "letter"
+      ],
+      "passives": [
+        {
+          "hook": "day_start",
+          "effects": [
+            {
+              "op": "if",
+              "cond": {
+                "flag": "telegraph_ok"
+              },
+              "then": [
+                {
+                  "op": "extra_deal",
+                  "type": "news",
+                  "n": 1,
+                  "day": "tomorrow"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "downsides": [],
+      "mods": [],
+      "leave_when": [
+        {
+          "cond": {
+            "flag": "postman_left"
+          },
+          "effects": [
+            {
+              "op": "notice",
+              "key": "k09.notice.postman_leave"
+            }
+          ]
+        }
+      ],
+      "year_changes": [],
+      "art": "portrait.postman",
+      "brief": "何启明，青溪镇邮电代办。旗标 telegraph_ok 置上之后，每天开始让明天多一张消息。发电报夜牌也看这个旗标，本文件不负责置旗标。离开看旗标 postman_left。属性待调。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K09",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

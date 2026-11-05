@@ -1,0 +1,79 @@
+{
+  "_meta": {
+    "owner": "G03",
+    "schema": 1,
+    "_provenance": {
+      "by": "ai",
+      "task": "G03",
+      "date": "2026-10-13"
+    }
+  },
+  "keys": {
+    "g03.tier.rep.0": {
+      "brief": "rep tier 0 display text; human author supplies wording."
+    },
+    "g03.tier.rep.1": {
+      "brief": "rep tier 1 display text; human author supplies wording."
+    },
+    "g03.tier.rep.2": {
+      "brief": "rep tier 2 display text; human author supplies wording."
+    },
+    "g03.tier.rep.3": {
+      "brief": "rep tier 3 display text; human author supplies wording."
+    },
+    "g03.tier.rep.4": {
+      "brief": "rep tier 4 display text; human author supplies wording."
+    },
+    "g03.tier.heat.0": {
+      "brief": "heat tier 0 display text; human author supplies wording."
+    },
+    "g03.tier.heat.1": {
+      "brief": "heat tier 1 display text; human author supplies wording."
+    },
+    "g03.tier.heat.2": {
+      "brief": "heat tier 2 display text; human author supplies wording."
+    },
+    "g03.tier.heat.3": {
+      "brief": "heat tier 3 display text; human author supplies wording."
+    },
+    "g03.tier.heat.4": {
+      "brief": "heat tier 4 display text; human author supplies wording."
+    },
+    "g03.reason.money": {
+      "brief": "Reason key for money; human author supplies wording."
+    },
+    "g03.reason.fine": {
+      "brief": "Reason key for fine; human author supplies wording."
+    },
+    "g03.reason.slot_money": {
+      "brief": "Reason key for slot_money; human author supplies wording."
+    },
+    "g03.reason.person_busy": {
+      "brief": "Reason key for person_busy; human author supplies wording."
+    },
+    "g03.reason.condition": {
+      "brief": "Reason key for condition; human author supplies wording."
+    },
+    "g03.reason.demand": {
+      "brief": "Reason key for demand; human author supplies wording."
+    },
+    "g03.arrest.heat": {
+      "brief": "Rule outcome explanation; human author supplies wording."
+    },
+    "g03.arrest.demand": {
+      "brief": "Rule outcome explanation; human author supplies wording."
+    },
+    "g03.demand.done": {
+      "brief": "Rule outcome explanation; human author supplies wording."
+    },
+    "g03.demand.failed": {
+      "brief": "Rule outcome explanation; human author supplies wording."
+    },
+    "g03.end.release": {
+      "brief": "Declining the new contact when the full contact panel was left undecided."
+    },
+    "g03.end.demand": {
+      "brief": "Demand continues counting down; days is the remaining time after tonight, with zero meaning due tonight."
+    }
+  }
+}

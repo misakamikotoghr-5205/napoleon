@@ -1,0 +1,116 @@
+{
+  "_meta": {
+    "owner": "C09",
+    "schema": 1,
+    "brief": "月底：主线达成，一条可选没达成，评语一行。钱数只在行参数里。"
+  },
+  "guide_progress": {},
+  "queries": {
+    "firsts|{}": {
+      "firsts": {}
+    },
+    "month_report|{}": {
+      "lines": [
+        {
+          "key": "g02.month.interest",
+          "args": {
+            "money": 12
+          }
+        },
+        {
+          "key": "g02.month.expenses",
+          "args": {
+            "money": 30
+          }
+        },
+        {
+          "key": "g02.month.tickets",
+          "args": {
+            "n": 2
+          }
+        },
+        {
+          "key": "g02.month.verdict.1",
+          "args": {}
+        }
+      ]
+    },
+    "year_report|{}": {
+      "lines": []
+    }
+  },
+  "responses": [
+    {
+      "cmd": "month.next",
+      "result": {
+        "ok": true,
+        "err": ""
+      }
+    },
+    {
+      "cmd": "*",
+      "result": {
+        "ok": true,
+        "err": ""
+      }
+    }
+  ],
+  "view": {
+    "v": 1,
+    "phase": "month_close",
+    "mode": "shop",
+    "busy": false,
+    "date": {
+      "stage": 0,
+      "era": "1938",
+      "y": 1938,
+      "m": 3,
+      "d": 30,
+      "weekday": 2,
+      "stage_day": 30,
+      "stage_days": 30,
+      "abs_day": 30,
+      "minute": 480
+    },
+    "notice": {
+      "weather": "clear",
+      "market_day": false,
+      "news": [],
+      "almanac": {
+        "id": "alm.shoudang",
+        "yi": [],
+        "ji": [],
+        "done": []
+      },
+      "fortune": ""
+    },
+    "money": {
+      "amount": 280,
+      "currency": "fabi"
+    },
+    "rep_tier": 1,
+    "heat_tier": 0,
+    "hand": [],
+    "kept": [],
+    "contacts": [],
+    "pending": [],
+    "demands": [],
+    "tickets": [],
+    "goals": [
+      {
+        "id": "gl.1938.keep_shop",
+        "main": true,
+        "status": "done"
+      },
+      {
+        "id": "gl.fx.one",
+        "main": false,
+        "status": "failed"
+      }
+    ],
+    "open_panel": {
+      "kind": "",
+      "args": {}
+    }
+  }
+}

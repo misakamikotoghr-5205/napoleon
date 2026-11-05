@@ -1,0 +1,4082 @@
+{
+  "_doc": "剧情 VN 的演出表（scripts/cards/ui/vn/）。chars：远洋战役 24 个人物 id -> 正文里出现的叫法 aliases（认“叫法：“……””这种开头的台词）、立绘 id art（data/hd/art_list.json 的 chara；没有立绘条目的写 placeholder_only）。scenes：每场的背景 bg（at 是从第几段正文起换；\"choices\" 是读完正文、出抉择时换；variant 是背景变体或占位气氛）、开场站在台上的人 cast（at 是 left / center / right）、从第几段起上场 enter / 下场 exit、表情 expr（段号 -> {人物: normal smile angry sad surprise}）。段号从 0 数，对应剧情牌正文 body 的段落。没写到的人第一次开口时自己上场。由 Claude 撰写，主创可改。",
+  "protagonist": "villefort",
+  "say_verbs": [
+    "答道",
+    "说道",
+    "低声道",
+    "转述",
+    "说",
+    "道"
+  ],
+  "max_on_stage": 3,
+  "chars": {
+    "villefort": {
+      "aliases": [
+        "埃德蒙·德·维尔福",
+        "维尔福"
+      ],
+      "art": "villefort"
+    },
+    "napoleon": {
+      "aliases": [
+        "拿破仑·波拿巴",
+        "拿破仑"
+      ],
+      "art": "napoleon"
+    },
+    "montholon": {
+      "aliases": [
+        "蒙托隆将军",
+        "蒙托隆"
+      ],
+      "art": "montholon"
+    },
+    "howard": {
+      "aliases": [
+        "霍华德中尉",
+        "霍华德"
+      ],
+      "art": "howard"
+    },
+    "pierre": {
+      "aliases": [
+        "小皮埃尔",
+        "皮埃尔",
+        "鼓手"
+      ],
+      "art": "pierre"
+    },
+    "marie": {
+      "aliases": [
+        "玛丽·朗热夫人",
+        "朗热夫人",
+        "玛丽"
+      ],
+      "art": "marie"
+    },
+    "hudson_lowe": {
+      "aliases": [
+        "哈德森·洛总督",
+        "哈德森·洛",
+        "洛总督"
+      ],
+      "art": "hudson_lowe"
+    },
+    "one_eyed_jack": {
+      "aliases": [
+        "独眼杰克",
+        "杰克"
+      ],
+      "art": "one_eyed_jack"
+    },
+    "crawford": {
+      "aliases": [
+        "克劳福德上尉",
+        "克劳福德"
+      ],
+      "art": "crawford"
+    },
+    "omeara": {
+      "aliases": [
+        "奥米拉医生",
+        "奥米拉"
+      ],
+      "art": "omeara"
+    },
+    "david_moses": {
+      "aliases": [
+        "大卫·摩西",
+        "摩西"
+      ],
+      "art": "david_moses"
+    },
+    "morrel": {
+      "aliases": [
+        "莫雷尔船长",
+        "莫雷尔",
+        "莫雷尔先生"
+      ],
+      "art": "morel"
+    },
+    "faria": {
+      "aliases": [
+        "法利亚神甫",
+        "法利亚",
+        "神甫"
+      ],
+      "art": "faria"
+    },
+    "dantes": {
+      "aliases": [
+        "埃德蒙·唐泰斯",
+        "基督山伯爵",
+        "唐泰斯",
+        "伯爵"
+      ],
+      "art": "dantes"
+    },
+    "baptiste": {
+      "aliases": [
+        "巴蒂斯特中士",
+        "巴蒂斯特"
+      ],
+      "art": "baptiste"
+    },
+    "corso": {
+      "aliases": [
+        "科尔索"
+      ],
+      "art": "corso"
+    },
+    "friday": {
+      "aliases": [
+        "星期五"
+      ],
+      "art": "friday"
+    },
+    "roberts": {
+      "aliases": [
+        "罗伯茨舰长",
+        "红胡子摩根",
+        "罗伯茨"
+      ],
+      "art": "roberts"
+    },
+    "nemo": {
+      "aliases": [
+        "尼摩船长",
+        "达卡王子",
+        "尼摩"
+      ],
+      "art": "nemo"
+    },
+    "divemaster": {
+      "aliases": [
+        "潜水长"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "oconnell": {
+      "aliases": [
+        "奥康奈尔"
+      ],
+      "art": "oconnell"
+    },
+    "smith": {
+      "aliases": [
+        "史密斯"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "palmerston": {
+      "aliases": [
+        "帕默斯顿勋爵",
+        "帕默斯顿"
+      ],
+      "art": "palmerston"
+    },
+    "rothschild": {
+      "aliases": [
+        "内森·罗斯柴尔德",
+        "罗斯柴尔德"
+      ],
+      "art": "rothschild"
+    },
+    "gerard": {
+      "aliases": [
+        "杰拉尔·德·维尔福",
+        "杰拉尔"
+      ],
+      "art": "palmerston",
+      "placeholder_only": true
+    },
+    "noirtier": {
+      "aliases": [
+        "努瓦蒂埃"
+      ],
+      "art": "rothschild",
+      "placeholder_only": true
+    },
+    "mercedes": {
+      "aliases": [
+        "梅尔塞苔丝"
+      ],
+      "art": "marie",
+      "placeholder_only": true
+    },
+    "fernand": {
+      "aliases": [
+        "费尔南",
+        "莫尔塞夫伯爵",
+        "费尔南·蒙台哥"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "danglars": {
+      "aliases": [
+        "唐格拉尔"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "caderousse": {
+      "aliases": [
+        "卡德鲁斯"
+      ],
+      "art": "morel",
+      "placeholder_only": true
+    },
+    "louis_dantes": {
+      "aliases": [
+        "老唐泰斯"
+      ],
+      "art": "morel",
+      "placeholder_only": true
+    },
+    "governor": {
+      "aliases": [
+        "典狱长",
+        "伊夫堡典狱长"
+      ],
+      "art": "hudson_lowe",
+      "placeholder_only": true
+    },
+    "commissaire": {
+      "aliases": [
+        "警长"
+      ],
+      "art": "crawford",
+      "placeholder_only": true
+    },
+    "renee": {
+      "aliases": [
+        "勒内",
+        "勒内·德·圣梅朗"
+      ],
+      "art": "marie",
+      "placeholder_only": true
+    },
+    "jacopo": {
+      "aliases": [
+        "雅科波"
+      ],
+      "art": "nemo",
+      "placeholder_only": true
+    },
+    "bertuccio": {
+      "aliases": [
+        "贝尔图乔"
+      ],
+      "art": "baptiste",
+      "placeholder_only": true
+    },
+    "ali_pasha": {
+      "aliases": [
+        "阿里总督",
+        "阿里·特佩莱纳",
+        "阿里·特佩莱纳总督"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "haydee": {
+      "aliases": [
+        "海黛"
+      ],
+      "art": "marie",
+      "placeholder_only": true
+    },
+    "ali": {
+      "aliases": [
+        "阿里"
+      ],
+      "art": "gourgaud",
+      "placeholder_only": true
+    },
+    "vampa": {
+      "aliases": [
+        "万帕",
+        "路易吉·万帕"
+      ],
+      "art": "corso",
+      "placeholder_only": true
+    },
+    "albert": {
+      "aliases": [
+        "阿尔贝",
+        "阿尔贝·德·莫尔塞夫"
+      ],
+      "art": "morel",
+      "placeholder_only": true
+    },
+    "maximilien": {
+      "aliases": [
+        "马克西米利安",
+        "马克西米利安·莫雷尔"
+      ],
+      "art": "dantes",
+      "placeholder_only": true
+    },
+    "valentine": {
+      "aliases": [
+        "瓦朗蒂娜",
+        "瓦朗蒂娜·德·维尔福"
+      ],
+      "art": "marie",
+      "placeholder_only": true
+    },
+    "heloise": {
+      "aliases": [
+        "埃洛伊丝",
+        "埃洛伊丝·德·维尔福"
+      ],
+      "art": "marie",
+      "placeholder_only": true
+    },
+    "benedetto": {
+      "aliases": [
+        "贝内代托",
+        "安德烈亚",
+        "安德烈亚·卡瓦尔康蒂"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "peppino": {
+      "aliases": [
+        "佩皮诺"
+      ],
+      "art": "morel",
+      "placeholder_only": true
+    },
+    "renaud": {
+      "aliases": [
+        "庭长"
+      ],
+      "art": "morel",
+      "placeholder_only": true
+    },
+    "carnot": {
+      "aliases": [
+        "卡尔诺"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "berthier": {
+      "aliases": [
+        "贝尔蒂埃"
+      ],
+      "art": "gourgaud",
+      "placeholder_only": true
+    },
+    "muleteer": {
+      "aliases": [
+        "骡夫头子"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "artillery_captain": {
+      "aliases": [
+        "炮兵上尉",
+        "炮兵"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "tutor": {
+      "aliases": [
+        "家庭教师"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "fulton_pupil": {
+      "aliases": [
+        "工程师"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "postmaster": {
+      "aliases": [
+        "驿站长"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "innkeeper": {
+      "aliases": [
+        "老板"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "bonaparte": {
+      "aliases": [
+        "波拿巴",
+        "波拿巴上尉",
+        "波拿巴将军"
+      ],
+      "art": "napoleon",
+      "placeholder_only": true
+    },
+    "muiron": {
+      "aliases": [
+        "米隆"
+      ],
+      "art": "morel",
+      "placeholder_only": true
+    },
+    "lannes": {
+      "aliases": [
+        "拉纳"
+      ],
+      "art": "gourgaud",
+      "placeholder_only": true
+    },
+    "murat": {
+      "aliases": [
+        "缪拉"
+      ],
+      "art": "dantes",
+      "placeholder_only": true
+    },
+    "desaix": {
+      "aliases": [
+        "德塞"
+      ],
+      "art": "morel",
+      "placeholder_only": true
+    },
+    "larrey": {
+      "aliases": [
+        "拉雷"
+      ],
+      "art": "omeara",
+      "placeholder_only": true
+    },
+    "rustam": {
+      "aliases": [
+        "鲁斯塔姆"
+      ],
+      "art": "dantes",
+      "placeholder_only": true
+    },
+    "eble": {
+      "aliases": [
+        "埃布莱"
+      ],
+      "art": "baptiste",
+      "placeholder_only": true
+    },
+    "gourgaud": {
+      "aliases": [
+        "古尔戈将军",
+        "古尔戈"
+      ],
+      "art": "gourgaud"
+    },
+    "dugommier": {
+      "aliases": [
+        "杜戈米埃将军",
+        "杜戈米埃"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "saliceti": {
+      "aliases": [
+        "萨利切蒂特派员",
+        "萨利切蒂"
+      ],
+      "art": "rothschild",
+      "placeholder_only": true
+    },
+    "eble_aide": {
+      "aliases": [
+        "舟桥兵"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "drouot": {
+      "aliases": [
+        "德鲁奥将军",
+        "德鲁奥"
+      ],
+      "art": "nemo",
+      "placeholder_only": true
+    },
+    "campbell": {
+      "aliases": [
+        "坎贝尔上校",
+        "坎贝尔"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "cambronne": {
+      "aliases": [
+        "康布罗纳将军",
+        "康布罗纳"
+      ],
+      "art": "gourgaud",
+      "placeholder_only": true
+    },
+    "ney": {
+      "aliases": [
+        "内伊元帅",
+        "内伊"
+      ],
+      "art": "dantes",
+      "placeholder_only": true
+    },
+    "davout": {
+      "aliases": [
+        "达武元帅",
+        "达武"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "fouche": {
+      "aliases": [
+        "富歇"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "grouchy": {
+      "aliases": [
+        "格鲁希元帅",
+        "格鲁希"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "talleyrand": {
+      "aliases": [
+        "塔列朗亲王",
+        "塔列朗"
+      ],
+      "art": "palmerston",
+      "placeholder_only": true
+    },
+    "max_joseph": {
+      "aliases": [
+        "马克西米利安国王",
+        "巴伐利亚国王"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "king_of_rome": {
+      "aliases": [
+        "罗马王"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "goethe": {
+      "aliases": [
+        "歌德"
+      ],
+      "art": "montholon",
+      "placeholder_only": true
+    },
+    "besson": {
+      "aliases": [
+        "贝松船长",
+        "贝松"
+      ],
+      "art": "morel",
+      "placeholder_only": true
+    },
+    "laffitte": {
+      "aliases": [
+        "雅克·拉菲特",
+        "拉菲特"
+      ],
+      "art": "david_moses",
+      "placeholder_only": true
+    },
+    "betsy": {
+      "aliases": [
+        "贝琪·巴尔康姆",
+        "贝琪"
+      ],
+      "art": "pierre",
+      "placeholder_only": true
+    },
+    "purser": {
+      "aliases": [
+        "事务长"
+      ],
+      "art": "howard",
+      "placeholder_only": true
+    },
+    "coffin": {
+      "aliases": [
+        "柯芬船长",
+        "柯芬"
+      ],
+      "art": "morel",
+      "placeholder_only": true
+    },
+    "pearl_diver": {
+      "aliases": [
+        "采珠人"
+      ],
+      "art": "friday",
+      "placeholder_only": true
+    },
+    "signalman": {
+      "aliases": [
+        "信号兵"
+      ],
+      "art": "howard",
+      "placeholder_only": true
+    },
+    "mayor": {
+      "aliases": [
+        "镇长"
+      ],
+      "art": "palmerston",
+      "placeholder_only": true
+    }
+  },
+  "scenes": {
+    "prologue": {
+      "bg": [
+        {
+          "id": "bellerophon_hold",
+          "at": 0
+        }
+      ],
+      "cast": [],
+      "enter": {
+        "1": [
+          {
+            "who": "montholon",
+            "at": "right"
+          }
+        ]
+      },
+      "expr": {
+        "1": {
+          "montholon": "sad"
+        },
+        "3": {
+          "montholon": "normal"
+        }
+      }
+    },
+    "scene01": {
+      "bg": [
+        {
+          "id": "jamestown_shop",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "marie",
+          "at": "center"
+        }
+      ],
+      "enter": {
+        "3": [
+          {
+            "who": "pierre",
+            "at": "right"
+          }
+        ]
+      },
+      "expr": {
+        "1": {
+          "marie": "sad"
+        },
+        "3": {
+          "marie": "normal"
+        }
+      }
+    },
+    "scene02": {
+      "bg": [
+        {
+          "id": "jamestown_shop",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "one_eyed_jack",
+          "at": "right"
+        }
+      ],
+      "expr": {
+        "0": {
+          "one_eyed_jack": "smile"
+        },
+        "1": {
+          "one_eyed_jack": "normal"
+        }
+      }
+    },
+    "scene03": {
+      "bg": [
+        {
+          "id": "royal_oak_tavern",
+          "at": 0
+        },
+        {
+          "id": "shop_back_room",
+          "at": "choices"
+        }
+      ],
+      "cast": [
+        {
+          "who": "omeara",
+          "at": "center"
+        }
+      ],
+      "enter": {
+        "2": [
+          {
+            "who": "david_moses",
+            "at": "left"
+          },
+          {
+            "who": "morrel",
+            "at": "right"
+          }
+        ]
+      },
+      "exit": {
+        "2": [
+          "omeara"
+        ]
+      },
+      "expr": {
+        "1": {
+          "omeara": "sad"
+        },
+        "2": {
+          "morrel": "smile"
+        }
+      }
+    },
+    "scene04": {
+      "bg": [
+        {
+          "id": "shop_back_room",
+          "at": 0
+        },
+        {
+          "id": "sea_cave",
+          "at": 3
+        }
+      ],
+      "cast": [
+        {
+          "who": "dantes",
+          "at": "right"
+        }
+      ],
+      "expr": {
+        "3": {
+          "dantes": "smile"
+        }
+      }
+    },
+    "scene05": {
+      "bg": [
+        {
+          "id": "longwood_house",
+          "at": 0
+        },
+        {
+          "id": "sea_cave",
+          "at": 1
+        }
+      ],
+      "cast": [
+        {
+          "who": "montholon",
+          "at": "left"
+        },
+        {
+          "who": "marie",
+          "at": "right"
+        }
+      ],
+      "exit": {
+        "2": [
+          "montholon",
+          "marie"
+        ]
+      },
+      "enter": {
+        "2": [
+          {
+            "who": "napoleon",
+            "at": "center"
+          }
+        ]
+      },
+      "expr": {
+        "0": {
+          "marie": "sad"
+        },
+        "2": {
+          "napoleon": "surprise"
+        },
+        "3": {
+          "napoleon": "normal"
+        }
+      }
+    },
+    "scene06": {
+      "bg": [
+        {
+          "id": "new_elba_shoal",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "corso",
+          "at": "right"
+        }
+      ],
+      "enter": {
+        "3": [
+          {
+            "who": "napoleon",
+            "at": "center"
+          }
+        ]
+      },
+      "expr": {
+        "0": {
+          "corso": "angry"
+        },
+        "2": {
+          "corso": "surprise"
+        },
+        "3": {
+          "napoleon": "smile",
+          "corso": "normal"
+        }
+      }
+    },
+    "scene07": {
+      "bg": [
+        {
+          "id": "granite_palace_exchange",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "friday",
+          "at": "center"
+        }
+      ],
+      "expr": {
+        "0": {
+          "friday": "sad"
+        },
+        "2": {
+          "friday": "normal"
+        }
+      }
+    },
+    "scene08": {
+      "bg": [
+        {
+          "id": "granite_palace_workshop",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "friday",
+          "at": "center"
+        },
+        {
+          "who": "baptiste",
+          "at": "right"
+        }
+      ]
+    },
+    "scene09": {
+      "bg": [
+        {
+          "id": "skull_reef",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        },
+        {
+          "who": "roberts",
+          "at": "right"
+        }
+      ],
+      "expr": {
+        "0": {
+          "roberts": "smile"
+        },
+        "2": {
+          "roberts": "angry"
+        }
+      }
+    },
+    "scene10": {
+      "bg": [
+        {
+          "id": "new_elba_shoal",
+          "variant": "night",
+          "at": 0
+        },
+        {
+          "id": "nautilus_cabin",
+          "at": 1
+        }
+      ],
+      "cast": [
+        {
+          "who": "dantes",
+          "at": "left"
+        },
+        {
+          "who": "nemo",
+          "at": "right"
+        }
+      ],
+      "enter": {
+        "1": [
+          {
+            "who": "napoleon",
+            "at": "center"
+          }
+        ]
+      }
+    },
+    "scene11": {
+      "bg": [
+        {
+          "id": "vigo_seabed",
+          "at": 0
+        },
+        {
+          "id": "nautilus_cabin",
+          "at": 1
+        }
+      ],
+      "cast": [
+        {
+          "who": "divemaster",
+          "at": "left"
+        },
+        {
+          "who": "oconnell",
+          "at": "right"
+        }
+      ],
+      "enter": {
+        "1": [
+          {
+            "who": "smith",
+            "at": "center"
+          }
+        ]
+      },
+      "expr": {
+        "1": {
+          "oconnell": "surprise"
+        },
+        "2": {
+          "oconnell": "angry"
+        }
+      }
+    },
+    "scene12": {
+      "bg": [
+        {
+          "id": "atlantis_ruins",
+          "at": 0
+        },
+        {
+          "id": "nautilus_cabin",
+          "at": 1
+        }
+      ],
+      "cast": [
+        {
+          "who": "nemo",
+          "at": "center"
+        }
+      ],
+      "expr": {
+        "0": {
+          "nemo": "smile"
+        }
+      }
+    },
+    "finale": {
+      "bg": [
+        {
+          "id": "thames_estuary",
+          "at": 0
+        },
+        {
+          "id": "nautilus_cabin",
+          "at": 1
+        }
+      ],
+      "cast": [],
+      "enter": {
+        "1": [
+          {
+            "who": "napoleon",
+            "at": "center"
+          },
+          {
+            "who": "nemo",
+            "at": "right"
+          }
+        ]
+      },
+      "expr": {
+        "2": {
+          "napoleon": "smile"
+        }
+      }
+    },
+    "toulon_arrival": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "bonaparte",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "ollioules_depot"
+    },
+    "toulon_mulgrave": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "bonaparte",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "mulgrave_redoubt_night"
+    },
+    "italy_nice": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "bonaparte",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "nice_hq_1796"
+    },
+    "italy_milan": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "saliceti",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "milan_serbelloni"
+    },
+    "italy_rivoli": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "bonaparte",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "rivoli_moonlight"
+    },
+    "italy_campo_formio": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "bonaparte",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "passariano_villa"
+    },
+    "orient_orders": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "bonaparte",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "toulon_harbour_1798"
+    },
+    "orient_acre": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "larrey",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "acre_trenches"
+    },
+    "alps_marengo": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "desaix",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "marengo_plain"
+    },
+    "boulogne_orders": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "boulogne_camp"
+    },
+    "austerlitz_sun": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "pratzen_fog"
+    },
+    "eylau_snow": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "eylau_churchyard"
+    },
+    "bayonne_orders": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "bayonne_marracq"
+    },
+    "saragossa_siege": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "lannes",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "saragossa_ruins"
+    },
+    "wagram_lobau": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "lobau_bridges"
+    },
+    "russia_niemen": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "niemen_pontoons"
+    },
+    "russia_borodino": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "raevsky_redoubt"
+    },
+    "russia_berezina": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "eble",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "berezina_bridges"
+    },
+    "collapse_lutzen": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "lutzen_conscripts"
+    },
+    "collapse_leipzig": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "leipzig_elster"
+    },
+    "collapse_fontainebleau": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "fontainebleau_cour"
+    },
+    "elba_arrival": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "drouot",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "portoferraio_quay"
+    },
+    "elba_night": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "drouot",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "portoferraio_warehouse"
+    },
+    "elba_1815": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "mulini_billiard"
+    },
+    "ev_faria_half_letter": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "faria",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_storks_scale": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_morrel_grain": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_deserters": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "baptiste",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_faro_table": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "murat",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_barbets_convoy": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "corso",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_pavia_revolt": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "saliceti",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_muiron_letter": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "muiron",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_mysore_envoy": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_marie_cantine": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "marie",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_pharaon_elba": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "dantes",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_capoliveri": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "drouot",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_walewska": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_council_toulon": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "bonaparte",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_council_italy": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "bonaparte",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_council_acre": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "bonaparte",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_council_marengo": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "bonaparte",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_council_austerlitz": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_council_eylau": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_council_saragossa": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "lannes",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_council_wagram": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_council_retreat": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_council_leipzig": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_council_elba": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "drouot",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_malta_silver": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "bonaparte",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_st_bernard": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "baptiste",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_ulm_prisoners": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_frederick_sword": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_dos_de_mayo": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_ratisbon_wound": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_smolensk_granary": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_six_days": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_scholars_crates": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_alps_mules": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_bread_ovens": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_poisoned_well": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "marie",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_danube_pontoons": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "baptiste",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_horse_meat": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_conscript_letter": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "pierre",
+          "at": "center"
+        }
+      ]
+    },
+    "k_golfe_juan": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "golfe_juan_beach"
+    },
+    "k_laffrey": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "laffrey_meadow"
+    },
+    "k_tuileries": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "tuileries_bees"
+    },
+    "k_charleroi": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "charleroi_bridge_dawn"
+    },
+    "k_waterloo": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "plancenoit_churchyard"
+    },
+    "k_waterloo_night": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "waterloo_inn"
+    },
+    "k_brussels": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "brussels_warehouse"
+    },
+    "k_ultimatum": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "talleyrand",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "metz_hall"
+    },
+    "k_rhine": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "lauter_lines"
+    },
+    "k_bavaria": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "max_joseph",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "nymphenburg"
+    },
+    "k_vienna": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "vienna_breach"
+    },
+    "k_schoenbrunn": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "king_of_rome",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "schoenbrunn_nursery"
+    },
+    "k_choice_1817": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "boulogne_camp"
+    },
+    "k_torres_vedras": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "gourgaud",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "torres_vedras_lines"
+    },
+    "k_dover": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "dover_cliffs"
+    },
+    "k_warsaw": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "warsaw_castle"
+    },
+    "k_niemen": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "niemen_pontoons"
+    },
+    "k_paris_1819": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "tuileries_fireworks"
+    },
+    "k_leipzig_1819": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "leipzig_villages"
+    },
+    "k_final": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "emperor_tent_night"
+    },
+    "ev_council_fleurus": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_council_rhine": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_council_vienna": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_council_torres": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "gourgaud",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_council_channel": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_council_niemen": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_council_final": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_ney_auxerre": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "ney",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_morrel_petition": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_marie_louise_letter": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_melk_library": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_arapiles_bones": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "gourgaud",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_fulton_nautilus": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_tilsit_raft": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_goethe_tea": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "goethe",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_federes": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_vendee_rising": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "fouche",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_post_horses": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_alsace_harvest": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "marie",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_tyrol_innkeeper": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_smugglers_deal": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "corso",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_carters_debt": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_guard_pensions": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "cambronne",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_lodi_veteran": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_courier_lost": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "gourgaud",
+          "at": "center"
+        }
+      ]
+    },
+    "c_landfall": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "morrel",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "marseille_quay_1815",
+      "art": {
+        "dantes": "dantes",
+        "morrel": "morel",
+        "villefort": "villefort"
+      },
+      "_requested_art": {
+        "dantes": "dantes_1815",
+        "morrel": "morel_1815",
+        "villefort": "villefort_1815"
+      }
+    },
+    "c_reserve": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "dantes",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "la_reserve_arbour",
+      "art": {
+        "dantes": "dantes",
+        "villefort": "villefort"
+      },
+      "_requested_art": {
+        "dantes": "dantes_1815",
+        "villefort": "villefort_1815"
+      }
+    },
+    "c_gerard": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "gerard",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "gerard_study",
+      "art": {
+        "villefort": "villefort"
+      },
+      "_requested_art": {
+        "villefort": "villefort_1815"
+      }
+    },
+    "c_petition": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "morrel",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "morrel_counting_room",
+      "art": {
+        "morrel": "morel",
+        "villefort": "villefort"
+      },
+      "_requested_art": {
+        "morrel": "morel_1815",
+        "villefort": "villefort_1815"
+      }
+    },
+    "c_white_june": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "morrel",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "old_port_white_june",
+      "art": {
+        "morrel": "morel",
+        "villefort": "villefort"
+      },
+      "_requested_art": {
+        "morrel": "morel_1815",
+        "villefort": "villefort_1815"
+      }
+    },
+    "c_if_contract": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "governor",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "if_governor_office"
+    },
+    "c_bread_34": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "dantes",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "if_dungeon_kitchen",
+      "art": {
+        "dantes": "dantes"
+      },
+      "_requested_art": {
+        "dantes": "dantes_prisoner"
+      }
+    },
+    "c_faria_27": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "faria",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "if_cell_27",
+      "art": {
+        "faria": "faria"
+      },
+      "_requested_art": {
+        "faria": "faria_prisoner"
+      }
+    },
+    "c_morgiou": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "jacopo",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "morgiou_cove_night"
+    },
+    "c_faria_dies": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0,
+          "variant": "night"
+        }
+      ],
+      "cast": [
+        {
+          "who": "dantes",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "if_cell_27",
+      "art": {
+        "dantes": "dantes",
+        "faria": "faria"
+      },
+      "_requested_art": {
+        "dantes": "dantes_prisoner",
+        "faria": "faria_prisoner"
+      }
+    },
+    "c_if_night": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "dantes",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "if_sea_gate_night",
+      "art": {
+        "dantes": "dantes"
+      },
+      "_requested_art": {
+        "dantes": "dantes_prisoner"
+      }
+    },
+    "c_tiboulen": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "jacopo",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "tiboulen_dawn",
+      "art": {
+        "dantes": "dantes"
+      },
+      "_requested_art": {
+        "dantes": "dantes_prisoner"
+      }
+    },
+    "c_livorno": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "dantes",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "livorno_barber"
+    },
+    "c_montecristo": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "dantes",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "montecristo_treasure"
+    },
+    "c_caderousse": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "caderousse",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "pont_du_gard_inn"
+    },
+    "c_morrel_rescue": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "morrel",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "morrel_house_1829"
+    },
+    "c_carnival": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "albert",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "rome_carnival"
+    },
+    "c_san_sebastiano": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "vampa",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "san_sebastiano_catacomb"
+    },
+    "c_champs_elysees": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "dantes",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "champs_elysees_salon"
+    },
+    "c_auteuil": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "bertuccio",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "auteuil_garden_night"
+    },
+    "c_peers": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "haydee",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "chamber_of_peers"
+    },
+    "c_danglars": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "danglars",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "danglars_bank"
+    },
+    "c_trial": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "gerard",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "palais_justice_assize"
+    },
+    "ev_c1_council": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "morrel",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "saint_laurent_sacristy"
+    },
+    "ev_c2_council": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "jacopo",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "cassis_backroom"
+    },
+    "ev_janina_1822": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "ali_pasha",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "janina_lake_island"
+    },
+    "ev_mercedes_window": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "mercedes",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "catalans_village"
+    },
+    "ev_old_dantes": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "louis_dantes",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "meilhan_attic"
+    },
+    "ev_danglars_cargo": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "danglars",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_caderousse_wine": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "caderousse",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_renee_plea": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "renee",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_inspector": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "governor",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_bertuccio_name": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "bertuccio",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "cassis_backroom"
+    },
+    "ev_old_dantes_end": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "caderousse",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "meilhan_attic"
+    },
+    "ev_accoules": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "mercedes",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "accoules_church"
+    },
+    "ev_customs_cutter": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "jacopo",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_widow_pension": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_tail": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_genoa_banker": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_haydee_constantinople": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "haydee",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "constantinople_market"
+    },
+    "ev_telegraph": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "dantes",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "telegraph_tower"
+    },
+    "ev_noirtier_eyes": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "noirtier",
+          "at": "center"
+        }
+      ],
+      "_requested_bg": "noirtier_room"
+    },
+    "ev_c3_council": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "jacopo",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_c4_council": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "vampa",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_c5_council": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "dantes",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_i_marseille": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "morrel",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_i_if_years": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "faria",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_i_montecristo": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "dantes",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_i_mediterranean": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "dantes",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_i_paris": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "danglars",
+          "at": "center"
+        }
+      ]
+    },
+    "ia_carnot": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ia_berthier": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ia_inconstant": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ia_boulogne_1817": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ib_fireside": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ib_baptiste_marie": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "marie",
+          "at": "center"
+        }
+      ]
+    },
+    "ib_lannes_murat": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "lannes",
+          "at": "center"
+        }
+      ]
+    },
+    "ic_rain_bivouac": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ic_snow_bivouac": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ic_harbour_night": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "im_cipher_dispatch": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "gourgaud",
+          "at": "center"
+        }
+      ]
+    },
+    "im_tsar_letter": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "iw_elba_iron": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "drouot",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_deserter_pardon": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_counterfeit_assignats": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "corso",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_o_int_hundred_days": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_o_malmaison": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_o_council_basque": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_o_council_billiard": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "montholon",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_o_council_reef": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "baptiste",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_o_council_bermuda": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "nemo",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_o_st_helena_view": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "napoleon",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_o_pearl_bank": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "nemo",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_o_int_northumberland": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_o_int_lightning": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "dantes",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_o_int_organ": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "nemo",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_o_besson_barrel": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "besson",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_o_joseph_messenger": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_o_white_cockade": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "mayor",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_o_betsy_basket": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "betsy",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_o_semaphore_book": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "signalman",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_o_indiaman_purser": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "purser",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_o_nantucket_whalers": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "coffin",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_o_friday_canoe": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "friday",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_o_sperm_whales": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "nemo",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_o_coral_cemetery": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "nemo",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_o_uncharted_island": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "nemo",
+          "at": "center"
+        }
+      ]
+    },
+    "ev_o_message_bottle": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": []
+    },
+    "ev_o_kinsman_letter": {
+      "bg": [
+        {
+          "id": "camp_tent",
+          "at": 0
+        }
+      ],
+      "cast": [
+        {
+          "who": "dantes",
+          "at": "center"
+        }
+      ]
+    }
+  },
+  "_generated_napoleon": {
+    "chars": [
+      "albert",
+      "ali",
+      "ali_pasha",
+      "artillery_captain",
+      "benedetto",
+      "berthier",
+      "bertuccio",
+      "besson",
+      "betsy",
+      "bonaparte",
+      "caderousse",
+      "cambronne",
+      "campbell",
+      "carnot",
+      "coffin",
+      "commissaire",
+      "danglars",
+      "davout",
+      "desaix",
+      "drouot",
+      "dugommier",
+      "eble",
+      "eble_aide",
+      "fernand",
+      "fouche",
+      "fulton_pupil",
+      "gerard",
+      "goethe",
+      "gourgaud",
+      "governor",
+      "grouchy",
+      "haydee",
+      "heloise",
+      "innkeeper",
+      "jacopo",
+      "king_of_rome",
+      "laffitte",
+      "lannes",
+      "larrey",
+      "louis_dantes",
+      "max_joseph",
+      "maximilien",
+      "mayor",
+      "mercedes",
+      "muiron",
+      "muleteer",
+      "murat",
+      "ney",
+      "noirtier",
+      "pearl_diver",
+      "peppino",
+      "postmaster",
+      "purser",
+      "renaud",
+      "renee",
+      "rustam",
+      "saliceti",
+      "signalman",
+      "talleyrand",
+      "tutor",
+      "valentine",
+      "vampa"
+    ],
+    "scenes": [
+      "alps_marengo",
+      "austerlitz_sun",
+      "bayonne_orders",
+      "boulogne_orders",
+      "c_auteuil",
+      "c_bread_34",
+      "c_caderousse",
+      "c_carnival",
+      "c_champs_elysees",
+      "c_danglars",
+      "c_faria_27",
+      "c_faria_dies",
+      "c_gerard",
+      "c_if_contract",
+      "c_if_night",
+      "c_landfall",
+      "c_livorno",
+      "c_montecristo",
+      "c_morgiou",
+      "c_morrel_rescue",
+      "c_peers",
+      "c_petition",
+      "c_reserve",
+      "c_san_sebastiano",
+      "c_tiboulen",
+      "c_trial",
+      "c_white_june",
+      "collapse_fontainebleau",
+      "collapse_leipzig",
+      "collapse_lutzen",
+      "elba_1815",
+      "elba_arrival",
+      "elba_night",
+      "ev_accoules",
+      "ev_alps_mules",
+      "ev_alsace_harvest",
+      "ev_arapiles_bones",
+      "ev_barbets_convoy",
+      "ev_bertuccio_name",
+      "ev_bread_ovens",
+      "ev_c1_council",
+      "ev_c2_council",
+      "ev_c3_council",
+      "ev_c4_council",
+      "ev_c5_council",
+      "ev_caderousse_wine",
+      "ev_capoliveri",
+      "ev_carters_debt",
+      "ev_conscript_letter",
+      "ev_council_acre",
+      "ev_council_austerlitz",
+      "ev_council_channel",
+      "ev_council_elba",
+      "ev_council_eylau",
+      "ev_council_final",
+      "ev_council_fleurus",
+      "ev_council_italy",
+      "ev_council_leipzig",
+      "ev_council_marengo",
+      "ev_council_niemen",
+      "ev_council_retreat",
+      "ev_council_rhine",
+      "ev_council_saragossa",
+      "ev_council_torres",
+      "ev_council_toulon",
+      "ev_council_vienna",
+      "ev_council_wagram",
+      "ev_counterfeit_assignats",
+      "ev_courier_lost",
+      "ev_customs_cutter",
+      "ev_danglars_cargo",
+      "ev_danube_pontoons",
+      "ev_deserter_pardon",
+      "ev_deserters",
+      "ev_dos_de_mayo",
+      "ev_faria_half_letter",
+      "ev_faro_table",
+      "ev_federes",
+      "ev_frederick_sword",
+      "ev_fulton_nautilus",
+      "ev_genoa_banker",
+      "ev_goethe_tea",
+      "ev_guard_pensions",
+      "ev_haydee_constantinople",
+      "ev_horse_meat",
+      "ev_i_if_years",
+      "ev_i_marseille",
+      "ev_i_mediterranean",
+      "ev_i_montecristo",
+      "ev_i_paris",
+      "ev_inspector",
+      "ev_janina_1822",
+      "ev_lodi_veteran",
+      "ev_malta_silver",
+      "ev_marie_cantine",
+      "ev_marie_louise_letter",
+      "ev_melk_library",
+      "ev_mercedes_window",
+      "ev_morrel_grain",
+      "ev_morrel_petition",
+      "ev_muiron_letter",
+      "ev_mysore_envoy",
+      "ev_ney_auxerre",
+      "ev_noirtier_eyes",
+      "ev_o_besson_barrel",
+      "ev_o_betsy_basket",
+      "ev_o_coral_cemetery",
+      "ev_o_council_basque",
+      "ev_o_council_bermuda",
+      "ev_o_council_billiard",
+      "ev_o_council_reef",
+      "ev_o_friday_canoe",
+      "ev_o_indiaman_purser",
+      "ev_o_int_hundred_days",
+      "ev_o_int_lightning",
+      "ev_o_int_northumberland",
+      "ev_o_int_organ",
+      "ev_o_joseph_messenger",
+      "ev_o_kinsman_letter",
+      "ev_o_malmaison",
+      "ev_o_message_bottle",
+      "ev_o_nantucket_whalers",
+      "ev_o_pearl_bank",
+      "ev_o_semaphore_book",
+      "ev_o_sperm_whales",
+      "ev_o_st_helena_view",
+      "ev_o_uncharted_island",
+      "ev_o_white_cockade",
+      "ev_old_dantes",
+      "ev_old_dantes_end",
+      "ev_pavia_revolt",
+      "ev_pharaon_elba",
+      "ev_poisoned_well",
+      "ev_post_horses",
+      "ev_ratisbon_wound",
+      "ev_renee_plea",
+      "ev_scholars_crates",
+      "ev_six_days",
+      "ev_smolensk_granary",
+      "ev_smugglers_deal",
+      "ev_st_bernard",
+      "ev_storks_scale",
+      "ev_tail",
+      "ev_telegraph",
+      "ev_tilsit_raft",
+      "ev_tyrol_innkeeper",
+      "ev_ulm_prisoners",
+      "ev_vendee_rising",
+      "ev_walewska",
+      "ev_widow_pension",
+      "eylau_snow",
+      "ia_berthier",
+      "ia_boulogne_1817",
+      "ia_carnot",
+      "ia_inconstant",
+      "ib_baptiste_marie",
+      "ib_fireside",
+      "ib_lannes_murat",
+      "ic_harbour_night",
+      "ic_rain_bivouac",
+      "ic_snow_bivouac",
+      "im_cipher_dispatch",
+      "im_tsar_letter",
+      "italy_campo_formio",
+      "italy_milan",
+      "italy_nice",
+      "italy_rivoli",
+      "iw_elba_iron",
+      "k_bavaria",
+      "k_brussels",
+      "k_charleroi",
+      "k_choice_1817",
+      "k_dover",
+      "k_final",
+      "k_golfe_juan",
+      "k_laffrey",
+      "k_leipzig_1819",
+      "k_niemen",
+      "k_paris_1819",
+      "k_rhine",
+      "k_schoenbrunn",
+      "k_torres_vedras",
+      "k_tuileries",
+      "k_ultimatum",
+      "k_vienna",
+      "k_warsaw",
+      "k_waterloo",
+      "k_waterloo_night",
+      "orient_acre",
+      "orient_orders",
+      "russia_berezina",
+      "russia_borodino",
+      "russia_niemen",
+      "saragossa_siege",
+      "toulon_arrival",
+      "toulon_mulgrave",
+      "wagram_lobau"
+    ]
+  }
+}

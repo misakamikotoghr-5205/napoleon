@@ -1,0 +1,629 @@
+{
+  "_meta": {
+    "owner": "K10",
+    "schema": 1,
+    "brief": "求签。五个等第各六个征兆家族，外加一支泛泛签。签诗与解曰不在这里。"
+  },
+  "cards": [
+    {
+      "id": "lot.g0.official",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 0,
+      "hint_tags": [
+        "omen_official"
+      ],
+      "brief": "下下签，征兆家族 omen_official，对应官面、纸上的事。吉凶方向：凶。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g0.illness",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 0,
+      "hint_tags": [
+        "omen_illness"
+      ],
+      "brief": "下下签，征兆家族 omen_illness，对应病痛。吉凶方向：凶。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g0.fire",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 0,
+      "hint_tags": [
+        "omen_fire"
+      ],
+      "brief": "下下签，征兆家族 omen_fire，对应火光。吉凶方向：凶。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g0.dispute",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 0,
+      "hint_tags": [
+        "omen_dispute"
+      ],
+      "brief": "下下签，征兆家族 omen_dispute，对应口舌官司。吉凶方向：凶。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g0.stranger",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 0,
+      "hint_tags": [
+        "omen_stranger"
+      ],
+      "brief": "下下签，征兆家族 omen_stranger，对应生人。吉凶方向：凶。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g0.road",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 0,
+      "hint_tags": [
+        "omen_road"
+      ],
+      "brief": "下下签，征兆家族 omen_road，对应出行道路。吉凶方向：凶。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g0.any",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 0,
+      "hint_tags": [],
+      "brief": "下下签，泛泛兜底：hint_tags 为空，不点征兆家族。吉凶方向仍是这一等第的凶。签诗与解曰由 A 写，含糊，不点名哪张牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g1.water",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 1,
+      "hint_tags": [
+        "omen_water"
+      ],
+      "brief": "下签，征兆家族 omen_water，对应水边、船、码头。吉凶方向：偏凶。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g1.wealth",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 1,
+      "hint_tags": [
+        "omen_wealth"
+      ],
+      "brief": "下签，征兆家族 omen_wealth，对应财物进出。吉凶方向：偏凶。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g1.family",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 1,
+      "hint_tags": [
+        "omen_family"
+      ],
+      "brief": "下签，征兆家族 omen_family，对应家宅。吉凶方向：偏凶。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g1.far",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 1,
+      "hint_tags": [
+        "omen_far"
+      ],
+      "brief": "下签，征兆家族 omen_far，对应远方来信。吉凶方向：偏凶。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g1.illness",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 1,
+      "hint_tags": [
+        "omen_illness"
+      ],
+      "brief": "下签，征兆家族 omen_illness，对应病痛。吉凶方向：偏凶。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g1.dispute",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 1,
+      "hint_tags": [
+        "omen_dispute"
+      ],
+      "brief": "下签，征兆家族 omen_dispute，对应口舌官司。吉凶方向：偏凶。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g1.any",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 1,
+      "hint_tags": [],
+      "brief": "下签，泛泛兜底：hint_tags 为空，不点征兆家族。吉凶方向仍是这一等第的偏凶。签诗与解曰由 A 写，含糊，不点名哪张牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g2.official",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 2,
+      "hint_tags": [
+        "omen_official"
+      ],
+      "brief": "中签，征兆家族 omen_official，对应官面、纸上的事。吉凶方向：吉凶相杂。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g2.water",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 2,
+      "hint_tags": [
+        "omen_water"
+      ],
+      "brief": "中签，征兆家族 omen_water，对应水边、船、码头。吉凶方向：吉凶相杂。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g2.fire",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 2,
+      "hint_tags": [
+        "omen_fire"
+      ],
+      "brief": "中签，征兆家族 omen_fire，对应火光。吉凶方向：吉凶相杂。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g2.family",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 2,
+      "hint_tags": [
+        "omen_family"
+      ],
+      "brief": "中签，征兆家族 omen_family，对应家宅。吉凶方向：吉凶相杂。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g2.road",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 2,
+      "hint_tags": [
+        "omen_road"
+      ],
+      "brief": "中签，征兆家族 omen_road，对应出行道路。吉凶方向：吉凶相杂。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g2.stranger",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 2,
+      "hint_tags": [
+        "omen_stranger"
+      ],
+      "brief": "中签，征兆家族 omen_stranger，对应生人。吉凶方向：吉凶相杂。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g2.any",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 2,
+      "hint_tags": [],
+      "brief": "中签，泛泛兜底：hint_tags 为空，不点征兆家族。吉凶方向仍是这一等第的吉凶相杂。签诗与解曰由 A 写，含糊，不点名哪张牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g3.wealth",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 3,
+      "hint_tags": [
+        "omen_wealth"
+      ],
+      "brief": "上签，征兆家族 omen_wealth，对应财物进出。吉凶方向：偏吉。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g3.far",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 3,
+      "hint_tags": [
+        "omen_far"
+      ],
+      "brief": "上签，征兆家族 omen_far，对应远方来信。吉凶方向：偏吉。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g3.family",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 3,
+      "hint_tags": [
+        "omen_family"
+      ],
+      "brief": "上签，征兆家族 omen_family，对应家宅。吉凶方向：偏吉。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g3.water",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 3,
+      "hint_tags": [
+        "omen_water"
+      ],
+      "brief": "上签，征兆家族 omen_water，对应水边、船、码头。吉凶方向：偏吉。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g3.official",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 3,
+      "hint_tags": [
+        "omen_official"
+      ],
+      "brief": "上签，征兆家族 omen_official，对应官面、纸上的事。吉凶方向：偏吉。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g3.road",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 3,
+      "hint_tags": [
+        "omen_road"
+      ],
+      "brief": "上签，征兆家族 omen_road，对应出行道路。吉凶方向：偏吉。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g3.any",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 3,
+      "hint_tags": [],
+      "brief": "上签，泛泛兜底：hint_tags 为空，不点征兆家族。吉凶方向仍是这一等第的偏吉。签诗与解曰由 A 写，含糊，不点名哪张牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g4.wealth",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 4,
+      "hint_tags": [
+        "omen_wealth"
+      ],
+      "brief": "上上签，征兆家族 omen_wealth，对应财物进出。吉凶方向：吉。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g4.family",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 4,
+      "hint_tags": [
+        "omen_family"
+      ],
+      "brief": "上上签，征兆家族 omen_family，对应家宅。吉凶方向：吉。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g4.far",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 4,
+      "hint_tags": [
+        "omen_far"
+      ],
+      "brief": "上上签，征兆家族 omen_far，对应远方来信。吉凶方向：吉。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g4.water",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 4,
+      "hint_tags": [
+        "omen_water"
+      ],
+      "brief": "上上签，征兆家族 omen_water，对应水边、船、码头。吉凶方向：吉。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g4.illness",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 4,
+      "hint_tags": [
+        "omen_illness"
+      ],
+      "brief": "上上签，征兆家族 omen_illness，对应病痛。吉凶方向：吉。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g4.fire",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 4,
+      "hint_tags": [
+        "omen_fire"
+      ],
+      "brief": "上上签，征兆家族 omen_fire，对应火光。吉凶方向：吉。签诗与解曰由 A 写，要含糊，不点名哪张牌。这里不写能直接当签诗用的句子。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "id": "lot.g4.any",
+      "type": "fortune_lot",
+      "era": [
+        "*"
+      ],
+      "weight": 10,
+      "grade": 4,
+      "hint_tags": [],
+      "brief": "上上签，泛泛兜底：hint_tags 为空，不点征兆家族。吉凶方向仍是这一等第的吉。签诗与解曰由 A 写，含糊，不点名哪张牌。",
+      "_provenance": {
+        "by": "ai",
+        "task": "K10",
+        "date": "2026-10-13"
+      }
+    }
+  ]
+}

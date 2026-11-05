@@ -1,0 +1,20 @@
+# Name|script|timeout|args
+G02_engine_flow|res://scripts/tests/cards/G02/test_engine_flow.gd|300|
+G02_three_stages|res://scripts/tests/cards/G02/test_three_stages.gd|300|
+G02_view_leaks|res://scripts/tests/cards/G02/test_view_leaks.gd|300|
+G02_stage_view|res://scripts/tests/cards/G02/test_stage_view.gd|120|
+G02_gold|res://scripts/tests/cards/G02/test_gold.gd|300|
+G02_schedule|res://scripts/tests/cards/G02/test_schedule.gd|300|
+G02_calendar|res://scripts/tests/cards/G02/test_calendar.gd|300|
+G02_goals|res://scripts/tests/cards/G02/test_goals.gd|300|
+G02_year_jump|res://scripts/tests/cards/G02/test_year_jump.gd|300|
+G02_save_retry|res://scripts/tests/cards/G02/test_save_retry.gd|300|
+G02_determinism|res://scripts/tests/cards/G02/test_determinism.gd|300|
+G02_firsts|res://scripts/tests/cards/G02/test_firsts.gd|300|
+G02_firsts_d1_3|res://scripts/tests/cards/G02/test_firsts_d1_3.gd|300|
+G02_firsts_d1_3_isolated|res://scripts/tests/cards/G02/test_firsts_d1_3_isolated.gd|180|
+G02_real_three_stages|res://scripts/tests/cards/G02/test_real_three_stages.gd|300|
+G02_old_month_resume|res://scripts/tests/cards/G02/test_old_month_resume.gd|180|
+G02_next_day|res://scripts/tests/cards/G02/test_next_day.gd|180|
+G02_next_day_real|res://scripts/tests/cards/G02/test_next_day_real.gd|180|
+

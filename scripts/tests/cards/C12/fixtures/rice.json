@@ -1,0 +1,25 @@
+{
+  "kind": "spot",
+  "seed": 88001,
+  "item": "I-rice",
+  "art": "item.rice.jing",
+  "atlas_art": "item.rice.jing",
+  "atlas_open": true,
+  "ink": 3,
+  "minutes_per_step": 1,
+  "max_minutes": 30,
+  "tools": ["eye", "lens", "atlas"],
+  "parts": [
+    {
+      "id": "material",
+      "rect": [10, 40, 14, 12],
+      "tool": "eye"
+    },
+    {
+      "id": "provenance",
+      "rect": [36, 16, 12, 12],
+      "tool": "eye"
+    }
+  ],
+  "marks": []
+}

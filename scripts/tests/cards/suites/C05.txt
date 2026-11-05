@@ -1,0 +1,9 @@
+# C05 条子（docs/handoff_cards/C05_demand.md）
+C05_board|res://scripts/tests/cards/C05/test_board.gd|120|
+C05_kinds|res://scripts/tests/cards/C05/test_kinds.gd|180|
+C05_modes|res://scripts/tests/cards/C05/test_modes.gd|180|
+C05_delay_fail|res://scripts/tests/cards/C05/test_delay_fail.gd|120|
+C05_guide|res://scripts/tests/cards/C05/test_guide.gd|180|
+C05_guide_k16|res://scripts/tests/cards/C05/test_guide.gd|240|--steps=k16 --name=C05_guide_k16
+C05_real_engine|res://scripts/tests/cards/C05/test_real_engine.gd|180|--name=C05_real_engine
+C05_real_data|res://scripts/tests/cards/C05/test_real_engine.gd|240|--name=C05_real_data

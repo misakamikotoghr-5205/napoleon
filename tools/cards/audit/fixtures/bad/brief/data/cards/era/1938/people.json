@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "owner": "K01",
+    "schema": 1,
+    "brief": "DRAFT-BRIEF-MARKER"
+  },
+  "cards": [
+    {
+      "id": "p.demo.1938",
+      "type": "person",
+      "era": [
+        "1938"
+      ],
+      "intent": "story",
+      "art": "portrait.demo",
+      "brief": "CARD-BRIEF-MARKER"
+    }
+  ]
+}

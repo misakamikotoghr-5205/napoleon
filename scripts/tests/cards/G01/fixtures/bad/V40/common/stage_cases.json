@@ -1,0 +1,9 @@
+{
+  "_meta": {"owner": "K09", "schema": 1, "brief": "V40"},
+  "cards": [{
+    "id": "kp.stage.invalid", "type": "kept", "era": ["*"], "weight": 10,
+    "kind": "favor", "keepable": true, "tags": ["favor"],
+    "stage": {"set": "counter", "brief": "FORBIDDEN_TYPE"},
+    "brief": "V40", "_provenance": {"by": "ai", "task": "G01", "date": "2026-10-14"}
+  }]
+}

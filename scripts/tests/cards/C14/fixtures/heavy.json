@@ -1,0 +1,13 @@
+{
+  "kind": "weigh",
+  "seed": 14004,
+  "item": "it.jewelry.hairpin",
+  "art": "item.jewelry.hairpin",
+  "minutes_per_step": 1,
+  "max_minutes": 30,
+  "tool": "dengzi",
+  "claimed_fen": 300,
+  "actual_fen": 330,
+  "weights_fen": [200, 100, 50, 20, 10],
+  "resolution_fen": 2
+}
